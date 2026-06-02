@@ -5358,16 +5358,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
+          "404": {
+            "description": ""
           }
         },
         "security": [
@@ -34189,6 +34181,16 @@
           "ephemeralStorageUsageRatio": {
             "type": "number",
             "format": "double",
+            "nullable": true
+          },
+          "outboundConnectionsLimit": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "outboundConnectionsRejectedDiff": {
+            "type": "integer",
+            "format": "int64",
             "nullable": true
           }
         },

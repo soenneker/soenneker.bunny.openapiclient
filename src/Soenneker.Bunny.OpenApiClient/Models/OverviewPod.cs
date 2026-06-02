@@ -47,6 +47,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The outboundConnectionsLimit property</summary>
+        public int? OutboundConnectionsLimit { get; set; }
+        /// <summary>The outboundConnectionsRejectedDiff property</summary>
+        public long? OutboundConnectionsRejectedDiff { get; set; }
         /// <summary>The outboundTrafficChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,6 +97,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "lastHeartBeat", n => { LastHeartBeat = n.GetDateTimeOffsetValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "outboundConnectionsLimit", n => { OutboundConnectionsLimit = n.GetIntValue(); } },
+                { "outboundConnectionsRejectedDiff", n => { OutboundConnectionsRejectedDiff = n.GetLongValue(); } },
                 { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart.CreateFromDiscriminatorValue); } },
                 { "ramUsage", n => { RamUsage = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>(); } },
@@ -114,6 +120,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastHeartBeat", LastHeartBeat);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("name", Name);
+            writer.WriteIntValue("outboundConnectionsLimit", OutboundConnectionsLimit);
+            writer.WriteLongValue("outboundConnectionsRejectedDiff", OutboundConnectionsRejectedDiff);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart>("outboundTrafficChart", OutboundTrafficChart);
             writer.WriteDoubleValue("ramUsage", RamUsage);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>("status", Status);

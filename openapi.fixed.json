@@ -4439,11 +4439,11 @@
         ],
         "responses": {
           "200": {
-            "description": "200 response",
+            "description": "Default",
             "content": {
-              "application/octet-stream": {
+              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreDownloadPaymentRequestInvoicePdfEndpointDownloadPaymentRequestInvoicePdf200ResponseResponseOctetStream"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson18"
                 }
               }
             }
@@ -4532,7 +4532,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson18"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson19"
                 }
               }
             }
@@ -4811,7 +4811,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson19"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson20"
                 }
               }
             }
@@ -5173,7 +5173,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson20"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson21"
                 }
               }
             }
@@ -5231,7 +5231,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson21"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson22"
                 }
               }
             }
@@ -5273,7 +5273,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson22"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson23"
                 }
               }
             }
@@ -9802,7 +9802,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson23"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson24"
                 }
               }
             }
@@ -12001,7 +12001,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson24"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson25"
                 }
               }
             }
@@ -12510,7 +12510,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson25"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson26"
                 }
               }
             }
@@ -13432,7 +13432,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson26"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson27"
                 }
               }
             }
@@ -13508,7 +13508,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson27"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson28"
                 }
               }
             }
@@ -17096,7 +17096,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson28"
+                  "$ref": "#/components/schemas/DefaultResponseResponseJson29"
                 }
               }
             }
@@ -31127,6 +31127,16 @@
             "type": "number",
             "format": "double",
             "nullable": true
+          },
+          "outboundConnectionsLimit": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "outboundConnectionsRejectedDiff": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -34410,10 +34420,6 @@
           "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
-      "CoreDownloadPaymentRequestInvoicePdfEndpointDownloadPaymentRequestInvoicePdf200Response": {
-        "type": "string",
-        "format": "binary"
-      },
       "CoreGetPaymentRequestsEndpointGetPaymentRequests200Response": {
         "type": "array",
         "items": {
@@ -34967,9 +34973,10 @@
           "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
-      "CoreDownloadPaymentRequestInvoicePdfEndpointDownloadPaymentRequestInvoicePdf200ResponseResponseOctetStream": {
-        "type": "string",
-        "format": "binary"
+      "DefaultResponseResponseJson18": {
+        "title": "DefaultResponse",
+        "type": "object",
+        "description": "Default response schema"
       },
       "CoreGetPaymentRequestsEndpointGetPaymentRequests200ResponseResponseJson": {
         "type": "array",
@@ -34977,7 +34984,7 @@
           "$ref": "#/components/schemas/PaymentRequestModel"
         }
       },
-      "DefaultResponseResponseJson18": {
+      "DefaultResponseResponseJson19": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -34988,7 +34995,7 @@
           "$ref": "#/components/schemas/BillingSummaryItem"
         }
       },
-      "DefaultResponseResponseJson19": {
+      "DefaultResponseResponseJson20": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -34999,17 +35006,17 @@
           "$ref": "#/components/schemas/ErrorObject"
         }
       },
-      "DefaultResponseResponseJson20": {
-        "title": "DefaultResponse",
-        "type": "object",
-        "description": "Default response schema"
-      },
       "DefaultResponseResponseJson21": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
       "DefaultResponseResponseJson22": {
+        "title": "DefaultResponse",
+        "type": "object",
+        "description": "Default response schema"
+      },
+      "DefaultResponseResponseJson23": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -35065,7 +35072,7 @@
       "ShieldGetCustomResponsePage200ResponseResponseJson4": {
         "type": "string"
       },
-      "DefaultResponseResponseJson23": {
+      "DefaultResponseResponseJson24": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -35088,11 +35095,6 @@
           "$ref": "#/components/schemas/WafRuleMainGroupModel"
         }
       },
-      "DefaultResponseResponseJson24": {
-        "title": "DefaultResponse",
-        "type": "object",
-        "description": "Default response schema"
-      },
       "DefaultResponseResponseJson25": {
         "title": "DefaultResponse",
         "type": "object",
@@ -35104,6 +35106,11 @@
         "description": "Default response schema"
       },
       "DefaultResponseResponseJson27": {
+        "title": "DefaultResponse",
+        "type": "object",
+        "description": "Default response schema"
+      },
+      "DefaultResponseResponseJson28": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -35150,7 +35157,7 @@
           "type": "string"
         }
       },
-      "DefaultResponseResponseJson28": {
+      "DefaultResponseResponseJson29": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
