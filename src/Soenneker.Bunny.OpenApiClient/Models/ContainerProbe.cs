@@ -47,6 +47,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The timeoutSeconds property</summary>
         public int? TimeoutSeconds { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe"/> and sets the default values.
+        /// </summary>
+        public ContainerProbe()
+        {
+            FailureThreshold = 3;
+            InitialDelaySeconds = 10;
+            PeriodSeconds = 10;
+            SuccessThreshold = 1;
+            TimeoutSeconds = 7;
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe"/></returns>

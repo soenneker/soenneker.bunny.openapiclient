@@ -95,42 +95,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus();
-            if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf1 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf2 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf3 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf4 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf5 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf6 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf7 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf8 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.VideoModelStatusOneOf9 = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9();
-            }
             return result;
         }
         /// <summary>

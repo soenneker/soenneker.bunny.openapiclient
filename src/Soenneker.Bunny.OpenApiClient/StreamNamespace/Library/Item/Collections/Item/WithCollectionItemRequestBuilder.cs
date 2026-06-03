@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCollectionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/collections/{collectionId}{?includeThumbnails*}", pathParameters)
+        public WithCollectionItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/collections/{collectionId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithCollectionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/collections/{collectionId}{?includeThumbnails*}", rawUrl)
+        public WithCollectionItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/collections/{collectionId}", rawUrl)
         {
         }
         /// <summary>

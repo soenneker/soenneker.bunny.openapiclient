@@ -35,7 +35,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ScriptRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/edge-scripting/compute/script{?includeLinkedPullzones*,integrationId*,page*,perPage*,search*,type*}", pathParameters)
+        public ScriptRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ScriptRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/edge-scripting/compute/script{?includeLinkedPullzones*,integrationId*,page*,perPage*,search*,type*}", rawUrl)
+        public ScriptRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
         {
         }
         /// <summary>

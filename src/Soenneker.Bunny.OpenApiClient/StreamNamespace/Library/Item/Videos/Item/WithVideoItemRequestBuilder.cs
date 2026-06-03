@@ -88,7 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithVideoItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}{?enabledOutputCodecs*,enabledResolutions*,generateChapters*,generateDescription*,generateMoments*,generateTitle*,jitEnabled*,sourceLanguage*,transcribeEnabled*,transcribeLanguages*}", pathParameters)
+        public WithVideoItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}", pathParameters)
         {
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithVideoItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}{?enabledOutputCodecs*,enabledResolutions*,generateChapters*,generateDescription*,generateMoments*,generateTitle*,jitEnabled*,sourceLanguage*,transcribeEnabled*,transcribeLanguages*}", rawUrl)
+        public WithVideoItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}", rawUrl)
         {
         }
         /// <summary>

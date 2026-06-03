@@ -119,54 +119,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes();
-            if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf1 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf10 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf11 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf12 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf2 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf3 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf4 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf5 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf6 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf7 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf8 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.IssueCodesOneOf9 = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9();
-            }
             return result;
         }
         /// <summary>

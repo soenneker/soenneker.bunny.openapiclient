@@ -55,22 +55,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.Severity();
-            if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SeverityOneOf1 = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SeverityOneOf2 = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SeverityOneOf3 = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SeverityOneOf4 = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4();
-            }
             return result;
         }
         /// <summary>

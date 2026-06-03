@@ -76,22 +76,22 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         /// <summary>
         /// Upload a file to a storage zone based on the URL path. If the directory tree does not exist, it will be created automatically. **The file content should be sent as the body of the request without any type of encoding.**
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson21"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson24"/></returns>
         /// <param name="body">Binary request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson21?> PutAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson24?> PutAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson21> PutAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson24> PutAsync(Stream body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson21>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson21.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson24>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DefaultResponseResponseJson24.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete an object from the storage zone. In case the object is a directory all the data in it will be recursively deleted as well.

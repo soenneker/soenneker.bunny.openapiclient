@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "E5C33BA0748D95EA85BE692DC3CABCE3C562E1329986F7E93E774B14ACAF601BBD68B01CA3ECE45F24A3E7D30CCF76A00592D11179EE437C622C3381B003C9C3",
+  "descriptionHash": "C952D132F087C830F895DB60C1A9A32CF300CA073B8E79537EADA380BE4A955EBF079AFB3FF819771AA517F4B88FA84A26AA5A66292995061FAABED3765CC83D",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.1",
+  "kiotaVersion": "1.32.0",
   "clientClassName": "BunnyOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Bunny.OpenApiClient",

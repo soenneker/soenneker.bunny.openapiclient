@@ -63,26 +63,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus();
-            if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SmartGenerateStatusOneOf1 = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SmartGenerateStatusOneOf2 = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SmartGenerateStatusOneOf3 = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SmartGenerateStatusOneOf4 = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4();
-            }
-            else if("".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SmartGenerateStatusOneOf5 = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5();
-            }
             return result;
         }
         /// <summary>

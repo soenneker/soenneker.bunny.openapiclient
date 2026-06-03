@@ -230,6 +230,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? LimitRateAfter { get; set; }
         /// <summary>Determines the maximum number of requests per second coming from a single IP before it is blocked.</summary>
         public int? LimitRatePerSecond { get; set; }
+        /// <summary>If using a load balancer origin, the ID of the load balancer to use</summary>
+        public long? LoadBalancerId { get; set; }
         /// <summary>Sets the log anonymization type for this pull zone</summary>
         public int? LogAnonymizationType { get; set; }
         /// <summary>The LogFormat property</summary>
@@ -574,6 +576,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "IgnoreQueryStrings", n => { IgnoreQueryStrings = n.GetBoolValue(); } },
                 { "LimitRateAfter", n => { LimitRateAfter = n.GetDoubleValue(); } },
                 { "LimitRatePerSecond", n => { LimitRatePerSecond = n.GetIntValue(); } },
+                { "LoadBalancerId", n => { LoadBalancerId = n.GetLongValue(); } },
                 { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
                 { "LogFormat", n => { LogFormat = n.GetIntValue(); } },
                 { "LogForwardingEnabled", n => { LogForwardingEnabled = n.GetBoolValue(); } },
@@ -727,6 +730,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("IgnoreQueryStrings", IgnoreQueryStrings);
             writer.WriteDoubleValue("LimitRateAfter", LimitRateAfter);
             writer.WriteIntValue("LimitRatePerSecond", LimitRatePerSecond);
+            writer.WriteLongValue("LoadBalancerId", LoadBalancerId);
             writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);
             writer.WriteIntValue("LogFormat", LogFormat);
             writer.WriteBoolValue("LogForwardingEnabled", LogForwardingEnabled);
