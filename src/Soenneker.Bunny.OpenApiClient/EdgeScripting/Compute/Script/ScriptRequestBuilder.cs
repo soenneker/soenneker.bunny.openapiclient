@@ -103,7 +103,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script.ScriptRequestBuilder.ScriptRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/edge-scripting/compute/script{?includeLinkedPullzones*,integrationId*,page*,perPage*,search*,type*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -124,7 +124,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/edge-scripting/compute/script", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

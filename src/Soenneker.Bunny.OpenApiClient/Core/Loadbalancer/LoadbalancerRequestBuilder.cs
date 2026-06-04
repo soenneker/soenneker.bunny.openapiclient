@@ -99,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.LoadbalancerRequestBuilder.LoadbalancerRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/core/loadbalancer{?count*,page*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -120,7 +120,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/core/loadbalancer", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

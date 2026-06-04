@@ -122,7 +122,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections.Item.WithCollectionItemRequestBuilder.WithCollectionItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/stream/library/{libraryId}/collections/{collectionId}{?includeThumbnails*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

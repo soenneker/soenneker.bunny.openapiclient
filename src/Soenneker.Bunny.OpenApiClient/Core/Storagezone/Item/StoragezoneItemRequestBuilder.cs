@@ -119,7 +119,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item.StoragezoneItemRequestBuilder.StoragezoneItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/core/storagezone/{id}{?deleteLinkedPullZones*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

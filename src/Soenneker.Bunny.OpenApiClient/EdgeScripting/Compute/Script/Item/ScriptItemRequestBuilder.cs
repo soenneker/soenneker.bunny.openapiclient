@@ -150,7 +150,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script.Item.ScriptItemRequestBuilder.ScriptItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/edge-scripting/compute/script/{id}{?deleteLinkedPullZones*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

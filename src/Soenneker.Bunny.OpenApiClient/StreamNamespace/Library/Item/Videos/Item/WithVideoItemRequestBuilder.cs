@@ -251,7 +251,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}{?enabledOutputCodecs*,enabledResolutions*,generateChapters*,generateDescription*,generateMoments*,generateTitle*,jitEnabled*,sourceLanguage*,transcribeEnabled*,transcribeLanguages*}", PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetStreamContent(body, "application/octet-stream");
