@@ -88,7 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithVideoItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}", pathParameters)
+        public WithVideoItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}{?enabledOutputCodecs*,enabledResolutions*,generateChapters*,generateDescription*,generateMoments*,generateTitle*,jitEnabled*,sourceLanguage*,transcribeEnabled*,transcribeLanguages*}", pathParameters)
         {
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithVideoItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}", rawUrl)
+        public WithVideoItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}{?enabledOutputCodecs*,enabledResolutions*,generateChapters*,generateDescription*,generateMoments*,generateTitle*,jitEnabled*,sourceLanguage*,transcribeEnabled*,transcribeLanguages*}", rawUrl)
         {
         }
         /// <summary>
@@ -251,7 +251,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/stream/library/{libraryId}/videos/{videoId}{?enabledOutputCodecs*,enabledResolutions*,generateChapters*,generateDescription*,generateMoments*,generateTitle*,jitEnabled*,sourceLanguage*,transcribeEnabled*,transcribeLanguages*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetStreamContent(body, "application/octet-stream");
