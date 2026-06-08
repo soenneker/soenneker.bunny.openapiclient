@@ -124,7 +124,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The rotation of the video</summary>
         public int? Rotation { get; set; }
-        /// <summary>The status of smart generate action (if triggered)</summary>
+        /// <summary>Per-feature smart generate statuses (title, description, chapters, moments). Null for a feature on legacy rows.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus? SmartGenerateFeaturesStatus { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus SmartGenerateFeaturesStatus { get; set; }
+#endif
+        /// <summary>&quot;Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? SmartGenerateStatus { get; set; }
@@ -225,6 +233,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "originalHash", n => { OriginalHash = n.GetStringValue(); } },
                 { "outputCodecs", n => { OutputCodecs = n.GetStringValue(); } },
                 { "rotation", n => { Rotation = n.GetIntValue(); } },
+                { "smartGenerateFeaturesStatus", n => { SmartGenerateFeaturesStatus = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus>(global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus.CreateFromDiscriminatorValue); } },
                 { "smartGenerateStatus", n => { SmartGenerateStatus = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus>(global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus.CreateFromDiscriminatorValue); } },
                 { "storageSize", n => { StorageSize = n.GetLongValue(); } },
@@ -269,6 +278,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("originalHash", OriginalHash);
             writer.WriteStringValue("outputCodecs", OutputCodecs);
             writer.WriteIntValue("rotation", Rotation);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus>("smartGenerateFeaturesStatus", SmartGenerateFeaturesStatus);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("smartGenerateStatus", SmartGenerateStatus);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus>("status", Status);
             writer.WriteLongValue("storageSize", StorageSize);
