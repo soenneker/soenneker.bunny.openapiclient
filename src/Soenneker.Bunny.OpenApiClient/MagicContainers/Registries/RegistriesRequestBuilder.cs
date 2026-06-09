@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.ConfigSuggestions;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Digest;
+using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.ImageConfig;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Item;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.PublicImages;
@@ -32,6 +33,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Digest.DigestRequestBuilder Digest
         {
             get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Digest.DigestRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The imageConfig property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.ImageConfig.ImageConfigRequestBuilder ImageConfig
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.ImageConfig.ImageConfigRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The images property</summary>
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.ImagesRequestBuilder Images

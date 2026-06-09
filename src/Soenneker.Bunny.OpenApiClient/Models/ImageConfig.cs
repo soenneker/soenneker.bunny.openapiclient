@@ -9,25 +9,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ContainerConfigSuggestions : IParsable
+    public partial class ImageConfig : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The appName property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AppName { get; set; }
-#nullable restore
-#else
-        public string AppName { get; set; }
-#endif
-        /// <summary>The description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Description { get; set; }
-#nullable restore
-#else
-        public string Description { get; set; }
-#endif
         /// <summary>The endpointSuggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -35,30 +19,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest> EndpointSuggestions { get; set; }
-#endif
-        /// <summary>The environmentVariablesSuggestions property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion>? EnvironmentVariablesSuggestions { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion> EnvironmentVariablesSuggestions { get; set; }
-#endif
-        /// <summary>The instructions property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Instructions { get; set; }
-#nullable restore
-#else
-        public string Instructions { get; set; }
-#endif
-        /// <summary>The registryUrl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RegistryUrl { get; set; }
-#nullable restore
-#else
-        public string RegistryUrl { get; set; }
 #endif
         /// <summary>The volumeSuggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,12 +31,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerConfigSuggestions"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ImageConfig"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.ContainerConfigSuggestions CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.ImageConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ContainerConfigSuggestions();
+            return new global::Soenneker.Bunny.OpenApiClient.Models.ImageConfig();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,12 +46,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "appName", n => { AppName = n.GetStringValue(); } },
-                { "description", n => { Description = n.GetStringValue(); } },
                 { "endpointSuggestions", n => { EndpointSuggestions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>(global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "environmentVariablesSuggestions", n => { EnvironmentVariablesSuggestions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion>(global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "instructions", n => { Instructions = n.GetStringValue(); } },
-                { "registryUrl", n => { RegistryUrl = n.GetStringValue(); } },
                 { "volumeSuggestions", n => { VolumeSuggestions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>(global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -102,12 +57,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("appName", AppName);
-            writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>("endpointSuggestions", EndpointSuggestions);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion>("environmentVariablesSuggestions", EnvironmentVariablesSuggestions);
-            writer.WriteStringValue("instructions", Instructions);
-            writer.WriteStringValue("registryUrl", RegistryUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>("volumeSuggestions", VolumeSuggestions);
         }
     }

@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFileNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/storage/{storageZoneName}/{path}/{fileName}", pathParameters)
+        public WithFileNameItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/storage/{storageZoneName}/{path}/{fileName}{?allowRootDelete*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithFileNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/storage/{storageZoneName}/{path}/{fileName}", rawUrl)
+        public WithFileNameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/storage/{storageZoneName}/{path}/{fileName}{?allowRootDelete*}", rawUrl)
         {
         }
         /// <summary>
@@ -40,11 +40,11 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
@@ -100,11 +100,11 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item.WithFileNameItemRequestBuilder.WithFileNameItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
@@ -161,6 +161,16 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         public global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item.WithFileNameItemRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item.WithFileNameItemRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// Delete an object from the storage zone. In case the object is a directory all the data in it will be recursively deleted as well.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class WithFileNameItemRequestBuilderDeleteQueryParameters 
+        {
+            /// <summary>Set to `true` to bypass the root directory deletion guard and delete the storage zone root (`/`).</summary>
+            [QueryParameter("allowRootDelete")]
+            public global::Soenneker.Bunny.OpenApiClient.Models.StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameter? AllowRootDelete { get; set; }
         }
     }
 }

@@ -5223,6 +5223,22 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "allowRootDelete",
+            "in": "query",
+            "description": "Set to \u0060true\u0060 to bypass the root directory deletion guard and delete the storage zone root (\u0060/\u0060).",
+            "schema": {
+              "$ref": "#/components/schemas/StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameter"
+            }
+          },
+          {
+            "name": "allowRootDelete",
+            "in": "header",
+            "description": "Set to \u0060true\u0060 to bypass the root directory deletion guard and delete the storage zone root.",
+            "schema": {
+              "$ref": "#/components/schemas/StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameterEnum"
+            }
           }
         ],
         "responses": {
@@ -15084,6 +15100,62 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/magic-containers/registries/image-config": {
+      "post": {
+        "tags": [
+          "ContainerRegistries"
+        ],
+        "summary": "Get Image Config",
+        "description": "Retrieves endpoint and volume suggestions for a container image from a registry.",
+        "operationId": "MagicContainersGetImageConfig",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageExposedPortsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageExposedPortsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Image configuration was successfully retrieved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImageConfig"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "User is unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MagicContainersProblemDetails"
                 }
               }
             }
@@ -29226,6 +29298,12 @@
               "$ref": "#/components/schemas/EnvironmentVariableSuggestion"
             }
           },
+          "volumeSuggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VolumeSuggestion"
+            }
+          },
           "appName": {
             "type": "string",
             "nullable": true
@@ -30672,6 +30750,24 @@
           ]
         }
       },
+      "ImageConfig": {
+        "type": "object",
+        "properties": {
+          "endpointSuggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EndpointRequest"
+            }
+          },
+          "volumeSuggestions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VolumeSuggestion"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "ImagePullPolicy": {
         "enum": [
           "always",
@@ -30745,6 +30841,38 @@
         },
         "additionalProperties": false,
         "description": "List applications response"
+      },
+      "ListContainerImageExposedPortsRequest": {
+        "required": [
+          "imageName",
+          "imageNamespace",
+          "registryId",
+          "tag"
+        ],
+        "type": "object",
+        "properties": {
+          "registryId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The registry identifier. Can be \u0022dockerhub\u0022, \u0022github\u0022, or a private registry ID."
+          },
+          "imageName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "imageNamespace": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "tag": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       },
       "ListContainerImageTagsRequest": {
         "required": [
@@ -32096,6 +32224,18 @@
             }
           ]
         }
+      },
+      "VolumeSuggestion": {
+        "type": "object",
+        "properties": {
+          "containerPath": {
+            "type": "string"
+          },
+          "suggestedVolumeName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       },
       "VolumeTemplate": {
         "required": [
@@ -35805,6 +35945,40 @@
         "type": "string",
         "additionalProperties": false,
         "description": "Which Syslog RFC will be used"
+      },
+      "StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameter": {
+        "enum": [
+          "true"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "true",
+              "name": "TrueValue"
+            }
+          ]
+        }
+      },
+      "StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameterEnum": {
+        "enum": [
+          "true"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "StorageDeleteStorageZoneNamePathFileNameAllowRootDeleteParameterEnum",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "true",
+              "name": "TrueValue"
+            }
+          ]
+        }
       }
     },
     "securitySchemes": {
