@@ -24,6 +24,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The optionalInput property</summary>
         public bool? OptionalInput { get; set; }
+        /// <summary>The recommendedOperator property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator? RecommendedOperator { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator RecommendedOperator { get; set; }
+#endif
+        /// <summary>The supportedValues property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues? SupportedValues { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues SupportedValues { get; set; }
+#endif
         /// <summary>The value property</summary>
         public int? Value { get; set; }
         /// <summary>
@@ -47,6 +63,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "isPremium", n => { IsPremium = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "optionalInput", n => { OptionalInput = n.GetBoolValue(); } },
+                { "recommendedOperator", n => { RecommendedOperator = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator>(global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator.CreateFromDiscriminatorValue); } },
+                { "supportedValues", n => { SupportedValues = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues>(global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetIntValue(); } },
             };
         }
@@ -60,6 +78,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("isPremium", IsPremium);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("optionalInput", OptionalInput);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator>("recommendedOperator", RecommendedOperator);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues>("supportedValues", SupportedValues);
             writer.WriteIntValue("value", Value);
         }
     }

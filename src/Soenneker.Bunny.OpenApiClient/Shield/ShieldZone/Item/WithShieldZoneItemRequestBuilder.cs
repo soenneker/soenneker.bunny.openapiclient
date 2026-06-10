@@ -6,6 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Bunny.OpenApiClient.Models;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.AccessLists;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian;
+using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotCategorization;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotDetection;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.CustomPage;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.UploadScanning;
@@ -31,6 +32,11 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item
         public global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian.ApiGuardianRequestBuilder ApiGuardian
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian.ApiGuardianRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The botCategorization property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotCategorization.BotCategorizationRequestBuilder BotCategorization
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotCategorization.BotCategorizationRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The botDetection property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotDetection.BotDetectionRequestBuilder BotDetection

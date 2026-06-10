@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overages;
 using Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overview;
 using Soenneker.Bunny.OpenApiClient.Shield.Metrics.RateLimit;
 using Soenneker.Bunny.OpenApiClient.Shield.Metrics.RateLimits;
@@ -18,6 +19,11 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.Metrics
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MetricsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The overages property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overages.OveragesRequestBuilder Overages
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overages.OveragesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The overview property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overview.OverviewRequestBuilder Overview
         {
