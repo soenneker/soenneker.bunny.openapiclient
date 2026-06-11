@@ -32,6 +32,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get; set; }
+        /// <summary>The totalCleanRequests property</summary>
+        public long? TotalCleanRequests { get; set; }
         /// <summary>The totalOverage property</summary>
         public long? TotalOverage { get; set; }
         /// <summary>The year property</summary>
@@ -58,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "month", n => { Month = n.GetIntValue(); } },
                 { "segments", n => { Segments = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment>(global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shieldZoneId", n => { ShieldZoneId = n.GetIntValue(); } },
+                { "totalCleanRequests", n => { TotalCleanRequests = n.GetLongValue(); } },
                 { "totalOverage", n => { TotalOverage = n.GetLongValue(); } },
                 { "year", n => { Year = n.GetIntValue(); } },
             };
@@ -73,6 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("month", Month);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment>("segments", Segments);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
+            writer.WriteLongValue("totalCleanRequests", TotalCleanRequests);
             writer.WriteLongValue("totalOverage", TotalOverage);
             writer.WriteIntValue("year", Year);
         }
