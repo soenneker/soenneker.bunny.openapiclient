@@ -6639,7 +6639,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CaptionValidationModel"
+                  "$ref": "#/components/schemas/StatusModelOfCaptionValidationModel"
                 }
               }
             }
@@ -25140,6 +25140,28 @@
         },
         "additionalProperties": false
       },
+      "StatusModelOfCaptionValidationModel": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Determines if the request was successful"
+          },
+          "message": {
+            "type": "string",
+            "description": "Response message description",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "description": "The response status code",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/StatusModelOfCaptionValidationModelAllOf2Data"
+          }
+        }
+      },
       "CaptionValidationModel": {
         "type": "object",
         "properties": {
@@ -34102,6 +34124,15 @@
         ],
         "description": "Preferred playback source for the current video state."
       },
+      "StatusModelOfCaptionValidationModelAllOf2": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/StatusModelOfCaptionValidationModelAllOf2Data"
+          }
+        },
+        "additionalProperties": false
+      },
       "StatusModelOfVideoResolutionsInfoModelAllOf2": {
         "type": "object",
         "properties": {
@@ -34213,6 +34244,30 @@
           "propertyName": "type",
           "mapping": {
             "SourceCodeIntegrationModel": "#/components/schemas/SourceCodeIntegrationModel"
+          }
+        }
+      },
+      "StatusModelOfCaptionValidationModelAllOf2Data": {
+        "required": [
+          "type"
+        ],
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/CaptionValidationModel"
+          }
+        ],
+        "properties": {
+          "type": {
+            "title": "type",
+            "type": "string",
+            "description": "Union discriminator"
+          }
+        },
+        "nullable": true,
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "CaptionValidationModel": "#/components/schemas/CaptionValidationModel"
           }
         }
       },

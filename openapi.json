@@ -7954,7 +7954,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CaptionValidationModel"
+                  "$ref": "#/components/schemas/StatusModelOfCaptionValidationModel"
                 }
               }
             }
@@ -28217,6 +28217,27 @@
           }
         },
         "additionalProperties": false
+      },
+      "StatusModelOfCaptionValidationModel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/StatusModel"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/CaptionValidationModel"
+                  }
+                ],
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
       },
       "CaptionValidationModel": {
         "type": "object",

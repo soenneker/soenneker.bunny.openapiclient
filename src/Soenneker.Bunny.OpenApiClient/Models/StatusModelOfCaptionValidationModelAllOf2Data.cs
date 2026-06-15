@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -10,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CaptionValidationModel : ApiException, IParsable
+    public partial class StatusModelOfCaptionValidationModelAllOf2Data : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When uploaded file was invalid, will contain errors found</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -21,8 +22,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> ErrorList { get; set; }
 #endif
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
+        /// <summary>Union discriminator</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
         /// <summary>Denotes whether uploaded captions file was valid</summary>
         public bool? Valid { get; set; }
         /// <summary>When uploaded file was valid but non-breaking issues were found, will contain issues found</summary>
@@ -34,14 +41,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<string> WarningList { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data"/> and sets the default values.
+        /// </summary>
+        public StatusModelOfCaptionValidationModelAllOf2Data()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CaptionValidationModel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.CaptionValidationModel CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.CaptionValidationModel();
+            return new global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,6 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errorList", n => { ErrorList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
                 { "valid", n => { Valid = n.GetBoolValue(); } },
                 { "warningList", n => { WarningList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -64,8 +79,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("errorList", ErrorList);
+            writer.WriteStringValue("type", Type);
             writer.WriteBoolValue("valid", Valid);
             writer.WriteCollectionOfPrimitiveValues<string>("warningList", WarningList);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
