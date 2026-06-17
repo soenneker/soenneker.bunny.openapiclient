@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item.Statistics.Egress;
 using Soenneker.Bunny.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item.Statistics
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatisticsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The egress property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item.Statistics.Egress.EgressRequestBuilder Egress
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item.Statistics.Egress.EgressRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Storagezone.Item.Statistics.StatisticsRequestBuilder"/> and sets the default values.
         /// </summary>
