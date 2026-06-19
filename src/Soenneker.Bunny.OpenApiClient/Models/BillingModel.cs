@@ -48,6 +48,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? AutomaticRechargeEnabled { get; set; }
         /// <summary>If an automatic payments are configured, this contains the account balance amount that will trigger an automatic recharge</summary>
         public decimal? AutomaticRechargeTreshold { get; set; }
+        /// <summary>The current account balance plus available (unexpired) coupon credit</summary>
+        public double? AvailableBalance { get; set; }
         /// <summary>The current account balance</summary>
         public double? Balance { get; set; }
         /// <summary>Determines if billing is currently enabled for this user.</summary>
@@ -68,6 +70,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel> BillingRecords { get; set; }
 #endif
+        /// <summary>All available (unexpired) coupon money on the account</summary>
+        public decimal? CouponBalance { get; set; }
         /// <summary>DRM (Enterprise) base monthly price per video library.</summary>
         public decimal? DrmBaseMonthlyPrice { get; set; }
         /// <summary>DRM (Enterprise) cost per license or default pricing tier applied if null.</summary>
@@ -236,6 +240,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? SouthAmericaDiscount { get; set; }
         /// <summary>The current account charges of the running month</summary>
         public double? ThisMonthCharges { get; set; }
+        /// <summary>The total coupon credit used this month across all services</summary>
+        public decimal? TotalCouponUsage { get; set; }
         /// <summary>The VAT rate for the user&apos;s account.</summary>
         public decimal? VATRate { get; set; }
         /// <summary>
@@ -265,10 +271,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "AutomaticPaymentImageUrl", n => { AutomaticPaymentImageUrl = n.GetStringValue(); } },
                 { "AutomaticRechargeEnabled", n => { AutomaticRechargeEnabled = n.GetBoolValue(); } },
                 { "AutomaticRechargeTreshold", n => { AutomaticRechargeTreshold = n.GetDecimalValue(); } },
+                { "AvailableBalance", n => { AvailableBalance = n.GetDoubleValue(); } },
                 { "Balance", n => { Balance = n.GetDoubleValue(); } },
                 { "BillingEnabled", n => { BillingEnabled = n.GetBoolValue(); } },
                 { "BillingHistoryChart", n => { BillingHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart.CreateFromDiscriminatorValue); } },
                 { "BillingRecords", n => { BillingRecords = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>(global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "CouponBalance", n => { CouponBalance = n.GetDecimalValue(); } },
                 { "DrmBaseMonthlyPrice", n => { DrmBaseMonthlyPrice = n.GetDecimalValue(); } },
                 { "DrmCostPerLicense", n => { DrmCostPerLicense = n.GetDecimalValue(); } },
                 { "EUUSDiscount", n => { EUUSDiscount = n.GetIntValue(); } },
@@ -320,6 +328,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "SavedPaymentMethods", n => { SavedPaymentMethods = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>(global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "SouthAmericaDiscount", n => { SouthAmericaDiscount = n.GetIntValue(); } },
                 { "ThisMonthCharges", n => { ThisMonthCharges = n.GetDoubleValue(); } },
+                { "TotalCouponUsage", n => { TotalCouponUsage = n.GetDecimalValue(); } },
                 { "VATRate", n => { VATRate = n.GetDecimalValue(); } },
             };
         }
@@ -339,10 +348,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("AutomaticPaymentImageUrl", AutomaticPaymentImageUrl);
             writer.WriteBoolValue("AutomaticRechargeEnabled", AutomaticRechargeEnabled);
             writer.WriteDecimalValue("AutomaticRechargeTreshold", AutomaticRechargeTreshold);
+            writer.WriteDoubleValue("AvailableBalance", AvailableBalance);
             writer.WriteDoubleValue("Balance", Balance);
             writer.WriteBoolValue("BillingEnabled", BillingEnabled);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart>("BillingHistoryChart", BillingHistoryChart);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>("BillingRecords", BillingRecords);
+            writer.WriteDecimalValue("CouponBalance", CouponBalance);
             writer.WriteDecimalValue("DrmBaseMonthlyPrice", DrmBaseMonthlyPrice);
             writer.WriteDecimalValue("DrmCostPerLicense", DrmCostPerLicense);
             writer.WriteIntValue("EUUSDiscount", EUUSDiscount);
@@ -394,6 +405,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>("SavedPaymentMethods", SavedPaymentMethods);
             writer.WriteIntValue("SouthAmericaDiscount", SouthAmericaDiscount);
             writer.WriteDoubleValue("ThisMonthCharges", ThisMonthCharges);
+            writer.WriteDecimalValue("TotalCouponUsage", TotalCouponUsage);
             writer.WriteDecimalValue("VATRate", VATRate);
         }
     }
