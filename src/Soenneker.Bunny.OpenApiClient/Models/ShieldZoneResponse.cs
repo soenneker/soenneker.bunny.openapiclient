@@ -34,6 +34,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? RequestBodyLoggingEnabled { get; set; }
         /// <summary>The shieldZoneId property</summary>
         public long? ShieldZoneId { get; set; }
+        /// <summary>The wafCustomRuleOrder property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<long?>? WafCustomRuleOrder { get; set; }
+#nullable restore
+#else
+        public List<long?> WafCustomRuleOrder { get; set; }
+#endif
         /// <summary>The wafDisabledRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -111,6 +119,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "rateLimitRulesLimit", n => { RateLimitRulesLimit = n.GetIntValue(); } },
                 { "requestBodyLoggingEnabled", n => { RequestBodyLoggingEnabled = n.GetBoolValue(); } },
                 { "shieldZoneId", n => { ShieldZoneId = n.GetLongValue(); } },
+                { "wafCustomRuleOrder", n => { WafCustomRuleOrder = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "wafDisabledRules", n => { WafDisabledRules = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "wafEnabled", n => { WafEnabled = n.GetBoolValue(); } },
                 { "wafEngineConfig", n => { WafEngineConfig = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -143,6 +152,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("rateLimitRulesLimit", RateLimitRulesLimit);
             writer.WriteBoolValue("requestBodyLoggingEnabled", RequestBodyLoggingEnabled);
             writer.WriteLongValue("shieldZoneId", ShieldZoneId);
+            writer.WriteCollectionOfPrimitiveValues<long?>("wafCustomRuleOrder", WafCustomRuleOrder);
             writer.WriteCollectionOfPrimitiveValues<string>("wafDisabledRules", WafDisabledRules);
             writer.WriteBoolValue("wafEnabled", WafEnabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel>("wafEngineConfig", WafEngineConfig);

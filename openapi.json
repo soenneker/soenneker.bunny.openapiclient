@@ -31423,6 +31423,14 @@
             },
             "nullable": true
           },
+          "wafCustomRuleOrder": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "nullable": true
+          },
           "wafRequestHeaderLoggingEnabled": {
             "type": "boolean",
             "nullable": true
@@ -31520,6 +31528,14 @@
             "type": "array",
             "items": {
               "type": "string"
+            },
+            "nullable": true
+          },
+          "wafCustomRuleOrder": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
             },
             "nullable": true
           },
