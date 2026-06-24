@@ -130,6 +130,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? MonthlyChargesUSTraffic { get; set; }
         /// <summary>The total monthly charges for WebSockets</summary>
         public decimal? MonthlyChargesWebSockets { get; set; }
+        /// <summary>The total coupon credit used this month across all services</summary>
+        public decimal? MonthlyCouponUsage { get; set; }
         /// <summary>The monthly charges and usage for BunnyDB row reads</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -240,8 +242,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? SouthAmericaDiscount { get; set; }
         /// <summary>The current account charges of the running month</summary>
         public double? ThisMonthCharges { get; set; }
-        /// <summary>The total coupon credit used this month across all services</summary>
-        public decimal? TotalCouponUsage { get; set; }
         /// <summary>The VAT rate for the user&apos;s account.</summary>
         public decimal? VATRate { get; set; }
         /// <summary>
@@ -306,6 +306,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "MonthlyChargesTranscribe", n => { MonthlyChargesTranscribe = n.GetDoubleValue(); } },
                 { "MonthlyChargesUSTraffic", n => { MonthlyChargesUSTraffic = n.GetDoubleValue(); } },
                 { "MonthlyChargesWebSockets", n => { MonthlyChargesWebSockets = n.GetDecimalValue(); } },
+                { "MonthlyCouponUsage", n => { MonthlyCouponUsage = n.GetDecimalValue(); } },
                 { "MonthlyDBReads", n => { MonthlyDBReads = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads.CreateFromDiscriminatorValue); } },
                 { "MonthlyDBReplica", n => { MonthlyDBReplica = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica.CreateFromDiscriminatorValue); } },
                 { "MonthlyDBStorage", n => { MonthlyDBStorage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage.CreateFromDiscriminatorValue); } },
@@ -328,7 +329,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "SavedPaymentMethods", n => { SavedPaymentMethods = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>(global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "SouthAmericaDiscount", n => { SouthAmericaDiscount = n.GetIntValue(); } },
                 { "ThisMonthCharges", n => { ThisMonthCharges = n.GetDoubleValue(); } },
-                { "TotalCouponUsage", n => { TotalCouponUsage = n.GetDecimalValue(); } },
                 { "VATRate", n => { VATRate = n.GetDecimalValue(); } },
             };
         }
@@ -383,6 +383,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("MonthlyChargesTranscribe", MonthlyChargesTranscribe);
             writer.WriteDoubleValue("MonthlyChargesUSTraffic", MonthlyChargesUSTraffic);
             writer.WriteDecimalValue("MonthlyChargesWebSockets", MonthlyChargesWebSockets);
+            writer.WriteDecimalValue("MonthlyCouponUsage", MonthlyCouponUsage);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads>("MonthlyDBReads", MonthlyDBReads);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica>("MonthlyDBReplica", MonthlyDBReplica);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage>("MonthlyDBStorage", MonthlyDBStorage);
@@ -405,7 +406,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>("SavedPaymentMethods", SavedPaymentMethods);
             writer.WriteIntValue("SouthAmericaDiscount", SouthAmericaDiscount);
             writer.WriteDoubleValue("ThisMonthCharges", ThisMonthCharges);
-            writer.WriteDecimalValue("TotalCouponUsage", TotalCouponUsage);
             writer.WriteDecimalValue("VATRate", VATRate);
         }
     }
