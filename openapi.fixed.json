@@ -6723,7 +6723,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StatusModel"
+                  "$ref": "#/components/schemas/StatusModelOfCaptionValidationModel"
                 }
               }
             }
@@ -25346,6 +25346,11 @@
               "type": "string"
             },
             "description": "When uploaded file was valid but non-breaking issues were found, will contain issues found",
+            "nullable": true
+          },
+          "warningMessage": {
+            "type": "string",
+            "description": "UI-friendly summary of warnings found in the uploaded captions file",
             "nullable": true
           }
         },

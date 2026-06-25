@@ -40,6 +40,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> WarningList { get; set; }
 #endif
+        /// <summary>UI-friendly summary of warnings found in the uploaded captions file</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WarningMessage { get; set; }
+#nullable restore
+#else
+        public string WarningMessage { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data"/> and sets the default values.
         /// </summary>
@@ -69,6 +77,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "valid", n => { Valid = n.GetBoolValue(); } },
                 { "warningList", n => { WarningList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "warningMessage", n => { WarningMessage = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -82,6 +91,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
             writer.WriteBoolValue("valid", Valid);
             writer.WriteCollectionOfPrimitiveValues<string>("warningList", WarningList);
+            writer.WriteStringValue("warningMessage", WarningMessage);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
