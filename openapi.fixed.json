@@ -82,6 +82,19 @@
               "type": "string",
               "nullable": true
             }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "schema": {
+              "type": "object",
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/DnsViewType"
+                }
+              ],
+              "default": 0
+            }
           }
         ],
         "responses": {
@@ -334,6 +347,69 @@
           },
           "400": {
             "description": "Failed adding the DNS record. Model validation failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "DNS Zone"
+        ],
+        "summary": "List DNS Zone Records",
+        "operationId": "CoreDnsZonePublicListDnsZoneRecords",
+        "parameters": [
+          {
+            "name": "zoneId",
+            "in": "path",
+            "description": "The ID of the DNS Zone",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "maximum": 2147483647.0,
+              "minimum": 1.0,
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "perPage",
+            "in": "query",
+            "schema": {
+              "maximum": 1000.0,
+              "minimum": 5.0,
+              "type": "integer",
+              "format": "int32",
+              "default": 1000
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A paginated list of DNS records for the specified zone",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaginationListModelOfDnsRecordModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Failed to fetch dns records for the dns zone",
             "content": {
               "application/json": {
                 "schema": {
@@ -18200,6 +18276,19 @@
           "Rsa"
         ]
       },
+      "DnsViewType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = Full\n1 = Lite",
+        "x-enumNames": [
+          "Full",
+          "Lite"
+        ]
+      },
       "UpdateDnsZoneModel": {
         "type": "object",
         "properties": {
@@ -18514,6 +18603,30 @@
           "Domain": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaginationListModelOfDnsRecordModel": {
+        "type": "object",
+        "properties": {
+          "Items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DnsRecordModel"
+            },
+            "nullable": true
+          },
+          "CurrentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TotalItems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "HasMoreItems": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

@@ -47,7 +47,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DnszoneRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone{?page*,perPage*,search*}", pathParameters)
+        public DnszoneRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone{?page*,perPage*,search*,view*}", pathParameters)
         {
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public DnszoneRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone{?page*,perPage*,search*}", rawUrl)
+        public DnszoneRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone{?page*,perPage*,search*,view*}", rawUrl)
         {
         }
         /// <summary>
@@ -171,6 +171,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
+            [QueryParameter("view")]
+            public int? View { get; set; }
         }
     }
 }

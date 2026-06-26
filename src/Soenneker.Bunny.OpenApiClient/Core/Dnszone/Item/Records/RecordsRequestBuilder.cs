@@ -41,7 +41,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records", pathParameters)
+        public RecordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,8 +49,31 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records", rawUrl)
+        public RecordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*}", rawUrl)
         {
+        }
+        /// <summary>
+        /// List DNS Zone Records
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel"/></returns>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData">When receiving a 400 status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel?> GetAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.RecordsRequestBuilder.RecordsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel> GetAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.RecordsRequestBuilder.RecordsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            var requestInfo = ToGetRequestInformation(requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add DNS Record
@@ -76,6 +99,25 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// List DNS Zone Records
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.RecordsRequestBuilder.RecordsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.RecordsRequestBuilder.RecordsRequestBuilderGetQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
         }
         /// <summary>
         /// Add DNS Record
@@ -107,6 +149,17 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         public global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.RecordsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.RecordsRequestBuilder(rawUrl, RequestAdapter);
+        }
+        /// <summary>
+        /// List DNS Zone Records
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class RecordsRequestBuilderGetQueryParameters 
+        {
+            [QueryParameter("page")]
+            public int? Page { get; set; }
+            [QueryParameter("perPage")]
+            public int? PerPage { get; set; }
         }
     }
 }
