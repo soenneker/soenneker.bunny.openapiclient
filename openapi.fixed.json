@@ -24789,6 +24789,11 @@
             "description": "The file name of the thumbnail inside of the storage",
             "nullable": true
           },
+          "thumbnailUrl": {
+            "type": "string",
+            "description": "The CDN URL of the thumbnail",
+            "nullable": true
+          },
           "thumbnailBlurhash": {
             "type": "string",
             "description": "Thumbnail blurhash to show while the actual thumbnail is being loaded",

@@ -171,6 +171,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ThumbnailFileName { get; set; }
 #endif
+        /// <summary>The CDN URL of the thumbnail</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ThumbnailUrl { get; set; }
+#nullable restore
+#else
+        public string ThumbnailUrl { get; set; }
+#endif
         /// <summary>The title of the video</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -258,6 +266,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "thumbnailBlurhash", n => { ThumbnailBlurhash = n.GetStringValue(); } },
                 { "thumbnailCount", n => { ThumbnailCount = n.GetIntValue(); } },
                 { "thumbnailFileName", n => { ThumbnailFileName = n.GetStringValue(); } },
+                { "thumbnailUrl", n => { ThumbnailUrl = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "totalWatchTime", n => { TotalWatchTime = n.GetLongValue(); } },
                 { "transcodingMessages", n => { TranscodingMessages = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel>(global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -304,6 +313,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("thumbnailBlurhash", ThumbnailBlurhash);
             writer.WriteIntValue("thumbnailCount", ThumbnailCount);
             writer.WriteStringValue("thumbnailFileName", ThumbnailFileName);
+            writer.WriteStringValue("thumbnailUrl", ThumbnailUrl);
             writer.WriteStringValue("title", Title);
             writer.WriteLongValue("totalWatchTime", TotalWatchTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel>("transcodingMessages", TranscodingMessages);
