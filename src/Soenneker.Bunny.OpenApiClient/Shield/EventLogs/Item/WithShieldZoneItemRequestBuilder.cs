@@ -2,7 +2,9 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Export;
 using Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Item;
+using Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Search;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,6 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithShieldZoneItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The export property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Export.ExportRequestBuilder Export
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Export.ExportRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The search property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Search.SearchRequestBuilder Search
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Search.SearchRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.shield.eventLogs.item.item collection</summary>
         /// <param name="position">The Date (MM-dd-yyyy) of returned Event Logs.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Shield.EventLogs.Item.Item.WithDateItemRequestBuilder"/></returns>
