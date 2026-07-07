@@ -41,7 +41,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*}", pathParameters)
+        public RecordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*,search*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*}", rawUrl)
+        public RecordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*,search*,type*}", rawUrl)
         {
         }
         /// <summary>
@@ -160,6 +160,25 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
             public int? Page { get; set; }
             [QueryParameter("perPage")]
             public int? PerPage { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("search")]
+            public string? Search { get; set; }
+#nullable restore
+#else
+            [QueryParameter("search")]
+            public string Search { get; set; }
+#endif
+            /// <summary>The type of DNS Record</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("type")]
+            public string? Type { get; set; }
+#nullable restore
+#else
+            [QueryParameter("type")]
+            public string Type { get; set; }
+#endif
         }
     }
 }

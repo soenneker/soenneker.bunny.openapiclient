@@ -187,6 +187,19 @@
               "format": "int64"
             },
             "x-position": 1
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "schema": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/DnsViewType"
+                }
+              ],
+              "default": 0
+            },
+            "x-position": 2
           }
         ],
         "responses": {
@@ -491,6 +504,24 @@
               "default": 1000
             },
             "x-position": 3
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "The type of DNS Record",
+            "schema": {
+              "nullable": true
+            },
+            "x-position": 4
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            },
+            "x-position": 5
           }
         ],
         "responses": {
@@ -21108,6 +21139,46 @@
         },
         "additionalProperties": false
       },
+      "DnsRecordTypes2": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "type": "integer",
+        "description": "0 = A\n1 = AAAA\n2 = CNAME\n3 = TXT\n4 = MX\n5 = Redirect\n6 = Flatten\n7 = PullZone\n8 = SRV\n9 = CAA\n10 = PTR\n11 = Script\n12 = NS\n13 = SVCB\n14 = HTTPS\n15 = TLSA",
+        "x-enumNames": [
+          "A",
+          "AAAA",
+          "CNAME",
+          "TXT",
+          "MX",
+          "Redirect",
+          "Flatten",
+          "PullZone",
+          "SRV",
+          "CAA",
+          "PTR",
+          "Script",
+          "NS",
+          "SVCB",
+          "HTTPS",
+          "TLSA"
+        ]
+      },
       "PullZoneModel": {
         "type": "object",
         "properties": {
@@ -21217,6 +21288,14 @@
           "EnableGeoZoneAF": {
             "type": "boolean",
             "description": "Determines if the delivery from the Africa region is enabled for this pull zone"
+          },
+          "IpFamilyPolicy": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/IpFamilyPolicy"
+              }
+            ],
+            "description": "Address-family policy: 0=IPv4Only, 1=DualStack, 2=DualStackPreferIPv6, 3=IPv6Only."
           },
           "ZoneSecurityEnabled": {
             "type": "boolean",
@@ -22018,6 +22097,22 @@
           "LoadBalancer"
         ]
       },
+      "IpFamilyPolicy": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "description": "0 = IPv4Only\n1 = DualStack\n2 = DualStackPreferIPv6\n3 = IPv6Only",
+        "x-enumNames": [
+          "IPv4Only",
+          "DualStack",
+          "DualStackPreferIPv6",
+          "IPv6Only"
+        ]
+      },
       "PullZoneType": {
         "enum": [
           0,
@@ -22140,10 +22235,11 @@
           31,
           32,
           33,
-          34
+          34,
+          37
         ],
         "type": "integer",
-        "description": "0 = ForceSSL\n1 = Redirect\n2 = OriginUrl\n3 = OverrideCacheTime\n4 = BlockRequest\n5 = SetResponseHeader\n6 = SetRequestHeader\n7 = ForceDownload\n8 = DisableTokenAuthentication\n9 = EnableTokenAuthentication\n10 = OverrideCacheTimePublic\n11 = IgnoreQueryString\n12 = DisableOptimizer\n13 = ForceCompression\n14 = SetStatusCode\n15 = BypassPermaCache\n16 = OverrideBrowserCacheTime\n17 = OriginStorage\n18 = SetNetworkRateLimit\n19 = SetConnectionLimit\n20 = SetRequestsPerSecondLimit\n21 = RunEdgeScript\n22 = OriginMagicContainers\n23 = DisableWAF\n24 = RetryOrigin\n25 = OverrideBrowserCacheResponseHeader\n26 = RemoveBrowserCacheResponseHeader\n27 = DisableShieldChallenge\n28 = DisableShield\n29 = DisableShieldBotDetection\n30 = BypassAwsS3Authentication\n31 = DisableShieldAccessLists\n32 = DisableShieldRateLimiting\n33 = EnableRequestCoalescing\n34 = DisableRequestCoalescing",
+        "description": "0 = ForceSSL\n1 = Redirect\n2 = OriginUrl\n3 = OverrideCacheTime\n4 = BlockRequest\n5 = SetResponseHeader\n6 = SetRequestHeader\n7 = ForceDownload\n8 = DisableTokenAuthentication\n9 = EnableTokenAuthentication\n10 = OverrideCacheTimePublic\n11 = IgnoreQueryString\n12 = DisableOptimizer\n13 = ForceCompression\n14 = SetStatusCode\n15 = BypassPermaCache\n16 = OverrideBrowserCacheTime\n17 = OriginStorage\n18 = SetNetworkRateLimit\n19 = SetConnectionLimit\n20 = SetRequestsPerSecondLimit\n21 = RunEdgeScript\n22 = OriginMagicContainers\n23 = DisableWAF\n24 = RetryOrigin\n25 = OverrideBrowserCacheResponseHeader\n26 = RemoveBrowserCacheResponseHeader\n27 = DisableShieldChallenge\n28 = DisableShield\n29 = DisableShieldBotDetection\n30 = BypassAwsS3Authentication\n31 = DisableShieldAccessLists\n32 = DisableShieldRateLimiting\n33 = EnableRequestCoalescing\n34 = DisableRequestCoalescing\n37 = StripCookiesClientToOrigin",
         "x-enumNames": [
           "ForceSSL",
           "Redirect",
@@ -22179,7 +22275,8 @@
           "DisableShieldAccessLists",
           "DisableShieldRateLimiting",
           "EnableRequestCoalescing",
-          "DisableRequestCoalescing"
+          "DisableRequestCoalescing",
+          "StripCookiesClientToOrigin"
         ]
       },
       "Trigger": {
@@ -22538,6 +22635,15 @@
           "EnableGeoZoneAF": {
             "type": "boolean",
             "description": "Determines if the delivery from the Africa region should be enabled for this pull zone",
+            "nullable": true
+          },
+          "IpFamilyPolicy": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/IpFamilyPolicy"
+              }
+            ],
+            "description": "Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.",
             "nullable": true
           },
           "BlockRootPathAccess": {
@@ -23443,6 +23549,15 @@
           "EnableGeoZoneAF": {
             "type": "boolean",
             "description": "Determines if the delivery from the Africa region should be enabled for this pull zone",
+            "nullable": true
+          },
+          "IpFamilyPolicy": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/IpFamilyPolicy"
+              }
+            ],
+            "description": "Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.",
             "nullable": true
           },
           "BlockRootPathAccess": {

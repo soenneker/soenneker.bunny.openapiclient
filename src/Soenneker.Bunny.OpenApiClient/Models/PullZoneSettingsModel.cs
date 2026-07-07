@@ -226,6 +226,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? FollowRedirects { get; set; }
         /// <summary>Determines if the Pull Zone should ignore query strings when serving cached objects (Vary by Query String)</summary>
         public bool? IgnoreQueryStrings { get; set; }
+        /// <summary>&quot;Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.&quot;</summary>
+        public int? IpFamilyPolicy { get; set; }
         /// <summary>Determines the amount of traffic transferred before the client is limited</summary>
         public double? LimitRateAfter { get; set; }
         /// <summary>Determines the maximum number of requests per second coming from a single IP before it is blocked.</summary>
@@ -572,6 +574,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ErrorPageWhitelabel", n => { ErrorPageWhitelabel = n.GetBoolValue(); } },
                 { "FollowRedirects", n => { FollowRedirects = n.GetBoolValue(); } },
                 { "IgnoreQueryStrings", n => { IgnoreQueryStrings = n.GetBoolValue(); } },
+                { "IpFamilyPolicy", n => { IpFamilyPolicy = n.GetIntValue(); } },
                 { "LimitRateAfter", n => { LimitRateAfter = n.GetDoubleValue(); } },
                 { "LimitRatePerSecond", n => { LimitRatePerSecond = n.GetIntValue(); } },
                 { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
@@ -725,6 +728,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ErrorPageWhitelabel", ErrorPageWhitelabel);
             writer.WriteBoolValue("FollowRedirects", FollowRedirects);
             writer.WriteBoolValue("IgnoreQueryStrings", IgnoreQueryStrings);
+            writer.WriteIntValue("IpFamilyPolicy", IpFamilyPolicy);
             writer.WriteDoubleValue("LimitRateAfter", LimitRateAfter);
             writer.WriteIntValue("LimitRatePerSecond", LimitRatePerSecond);
             writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);

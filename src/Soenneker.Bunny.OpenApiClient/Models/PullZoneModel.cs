@@ -270,6 +270,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? Id { get; set; }
         /// <summary>True if the Pull Zone is ignoring query strings when serving cached objects</summary>
         public bool? IgnoreQueryStrings { get; set; }
+        /// <summary>&quot;Address-family policy: 0=IPv4Only, 1=DualStack, 2=DualStackPreferIPv6, 3=IPv6Only.&quot;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper? IpFamilyPolicy { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper IpFamilyPolicy { get; set; }
+#endif
         /// <summary>The amount of data after the rate limit will be activated</summary>
         public double? LimitRateAfter { get; set; }
         /// <summary>The maximum rate at which the zone will transfer data in kb/s. 0 for unlimited</summary>
@@ -720,6 +728,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Hostnames", n => { Hostnames = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel>(global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
                 { "IgnoreQueryStrings", n => { IgnoreQueryStrings = n.GetBoolValue(); } },
+                { "IpFamilyPolicy", n => { IpFamilyPolicy = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper.CreateFromDiscriminatorValue); } },
                 { "LimitRateAfter", n => { LimitRateAfter = n.GetDoubleValue(); } },
                 { "LimitRatePerSecond", n => { LimitRatePerSecond = n.GetDoubleValue(); } },
                 { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper.CreateFromDiscriminatorValue); } },
@@ -894,6 +903,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel>("Hostnames", Hostnames);
             writer.WriteLongValue("Id", Id);
             writer.WriteBoolValue("IgnoreQueryStrings", IgnoreQueryStrings);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper>("IpFamilyPolicy", IpFamilyPolicy);
             writer.WriteDoubleValue("LimitRateAfter", LimitRateAfter);
             writer.WriteDoubleValue("LimitRatePerSecond", LimitRatePerSecond);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper>("LogAnonymizationType", LogAnonymizationType);

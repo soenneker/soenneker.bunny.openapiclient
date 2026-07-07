@@ -9,29 +9,29 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class EdgeRuleActionTypeWrapper : IAdditionalDataHolder, IParsable
+    public partial class IpFamilyPolicyWrapper : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>0 = ForceSSL1 = Redirect2 = OriginUrl3 = OverrideCacheTime4 = BlockRequest5 = SetResponseHeader6 = SetRequestHeader7 = ForceDownload8 = DisableTokenAuthentication9 = EnableTokenAuthentication10 = OverrideCacheTimePublic11 = IgnoreQueryString12 = DisableOptimizer13 = ForceCompression14 = SetStatusCode15 = BypassPermaCache16 = OverrideBrowserCacheTime17 = OriginStorage18 = SetNetworkRateLimit19 = SetConnectionLimit20 = SetRequestsPerSecondLimit21 = RunEdgeScript22 = OriginMagicContainers23 = DisableWAF24 = RetryOrigin25 = OverrideBrowserCacheResponseHeader26 = RemoveBrowserCacheResponseHeader27 = DisableShieldChallenge28 = DisableShield29 = DisableShieldBotDetection30 = BypassAwsS3Authentication31 = DisableShieldAccessLists32 = DisableShieldRateLimiting33 = EnableRequestCoalescing34 = DisableRequestCoalescing37 = StripCookiesClientToOrigin</summary>
+        /// <summary>0 = IPv4Only1 = DualStack2 = DualStackPreferIPv63 = IPv6Only</summary>
         public int? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper"/> and sets the default values.
         /// </summary>
-        public EdgeRuleActionTypeWrapper()
+        public IpFamilyPolicyWrapper()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper();
+            return new global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper();
         }
         /// <summary>
         /// The deserialization information for the current model
