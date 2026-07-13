@@ -38,6 +38,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ProviderUrl { get; set; }
 #endif
+        /// <summary>The thumbnail_height property</summary>
+        public int? ThumbnailHeight { get; set; }
         /// <summary>The thumbnail_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -46,6 +48,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ThumbnailUrl { get; set; }
 #endif
+        /// <summary>The thumbnail_width property</summary>
+        public int? ThumbnailWidth { get; set; }
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -94,7 +98,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "html", n => { Html = n.GetStringValue(); } },
                 { "provider_name", n => { ProviderName = n.GetStringValue(); } },
                 { "provider_url", n => { ProviderUrl = n.GetStringValue(); } },
+                { "thumbnail_height", n => { ThumbnailHeight = n.GetIntValue(); } },
                 { "thumbnail_url", n => { ThumbnailUrl = n.GetStringValue(); } },
+                { "thumbnail_width", n => { ThumbnailWidth = n.GetIntValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
@@ -112,7 +118,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("html", Html);
             writer.WriteStringValue("provider_name", ProviderName);
             writer.WriteStringValue("provider_url", ProviderUrl);
+            writer.WriteIntValue("thumbnail_height", ThumbnailHeight);
             writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
+            writer.WriteIntValue("thumbnail_width", ThumbnailWidth);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("version", Version);

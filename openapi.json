@@ -29279,6 +29279,16 @@
             "type": "string",
             "nullable": true
           },
+          "thumbnail_width": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "thumbnail_height": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "width": {
             "type": "integer",
             "format": "int32"
