@@ -1467,6 +1467,101 @@
         }
       }
     },
+    "/core/pullzone/requestExternalHttpCertificate": {
+      "post": {
+        "tags": [
+          "Pull Zone"
+        ],
+        "summary": "Request External HTTP Certificate",
+        "operationId": "core_PullZonePublic_RequestExternalHttpCertificate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExternalHttpCertificateRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "req",
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The HTTP-01 challenge file details for verification",
+            "content": {
+              "application/json": {
+                "schema": { }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The hostname was not found in the account"
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/core/pullzone/completeExternalHttpCertificate": {
+      "post": {
+        "tags": [
+          "Pull Zone"
+        ],
+        "summary": "Complete External HTTP Certificate",
+        "operationId": "core_PullZonePublic_CompleteExternalHttpCertificate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExternalHttpCertificateRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "req",
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The certificate was successfully loaded"
+          },
+          "400": {
+            "description": "The verification failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The hostname was not found in the account"
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/core/pullzone/{id}/purgeCache": {
       "post": {
         "tags": [
@@ -23477,6 +23572,19 @@
         },
         "additionalProperties": false
       },
+      "ExternalHttpCertificateRequest": {
+        "required": [
+          "Hostname"
+        ],
+        "type": "object",
+        "properties": {
+          "Hostname": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "PullZonePurgeModel": {
         "type": "object",
         "properties": {
@@ -30381,6 +30489,14 @@
             "type": "string",
             "nullable": true
           },
+          "isNegated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isRegexVariable": {
+            "type": "boolean",
+            "nullable": true
+          },
           "chainedRuleConditions": {
             "type": "array",
             "items": {
@@ -30572,6 +30688,14 @@
           },
           "value": {
             "type": "string",
+            "nullable": true
+          },
+          "isNegated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isRegexVariable": {
+            "type": "boolean",
             "nullable": true
           },
           "requestCount": {
@@ -32991,6 +33115,14 @@
           },
           "value": {
             "type": "string",
+            "nullable": true
+          },
+          "isNegated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isRegexVariable": {
+            "type": "boolean",
             "nullable": true
           }
         },

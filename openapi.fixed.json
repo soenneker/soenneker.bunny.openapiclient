@@ -1159,6 +1159,76 @@
         }
       }
     },
+    "/core/pullzone/requestExternalHttpCertificate": {
+      "post": {
+        "tags": [
+          "Pull Zone"
+        ],
+        "summary": "Request External HTTP Certificate",
+        "operationId": "CorePullZonePublicRequestExternalHttpCertificate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExternalHttpCertificateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The HTTP-01 challenge file details for verification",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/core/pullzone/completeExternalHttpCertificate": {
+      "post": {
+        "tags": [
+          "Pull Zone"
+        ],
+        "summary": "Complete External HTTP Certificate",
+        "operationId": "CorePullZonePublicCompleteExternalHttpCertificate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExternalHttpCertificateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "The verification failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/core/pullzone/{id}/purgeCache": {
       "post": {
         "tags": [
@@ -21026,6 +21096,19 @@
         },
         "additionalProperties": false
       },
+      "ExternalHttpCertificateRequest": {
+        "required": [
+          "Hostname"
+        ],
+        "type": "object",
+        "properties": {
+          "Hostname": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
       "PullZonePurgeModel": {
         "type": "object",
         "properties": {
@@ -27069,6 +27152,14 @@
             "type": "string",
             "nullable": true
           },
+          "isNegated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isRegexVariable": {
+            "type": "boolean",
+            "nullable": true
+          },
           "chainedRuleConditions": {
             "type": "array",
             "items": {
@@ -27175,6 +27266,14 @@
           },
           "value": {
             "type": "string",
+            "nullable": true
+          },
+          "isNegated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isRegexVariable": {
+            "type": "boolean",
             "nullable": true
           },
           "requestCount": {
@@ -29418,6 +29517,14 @@
           },
           "value": {
             "type": "string",
+            "nullable": true
+          },
+          "isNegated": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isRegexVariable": {
+            "type": "boolean",
             "nullable": true
           }
         },
@@ -36301,6 +36408,9 @@
       "CorePullZonePublicRequestExternalDnsCertificate200Response": {
         "type": "object"
       },
+      "CorePullZonePublicRequestExternalHttpCertificate200Response": {
+        "type": "object"
+      },
       "CorePullZonePublicPurgeCachePostByTagRequest": {
         "required": [
           "type"
@@ -36820,6 +36930,9 @@
         "description": "Default response schema"
       },
       "CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson": {
+        "type": "object"
+      },
+      "CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson": {
         "type": "object"
       },
       "DefaultResponseResponseJson3": {

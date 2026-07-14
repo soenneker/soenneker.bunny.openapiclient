@@ -26,6 +26,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>0 = IP1 = Host2 = Country3 = City4 = ASN5 = Organization6 = JA47 = IP_JA4</summary>
         public int? CounterKeyType { get; set; }
+        /// <summary>The isNegated property</summary>
+        public bool? IsNegated { get; set; }
+        /// <summary>The isRegexVariable property</summary>
+        public bool? IsRegexVariable { get; set; }
         /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
         public int? OperatorType { get; set; }
         /// <summary>The requestCount property</summary>
@@ -80,6 +84,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "blockTime", n => { BlockTime = n.GetIntValue(); } },
                 { "chainedRuleConditions", n => { ChainedRuleConditions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>(global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "counterKeyType", n => { CounterKeyType = n.GetIntValue(); } },
+                { "isNegated", n => { IsNegated = n.GetBoolValue(); } },
+                { "isRegexVariable", n => { IsRegexVariable = n.GetBoolValue(); } },
                 { "operatorType", n => { OperatorType = n.GetIntValue(); } },
                 { "requestCount", n => { RequestCount = n.GetIntValue(); } },
                 { "severityType", n => { SeverityType = n.GetIntValue(); } },
@@ -100,6 +106,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("blockTime", BlockTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>("chainedRuleConditions", ChainedRuleConditions);
             writer.WriteIntValue("counterKeyType", CounterKeyType);
+            writer.WriteBoolValue("isNegated", IsNegated);
+            writer.WriteBoolValue("isRegexVariable", IsRegexVariable);
             writer.WriteIntValue("operatorType", OperatorType);
             writer.WriteIntValue("requestCount", RequestCount);
             writer.WriteIntValue("severityType", SeverityType);

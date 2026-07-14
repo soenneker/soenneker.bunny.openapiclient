@@ -22,6 +22,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> ChainedRuleConditions { get; set; }
 #endif
+        /// <summary>The isNegated property</summary>
+        public bool? IsNegated { get; set; }
+        /// <summary>The isRegexVariable property</summary>
+        public bool? IsRegexVariable { get; set; }
         /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
         public int? OperatorType { get; set; }
         /// <summary>0 = NOTICE1 = WARNING2 = CRITICAL</summary>
@@ -70,6 +74,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "actionType", n => { ActionType = n.GetIntValue(); } },
                 { "chainedRuleConditions", n => { ChainedRuleConditions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>(global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "isNegated", n => { IsNegated = n.GetBoolValue(); } },
+                { "isRegexVariable", n => { IsRegexVariable = n.GetBoolValue(); } },
                 { "operatorType", n => { OperatorType = n.GetIntValue(); } },
                 { "severityType", n => { SeverityType = n.GetIntValue(); } },
                 { "transformationTypes", n => { TransformationTypes = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
@@ -86,6 +92,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("actionType", ActionType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>("chainedRuleConditions", ChainedRuleConditions);
+            writer.WriteBoolValue("isNegated", IsNegated);
+            writer.WriteBoolValue("isRegexVariable", IsRegexVariable);
             writer.WriteIntValue("operatorType", OperatorType);
             writer.WriteIntValue("severityType", SeverityType);
             writer.WriteCollectionOfPrimitiveValues<int?>("transformationTypes", TransformationTypes);

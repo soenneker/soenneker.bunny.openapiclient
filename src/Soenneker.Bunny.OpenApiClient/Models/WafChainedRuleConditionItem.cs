@@ -12,6 +12,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class WafChainedRuleConditionItem : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The isNegated property</summary>
+        public bool? IsNegated { get; set; }
+        /// <summary>The isRegexVariable property</summary>
+        public bool? IsRegexVariable { get; set; }
         /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
         public int? OperatorType { get; set; }
         /// <summary>The value property</summary>
@@ -48,6 +52,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "isNegated", n => { IsNegated = n.GetBoolValue(); } },
+                { "isRegexVariable", n => { IsRegexVariable = n.GetBoolValue(); } },
                 { "operatorType", n => { OperatorType = n.GetIntValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
                 { "variableTypes", n => { VariableTypes = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes>(global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes.CreateFromDiscriminatorValue); } },
@@ -60,6 +66,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("isNegated", IsNegated);
+            writer.WriteBoolValue("isRegexVariable", IsRegexVariable);
             writer.WriteIntValue("operatorType", OperatorType);
             writer.WriteStringValue("value", Value);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes>("variableTypes", VariableTypes);

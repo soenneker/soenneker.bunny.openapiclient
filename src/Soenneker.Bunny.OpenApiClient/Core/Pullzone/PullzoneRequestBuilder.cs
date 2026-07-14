@@ -5,10 +5,12 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone.Checkavailability;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone.CompleteExternalDnsCertificate;
+using Soenneker.Bunny.OpenApiClient.Core.Pullzone.CompleteExternalHttpCertificate;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone.Count;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone.LoadFreeCertificate;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalDnsCertificate;
+using Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalHttpCertificate;
 using Soenneker.Bunny.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -33,6 +35,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.CompleteExternalDnsCertificate.CompleteExternalDnsCertificateRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The completeExternalHttpCertificate property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.CompleteExternalHttpCertificate.CompleteExternalHttpCertificateRequestBuilder CompleteExternalHttpCertificate
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.CompleteExternalHttpCertificate.CompleteExternalHttpCertificateRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The count property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Count.CountRequestBuilder Count
         {
@@ -47,6 +54,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone
         public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalDnsCertificate.RequestExternalDnsCertificateRequestBuilder RequestExternalDnsCertificate
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalDnsCertificate.RequestExternalDnsCertificateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The requestExternalHttpCertificate property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalHttpCertificate.RequestExternalHttpCertificateRequestBuilder RequestExternalHttpCertificate
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalHttpCertificate.RequestExternalHttpCertificateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.core.pullzone.item collection</summary>
         /// <param name="position">The ID of the Pull Zone that should be returned</param>
