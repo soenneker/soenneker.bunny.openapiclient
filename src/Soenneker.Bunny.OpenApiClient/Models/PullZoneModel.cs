@@ -285,10 +285,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Gets the log anonymization type for this pull zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper? LogAnonymizationType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper3? LogAnonymizationType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper LogAnonymizationType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper3 LogAnonymizationType { get; set; }
 #endif
         /// <summary>0 = Plain1 = JSON</summary>
         public int? LogFormat { get; set; }
@@ -731,7 +731,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "IpFamilyPolicy", n => { IpFamilyPolicy = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper.CreateFromDiscriminatorValue); } },
                 { "LimitRateAfter", n => { LimitRateAfter = n.GetDoubleValue(); } },
                 { "LimitRatePerSecond", n => { LimitRatePerSecond = n.GetDoubleValue(); } },
-                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper3>(global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper3.CreateFromDiscriminatorValue); } },
                 { "LogFormat", n => { LogFormat = n.GetIntValue(); } },
                 { "LogForwardingEnabled", n => { LogForwardingEnabled = n.GetBoolValue(); } },
                 { "LogForwardingFormat", n => { LogForwardingFormat = n.GetIntValue(); } },
@@ -906,7 +906,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IpFamilyPolicyWrapper>("IpFamilyPolicy", IpFamilyPolicy);
             writer.WriteDoubleValue("LimitRateAfter", LimitRateAfter);
             writer.WriteDoubleValue("LimitRatePerSecond", LimitRatePerSecond);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper>("LogAnonymizationType", LogAnonymizationType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper3>("LogAnonymizationType", LogAnonymizationType);
             writer.WriteIntValue("LogFormat", LogFormat);
             writer.WriteBoolValue("LogForwardingEnabled", LogForwardingEnabled);
             writer.WriteIntValue("LogForwardingFormat", LogForwardingFormat);

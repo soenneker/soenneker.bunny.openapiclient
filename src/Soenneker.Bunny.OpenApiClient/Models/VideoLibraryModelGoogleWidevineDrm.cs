@@ -22,7 +22,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Enabled property</summary>
         public bool? Enabled { get; set; }
         /// <summary>The MinClientSecurityLevel property</summary>
-        public int? MinClientSecurityLevel { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper? MinClientSecurityLevel { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper MinClientSecurityLevel { get; set; }
+#endif
         /// <summary>The Provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -69,7 +75,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "CertificateExpirationDate", n => { CertificateExpirationDate = n.GetDateTimeOffsetValue(); } },
                 { "CertificateId", n => { CertificateId = n.GetLongValue(); } },
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetIntValue(); } },
+                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper.CreateFromDiscriminatorValue); } },
                 { "Provider", n => { Provider = n.GetStringValue(); } },
                 { "SdOnlyForL3", n => { SdOnlyForL3 = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -85,7 +91,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("CertificateExpirationDate", CertificateExpirationDate);
             writer.WriteLongValue("CertificateId", CertificateId);
             writer.WriteBoolValue("Enabled", Enabled);
-            writer.WriteIntValue("MinClientSecurityLevel", MinClientSecurityLevel);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper>("MinClientSecurityLevel", MinClientSecurityLevel);
             writer.WriteStringValue("Provider", Provider);
             writer.WriteBoolValue("SdOnlyForL3", SdOnlyForL3);
             writer.WriteStringValue("type", Type);

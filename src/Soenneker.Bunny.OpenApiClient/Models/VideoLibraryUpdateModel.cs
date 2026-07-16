@@ -75,7 +75,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string CustomHTML { get; set; }
 #endif
         /// <summary>(Optional) Determines MediaCage DRM version to be used for this library</summary>
-        public int? DrmVersion { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper2? DrmVersion { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper2 DrmVersion { get; set; }
+#endif
         /// <summary>(Optional) Determines if any associated captions will be automatically signaled in the HLS master playlist via EXT-X-MEDIA tags, allowing client players to show captions.</summary>
         public bool? EnableCaptionsInPlaylist { get; set; }
         /// <summary>(Optional) Marks whether compact controls should be enabled for the player.</summary>
@@ -111,7 +117,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>(Optional) Determines if automatic transcribing title generation is currently enabled.</summary>
         public bool? EnableTranscribingTitleGeneration { get; set; }
         /// <summary>(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.</summary>
-        public int? EncodingTier { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper3? EncodingTier { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper3 EncodingTier { get; set; }
+#endif
         /// <summary>(Optional) Marks whether original video files should be exposed via CDN. Originals are not protected by DRM. Enabling Early-Play will enable this.</summary>
         public bool? ExposeOriginals { get; set; }
         /// <summary>(Optional) Marks whether video metadata in form of schema meta tags and LD+JSON should be exposed.</summary>
@@ -266,7 +278,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "CaptionsFontSize", n => { CaptionsFontSize = n.GetIntValue(); } },
                 { "Controls", n => { Controls = n.GetStringValue(); } },
                 { "CustomHTML", n => { CustomHTML = n.GetStringValue(); } },
-                { "DrmVersion", n => { DrmVersion = n.GetIntValue(); } },
+                { "DrmVersion", n => { DrmVersion = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper2.CreateFromDiscriminatorValue); } },
                 { "EnableCaptionsInPlaylist", n => { EnableCaptionsInPlaylist = n.GetBoolValue(); } },
                 { "EnableCompactControls", n => { EnableCompactControls = n.GetBoolValue(); } },
                 { "EnableContentTagging", n => { EnableContentTagging = n.GetBoolValue(); } },
@@ -281,7 +293,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "EnableTranscribingMomentsGeneration", n => { EnableTranscribingMomentsGeneration = n.GetBoolValue(); } },
                 { "EnableTranscribingTitleGeneration", n => { EnableTranscribingTitleGeneration = n.GetBoolValue(); } },
                 { "EnabledResolutions", n => { EnabledResolutions = n.GetStringValue(); } },
-                { "EncodingTier", n => { EncodingTier = n.GetIntValue(); } },
+                { "EncodingTier", n => { EncodingTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper3>(global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper3.CreateFromDiscriminatorValue); } },
                 { "ExposeOriginals", n => { ExposeOriginals = n.GetBoolValue(); } },
                 { "ExposeVideoMetadata", n => { ExposeVideoMetadata = n.GetBoolValue(); } },
                 { "FontFamily", n => { FontFamily = n.GetStringValue(); } },
@@ -334,7 +346,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("CaptionsFontSize", CaptionsFontSize);
             writer.WriteStringValue("Controls", Controls);
             writer.WriteStringValue("CustomHTML", CustomHTML);
-            writer.WriteIntValue("DrmVersion", DrmVersion);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper2>("DrmVersion", DrmVersion);
             writer.WriteBoolValue("EnableCaptionsInPlaylist", EnableCaptionsInPlaylist);
             writer.WriteBoolValue("EnableCompactControls", EnableCompactControls);
             writer.WriteBoolValue("EnableContentTagging", EnableContentTagging);
@@ -349,7 +361,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("EnableTranscribingDescriptionGeneration", EnableTranscribingDescriptionGeneration);
             writer.WriteBoolValue("EnableTranscribingMomentsGeneration", EnableTranscribingMomentsGeneration);
             writer.WriteBoolValue("EnableTranscribingTitleGeneration", EnableTranscribingTitleGeneration);
-            writer.WriteIntValue("EncodingTier", EncodingTier);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper3>("EncodingTier", EncodingTier);
             writer.WriteBoolValue("ExposeOriginals", ExposeOriginals);
             writer.WriteBoolValue("ExposeVideoMetadata", ExposeVideoMetadata);
             writer.WriteStringValue("FontFamily", FontFamily);

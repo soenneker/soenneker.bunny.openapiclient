@@ -510,7 +510,15 @@
             "in": "query",
             "description": "The type of DNS Record",
             "schema": {
-              "nullable": true
+              "oneOf": [
+                {
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DnsRecordTypes2"
+                    }
+                  ]
+                }
+              ]
             },
             "x-position": 4
           },
@@ -762,8 +770,7 @@
                   {
                     "$ref": "#/components/schemas/IssueWildcardCertificateRequestModel"
                   }
-                ],
-                "nullable": true
+                ]
               }
             }
           },
@@ -1590,8 +1597,7 @@
                   {
                     "$ref": "#/components/schemas/PullZonePurgeModel"
                   }
-                ],
-                "nullable": true
+                ]
               }
             }
           },
@@ -20514,8 +20520,7 @@
                 "$ref": "#/components/schemas/LogAnonymizationType"
               }
             ],
-            "description": "Sets the log anonymization type for this zone",
-            "nullable": true
+            "description": "Sets the log anonymization type for this zone"
           },
           "DnsSecEnabled": {
             "type": "boolean",
@@ -20590,16 +20595,14 @@
               {
                 "$ref": "#/components/schemas/GeoDnsLocationModel"
               }
-            ],
-            "nullable": true
+            ]
           },
           "GeolocationInfo": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/DnsRecordGeoLocationInfo"
               }
-            ],
-            "nullable": true
+            ]
           },
           "MonitorStatus": {
             "$ref": "#/components/schemas/DnsMonitoringStatus"
@@ -20879,8 +20882,7 @@
                 "$ref": "#/components/schemas/LogAnonymizationType"
               }
             ],
-            "description": "Gets the log anonymization type for this zone",
-            "nullable": true
+            "description": "Gets the log anonymization type for this zone"
           },
           "CertificateKeyType": {
             "oneOf": [
@@ -20888,8 +20890,7 @@
                 "$ref": "#/components/schemas/PrivateKeyType"
               }
             ],
-            "description": "Sets the certificate private key type for wildcard certificates for this zone",
-            "nullable": true
+            "description": "Sets the certificate private key type for wildcard certificates for this zone"
           },
           "LoggingIPAnonymizationEnabled": {
             "type": "boolean",
@@ -20958,8 +20959,7 @@
               {
                 "$ref": "#/components/schemas/DnsRecordTypes"
               }
-            ],
-            "nullable": true
+            ]
           },
           "Ttl": {
             "type": "integer",
@@ -21017,8 +21017,7 @@
               {
                 "$ref": "#/components/schemas/DnsMonitoringType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "GeolocationLatitude": {
             "type": "number",
@@ -21039,8 +21038,7 @@
               {
                 "$ref": "#/components/schemas/DnsSmartRoutingType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "Disabled": {
             "type": "boolean",
@@ -21072,8 +21070,7 @@
               {
                 "$ref": "#/components/schemas/DnsRecordTypes"
               }
-            ],
-            "nullable": true
+            ]
           },
           "Ttl": {
             "type": "integer",
@@ -21131,8 +21128,7 @@
               {
                 "$ref": "#/components/schemas/DnsMonitoringType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "GeolocationLatitude": {
             "type": "number",
@@ -21153,8 +21149,7 @@
               {
                 "$ref": "#/components/schemas/DnsSmartRoutingType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "Disabled": {
             "type": "boolean",
@@ -22738,8 +22733,7 @@
                 "$ref": "#/components/schemas/IpFamilyPolicy"
               }
             ],
-            "description": "Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.",
-            "nullable": true
+            "description": "Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only."
           },
           "BlockRootPathAccess": {
             "type": "boolean",
@@ -22898,8 +22892,7 @@
                 "$ref": "#/components/schemas/PermaCacheType"
               }
             ],
-            "description": "Determines Perma-Cache behavior",
-            "nullable": true
+            "description": "Determines Perma-Cache behavior"
           },
           "AWSSigningEnabled": {
             "type": "boolean",
@@ -22978,8 +22971,7 @@
                 "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
               }
             ],
-            "description": "Sets the log forwarding protocol type",
-            "nullable": true
+            "description": "Sets the log forwarding protocol type"
           },
           "LoggingSaveToStorage": {
             "type": "boolean",
@@ -23135,8 +23127,7 @@
                 "$ref": "#/components/schemas/OptimizerWatermarkPosition"
               }
             ],
-            "description": "Sets the position of the watermark image",
-            "nullable": true
+            "description": "Sets the position of the watermark image"
           },
           "OptimizerWatermarkOffset": {
             "type": "number",
@@ -23189,8 +23180,7 @@
                 "$ref": "#/components/schemas/PullZoneType"
               }
             ],
-            "description": "The type of the pull zone. Premium = 0, Volume = 1",
-            "nullable": true
+            "description": "The type of the pull zone. Premium = 0, Volume = 1"
           },
           "OriginRetries": {
             "type": "integer",
@@ -23320,8 +23310,7 @@
                 "$ref": "#/components/schemas/LogAnonymizationType"
               }
             ],
-            "description": "Sets the log anonymization type for this pull zone",
-            "nullable": true
+            "description": "Sets the log anonymization type for this pull zone"
           },
           "StorageZoneId": {
             "type": "integer",
@@ -23347,8 +23336,7 @@
                 "$ref": "#/components/schemas/ExecutionPhase"
               }
             ],
-            "description": "The execution phase of the edge script",
-            "nullable": true
+            "description": "The execution phase of the edge script"
           },
           "OriginType": {
             "oneOf": [
@@ -23356,8 +23344,7 @@
                 "$ref": "#/components/schemas/PullZoneOriginType"
               }
             ],
-            "description": "Determine the type of the origin for this Pull Zone",
-            "nullable": true
+            "description": "Determine the type of the origin for this Pull Zone"
           },
           "MagicContainersAppId": {
             "type": "string",
@@ -23372,24 +23359,21 @@
               {
                 "$ref": "#/components/schemas/PullZoneLogFormat"
               }
-            ],
-            "nullable": true
+            ]
           },
           "LogForwardingFormat": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/PullZoneLogFormat"
               }
-            ],
-            "nullable": true
+            ]
           },
           "ShieldDDosProtectionType": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/ShieldDDosProtectionType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "ShieldDDosProtectionEnabled": {
             "type": "boolean",
@@ -23456,8 +23440,7 @@
                 "$ref": "#/components/schemas/PreloadingScreenTheme"
               }
             ],
-            "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)",
-            "nullable": true
+            "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)"
           },
           "PreloadingScreenCodeEnabled": {
             "type": "boolean",
@@ -23486,8 +23469,7 @@
                 "$ref": "#/components/schemas/StickySessionType"
               }
             ],
-            "description": "Whether to use a Sticky Session mechanism for this pull zone",
-            "nullable": true
+            "description": "Whether to use a Sticky Session mechanism for this pull zone"
           },
           "StickySessionCookieName": {
             "type": "string",
@@ -23665,8 +23647,7 @@
                 "$ref": "#/components/schemas/IpFamilyPolicy"
               }
             ],
-            "description": "Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.",
-            "nullable": true
+            "description": "Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only."
           },
           "BlockRootPathAccess": {
             "type": "boolean",
@@ -23825,8 +23806,7 @@
                 "$ref": "#/components/schemas/PermaCacheType"
               }
             ],
-            "description": "Determines Perma-Cache behavior",
-            "nullable": true
+            "description": "Determines Perma-Cache behavior"
           },
           "AWSSigningEnabled": {
             "type": "boolean",
@@ -23905,8 +23885,7 @@
                 "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
               }
             ],
-            "description": "Sets the log forwarding protocol type",
-            "nullable": true
+            "description": "Sets the log forwarding protocol type"
           },
           "LoggingSaveToStorage": {
             "type": "boolean",
@@ -24062,8 +24041,7 @@
                 "$ref": "#/components/schemas/OptimizerWatermarkPosition"
               }
             ],
-            "description": "Sets the position of the watermark image",
-            "nullable": true
+            "description": "Sets the position of the watermark image"
           },
           "OptimizerWatermarkOffset": {
             "type": "number",
@@ -24116,8 +24094,7 @@
                 "$ref": "#/components/schemas/PullZoneType"
               }
             ],
-            "description": "The type of the pull zone. Premium = 0, Volume = 1",
-            "nullable": true
+            "description": "The type of the pull zone. Premium = 0, Volume = 1"
           },
           "OriginRetries": {
             "type": "integer",
@@ -24247,8 +24224,7 @@
                 "$ref": "#/components/schemas/LogAnonymizationType"
               }
             ],
-            "description": "Sets the log anonymization type for this pull zone",
-            "nullable": true
+            "description": "Sets the log anonymization type for this pull zone"
           },
           "StorageZoneId": {
             "type": "integer",
@@ -24274,8 +24250,7 @@
                 "$ref": "#/components/schemas/ExecutionPhase"
               }
             ],
-            "description": "The execution phase of the edge script",
-            "nullable": true
+            "description": "The execution phase of the edge script"
           },
           "OriginType": {
             "oneOf": [
@@ -24283,8 +24258,7 @@
                 "$ref": "#/components/schemas/PullZoneOriginType"
               }
             ],
-            "description": "Determine the type of the origin for this Pull Zone",
-            "nullable": true
+            "description": "Determine the type of the origin for this Pull Zone"
           },
           "MagicContainersAppId": {
             "type": "string",
@@ -24299,24 +24273,21 @@
               {
                 "$ref": "#/components/schemas/PullZoneLogFormat"
               }
-            ],
-            "nullable": true
+            ]
           },
           "LogForwardingFormat": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/PullZoneLogFormat"
               }
-            ],
-            "nullable": true
+            ]
           },
           "ShieldDDosProtectionType": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/ShieldDDosProtectionType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "ShieldDDosProtectionEnabled": {
             "type": "boolean",
@@ -24383,8 +24354,7 @@
                 "$ref": "#/components/schemas/PreloadingScreenTheme"
               }
             ],
-            "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)",
-            "nullable": true
+            "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)"
           },
           "PreloadingScreenCodeEnabled": {
             "type": "boolean",
@@ -24413,8 +24383,7 @@
                 "$ref": "#/components/schemas/StickySessionType"
               }
             ],
-            "description": "Whether to use a Sticky Session mechanism for this pull zone",
-            "nullable": true
+            "description": "Whether to use a Sticky Session mechanism for this pull zone"
           },
           "StickySessionCookieName": {
             "type": "string",
@@ -25062,8 +25031,7 @@
                 "$ref": "#/components/schemas/AppleFairPlayDrm"
               }
             ],
-            "description": "Described Apple FairPlay DRM",
-            "nullable": true
+            "description": "Described Apple FairPlay DRM"
           },
           "GoogleWidevineDrm": {
             "oneOf": [
@@ -25071,8 +25039,7 @@
                 "$ref": "#/components/schemas/GoogleWidevineDrm"
               }
             ],
-            "description": "Describes Google Widevine DRM",
-            "nullable": true
+            "description": "Describes Google Widevine DRM"
           },
           "Bitrate240p": {
             "type": "integer",
@@ -25352,8 +25319,7 @@
               {
                 "$ref": "#/components/schemas/WidevineMinClientSecurityLevel"
               }
-            ],
-            "nullable": true
+            ]
           }
         },
         "additionalProperties": false
@@ -25417,8 +25383,7 @@
                 "$ref": "#/components/schemas/EncodingTier"
               }
             ],
-            "description": "(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support.",
-            "nullable": true
+            "description": "(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support."
           },
           "JitEncodingEnabled": {
             "type": "boolean",
@@ -25702,8 +25667,7 @@
                 "$ref": "#/components/schemas/DrmVersion"
               }
             ],
-            "description": "(Optional) Determines MediaCage DRM version to be used for this library",
-            "nullable": true
+            "description": "(Optional) Determines MediaCage DRM version to be used for this library"
           },
           "Controls": {
             "type": "string",
@@ -25836,8 +25800,7 @@
                 "$ref": "#/components/schemas/EncodingTier"
               }
             ],
-            "description": "(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.",
-            "nullable": true
+            "description": "(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support."
           },
           "OutputCodecs": {
             "type": "string",
@@ -25850,8 +25813,7 @@
                 "$ref": "#/components/schemas/AppleFairPlayDrmUpdateModel"
               }
             ],
-            "description": "(Optional) Configure Apple FairPlay DRM. Works only if Enterprise DRM is set up.",
-            "nullable": true
+            "description": "(Optional) Configure Apple FairPlay DRM. Works only if Enterprise DRM is set up."
           },
           "GoogleWidevineDrm": {
             "oneOf": [
@@ -25859,8 +25821,7 @@
                 "$ref": "#/components/schemas/GoogleWidevineDrmUpdateModel"
               }
             ],
-            "description": "(Optional) Configure Google Widevine DRM. Works only if Enterprise DRM is set up.",
-            "nullable": true
+            "description": "(Optional) Configure Google Widevine DRM. Works only if Enterprise DRM is set up."
           },
           "PlayerVersion": {
             "type": "integer",
@@ -25926,8 +25887,7 @@
                 "$ref": "#/components/schemas/WidevineMinClientSecurityLevel"
               }
             ],
-            "description": "(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)",
-            "nullable": true
+            "description": "(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)"
           }
         },
         "additionalProperties": false
@@ -26627,8 +26587,7 @@
               {
                 "$ref": "#/components/schemas/DnsZoneDiscoveredRecordType"
               }
-            ],
-            "nullable": true
+            ]
           },
           "Ttl": {
             "type": "integer",
@@ -26957,8 +26916,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for Magic Containers CPU",
-            "nullable": true
+            "description": "The monthly charges and usage for Magic Containers CPU"
           },
           "MonthlyMcMemory": {
             "oneOf": [
@@ -26966,8 +26924,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for Magic Containers Memory",
-            "nullable": true
+            "description": "The monthly charges and usage for Magic Containers Memory"
           },
           "MonthlyMcIp": {
             "oneOf": [
@@ -26975,8 +26932,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for Magic Containers Anycast IP",
-            "nullable": true
+            "description": "The monthly charges and usage for Magic Containers Anycast IP"
           },
           "MonthlyMcIngressTraffic": {
             "oneOf": [
@@ -26984,8 +26940,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for Magic Containers Ingress Traffic",
-            "nullable": true
+            "description": "The monthly charges and usage for Magic Containers Ingress Traffic"
           },
           "MonthlyMcEgressTraffic": {
             "oneOf": [
@@ -26993,8 +26948,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for Magic Containers Egress Traffic",
-            "nullable": true
+            "description": "The monthly charges and usage for Magic Containers Egress Traffic"
           },
           "MonthlyMcVolumes": {
             "oneOf": [
@@ -27002,8 +26956,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for Magic Containers Persistent Volumes",
-            "nullable": true
+            "description": "The monthly charges and usage for Magic Containers Persistent Volumes"
           },
           "MonthlyChargesShield": {
             "type": "number",
@@ -27031,8 +26984,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for BunnyDB row writes",
-            "nullable": true
+            "description": "The monthly charges and usage for BunnyDB row writes"
           },
           "MonthlyDBReads": {
             "oneOf": [
@@ -27040,8 +26992,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for BunnyDB row reads",
-            "nullable": true
+            "description": "The monthly charges and usage for BunnyDB row reads"
           },
           "MonthlyDBStorage": {
             "oneOf": [
@@ -27049,8 +27000,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for BunnyDB storage",
-            "nullable": true
+            "description": "The monthly charges and usage for BunnyDB storage"
           },
           "MonthlyDBReplica": {
             "oneOf": [
@@ -27058,8 +27008,7 @@
                 "$ref": "#/components/schemas/UsageBreakdown"
               }
             ],
-            "description": "The monthly charges and usage for BunnyDB replica storage",
-            "nullable": true
+            "description": "The monthly charges and usage for BunnyDB replica storage"
           },
           "MonthlyBandwidthUsed": {
             "type": "integer",
@@ -28173,8 +28122,7 @@
                 "$ref": "#/components/schemas/SmartGenerateStatus"
               }
             ],
-            "description": "Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.",
-            "nullable": true
+            "description": "Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus."
           },
           "smartGenerateFeaturesStatus": {
             "oneOf": [
@@ -28182,8 +28130,7 @@
                 "$ref": "#/components/schemas/SmartGenerateFeaturesStatusModel"
               }
             ],
-            "description": "Per-feature smart generate statuses (title, description, chapters, moments). Null for a feature on legacy rows.",
-            "nullable": true
+            "description": "Per-feature smart generate statuses (title, description, chapters, moments). Null for a feature on legacy rows."
           },
           "hasOriginal": {
             "type": "boolean",
@@ -28562,8 +28509,7 @@
                 "$ref": "#/components/schemas/SmartGenerateStatus"
               }
             ],
-            "description": "Smart generate status for the video title, when applicable.",
-            "nullable": true
+            "description": "Smart generate status for the video title, when applicable."
           },
           "description": {
             "oneOf": [
@@ -28571,8 +28517,7 @@
                 "$ref": "#/components/schemas/SmartGenerateStatus"
               }
             ],
-            "description": "Smart generate status for the video description, when applicable.",
-            "nullable": true
+            "description": "Smart generate status for the video description, when applicable."
           },
           "chapters": {
             "oneOf": [
@@ -28580,8 +28525,7 @@
                 "$ref": "#/components/schemas/SmartGenerateStatus"
               }
             ],
-            "description": "Smart generate status for chapters, when applicable.",
-            "nullable": true
+            "description": "Smart generate status for chapters, when applicable."
           },
           "moments": {
             "oneOf": [
@@ -28589,8 +28533,7 @@
                 "$ref": "#/components/schemas/SmartGenerateStatus"
               }
             ],
-            "description": "Smart generate status for moments, when applicable.",
-            "nullable": true
+            "description": "Smart generate status for moments, when applicable."
           }
         },
         "additionalProperties": false
@@ -28619,8 +28562,7 @@
                 "$ref": "#/components/schemas/VideoModel"
               }
             ],
-            "description": "Video data.",
-            "nullable": true
+            "description": "Video data."
           },
           "libraryName": {
             "type": "string",
@@ -28997,8 +28939,7 @@
                   {
                     "$ref": "#/components/schemas/CaptionValidationModel"
                   }
-                ],
-                "nullable": true
+                ]
               }
             },
             "additionalProperties": false
@@ -29140,8 +29081,7 @@
                   {
                     "$ref": "#/components/schemas/VideoResolutionsInfoModel"
                   }
-                ],
-                "nullable": true
+                ]
               }
             },
             "additionalProperties": false
@@ -29305,8 +29245,7 @@
                   {
                     "$ref": "#/components/schemas/VideoStorageSizeModel"
                   }
-                ],
-                "nullable": true
+                ]
               }
             },
             "additionalProperties": false
@@ -29427,9 +29366,7 @@
             "type": "string",
             "nullable": true
           },
-          "value": {
-            "nullable": true
-          },
+          "value": { },
           "formatters": {
             "type": "array",
             "items": {
@@ -31068,8 +31005,7 @@
             "format": "int64"
           },
           "log": {
-            "description": "The full request context for the event (JSON object).",
-            "nullable": true
+            "description": "The full request context for the event (JSON object)."
           },
           "fields": {
             "type": "object",
@@ -33725,8 +33661,7 @@
               {
                 "$ref": "#/components/schemas/SourceCodeIntegrationModel"
               }
-            ],
-            "nullable": true
+            ]
           },
           "DefaultHostname": {
             "type": "string",
@@ -33830,16 +33765,14 @@
               {
                 "$ref": "#/components/schemas/SourceCodeRepositorySettingsModel"
               }
-            ],
-            "nullable": true
+            ]
           },
           "DeployConfiguration": {
             "oneOf": [
               {
                 "$ref": "#/components/schemas/DeployConfigurationModel"
               }
-            ],
-            "nullable": true
+            ]
           }
         },
         "additionalProperties": false
@@ -34203,8 +34136,7 @@
               {
                 "$ref": "#/components/schemas/SourceCodeIntegrationModel"
               }
-            ],
-            "nullable": true
+            ]
           }
         },
         "additionalProperties": false

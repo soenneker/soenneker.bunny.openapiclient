@@ -414,7 +414,17 @@
             "in": "query",
             "description": "The type of DNS Record",
             "schema": {
-              "nullable": true
+              "type": "object",
+              "oneOf": [
+                {
+                  "type": "object",
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/DnsRecordTypes2"
+                    }
+                  ]
+                }
+              ]
             }
           },
           {
@@ -26226,7 +26236,7 @@
             "nullable": true
           },
           "value": {
-            "nullable": true
+            "$ref": "#/components/schemas/AcceptedResultValue"
           },
           "formatters": {
             "type": "array",
@@ -27640,8 +27650,7 @@
             "format": "int64"
           },
           "log": {
-            "description": "The full request context for the event (JSON object).",
-            "nullable": true
+            "$ref": "#/components/schemas/EventRowLog"
           },
           "fields": {
             "$ref": "#/components/schemas/EventRowFields"
@@ -33951,13 +33960,13 @@
         }
       },
       "DnsZoneModelLogAnonymizationType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/LogAnonymizationType"
+            "$ref": "#/components/schemas/LogAnonymizationTypeWrapper"
           }
         ],
-        "description": "Sets the log anonymization type for this zone",
-        "nullable": true
+        "description": "Sets the log anonymization type for this zone"
       },
       "DnsZoneModelCertificateKeyType": {
         "type": "object",
@@ -33972,6 +33981,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/GeoDnsLocationModel"
@@ -33984,7 +33994,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -33996,6 +34005,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/DnsRecordGeoLocationInfo"
@@ -34008,7 +34018,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34017,70 +34026,70 @@
         }
       },
       "UpdateDnsZoneModelLogAnonymizationType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/LogAnonymizationType"
+            "$ref": "#/components/schemas/LogAnonymizationTypeWrapper2"
           }
         ],
-        "description": "Gets the log anonymization type for this zone",
-        "nullable": true
+        "description": "Gets the log anonymization type for this zone"
       },
       "UpdateDnsZoneModelCertificateKeyType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PrivateKeyType"
+            "$ref": "#/components/schemas/PrivateKeyTypeWrapper2"
           }
         ],
-        "description": "Sets the certificate private key type for wildcard certificates for this zone",
-        "nullable": true
+        "description": "Sets the certificate private key type for wildcard certificates for this zone"
       },
       "AddDnsRecordModelType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsRecordTypes"
+            "$ref": "#/components/schemas/DnsRecordTypesWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "AddDnsRecordModelMonitorType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsMonitoringType"
+            "$ref": "#/components/schemas/DnsMonitoringTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "AddDnsRecordModelSmartRoutingType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsSmartRoutingType"
+            "$ref": "#/components/schemas/DnsSmartRoutingTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateDnsRecordModelType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsRecordTypes"
+            "$ref": "#/components/schemas/DnsRecordTypesWrapper2"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateDnsRecordModelMonitorType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsMonitoringType"
+            "$ref": "#/components/schemas/DnsMonitoringTypeWrapper2"
           }
-        ],
-        "nullable": true
+        ]
       },
       "UpdateDnsRecordModelSmartRoutingType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsSmartRoutingType"
+            "$ref": "#/components/schemas/DnsSmartRoutingTypeWrapper2"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneModelEdgeScriptExecutionPhase": {
         "type": "object",
@@ -34140,7 +34149,7 @@
         "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/LogAnonymizationTypeWrapper"
+            "$ref": "#/components/schemas/LogAnonymizationTypeWrapper3"
           }
         ],
         "description": "Gets the log anonymization type for this pull zone"
@@ -34176,7 +34185,7 @@
         "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PrivateKeyTypeWrapper2"
+            "$ref": "#/components/schemas/PrivateKeyTypeWrapper3"
           }
         ],
         "description": "The private key type to use for automatic certificates"
@@ -34227,236 +34236,236 @@
         "description": "The type of pattern matching. MatchAny = 0, MatchAll = 1, MatchNone = 2"
       },
       "PullZoneSettingsModelIpFamilyPolicy": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/IpFamilyPolicy"
+            "$ref": "#/components/schemas/IpFamilyPolicyWrapper2"
           }
         ],
-        "description": "\u0022Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.\u0022",
-        "nullable": true
+        "description": "\u0022Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.\u0022"
       },
       "PullZoneSettingsModelPermaCacheType": {
         "maximum": 1.0,
         "minimum": 0.0,
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PermaCacheType"
+            "$ref": "#/components/schemas/PermaCacheTypeWrapper2"
           }
         ],
-        "description": "Determines Perma-Cache behavior",
-        "nullable": true
+        "description": "Determines Perma-Cache behavior"
       },
       "PullZoneSettingsModelLogForwardingProtocol": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
+            "$ref": "#/components/schemas/PullZoneLogForwarderProtocolTypeWrapper2"
           }
         ],
-        "description": "Sets the log forwarding protocol type",
-        "nullable": true
+        "description": "Sets the log forwarding protocol type"
       },
       "PullZoneSettingsModelOptimizerWatermarkPosition": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/OptimizerWatermarkPosition"
+            "$ref": "#/components/schemas/OptimizerWatermarkPositionWrapper2"
           }
         ],
-        "description": "Sets the position of the watermark image",
-        "nullable": true
+        "description": "Sets the position of the watermark image"
       },
       "PullZoneSettingsModelType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneType"
+            "$ref": "#/components/schemas/PullZoneTypeWrapper2"
           }
         ],
-        "description": "The type of the pull zone. Premium = 0, Volume = 1",
-        "nullable": true
+        "description": "The type of the pull zone. Premium = 0, Volume = 1"
       },
       "PullZoneSettingsModelLogAnonymizationType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/LogAnonymizationType"
+            "$ref": "#/components/schemas/LogAnonymizationTypeWrapper4"
           }
         ],
-        "description": "Sets the log anonymization type for this pull zone",
-        "nullable": true
+        "description": "Sets the log anonymization type for this pull zone"
       },
       "PullZoneSettingsModelEdgeScriptExecutionPhase": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ExecutionPhase"
+            "$ref": "#/components/schemas/ExecutionPhaseWrapper2"
           }
         ],
-        "description": "The execution phase of the edge script",
-        "nullable": true
+        "description": "The execution phase of the edge script"
       },
       "PullZoneSettingsModelOriginType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneOriginType"
+            "$ref": "#/components/schemas/PullZoneOriginTypeWrapper2"
           }
         ],
-        "description": "Determine the type of the origin for this Pull Zone",
-        "nullable": true
+        "description": "Determine the type of the origin for this Pull Zone"
       },
       "PullZoneSettingsModelLogFormat": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneLogFormat"
+            "$ref": "#/components/schemas/PullZoneLogFormatWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneSettingsModelLogForwardingFormat": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneLogFormat"
+            "$ref": "#/components/schemas/PullZoneLogFormatWrapper2"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneSettingsModelShieldDDosProtectionType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ShieldDDosProtectionType"
+            "$ref": "#/components/schemas/ShieldDDosProtectionTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneSettingsModelPreloadingScreenTheme": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PreloadingScreenTheme"
+            "$ref": "#/components/schemas/PreloadingScreenThemeWrapper2"
           }
         ],
-        "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)",
-        "nullable": true
+        "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)"
       },
       "PullZoneSettingsModelStickySessionType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/StickySessionType"
+            "$ref": "#/components/schemas/StickySessionTypeWrapper2"
           }
         ],
-        "description": "Whether to use a Sticky Session mechanism for this pull zone",
-        "nullable": true
+        "description": "Whether to use a Sticky Session mechanism for this pull zone"
       },
       "PullZoneAddModelIpFamilyPolicy": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/IpFamilyPolicy"
+            "$ref": "#/components/schemas/IpFamilyPolicyWrapper3"
           }
         ],
-        "description": "\u0022Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.\u0022",
-        "nullable": true
+        "description": "\u0022Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.\u0022"
       },
       "PullZoneAddModelPermaCacheType": {
         "maximum": 1.0,
         "minimum": 0.0,
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PermaCacheType"
+            "$ref": "#/components/schemas/PermaCacheTypeWrapper3"
           }
         ],
-        "description": "Determines Perma-Cache behavior",
-        "nullable": true
+        "description": "Determines Perma-Cache behavior"
       },
       "PullZoneAddModelLogForwardingProtocol": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
+            "$ref": "#/components/schemas/PullZoneLogForwarderProtocolTypeWrapper3"
           }
         ],
-        "description": "Sets the log forwarding protocol type",
-        "nullable": true
+        "description": "Sets the log forwarding protocol type"
       },
       "PullZoneAddModelOptimizerWatermarkPosition": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/OptimizerWatermarkPosition"
+            "$ref": "#/components/schemas/OptimizerWatermarkPositionWrapper3"
           }
         ],
-        "description": "Sets the position of the watermark image",
-        "nullable": true
+        "description": "Sets the position of the watermark image"
       },
       "PullZoneAddModelType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneType"
+            "$ref": "#/components/schemas/PullZoneTypeWrapper3"
           }
         ],
-        "description": "The type of the pull zone. Premium = 0, Volume = 1",
-        "nullable": true
+        "description": "The type of the pull zone. Premium = 0, Volume = 1"
       },
       "PullZoneAddModelLogAnonymizationType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/LogAnonymizationType"
+            "$ref": "#/components/schemas/LogAnonymizationTypeWrapper5"
           }
         ],
-        "description": "Sets the log anonymization type for this pull zone",
-        "nullable": true
+        "description": "Sets the log anonymization type for this pull zone"
       },
       "PullZoneAddModelEdgeScriptExecutionPhase": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ExecutionPhase"
+            "$ref": "#/components/schemas/ExecutionPhaseWrapper3"
           }
         ],
-        "description": "The execution phase of the edge script",
-        "nullable": true
+        "description": "The execution phase of the edge script"
       },
       "PullZoneAddModelOriginType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneOriginType"
+            "$ref": "#/components/schemas/PullZoneOriginTypeWrapper3"
           }
         ],
-        "description": "Determine the type of the origin for this Pull Zone",
-        "nullable": true
+        "description": "Determine the type of the origin for this Pull Zone"
       },
       "PullZoneAddModelLogFormat": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneLogFormat"
+            "$ref": "#/components/schemas/PullZoneLogFormatWrapper3"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneAddModelLogForwardingFormat": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneLogFormat"
+            "$ref": "#/components/schemas/PullZoneLogFormatWrapper4"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneAddModelShieldDDosProtectionType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ShieldDDosProtectionType"
+            "$ref": "#/components/schemas/ShieldDDosProtectionTypeWrapper2"
           }
-        ],
-        "nullable": true
+        ]
       },
       "PullZoneAddModelPreloadingScreenTheme": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PreloadingScreenTheme"
+            "$ref": "#/components/schemas/PreloadingScreenThemeWrapper3"
           }
         ],
-        "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)",
-        "nullable": true
+        "description": "The currently configured preloading screem theme. (0 - Light, 1 - Dark)"
       },
       "PullZoneAddModelStickySessionType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/StickySessionType"
+            "$ref": "#/components/schemas/StickySessionTypeWrapper3"
           }
         ],
-        "description": "Whether to use a Sticky Session mechanism for this pull zone",
-        "nullable": true
+        "description": "Whether to use a Sticky Session mechanism for this pull zone"
       },
       "StorageZoneModelZoneTier": {
         "type": "object",
@@ -34507,6 +34516,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/AppleFairPlayDrm"
@@ -34520,7 +34530,6 @@
           }
         },
         "description": "Described Apple FairPlay DRM",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34532,6 +34541,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/GoogleWidevineDrm"
@@ -34545,7 +34555,6 @@
           }
         },
         "description": "Describes Google Widevine DRM",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34557,7 +34566,7 @@
         "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PullZoneTypeWrapper2"
+            "$ref": "#/components/schemas/PullZoneTypeWrapper4"
           }
         ],
         "description": "The type of the pull zone attached. Premium = 0, Volume = 1"
@@ -34572,44 +34581,45 @@
         "description": "Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support."
       },
       "GoogleWidevineDrmMinClientSecurityLevel": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/WidevineMinClientSecurityLevel"
+            "$ref": "#/components/schemas/WidevineMinClientSecurityLevelWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "VideoLibraryCreateModelEncodingTier": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/EncodingTier"
+            "$ref": "#/components/schemas/EncodingTierWrapper2"
           }
         ],
-        "description": "(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support.",
-        "nullable": true
+        "description": "(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support."
       },
       "VideoLibraryUpdateModelDrmVersion": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DrmVersion"
+            "$ref": "#/components/schemas/DrmVersionWrapper2"
           }
         ],
-        "description": "(Optional) Determines MediaCage DRM version to be used for this library",
-        "nullable": true
+        "description": "(Optional) Determines MediaCage DRM version to be used for this library"
       },
       "VideoLibraryUpdateModelEncodingTier": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/EncodingTier"
+            "$ref": "#/components/schemas/EncodingTierWrapper3"
           }
         ],
-        "description": "(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.",
-        "nullable": true
+        "description": "(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support."
       },
       "VideoLibraryUpdateModelAppleFairPlayDrm": {
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/AppleFairPlayDrmUpdateModel"
@@ -34623,7 +34633,6 @@
           }
         },
         "description": "(Optional) Configure Apple FairPlay DRM. Works only if Enterprise DRM is set up.",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34635,6 +34644,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/GoogleWidevineDrmUpdateModel"
@@ -34648,7 +34658,6 @@
           }
         },
         "description": "(Optional) Configure Google Widevine DRM. Works only if Enterprise DRM is set up.",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34657,26 +34666,27 @@
         }
       },
       "GoogleWidevineDrmUpdateModelMinClientSecurityLevel": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/WidevineMinClientSecurityLevel"
+            "$ref": "#/components/schemas/WidevineMinClientSecurityLevelWrapper2"
           }
         ],
-        "description": "(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)",
-        "nullable": true
+        "description": "(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)"
       },
       "DnsZoneDiscoveredRecordModelType": {
+        "type": "object",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/DnsZoneDiscoveredRecordType"
+            "$ref": "#/components/schemas/DnsZoneDiscoveredRecordTypeWrapper"
           }
-        ],
-        "nullable": true
+        ]
       },
       "BillingModelMonthlyMcCpu": {
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34690,7 +34700,6 @@
           }
         },
         "description": "The monthly charges and usage for Magic Containers CPU",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34702,6 +34711,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34715,7 +34725,6 @@
           }
         },
         "description": "The monthly charges and usage for Magic Containers Memory",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34727,6 +34736,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34740,7 +34750,6 @@
           }
         },
         "description": "The monthly charges and usage for Magic Containers Anycast IP",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34752,6 +34761,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34765,7 +34775,6 @@
           }
         },
         "description": "The monthly charges and usage for Magic Containers Ingress Traffic",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34777,6 +34786,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34790,7 +34800,6 @@
           }
         },
         "description": "The monthly charges and usage for Magic Containers Egress Traffic",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34802,6 +34811,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34815,7 +34825,6 @@
           }
         },
         "description": "The monthly charges and usage for Magic Containers Persistent Volumes",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34827,6 +34836,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34840,7 +34850,6 @@
           }
         },
         "description": "The monthly charges and usage for BunnyDB row writes",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34852,6 +34861,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34865,7 +34875,6 @@
           }
         },
         "description": "The monthly charges and usage for BunnyDB row reads",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34877,6 +34886,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34890,7 +34900,6 @@
           }
         },
         "description": "The monthly charges and usage for BunnyDB storage",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34902,6 +34911,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/UsageBreakdown"
@@ -34915,7 +34925,6 @@
           }
         },
         "description": "The monthly charges and usage for BunnyDB replica storage",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34942,18 +34951,19 @@
         "description": "The status of the video. See VideoModelStatus."
       },
       "VideoModelSmartGenerateStatus": {
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SmartGenerateStatus"
           }
         ],
-        "description": "\u0022Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.\u0022",
-        "nullable": true
+        "description": "\u0022Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.\u0022"
       },
       "VideoModelSmartGenerateFeaturesStatus": {
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SmartGenerateFeaturesStatusModel"
@@ -34967,7 +34977,6 @@
           }
         },
         "description": "Per-feature smart generate statuses (title, description, chapters, moments). Null for a feature on legacy rows.",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -34976,45 +34985,46 @@
         }
       },
       "SmartGenerateFeaturesStatusModelTitle": {
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SmartGenerateStatus"
           }
         ],
-        "description": "Smart generate status for the video title, when applicable.",
-        "nullable": true
+        "description": "Smart generate status for the video title, when applicable."
       },
       "SmartGenerateFeaturesStatusModelDescription": {
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SmartGenerateStatus"
           }
         ],
-        "description": "Smart generate status for the video description, when applicable.",
-        "nullable": true
+        "description": "Smart generate status for the video description, when applicable."
       },
       "SmartGenerateFeaturesStatusModelChapters": {
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SmartGenerateStatus"
           }
         ],
-        "description": "Smart generate status for chapters, when applicable.",
-        "nullable": true
+        "description": "Smart generate status for chapters, when applicable."
       },
       "SmartGenerateFeaturesStatusModelMoments": {
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SmartGenerateStatus"
           }
         ],
-        "description": "Smart generate status for moments, when applicable.",
-        "nullable": true
+        "description": "Smart generate status for moments, when applicable."
       },
       "VideoPlayDataModelVideo": {
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/VideoModel"
@@ -35028,7 +35038,6 @@
           }
         },
         "description": "Video data.",
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35076,6 +35085,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SourceCodeIntegrationModel"
@@ -35088,7 +35098,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35100,6 +35109,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SourceCodeRepositorySettingsModel"
@@ -35112,7 +35122,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35124,6 +35133,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/DeployConfigurationModel"
@@ -35136,7 +35146,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35148,6 +35157,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/SourceCodeIntegrationModel"
@@ -35160,7 +35170,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35172,6 +35181,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/CaptionValidationModel"
@@ -35184,7 +35194,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35196,6 +35205,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/VideoResolutionsInfoModel"
@@ -35208,7 +35218,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -35220,6 +35229,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/VideoStorageSizeModel"
@@ -35232,7 +35242,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -36379,6 +36388,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/IssueWildcardCertificateRequestModel"
@@ -36391,7 +36401,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -36415,6 +36424,7 @@
         "required": [
           "type"
         ],
+        "type": "object",
         "oneOf": [
           {
             "$ref": "#/components/schemas/PullZonePurgeModel"
@@ -36427,7 +36437,6 @@
             "description": "Union discriminator"
           }
         },
-        "nullable": true,
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -36619,6 +36628,17 @@
           "type": "string"
         }
       },
+      "LogAnonymizationTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LogAnonymizationType"
+          }
+        }
+      },
       "PrivateKeyTypeWrapper": {
         "required": [
           "value"
@@ -36627,6 +36647,94 @@
         "properties": {
           "value": {
             "$ref": "#/components/schemas/PrivateKeyType"
+          }
+        }
+      },
+      "LogAnonymizationTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LogAnonymizationType"
+          }
+        }
+      },
+      "PrivateKeyTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PrivateKeyType"
+          }
+        }
+      },
+      "DnsRecordTypesWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsRecordTypes"
+          }
+        }
+      },
+      "DnsMonitoringTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsMonitoringType"
+          }
+        }
+      },
+      "DnsSmartRoutingTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsSmartRoutingType"
+          }
+        }
+      },
+      "DnsRecordTypesWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsRecordTypes"
+          }
+        }
+      },
+      "DnsMonitoringTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsMonitoringType"
+          }
+        }
+      },
+      "DnsSmartRoutingTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsSmartRoutingType"
           }
         }
       },
@@ -36696,7 +36804,7 @@
           }
         }
       },
-      "LogAnonymizationTypeWrapper": {
+      "LogAnonymizationTypeWrapper3": {
         "required": [
           "value"
         ],
@@ -36740,7 +36848,7 @@
           }
         }
       },
-      "PrivateKeyTypeWrapper2": {
+      "PrivateKeyTypeWrapper3": {
         "required": [
           "value"
         ],
@@ -36806,6 +36914,292 @@
           }
         }
       },
+      "IpFamilyPolicyWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/IpFamilyPolicy"
+          }
+        }
+      },
+      "PermaCacheTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PermaCacheType"
+          }
+        }
+      },
+      "PullZoneLogForwarderProtocolTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
+          }
+        }
+      },
+      "OptimizerWatermarkPositionWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerWatermarkPosition"
+          }
+        }
+      },
+      "PullZoneTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneType"
+          }
+        }
+      },
+      "LogAnonymizationTypeWrapper4": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LogAnonymizationType"
+          }
+        }
+      },
+      "ExecutionPhaseWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/ExecutionPhase"
+          }
+        }
+      },
+      "PullZoneOriginTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneOriginType"
+          }
+        }
+      },
+      "PullZoneLogFormatWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneLogFormat"
+          }
+        }
+      },
+      "PullZoneLogFormatWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneLogFormat"
+          }
+        }
+      },
+      "ShieldDDosProtectionTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/ShieldDDosProtectionType"
+          }
+        }
+      },
+      "PreloadingScreenThemeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PreloadingScreenTheme"
+          }
+        }
+      },
+      "StickySessionTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/StickySessionType"
+          }
+        }
+      },
+      "IpFamilyPolicyWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/IpFamilyPolicy"
+          }
+        }
+      },
+      "PermaCacheTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PermaCacheType"
+          }
+        }
+      },
+      "PullZoneLogForwarderProtocolTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
+          }
+        }
+      },
+      "OptimizerWatermarkPositionWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerWatermarkPosition"
+          }
+        }
+      },
+      "PullZoneTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneType"
+          }
+        }
+      },
+      "LogAnonymizationTypeWrapper5": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LogAnonymizationType"
+          }
+        }
+      },
+      "ExecutionPhaseWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/ExecutionPhase"
+          }
+        }
+      },
+      "PullZoneOriginTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneOriginType"
+          }
+        }
+      },
+      "PullZoneLogFormatWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneLogFormat"
+          }
+        }
+      },
+      "PullZoneLogFormatWrapper4": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PullZoneLogFormat"
+          }
+        }
+      },
+      "ShieldDDosProtectionTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/ShieldDDosProtectionType"
+          }
+        }
+      },
+      "PreloadingScreenThemeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/PreloadingScreenTheme"
+          }
+        }
+      },
+      "StickySessionTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/StickySessionType"
+          }
+        }
+      },
       "StorageZoneTierWrapper": {
         "required": [
           "value"
@@ -36861,7 +37255,7 @@
           }
         }
       },
-      "PullZoneTypeWrapper2": {
+      "PullZoneTypeWrapper4": {
         "required": [
           "value"
         ],
@@ -36880,6 +37274,72 @@
         "properties": {
           "value": {
             "$ref": "#/components/schemas/EncodingTier"
+          }
+        }
+      },
+      "WidevineMinClientSecurityLevelWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/WidevineMinClientSecurityLevel"
+          }
+        }
+      },
+      "EncodingTierWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/EncodingTier"
+          }
+        }
+      },
+      "DrmVersionWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DrmVersion"
+          }
+        }
+      },
+      "EncodingTierWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/EncodingTier"
+          }
+        }
+      },
+      "WidevineMinClientSecurityLevelWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/WidevineMinClientSecurityLevel"
+          }
+        }
+      },
+      "DnsZoneDiscoveredRecordTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/DnsZoneDiscoveredRecordType"
           }
         }
       },
@@ -37231,8 +37691,15 @@
         "type": "object",
         "description": "Default response schema"
       },
+      "AcceptedResultValue": {
+        "type": "object"
+      },
       "AcceptedResultFormattersItem": {
         "type": "object"
+      },
+      "EventRowLog": {
+        "type": "object",
+        "description": "The full request context for the event (JSON object)."
       },
       "ProblemDetailsAdditionalProperties": {
         "type": "object"

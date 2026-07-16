@@ -39,7 +39,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Id property</summary>
         public long? Id { get; set; }
         /// <summary>Sets the log anonymization type for this zone</summary>
-        public int? LogAnonymizationType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper? LogAnonymizationType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper LogAnonymizationType { get; set; }
+#endif
         /// <summary>The LoggingEnabled property</summary>
         public bool? LoggingEnabled { get; set; }
         /// <summary>Determines if the TLS 1 is enabled on the DNS Zone</summary>
@@ -105,7 +111,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "DnsSecEnabled", n => { DnsSecEnabled = n.GetBoolValue(); } },
                 { "Domain", n => { Domain = n.GetStringValue(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
-                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
+                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper.CreateFromDiscriminatorValue); } },
                 { "LoggingEnabled", n => { LoggingEnabled = n.GetBoolValue(); } },
                 { "LoggingIPAnonymizationEnabled", n => { LoggingIPAnonymizationEnabled = n.GetBoolValue(); } },
                 { "Nameserver1", n => { Nameserver1 = n.GetStringValue(); } },
@@ -130,7 +136,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("DnsSecEnabled", DnsSecEnabled);
             writer.WriteStringValue("Domain", Domain);
             writer.WriteLongValue("Id", Id);
-            writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper>("LogAnonymizationType", LogAnonymizationType);
             writer.WriteBoolValue("LoggingEnabled", LoggingEnabled);
             writer.WriteBoolValue("LoggingIPAnonymizationEnabled", LoggingIPAnonymizationEnabled);
             writer.WriteStringValue("Nameserver1", Nameserver1);

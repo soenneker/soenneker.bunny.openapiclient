@@ -13,11 +13,23 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>Sets the certificate private key type for wildcard certificates for this zone</summary>
-        public int? CertificateKeyType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper2? CertificateKeyType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper2 CertificateKeyType { get; set; }
+#endif
         /// <summary>The CustomNameserversEnabled property</summary>
         public bool? CustomNameserversEnabled { get; set; }
         /// <summary>Gets the log anonymization type for this zone</summary>
-        public int? LogAnonymizationType { get; set; }
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper2? LogAnonymizationType { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper2 LogAnonymizationType { get; set; }
+#endif
         /// <summary>The LoggingEnabled property</summary>
         public bool? LoggingEnabled { get; set; }
         /// <summary>Determines if the log anonoymization should be enabled</summary>
@@ -64,9 +76,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CertificateKeyType", n => { CertificateKeyType = n.GetIntValue(); } },
+                { "CertificateKeyType", n => { CertificateKeyType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper2.CreateFromDiscriminatorValue); } },
                 { "CustomNameserversEnabled", n => { CustomNameserversEnabled = n.GetBoolValue(); } },
-                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
+                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper2.CreateFromDiscriminatorValue); } },
                 { "LoggingEnabled", n => { LoggingEnabled = n.GetBoolValue(); } },
                 { "LoggingIPAnonymizationEnabled", n => { LoggingIPAnonymizationEnabled = n.GetBoolValue(); } },
                 { "Nameserver1", n => { Nameserver1 = n.GetStringValue(); } },
@@ -81,9 +93,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("CertificateKeyType", CertificateKeyType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper2>("CertificateKeyType", CertificateKeyType);
             writer.WriteBoolValue("CustomNameserversEnabled", CustomNameserversEnabled);
-            writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogAnonymizationTypeWrapper2>("LogAnonymizationType", LogAnonymizationType);
             writer.WriteBoolValue("LoggingEnabled", LoggingEnabled);
             writer.WriteBoolValue("LoggingIPAnonymizationEnabled", LoggingIPAnonymizationEnabled);
             writer.WriteStringValue("Nameserver1", Nameserver1);

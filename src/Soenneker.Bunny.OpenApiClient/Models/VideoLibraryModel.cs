@@ -246,10 +246,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The type of the pull zone attached. Premium = 0, Volume = 1</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper2? PullZoneType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4? PullZoneType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper2 PullZoneType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4 PullZoneType { get; set; }
 #endif
         /// <summary>The read-only API key used for authenticating with the video library</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -413,7 +413,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "PlayerVersion", n => { PlayerVersion = n.GetIntValue(); } },
                 { "PremiumEncodingPriceOverride", n => { PremiumEncodingPriceOverride = n.GetDecimalValue(); } },
                 { "PullZoneId", n => { PullZoneId = n.GetLongValue(); } },
-                { "PullZoneType", n => { PullZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper2.CreateFromDiscriminatorValue); } },
+                { "PullZoneType", n => { PullZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4.CreateFromDiscriminatorValue); } },
                 { "ReadOnlyApiKey", n => { ReadOnlyApiKey = n.GetStringValue(); } },
                 { "RememberPlayerPosition", n => { RememberPlayerPosition = n.GetBoolValue(); } },
                 { "RemoveMetadataFromFallbackVideos", n => { RemoveMetadataFromFallbackVideos = n.GetBoolValue(); } },
@@ -503,7 +503,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("PlayerVersion", PlayerVersion);
             writer.WriteDecimalValue("PremiumEncodingPriceOverride", PremiumEncodingPriceOverride);
             writer.WriteLongValue("PullZoneId", PullZoneId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper2>("PullZoneType", PullZoneType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4>("PullZoneType", PullZoneType);
             writer.WriteStringValue("ReadOnlyApiKey", ReadOnlyApiKey);
             writer.WriteBoolValue("RememberPlayerPosition", RememberPlayerPosition);
             writer.WriteBoolValue("RemoveMetadataFromFallbackVideos", RemoveMetadataFromFallbackVideos);

@@ -24,10 +24,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The full request context for the event (JSON object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Log { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog? Log { get; set; }
 #nullable restore
 #else
-        public UntypedNode Log { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog Log { get; set; }
 #endif
         /// <summary>Unique event identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields.CreateFromDiscriminatorValue); } },
-                { "log", n => { Log = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "log", n => { Log = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog.CreateFromDiscriminatorValue); } },
                 { "logId", n => { LogId = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
@@ -71,7 +71,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields>("fields", Fields);
-            writer.WriteObjectValue<UntypedNode>("log", Log);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog>("log", Log);
             writer.WriteStringValue("logId", LogId);
             writer.WriteLongValue("timestamp", Timestamp);
         }
