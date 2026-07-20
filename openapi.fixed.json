@@ -25497,6 +25497,10 @@
             "type": "string",
             "nullable": true
           },
+          "pullZoneId": {
+            "type": "integer",
+            "format": "int64"
+          },
           "captionsPath": {
             "type": "string",
             "nullable": true

@@ -134,6 +134,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string PreviewUrl { get; set; }
 #endif
+        /// <summary>The pullZoneId property</summary>
+        public long? PullZoneId { get; set; }
         /// <summary>The rememberPlayerPosition property</summary>
         public bool? RememberPlayerPosition { get; set; }
         /// <summary>The seekPath property</summary>
@@ -240,6 +242,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "playerKeyColor", n => { PlayerKeyColor = n.GetStringValue(); } },
                 { "preferredPlaybackSource", n => { PreferredPlaybackSource = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource>(global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource.CreateFromDiscriminatorValue); } },
                 { "previewUrl", n => { PreviewUrl = n.GetStringValue(); } },
+                { "pullZoneId", n => { PullZoneId = n.GetLongValue(); } },
                 { "rememberPlayerPosition", n => { RememberPlayerPosition = n.GetBoolValue(); } },
                 { "seekPath", n => { SeekPath = n.GetStringValue(); } },
                 { "showHeatmap", n => { ShowHeatmap = n.GetBoolValue(); } },
@@ -283,6 +286,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("playerKeyColor", PlayerKeyColor);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource>("preferredPlaybackSource", PreferredPlaybackSource);
             writer.WriteStringValue("previewUrl", PreviewUrl);
+            writer.WriteLongValue("pullZoneId", PullZoneId);
             writer.WriteBoolValue("rememberPlayerPosition", RememberPlayerPosition);
             writer.WriteStringValue("seekPath", SeekPath);
             writer.WriteBoolValue("showHeatmap", ShowHeatmap);
