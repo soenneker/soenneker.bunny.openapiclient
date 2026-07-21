@@ -31015,6 +31015,7 @@
       "ContainerEndpoint": {
         "required": [
           "displayName",
+          "id",
           "isSslEnabled",
           "portMappings",
           "publicHost",
@@ -31023,6 +31024,11 @@
         ],
         "type": "object",
         "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string",
+            "description": "Unique endpoint id. Use this value as \u0060container_endpoint_id\u0060 when creating a pull zone that targets this endpoint."
+          },
           "displayName": {
             "minLength": 1,
             "type": "string"

@@ -21,6 +21,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
+        /// <summary>Unique endpoint id. Use this value as `container_endpoint_id` when creating a pull zone that targets this endpoint.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Id { get; set; }
+#nullable restore
+#else
+        public string Id { get; set; }
+#endif
         /// <summary>The internalIpAddresses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -92,6 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetStringValue(); } },
                 { "internalIpAddresses", n => { InternalIpAddresses = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>(global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "isSslEnabled", n => { IsSslEnabled = n.GetBoolValue(); } },
                 { "portMappings", n => { PortMappings = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping>(global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -110,6 +119,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("displayName", DisplayName);
+            writer.WriteStringValue("id", Id);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>("internalIpAddresses", InternalIpAddresses);
             writer.WriteBoolValue("isSslEnabled", IsSslEnabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping>("portMappings", PortMappings);
