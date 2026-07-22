@@ -25593,6 +25593,18 @@
             "format": "int32",
             "nullable": true
           },
+          "widevineEmeRobustness": {
+            "type": "string",
+            "nullable": true
+          },
+          "widevineSdOnlyForL3": {
+            "type": "boolean"
+          },
+          "maxSoftwareWidevineResolution": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "zoneTier": {
             "type": "integer",
             "format": "int32",

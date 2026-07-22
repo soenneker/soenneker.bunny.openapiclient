@@ -94,6 +94,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string LibraryName { get; set; }
 #endif
+        /// <summary>The maxSoftwareWidevineResolution property</summary>
+        public int? MaxSoftwareWidevineResolution { get; set; }
         /// <summary>The originalUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -198,8 +200,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string VideoPlaylistUrl { get; set; }
 #endif
+        /// <summary>The widevineEmeRobustness property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WidevineEmeRobustness { get; set; }
+#nullable restore
+#else
+        public string WidevineEmeRobustness { get; set; }
+#endif
         /// <summary>The widevineMinClientSecurityLevel property</summary>
         public int? WidevineMinClientSecurityLevel { get; set; }
+        /// <summary>The widevineSdOnlyForL3 property</summary>
+        public bool? WidevineSdOnlyForL3 { get; set; }
         /// <summary>The zoneTier property</summary>
         public int? ZoneTier { get; set; }
         /// <summary>
@@ -237,6 +249,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "isPlayable", n => { IsPlayable = n.GetBoolValue(); } },
                 { "isPlaylistPlayable", n => { IsPlaylistPlayable = n.GetBoolValue(); } },
                 { "libraryName", n => { LibraryName = n.GetStringValue(); } },
+                { "maxSoftwareWidevineResolution", n => { MaxSoftwareWidevineResolution = n.GetIntValue(); } },
                 { "originalUrl", n => { OriginalUrl = n.GetStringValue(); } },
                 { "playbackSpeeds", n => { PlaybackSpeeds = n.GetStringValue(); } },
                 { "playerKeyColor", n => { PlayerKeyColor = n.GetStringValue(); } },
@@ -253,7 +266,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "viAiPublisherId", n => { ViAiPublisherId = n.GetStringValue(); } },
                 { "video", n => { Video = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo>(global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo.CreateFromDiscriminatorValue); } },
                 { "videoPlaylistUrl", n => { VideoPlaylistUrl = n.GetStringValue(); } },
+                { "widevineEmeRobustness", n => { WidevineEmeRobustness = n.GetStringValue(); } },
                 { "widevineMinClientSecurityLevel", n => { WidevineMinClientSecurityLevel = n.GetIntValue(); } },
+                { "widevineSdOnlyForL3", n => { WidevineSdOnlyForL3 = n.GetBoolValue(); } },
                 { "zoneTier", n => { ZoneTier = n.GetIntValue(); } },
             };
         }
@@ -281,6 +296,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("isPlayable", IsPlayable);
             writer.WriteBoolValue("isPlaylistPlayable", IsPlaylistPlayable);
             writer.WriteStringValue("libraryName", LibraryName);
+            writer.WriteIntValue("maxSoftwareWidevineResolution", MaxSoftwareWidevineResolution);
             writer.WriteStringValue("originalUrl", OriginalUrl);
             writer.WriteStringValue("playbackSpeeds", PlaybackSpeeds);
             writer.WriteStringValue("playerKeyColor", PlayerKeyColor);
@@ -297,7 +313,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("viAiPublisherId", ViAiPublisherId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo>("video", Video);
             writer.WriteStringValue("videoPlaylistUrl", VideoPlaylistUrl);
+            writer.WriteStringValue("widevineEmeRobustness", WidevineEmeRobustness);
             writer.WriteIntValue("widevineMinClientSecurityLevel", WidevineMinClientSecurityLevel);
+            writer.WriteBoolValue("widevineSdOnlyForL3", WidevineSdOnlyForL3);
             writer.WriteIntValue("zoneTier", ZoneTier);
         }
     }
