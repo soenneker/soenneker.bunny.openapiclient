@@ -7,22 +7,23 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
+    /// <summary>
+    /// Request body for setting a category-level action. Uses BunnyNet.Shield.Database.Enums.BotCategoryAction ratherthan BunnyNet.Shield.Database.Enums.BotCategorizationAction so the contract can only express actions valid for acategory (no Ignore).
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class UpdateBotCategorizationConfigurationRequest : IParsable
-    #pragma warning restore CS1591
+    public partial class UpdateBotCategoryConfigurationRequest : IParsable
     {
-        /// <summary>0 = None1 = Block2 = Allow3 = Ignore</summary>
+        /// <summary>0 = None1 = Block2 = Allow</summary>
         public int? Action { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategorizationConfigurationRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategoryConfigurationRequest"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategorizationConfigurationRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategoryConfigurationRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategorizationConfigurationRequest();
+            return new global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategoryConfigurationRequest();
         }
         /// <summary>
         /// The deserialization information for the current model

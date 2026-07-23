@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class BotCategorizationDetails : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>0 = None1 = Block2 = Allow</summary>
+        /// <summary>0 = None1 = Block2 = Allow3 = Ignore</summary>
         public int? Action { get; set; }
         /// <summary>The botId property</summary>
         public int? BotId { get; set; }
