@@ -84,6 +84,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Determines if the storage zone will rewrite 404 status codes to 200 status codes</summary>
         public bool? Rewrite404To200 { get; set; }
+        /// <summary>Determines the S3 compatible hostname for this zone</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? S3Hostname { get; set; }
+#nullable restore
+#else
+        public string S3Hostname { get; set; }
+#endif
         /// <summary>Determines the storage hostname for this zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -151,6 +159,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ReplicationChangeInProgress", n => { ReplicationChangeInProgress = n.GetBoolValue(); } },
                 { "ReplicationRegions", n => { ReplicationRegions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "Rewrite404To200", n => { Rewrite404To200 = n.GetBoolValue(); } },
+                { "S3Hostname", n => { S3Hostname = n.GetStringValue(); } },
                 { "StorageHostname", n => { StorageHostname = n.GetStringValue(); } },
                 { "StorageUsed", n => { StorageUsed = n.GetLongValue(); } },
                 { "StorageZoneType", n => { StorageZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper.CreateFromDiscriminatorValue); } },
@@ -180,6 +189,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ReplicationChangeInProgress", ReplicationChangeInProgress);
             writer.WriteCollectionOfPrimitiveValues<string>("ReplicationRegions", ReplicationRegions);
             writer.WriteBoolValue("Rewrite404To200", Rewrite404To200);
+            writer.WriteStringValue("S3Hostname", S3Hostname);
             writer.WriteStringValue("StorageHostname", StorageHostname);
             writer.WriteLongValue("StorageUsed", StorageUsed);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper>("StorageZoneType", StorageZoneType);
