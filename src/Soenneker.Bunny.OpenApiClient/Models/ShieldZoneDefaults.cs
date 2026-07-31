@@ -7,19 +7,18 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Represents a request to create a new Shield Zone.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateShieldZoneRequest : IParsable
+    #pragma warning disable CS1591
+    public partial class ShieldZoneDefaults : IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>The accessLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists? AccessLists { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>? AccessLists { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists AccessLists { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList> AccessLists { get; set; }
 #endif
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
         public int? AntivirusScanningMode { get; set; }
@@ -27,8 +26,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? BotDetectionExecutionMode { get; set; }
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
         public int? CsamScanningMode { get; set; }
-        /// <summary>The pullZoneId property</summary>
-        public long? PullZoneId { get; set; }
         /// <summary>The shieldZone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -40,12 +37,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequest"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneDefaults"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequest CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneDefaults CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequest();
+            return new global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneDefaults();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,11 +52,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists.CreateFromDiscriminatorValue); } },
+                { "accessLists", n => { AccessLists = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>(global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "antivirusScanningMode", n => { AntivirusScanningMode = n.GetIntValue(); } },
                 { "botDetectionExecutionMode", n => { BotDetectionExecutionMode = n.GetIntValue(); } },
                 { "csamScanningMode", n => { CsamScanningMode = n.GetIntValue(); } },
-                { "pullZoneId", n => { PullZoneId = n.GetLongValue(); } },
                 { "shieldZone", n => { ShieldZone = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest.CreateFromDiscriminatorValue); } },
             };
         }
@@ -70,11 +66,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists>("accessLists", AccessLists);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>("accessLists", AccessLists);
             writer.WriteIntValue("antivirusScanningMode", AntivirusScanningMode);
             writer.WriteIntValue("botDetectionExecutionMode", BotDetectionExecutionMode);
             writer.WriteIntValue("csamScanningMode", CsamScanningMode);
-            writer.WriteLongValue("pullZoneId", PullZoneId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest>("shieldZone", ShieldZone);
         }
     }

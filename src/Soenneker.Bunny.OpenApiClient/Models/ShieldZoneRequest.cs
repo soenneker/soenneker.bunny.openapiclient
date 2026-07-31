@@ -14,8 +14,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>The dDoSChallengeWindow property</summary>
         public int? DDoSChallengeWindow { get; set; }
-        /// <summary>0 = Log1 = Block</summary>
-        public int? DDoSExecutionMode { get; set; }
         /// <summary>0 = Off1 = Low2 = Medium3 = High4 = Challenge</summary>
         public int? DDoSShieldSensitivity { get; set; }
         /// <summary>The learningMode property</summary>
@@ -106,7 +104,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dDoSChallengeWindow", n => { DDoSChallengeWindow = n.GetIntValue(); } },
-                { "dDoSExecutionMode", n => { DDoSExecutionMode = n.GetIntValue(); } },
                 { "dDoSShieldSensitivity", n => { DDoSShieldSensitivity = n.GetIntValue(); } },
                 { "learningMode", n => { LearningMode = n.GetBoolValue(); } },
                 { "learningModeUntil", n => { LearningModeUntil = n.GetDateTimeOffsetValue(); } },
@@ -137,7 +134,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("dDoSChallengeWindow", DDoSChallengeWindow);
-            writer.WriteIntValue("dDoSExecutionMode", DDoSExecutionMode);
             writer.WriteIntValue("dDoSShieldSensitivity", DDoSShieldSensitivity);
             writer.WriteBoolValue("learningMode", LearningMode);
             writer.WriteDateTimeOffsetValue("learningModeUntil", LearningModeUntil);

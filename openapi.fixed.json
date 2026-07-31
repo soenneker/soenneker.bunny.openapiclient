@@ -11529,6 +11529,162 @@
         }
       }
     },
+    "/shield/shield-zone/defaults": {
+      "get": {
+        "tags": [
+          "Shield Zone"
+        ],
+        "summary": "Get the recommended defaults for creating a Shield Zone",
+        "operationId": "ShieldGetShieldZoneDefaults",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneDefaultsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneDefaultsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneDefaultsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/shield/shield-zone/under-attack": {
+      "post": {
+        "tags": [
+          "Shield Zone"
+        ],
+        "summary": "Create a Shield Zone in under-attack mode for your PullZone",
+        "operationId": "ShieldCreateShieldZoneUnderAttack",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUnderAttackShieldZoneRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUnderAttackShieldZoneRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/shield/shield-zone": {
       "post": {
         "tags": [
@@ -11553,6 +11709,26 @@
         "responses": {
           "200": {
             "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
             "content": {
               "text/plain": {
                 "schema": {
@@ -27338,6 +27514,18 @@
           "pullZoneId": {
             "type": "integer",
             "format": "int64"
+          },
+          "accessLists": {
+            "$ref": "#/components/schemas/CreateShieldZoneRequestAccessLists"
+          },
+          "botDetectionExecutionMode": {
+            "$ref": "#/components/schemas/BotDetectionExecutionMode"
+          },
+          "csamScanningMode": {
+            "$ref": "#/components/schemas/UploadScanningScannerMode"
+          },
+          "antivirusScanningMode": {
+            "$ref": "#/components/schemas/UploadScanningScannerMode"
           }
         },
         "additionalProperties": false,
@@ -27355,6 +27543,23 @@
         },
         "additionalProperties": false,
         "description": "Response object for creating a new Shield Zone."
+      },
+      "CreateUnderAttackShieldZoneRequest": {
+        "required": [
+          "planType",
+          "pullZoneId"
+        ],
+        "type": "object",
+        "properties": {
+          "pullZoneId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "planType": {
+            "$ref": "#/components/schemas/ShieldPlanType"
+          }
+        },
+        "additionalProperties": false
       },
       "CreateWafRateLimitRequest": {
         "type": "object",
@@ -27612,6 +27817,15 @@
           },
           "context": {
             "$ref": "#/components/schemas/EventGroupContext"
+          },
+          "sparkline": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "description": "Per-group event counts bucketed across the requested window (mini time histogram), present only\nwhen the request set \u0060buckets\u0060. Bucket i covers [from \u002B i*width, from \u002B (i\u002B1)*width).",
+            "nullable": true
           }
         },
         "additionalProperties": false,
@@ -27705,6 +27919,11 @@
             },
             "description": "\u0022Optional ordered dimensions to group by, e.g. [\\\u0022ip\\\u0022,\\\u0022ja4\\\u0022]. Omit for flat rows.\nAllowed: feature, ruleId, ip, ja4, ua, url, asn, country, action.\u0022",
             "nullable": true
+          },
+          "buckets": {
+            "type": "integer",
+            "description": "When grouping, the number of time buckets for each group\u0027s sparkline histogram over the\nwindow. 0 (default) omits the sparkline; clamped to 500.",
+            "format": "int32"
           },
           "page": {
             "type": "integer",
@@ -27884,6 +28103,18 @@
           },
           "data": {
             "$ref": "#/components/schemas/ShieldZoneBotDetectionMetrics"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetShieldZoneDefaultsResponse": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ShieldZoneDefaults"
+          },
+          "error": {
+            "$ref": "#/components/schemas/GenericRequestResponse"
           }
         },
         "additionalProperties": false
@@ -28674,6 +28905,38 @@
         },
         "additionalProperties": false
       },
+      "ShieldZoneDefaults": {
+        "required": [
+          "accessLists",
+          "antivirusScanningMode",
+          "botDetectionExecutionMode",
+          "csamScanningMode",
+          "shieldZone"
+        ],
+        "type": "object",
+        "properties": {
+          "shieldZone": {
+            "$ref": "#/components/schemas/ShieldZoneRequest"
+          },
+          "botDetectionExecutionMode": {
+            "$ref": "#/components/schemas/BotDetectionExecutionMode"
+          },
+          "csamScanningMode": {
+            "$ref": "#/components/schemas/UploadScanningScannerMode"
+          },
+          "antivirusScanningMode": {
+            "$ref": "#/components/schemas/UploadScanningScannerMode"
+          },
+          "accessLists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SuggestedAccessList"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ShieldZoneMetrics": {
         "type": "object",
         "properties": {
@@ -28918,9 +29181,6 @@
           "dDoSShieldSensitivity": {
             "$ref": "#/components/schemas/DDoSShieldSensitivity"
           },
-          "dDoSExecutionMode": {
-            "$ref": "#/components/schemas/DDoSExecutionMode"
-          },
           "dDoSChallengeWindow": {
             "type": "integer",
             "format": "int32",
@@ -29067,6 +29327,36 @@
           "totalFilesScanned": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SuggestedAccessList": {
+        "required": [
+          "action",
+          "listId",
+          "name",
+          "requiredPlan"
+        ],
+        "type": "object",
+        "properties": {
+          "listId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "requiredPlan": {
+            "$ref": "#/components/schemas/ShieldPlanType"
+          },
+          "action": {
+            "$ref": "#/components/schemas/AccessListAction"
           }
         },
         "additionalProperties": false
@@ -36018,6 +36308,13 @@
           }
         },
         "additionalProperties": false,
+        "nullable": true
+      },
+      "CreateShieldZoneRequestAccessLists": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/AccessListAction"
+        },
         "nullable": true
       },
       "CreateWafRateLimitRuleModelVariableTypes": {

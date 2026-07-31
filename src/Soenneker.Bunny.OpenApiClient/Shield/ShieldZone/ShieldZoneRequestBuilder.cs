@@ -4,8 +4,10 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Bunny.OpenApiClient.Models;
+using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Defaults;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.GetByPullzone;
 using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item;
+using Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.UnderAttack;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -19,10 +21,20 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShieldZoneRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The defaults property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Defaults.DefaultsRequestBuilder Defaults
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Defaults.DefaultsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The getByPullzone property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.GetByPullzone.GetByPullzoneRequestBuilder GetByPullzone
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.GetByPullzone.GetByPullzoneRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The underAttack property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.UnderAttack.UnderAttackRequestBuilder UnderAttack
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.UnderAttack.UnderAttackRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.shield.shieldZone.item collection</summary>
         /// <param name="position">The ID of the Shield Zone.</param>
@@ -84,6 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone
         /// <param name="body">Represents a request to create a new Shield Zone.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneResponse">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.UnauthorizedResult">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneResponse">When receiving a 409 status code</exception>
@@ -100,6 +113,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.UnauthorizedResult.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneResponse.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneResponse.CreateFromDiscriminatorValue },

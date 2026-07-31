@@ -13,6 +13,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventLogsSearchRequest : IParsable
     {
+        /// <summary>When grouping, the number of time buckets for each group&apos;s sparkline histogram over thewindow. 0 (default) omits the sparkline; clamped to 500.</summary>
+        public int? Buckets { get; set; }
         /// <summary>Optional filters, combined with AND. Repeated values within one filter combine with OR.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -63,6 +65,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "buckets", n => { Buckets = n.GetIntValue(); } },
                 { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EventLogsFilter>(global::Soenneker.Bunny.OpenApiClient.Models.EventLogsFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "from", n => { From = n.GetLongValue(); } },
                 { "groupBy", n => { GroupBy = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -79,6 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteIntValue("buckets", Buckets);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EventLogsFilter>("filters", Filters);
             writer.WriteLongValue("from", From);
             writer.WriteCollectionOfPrimitiveValues<string>("groupBy", GroupBy);

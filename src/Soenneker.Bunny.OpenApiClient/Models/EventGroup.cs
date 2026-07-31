@@ -35,6 +35,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Most recent event time in the group (Unix time in milliseconds, UTC).</summary>
         public long? LastSeen { get; set; }
+        /// <summary>Per-group event counts bucketed across the requested window (mini time histogram), present onlywhen the request set `buckets`. Bucket i covers [from + i*width, from + (i+1)*width).</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<long?>? Sparkline { get; set; }
+#nullable restore
+#else
+        public List<long?> Sparkline { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -58,6 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "firstSeen", n => { FirstSeen = n.GetLongValue(); } },
                 { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey.CreateFromDiscriminatorValue); } },
                 { "lastSeen", n => { LastSeen = n.GetLongValue(); } },
+                { "sparkline", n => { Sparkline = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -72,6 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("firstSeen", FirstSeen);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey>("key", Key);
             writer.WriteLongValue("lastSeen", LastSeen);
+            writer.WriteCollectionOfPrimitiveValues<long?>("sparkline", Sparkline);
         }
     }
 }
