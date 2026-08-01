@@ -16,5 +16,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         #pragma warning disable CS1591
         GitHub,
         #pragma warning restore CS1591
+        [EnumMember(Value = "bunnyRegistry")]
+        #pragma warning disable CS1591
+        BunnyRegistry,
+        #pragma warning restore CS1591
     }
 }

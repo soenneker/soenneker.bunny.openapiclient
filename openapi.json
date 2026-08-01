@@ -35230,6 +35230,9 @@
             "type": "boolean",
             "nullable": true
           },
+          "isPlatformManaged": {
+            "type": "boolean"
+          },
           "lastUpdatedAt": {
             "type": "string",
             "format": "date-time",
@@ -35245,6 +35248,7 @@
         "type": "object",
         "properties": {
           "displayName": {
+            "maxLength": 50,
             "minLength": 1,
             "type": "string",
             "description": "Container registry display name"
@@ -36901,7 +36905,8 @@
       "RegistryType": {
         "enum": [
           "dockerHub",
-          "gitHub"
+          "gitHub",
+          "bunnyRegistry"
         ],
         "type": "string"
       },
@@ -37425,7 +37430,8 @@
           "creating",
           "notScheduled",
           "scheduled",
-          "failed"
+          "failed",
+          "maintenance"
         ],
         "type": "string"
       },

@@ -8,29 +8,29 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Represents a response with the list of enumeration types and their values exposed by the Access Lists API.
+    /// Default response schema
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ShieldGetAccessListEnums200ResponseResponsePlain : IAdditionalDataHolder, IParsable
+    public partial class CoreAddLiveWatermarkEndpointAddWatermark200Response : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldGetAccessListEnums200ResponseResponsePlain"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CoreAddLiveWatermarkEndpointAddWatermark200Response"/> and sets the default values.
         /// </summary>
-        public ShieldGetAccessListEnums200ResponseResponsePlain()
+        public CoreAddLiveWatermarkEndpointAddWatermark200Response()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldGetAccessListEnums200ResponseResponsePlain"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CoreAddLiveWatermarkEndpointAddWatermark200Response"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.ShieldGetAccessListEnums200ResponseResponsePlain CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.CoreAddLiveWatermarkEndpointAddWatermark200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ShieldGetAccessListEnums200ResponseResponsePlain();
+            return new global::Soenneker.Bunny.OpenApiClient.Models.CoreAddLiveWatermarkEndpointAddWatermark200Response();
         }
         /// <summary>
         /// The deserialization information for the current model

@@ -36,7 +36,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreCountriesPublicGetCountryList200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreCountriesPublicGetCountryList200ResponseSchema"
                 }
               }
             }
@@ -280,7 +280,7 @@
             "content": {
               "application/octet-stream": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreDnsZonePublicExport200ResponseResponseOctetStream"
+                  "$ref": "#/components/schemas/CoreDnsZonePublicExport200OctetStreamResponseSchema"
                 }
               }
             }
@@ -694,7 +694,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorePullZonePublicIndexAll200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CorePullZonePublicIndexAll200ResponseSchema"
                 }
               }
             }
@@ -868,7 +868,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponse"
+                  "$ref": "#/components/schemas/CorePullZonePublicDelete204Response"
                 }
               }
             }
@@ -911,7 +911,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson"
+                  "$ref": "#/components/schemas/CorePullZonePublicDeleteEdgeRule204Response"
                 }
               }
             }
@@ -954,7 +954,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson2"
+                  "$ref": "#/components/schemas/CorePullZonePublicAddEdgeRule201Response"
                 }
               }
             }
@@ -1121,7 +1121,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema"
                 }
               }
             }
@@ -1211,7 +1211,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema"
                 }
               }
             }
@@ -1313,7 +1313,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson3"
+                  "$ref": "#/components/schemas/CorePullZonePublicPurgeCachePostByTag201Response"
                 }
               }
             }
@@ -1473,7 +1473,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson4"
+                  "$ref": "#/components/schemas/CorePullZonePublicAddHostname201Response"
                 }
               }
             }
@@ -1933,7 +1933,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson5"
+                  "$ref": "#/components/schemas/CorePurgePublicIndexPost201Response"
                 }
               }
             }
@@ -1954,7 +1954,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreRegionPublicIndex200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreRegionPublicIndex200ResponseSchema"
                 }
               }
             }
@@ -2017,7 +2017,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreStorageZonePublicIndexAll200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreStorageZonePublicIndexAll200ResponseSchema"
                 }
               }
             }
@@ -2201,7 +2201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson6"
+                  "$ref": "#/components/schemas/CoreStorageZonePublicDelete204Response"
                 }
               }
             }
@@ -2234,7 +2234,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson7"
+                  "$ref": "#/components/schemas/CoreStorageZonePublicResetPassword201Response"
                 }
               }
             }
@@ -2267,7 +2267,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson8"
+                  "$ref": "#/components/schemas/CoreStorageZonePublicResetReadOnlyPassword201Response"
                 }
               }
             }
@@ -2566,7 +2566,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson9"
+                  "$ref": "#/components/schemas/CoreAddWatermarkEndpointAddWatermark200Response"
                 }
               }
             }
@@ -2619,7 +2619,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson10"
+                  "$ref": "#/components/schemas/CoreDeleteWatermarkEndpointDeleteWatermark204Response"
                 }
               }
             }
@@ -2674,7 +2674,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson11"
+                  "$ref": "#/components/schemas/CoreDeleteVideoLibraryEndpointDeleteVideoLibrary204Response"
                 }
               }
             }
@@ -2872,7 +2872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreGetVideoLibraryLanguagesEndpointGetVideoLibraryLanguages200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreGetVideoLibraryLanguagesEndpointGetVideoLibraryLanguages200ResponseSchema"
                 }
               }
             }
@@ -3057,7 +3057,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson12"
+                  "$ref": "#/components/schemas/CoreResetVideoLibraryApiKeyEndpointResetVideoLibraryApiKey201Response"
                 }
               }
             }
@@ -3112,7 +3112,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson13"
+                  "$ref": "#/components/schemas/CoreResetVideoLibraryReadOnlyApiKeyEndpointResetVideoLibraryReadOnlyApiKey201Response"
                 }
               }
             }
@@ -3242,7 +3242,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson14"
+                  "$ref": "#/components/schemas/CoreAddLiveThumbnailEndpointAddThumbnail200Response"
                 }
               }
             }
@@ -3295,7 +3295,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson15"
+                  "$ref": "#/components/schemas/CoreDeleteLiveThumbnailEndpointDeleteThumbnail204Response"
                 }
               }
             }
@@ -3350,7 +3350,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson16"
+                  "$ref": "#/components/schemas/CoreAddLiveWatermarkEndpointAddWatermark200Response"
                 }
               }
             }
@@ -3403,7 +3403,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson17"
+                  "$ref": "#/components/schemas/CoreDeleteLiveWatermarkEndpointDeleteWatermark204Response"
                 }
               }
             }
@@ -3796,7 +3796,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions200ResponseSchema"
                 }
               }
             }
@@ -4762,7 +4762,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson18"
+                  "$ref": "#/components/schemas/CoreDownloadPaymentRequestInvoicePdfEndpointDownloadPaymentRequestInvoicePdf200Response"
                 }
               }
             }
@@ -4801,7 +4801,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreGetPaymentRequestsEndpointGetPaymentRequests200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreGetPaymentRequestsEndpointGetPaymentRequests200ResponseSchema"
                 }
               }
             }
@@ -4851,7 +4851,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson19"
+                  "$ref": "#/components/schemas/CoreBillingSummaryPublicGetBillingSummaryPdf200Response"
                 }
               }
             }
@@ -4880,7 +4880,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoreGetBillingSummaryEndpointGetSummaryEndpoint200ResponseResponseJson"
+                  "$ref": "#/components/schemas/CoreGetBillingSummaryEndpointGetSummaryEndpoint200ResponseSchema"
                 }
               }
             }
@@ -5130,7 +5130,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson20"
+                  "$ref": "#/components/schemas/CdnLoggingGetDatePullZoneIdLog200Response"
                 }
               }
             }
@@ -5415,7 +5415,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StorageGetStorageZoneNamePathFileName404ResponseResponseJson"
+                  "$ref": "#/components/schemas/StorageGetStorageZoneNamePathFileName404Response"
                 }
               }
             }
@@ -5492,7 +5492,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson21"
+                  "$ref": "#/components/schemas/StoragePutStorageZoneNamePathFileName200Response"
                 }
               }
             }
@@ -5566,7 +5566,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson22"
+                  "$ref": "#/components/schemas/StorageDeleteStorageZoneNamePathFileName204Response"
                 }
               }
             }
@@ -5608,7 +5608,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson23"
+                  "$ref": "#/components/schemas/StorageGetStorageZoneNamePath200Response"
                 }
               }
             }
@@ -6519,7 +6519,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StreamVideoReencodeUsingCodec400ResponseResponseJson"
+                  "$ref": "#/components/schemas/StreamVideoReencodeUsingCodec400ResponseSchema"
                 }
               }
             }
@@ -8155,17 +8155,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchema3"
                 }
               }
             }
@@ -8787,17 +8787,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchema3"
                 }
               }
             }
@@ -9573,17 +9573,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseSchema3"
                 }
               }
             }
@@ -10032,12 +10032,12 @@
             "content": {
               "text/csv": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldExportEventLogs200ResponseResponseCsv"
+                  "$ref": "#/components/schemas/ShieldExportEventLogs200CsvResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldExportEventLogs200ResponseResponseJson2"
+                  "$ref": "#/components/schemas/ShieldExportEventLogs200ResponseSchema"
                 }
               }
             }
@@ -10814,7 +10814,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson24"
+                  "$ref": "#/components/schemas/ShieldGetPromotionState200Response"
                 }
               }
             }
@@ -12135,17 +12135,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/ShieldGetWafRules200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseSchema3"
                 }
               }
             }
@@ -13191,7 +13191,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson25"
+                  "$ref": "#/components/schemas/EdgeScriptingUploadEdgeScriptCodeEndpointSetCode201Response"
                 }
               }
             }
@@ -13714,7 +13714,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson26"
+                  "$ref": "#/components/schemas/EdgeScriptingRotateEdgeScriptDeploymentKeyEndpointRotateEdgeScriptDeploymentKey201Response"
                 }
               }
             }
@@ -14662,7 +14662,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson27"
+                  "$ref": "#/components/schemas/EdgeScriptingPublishEdgeScriptReleaseEndpointPublish201Response"
                 }
               }
             }
@@ -14740,7 +14740,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson28"
+                  "$ref": "#/components/schemas/EdgeScriptingPublishEdgeScriptReleaseEndpointPublish2201Response"
                 }
               }
             }
@@ -15956,7 +15956,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MagicContainersSearchForPublicContainerImages200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MagicContainersSearchForPublicContainerImages200ResponseSchema"
                 }
               }
             }
@@ -16022,7 +16022,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MagicContainersListContainerImages200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MagicContainersListContainerImages200ResponseSchema"
                 }
               }
             }
@@ -16297,7 +16297,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MagicContainersListContainerImageTags200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MagicContainersListContainerImageTags200ResponseSchema"
                 }
               }
             }
@@ -17472,12 +17472,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200ResponseResponseJson"
+                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200ResponseSchema"
                 }
               },
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200ResponseResponsePlain2"
+                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200PlainResponseSchema"
                 }
               }
             }
@@ -18386,7 +18386,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson29"
+                  "$ref": "#/components/schemas/MagicContainersDeleteLogForwardingConfiguration204Response"
                 }
               }
             }
@@ -31722,6 +31722,9 @@
             "type": "boolean",
             "nullable": true
           },
+          "isPlatformManaged": {
+            "type": "boolean"
+          },
           "lastUpdatedAt": {
             "type": "string",
             "format": "date-time",
@@ -31737,6 +31740,7 @@
         "type": "object",
         "properties": {
           "displayName": {
+            "maxLength": 50,
             "minLength": 1,
             "type": "string",
             "description": "Container registry display name"
@@ -33780,7 +33784,8 @@
       "RegistryType": {
         "enum": [
           "dockerHub",
-          "gitHub"
+          "gitHub",
+          "bunnyRegistry"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -33795,6 +33800,10 @@
             {
               "value": "gitHub",
               "name": "GitHub"
+            },
+            {
+              "value": "bunnyRegistry",
+              "name": "BunnyRegistry"
             }
           ]
         }
@@ -34297,7 +34306,8 @@
           "creating",
           "notScheduled",
           "scheduled",
-          "failed"
+          "failed",
+          "maintenance"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -34340,6 +34350,10 @@
             {
               "value": "failed",
               "name": "Failed"
+            },
+            {
+              "value": "maintenance",
+              "name": "Maintenance"
             }
           ]
         }
@@ -36821,7 +36835,7 @@
           "$ref": "#/components/schemas/CountryModel"
         }
       },
-      "CoreDnsZonePublicExport200Response": {
+      "CoreDnsZonePublicExport200OctetStreamResponse": {
         "type": "string",
         "format": "binary"
       },
@@ -36921,7 +36935,7 @@
           "$ref": "#/components/schemas/BillingSummaryItem"
         }
       },
-      "StorageGetStorageZoneNamePathFileName404Response": {
+      "StorageGetStorageZoneNamePathFileName404MediaResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ErrorObject"
@@ -36939,7 +36953,7 @@
           }
         }
       },
-      "StorageGetStorageZoneNamePath200Response": {
+      "StorageGetStorageZoneNamePath200MediaResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageObject"
@@ -36965,6 +36979,13 @@
         "format": "binary",
         "nullable": true
       },
+      "ShieldGetAccessListEnums200PlainResponse": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ShieldGetAccessListEnums200PlainResponseAdditionalProperties"
+        },
+        "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+      },
       "ShieldGetAccessListEnums200Response": {
         "type": "object",
         "additionalProperties": {
@@ -36972,19 +36993,18 @@
         },
         "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson": {
+      "ShieldGetAccessListEnums200ResponseSchema": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponseJsonAdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchemaAdditionalProperties"
         },
         "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson2": {
+      "ShieldGetApiGuardianEnums200PlainResponse": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponseJson2AdditionalProperties"
-        },
-        "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200PlainResponseAdditionalProperties"
+        }
       },
       "ShieldGetApiGuardianEnums200Response": {
         "type": "object",
@@ -36992,34 +37012,34 @@
           "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseAdditionalProperties"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson": {
+      "ShieldGetApiGuardianEnums200ResponseSchema": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponseJsonAdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchemaAdditionalProperties"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson2": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponseJson2AdditionalProperties"
-        }
+      "ShieldGetCustomResponsePage200PlainResponse": {
+        "type": "string"
       },
       "ShieldGetCustomResponsePage200Response": {
         "type": "string"
       },
-      "ShieldGetCustomResponsePage200ResponseResponseJson": {
+      "ShieldGetCustomResponsePage200ResponseSchema": {
         "type": "string"
       },
-      "ShieldGetCustomResponsePage200ResponseResponseJson2": {
-        "type": "string"
+      "ShieldExportEventLogs200CsvResponse": {
+        "type": "string",
+        "format": "binary"
       },
       "ShieldExportEventLogs200Response": {
         "type": "string",
         "format": "binary"
       },
-      "ShieldExportEventLogs200ResponseResponseJson": {
-        "type": "string",
-        "format": "binary"
+      "ShieldGetWafRules200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WafRuleMainGroupModel"
+        }
       },
       "ShieldGetWafRules200Response": {
         "type": "array",
@@ -37027,13 +37047,7 @@
           "$ref": "#/components/schemas/WafRuleMainGroupModel"
         }
       },
-      "ShieldGetWafRules200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/WafRuleMainGroupModel"
-        }
-      },
-      "ShieldGetWafRules200ResponseResponseJson2": {
+      "ShieldGetWafRules200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/WafRuleMainGroupModel"
@@ -37063,7 +37077,7 @@
           "type": "string"
         }
       },
-      "MagicContainersListNodesPlain200ResponseResponsePlain": {
+      "MagicContainersListNodesPlain200PlainResponse": {
         "type": "array",
         "items": {
           "type": "string"
@@ -37799,305 +37813,305 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "CoreCountriesPublicGetCountryList200ResponseResponseJson": {
+      "CoreCountriesPublicGetCountryList200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CountryModel"
         }
       },
-      "CoreDnsZonePublicExport200ResponseResponseOctetStream": {
+      "CoreDnsZonePublicExport200OctetStreamResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "CorePullZonePublicIndexAll200ResponseResponseJson": {
+      "CorePullZonePublicIndexAll200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PullZoneModel"
         }
       },
-      "DefaultResponse": {
+      "CorePullZonePublicDelete204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson": {
+      "CorePullZonePublicDeleteEdgeRule204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson2": {
+      "CorePullZonePublicAddEdgeRule201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson": {
+      "CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema": {
         "type": "object"
       },
-      "CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson": {
+      "CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema": {
         "type": "object"
       },
-      "DefaultResponseResponseJson3": {
+      "CorePullZonePublicPurgeCachePostByTag201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson4": {
+      "CorePullZonePublicAddHostname201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson5": {
+      "CorePurgePublicIndexPost201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CoreRegionPublicIndex200ResponseResponseJson": {
+      "CoreRegionPublicIndex200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RegionModel"
         }
       },
-      "CoreStorageZonePublicIndexAll200ResponseResponseJson": {
+      "CoreStorageZonePublicIndexAll200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageZoneModel"
         }
       },
-      "DefaultResponseResponseJson6": {
+      "CoreStorageZonePublicDelete204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson7": {
+      "CoreStorageZonePublicResetPassword201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson8": {
+      "CoreStorageZonePublicResetReadOnlyPassword201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson9": {
+      "CoreAddWatermarkEndpointAddWatermark200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson10": {
+      "CoreDeleteWatermarkEndpointDeleteWatermark204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson11": {
+      "CoreDeleteVideoLibraryEndpointDeleteVideoLibrary204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CoreGetVideoLibraryLanguagesEndpointGetVideoLibraryLanguages200ResponseResponseJson": {
+      "CoreGetVideoLibraryLanguagesEndpointGetVideoLibraryLanguages200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VideoLibraryLanguage"
         }
       },
-      "DefaultResponseResponseJson12": {
+      "CoreResetVideoLibraryApiKeyEndpointResetVideoLibraryApiKey201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson13": {
+      "CoreResetVideoLibraryReadOnlyApiKeyEndpointResetVideoLibraryReadOnlyApiKey201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson14": {
+      "CoreAddLiveThumbnailEndpointAddThumbnail200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson15": {
+      "CoreDeleteLiveThumbnailEndpointDeleteThumbnail204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson16": {
+      "CoreAddLiveWatermarkEndpointAddWatermark200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson17": {
+      "CoreDeleteLiveWatermarkEndpointDeleteWatermark204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions200ResponseResponseJson": {
+      "CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
-      "DefaultResponseResponseJson18": {
+      "CoreDownloadPaymentRequestInvoicePdfEndpointDownloadPaymentRequestInvoicePdf200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CoreGetPaymentRequestsEndpointGetPaymentRequests200ResponseResponseJson": {
+      "CoreGetPaymentRequestsEndpointGetPaymentRequests200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/PaymentRequestModel"
         }
       },
-      "DefaultResponseResponseJson19": {
+      "CoreBillingSummaryPublicGetBillingSummaryPdf200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "CoreGetBillingSummaryEndpointGetSummaryEndpoint200ResponseResponseJson": {
+      "CoreGetBillingSummaryEndpointGetSummaryEndpoint200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BillingSummaryItem"
         }
       },
-      "DefaultResponseResponseJson20": {
+      "CdnLoggingGetDatePullZoneIdLog200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "StorageGetStorageZoneNamePathFileName404ResponseResponseJson": {
+      "StorageGetStorageZoneNamePathFileName404Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ErrorObject"
         }
       },
-      "DefaultResponseResponseJson21": {
+      "StoragePutStorageZoneNamePathFileName200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson22": {
+      "StorageDeleteStorageZoneNamePathFileName204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson23": {
+      "StorageGetStorageZoneNamePath200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "StreamVideoReencodeUsingCodec400ResponseResponseJson": {
+      "StreamVideoReencodeUsingCodec400ResponseSchema": {
         "type": "string"
       },
-      "ShieldGetAccessListEnums200ResponseResponsePlain": {
+      "ShieldGetAccessListEnums200PlainResponseSchema": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponsePlainAdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetAccessListEnums200PlainResponseSchemaAdditionalProperties"
         },
         "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson3": {
+      "ShieldGetAccessListEnums200ResponseSchema2": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponseJson3AdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchema2AdditionalProperties"
         },
         "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson4": {
+      "ShieldGetAccessListEnums200ResponseSchema3": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseResponseJson4AdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchema3AdditionalProperties"
         },
         "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
       },
-      "ShieldGetApiGuardianEnums200ResponseResponsePlain": {
+      "ShieldGetApiGuardianEnums200PlainResponseSchema": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponsePlainAdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200PlainResponseSchemaAdditionalProperties"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson3": {
+      "ShieldGetApiGuardianEnums200ResponseSchema2": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponseJson3AdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchema2AdditionalProperties"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson4": {
+      "ShieldGetApiGuardianEnums200ResponseSchema3": {
         "type": "object",
         "additionalProperties": {
-          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseResponseJson4AdditionalProperties"
+          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchema3AdditionalProperties"
         }
       },
-      "ShieldGetCustomResponsePage200ResponseResponsePlain": {
+      "ShieldGetCustomResponsePage200PlainResponseSchema": {
         "type": "string"
       },
-      "ShieldGetCustomResponsePage200ResponseResponseJson3": {
+      "ShieldGetCustomResponsePage200ResponseSchema2": {
         "type": "string"
       },
-      "ShieldGetCustomResponsePage200ResponseResponseJson4": {
+      "ShieldGetCustomResponsePage200ResponseSchema3": {
         "type": "string"
       },
-      "ShieldExportEventLogs200ResponseResponseCsv": {
+      "ShieldExportEventLogs200CsvResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "ShieldExportEventLogs200ResponseResponseJson2": {
+      "ShieldExportEventLogs200ResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "DefaultResponseResponseJson24": {
+      "ShieldGetPromotionState200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "ShieldGetWafRules200ResponseResponsePlain": {
+      "ShieldGetWafRules200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/WafRuleMainGroupModel"
         }
       },
-      "ShieldGetWafRules200ResponseResponseJson3": {
+      "ShieldGetWafRules200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/WafRuleMainGroupModel"
         }
       },
-      "ShieldGetWafRules200ResponseResponseJson4": {
+      "ShieldGetWafRules200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/WafRuleMainGroupModel"
         }
       },
-      "DefaultResponseResponseJson25": {
+      "EdgeScriptingUploadEdgeScriptCodeEndpointSetCode201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson26": {
+      "EdgeScriptingRotateEdgeScriptDeploymentKeyEndpointRotateEdgeScriptDeploymentKey201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson27": {
+      "EdgeScriptingPublishEdgeScriptReleaseEndpointPublish201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson28": {
+      "EdgeScriptingPublishEdgeScriptReleaseEndpointPublish2201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "MagicContainersSearchForPublicContainerImages200ResponseResponseJson": {
+      "MagicContainersSearchForPublicContainerImages200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ContainerImage"
         }
       },
-      "MagicContainersListContainerImages200ResponseResponseJson": {
+      "MagicContainersListContainerImages200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ContainerImage"
         }
       },
-      "MagicContainersListContainerImageTags200ResponseResponseJson": {
+      "MagicContainersListContainerImageTags200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ContainerImageTag"
@@ -38115,19 +38129,19 @@
           "type": "string"
         }
       },
-      "MagicContainersListNodesPlain200ResponseResponseJson": {
+      "MagicContainersListNodesPlain200ResponseSchema": {
         "type": "array",
         "items": {
           "type": "string"
         }
       },
-      "MagicContainersListNodesPlain200ResponseResponsePlain2": {
+      "MagicContainersListNodesPlain200PlainResponseSchema": {
         "type": "array",
         "items": {
           "type": "string"
         }
       },
-      "DefaultResponseResponseJson29": {
+      "MagicContainersDeleteLogForwardingConfiguration204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -38270,19 +38284,25 @@
           "format": "double"
         }
       },
+      "ShieldGetAccessListEnums200PlainResponseAdditionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
       "ShieldGetAccessListEnums200ResponseAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetAccessListEnums200ResponseResponseJsonAdditionalProperties": {
+      "ShieldGetAccessListEnums200ResponseSchemaAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson2AdditionalProperties": {
+      "ShieldGetApiGuardianEnums200PlainResponseAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
@@ -38294,49 +38314,43 @@
           "type": "string"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJsonAdditionalProperties": {
+      "ShieldGetApiGuardianEnums200ResponseSchemaAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson2AdditionalProperties": {
+      "ShieldGetAccessListEnums200PlainResponseSchemaAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetAccessListEnums200ResponseResponsePlainAdditionalProperties": {
+      "ShieldGetAccessListEnums200ResponseSchema2AdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson3AdditionalProperties": {
+      "ShieldGetAccessListEnums200ResponseSchema3AdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetAccessListEnums200ResponseResponseJson4AdditionalProperties": {
+      "ShieldGetApiGuardianEnums200PlainResponseSchemaAdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponsePlainAdditionalProperties": {
+      "ShieldGetApiGuardianEnums200ResponseSchema2AdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson3AdditionalProperties": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string"
-        }
-      },
-      "ShieldGetApiGuardianEnums200ResponseResponseJson4AdditionalProperties": {
+      "ShieldGetApiGuardianEnums200ResponseSchema3AdditionalProperties": {
         "type": "object",
         "additionalProperties": {
           "type": "string"

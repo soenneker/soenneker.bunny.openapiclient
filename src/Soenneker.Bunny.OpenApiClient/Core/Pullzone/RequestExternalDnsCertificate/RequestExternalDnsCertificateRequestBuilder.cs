@@ -36,7 +36,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalDnsCertific
         /// <summary>
         /// Request External DNS Certificate
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,11 +44,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalDnsCertific
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalDnsCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalDnsCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalDnsCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalDnsCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -58,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalDnsCertific
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalDnsCertificate200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Request External DNS Certificate

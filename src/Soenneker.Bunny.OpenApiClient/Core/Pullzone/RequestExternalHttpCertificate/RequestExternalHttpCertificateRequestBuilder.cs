@@ -36,7 +36,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalHttpCertifi
         /// <summary>
         /// Request External HTTP Certificate
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -44,11 +44,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalHttpCertifi
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData">When receiving a 429 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalHttpCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalHttpCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalHttpCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.ExternalHttpCertificateRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -58,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.RequestExternalHttpCertifi
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CorePullZonePublicRequestExternalHttpCertificate200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Request External HTTP Certificate

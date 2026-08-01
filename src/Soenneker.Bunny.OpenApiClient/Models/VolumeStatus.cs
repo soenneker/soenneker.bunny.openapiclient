@@ -44,5 +44,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         #pragma warning disable CS1591
         Failed,
         #pragma warning restore CS1591
+        [EnumMember(Value = "maintenance")]
+        #pragma warning disable CS1591
+        Maintenance,
+        #pragma warning restore CS1591
     }
 }

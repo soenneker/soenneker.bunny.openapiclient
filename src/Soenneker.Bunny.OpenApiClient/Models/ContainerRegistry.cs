@@ -48,6 +48,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The id property</summary>
         public long? Id { get; private set; }
+        /// <summary>The isPlatformManaged property</summary>
+        public bool? IsPlatformManaged { get; set; }
         /// <summary>The isPublic property</summary>
         public bool? IsPublic { get; set; }
         /// <summary>The lastPasswordSymbols property</summary>
@@ -108,6 +110,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "firstPasswordSymbols", n => { FirstPasswordSymbols = n.GetStringValue(); } },
                 { "hostName", n => { HostName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
+                { "isPlatformManaged", n => { IsPlatformManaged = n.GetBoolValue(); } },
                 { "isPublic", n => { IsPublic = n.GetBoolValue(); } },
                 { "lastPasswordSymbols", n => { LastPasswordSymbols = n.GetStringValue(); } },
                 { "lastUpdatedAt", n => { LastUpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -128,6 +131,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteStringValue("firstPasswordSymbols", FirstPasswordSymbols);
             writer.WriteStringValue("hostName", HostName);
+            writer.WriteBoolValue("isPlatformManaged", IsPlatformManaged);
             writer.WriteBoolValue("isPublic", IsPublic);
             writer.WriteStringValue("lastPasswordSymbols", LastPasswordSymbols);
             writer.WriteDateTimeOffsetValue("lastUpdatedAt", LastUpdatedAt);
