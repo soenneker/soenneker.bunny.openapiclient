@@ -6,6 +6,7 @@ using Soenneker.Bunny.OpenApiClient.Core.Apikey;
 using Soenneker.Bunny.OpenApiClient.Core.Billing;
 using Soenneker.Bunny.OpenApiClient.Core.Country;
 using Soenneker.Bunny.OpenApiClient.Core.Dnszone;
+using Soenneker.Bunny.OpenApiClient.Core.Loadbalancer;
 using Soenneker.Bunny.OpenApiClient.Core.Pullzone;
 using Soenneker.Bunny.OpenApiClient.Core.Purge;
 using Soenneker.Bunny.OpenApiClient.Core.Region;
@@ -45,6 +46,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core
         public global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.DnszoneRequestBuilder Dnszone
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.DnszoneRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The loadbalancer property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.LoadbalancerRequestBuilder Loadbalancer
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.LoadbalancerRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The pullzone property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.PullzoneRequestBuilder Pullzone
