@@ -19729,6 +19729,13 @@
             "type": "boolean",
             "description": "Determines if the SEO HTML prerender is enabled"
           },
+          "OptimizerHtmlToMarkdown": {
+            "$ref": "#/components/schemas/PullZoneModelOptimizerHtmlToMarkdown"
+          },
+          "OptimizerLlmsTxt": {
+            "type": "boolean",
+            "description": "Determines if the llms.txt file can be generated and served by the Optimizer"
+          },
           "OptimizerEnableManipulationEngine": {
             "type": "boolean",
             "description": "Determines the image manipulation should be enabled"
@@ -20006,6 +20013,12 @@
           "StickySessionClientHeaders": {
             "type": "string",
             "description": "A set of comma-separated header names used to identify clients",
+            "nullable": true
+          },
+          "LoadBalancerId": {
+            "type": "integer",
+            "description": "The ID of the Load Balancer profile used as the origin when OriginType is LoadBalancer",
+            "format": "int64",
             "nullable": true
           },
           "UserId": {
@@ -20427,6 +20440,19 @@
           "TCP",
           "TCPEncrypted",
           "DataDog"
+        ]
+      },
+      "OptimizerHtmlToMarkdownType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = Off\n1 = Simple",
+        "x-enumNames": [
+          "Off",
+          "Simple"
         ]
       },
       "OptimizerWatermarkPosition": {
@@ -21002,6 +21028,14 @@
             "description": "Determines if the SEO HTML prerender should be enabled",
             "nullable": true
           },
+          "OptimizerHtmlToMarkdown": {
+            "$ref": "#/components/schemas/PullZoneSettingsModelOptimizerHtmlToMarkdown"
+          },
+          "OptimizerLlmsTxt": {
+            "type": "boolean",
+            "description": "Determines if the llms.txt file can be generated and served by the Optimizer",
+            "nullable": true
+          },
           "OptimizerEnableManipulationEngine": {
             "type": "boolean",
             "description": "Determines the image manipulation should be enabled",
@@ -21359,6 +21393,12 @@
           "CacheKeyHeaders": {
             "type": "string",
             "description": "Vary Cache by Request Headers (comma delimited)",
+            "nullable": true
+          },
+          "LoadBalancerId": {
+            "type": "integer",
+            "description": "If using a load balancer origin, the ID of the load balancer to use",
+            "format": "int64",
             "nullable": true
           }
         },
@@ -21847,6 +21887,14 @@
             "description": "Determines if the SEO HTML prerender should be enabled",
             "nullable": true
           },
+          "OptimizerHtmlToMarkdown": {
+            "$ref": "#/components/schemas/PullZoneAddModelOptimizerHtmlToMarkdown"
+          },
+          "OptimizerLlmsTxt": {
+            "type": "boolean",
+            "description": "Determines if the llms.txt file can be generated and served by the Optimizer",
+            "nullable": true
+          },
           "OptimizerEnableManipulationEngine": {
             "type": "boolean",
             "description": "Determines the image manipulation should be enabled",
@@ -22204,6 +22252,12 @@
           "CacheKeyHeaders": {
             "type": "string",
             "description": "Vary Cache by Request Headers (comma delimited)",
+            "nullable": true
+          },
+          "LoadBalancerId": {
+            "type": "integer",
+            "description": "If using a load balancer origin, the ID of the load balancer to use",
+            "format": "int64",
             "nullable": true
           },
           "Name": {
@@ -24450,6 +24504,11 @@
           "MonthlyChargesDB": {
             "type": "number",
             "description": "The total monthly charges for DB",
+            "format": "decimal"
+          },
+          "MonthlyChargesLoadBalancer": {
+            "type": "number",
+            "description": "The total monthly charges for Load Balancer",
             "format": "decimal"
           },
           "MonthlyDBWrites": {
@@ -34615,6 +34674,15 @@
         ],
         "description": "Determines the log forwarding protocol type"
       },
+      "PullZoneModelOptimizerHtmlToMarkdown": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownTypeWrapper"
+          }
+        ],
+        "description": "Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use"
+      },
       "PullZoneModelOptimizerWatermarkPosition": {
         "type": "object",
         "oneOf": [
@@ -34752,6 +34820,15 @@
         ],
         "description": "Sets the log forwarding protocol type"
       },
+      "PullZoneSettingsModelOptimizerHtmlToMarkdown": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownTypeWrapper2"
+          }
+        ],
+        "description": "Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use"
+      },
       "PullZoneSettingsModelOptimizerWatermarkPosition": {
         "type": "object",
         "oneOf": [
@@ -34867,6 +34944,15 @@
           }
         ],
         "description": "Sets the log forwarding protocol type"
+      },
+      "PullZoneAddModelOptimizerHtmlToMarkdown": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownTypeWrapper3"
+          }
+        ],
+        "description": "Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use"
       },
       "PullZoneAddModelOptimizerWatermarkPosition": {
         "type": "object",
@@ -37277,6 +37363,17 @@
           }
         }
       },
+      "OptimizerHtmlToMarkdownTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        }
+      },
       "OptimizerWatermarkPositionWrapper": {
         "required": [
           "value"
@@ -37442,6 +37539,17 @@
           }
         }
       },
+      "OptimizerHtmlToMarkdownTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        }
+      },
       "OptimizerWatermarkPositionWrapper2": {
         "required": [
           "value"
@@ -37582,6 +37690,17 @@
         "properties": {
           "value": {
             "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
+          }
+        }
+      },
+      "OptimizerHtmlToMarkdownTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
           }
         }
       },
