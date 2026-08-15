@@ -15,18 +15,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of requests stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart? FileCountChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty? FileCountChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart FileCountChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty FileCountChart { get; set; }
 #endif
         /// <summary>The constructed chart of the storage used by day</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart? StorageUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty? StorageUsedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart StorageUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty StorageUsedChart { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,8 +46,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "FileCountChart", n => { FileCountChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart.CreateFromDiscriminatorValue); } },
-                { "StorageUsedChart", n => { StorageUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart.CreateFromDiscriminatorValue); } },
+                { "FileCountChart", n => { FileCountChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty.CreateFromDiscriminatorValue); } },
+                { "StorageUsedChart", n => { StorageUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,8 +57,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart>("FileCountChart", FileCountChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart>("StorageUsedChart", StorageUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty>("FileCountChart", FileCountChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty>("StorageUsedChart", StorageUsedChart);
         }
     }
 }

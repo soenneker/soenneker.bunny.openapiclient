@@ -15,18 +15,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The metrics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics? Metrics { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty? Metrics { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics Metrics { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty Metrics { get; set; }
 #endif
         /// <summary>The totals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals? Totals { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty? Totals { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals Totals { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty Totals { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,8 +46,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics.CreateFromDiscriminatorValue); } },
-                { "totals", n => { Totals = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty.CreateFromDiscriminatorValue); } },
+                { "totals", n => { Totals = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,8 +57,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics>("metrics", Metrics);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals>("totals", Totals);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty>("metrics", Metrics);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty>("totals", Totals);
         }
     }
 }

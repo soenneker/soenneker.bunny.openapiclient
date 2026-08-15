@@ -54,10 +54,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The outboundTrafficChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart? OutboundTrafficChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty? OutboundTrafficChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart OutboundTrafficChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty OutboundTrafficChart { get; set; }
 #endif
         /// <summary>The ramUsage property</summary>
         public double? RamUsage { get; set; }
@@ -99,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "outboundConnectionsLimit", n => { OutboundConnectionsLimit = n.GetIntValue(); } },
                 { "outboundConnectionsRejectedDiff", n => { OutboundConnectionsRejectedDiff = n.GetLongValue(); } },
-                { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart.CreateFromDiscriminatorValue); } },
+                { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty.CreateFromDiscriminatorValue); } },
                 { "ramUsage", n => { RamUsage = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>(); } },
                 { "volumesUtilizationPercentage", n => { VolumesUtilizationPercentage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty.CreateFromDiscriminatorValue); } },
@@ -122,7 +122,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("outboundConnectionsLimit", OutboundConnectionsLimit);
             writer.WriteLongValue("outboundConnectionsRejectedDiff", OutboundConnectionsRejectedDiff);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart>("outboundTrafficChart", OutboundTrafficChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty>("outboundTrafficChart", OutboundTrafficChart);
             writer.WriteDoubleValue("ramUsage", RamUsage);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty>("volumesUtilizationPercentage", VolumesUtilizationPercentage);

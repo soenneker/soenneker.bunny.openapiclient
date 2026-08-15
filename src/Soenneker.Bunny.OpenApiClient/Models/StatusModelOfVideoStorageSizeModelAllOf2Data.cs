@@ -19,10 +19,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The encoded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncoded? Encoded { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty? Encoded { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncoded Encoded { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty Encoded { get; set; }
 #endif
         /// <summary>The miscellaneous property</summary>
         public long? Miscellaneous { get; set; }
@@ -68,7 +68,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "calculatedAt", n => { CalculatedAt = n.GetDateTimeOffsetValue(); } },
-                { "encoded", n => { Encoded = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncoded>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncoded.CreateFromDiscriminatorValue); } },
+                { "encoded", n => { Encoded = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty.CreateFromDiscriminatorValue); } },
                 { "miscellaneous", n => { Miscellaneous = n.GetLongValue(); } },
                 { "mp4Fallback", n => { Mp4Fallback = n.GetLongValue(); } },
                 { "originals", n => { Originals = n.GetLongValue(); } },
@@ -85,7 +85,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("calculatedAt", CalculatedAt);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncoded>("encoded", Encoded);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty>("encoded", Encoded);
             writer.WriteLongValue("miscellaneous", Miscellaneous);
             writer.WriteLongValue("mp4Fallback", Mp4Fallback);
             writer.WriteLongValue("originals", Originals);

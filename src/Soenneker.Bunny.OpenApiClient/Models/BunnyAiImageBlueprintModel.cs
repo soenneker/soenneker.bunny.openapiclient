@@ -23,10 +23,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Properties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelProperties? Properties { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelPropertiesProperty? Properties { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelProperties Properties { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelPropertiesProperty Properties { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +47,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "Properties", n => { Properties = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelProperties>(global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelProperties.CreateFromDiscriminatorValue); } },
+                { "Properties", n => { Properties = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelPropertiesProperty>(global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelPropertiesProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelProperties>("Properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModelPropertiesProperty>("Properties", Properties);
         }
     }
 }

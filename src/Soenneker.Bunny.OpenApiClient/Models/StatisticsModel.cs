@@ -17,108 +17,108 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed cached bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart? BandwidthCachedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty? BandwidthCachedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart BandwidthCachedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty BandwidthCachedChart { get; set; }
 #endif
         /// <summary>The constructed bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart? BandwidthUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty? BandwidthUsedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart BandwidthUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty BandwidthUsedChart { get; set; }
 #endif
         /// <summary>The average cache hit rate in the response in the given time range</summary>
         public double? CacheHitRate { get; set; }
         /// <summary>The constructed cache hit rate chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart? CacheHitRateChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty? CacheHitRateChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart CacheHitRateChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty CacheHitRateChart { get; set; }
 #endif
         /// <summary>The constructed 3XX error responses chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart? Error3xxChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty? Error3xxChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart Error3xxChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty Error3xxChart { get; set; }
 #endif
         /// <summary>The constructed 4XX error responses chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart? Error4xxChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty? Error4xxChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart Error4xxChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty Error4xxChart { get; set; }
 #endif
         /// <summary>The constructed 5XX error responses chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart? Error5xxChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty? Error5xxChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart Error5xxChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty Error5xxChart { get; set; }
 #endif
         /// <summary>The geo traffic distribution data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution? GeoTrafficDistribution { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty? GeoTrafficDistribution { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution GeoTrafficDistribution { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty GeoTrafficDistribution { get; set; }
 #endif
         /// <summary>The constructed origin response time chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart? OriginResponseTimeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty? OriginResponseTimeChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart OriginResponseTimeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty OriginResponseTimeChart { get; set; }
 #endif
         /// <summary>The constructed origin shield bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart? OriginShieldBandwidthUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty? OriginShieldBandwidthUsedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart OriginShieldBandwidthUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty OriginShieldBandwidthUsedChart { get; set; }
 #endif
         /// <summary>The constructed origin shield internal bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart? OriginShieldInternalBandwidthUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty? OriginShieldInternalBandwidthUsedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart OriginShieldInternalBandwidthUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty OriginShieldInternalBandwidthUsedChart { get; set; }
 #endif
         /// <summary>The constructed origin traffic used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart? OriginTrafficChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty? OriginTrafficChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart OriginTrafficChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty OriginTrafficChart { get; set; }
 #endif
         /// <summary>The constructed uncached requests served chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart? PullRequestsPulledChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty? PullRequestsPulledChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart PullRequestsPulledChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty PullRequestsPulledChart { get; set; }
 #endif
         /// <summary>The constructed requests served chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart? RequestsServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty? RequestsServedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart RequestsServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty RequestsServedChart { get; set; }
 #endif
         /// <summary>The total bandwidth used by the response in the given time range</summary>
         public long? TotalBandwidthUsed { get; set; }
@@ -129,10 +129,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed user balance history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart? UserBalanceHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty? UserBalanceHistoryChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart UserBalanceHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty UserBalanceHistoryChart { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -153,24 +153,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AverageOriginResponseTime", n => { AverageOriginResponseTime = n.GetIntValue(); } },
-                { "BandwidthCachedChart", n => { BandwidthCachedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart.CreateFromDiscriminatorValue); } },
-                { "BandwidthUsedChart", n => { BandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart.CreateFromDiscriminatorValue); } },
+                { "BandwidthCachedChart", n => { BandwidthCachedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty.CreateFromDiscriminatorValue); } },
+                { "BandwidthUsedChart", n => { BandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty.CreateFromDiscriminatorValue); } },
                 { "CacheHitRate", n => { CacheHitRate = n.GetDoubleValue(); } },
-                { "CacheHitRateChart", n => { CacheHitRateChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart.CreateFromDiscriminatorValue); } },
-                { "Error3xxChart", n => { Error3xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart.CreateFromDiscriminatorValue); } },
-                { "Error4xxChart", n => { Error4xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart.CreateFromDiscriminatorValue); } },
-                { "Error5xxChart", n => { Error5xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart.CreateFromDiscriminatorValue); } },
-                { "GeoTrafficDistribution", n => { GeoTrafficDistribution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution.CreateFromDiscriminatorValue); } },
-                { "OriginResponseTimeChart", n => { OriginResponseTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart.CreateFromDiscriminatorValue); } },
-                { "OriginShieldBandwidthUsedChart", n => { OriginShieldBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart.CreateFromDiscriminatorValue); } },
-                { "OriginShieldInternalBandwidthUsedChart", n => { OriginShieldInternalBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart.CreateFromDiscriminatorValue); } },
-                { "OriginTrafficChart", n => { OriginTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart.CreateFromDiscriminatorValue); } },
-                { "PullRequestsPulledChart", n => { PullRequestsPulledChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart.CreateFromDiscriminatorValue); } },
-                { "RequestsServedChart", n => { RequestsServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart.CreateFromDiscriminatorValue); } },
+                { "CacheHitRateChart", n => { CacheHitRateChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty.CreateFromDiscriminatorValue); } },
+                { "Error3xxChart", n => { Error3xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty.CreateFromDiscriminatorValue); } },
+                { "Error4xxChart", n => { Error4xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty.CreateFromDiscriminatorValue); } },
+                { "Error5xxChart", n => { Error5xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty.CreateFromDiscriminatorValue); } },
+                { "GeoTrafficDistribution", n => { GeoTrafficDistribution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty.CreateFromDiscriminatorValue); } },
+                { "OriginResponseTimeChart", n => { OriginResponseTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty.CreateFromDiscriminatorValue); } },
+                { "OriginShieldBandwidthUsedChart", n => { OriginShieldBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty.CreateFromDiscriminatorValue); } },
+                { "OriginShieldInternalBandwidthUsedChart", n => { OriginShieldInternalBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty.CreateFromDiscriminatorValue); } },
+                { "OriginTrafficChart", n => { OriginTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty.CreateFromDiscriminatorValue); } },
+                { "PullRequestsPulledChart", n => { PullRequestsPulledChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty.CreateFromDiscriminatorValue); } },
+                { "RequestsServedChart", n => { RequestsServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty.CreateFromDiscriminatorValue); } },
                 { "TotalBandwidthUsed", n => { TotalBandwidthUsed = n.GetLongValue(); } },
                 { "TotalOriginTraffic", n => { TotalOriginTraffic = n.GetLongValue(); } },
                 { "TotalRequestsServed", n => { TotalRequestsServed = n.GetLongValue(); } },
-                { "UserBalanceHistoryChart", n => { UserBalanceHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart.CreateFromDiscriminatorValue); } },
+                { "UserBalanceHistoryChart", n => { UserBalanceHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -181,24 +181,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("AverageOriginResponseTime", AverageOriginResponseTime);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart>("BandwidthCachedChart", BandwidthCachedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart>("BandwidthUsedChart", BandwidthUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty>("BandwidthCachedChart", BandwidthCachedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty>("BandwidthUsedChart", BandwidthUsedChart);
             writer.WriteDoubleValue("CacheHitRate", CacheHitRate);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart>("CacheHitRateChart", CacheHitRateChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart>("Error3xxChart", Error3xxChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart>("Error4xxChart", Error4xxChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart>("Error5xxChart", Error5xxChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution>("GeoTrafficDistribution", GeoTrafficDistribution);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart>("OriginResponseTimeChart", OriginResponseTimeChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart>("OriginShieldBandwidthUsedChart", OriginShieldBandwidthUsedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart>("OriginShieldInternalBandwidthUsedChart", OriginShieldInternalBandwidthUsedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart>("OriginTrafficChart", OriginTrafficChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart>("PullRequestsPulledChart", PullRequestsPulledChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart>("RequestsServedChart", RequestsServedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty>("CacheHitRateChart", CacheHitRateChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty>("Error3xxChart", Error3xxChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty>("Error4xxChart", Error4xxChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty>("Error5xxChart", Error5xxChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty>("GeoTrafficDistribution", GeoTrafficDistribution);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty>("OriginResponseTimeChart", OriginResponseTimeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty>("OriginShieldBandwidthUsedChart", OriginShieldBandwidthUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty>("OriginShieldInternalBandwidthUsedChart", OriginShieldInternalBandwidthUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty>("OriginTrafficChart", OriginTrafficChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty>("PullRequestsPulledChart", PullRequestsPulledChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty>("RequestsServedChart", RequestsServedChart);
             writer.WriteLongValue("TotalBandwidthUsed", TotalBandwidthUsed);
             writer.WriteLongValue("TotalOriginTraffic", TotalOriginTraffic);
             writer.WriteLongValue("TotalRequestsServed", TotalRequestsServed);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart>("UserBalanceHistoryChart", UserBalanceHistoryChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty>("UserBalanceHistoryChart", UserBalanceHistoryChart);
         }
     }
 }

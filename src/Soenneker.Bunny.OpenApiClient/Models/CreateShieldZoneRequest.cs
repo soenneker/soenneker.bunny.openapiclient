@@ -16,10 +16,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The accessLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists? AccessLists { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty? AccessLists { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists AccessLists { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty AccessLists { get; set; }
 #endif
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
         public int? AntivirusScanningMode { get; set; }
@@ -55,7 +55,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists.CreateFromDiscriminatorValue); } },
+                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty.CreateFromDiscriminatorValue); } },
                 { "antivirusScanningMode", n => { AntivirusScanningMode = n.GetIntValue(); } },
                 { "botDetectionExecutionMode", n => { BotDetectionExecutionMode = n.GetIntValue(); } },
                 { "csamScanningMode", n => { CsamScanningMode = n.GetIntValue(); } },
@@ -70,7 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists>("accessLists", AccessLists);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty>("accessLists", AccessLists);
             writer.WriteIntValue("antivirusScanningMode", AntivirusScanningMode);
             writer.WriteIntValue("botDetectionExecutionMode", BotDetectionExecutionMode);
             writer.WriteIntValue("csamScanningMode", CsamScanningMode);

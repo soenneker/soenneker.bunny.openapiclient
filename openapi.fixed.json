@@ -20497,7 +20497,7 @@
             "nullable": true
           },
           "Properties": {
-            "$ref": "#/components/schemas/OptimizerClassModelProperties"
+            "$ref": "#/components/schemas/OptimizerClassModelPropertiesProperty"
           }
         },
         "additionalProperties": false
@@ -20561,7 +20561,7 @@
             "nullable": true
           },
           "Properties": {
-            "$ref": "#/components/schemas/BunnyAiImageBlueprintModelProperties"
+            "$ref": "#/components/schemas/BunnyAiImageBlueprintModelPropertiesProperty"
           }
         },
         "additionalProperties": false
@@ -21413,7 +21413,7 @@
             "nullable": true
           },
           "Properties": {
-            "$ref": "#/components/schemas/PullZoneOptimizerClassModelProperties"
+            "$ref": "#/components/schemas/PullZoneOptimizerClassModelPropertiesProperty"
           }
         },
         "additionalProperties": false
@@ -23675,7 +23675,7 @@
             "format": "int64"
           },
           "TranscriptionSecondsChart": {
-            "$ref": "#/components/schemas/VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChart"
+            "$ref": "#/components/schemas/VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty"
           }
         },
         "additionalProperties": false
@@ -23688,7 +23688,7 @@
             "format": "int64"
           },
           "LicensesIssuedChart": {
-            "$ref": "#/components/schemas/VideoLibraryDrmStatisticsModelLicensesIssuedChart"
+            "$ref": "#/components/schemas/VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty"
           }
         },
         "additionalProperties": false
@@ -23803,22 +23803,22 @@
         "type": "object",
         "properties": {
           "HttpEgressChart": {
-            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelHttpEgressChart"
+            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelHttpEgressChartProperty"
           },
           "S3EgressChart": {
-            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelS3EgressChart"
+            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelS3EgressChartProperty"
           },
           "S3PresignedEgressChart": {
-            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelS3PresignedEgressChart"
+            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty"
           },
           "FtpEgressChart": {
-            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelFtpEgressChart"
+            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelFtpEgressChartProperty"
           },
           "SftpEgressChart": {
-            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelSftpEgressChart"
+            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelSftpEgressChartProperty"
           },
           "TotalEgressChart": {
-            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelTotalEgressChart"
+            "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelTotalEgressChartProperty"
           },
           "HttpEgressTotal": {
             "type": "integer",
@@ -23878,10 +23878,10 @@
         "type": "object",
         "properties": {
           "StorageUsedChart": {
-            "$ref": "#/components/schemas/StorageZoneStatisticsModelStorageUsedChart"
+            "$ref": "#/components/schemas/StorageZoneStatisticsModelStorageUsedChartProperty"
           },
           "FileCountChart": {
-            "$ref": "#/components/schemas/StorageZoneStatisticsModelFileCountChart"
+            "$ref": "#/components/schemas/StorageZoneStatisticsModelFileCountChartProperty"
           }
         },
         "additionalProperties": false
@@ -23890,16 +23890,16 @@
         "type": "object",
         "properties": {
           "RequestsOptimizedChart": {
-            "$ref": "#/components/schemas/OptimizerStatisticsModelRequestsOptimizedChart"
+            "$ref": "#/components/schemas/OptimizerStatisticsModelRequestsOptimizedChartProperty"
           },
           "AverageCompressionChart": {
-            "$ref": "#/components/schemas/OptimizerStatisticsModelAverageCompressionChart"
+            "$ref": "#/components/schemas/OptimizerStatisticsModelAverageCompressionChartProperty"
           },
           "TrafficSavedChart": {
-            "$ref": "#/components/schemas/OptimizerStatisticsModelTrafficSavedChart"
+            "$ref": "#/components/schemas/OptimizerStatisticsModelTrafficSavedChartProperty"
           },
           "AverageProcessingTimeChart": {
-            "$ref": "#/components/schemas/OptimizerStatisticsModelAverageProcessingTimeChart"
+            "$ref": "#/components/schemas/OptimizerStatisticsModelAverageProcessingTimeChartProperty"
           },
           "TotalRequestsOptimized": {
             "type": "number",
@@ -23928,10 +23928,10 @@
         "type": "object",
         "properties": {
           "ConcurrentRequestsChart": {
-            "$ref": "#/components/schemas/OriginShieldConcurrencyStatisticsModelConcurrentRequestsChart"
+            "$ref": "#/components/schemas/OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty"
           },
           "QueuedRequestsChart": {
-            "$ref": "#/components/schemas/OriginShieldConcurrencyStatisticsModelQueuedRequestsChart"
+            "$ref": "#/components/schemas/OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty"
           }
         },
         "additionalProperties": false
@@ -23940,10 +23940,10 @@
         "type": "object",
         "properties": {
           "RequestsRetriedChart": {
-            "$ref": "#/components/schemas/SafeHopStatisticsModelRequestsRetriedChart"
+            "$ref": "#/components/schemas/SafeHopStatisticsModelRequestsRetriedChartProperty"
           },
           "RequestsSavedChart": {
-            "$ref": "#/components/schemas/SafeHopStatisticsModelRequestsSavedChart"
+            "$ref": "#/components/schemas/SafeHopStatisticsModelRequestsSavedChartProperty"
           },
           "TotalRequestsRetried": {
             "type": "number",
@@ -23977,7 +23977,7 @@
             "format": "int32"
           },
           "OriginResponseTimeChart": {
-            "$ref": "#/components/schemas/StatisticsModelOriginResponseTimeChart"
+            "$ref": "#/components/schemas/StatisticsModelOriginResponseTimeChartProperty"
           },
           "TotalRequestsServed": {
             "type": "integer",
@@ -23990,43 +23990,43 @@
             "format": "double"
           },
           "BandwidthUsedChart": {
-            "$ref": "#/components/schemas/StatisticsModelBandwidthUsedChart"
+            "$ref": "#/components/schemas/StatisticsModelBandwidthUsedChartProperty"
           },
           "BandwidthCachedChart": {
-            "$ref": "#/components/schemas/StatisticsModelBandwidthCachedChart"
+            "$ref": "#/components/schemas/StatisticsModelBandwidthCachedChartProperty"
           },
           "CacheHitRateChart": {
-            "$ref": "#/components/schemas/StatisticsModelCacheHitRateChart"
+            "$ref": "#/components/schemas/StatisticsModelCacheHitRateChartProperty"
           },
           "RequestsServedChart": {
-            "$ref": "#/components/schemas/StatisticsModelRequestsServedChart"
+            "$ref": "#/components/schemas/StatisticsModelRequestsServedChartProperty"
           },
           "PullRequestsPulledChart": {
-            "$ref": "#/components/schemas/StatisticsModelPullRequestsPulledChart"
+            "$ref": "#/components/schemas/StatisticsModelPullRequestsPulledChartProperty"
           },
           "OriginShieldBandwidthUsedChart": {
-            "$ref": "#/components/schemas/StatisticsModelOriginShieldBandwidthUsedChart"
+            "$ref": "#/components/schemas/StatisticsModelOriginShieldBandwidthUsedChartProperty"
           },
           "OriginShieldInternalBandwidthUsedChart": {
-            "$ref": "#/components/schemas/StatisticsModelOriginShieldInternalBandwidthUsedChart"
+            "$ref": "#/components/schemas/StatisticsModelOriginShieldInternalBandwidthUsedChartProperty"
           },
           "OriginTrafficChart": {
-            "$ref": "#/components/schemas/StatisticsModelOriginTrafficChart"
+            "$ref": "#/components/schemas/StatisticsModelOriginTrafficChartProperty"
           },
           "UserBalanceHistoryChart": {
-            "$ref": "#/components/schemas/StatisticsModelUserBalanceHistoryChart"
+            "$ref": "#/components/schemas/StatisticsModelUserBalanceHistoryChartProperty"
           },
           "GeoTrafficDistribution": {
-            "$ref": "#/components/schemas/StatisticsModelGeoTrafficDistribution"
+            "$ref": "#/components/schemas/StatisticsModelGeoTrafficDistributionProperty"
           },
           "Error3xxChart": {
-            "$ref": "#/components/schemas/StatisticsModelError3XxChart"
+            "$ref": "#/components/schemas/StatisticsModelError3XxChartProperty"
           },
           "Error4xxChart": {
-            "$ref": "#/components/schemas/StatisticsModelError4XxChart"
+            "$ref": "#/components/schemas/StatisticsModelError4XxChartProperty"
           },
           "Error5xxChart": {
-            "$ref": "#/components/schemas/StatisticsModelError5XxChart"
+            "$ref": "#/components/schemas/StatisticsModelError5XxChartProperty"
           }
         },
         "additionalProperties": false
@@ -24245,16 +24245,16 @@
             "format": "int64"
           },
           "QueriesServedChart": {
-            "$ref": "#/components/schemas/DnsZoneStatisticsModelQueriesServedChart"
+            "$ref": "#/components/schemas/DnsZoneStatisticsModelQueriesServedChartProperty"
           },
           "NormalQueriesServedChart": {
-            "$ref": "#/components/schemas/DnsZoneStatisticsModelNormalQueriesServedChart"
+            "$ref": "#/components/schemas/DnsZoneStatisticsModelNormalQueriesServedChartProperty"
           },
           "SmartQueriesServedChart": {
-            "$ref": "#/components/schemas/DnsZoneStatisticsModelSmartQueriesServedChart"
+            "$ref": "#/components/schemas/DnsZoneStatisticsModelSmartQueriesServedChartProperty"
           },
           "QueriesByTypeChart": {
-            "$ref": "#/components/schemas/DnsZoneStatisticsModelQueriesByTypeChart"
+            "$ref": "#/components/schemas/DnsZoneStatisticsModelQueriesByTypeChartProperty"
           }
         },
         "additionalProperties": false
@@ -24371,7 +24371,7 @@
             "nullable": true
           },
           "BillingHistoryChart": {
-            "$ref": "#/components/schemas/BillingModelBillingHistoryChart"
+            "$ref": "#/components/schemas/BillingModelBillingHistoryChartProperty"
           },
           "MonthlyChargesEUTraffic": {
             "type": "number",
@@ -24928,13 +24928,13 @@
             "format": "decimal"
           },
           "AffiliateClicksChart": {
-            "$ref": "#/components/schemas/BillingAffiliateDetailsModelAffiliateClicksChart"
+            "$ref": "#/components/schemas/BillingAffiliateDetailsModelAffiliateClicksChartProperty"
           },
           "AffiliateSignupsChart": {
-            "$ref": "#/components/schemas/BillingAffiliateDetailsModelAffiliateSignupsChart"
+            "$ref": "#/components/schemas/BillingAffiliateDetailsModelAffiliateSignupsChartProperty"
           },
           "AffiliateConversionsChart": {
-            "$ref": "#/components/schemas/BillingAffiliateDetailsModelAffiliateConversionsChart"
+            "$ref": "#/components/schemas/BillingAffiliateDetailsModelAffiliateConversionsChartProperty"
           }
         },
         "additionalProperties": false
@@ -25848,7 +25848,7 @@
         "type": "object",
         "properties": {
           "heatmap": {
-            "$ref": "#/components/schemas/VideoHeatmapModelHeatmap"
+            "$ref": "#/components/schemas/VideoHeatmapModelHeatmapProperty"
           }
         },
         "additionalProperties": false
@@ -26022,16 +26022,16 @@
         "type": "object",
         "properties": {
           "viewsChart": {
-            "$ref": "#/components/schemas/VideoStatisticsModelViewsChart"
+            "$ref": "#/components/schemas/VideoStatisticsModelViewsChartProperty"
           },
           "watchTimeChart": {
-            "$ref": "#/components/schemas/VideoStatisticsModelWatchTimeChart"
+            "$ref": "#/components/schemas/VideoStatisticsModelWatchTimeChartProperty"
           },
           "countryViewCounts": {
-            "$ref": "#/components/schemas/VideoStatisticsModelCountryViewCounts"
+            "$ref": "#/components/schemas/VideoStatisticsModelCountryViewCountsProperty"
           },
           "countryWatchTime": {
-            "$ref": "#/components/schemas/VideoStatisticsModelCountryWatchTime"
+            "$ref": "#/components/schemas/VideoStatisticsModelCountryWatchTimeProperty"
           },
           "engagementScore": {
             "type": "integer",
@@ -26165,7 +26165,7 @@
             "description": "The URL from which the video will be fetched from."
           },
           "headers": {
-            "$ref": "#/components/schemas/FetchVideoRequestHeaders"
+            "$ref": "#/components/schemas/FetchVideoRequestHeadersProperty"
           },
           "title": {
             "type": "string",
@@ -26511,7 +26511,7 @@
         "type": "object",
         "properties": {
           "encoded": {
-            "$ref": "#/components/schemas/VideoStorageSizeModelEncoded"
+            "$ref": "#/components/schemas/VideoStorageSizeModelEncodedProperty"
           },
           "thumbnails": {
             "type": "integer",
@@ -27042,7 +27042,7 @@
             "nullable": true
           },
           "responseBodySchemasYaml": {
-            "$ref": "#/components/schemas/ApiGuardianEndpointDetailsResponseBodySchemasYaml"
+            "$ref": "#/components/schemas/ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty"
           },
           "availableParameters": {
             "$ref": "#/components/schemas/ApiGuardianEndpointDetailsAvailableParameters"
@@ -27114,7 +27114,7 @@
             "format": "int64"
           },
           "overviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ApiGuardianEndpointMetricsOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty"
           }
         },
         "additionalProperties": false
@@ -27147,7 +27147,7 @@
             "format": "int64"
           },
           "overviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ApiGuardianMetricsOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ApiGuardianMetricsOverviewPastTwentyEightDaysProperty"
           }
         },
         "additionalProperties": false
@@ -27615,7 +27615,7 @@
             "format": "int64"
           },
           "accessLists": {
-            "$ref": "#/components/schemas/CreateShieldZoneRequestAccessLists"
+            "$ref": "#/components/schemas/CreateShieldZoneRequestAccessListsProperty"
           },
           "botDetectionExecutionMode": {
             "$ref": "#/components/schemas/BotDetectionExecutionMode"
@@ -27897,7 +27897,7 @@
         "type": "object",
         "properties": {
           "key": {
-            "$ref": "#/components/schemas/EventGroupKey"
+            "$ref": "#/components/schemas/EventGroupKeyProperty"
           },
           "count": {
             "type": "integer",
@@ -27915,7 +27915,7 @@
             "format": "int64"
           },
           "context": {
-            "$ref": "#/components/schemas/EventGroupContext"
+            "$ref": "#/components/schemas/EventGroupContextProperty"
           },
           "sparkline": {
             "type": "array",
@@ -28096,7 +28096,7 @@
             "$ref": "#/components/schemas/EventRowLog"
           },
           "fields": {
-            "$ref": "#/components/schemas/EventRowFields"
+            "$ref": "#/components/schemas/EventRowFieldsProperty"
           }
         },
         "additionalProperties": false,
@@ -28670,10 +28670,10 @@
         "type": "object",
         "properties": {
           "metrics": {
-            "$ref": "#/components/schemas/OverviewMetricMetrics"
+            "$ref": "#/components/schemas/OverviewMetricMetricsProperty"
           },
           "totals": {
-            "$ref": "#/components/schemas/OverviewMetricTotals"
+            "$ref": "#/components/schemas/OverviewMetricTotalsProperty"
           }
         },
         "additionalProperties": false
@@ -28839,7 +28839,7 @@
             "$ref": "#/components/schemas/IndividualRatelimit"
           },
           "ratelimitOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/RatelimitMetricsRatelimitOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty"
           }
         },
         "additionalProperties": false
@@ -28991,7 +28991,7 @@
         "type": "object",
         "properties": {
           "overviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneBotDetectionMetricsOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneBotDetectionMetricsOverviewPastTwentyEightDaysProperty"
           },
           "totalLoggedRequests": {
             "type": "integer",
@@ -29046,40 +29046,40 @@
             "$ref": "#/components/schemas/Waf"
           },
           "overviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsOverviewPastTwentyEightDaysProperty"
           },
           "dDoS": {
             "$ref": "#/components/schemas/DDoS"
           },
           "dDoSOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsDDoSOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty"
           },
           "ratelimit": {
             "$ref": "#/components/schemas/Ratelimit"
           },
           "ratelimitOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsRatelimitOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty"
           },
           "botDetection": {
             "$ref": "#/components/schemas/BotDetectionData"
           },
           "botDetectionOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty"
           },
           "accessList": {
             "$ref": "#/components/schemas/AccessList"
           },
           "accessListOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsAccessListOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty"
           },
           "uploadScanningOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty"
           },
           "apiGuardian": {
             "$ref": "#/components/schemas/ApiGuardianEndpointActivity"
           },
           "apiGuardianOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty"
           },
           "totalCleanRequestsLimit": {
             "type": "integer",
@@ -29179,7 +29179,7 @@
             "$ref": "#/components/schemas/ShieldZoneRatelimit"
           },
           "ratelimitOverviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty"
           }
         },
         "additionalProperties": false
@@ -29413,7 +29413,7 @@
         "type": "object",
         "properties": {
           "overviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty"
           },
           "totalLoggedRequests": {
             "type": "integer",
@@ -29472,7 +29472,7 @@
             "nullable": true
           },
           "topTargetedUrls": {
-            "$ref": "#/components/schemas/TriggeredRuleItemTopTargetedUrls"
+            "$ref": "#/components/schemas/TriggeredRuleItemTopTargetedUrlsProperty"
           },
           "totalTriggeredRequests": {
             "type": "integer",
@@ -30380,7 +30380,7 @@
             "format": "int32"
           },
           "overviewPastTwentyEightDays": {
-            "$ref": "#/components/schemas/WafRuleMetricsOverviewPastTwentyEightDays"
+            "$ref": "#/components/schemas/WafRuleMetricsOverviewPastTwentyEightDaysProperty"
           }
         },
         "additionalProperties": false
@@ -30596,13 +30596,13 @@
             "format": "double"
           },
           "RequestsServedChart": {
-            "$ref": "#/components/schemas/EdgeScriptStatisticsModelRequestsServedChart"
+            "$ref": "#/components/schemas/EdgeScriptStatisticsModelRequestsServedChartProperty"
           },
           "AverageCpuTimeChart": {
-            "$ref": "#/components/schemas/EdgeScriptStatisticsModelAverageCpuTimeChart"
+            "$ref": "#/components/schemas/EdgeScriptStatisticsModelAverageCpuTimeChartProperty"
           },
           "TotalCpuTimeChart": {
-            "$ref": "#/components/schemas/EdgeScriptStatisticsModelTotalCpuTimeChart"
+            "$ref": "#/components/schemas/EdgeScriptStatisticsModelTotalCpuTimeChartProperty"
           }
         },
         "additionalProperties": false
@@ -33461,7 +33461,7 @@
             "nullable": true
           },
           "outboundTrafficChart": {
-            "$ref": "#/components/schemas/OverviewPodOutboundTrafficChart"
+            "$ref": "#/components/schemas/OverviewPodOutboundTrafficChartProperty"
           },
           "cpuUsage": {
             "type": "number",
@@ -34173,7 +34173,7 @@
             "example": 5
           },
           "nodeSelectors": {
-            "$ref": "#/components/schemas/UpdateRegionSettingsRequestNodeSelectors"
+            "$ref": "#/components/schemas/UpdateRegionSettingsRequestNodeSelectorsProperty"
           }
         },
         "additionalProperties": false
@@ -38305,24 +38305,577 @@
         "type": "object",
         "description": "Default response schema"
       },
+      "OptimizerClassModelPropertiesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "BunnyAiImageBlueprintModelPropertiesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "PullZoneOptimizerClassModelPropertiesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "The list of settings and values the class will send to the optimizer"
+      },
+      "VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "StorageZoneEgressStatisticsModelHttpEgressChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Download traffic served over HTTP"
+      },
+      "StorageZoneEgressStatisticsModelS3EgressChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Download traffic served over S3"
+      },
+      "StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Download traffic served over presigned S3 URLs"
+      },
+      "StorageZoneEgressStatisticsModelFtpEgressChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Download traffic served over FTP"
+      },
+      "StorageZoneEgressStatisticsModelSftpEgressChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Download traffic served over SFTP"
+      },
+      "StorageZoneEgressStatisticsModelTotalEgressChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Total download traffic across all protocols"
+      },
+      "StorageZoneStatisticsModelStorageUsedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of the storage used by day"
+      },
+      "StorageZoneStatisticsModelFileCountChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of requests stored"
+      },
+      "OptimizerStatisticsModelRequestsOptimizedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of optimized requests"
+      },
+      "OptimizerStatisticsModelAverageCompressionChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Average compression chart of the responses"
+      },
+      "OptimizerStatisticsModelTrafficSavedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of saved traffic"
+      },
+      "OptimizerStatisticsModelAverageProcessingTimeChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of saved traffic"
+      },
+      "OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of origin shield concurrent requests"
+      },
+      "OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of origin shield requests chart"
+      },
+      "SafeHopStatisticsModelRequestsRetriedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of requests retried"
+      },
+      "SafeHopStatisticsModelRequestsSavedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed chart of requests saved"
+      },
+      "StatisticsModelOriginResponseTimeChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed origin response time chart data"
+      },
+      "StatisticsModelBandwidthUsedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed bandwdidth used chart data"
+      },
+      "StatisticsModelBandwidthCachedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed cached bandwdidth used chart data"
+      },
+      "StatisticsModelCacheHitRateChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed cache hit rate chart data"
+      },
+      "StatisticsModelRequestsServedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed requests served chart data"
+      },
+      "StatisticsModelPullRequestsPulledChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed uncached requests served chart data"
+      },
+      "StatisticsModelOriginShieldBandwidthUsedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed origin shield bandwdidth used chart data"
+      },
+      "StatisticsModelOriginShieldInternalBandwidthUsedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed origin shield internal bandwdidth used chart data"
+      },
+      "StatisticsModelOriginTrafficChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed origin traffic used chart data"
+      },
+      "StatisticsModelUserBalanceHistoryChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed user balance history chart data"
+      },
+      "StatisticsModelGeoTrafficDistributionProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The geo traffic distribution data"
+      },
+      "StatisticsModelError3XxChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed 3XX error responses chart data"
+      },
+      "StatisticsModelError4XxChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed 4XX error responses chart data"
+      },
+      "StatisticsModelError5XxChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "description": "The constructed 5XX error responses chart data"
+      },
+      "DnsZoneStatisticsModelQueriesServedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "DnsZoneStatisticsModelNormalQueriesServedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "DnsZoneStatisticsModelSmartQueriesServedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "DnsZoneStatisticsModelQueriesByTypeChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "BillingModelBillingHistoryChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed billing history chart data"
+      },
+      "BillingAffiliateDetailsModelAffiliateClicksChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed affiliate click history chart data"
+      },
+      "BillingAffiliateDetailsModelAffiliateSignupsChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed affiliate signup history chart data"
+      },
+      "BillingAffiliateDetailsModelAffiliateConversionsChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "The constructed affiliate conversion history chart data"
+      },
+      "VideoHeatmapModelHeatmapProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "description": "Timeline heatmap as segment-index to intensity (0\u2013100). Keys represent consecutive segments from the start of the video; values are normalized so 100 equals the most\u2011watched segment. Missing segments imply 0."
+      },
+      "VideoStatisticsModelViewsChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Shows the number of playback starts over time, with each data point representing the count of view starts in the corresponding UTC interval (hourly or daily). It is available at both the library level (aggregated across all videos) and the video level (for a single video). A playback start is counted once per viewer session per video and empty intervals are shown as zero."
+      },
+      "VideoStatisticsModelWatchTimeChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Shows the cumulative time viewers spent watching over time, with each data point representing total watch time in the corresponding UTC interval (hourly or daily). It is available at both the library level (aggregated across all videos) and the video level (for a single video). Rewatches and repeated visits add to the total and empty intervals are shown as zero."
+      },
+      "VideoStatisticsModelCountryViewCountsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Shows the total number of playback starts by country for the selected time range. It is available at both the library level (aggregated across all videos) and the video level (for a single video). Each country\u2019s value reflects unique playback starts per viewer session based on IP geolocation at playback start."
+      },
+      "VideoStatisticsModelCountryWatchTimeProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Shows the total watch time by country for the selected time range. It is available at both the library level (aggregated across all videos) and the video level (for a single video). Values reflect cumulative viewing time (rewatches and repeated visits add to the total) based on IP geolocation at playback start."
+      },
+      "FetchVideoRequestHeadersProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "The headers that will be sent along with the fetch request."
+      },
+      "VideoStorageSizeModelEncodedProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/CodecRenditionSizeModel"
+        }
+      },
       "AcceptedResultValue": {
         "type": "object"
       },
       "AcceptedResultFormattersItem": {
         "type": "object"
       },
+      "ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined."
+      },
+      "ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ApiGuardianEndpointActivity"
+        }
+      },
+      "ApiGuardianMetricsOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ApiGuardianEndpointActivity"
+        }
+      },
+      "CreateShieldZoneRequestAccessListsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/AccessListAction"
+        }
+      },
+      "EventGroupKeyProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "\u0022The group key: each requested groupBy dimension mapped to its value.\u0022"
+      },
+      "EventGroupContextProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/EventGroupContextPropertyAdditionalProperties"
+        },
+        "description": "\u0022Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),\nand features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.\u0022"
+      },
       "EventRowLog": {
         "type": "object",
         "description": "The full request context for the event (JSON object)."
       },
+      "EventRowFieldsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "Resolved dimension values for the event (e.g. ip, ruleId, url, ja4)."
+      },
+      "OverviewMetricMetricsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/OverviewMetricMetricsPropertyAdditionalProperties"
+        }
+      },
+      "OverviewMetricTotalsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
       "ProblemDetailsAdditionalProperties": {
         "type": "object"
+      },
+      "RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/IndividualRatelimit"
+        }
+      },
+      "ShieldZoneBotDetectionMetricsOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/BotDetectionData"
+        }
+      },
+      "ShieldZoneMetricsOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ShieldOverview"
+        }
+      },
+      "ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/DDoS"
+        }
+      },
+      "ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/Ratelimit"
+        }
+      },
+      "ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/BotDetectionData"
+        }
+      },
+      "ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/AccessList"
+        }
+      },
+      "ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/UploadScanning"
+        }
+      },
+      "ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ApiGuardianEndpointActivity"
+        }
+      },
+      "ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ShieldZoneRatelimit"
+        }
+      },
+      "ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/UploadScanning"
+        }
+      },
+      "TriggeredRuleItemTopTargetedUrlsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "WafRuleMetricsOverviewPastTwentyEightDaysProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/WafRule"
+        }
+      },
+      "EdgeScriptStatisticsModelRequestsServedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "EdgeScriptStatisticsModelAverageCpuTimeChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "EdgeScriptStatisticsModelTotalCpuTimeChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
       },
       "OverviewLatencyChartProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "number",
           "format": "double"
+        }
+      },
+      "OverviewPodOutboundTrafficChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64",
+          "nullable": true
         }
       },
       "OverviewPodVolumesUtilizationPercentageProperty": {
@@ -38410,6 +38963,12 @@
         "additionalProperties": {
           "type": "number",
           "format": "double"
+        }
+      },
+      "UpdateRegionSettingsRequestNodeSelectorsProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
         }
       },
       "UsageSummaryLatencyChartProperty": {
@@ -38513,6 +39072,16 @@
         "type": "object",
         "additionalProperties": {
           "type": "string"
+        }
+      },
+      "EventGroupContextPropertyAdditionalProperties": {
+        "type": "object"
+      },
+      "OverviewMetricMetricsPropertyAdditionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
         }
       },
       "StatisticsVolumesSplitUsageChartPropertyAdditionalProperties": {

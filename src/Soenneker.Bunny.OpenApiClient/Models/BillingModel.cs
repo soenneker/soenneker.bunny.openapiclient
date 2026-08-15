@@ -57,10 +57,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed billing history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart? BillingHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty? BillingHistoryChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart BillingHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty BillingHistoryChart { get; set; }
 #endif
         /// <summary>The list of billing records for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -276,7 +276,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "AvailableBalance", n => { AvailableBalance = n.GetDoubleValue(); } },
                 { "Balance", n => { Balance = n.GetDoubleValue(); } },
                 { "BillingEnabled", n => { BillingEnabled = n.GetBoolValue(); } },
-                { "BillingHistoryChart", n => { BillingHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart.CreateFromDiscriminatorValue); } },
+                { "BillingHistoryChart", n => { BillingHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty.CreateFromDiscriminatorValue); } },
                 { "BillingRecords", n => { BillingRecords = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>(global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "CouponBalance", n => { CouponBalance = n.GetDecimalValue(); } },
                 { "DrmBaseMonthlyPrice", n => { DrmBaseMonthlyPrice = n.GetDecimalValue(); } },
@@ -354,7 +354,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("AvailableBalance", AvailableBalance);
             writer.WriteDoubleValue("Balance", Balance);
             writer.WriteBoolValue("BillingEnabled", BillingEnabled);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChart>("BillingHistoryChart", BillingHistoryChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty>("BillingHistoryChart", BillingHistoryChart);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>("BillingRecords", BillingRecords);
             writer.WriteDecimalValue("CouponBalance", CouponBalance);
             writer.WriteDecimalValue("DrmBaseMonthlyPrice", DrmBaseMonthlyPrice);

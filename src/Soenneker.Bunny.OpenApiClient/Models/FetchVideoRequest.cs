@@ -15,10 +15,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The headers that will be sent along with the fetch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders? Headers { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty? Headers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders Headers { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty Headers { get; set; }
 #endif
         /// <summary>The title that will be set to video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -54,7 +54,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders>(global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty>(global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -66,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty>("headers", Headers);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("url", Url);
         }

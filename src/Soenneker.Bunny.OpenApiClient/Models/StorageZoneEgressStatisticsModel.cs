@@ -15,50 +15,50 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Download traffic served over FTP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChart? FtpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty? FtpEgressChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChart FtpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty FtpEgressChart { get; set; }
 #endif
         /// <summary>Total download traffic over FTP</summary>
         public long? FtpEgressTotal { get; set; }
         /// <summary>Download traffic served over HTTP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChart? HttpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty? HttpEgressChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChart HttpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty HttpEgressChart { get; set; }
 #endif
         /// <summary>Total download traffic over HTTP</summary>
         public long? HttpEgressTotal { get; set; }
         /// <summary>Download traffic served over S3</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChart? S3EgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty? S3EgressChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChart S3EgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty S3EgressChart { get; set; }
 #endif
         /// <summary>Total download traffic over S3</summary>
         public long? S3EgressTotal { get; set; }
         /// <summary>Download traffic served over presigned S3 URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChart? S3PresignedEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty? S3PresignedEgressChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChart S3PresignedEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty S3PresignedEgressChart { get; set; }
 #endif
         /// <summary>Total download traffic over presigned S3 URLs</summary>
         public long? S3PresignedEgressTotal { get; set; }
         /// <summary>Download traffic served over SFTP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChart? SftpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty? SftpEgressChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChart SftpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty SftpEgressChart { get; set; }
 #endif
         /// <summary>Total download traffic over SFTP</summary>
         public long? SftpEgressTotal { get; set; }
@@ -67,10 +67,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Total download traffic across all protocols</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChart? TotalEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty? TotalEgressChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChart TotalEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty TotalEgressChart { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -90,18 +90,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "FtpEgressChart", n => { FtpEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChart.CreateFromDiscriminatorValue); } },
+                { "FtpEgressChart", n => { FtpEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty.CreateFromDiscriminatorValue); } },
                 { "FtpEgressTotal", n => { FtpEgressTotal = n.GetLongValue(); } },
-                { "HttpEgressChart", n => { HttpEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChart.CreateFromDiscriminatorValue); } },
+                { "HttpEgressChart", n => { HttpEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty.CreateFromDiscriminatorValue); } },
                 { "HttpEgressTotal", n => { HttpEgressTotal = n.GetLongValue(); } },
-                { "S3EgressChart", n => { S3EgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChart.CreateFromDiscriminatorValue); } },
+                { "S3EgressChart", n => { S3EgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty.CreateFromDiscriminatorValue); } },
                 { "S3EgressTotal", n => { S3EgressTotal = n.GetLongValue(); } },
-                { "S3PresignedEgressChart", n => { S3PresignedEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChart.CreateFromDiscriminatorValue); } },
+                { "S3PresignedEgressChart", n => { S3PresignedEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty.CreateFromDiscriminatorValue); } },
                 { "S3PresignedEgressTotal", n => { S3PresignedEgressTotal = n.GetLongValue(); } },
-                { "SftpEgressChart", n => { SftpEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChart.CreateFromDiscriminatorValue); } },
+                { "SftpEgressChart", n => { SftpEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty.CreateFromDiscriminatorValue); } },
                 { "SftpEgressTotal", n => { SftpEgressTotal = n.GetLongValue(); } },
                 { "TotalEgress", n => { TotalEgress = n.GetLongValue(); } },
-                { "TotalEgressChart", n => { TotalEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChart.CreateFromDiscriminatorValue); } },
+                { "TotalEgressChart", n => { TotalEgressChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -111,18 +111,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChart>("FtpEgressChart", FtpEgressChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty>("FtpEgressChart", FtpEgressChart);
             writer.WriteLongValue("FtpEgressTotal", FtpEgressTotal);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChart>("HttpEgressChart", HttpEgressChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty>("HttpEgressChart", HttpEgressChart);
             writer.WriteLongValue("HttpEgressTotal", HttpEgressTotal);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChart>("S3EgressChart", S3EgressChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty>("S3EgressChart", S3EgressChart);
             writer.WriteLongValue("S3EgressTotal", S3EgressTotal);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChart>("S3PresignedEgressChart", S3PresignedEgressChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty>("S3PresignedEgressChart", S3PresignedEgressChart);
             writer.WriteLongValue("S3PresignedEgressTotal", S3PresignedEgressTotal);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChart>("SftpEgressChart", SftpEgressChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty>("SftpEgressChart", SftpEgressChart);
             writer.WriteLongValue("SftpEgressTotal", SftpEgressTotal);
             writer.WriteLongValue("TotalEgress", TotalEgress);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChart>("TotalEgressChart", TotalEgressChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty>("TotalEgressChart", TotalEgressChart);
         }
     }
 }

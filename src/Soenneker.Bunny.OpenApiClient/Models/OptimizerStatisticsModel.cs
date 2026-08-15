@@ -15,10 +15,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Average compression chart of the responses</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChart? AverageCompressionChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty? AverageCompressionChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChart AverageCompressionChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty AverageCompressionChart { get; set; }
 #endif
         /// <summary>The average compression ratio of CDN responses</summary>
         public double? AverageCompressionRatio { get; set; }
@@ -27,18 +27,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of saved traffic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChart? AverageProcessingTimeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty? AverageProcessingTimeChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChart AverageProcessingTimeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty AverageProcessingTimeChart { get; set; }
 #endif
         /// <summary>The constructed chart of optimized requests</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChart? RequestsOptimizedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty? RequestsOptimizedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChart RequestsOptimizedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty RequestsOptimizedChart { get; set; }
 #endif
         /// <summary>The total number of optimized requests</summary>
         public double? TotalRequestsOptimized { get; set; }
@@ -47,10 +47,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of saved traffic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChart? TrafficSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty? TrafficSavedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChart TrafficSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty TrafficSavedChart { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -70,14 +70,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AverageCompressionChart", n => { AverageCompressionChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChart>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChart.CreateFromDiscriminatorValue); } },
+                { "AverageCompressionChart", n => { AverageCompressionChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty.CreateFromDiscriminatorValue); } },
                 { "AverageCompressionRatio", n => { AverageCompressionRatio = n.GetDoubleValue(); } },
                 { "AverageProcessingTime", n => { AverageProcessingTime = n.GetDoubleValue(); } },
-                { "AverageProcessingTimeChart", n => { AverageProcessingTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChart>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChart.CreateFromDiscriminatorValue); } },
-                { "RequestsOptimizedChart", n => { RequestsOptimizedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChart>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChart.CreateFromDiscriminatorValue); } },
+                { "AverageProcessingTimeChart", n => { AverageProcessingTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty.CreateFromDiscriminatorValue); } },
+                { "RequestsOptimizedChart", n => { RequestsOptimizedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty.CreateFromDiscriminatorValue); } },
                 { "TotalRequestsOptimized", n => { TotalRequestsOptimized = n.GetDoubleValue(); } },
                 { "TotalTrafficSaved", n => { TotalTrafficSaved = n.GetDoubleValue(); } },
-                { "TrafficSavedChart", n => { TrafficSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChart>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChart.CreateFromDiscriminatorValue); } },
+                { "TrafficSavedChart", n => { TrafficSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,14 +87,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChart>("AverageCompressionChart", AverageCompressionChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty>("AverageCompressionChart", AverageCompressionChart);
             writer.WriteDoubleValue("AverageCompressionRatio", AverageCompressionRatio);
             writer.WriteDoubleValue("AverageProcessingTime", AverageProcessingTime);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChart>("AverageProcessingTimeChart", AverageProcessingTimeChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChart>("RequestsOptimizedChart", RequestsOptimizedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty>("AverageProcessingTimeChart", AverageProcessingTimeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty>("RequestsOptimizedChart", RequestsOptimizedChart);
             writer.WriteDoubleValue("TotalRequestsOptimized", TotalRequestsOptimized);
             writer.WriteDoubleValue("TotalTrafficSaved", TotalTrafficSaved);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChart>("TrafficSavedChart", TrafficSavedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty>("TrafficSavedChart", TrafficSavedChart);
         }
     }
 }

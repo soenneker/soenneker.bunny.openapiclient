@@ -16,10 +16,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>&quot;Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),and features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext? Context { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext Context { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty Context { get; set; }
 #endif
         /// <summary>Number of events in the group.</summary>
         public long? Count { get; set; }
@@ -28,10 +28,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>&quot;The group key: each requested groupBy dimension mapped to its value.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey? Key { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty? Key { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey Key { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty Key { get; set; }
 #endif
         /// <summary>Most recent event time in the group (Unix time in milliseconds, UTC).</summary>
         public long? LastSeen { get; set; }
@@ -61,10 +61,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty.CreateFromDiscriminatorValue); } },
                 { "count", n => { Count = n.GetLongValue(); } },
                 { "firstSeen", n => { FirstSeen = n.GetLongValue(); } },
-                { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey.CreateFromDiscriminatorValue); } },
+                { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty.CreateFromDiscriminatorValue); } },
                 { "lastSeen", n => { LastSeen = n.GetLongValue(); } },
                 { "sparkline", n => { Sparkline = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
             };
@@ -76,10 +76,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty>("context", Context);
             writer.WriteLongValue("count", Count);
             writer.WriteLongValue("firstSeen", FirstSeen);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey>("key", Key);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty>("key", Key);
             writer.WriteLongValue("lastSeen", LastSeen);
             writer.WriteCollectionOfPrimitiveValues<long?>("sparkline", Sparkline);
         }

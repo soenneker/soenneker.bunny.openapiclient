@@ -17,26 +17,26 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed affiliate click history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChart? AffiliateClicksChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty? AffiliateClicksChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChart AffiliateClicksChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty AffiliateClicksChart { get; set; }
 #endif
         /// <summary>The constructed affiliate conversion history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChart? AffiliateConversionsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty? AffiliateConversionsChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChart AffiliateConversionsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty AffiliateConversionsChart { get; set; }
 #endif
         /// <summary>The constructed affiliate signup history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChart? AffiliateSignupsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty? AffiliateSignupsChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChart AffiliateSignupsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty AffiliateSignupsChart { get; set; }
 #endif
         /// <summary>The affiliate URL for the currently authenticated user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,9 +69,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AffiliateBalance", n => { AffiliateBalance = n.GetDecimalValue(); } },
-                { "AffiliateClicksChart", n => { AffiliateClicksChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChart>(global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChart.CreateFromDiscriminatorValue); } },
-                { "AffiliateConversionsChart", n => { AffiliateConversionsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChart>(global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChart.CreateFromDiscriminatorValue); } },
-                { "AffiliateSignupsChart", n => { AffiliateSignupsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChart>(global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChart.CreateFromDiscriminatorValue); } },
+                { "AffiliateClicksChart", n => { AffiliateClicksChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty.CreateFromDiscriminatorValue); } },
+                { "AffiliateConversionsChart", n => { AffiliateConversionsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty.CreateFromDiscriminatorValue); } },
+                { "AffiliateSignupsChart", n => { AffiliateSignupsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty.CreateFromDiscriminatorValue); } },
                 { "AffiliateUrl", n => { AffiliateUrl = n.GetStringValue(); } },
                 { "ClaimBonusPercentage", n => { ClaimBonusPercentage = n.GetDecimalValue(); } },
                 { "MinimumPayoutAmount", n => { MinimumPayoutAmount = n.GetDecimalValue(); } },
@@ -85,9 +85,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDecimalValue("AffiliateBalance", AffiliateBalance);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChart>("AffiliateClicksChart", AffiliateClicksChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChart>("AffiliateConversionsChart", AffiliateConversionsChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChart>("AffiliateSignupsChart", AffiliateSignupsChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty>("AffiliateClicksChart", AffiliateClicksChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty>("AffiliateConversionsChart", AffiliateConversionsChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty>("AffiliateSignupsChart", AffiliateSignupsChart);
             writer.WriteStringValue("AffiliateUrl", AffiliateUrl);
             writer.WriteDecimalValue("ClaimBonusPercentage", ClaimBonusPercentage);
             writer.WriteDecimalValue("MinimumPayoutAmount", MinimumPayoutAmount);

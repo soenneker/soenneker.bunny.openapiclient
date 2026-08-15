@@ -15,18 +15,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of requests retried</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart? RequestsRetriedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty? RequestsRetriedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart RequestsRetriedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty RequestsRetriedChart { get; set; }
 #endif
         /// <summary>The constructed chart of requests saved</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart? RequestsSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty? RequestsSavedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart RequestsSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty RequestsSavedChart { get; set; }
 #endif
         /// <summary>The total number of retried requests</summary>
         public double? TotalRequestsRetried { get; set; }
@@ -50,8 +50,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "RequestsRetriedChart", n => { RequestsRetriedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart.CreateFromDiscriminatorValue); } },
-                { "RequestsSavedChart", n => { RequestsSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart.CreateFromDiscriminatorValue); } },
+                { "RequestsRetriedChart", n => { RequestsRetriedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty.CreateFromDiscriminatorValue); } },
+                { "RequestsSavedChart", n => { RequestsSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty.CreateFromDiscriminatorValue); } },
                 { "TotalRequestsRetried", n => { TotalRequestsRetried = n.GetDoubleValue(); } },
                 { "TotalRequestsSaved", n => { TotalRequestsSaved = n.GetDoubleValue(); } },
             };
@@ -63,8 +63,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart>("RequestsRetriedChart", RequestsRetriedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart>("RequestsSavedChart", RequestsSavedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty>("RequestsRetriedChart", RequestsRetriedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty>("RequestsSavedChart", RequestsSavedChart);
             writer.WriteDoubleValue("TotalRequestsRetried", TotalRequestsRetried);
             writer.WriteDoubleValue("TotalRequestsSaved", TotalRequestsSaved);
         }

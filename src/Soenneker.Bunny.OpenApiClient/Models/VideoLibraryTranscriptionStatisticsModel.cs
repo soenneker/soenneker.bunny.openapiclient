@@ -17,10 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The TranscriptionSecondsChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChart? TranscriptionSecondsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty? TranscriptionSecondsChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChart TranscriptionSecondsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty TranscriptionSecondsChart { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +41,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "TotalTranscriptionSeconds", n => { TotalTranscriptionSeconds = n.GetLongValue(); } },
-                { "TranscriptionSecondsChart", n => { TranscriptionSecondsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChart.CreateFromDiscriminatorValue); } },
+                { "TranscriptionSecondsChart", n => { TranscriptionSecondsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("TotalTranscriptionSeconds", TotalTranscriptionSeconds);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChart>("TranscriptionSecondsChart", TranscriptionSecondsChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty>("TranscriptionSecondsChart", TranscriptionSecondsChart);
         }
     }
 }

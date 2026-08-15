@@ -25,10 +25,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ratelimitOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDays? RatelimitOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty? RatelimitOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDays RatelimitOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty RatelimitOverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +50,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "overview", n => { Overview = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit.CreateFromDiscriminatorValue); } },
                 { "ratelimitId", n => { RatelimitId = n.GetLongValue(); } },
-                { "ratelimitOverviewPastTwentyEightDays", n => { RatelimitOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDays>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDays.CreateFromDiscriminatorValue); } },
+                { "ratelimitOverviewPastTwentyEightDays", n => { RatelimitOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit>("overview", Overview);
             writer.WriteLongValue("ratelimitId", RatelimitId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDays>("ratelimitOverviewPastTwentyEightDays", RatelimitOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty>("ratelimitOverviewPastTwentyEightDays", RatelimitOverviewPastTwentyEightDays);
         }
     }
 }

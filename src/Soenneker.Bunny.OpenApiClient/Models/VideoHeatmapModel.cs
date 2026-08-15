@@ -15,10 +15,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Timeline heatmap as segment-index to intensity (0–100). Keys represent consecutive segments from the start of the video; values are normalized so 100 equals the most‑watched segment. Missing segments imply 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmap? Heatmap { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty? Heatmap { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmap Heatmap { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty Heatmap { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +38,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "heatmap", n => { Heatmap = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmap>(global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmap.CreateFromDiscriminatorValue); } },
+                { "heatmap", n => { Heatmap = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty>(global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -48,7 +48,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmap>("heatmap", Heatmap);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty>("heatmap", Heatmap);
         }
     }
 }

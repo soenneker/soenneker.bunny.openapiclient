@@ -15,18 +15,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of origin shield concurrent requests</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChart? ConcurrentRequestsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty? ConcurrentRequestsChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChart ConcurrentRequestsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty ConcurrentRequestsChart { get; set; }
 #endif
         /// <summary>The constructed chart of origin shield requests chart</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChart? QueuedRequestsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty? QueuedRequestsChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChart QueuedRequestsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty QueuedRequestsChart { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,8 +46,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ConcurrentRequestsChart", n => { ConcurrentRequestsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChart>(global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChart.CreateFromDiscriminatorValue); } },
-                { "QueuedRequestsChart", n => { QueuedRequestsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChart>(global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChart.CreateFromDiscriminatorValue); } },
+                { "ConcurrentRequestsChart", n => { ConcurrentRequestsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty.CreateFromDiscriminatorValue); } },
+                { "QueuedRequestsChart", n => { QueuedRequestsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,8 +57,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChart>("ConcurrentRequestsChart", ConcurrentRequestsChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChart>("QueuedRequestsChart", QueuedRequestsChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty>("ConcurrentRequestsChart", ConcurrentRequestsChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty>("QueuedRequestsChart", QueuedRequestsChart);
         }
     }
 }

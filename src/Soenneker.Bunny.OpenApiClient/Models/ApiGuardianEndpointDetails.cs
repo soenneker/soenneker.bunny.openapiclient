@@ -82,10 +82,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml? ResponseBodySchemasYaml { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty? ResponseBodySchemasYaml { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml ResponseBodySchemasYaml { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty ResponseBodySchemasYaml { get; set; }
 #endif
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get; set; }
@@ -130,7 +130,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "requestBodySchemaYaml", n => { RequestBodySchemaYaml = n.GetStringValue(); } },
                 { "requestMethod", n => { RequestMethod = n.GetStringValue(); } },
                 { "requestPath", n => { RequestPath = n.GetStringValue(); } },
-                { "responseBodySchemasYaml", n => { ResponseBodySchemasYaml = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml.CreateFromDiscriminatorValue); } },
+                { "responseBodySchemasYaml", n => { ResponseBodySchemasYaml = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty.CreateFromDiscriminatorValue); } },
                 { "shieldZoneId", n => { ShieldZoneId = n.GetIntValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "validateAuthorization", n => { ValidateAuthorization = n.GetBoolValue(); } },
@@ -160,7 +160,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("requestBodySchemaYaml", RequestBodySchemaYaml);
             writer.WriteStringValue("requestMethod", RequestMethod);
             writer.WriteStringValue("requestPath", RequestPath);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml>("responseBodySchemasYaml", ResponseBodySchemasYaml);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty>("responseBodySchemasYaml", ResponseBodySchemasYaml);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteBoolValue("validateAuthorization", ValidateAuthorization);

@@ -15,10 +15,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The LicensesIssuedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart? LicensesIssuedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty? LicensesIssuedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart LicensesIssuedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty LicensesIssuedChart { get; set; }
 #endif
         /// <summary>The TotalLicensesIssued property</summary>
         public long? TotalLicensesIssued { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "LicensesIssuedChart", n => { LicensesIssuedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart.CreateFromDiscriminatorValue); } },
+                { "LicensesIssuedChart", n => { LicensesIssuedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty.CreateFromDiscriminatorValue); } },
                 { "TotalLicensesIssued", n => { TotalLicensesIssued = n.GetLongValue(); } },
             };
         }
@@ -51,7 +51,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart>("LicensesIssuedChart", LicensesIssuedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty>("LicensesIssuedChart", LicensesIssuedChart);
             writer.WriteLongValue("TotalLicensesIssued", TotalLicensesIssued);
         }
     }

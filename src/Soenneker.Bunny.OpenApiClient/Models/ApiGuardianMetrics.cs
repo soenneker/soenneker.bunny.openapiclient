@@ -15,10 +15,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDays? OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty? OverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDays OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty OverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The totalBlockedRequests property</summary>
         public long? TotalBlockedRequests { get; set; }
@@ -50,7 +50,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDays>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDays.CreateFromDiscriminatorValue); } },
+                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
                 { "totalBlockedRequests", n => { TotalBlockedRequests = n.GetLongValue(); } },
                 { "totalFailedAuthenticationEnforcement", n => { TotalFailedAuthenticationEnforcement = n.GetLongValue(); } },
                 { "totalFailedRequestValidation", n => { TotalFailedRequestValidation = n.GetLongValue(); } },
@@ -66,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDays>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
             writer.WriteLongValue("totalBlockedRequests", TotalBlockedRequests);
             writer.WriteLongValue("totalFailedAuthenticationEnforcement", TotalFailedAuthenticationEnforcement);
             writer.WriteLongValue("totalFailedRequestValidation", TotalFailedRequestValidation);
