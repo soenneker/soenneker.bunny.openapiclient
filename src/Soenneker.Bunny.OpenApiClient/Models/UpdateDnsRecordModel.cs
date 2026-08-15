@@ -59,10 +59,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The MonitorType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsMonitoringTypeWrapper2? MonitorType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelMonitorType? MonitorType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsMonitoringTypeWrapper2 MonitorType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelMonitorType MonitorType { get; set; }
 #endif
         /// <summary>The Name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The SmartRoutingType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsSmartRoutingTypeWrapper2? SmartRoutingType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelSmartRoutingType? SmartRoutingType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsSmartRoutingTypeWrapper2 SmartRoutingType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelSmartRoutingType SmartRoutingType { get; set; }
 #endif
         /// <summary>The Tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -101,10 +101,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordTypesWrapper2? Type { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelType? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordTypesWrapper2 Type { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelType Type { get; set; }
 #endif
         /// <summary>The Value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -144,16 +144,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "GeolocationLongitude", n => { GeolocationLongitude = n.GetDoubleValue(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
                 { "LatencyZone", n => { LatencyZone = n.GetStringValue(); } },
-                { "MonitorType", n => { MonitorType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsMonitoringTypeWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsMonitoringTypeWrapper2.CreateFromDiscriminatorValue); } },
+                { "MonitorType", n => { MonitorType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelMonitorType>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelMonitorType.CreateFromDiscriminatorValue); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "Port", n => { Port = n.GetIntValue(); } },
                 { "Priority", n => { Priority = n.GetIntValue(); } },
                 { "PullZoneId", n => { PullZoneId = n.GetLongValue(); } },
                 { "ScriptId", n => { ScriptId = n.GetLongValue(); } },
-                { "SmartRoutingType", n => { SmartRoutingType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsSmartRoutingTypeWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsSmartRoutingTypeWrapper2.CreateFromDiscriminatorValue); } },
+                { "SmartRoutingType", n => { SmartRoutingType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelSmartRoutingType>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelSmartRoutingType.CreateFromDiscriminatorValue); } },
                 { "Tag", n => { Tag = n.GetStringValue(); } },
                 { "Ttl", n => { Ttl = n.GetIntValue(); } },
-                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordTypesWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordTypesWrapper2.CreateFromDiscriminatorValue); } },
+                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelType>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelType.CreateFromDiscriminatorValue); } },
                 { "Value", n => { Value = n.GetStringValue(); } },
                 { "Weight", n => { Weight = n.GetIntValue(); } },
             };
@@ -175,16 +175,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("GeolocationLongitude", GeolocationLongitude);
             writer.WriteLongValue("Id", Id);
             writer.WriteStringValue("LatencyZone", LatencyZone);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsMonitoringTypeWrapper2>("MonitorType", MonitorType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelMonitorType>("MonitorType", MonitorType);
             writer.WriteStringValue("Name", Name);
             writer.WriteIntValue("Port", Port);
             writer.WriteIntValue("Priority", Priority);
             writer.WriteLongValue("PullZoneId", PullZoneId);
             writer.WriteLongValue("ScriptId", ScriptId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsSmartRoutingTypeWrapper2>("SmartRoutingType", SmartRoutingType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelSmartRoutingType>("SmartRoutingType", SmartRoutingType);
             writer.WriteStringValue("Tag", Tag);
             writer.WriteIntValue("Ttl", Ttl);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordTypesWrapper2>("Type", Type);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsRecordModelType>("Type", Type);
             writer.WriteStringValue("Value", Value);
             writer.WriteIntValue("Weight", Weight);
         }

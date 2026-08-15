@@ -29,14 +29,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Provider { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelAppleFairPlayDrm"/> and sets the default values.
         /// </summary>
@@ -66,7 +58,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "CertificateId", n => { CertificateId = n.GetLongValue(); } },
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "Provider", n => { Provider = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -80,7 +71,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("CertificateId", CertificateId);
             writer.WriteBoolValue("Enabled", Enabled);
             writer.WriteStringValue("Provider", Provider);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -135,7 +135,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus SmartGenerateFeaturesStatus { get; set; }
 #endif
-        /// <summary>&quot;Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.&quot;</summary>
+        /// <summary>Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? SmartGenerateStatus { get; set; }
@@ -196,14 +196,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #nullable restore
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel> TranscodingMessages { get; set; }
-#endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
 #endif
         /// <summary>The ID of the video library that the video belongs to</summary>
         public long? VideoLibraryId { get; set; }
@@ -270,7 +262,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "totalWatchTime", n => { TotalWatchTime = n.GetLongValue(); } },
                 { "transcodingMessages", n => { TranscodingMessages = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel>(global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "videoLibraryId", n => { VideoLibraryId = n.GetLongValue(); } },
                 { "views", n => { Views = n.GetLongValue(); } },
                 { "width", n => { Width = n.GetIntValue(); } },
@@ -317,7 +308,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("title", Title);
             writer.WriteLongValue("totalWatchTime", TotalWatchTime);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.TranscodingMessageModel>("transcodingMessages", TranscodingMessages);
-            writer.WriteStringValue("type", Type);
             writer.WriteLongValue("videoLibraryId", VideoLibraryId);
             writer.WriteLongValue("views", Views);
             writer.WriteIntValue("width", Width);

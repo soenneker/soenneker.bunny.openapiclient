@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The code of the main storage zone region (Possible values: DE, NY, LA, SG)&quot;</summary>
+        /// <summary>The code of the main storage zone region (Possible values: DE, NY, LA, SG)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Region { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Region { get; set; }
 #endif
-        /// <summary>&quot;The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)&quot;</summary>
+        /// <summary>The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ReplicationRegions { get; set; }
@@ -39,18 +39,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Storage Zone S3 support type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper2? StorageZoneType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddStorageZoneType? StorageZoneType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper2 StorageZoneType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddStorageZoneType StorageZoneType { get; set; }
 #endif
         /// <summary>Determines the storage zone tier that will be storing the data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneTierWrapper2? ZoneTier { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddZoneTier? ZoneTier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneTierWrapper2 ZoneTier { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddZoneTier ZoneTier { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -73,8 +73,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "Region", n => { Region = n.GetStringValue(); } },
                 { "ReplicationRegions", n => { ReplicationRegions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "StorageZoneType", n => { StorageZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper2.CreateFromDiscriminatorValue); } },
-                { "ZoneTier", n => { ZoneTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneTierWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneTierWrapper2.CreateFromDiscriminatorValue); } },
+                { "StorageZoneType", n => { StorageZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddStorageZoneType>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddStorageZoneType.CreateFromDiscriminatorValue); } },
+                { "ZoneTier", n => { ZoneTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddZoneTier>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddZoneTier.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -87,8 +87,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Name", Name);
             writer.WriteStringValue("Region", Region);
             writer.WriteCollectionOfPrimitiveValues<string>("ReplicationRegions", ReplicationRegions);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneS3TypeWrapper2>("StorageZoneType", StorageZoneType);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneTierWrapper2>("ZoneTier", ZoneTier);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddStorageZoneType>("StorageZoneType", StorageZoneType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAddZoneTier>("ZoneTier", ZoneTier);
         }
     }
 }

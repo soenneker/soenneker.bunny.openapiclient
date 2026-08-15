@@ -99,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZones
             /// <summary>(Optional) The page number of results.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>&quot;(Optional) (Default: 10) The amount of results returned on one page.&quot;</summary>
+            /// <summary>(Optional) (Default: 10) The amount of results returned on one page.</summary>
             [QueryParameter("perPage")]
             public int? PerPage { get; set; }
         }

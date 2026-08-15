@@ -18,7 +18,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? AllowEarlyPlay { get; set; }
         /// <summary>(Optional) Determines if requests without a referer should be blocked.</summary>
         public bool? BlockNoneReferrer { get; set; }
-        /// <summary>&quot;(Optional) Sets the enabled resolutions for the transcoding. At least one resolution should be enabled. Possible values: 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p&quot;</summary>
+        /// <summary>(Optional) Sets the enabled resolutions for the transcoding. At least one resolution should be enabled. Possible values: 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EnabledResolutions { get; set; }
@@ -43,10 +43,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper2? EncodingTier { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier? EncodingTier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper2 EncodingTier { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier EncodingTier { get; set; }
 #endif
         /// <summary>(Optional) Determines whether JIT encoding should be used for the library. Supported in premium encoding only.</summary>
         public bool? JitEncodingEnabled { get; set; }
@@ -115,7 +115,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "EnableTranscribingMomentsGeneration", n => { EnableTranscribingMomentsGeneration = n.GetBoolValue(); } },
                 { "EnableTranscribingTitleGeneration", n => { EnableTranscribingTitleGeneration = n.GetBoolValue(); } },
                 { "EnabledResolutions", n => { EnabledResolutions = n.GetStringValue(); } },
-                { "EncodingTier", n => { EncodingTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper2.CreateFromDiscriminatorValue); } },
+                { "EncodingTier", n => { EncodingTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier.CreateFromDiscriminatorValue); } },
                 { "JitEncodingEnabled", n => { JitEncodingEnabled = n.GetBoolValue(); } },
                 { "KeepOriginalFiles", n => { KeepOriginalFiles = n.GetBoolValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
@@ -143,7 +143,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("EnableTranscribingDescriptionGeneration", EnableTranscribingDescriptionGeneration);
             writer.WriteBoolValue("EnableTranscribingMomentsGeneration", EnableTranscribingMomentsGeneration);
             writer.WriteBoolValue("EnableTranscribingTitleGeneration", EnableTranscribingTitleGeneration);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper2>("EncodingTier", EncodingTier);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier>("EncodingTier", EncodingTier);
             writer.WriteBoolValue("JitEncodingEnabled", JitEncodingEnabled);
             writer.WriteBoolValue("KeepOriginalFiles", KeepOriginalFiles);
             writer.WriteStringValue("Name", Name);

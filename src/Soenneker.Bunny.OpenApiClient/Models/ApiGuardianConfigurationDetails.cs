@@ -21,15 +21,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? ExecutionMode { get; set; }
         /// <summary>Whether API Guardian is enabled for this shield zone. When disabled, no requests are inspected.</summary>
         public bool? IsEnabled { get; set; }
-        /// <summary>&quot;Plan limit: maximum number of endpoints that can be defined in the specification.&quot;</summary>
+        /// <summary>Plan limit: maximum number of endpoints that can be defined in the specification.</summary>
         public int? MaxEndpoints { get; set; }
-        /// <summary>&quot;Plan limit: maximum number of properties a single schema object may declare.&quot;</summary>
+        /// <summary>Plan limit: maximum number of properties a single schema object may declare.</summary>
         public int? MaxFieldsPerType { get; set; }
-        /// <summary>&quot;Plan limit: maximum depth of nested `$ref`, `items`, and `properties` chains.&quot;</summary>
+        /// <summary>Plan limit: maximum depth of nested `$ref`, `items`, and `properties` chains.</summary>
         public int? MaxNestingDepth { get; set; }
-        /// <summary>&quot;Plan limit: combined character length of all `pattern` regex strings in the specification.&quot;</summary>
+        /// <summary>Plan limit: combined character length of all `pattern` regex strings in the specification.</summary>
         public int? MaxTotalRegexLength { get; set; }
-        /// <summary>&quot;Plan limit: combined node count across all `components/schemas` entries.&quot;</summary>
+        /// <summary>Plan limit: combined node count across all `components/schemas` entries.</summary>
         public int? MaxTotalSchemaNodes { get; set; }
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get; set; }

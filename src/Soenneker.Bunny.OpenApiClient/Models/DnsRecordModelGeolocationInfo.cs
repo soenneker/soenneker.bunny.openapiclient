@@ -34,14 +34,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? Latitude { get; set; }
         /// <summary>The Longitude property</summary>
         public double? Longitude { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModelGeolocationInfo"/> and sets the default values.
         /// </summary>
@@ -71,7 +63,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Country", n => { Country = n.GetStringValue(); } },
                 { "Latitude", n => { Latitude = n.GetDoubleValue(); } },
                 { "Longitude", n => { Longitude = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -85,7 +76,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Country", Country);
             writer.WriteDoubleValue("Latitude", Latitude);
             writer.WriteDoubleValue("Longitude", Longitude);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

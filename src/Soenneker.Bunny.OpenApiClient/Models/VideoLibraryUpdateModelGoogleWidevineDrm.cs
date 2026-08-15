@@ -20,21 +20,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper2? MinClientSecurityLevel { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel? MinClientSecurityLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper2 MinClientSecurityLevel { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel MinClientSecurityLevel { get; set; }
 #endif
         /// <summary>(Optional) Only allow audio and SD access to Widevine L3 clients</summary>
         public bool? SdOnlyForL3 { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGoogleWidevineDrm"/> and sets the default values.
         /// </summary>
@@ -61,9 +53,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper2>(global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper2.CreateFromDiscriminatorValue); } },
+                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel>(global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel.CreateFromDiscriminatorValue); } },
                 { "SdOnlyForL3", n => { SdOnlyForL3 = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -74,9 +65,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("Enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper2>("MinClientSecurityLevel", MinClientSecurityLevel);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel>("MinClientSecurityLevel", MinClientSecurityLevel);
             writer.WriteBoolValue("SdOnlyForL3", SdOnlyForL3);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

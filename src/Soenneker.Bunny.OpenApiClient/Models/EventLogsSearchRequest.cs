@@ -25,7 +25,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Window start as Unix time in milliseconds (UTC). Required.</summary>
         public long? From { get; set; }
-        /// <summary>&quot;Optional ordered dimensions to group by, e.g. [\&quot;ip\&quot;,\&quot;ja4\&quot;]. Omit for flat rows.Allowed: feature, ruleId, ip, ja4, ua, url, asn, country, action.&quot;</summary>
+        /// <summary>Optional ordered dimensions to group by, e.g. [&quot;ip&quot;,&quot;ja4&quot;]. Omit for flat rows.Allowed: feature, ruleId, ip, ja4, ua, url, asn, country, action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? GroupBy { get; set; }

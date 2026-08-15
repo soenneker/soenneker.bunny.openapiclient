@@ -48,14 +48,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string InstallCommand { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration"/> and sets the default values.
         /// </summary>
@@ -86,7 +78,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "CreateWorkflow", n => { CreateWorkflow = n.GetBoolValue(); } },
                 { "EntryFile", n => { EntryFile = n.GetStringValue(); } },
                 { "InstallCommand", n => { InstallCommand = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -101,7 +92,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("CreateWorkflow", CreateWorkflow);
             writer.WriteStringValue("EntryFile", EntryFile);
             writer.WriteStringValue("InstallCommand", InstallCommand);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

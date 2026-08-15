@@ -31,10 +31,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordTypeWrapper? Type { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType? Type { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordTypeWrapper Type { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType Type { get; set; }
 #endif
         /// <summary>The Value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Port", n => { Port = n.GetIntValue(); } },
                 { "Priority", n => { Priority = n.GetIntValue(); } },
                 { "Ttl", n => { Ttl = n.GetIntValue(); } },
-                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordTypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType.CreateFromDiscriminatorValue); } },
                 { "Value", n => { Value = n.GetStringValue(); } },
                 { "Weight", n => { Weight = n.GetIntValue(); } },
             };
@@ -86,7 +86,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("Port", Port);
             writer.WriteIntValue("Priority", Priority);
             writer.WriteIntValue("Ttl", Ttl);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordTypeWrapper>("Type", Type);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType>("Type", Type);
             writer.WriteStringValue("Value", Value);
             writer.WriteIntValue("Weight", Weight);
         }

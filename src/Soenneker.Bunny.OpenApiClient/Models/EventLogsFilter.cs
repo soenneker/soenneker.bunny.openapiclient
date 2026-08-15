@@ -13,7 +13,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventLogsFilter : IParsable
     {
-        /// <summary>&quot;Dimension to filter on: feature, ruleId, ip, ja4, ua, url, asn, country or action.&quot;</summary>
+        /// <summary>Dimension to filter on: feature, ruleId, ip, ja4, ua, url, asn, country or action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Field { get; set; }
@@ -21,7 +21,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Field { get; set; }
 #endif
-        /// <summary>&quot;Operator: eq, in, contains, cidr (ip only, IPv4/IPv6) or wildcard (&apos;*&apos; matches any run).&quot;</summary>
+        /// <summary>Operator: eq, in, contains, cidr (ip only, IPv4/IPv6) or wildcard (&apos;*&apos; matches any run).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Op { get; set; }

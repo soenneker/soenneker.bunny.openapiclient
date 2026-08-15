@@ -34,14 +34,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string TemplateUrl { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings"/> and sets the default values.
         /// </summary>
@@ -71,7 +63,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "Private", n => { Private = n.GetBoolValue(); } },
                 { "TemplateUrl", n => { TemplateUrl = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -85,7 +76,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Name", Name);
             writer.WriteBoolValue("Private", Private);
             writer.WriteStringValue("TemplateUrl", TemplateUrl);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

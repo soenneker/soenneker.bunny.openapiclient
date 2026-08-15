@@ -96,7 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             /// <summary>If set to true, no actual file manipulation will happen, only informational data will be returned</summary>
             [QueryParameter("dryRun")]
             public bool? DryRun { get; set; }
-            /// <summary>&quot;Outputs to clean. Supported values: hls, mp4, all&quot;</summary>
+            /// <summary>Outputs to clean. Supported values: hls, mp4, all</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("outputs")]

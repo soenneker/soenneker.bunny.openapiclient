@@ -34,14 +34,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? Previews { get; set; }
         /// <summary>The thumbnails property</summary>
         public long? Thumbnails { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data"/> and sets the default values.
         /// </summary>
@@ -74,7 +66,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "originals", n => { Originals = n.GetLongValue(); } },
                 { "previews", n => { Previews = n.GetLongValue(); } },
                 { "thumbnails", n => { Thumbnails = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -91,7 +82,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("originals", Originals);
             writer.WriteLongValue("previews", Previews);
             writer.WriteLongValue("thumbnails", Thumbnails);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

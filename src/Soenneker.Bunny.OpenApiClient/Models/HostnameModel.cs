@@ -31,18 +31,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The private key type to use for automatic certificates</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper3? CertificateKeyType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType? CertificateKeyType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper3 CertificateKeyType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType CertificateKeyType { get; set; }
 #endif
         /// <summary>The provisioned certificate type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CertificateProvisionTypeWrapper? CertificateProvisionType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType? CertificateProvisionType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CertificateProvisionTypeWrapper CertificateProvisionType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType CertificateProvisionType { get; set; }
 #endif
         /// <summary>Determines if the Force SSL feature is enabled</summary>
         public bool? ForceSSL { get; set; }
@@ -82,8 +82,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "Certificate", n => { Certificate = n.GetStringValue(); } },
                 { "CertificateKey", n => { CertificateKey = n.GetStringValue(); } },
-                { "CertificateKeyType", n => { CertificateKeyType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper3>(global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper3.CreateFromDiscriminatorValue); } },
-                { "CertificateProvisionType", n => { CertificateProvisionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CertificateProvisionTypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.CertificateProvisionTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "CertificateKeyType", n => { CertificateKeyType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType>(global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType.CreateFromDiscriminatorValue); } },
+                { "CertificateProvisionType", n => { CertificateProvisionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType>(global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType.CreateFromDiscriminatorValue); } },
                 { "ForceSSL", n => { ForceSSL = n.GetBoolValue(); } },
                 { "HasCertificate", n => { HasCertificate = n.GetBoolValue(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
@@ -101,8 +101,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Certificate", Certificate);
             writer.WriteStringValue("CertificateKey", CertificateKey);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyTypeWrapper3>("CertificateKeyType", CertificateKeyType);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CertificateProvisionTypeWrapper>("CertificateProvisionType", CertificateProvisionType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType>("CertificateKeyType", CertificateKeyType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType>("CertificateProvisionType", CertificateProvisionType);
             writer.WriteBoolValue("ForceSSL", ForceSSL);
             writer.WriteBoolValue("HasCertificate", HasCertificate);
             writer.WriteLongValue("Id", Id);

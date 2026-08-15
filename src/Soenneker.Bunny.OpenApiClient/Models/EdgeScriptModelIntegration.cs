@@ -32,14 +32,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings RepositorySettings { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptModelIntegration"/> and sets the default values.
         /// </summary>
@@ -68,7 +60,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "DeployConfiguration", n => { DeployConfiguration = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration>(global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration.CreateFromDiscriminatorValue); } },
                 { "IntegrationId", n => { IntegrationId = n.GetLongValue(); } },
                 { "RepositorySettings", n => { RepositorySettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings>(global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -81,7 +72,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration>("DeployConfiguration", DeployConfiguration);
             writer.WriteLongValue("IntegrationId", IntegrationId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings>("RepositorySettings", RepositorySettings);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

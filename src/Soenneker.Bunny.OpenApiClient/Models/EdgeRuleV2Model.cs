@@ -39,10 +39,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The action type of the edge rule. ForceSSL = 0, Redirect = 1, OriginUrl = 2, OverrideCacheTime = 3, BlockRequest = 4, SetResponseHeader = 5, SetRequestHeader = 6, ForceDownload = 7, DisableTokenAuthentication = 8, EnableTokenAuthentication = 9, OverrideCacheTimePublic = 10, IgnoreQueryString = 11, DisableOptimizer = 12, ForceCompression = 13, SetStatusCode = 14, BypassPermaCache = 15, OverrideBrowserCacheTime = 16</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper? ActionType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType? ActionType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper ActionType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType ActionType { get; set; }
 #endif
         /// <summary>The description of the edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -77,10 +77,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The trigger matching type. MatchAny = 0, MatchAll = 1, MatchNone = 2</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggerMatchingTypesWrapper? TriggerMatchingType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelTriggerMatchingType? TriggerMatchingType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggerMatchingTypesWrapper TriggerMatchingType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelTriggerMatchingType TriggerMatchingType { get; set; }
 #endif
         /// <summary>The Triggers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -111,14 +111,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ActionParameter1", n => { ActionParameter1 = n.GetStringValue(); } },
                 { "ActionParameter2", n => { ActionParameter2 = n.GetStringValue(); } },
                 { "ActionParameter3", n => { ActionParameter3 = n.GetStringValue(); } },
-                { "ActionType", n => { ActionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper.CreateFromDiscriminatorValue); } },
+                { "ActionType", n => { ActionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType.CreateFromDiscriminatorValue); } },
                 { "Description", n => { Description = n.GetStringValue(); } },
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "ExtraActions", n => { ExtraActions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "Guid", n => { Guid = n.GetStringValue(); } },
                 { "OrderIndex", n => { OrderIndex = n.GetIntValue(); } },
                 { "ReadOnly", n => { ReadOnly = n.GetBoolValue(); } },
-                { "TriggerMatchingType", n => { TriggerMatchingType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggerMatchingTypesWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.TriggerMatchingTypesWrapper.CreateFromDiscriminatorValue); } },
+                { "TriggerMatchingType", n => { TriggerMatchingType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelTriggerMatchingType>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelTriggerMatchingType.CreateFromDiscriminatorValue); } },
                 { "Triggers", n => { Triggers = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Trigger>(global::Soenneker.Bunny.OpenApiClient.Models.Trigger.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -132,14 +132,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("ActionParameter1", ActionParameter1);
             writer.WriteStringValue("ActionParameter2", ActionParameter2);
             writer.WriteStringValue("ActionParameter3", ActionParameter3);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleActionTypeWrapper>("ActionType", ActionType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType>("ActionType", ActionType);
             writer.WriteStringValue("Description", Description);
             writer.WriteBoolValue("Enabled", Enabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel>("ExtraActions", ExtraActions);
             writer.WriteStringValue("Guid", Guid);
             writer.WriteIntValue("OrderIndex", OrderIndex);
             writer.WriteBoolValue("ReadOnly", ReadOnly);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggerMatchingTypesWrapper>("TriggerMatchingType", TriggerMatchingType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelTriggerMatchingType>("TriggerMatchingType", TriggerMatchingType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Trigger>("Triggers", Triggers);
         }
     }

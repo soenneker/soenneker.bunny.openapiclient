@@ -118,10 +118,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>DRM version (basic or enterprise)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper? DrmVersion { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelDrmVersion? DrmVersion { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper DrmVersion { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelDrmVersion DrmVersion { get; set; }
 #endif
         /// <summary>Determines if any associated captions will be automatically signaled in the HLS master playlist via EXT-X-MEDIA tags, allowing client players to show captions.</summary>
         public bool? EnableCaptionsInPlaylist { get; set; }
@@ -156,10 +156,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper? EncodingTier { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelEncodingTier? EncodingTier { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper EncodingTier { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelEncodingTier EncodingTier { get; set; }
 #endif
         /// <summary>Marks whether original video files should be exposed via CDN.</summary>
         public bool? ExposeOriginals { get; set; }
@@ -246,10 +246,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The type of the pull zone attached. Premium = 0, Volume = 1</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4? PullZoneType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelPullZoneType? PullZoneType { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4 PullZoneType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelPullZoneType PullZoneType { get; set; }
 #endif
         /// <summary>The read-only API key used for authenticating with the video library</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -379,7 +379,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "DateModified", n => { DateModified = n.GetDateTimeOffsetValue(); } },
                 { "DrmBasePriceOverride", n => { DrmBasePriceOverride = n.GetDecimalValue(); } },
                 { "DrmCostPerLicenseOverride", n => { DrmCostPerLicenseOverride = n.GetDecimalValue(); } },
-                { "DrmVersion", n => { DrmVersion = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper.CreateFromDiscriminatorValue); } },
+                { "DrmVersion", n => { DrmVersion = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelDrmVersion>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelDrmVersion.CreateFromDiscriminatorValue); } },
                 { "EnableCaptionsInPlaylist", n => { EnableCaptionsInPlaylist = n.GetBoolValue(); } },
                 { "EnableCompactControls", n => { EnableCompactControls = n.GetBoolValue(); } },
                 { "EnableContentTagging", n => { EnableContentTagging = n.GetBoolValue(); } },
@@ -392,7 +392,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "EnableTranscribingMomentsGeneration", n => { EnableTranscribingMomentsGeneration = n.GetBoolValue(); } },
                 { "EnableTranscribingTitleGeneration", n => { EnableTranscribingTitleGeneration = n.GetBoolValue(); } },
                 { "EnabledResolutions", n => { EnabledResolutions = n.GetStringValue(); } },
-                { "EncodingTier", n => { EncodingTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper.CreateFromDiscriminatorValue); } },
+                { "EncodingTier", n => { EncodingTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelEncodingTier>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelEncodingTier.CreateFromDiscriminatorValue); } },
                 { "ExposeOriginals", n => { ExposeOriginals = n.GetBoolValue(); } },
                 { "ExposeVideoMetadata", n => { ExposeVideoMetadata = n.GetBoolValue(); } },
                 { "FeatureFlags", n => { FeatureFlags = n.GetStringValue(); } },
@@ -413,7 +413,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "PlayerVersion", n => { PlayerVersion = n.GetIntValue(); } },
                 { "PremiumEncodingPriceOverride", n => { PremiumEncodingPriceOverride = n.GetDecimalValue(); } },
                 { "PullZoneId", n => { PullZoneId = n.GetLongValue(); } },
-                { "PullZoneType", n => { PullZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4.CreateFromDiscriminatorValue); } },
+                { "PullZoneType", n => { PullZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelPullZoneType>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelPullZoneType.CreateFromDiscriminatorValue); } },
                 { "ReadOnlyApiKey", n => { ReadOnlyApiKey = n.GetStringValue(); } },
                 { "RememberPlayerPosition", n => { RememberPlayerPosition = n.GetBoolValue(); } },
                 { "RemoveMetadataFromFallbackVideos", n => { RemoveMetadataFromFallbackVideos = n.GetBoolValue(); } },
@@ -469,7 +469,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("DateModified", DateModified);
             writer.WriteDecimalValue("DrmBasePriceOverride", DrmBasePriceOverride);
             writer.WriteDecimalValue("DrmCostPerLicenseOverride", DrmCostPerLicenseOverride);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DrmVersionWrapper>("DrmVersion", DrmVersion);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelDrmVersion>("DrmVersion", DrmVersion);
             writer.WriteBoolValue("EnableCaptionsInPlaylist", EnableCaptionsInPlaylist);
             writer.WriteBoolValue("EnableCompactControls", EnableCompactControls);
             writer.WriteBoolValue("EnableContentTagging", EnableContentTagging);
@@ -482,7 +482,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("EnableTranscribingDescriptionGeneration", EnableTranscribingDescriptionGeneration);
             writer.WriteBoolValue("EnableTranscribingMomentsGeneration", EnableTranscribingMomentsGeneration);
             writer.WriteBoolValue("EnableTranscribingTitleGeneration", EnableTranscribingTitleGeneration);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EncodingTierWrapper>("EncodingTier", EncodingTier);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelEncodingTier>("EncodingTier", EncodingTier);
             writer.WriteBoolValue("ExposeOriginals", ExposeOriginals);
             writer.WriteBoolValue("ExposeVideoMetadata", ExposeVideoMetadata);
             writer.WriteStringValue("FeatureFlags", FeatureFlags);
@@ -503,7 +503,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("PlayerVersion", PlayerVersion);
             writer.WriteDecimalValue("PremiumEncodingPriceOverride", PremiumEncodingPriceOverride);
             writer.WriteLongValue("PullZoneId", PullZoneId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneTypeWrapper4>("PullZoneType", PullZoneType);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelPullZoneType>("PullZoneType", PullZoneType);
             writer.WriteStringValue("ReadOnlyApiKey", ReadOnlyApiKey);
             writer.WriteBoolValue("RememberPlayerPosition", RememberPlayerPosition);
             writer.WriteBoolValue("RemoveMetadataFromFallbackVideos", RemoveMetadataFromFallbackVideos);

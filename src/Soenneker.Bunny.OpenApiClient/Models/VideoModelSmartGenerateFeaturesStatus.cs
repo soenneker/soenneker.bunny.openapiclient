@@ -47,14 +47,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus Title { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus"/> and sets the default values.
         /// </summary>
@@ -84,7 +76,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "description", n => { Description = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
                 { "moments", n => { Moments = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -98,7 +89,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("description", Description);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("moments", Moments);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("title", Title);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

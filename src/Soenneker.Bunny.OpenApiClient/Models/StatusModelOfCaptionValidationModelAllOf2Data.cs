@@ -22,14 +22,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> ErrorList { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>Denotes whether uploaded captions file was valid</summary>
         public bool? Valid { get; set; }
         /// <summary>When uploaded file was valid but non-breaking issues were found, will contain issues found</summary>
@@ -74,7 +66,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "errorList", n => { ErrorList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "valid", n => { Valid = n.GetBoolValue(); } },
                 { "warningList", n => { WarningList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "warningMessage", n => { WarningMessage = n.GetStringValue(); } },
@@ -88,7 +79,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("errorList", ErrorList);
-            writer.WriteStringValue("type", Type);
             writer.WriteBoolValue("valid", Valid);
             writer.WriteCollectionOfPrimitiveValues<string>("warningList", WarningList);
             writer.WriteStringValue("warningMessage", WarningMessage);

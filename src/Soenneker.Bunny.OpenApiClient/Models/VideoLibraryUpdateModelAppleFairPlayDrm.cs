@@ -17,14 +17,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) Enables or disables Apple FairPlay Enterprise DRM</summary>
         public bool? Enabled { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelAppleFairPlayDrm"/> and sets the default values.
         /// </summary>
@@ -51,7 +43,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -62,7 +53,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("Enabled", Enabled);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

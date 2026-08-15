@@ -142,7 +142,7 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.V2.Pullzones.Item.Logs
             /// <summary>Number of entries to skip. Defaults to 0.</summary>
             [QueryParameter("offset")]
             public long? Offset { get; set; }
-            /// <summary>&quot;Sort order by timestamp: `asc` or `desc` (default).&quot;</summary>
+            /// <summary>Sort order by timestamp: `asc` or `desc` (default).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("order")]
@@ -162,7 +162,7 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.V2.Pullzones.Item.Logs
             [QueryParameter("refererContains")]
             public string RefererContains { get; set; }
 #endif
-            /// <summary>&quot;Client IP address filter (IPv4 or IPv6). The match width adapts to the zone&apos;sIP anonymization setting so the filter can never reveal information beyondwhat the API returns: exact match when anonymization is disabled, /24 (IPv4)or /64 (IPv6) when last-octet anonymization is enabled, and ignored when fullanonymization is enabled.&quot;</summary>
+            /// <summary>Client IP address filter (IPv4 or IPv6). The match width adapts to the zone&apos;sIP anonymization setting so the filter can never reveal information beyondwhat the API returns: exact match when anonymization is disabled, /24 (IPv4)or /64 (IPv6) when last-octet anonymization is enabled, and ignored when fullanonymization is enabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("remoteIp")]
@@ -182,7 +182,7 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.V2.Pullzones.Item.Logs
             [QueryParameter("requestId")]
             public string RequestId { get; set; }
 #endif
-            /// <summary>&quot;Free-text, case-insensitive token search. Tokens are space-separated; a rowmatches if ANY token appears in ANY of the searched columns: cache status,request ID, edge location, host, path, user agent, referer, and (for zoneswith extended logging) content range. Remote IP, country code, and theauthorization header are not searched. use the dedicated filters for those,or note that the authorization header is encrypted at rest. Limited to 16tokens of at most 128 characters each.&quot;</summary>
+            /// <summary>Free-text, case-insensitive token search. Tokens are space-separated; a rowmatches if ANY token appears in ANY of the searched columns: cache status,request ID, edge location, host, path, user agent, referer, and (for zoneswith extended logging) content range. Remote IP, country code, and theauthorization header are not searched. use the dedicated filters for those,or note that the authorization header is encrypted at rest. Limited to 16tokens of at most 128 characters each.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]

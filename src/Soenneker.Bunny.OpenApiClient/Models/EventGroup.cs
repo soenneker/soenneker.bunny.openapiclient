@@ -13,7 +13,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventGroup : IParsable
     {
-        /// <summary>&quot;Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),and features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.&quot;</summary>
+        /// <summary>Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),and features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty? Context { get; set; }
@@ -25,7 +25,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? Count { get; set; }
         /// <summary>Earliest event time in the group (Unix time in milliseconds, UTC).</summary>
         public long? FirstSeen { get; set; }
-        /// <summary>&quot;The group key: each requested groupBy dimension mapped to its value.&quot;</summary>
+        /// <summary>The group key: each requested groupBy dimension mapped to its value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty? Key { get; set; }

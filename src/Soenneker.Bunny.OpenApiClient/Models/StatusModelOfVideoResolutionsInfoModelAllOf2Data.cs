@@ -74,14 +74,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> StorageResolutions { get; set; }
 #endif
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The videoId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,7 +118,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "playlistResolutions", n => { PlaylistResolutions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>(global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "storageObjects", n => { StorageObjects = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>(global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "storageResolutions", n => { StorageResolutions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>(global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "videoId", n => { VideoId = n.GetStringValue(); } },
                 { "videoLibraryId", n => { VideoLibraryId = n.GetLongValue(); } },
             };
@@ -147,7 +138,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>("playlistResolutions", PlaylistResolutions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>("storageObjects", StorageObjects);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>("storageResolutions", StorageResolutions);
-            writer.WriteStringValue("type", Type);
             writer.WriteStringValue("videoId", VideoId);
             writer.WriteLongValue("videoLibraryId", VideoLibraryId);
             writer.WriteAdditionalData(AdditionalData);

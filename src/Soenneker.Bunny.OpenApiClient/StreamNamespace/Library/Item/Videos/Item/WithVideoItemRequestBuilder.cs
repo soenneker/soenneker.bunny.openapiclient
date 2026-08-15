@@ -272,7 +272,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithVideoItemRequestBuilderPutQueryParameters 
         {
-            /// <summary>&quot;List of codecs that will be used to encode the file (overrides library settings). Available values: x264, vp9&quot;</summary>
+            /// <summary>List of codecs that will be used to encode the file (overrides library settings). Available values: x264, vp9</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("enabledOutputCodecs")]
@@ -282,7 +282,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             [QueryParameter("enabledOutputCodecs")]
             public string EnabledOutputCodecs { get; set; }
 #endif
-            /// <summary>&quot;Comma separated list of resolutions enabled for encoding, available options: 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p&quot;</summary>
+            /// <summary>Comma separated list of resolutions enabled for encoding, available options: 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("enabledResolutions")]

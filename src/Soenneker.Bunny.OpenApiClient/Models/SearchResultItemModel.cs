@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>&quot;The type of the search result item. Possible values: cdn, storage, dns, script, stream&quot;</summary>
+        /// <summary>The type of the search result item. Possible values: cdn, storage, dns, script, stream</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

@@ -25,14 +25,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The billed quantity for the related product</summary>
         public long? TotalUnits { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>The usage based charge in USD</summary>
         public decimal? Usage { get; set; }
         /// <summary>
@@ -62,7 +54,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "MeasuringUnit", n => { MeasuringUnit = n.GetStringValue(); } },
                 { "TotalUnits", n => { TotalUnits = n.GetLongValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
                 { "Usage", n => { Usage = n.GetDecimalValue(); } },
             };
         }
@@ -75,7 +66,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("MeasuringUnit", MeasuringUnit);
             writer.WriteLongValue("TotalUnits", TotalUnits);
-            writer.WriteStringValue("type", Type);
             writer.WriteDecimalValue("Usage", Usage);
             writer.WriteAdditionalData(AdditionalData);
         }

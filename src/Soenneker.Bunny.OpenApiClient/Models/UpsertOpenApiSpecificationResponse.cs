@@ -14,7 +14,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpsertOpenApiSpecificationResponse : ApiException, IParsable
     {
-        /// <summary>&quot;The full API Guardian state for a shield zone: global configuration and all endpoints.&quot;</summary>
+        /// <summary>The full API Guardian state for a shield zone: global configuration and all endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationResponse? DataEscaped { get; set; }

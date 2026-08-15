@@ -24,10 +24,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The MinClientSecurityLevel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper? MinClientSecurityLevel { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmMinClientSecurityLevel? MinClientSecurityLevel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper MinClientSecurityLevel { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmMinClientSecurityLevel MinClientSecurityLevel { get; set; }
 #endif
         /// <summary>The Provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,14 +39,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The SdOnlyForL3 property</summary>
         public bool? SdOnlyForL3 { get; set; }
-        /// <summary>Union discriminator</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Type { get; set; }
-#nullable restore
-#else
-        public string Type { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGoogleWidevineDrm"/> and sets the default values.
         /// </summary>
@@ -75,10 +67,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "CertificateExpirationDate", n => { CertificateExpirationDate = n.GetDateTimeOffsetValue(); } },
                 { "CertificateId", n => { CertificateId = n.GetLongValue(); } },
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper>(global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper.CreateFromDiscriminatorValue); } },
+                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmMinClientSecurityLevel>(global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmMinClientSecurityLevel.CreateFromDiscriminatorValue); } },
                 { "Provider", n => { Provider = n.GetStringValue(); } },
                 { "SdOnlyForL3", n => { SdOnlyForL3 = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -91,10 +82,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("CertificateExpirationDate", CertificateExpirationDate);
             writer.WriteLongValue("CertificateId", CertificateId);
             writer.WriteBoolValue("Enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WidevineMinClientSecurityLevelWrapper>("MinClientSecurityLevel", MinClientSecurityLevel);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmMinClientSecurityLevel>("MinClientSecurityLevel", MinClientSecurityLevel);
             writer.WriteStringValue("Provider", Provider);
             writer.WriteBoolValue("SdOnlyForL3", SdOnlyForL3);
-            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

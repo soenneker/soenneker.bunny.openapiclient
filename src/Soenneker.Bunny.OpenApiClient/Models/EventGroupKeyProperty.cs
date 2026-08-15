@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;The group key: each requested groupBy dimension mapped to its value.&quot;
+    /// The group key: each requested groupBy dimension mapped to its value.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventGroupKeyProperty : IAdditionalDataHolder, IParsable
