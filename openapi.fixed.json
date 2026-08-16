@@ -26492,6 +26492,7 @@
           },
           "timestamp": {
             "type": "integer",
+            "format": "int64",
             "example": 1728952065848
           },
           "log": {

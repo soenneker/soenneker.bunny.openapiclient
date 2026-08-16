@@ -33,7 +33,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The logId property</summary>
         public Guid? LogId { get; set; }
         /// <summary>The timestamp property</summary>
-        public int? Timestamp { get; set; }
+        public long? Timestamp { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LogEntry"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels>(global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels.CreateFromDiscriminatorValue); } },
                 { "log", n => { Log = n.GetStringValue(); } },
                 { "logId", n => { LogId = n.GetGuidValue(); } },
-                { "timestamp", n => { Timestamp = n.GetIntValue(); } },
+                { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels>("labels", Labels);
             writer.WriteStringValue("log", Log);
             writer.WriteGuidValue("logId", LogId);
-            writer.WriteIntValue("timestamp", Timestamp);
+            writer.WriteLongValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
