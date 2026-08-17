@@ -104,8 +104,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? MonthlyChargesExtraStorageZones { get; set; }
         /// <summary>The monthly charges caused by extra video libraries.</summary>
         public double? MonthlyChargesExtraVideoLibraries { get; set; }
-        /// <summary>The total monthly charges for Load Balancer</summary>
-        public decimal? MonthlyChargesLoadBalancer { get; set; }
         /// <summary>The total monthly charges for Magic Containers</summary>
         public decimal? MonthlyChargesMagicContainers { get; set; }
         /// <summary>The monthly charges caused by optimizer.</summary>
@@ -295,7 +293,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "MonthlyChargesExtraPullZones", n => { MonthlyChargesExtraPullZones = n.GetDoubleValue(); } },
                 { "MonthlyChargesExtraStorageZones", n => { MonthlyChargesExtraStorageZones = n.GetDoubleValue(); } },
                 { "MonthlyChargesExtraVideoLibraries", n => { MonthlyChargesExtraVideoLibraries = n.GetDoubleValue(); } },
-                { "MonthlyChargesLoadBalancer", n => { MonthlyChargesLoadBalancer = n.GetDecimalValue(); } },
                 { "MonthlyChargesMagicContainers", n => { MonthlyChargesMagicContainers = n.GetDecimalValue(); } },
                 { "MonthlyChargesOptimizer", n => { MonthlyChargesOptimizer = n.GetDoubleValue(); } },
                 { "MonthlyChargesPremiumEncoding", n => { MonthlyChargesPremiumEncoding = n.GetDecimalValue(); } },
@@ -373,7 +370,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("MonthlyChargesExtraPullZones", MonthlyChargesExtraPullZones);
             writer.WriteDoubleValue("MonthlyChargesExtraStorageZones", MonthlyChargesExtraStorageZones);
             writer.WriteDoubleValue("MonthlyChargesExtraVideoLibraries", MonthlyChargesExtraVideoLibraries);
-            writer.WriteDecimalValue("MonthlyChargesLoadBalancer", MonthlyChargesLoadBalancer);
             writer.WriteDecimalValue("MonthlyChargesMagicContainers", MonthlyChargesMagicContainers);
             writer.WriteDoubleValue("MonthlyChargesOptimizer", MonthlyChargesOptimizer);
             writer.WriteDecimalValue("MonthlyChargesPremiumEncoding", MonthlyChargesPremiumEncoding);

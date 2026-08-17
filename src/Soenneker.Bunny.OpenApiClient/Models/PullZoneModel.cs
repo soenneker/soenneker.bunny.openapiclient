@@ -282,8 +282,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? LimitRateAfter { get; set; }
         /// <summary>The maximum rate at which the zone will transfer data in kb/s. 0 for unlimited</summary>
         public double? LimitRatePerSecond { get; set; }
-        /// <summary>The ID of the Load Balancer profile used as the origin when OriginType is LoadBalancer</summary>
-        public long? LoadBalancerId { get; set; }
         /// <summary>Gets the log anonymization type for this pull zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -386,18 +384,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? OptimizerEnableWebP { get; set; }
         /// <summary>Determines if the optimizer class list should be enforced</summary>
         public bool? OptimizerForceClasses { get; set; }
-        /// <summary>Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown? OptimizerHtmlToMarkdown { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown OptimizerHtmlToMarkdown { get; set; }
-#endif
         /// <summary>Determines the image quality for desktop clients</summary>
         public int? OptimizerImageQuality { get; set; }
-        /// <summary>Determines if the llms.txt file can be generated and served by the Optimizer</summary>
-        public bool? OptimizerLlmsTxt { get; set; }
         /// <summary>Determines if the CSS minifcation should be enabled</summary>
         public bool? OptimizerMinifyCSS { get; set; }
         /// <summary>Determines if the JavaScript minifcation should be enabled</summary>
@@ -743,7 +731,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "IpFamilyPolicy", n => { IpFamilyPolicy = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy.CreateFromDiscriminatorValue); } },
                 { "LimitRateAfter", n => { LimitRateAfter = n.GetDoubleValue(); } },
                 { "LimitRatePerSecond", n => { LimitRatePerSecond = n.GetDoubleValue(); } },
-                { "LoadBalancerId", n => { LoadBalancerId = n.GetLongValue(); } },
                 { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType.CreateFromDiscriminatorValue); } },
                 { "LogFormat", n => { LogFormat = n.GetIntValue(); } },
                 { "LogForwardingEnabled", n => { LogForwardingEnabled = n.GetBoolValue(); } },
@@ -771,9 +758,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "OptimizerEnableWebP", n => { OptimizerEnableWebP = n.GetBoolValue(); } },
                 { "OptimizerEnabled", n => { OptimizerEnabled = n.GetBoolValue(); } },
                 { "OptimizerForceClasses", n => { OptimizerForceClasses = n.GetBoolValue(); } },
-                { "OptimizerHtmlToMarkdown", n => { OptimizerHtmlToMarkdown = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown.CreateFromDiscriminatorValue); } },
                 { "OptimizerImageQuality", n => { OptimizerImageQuality = n.GetIntValue(); } },
-                { "OptimizerLlmsTxt", n => { OptimizerLlmsTxt = n.GetBoolValue(); } },
                 { "OptimizerMinifyCSS", n => { OptimizerMinifyCSS = n.GetBoolValue(); } },
                 { "OptimizerMinifyJavaScript", n => { OptimizerMinifyJavaScript = n.GetBoolValue(); } },
                 { "OptimizerMobileImageQuality", n => { OptimizerMobileImageQuality = n.GetIntValue(); } },
@@ -921,7 +906,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy>("IpFamilyPolicy", IpFamilyPolicy);
             writer.WriteDoubleValue("LimitRateAfter", LimitRateAfter);
             writer.WriteDoubleValue("LimitRatePerSecond", LimitRatePerSecond);
-            writer.WriteLongValue("LoadBalancerId", LoadBalancerId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType>("LogAnonymizationType", LogAnonymizationType);
             writer.WriteIntValue("LogFormat", LogFormat);
             writer.WriteBoolValue("LogForwardingEnabled", LogForwardingEnabled);
@@ -949,9 +933,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("OptimizerEnableUpscaling", OptimizerEnableUpscaling);
             writer.WriteBoolValue("OptimizerEnableWebP", OptimizerEnableWebP);
             writer.WriteBoolValue("OptimizerForceClasses", OptimizerForceClasses);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown>("OptimizerHtmlToMarkdown", OptimizerHtmlToMarkdown);
             writer.WriteIntValue("OptimizerImageQuality", OptimizerImageQuality);
-            writer.WriteBoolValue("OptimizerLlmsTxt", OptimizerLlmsTxt);
             writer.WriteBoolValue("OptimizerMinifyCSS", OptimizerMinifyCSS);
             writer.WriteBoolValue("OptimizerMinifyJavaScript", OptimizerMinifyJavaScript);
             writer.WriteIntValue("OptimizerMobileImageQuality", OptimizerMobileImageQuality);

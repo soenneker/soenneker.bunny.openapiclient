@@ -13,6 +13,7 @@ using Soenneker.Bunny.OpenApiClient.Core.Search;
 using Soenneker.Bunny.OpenApiClient.Core.Statistics;
 using Soenneker.Bunny.OpenApiClient.Core.Storagezone;
 using Soenneker.Bunny.OpenApiClient.Core.User;
+using Soenneker.Bunny.OpenApiClient.Core.V1;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary;
 using System.Collections.Generic;
 using System.IO;
@@ -80,6 +81,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core
         public global::Soenneker.Bunny.OpenApiClient.Core.User.UserRequestBuilder User
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Core.User.UserRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The v1 property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.V1.V1RequestBuilder V1
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.V1.V1RequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The videolibrary property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.VideolibraryRequestBuilder Videolibrary
