@@ -21367,6 +21367,13 @@
             "type": "boolean",
             "description": "Determines if the SEO HTML prerender is enabled"
           },
+          "OptimizerHtmlToMarkdown": {
+            "$ref": "#/components/schemas/PullZoneModelOptimizerHtmlToMarkdown"
+          },
+          "OptimizerLlmsTxt": {
+            "type": "boolean",
+            "description": "Determines if the llms.txt file can be generated and served by the Optimizer"
+          },
           "OptimizerEnableManipulationEngine": {
             "type": "boolean",
             "description": "Determines the image manipulation should be enabled"
@@ -22088,6 +22095,19 @@
           "DataDog"
         ]
       },
+      "OptimizerHtmlToMarkdownType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = Off\n1 = Simple",
+        "x-enumNames": [
+          "Off",
+          "Simple"
+        ]
+      },
       "OptimizerWatermarkPosition": {
         "enum": [
           0,
@@ -22662,6 +22682,14 @@
           "OptimizerPrerenderHtml": {
             "type": "boolean",
             "description": "Determines if the SEO HTML prerender should be enabled",
+            "nullable": true
+          },
+          "OptimizerHtmlToMarkdown": {
+            "$ref": "#/components/schemas/PullZoneSettingsModelOptimizerHtmlToMarkdown"
+          },
+          "OptimizerLlmsTxt": {
+            "type": "boolean",
+            "description": "Determines if the llms.txt file can be generated and served by the Optimizer",
             "nullable": true
           },
           "OptimizerEnableManipulationEngine": {
@@ -23516,6 +23544,14 @@
           "OptimizerPrerenderHtml": {
             "type": "boolean",
             "description": "Determines if the SEO HTML prerender should be enabled",
+            "nullable": true
+          },
+          "OptimizerHtmlToMarkdown": {
+            "$ref": "#/components/schemas/PullZoneAddModelOptimizerHtmlToMarkdown"
+          },
+          "OptimizerLlmsTxt": {
+            "type": "boolean",
+            "description": "Determines if the llms.txt file can be generated and served by the Optimizer",
             "nullable": true
           },
           "OptimizerEnableManipulationEngine": {
@@ -36568,6 +36604,20 @@
         },
         "description": "Determines the log forwarding protocol type"
       },
+      "PullZoneModelOptimizerHtmlToMarkdown": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownTypeWrapper"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        },
+        "description": "Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use"
+      },
       "PullZoneModelOptimizerWatermarkPosition": {
         "type": "object",
         "oneOf": [
@@ -36794,6 +36844,20 @@
         },
         "description": "Sets the log forwarding protocol type"
       },
+      "PullZoneSettingsModelOptimizerHtmlToMarkdown": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownTypeWrapper2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        },
+        "description": "Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use"
+      },
       "PullZoneSettingsModelOptimizerWatermarkPosition": {
         "type": "object",
         "oneOf": [
@@ -36988,6 +37052,20 @@
           }
         },
         "description": "Sets the log forwarding protocol type"
+      },
+      "PullZoneAddModelOptimizerHtmlToMarkdown": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownTypeWrapper3"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        },
+        "description": "Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use"
       },
       "PullZoneAddModelOptimizerWatermarkPosition": {
         "type": "object",
@@ -39752,6 +39830,17 @@
           }
         }
       },
+      "OptimizerHtmlToMarkdownTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        }
+      },
       "OptimizerWatermarkPositionWrapper": {
         "required": [
           "value"
@@ -39928,6 +40017,17 @@
           }
         }
       },
+      "OptimizerHtmlToMarkdownTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
+          }
+        }
+      },
       "OptimizerWatermarkPositionWrapper2": {
         "required": [
           "value"
@@ -40079,6 +40179,17 @@
         "properties": {
           "value": {
             "$ref": "#/components/schemas/PullZoneLogForwarderProtocolType"
+          }
+        }
+      },
+      "OptimizerHtmlToMarkdownTypeWrapper3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OptimizerHtmlToMarkdownType"
           }
         }
       },
