@@ -23,6 +23,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The cpuUsage property</summary>
         public double? CpuUsage { get; set; }
+        /// <summary>The cpuUsageCores property</summary>
+        public double? CpuUsageCores { get; set; }
         /// <summary>The ephemeralStorageLimitBytes property</summary>
         public long? EphemeralStorageLimitBytes { get; set; }
         /// <summary>The ephemeralStorageUsageBytes property</summary>
@@ -47,6 +49,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>The outboundBandwidthBytesPerSecond property</summary>
+        public double? OutboundBandwidthBytesPerSecond { get; set; }
         /// <summary>The outboundConnectionsLimit property</summary>
         public int? OutboundConnectionsLimit { get; set; }
         /// <summary>The outboundConnectionsRejectedDiff property</summary>
@@ -61,8 +65,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The ramUsage property</summary>
         public double? RamUsage { get; set; }
+        /// <summary>The ramUsageBytes property</summary>
+        public double? RamUsageBytes { get; set; }
         /// <summary>The status property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.PodStatus? Status { get; set; }
+        /// <summary>The volumes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>? Volumes { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume> Volumes { get; set; }
+#endif
         /// <summary>The volumesUtilizationPercentage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -91,17 +105,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "containers", n => { Containers = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewContainer>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewContainer.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "cpuUsage", n => { CpuUsage = n.GetDoubleValue(); } },
+                { "cpuUsageCores", n => { CpuUsageCores = n.GetDoubleValue(); } },
                 { "ephemeralStorageLimitBytes", n => { EphemeralStorageLimitBytes = n.GetLongValue(); } },
                 { "ephemeralStorageUsageBytes", n => { EphemeralStorageUsageBytes = n.GetLongValue(); } },
                 { "ephemeralStorageUsageRatio", n => { EphemeralStorageUsageRatio = n.GetDoubleValue(); } },
                 { "lastHeartBeat", n => { LastHeartBeat = n.GetDateTimeOffsetValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "outboundBandwidthBytesPerSecond", n => { OutboundBandwidthBytesPerSecond = n.GetDoubleValue(); } },
                 { "outboundConnectionsLimit", n => { OutboundConnectionsLimit = n.GetIntValue(); } },
                 { "outboundConnectionsRejectedDiff", n => { OutboundConnectionsRejectedDiff = n.GetLongValue(); } },
                 { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty.CreateFromDiscriminatorValue); } },
                 { "ramUsage", n => { RamUsage = n.GetDoubleValue(); } },
+                { "ramUsageBytes", n => { RamUsageBytes = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>(); } },
+                { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "volumesUtilizationPercentage", n => { VolumesUtilizationPercentage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -114,17 +132,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewContainer>("containers", Containers);
             writer.WriteDoubleValue("cpuUsage", CpuUsage);
+            writer.WriteDoubleValue("cpuUsageCores", CpuUsageCores);
             writer.WriteLongValue("ephemeralStorageLimitBytes", EphemeralStorageLimitBytes);
             writer.WriteLongValue("ephemeralStorageUsageBytes", EphemeralStorageUsageBytes);
             writer.WriteDoubleValue("ephemeralStorageUsageRatio", EphemeralStorageUsageRatio);
             writer.WriteDateTimeOffsetValue("lastHeartBeat", LastHeartBeat);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("name", Name);
+            writer.WriteDoubleValue("outboundBandwidthBytesPerSecond", OutboundBandwidthBytesPerSecond);
             writer.WriteIntValue("outboundConnectionsLimit", OutboundConnectionsLimit);
             writer.WriteLongValue("outboundConnectionsRejectedDiff", OutboundConnectionsRejectedDiff);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty>("outboundTrafficChart", OutboundTrafficChart);
             writer.WriteDoubleValue("ramUsage", RamUsage);
+            writer.WriteDoubleValue("ramUsageBytes", RamUsageBytes);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>("status", Status);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>("volumes", Volumes);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty>("volumesUtilizationPercentage", VolumesUtilizationPercentage);
         }
     }

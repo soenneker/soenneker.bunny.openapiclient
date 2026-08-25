@@ -73,6 +73,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty LatencyChart { get; set; }
 #endif
+        /// <summary>What one instance of the application may use. The same for every instance, so it is stated once.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits? Limits { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits Limits { get; set; }
+#endif
         /// <summary>The monthlyCost property</summary>
         public double? MonthlyCost { get; set; }
         /// <summary>The regions property</summary>
@@ -122,6 +130,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "currentLatency", n => { CurrentLatency = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>(global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator.CreateFromDiscriminatorValue); } },
                 { "desiredInstances", n => { DesiredInstances = n.GetIntValue(); } },
                 { "latencyChart", n => { LatencyChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty.CreateFromDiscriminatorValue); } },
+                { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits.CreateFromDiscriminatorValue); } },
                 { "monthlyCost", n => { MonthlyCost = n.GetDoubleValue(); } },
                 { "regions", n => { Regions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>(); } },
@@ -145,6 +154,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>("currentLatency", CurrentLatency);
             writer.WriteIntValue("desiredInstances", DesiredInstances);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty>("latencyChart", LatencyChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits>("limits", Limits);
             writer.WriteDoubleValue("monthlyCost", MonthlyCost);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>("regions", Regions);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>("status", Status);
