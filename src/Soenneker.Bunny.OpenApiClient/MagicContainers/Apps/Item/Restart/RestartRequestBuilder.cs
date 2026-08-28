@@ -42,6 +42,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Restart
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,6 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Restart
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
