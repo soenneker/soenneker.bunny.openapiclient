@@ -93,7 +93,6 @@
             "name": "view",
             "in": "query",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/DnsViewType"
@@ -183,7 +182,6 @@
             "name": "view",
             "in": "query",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
                   "$ref": "#/components/schemas/DnsViewType"
@@ -487,10 +485,8 @@
             "in": "query",
             "description": "The type of DNS Record",
             "schema": {
-              "type": "object",
               "oneOf": [
                 {
-                  "type": "object",
                   "oneOf": [
                     {
                       "$ref": "#/components/schemas/DnsRecordTypes2"
