@@ -101,12 +101,16 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Fetc
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("collectionId")]
             public string? CollectionId { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("collectionId")]
             public string CollectionId { get; set; }
+            #pragma warning restore CS1591
 #endif
             /// <summary>(Optional) Video time in ms to extract the main video thumbnail.</summary>
             [QueryParameter("thumbnailTime")]

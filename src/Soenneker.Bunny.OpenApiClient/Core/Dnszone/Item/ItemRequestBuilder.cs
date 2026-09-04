@@ -204,8 +204,10 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ItemRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("view")]
             public int? View { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

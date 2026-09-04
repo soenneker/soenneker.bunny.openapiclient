@@ -99,12 +99,16 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("thumbnailUrl")]
             public string? ThumbnailUrl { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("thumbnailUrl")]
             public string ThumbnailUrl { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

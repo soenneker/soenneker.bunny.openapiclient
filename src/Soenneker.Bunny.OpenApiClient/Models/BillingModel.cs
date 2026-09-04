@@ -82,10 +82,36 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? LastRechargeBalance { get; set; }
         /// <summary>Determines the minimum monthly commit of the user.</summary>
         public double? MinimumMonthlyCommit { get; set; }
+        /// <summary>The monthly charges and usage for AI Gateway cached tokens</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens? MonthlyAiGatewayCachedTokens { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens MonthlyAiGatewayCachedTokens { get; set; }
+#endif
+        /// <summary>The monthly charges and usage for AI Gateway input tokens</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens? MonthlyAiGatewayInputTokens { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens MonthlyAiGatewayInputTokens { get; set; }
+#endif
+        /// <summary>The monthly charges and usage for AI Gateway output tokens</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens? MonthlyAiGatewayOutputTokens { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens MonthlyAiGatewayOutputTokens { get; set; }
+#endif
         /// <summary>Total bandwidth used by the account during this month.</summary>
         public long? MonthlyBandwidthUsed { get; set; }
         /// <summary>The total charges this month paid for African traffic</summary>
         public double? MonthlyChargesAFTraffic { get; set; }
+        /// <summary>The total monthly charges for AI Gateway</summary>
+        public decimal? MonthlyChargesAiGateway { get; set; }
         /// <summary>The total charges this month paid for Asian and Oceanian traffic</summary>
         public double? MonthlyChargesASIATraffic { get; set; }
         /// <summary>The total monthly charges for DB</summary>
@@ -284,9 +310,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "EUUSDiscount", n => { EUUSDiscount = n.GetIntValue(); } },
                 { "LastRechargeBalance", n => { LastRechargeBalance = n.GetDoubleValue(); } },
                 { "MinimumMonthlyCommit", n => { MinimumMonthlyCommit = n.GetDoubleValue(); } },
+                { "MonthlyAiGatewayCachedTokens", n => { MonthlyAiGatewayCachedTokens = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens.CreateFromDiscriminatorValue); } },
+                { "MonthlyAiGatewayInputTokens", n => { MonthlyAiGatewayInputTokens = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens.CreateFromDiscriminatorValue); } },
+                { "MonthlyAiGatewayOutputTokens", n => { MonthlyAiGatewayOutputTokens = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens.CreateFromDiscriminatorValue); } },
                 { "MonthlyBandwidthUsed", n => { MonthlyBandwidthUsed = n.GetLongValue(); } },
                 { "MonthlyChargesAFTraffic", n => { MonthlyChargesAFTraffic = n.GetDoubleValue(); } },
                 { "MonthlyChargesASIATraffic", n => { MonthlyChargesASIATraffic = n.GetDoubleValue(); } },
+                { "MonthlyChargesAiGateway", n => { MonthlyChargesAiGateway = n.GetDecimalValue(); } },
                 { "MonthlyChargesDB", n => { MonthlyChargesDB = n.GetDecimalValue(); } },
                 { "MonthlyChargesDNS", n => { MonthlyChargesDNS = n.GetDoubleValue(); } },
                 { "MonthlyChargesDrm", n => { MonthlyChargesDrm = n.GetDoubleValue(); } },
@@ -362,8 +392,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("EUUSDiscount", EUUSDiscount);
             writer.WriteDoubleValue("LastRechargeBalance", LastRechargeBalance);
             writer.WriteDoubleValue("MinimumMonthlyCommit", MinimumMonthlyCommit);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens>("MonthlyAiGatewayCachedTokens", MonthlyAiGatewayCachedTokens);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens>("MonthlyAiGatewayInputTokens", MonthlyAiGatewayInputTokens);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens>("MonthlyAiGatewayOutputTokens", MonthlyAiGatewayOutputTokens);
             writer.WriteLongValue("MonthlyBandwidthUsed", MonthlyBandwidthUsed);
             writer.WriteDoubleValue("MonthlyChargesAFTraffic", MonthlyChargesAFTraffic);
+            writer.WriteDecimalValue("MonthlyChargesAiGateway", MonthlyChargesAiGateway);
             writer.WriteDoubleValue("MonthlyChargesASIATraffic", MonthlyChargesASIATraffic);
             writer.WriteDecimalValue("MonthlyChargesDB", MonthlyChargesDB);
             writer.WriteDoubleValue("MonthlyChargesDNS", MonthlyChargesDNS);

@@ -96,12 +96,18 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatisticsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("fromDate")]
             public DateTimeOffset? FromDate { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("granularity")]
             public global::Soenneker.Bunny.OpenApiClient.Models.DataGranularity? Granularity { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("toDate")]
             public DateTimeOffset? ToDate { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

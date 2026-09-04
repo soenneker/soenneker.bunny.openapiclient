@@ -164,13 +164,17 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Storagezone
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StoragezoneRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeDeleted")]
             public bool? IncludeDeleted { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The page number to return. When set to 0 (default), all items are returned as a plain array. When set to a value greater than 0, items are returned in a paginated response object.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("perPage")]
             public int? PerPage { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The search term that will be used to filter the results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

@@ -151,10 +151,14 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
             /// <summary>Filter by linked integration</summary>
             [QueryParameter("integrationId")]
             public long? IntegrationId { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("page")]
             public int? Page { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("perPage")]
             public int? PerPage { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The search term that will be used to filter the results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

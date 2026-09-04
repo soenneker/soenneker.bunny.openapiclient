@@ -85,14 +85,22 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CleanupRequestBuilderPostQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("allResolutions")]
             public bool? AllResolutions { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("deleteMp4Files")]
             public bool? DeleteMp4Files { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("deleteNonConfiguredResolutions")]
             public bool? DeleteNonConfiguredResolutions { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("deleteOriginal")]
             public bool? DeleteOriginal { get; set; }
+            #pragma warning restore CS1591
             /// <summary>If set to true, no actual file manipulation will happen, only informational data will be returned</summary>
             [QueryParameter("dryRun")]
             public bool? DryRun { get; set; }
@@ -108,12 +116,16 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("resolutionsToDelete")]
             public string? ResolutionsToDelete { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("resolutionsToDelete")]
             public string ResolutionsToDelete { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

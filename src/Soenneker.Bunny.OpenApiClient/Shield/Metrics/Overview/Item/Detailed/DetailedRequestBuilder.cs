@@ -90,10 +90,14 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overview.Item.Detailed
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DetailedRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             public DateTimeOffset? EndDate { get; set; }
+            #pragma warning restore CS1591
             /// <summary>0 = Auto1 = TwoMinutes2 = TenMinutes3 = Hourly4 = Daily5 = Weekly6 = Monthly</summary>
             public int? Resolution { get; set; }
+            #pragma warning disable CS1591
             public DateTimeOffset? StartDate { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

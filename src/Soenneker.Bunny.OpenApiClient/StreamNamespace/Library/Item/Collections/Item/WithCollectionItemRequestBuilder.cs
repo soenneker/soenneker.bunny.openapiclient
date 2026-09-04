@@ -164,8 +164,10 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithCollectionItemRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeThumbnails")]
             public bool? IncludeThumbnails { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

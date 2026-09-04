@@ -193,8 +193,10 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone
             /// <summary>The page number to return. When set to 0 (default), all items are returned as a plain array. When set to a value greater than 0, items are returned in a paginated response object.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
+            #pragma warning disable CS1591
             [QueryParameter("perPage")]
             public int? PerPage { get; set; }
+            #pragma warning restore CS1591
             /// <summary>The search term that will be used to filter the results</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
