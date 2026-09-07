@@ -139,7 +139,7 @@
         },
         "responses": {
           "201": {
-            "description": "The DNS Zone was successfuly added"
+            "description": "The DNS Zone was successfully added"
           },
           "400": {
             "description": "Failed adding the DNS Zone. Model validation failed",
@@ -284,7 +284,7 @@
         ],
         "responses": {
           "204": {
-            "description": "The DNS Zone was successfuly deleted."
+            "description": "The DNS Zone was successfully deleted."
           },
           "404": {
             "description": "The DNS Zone with the requested ID does not exist."
@@ -411,7 +411,7 @@
         },
         "responses": {
           "201": {
-            "description": "The DNS record was successfuly added.",
+            "description": "The DNS record was successfully added.",
             "content": {
               "application/json": {
                 "schema": {
@@ -579,7 +579,7 @@
         },
         "responses": {
           "204": {
-            "description": "The DNS record was successfuly updated."
+            "description": "The DNS record was successfully updated."
           },
           "404": {
             "description": "The DNS Zone or DNS Record with the requested ID does not exist."
@@ -632,7 +632,7 @@
         ],
         "responses": {
           "204": {
-            "description": "The DNS record was successfuly deleted."
+            "description": "The DNS record was successfully deleted."
           },
           "404": {
             "description": "The DNS Zone or DNS Record with the requested ID does not exist."
@@ -677,7 +677,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The import operation has finished successfuly.",
+            "description": "The import operation has finished successfully.",
             "content": {
               "application/json": {
                 "schema": {
@@ -850,7 +850,7 @@
         },
         "responses": {
           "201": {
-            "description": "The Pull Zone was successfuly added"
+            "description": "The Pull Zone was successfully added"
           },
           "400": {
             "description": "Failed adding Pull Zone",
@@ -979,7 +979,7 @@
         },
         "responses": {
           "200": {
-            "description": "The Pull Zone was successfuly updated",
+            "description": "The Pull Zone was successfully updated",
             "content": {
               "application/json": {
                 "schema": {
@@ -1074,7 +1074,7 @@
         ],
         "responses": {
           "204": {
-            "description": "The Edge Rule was successfuly deleted"
+            "description": "The Edge Rule was successfully deleted"
           },
           "404": {
             "description": "The Pull Zone or Edge Rule with the requested ID does not exist"
@@ -1120,7 +1120,7 @@
         },
         "responses": {
           "201": {
-            "description": "The Edge Rule was successfuly added"
+            "description": "The Edge Rule was successfully added"
           },
           "404": {
             "description": "The Pull Zone with the requested ID does not exist"
@@ -1176,7 +1176,7 @@
         },
         "responses": {
           "204": {
-            "description": "The Edge Rule was successfuly updated"
+            "description": "The Edge Rule was successfully updated"
           },
           "404": {
             "description": "The Pull Zone or Edge Rule with the requested ID does not exist."
@@ -1285,7 +1285,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The certificate was successfuly loaded"
+            "description": "The certificate was successfully loaded"
           },
           "400": {
             "description": "Failed configuring the certificate",
@@ -1565,7 +1565,7 @@
         },
         "responses": {
           "204": {
-            "description": "The cache was successfuly purged"
+            "description": "The cache was successfully purged"
           },
           "404": {
             "description": "The Pull Zone with the requested ID does not exist"
@@ -1652,7 +1652,7 @@
         },
         "responses": {
           "204": {
-            "description": "The certificate was successfuly added"
+            "description": "The certificate was successfully added"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -1708,7 +1708,7 @@
         },
         "responses": {
           "204": {
-            "description": "The certificate was successfuly removed"
+            "description": "The certificate was successfully removed"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -1999,7 +1999,7 @@
         },
         "responses": {
           "204": {
-            "description": "The allowed referer was successfuly added"
+            "description": "The allowed referer was successfully added"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -2055,7 +2055,7 @@
         },
         "responses": {
           "204": {
-            "description": "The allowed referer was successfuly removed"
+            "description": "The allowed referer was successfully removed"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -2111,7 +2111,7 @@
         },
         "responses": {
           "204": {
-            "description": "The blocked referer was successfuly added"
+            "description": "The blocked referer was successfully added"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -2167,7 +2167,7 @@
         },
         "responses": {
           "204": {
-            "description": "The blocked referer was successfuly removed"
+            "description": "The blocked referer was successfully removed"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -2223,7 +2223,7 @@
         },
         "responses": {
           "204": {
-            "description": "The blocked IP was successfuly added"
+            "description": "The blocked IP was successfully added"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -2279,7 +2279,7 @@
         },
         "responses": {
           "204": {
-            "description": "The blocked IP was successfuly removed"
+            "description": "The blocked IP was successfully removed"
           },
           "404": {
             "description": "The Pull Zone with the requested ID was not found"
@@ -2605,7 +2605,7 @@
         },
         "responses": {
           "204": {
-            "description": "The storage zone was successfuly updated"
+            "description": "The storage zone was successfully updated"
           },
           "400": {
             "description": "Failed configuring the Storage Zone. Model validation failed",
@@ -2692,7 +2692,7 @@
         ],
         "responses": {
           "204": {
-            "description": "The password has been successfuly changed"
+            "description": "The password has been successfully changed"
           },
           "401": {
             "description": "The request authorization failed"
@@ -2727,7 +2727,7 @@
         ],
         "responses": {
           "204": {
-            "description": "The read-only password has been successfuly changed."
+            "description": "The read-only password has been successfully changed."
           },
           "401": {
             "description": "The request authorization failed"
@@ -5223,6 +5223,411 @@
         ]
       }
     },
+    "/core/loadbalancer/{loadBalancerId}/statistics": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get Load Balancer statistics",
+        "operationId": "CoreLoadBalancerStatisticsEndpointGetLoadBalancerStatistics",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "(Optional) The start date of the statistics. If no value is passed, the last 24 hours will be returned. Rounded to full-day boundaries unless hourly=true and exactRange=true.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "(Optional) The end date of the statistics. Rounded to full-day boundaries unless hourly=true and exactRange=true.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "hourly",
+            "in": "query",
+            "description": "(Optional) If true, the statistics will be returned in hourly grouping. Hourly statistics are available for the last 30 days only.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "exactRange",
+            "in": "query",
+            "description": "(Optional) If true and hourly=true, the exact hour components of from and to will be preserved instead of rounding to full-day boundaries.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Load Balancer statistics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerStatisticsModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "429": {
+            "description": "Too many statistics requests, try again later",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/pullzones": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get the pull zones attached to a Load Balancer",
+        "operationId": "CoreLoadBalancerStatisticsEndpointGetAttachedPullZones",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The attached pull zones",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoreLoadBalancerStatisticsEndpointGetAttachedPullZones200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/statistics": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get statistics roll-ups for all Load Balancers on the account",
+        "operationId": "CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics",
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Per-Load-Balancer roll-ups",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/usage": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get current-period request usage and pricing for a Load Balancer",
+        "operationId": "CoreLoadBalancerUsageEndpointGetLoadBalancerUsage",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "description": "Year of the usage month (UTC). Defaults to the current year; supply together with month.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "description": "Month of the usage month, 1-12 (UTC). Defaults to the current month; supply together with year.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The current usage and pricing",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerUsageModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The requested month is invalid, incomplete, or in the future",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ]
+      }
+    },
     "/core/dnszone/{id}/statistics": {
       "get": {
         "tags": [
@@ -6681,6 +7086,16 @@
         "responses": {
           "200": {
             "description": "The collection was successfully deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The collection cannot currently be deleted",
             "content": {
               "application/json": {
                 "schema": {
@@ -25996,6 +26411,260 @@
           "Scripting_CDN_CPU"
         ]
       },
+      "LoadBalancerStatisticsModel": {
+        "type": "object",
+        "properties": {
+          "Summary": {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsModelSummary"
+          },
+          "RequestsByOrigin": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModel"
+            },
+            "nullable": true
+          },
+          "RequestsByOriginGroup": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginGroupRequestsSeriesModel"
+            },
+            "nullable": true
+          },
+          "TrafficByOrigin": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModel"
+            },
+            "nullable": true
+          },
+          "OriginLatency": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginLatencySeriesModel"
+            },
+            "nullable": true
+          },
+          "OriginFailures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginFailuresSeriesModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerStatisticsSummaryModel": {
+        "type": "object",
+        "properties": {
+          "TotalRequests": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalTraffic": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageOriginRttMs": {
+            "type": "number",
+            "format": "double"
+          },
+          "AllOriginsExhausted": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageRetryDepth": {
+            "type": "number",
+            "format": "double"
+          },
+          "StickySessionHits": {
+            "type": "number",
+            "format": "double"
+          },
+          "RequestsByMethod": {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsSummaryModelRequestsByMethodProperty"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginRequestsSeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModelValuesProperty"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginGroupId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginGroupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginGroupRequestsSeriesModelValuesProperty"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginLatencySeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Percentile": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginLatencySeriesModelValuesProperty"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginFailuresSeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "StatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginFailuresSeriesModelValuesProperty"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerAttachedZoneModel": {
+        "type": "object",
+        "properties": {
+          "PullZoneId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Hostname": {
+            "type": "string",
+            "nullable": true
+          },
+          "TrafficServed": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerAccountSummaryModel": {
+        "type": "object",
+        "properties": {
+          "LoadBalancerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "TotalRequests": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalTraffic": {
+            "type": "number",
+            "format": "double"
+          },
+          "AttachedPullZoneCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerUsageModel": {
+        "type": "object",
+        "properties": {
+          "LoadBalancerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "PeriodStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "PeriodEnd": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ResetsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "CurrentRequests": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "IncludedRequests": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "MonthlyFee": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Tiers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerPricingTierModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoadBalancerPricingTierModel": {
+        "type": "object",
+        "properties": {
+          "ThresholdFromMillions": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ThresholdToMillions": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "PricePerMillion": {
+            "type": "number",
+            "format": "decimal"
+          }
+        },
+        "additionalProperties": false
+      },
       "DnsZoneRecordScanJobResponse": {
         "type": "object",
         "properties": {
@@ -37618,6 +38287,43 @@
         },
         "description": "(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)"
       },
+      "LoadBalancerStatisticsModelSummary": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsSummaryModel"
+          }
+        ],
+        "properties": {
+          "TotalRequests": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalTraffic": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageOriginRttMs": {
+            "type": "number",
+            "format": "double"
+          },
+          "AllOriginsExhausted": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageRetryDepth": {
+            "type": "number",
+            "format": "double"
+          },
+          "StickySessionHits": {
+            "type": "number",
+            "format": "double"
+          },
+          "RequestsByMethod": {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsSummaryModelRequestsByMethodProperty"
+          }
+        }
+      },
       "DnsZoneDiscoveredRecordModelType": {
         "type": "object",
         "oneOf": [
@@ -38846,6 +39552,46 @@
         "description": "The constructed 5XX error responses chart data",
         "nullable": true
       },
+      "LoadBalancerStatisticsSummaryModelRequestsByMethod": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginRequestsSeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginLatencySeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginFailuresSeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
       "DnsZoneStatisticsModelQueriesServedChart": {
         "type": "object",
         "additionalProperties": {
@@ -39742,6 +40488,18 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageRegionModel"
+        }
+      },
+      "CoreLoadBalancerStatisticsEndpointGetAttachedPullZones200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAttachedZoneModel"
+        }
+      },
+      "CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAccountSummaryModel"
         }
       },
       "CoreGetPaymentRequestsEndpointGetPaymentRequests200Response": {
@@ -40730,6 +41488,18 @@
           "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
+      "CoreLoadBalancerStatisticsEndpointGetAttachedPullZones200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAttachedZoneModel"
+        }
+      },
+      "CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAccountSummaryModel"
+        }
+      },
       "CoreGetPaymentRequestsEndpointGetPaymentRequests200ResponseSchema": {
         "type": "array",
         "items": {
@@ -41147,6 +41917,41 @@
           "format": "double"
         },
         "description": "The constructed 5XX error responses chart data"
+      },
+      "LoadBalancerStatisticsSummaryModelRequestsByMethodProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginRequestsSeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginLatencySeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginFailuresSeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
       },
       "DnsZoneStatisticsModelQueriesServedChartProperty": {
         "type": "object",
@@ -42127,6 +42932,9 @@
     },
     {
       "name": "Pricing"
+    },
+    {
+      "name": "Load Balancer"
     },
     {
       "name": "DNS Zone"
