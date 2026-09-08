@@ -22611,6 +22611,10 @@
             "type": "boolean",
             "description": "Determines if the optimizer origin tunnel system is enabled for this zone"
           },
+          "OptimizerTunnelActiveProbingEnabled": {
+            "type": "boolean",
+            "description": "Determines if the optimizer tunnel system active probing should be enabled for this zone"
+          },
           "OptimizerDesktopMaxWidth": {
             "maximum": 5000.0,
             "minimum": 0.0,
@@ -23999,6 +24003,11 @@
             "description": "Determines if the optimizer origin tunnel system should be enabled for this zone",
             "nullable": true
           },
+          "OptimizerTunnelActiveProbingEnabled": {
+            "type": "boolean",
+            "description": "Determines if the optimizer tunnel system active probing should be enabled for this zone",
+            "nullable": true
+          },
           "OptimizerDesktopMaxWidth": {
             "maximum": 5000.0,
             "minimum": 0.0,
@@ -24938,6 +24947,11 @@
           "OptimizerTunnelEnabled": {
             "type": "boolean",
             "description": "Determines if the optimizer origin tunnel system should be enabled for this zone",
+            "nullable": true
+          },
+          "OptimizerTunnelActiveProbingEnabled": {
+            "type": "boolean",
+            "description": "Determines if the optimizer tunnel system active probing should be enabled for this zone",
             "nullable": true
           },
           "OptimizerDesktopMaxWidth": {
