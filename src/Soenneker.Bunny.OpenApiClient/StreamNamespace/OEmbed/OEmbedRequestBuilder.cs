@@ -33,6 +33,9 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.OEmbed
         public OEmbedRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/stream/OEmbed{?expires*,maxHeight*,maxWidth*,token*,url*}", rawUrl)
         {
         }
+        /// <summary>
+        /// Implements the oEmbed specification (oembed.com) for bunny.net video embed URLs, allowing third-party sites and tools to auto-generate an embeddable player for a pasted video link. url must be a bunny.net player URL for an existing video — either the legacy player (e.g. &quot;https://iframe.mediadelivery.net/embed/{libraryId}/{videoId}&quot;) or the new player (e.g. &quot;https://player.mediadelivery.net/embed/{libraryId}/{videoId}&quot;) — not an arbitrary link. Only the library ID and video ID segments are read, so /play/ URLs are accepted as well as /embed/ ones. For private libraries, the request must satisfy the library&apos;s referer restrictions and, separately, a valid token and expires pair if token authentication is enabled — one does not substitute for the other.
+        /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoOEmbedModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -48,6 +51,9 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.OEmbed
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoOEmbedModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoOEmbedModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
+        /// <summary>
+        /// Implements the oEmbed specification (oembed.com) for bunny.net video embed URLs, allowing third-party sites and tools to auto-generate an embeddable player for a pasted video link. url must be a bunny.net player URL for an existing video — either the legacy player (e.g. &quot;https://iframe.mediadelivery.net/embed/{libraryId}/{videoId}&quot;) or the new player (e.g. &quot;https://player.mediadelivery.net/embed/{libraryId}/{videoId}&quot;) — not an arbitrary link. Only the library ID and video ID segments are read, so /play/ URLs are accepted as well as /embed/ ones. For private libraries, the request must satisfy the library&apos;s referer restrictions and, separately, a valid token and expires pair if token authentication is enabled — one does not substitute for the other.
+        /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -73,48 +79,40 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.OEmbed
         {
             return new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.OEmbed.OEmbedRequestBuilder(rawUrl, RequestAdapter);
         }
+        /// <summary>
+        /// Implements the oEmbed specification (oembed.com) for bunny.net video embed URLs, allowing third-party sites and tools to auto-generate an embeddable player for a pasted video link. url must be a bunny.net player URL for an existing video — either the legacy player (e.g. &quot;https://iframe.mediadelivery.net/embed/{libraryId}/{videoId}&quot;) or the new player (e.g. &quot;https://player.mediadelivery.net/embed/{libraryId}/{videoId}&quot;) — not an arbitrary link. Only the library ID and video ID segments are read, so /play/ URLs are accepted as well as /embed/ ones. For private libraries, the request must satisfy the library&apos;s referer restrictions and, separately, a valid token and expires pair if token authentication is enabled — one does not substitute for the other.
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        #pragma warning disable CS1591
         public partial class OEmbedRequestBuilderGetQueryParameters 
-        #pragma warning restore CS1591
         {
-            #pragma warning disable CS1591
+            /// <summary>Unix timestamp (seconds) the token is valid until, required when the video library has token authentication enabled.</summary>
             [QueryParameter("expires")]
             public long? Expires { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Maximum height in pixels for the embedded player; the player is scaled down to fit while preserving aspect ratio.</summary>
             [QueryParameter("maxHeight")]
             public int? MaxHeight { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>Maximum width in pixels for the embedded player; the player is scaled down to fit while preserving aspect ratio.</summary>
             [QueryParameter("maxWidth")]
             public int? MaxWidth { get; set; }
-            #pragma warning restore CS1591
+            /// <summary>Signed access token, required when the video library has token authentication enabled. An allowed referer is checked separately and does not exempt the request from this requirement.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("token")]
             public string? Token { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("token")]
             public string Token { get; set; }
-            #pragma warning restore CS1591
 #endif
+            /// <summary>The bunny.net player URL of the video to generate oEmbed data for (legacy iframe.mediadelivery.net or new player.mediadelivery.net player). Both /embed/ and /play/ paths are accepted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("url")]
             public string? Url { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("url")]
             public string Url { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

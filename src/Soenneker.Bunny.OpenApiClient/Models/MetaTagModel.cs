@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class MetaTagModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The property property</summary>
+        /// <summary>The meta tag key. Must match ^[A-Za-z0-9._:&apos;&quot;-]+$. Setting a tag with the property &quot;description&quot; also updates the video&apos;s Description field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Property { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Property { get; set; }
 #endif
-        /// <summary>The value property</summary>
+        /// <summary>The meta tag value. HTML/markup is stripped and the value is stored as plain text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

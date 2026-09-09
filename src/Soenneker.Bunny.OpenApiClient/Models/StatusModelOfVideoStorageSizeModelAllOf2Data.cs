@@ -7,16 +7,17 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
+    /// <summary>
+    /// The response payload. Some endpoints also populate this with error details when Success is false — see the endpoint&apos;s own response documentation.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class StatusModelOfVideoStorageSizeModelAllOf2Data : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The calculatedAt property</summary>
+        /// <summary>Timestamp when this storage size was calculated (UTC).</summary>
         public DateTimeOffset? CalculatedAt { get; set; }
-        /// <summary>The encoded property</summary>
+        /// <summary>Size in bytes of each encoded rendition, keyed by &quot;{resolution}-{codec}&quot; (e.g. &quot;720p-h264&quot;). Videos encoded before the current storage layout can also report legacy &quot;{width}x{height}&quot; resolutions, e.g. &quot;1920x1080-h264&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty? Encoded { get; set; }
@@ -24,15 +25,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty Encoded { get; set; }
 #endif
-        /// <summary>The miscellaneous property</summary>
+        /// <summary>Size in bytes of everything else: playlists, manifests, captions, audio extracts, etc.</summary>
         public long? Miscellaneous { get; set; }
-        /// <summary>The mp4Fallback property</summary>
+        /// <summary>Size in bytes of the MP4 fallback rendition.</summary>
         public long? Mp4Fallback { get; set; }
-        /// <summary>The originals property</summary>
+        /// <summary>Size in bytes of the original uploaded video file.</summary>
         public long? Originals { get; set; }
-        /// <summary>The previews property</summary>
+        /// <summary>Size in bytes of the video&apos;s GIF and WEBP previews.</summary>
         public long? Previews { get; set; }
-        /// <summary>The thumbnails property</summary>
+        /// <summary>Size in bytes of the video&apos;s JPEG thumbnails.</summary>
         public long? Thumbnails { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data"/> and sets the default values.

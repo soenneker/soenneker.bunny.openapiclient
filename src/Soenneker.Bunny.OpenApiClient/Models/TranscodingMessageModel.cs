@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class TranscodingMessageModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The issueCode property</summary>
+        /// <summary>Issue code identifying the specific transcoding problem. See IssueCodes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes? IssueCode { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes IssueCode { get; set; }
 #endif
-        /// <summary>The level property</summary>
+        /// <summary>Message severity. See Severity.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.Severity? Level { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.Severity Level { get; set; }
 #endif
-        /// <summary>The message property</summary>
+        /// <summary>Human-readable description of the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -36,9 +36,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The timeStamp property</summary>
+        /// <summary>Date and time when this message was added (UTC).</summary>
         public DateTimeOffset? TimeStamp { get; set; }
-        /// <summary>The value property</summary>
+        /// <summary>Additional context value for the issue, if applicable; otherwise empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Value { get; set; }

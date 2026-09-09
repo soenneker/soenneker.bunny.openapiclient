@@ -12,11 +12,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class ChapterModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The end time of the chapter in seconds</summary>
+        /// <summary>The end time of the chapter in seconds. Must be greater than Start and within the video&apos;s duration; chapters must not overlap each other.</summary>
         public int? End { get; set; }
-        /// <summary>The start time of the chapter in seconds</summary>
+        /// <summary>The start time of the chapter in seconds. Must be less than End and within the video&apos;s duration; chapters must not overlap each other.</summary>
         public int? Start { get; set; }
-        /// <summary>The title of the chapter</summary>
+        /// <summary>The title of the chapter, up to 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

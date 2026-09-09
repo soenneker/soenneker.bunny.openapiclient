@@ -28,7 +28,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The unique srclang shortcode for the caption</summary>
+        /// <summary>Not used — the caption&apos;s srclang is taken from the srclang route segment instead. Any value sent here is ignored.</summary>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Srclang { get; set; }

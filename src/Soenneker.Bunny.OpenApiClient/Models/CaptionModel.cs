@@ -28,7 +28,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Srclang { get; set; }
 #endif
-        /// <summary>The version property</summary>
+        /// <summary>Increments each time this caption is replaced; useful as a cache-busting value for the caption file URL.</summary>
         public int? Version { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

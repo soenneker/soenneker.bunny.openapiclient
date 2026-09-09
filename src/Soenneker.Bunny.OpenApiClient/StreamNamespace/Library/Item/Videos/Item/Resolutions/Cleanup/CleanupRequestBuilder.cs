@@ -34,25 +34,34 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
         }
         /// <summary>
-        /// Cleanup unconfigured resolutions
+        /// Deletes stored resolution files that are no longer configured for the library, or the specific resolutions passed in resolutionsToDelete/allResolutions. This cannot be undone. If the library has &apos;keep original files&apos; turned off, the original source file is also deleted as part of this cleanup even when deleteOriginal is not set.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel?> PostAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Resolutions.Cleanup.CleanupRequestBuilder.CleanupRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel?> PostAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Resolutions.Cleanup.CleanupRequestBuilder.CleanupRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel> PostAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Resolutions.Cleanup.CleanupRequestBuilder.CleanupRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel> PostAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Resolutions.Cleanup.CleanupRequestBuilder.CleanupRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Cleanup unconfigured resolutions
+        /// Deletes stored resolution files that are no longer configured for the library, or the specific resolutions passed in resolutionsToDelete/allResolutions. This cannot be undone. If the library has &apos;keep original files&apos; turned off, the original source file is also deleted as part of this cleanup even when deleteOriginal is not set.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,27 +89,23 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             return new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Resolutions.Cleanup.CleanupRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Cleanup unconfigured resolutions
+        /// Deletes stored resolution files that are no longer configured for the library, or the specific resolutions passed in resolutionsToDelete/allResolutions. This cannot be undone. If the library has &apos;keep original files&apos; turned off, the original source file is also deleted as part of this cleanup even when deleteOriginal is not set.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CleanupRequestBuilderPostQueryParameters 
         {
-            #pragma warning disable CS1591
+            /// <summary>If set to true, all resolutions for the video will be deleted, regardless of library configuration. When targeting HLS resolutions (the default, or outputs=all), at least one resolution must remain after cleanup or the request is rejected — scope outputs to mp4 to remove every rendition.</summary>
             [QueryParameter("allResolutions")]
             public bool? AllResolutions { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>If set to true, MP4 fallback files for the deleted resolutions are removed too.</summary>
             [QueryParameter("deleteMp4Files")]
             public bool? DeleteMp4Files { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>If set to true, all resolutions not currently configured for the library will be deleted.</summary>
             [QueryParameter("deleteNonConfiguredResolutions")]
             public bool? DeleteNonConfiguredResolutions { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>If set to true, the original source file is deleted as well. Note: the original is also deleted when the library has &apos;keep original files&apos; disabled, regardless of this flag.</summary>
             [QueryParameter("deleteOriginal")]
             public bool? DeleteOriginal { get; set; }
-            #pragma warning restore CS1591
             /// <summary>If set to true, no actual file manipulation will happen, only informational data will be returned</summary>
             [QueryParameter("dryRun")]
             public bool? DryRun { get; set; }
@@ -114,18 +119,15 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             [QueryParameter("outputs")]
             public string Outputs { get; set; }
 #endif
+            /// <summary>Comma-separated list of specific resolutions to delete (e.g. &quot;720p,480p&quot;), instead of relying on deleteNonConfiguredResolutions/allResolutions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("resolutionsToDelete")]
             public string? ResolutionsToDelete { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("resolutionsToDelete")]
             public string ResolutionsToDelete { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

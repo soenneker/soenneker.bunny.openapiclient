@@ -396,8 +396,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string OptimizerStaticHtmlWordPressPath { get; set; }
 #endif
-        /// <summary>Determines if the optimizer tunnel system active probing should be enabled for this zone</summary>
-        public bool? OptimizerTunnelActiveProbingEnabled { get; set; }
         /// <summary>Determines if the optimizer origin tunnel system should be enabled for this zone</summary>
         public bool? OptimizerTunnelEnabled { get; set; }
         /// <summary>Determines if image watermarking should be enabled</summary>
@@ -722,7 +720,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "OptimizerStaticHtmlEnabled", n => { OptimizerStaticHtmlEnabled = n.GetBoolValue(); } },
                 { "OptimizerStaticHtmlWordPressBypassCookie", n => { OptimizerStaticHtmlWordPressBypassCookie = n.GetStringValue(); } },
                 { "OptimizerStaticHtmlWordPressPath", n => { OptimizerStaticHtmlWordPressPath = n.GetStringValue(); } },
-                { "OptimizerTunnelActiveProbingEnabled", n => { OptimizerTunnelActiveProbingEnabled = n.GetBoolValue(); } },
                 { "OptimizerTunnelEnabled", n => { OptimizerTunnelEnabled = n.GetBoolValue(); } },
                 { "OptimizerWatermarkEnabled", n => { OptimizerWatermarkEnabled = n.GetBoolValue(); } },
                 { "OptimizerWatermarkMinImageSize", n => { OptimizerWatermarkMinImageSize = n.GetIntValue(); } },
@@ -882,7 +879,6 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("OptimizerStaticHtmlEnabled", OptimizerStaticHtmlEnabled);
             writer.WriteStringValue("OptimizerStaticHtmlWordPressBypassCookie", OptimizerStaticHtmlWordPressBypassCookie);
             writer.WriteStringValue("OptimizerStaticHtmlWordPressPath", OptimizerStaticHtmlWordPressPath);
-            writer.WriteBoolValue("OptimizerTunnelActiveProbingEnabled", OptimizerTunnelActiveProbingEnabled);
             writer.WriteBoolValue("OptimizerTunnelEnabled", OptimizerTunnelEnabled);
             writer.WriteBoolValue("OptimizerWatermarkEnabled", OptimizerWatermarkEnabled);
             writer.WriteIntValue("OptimizerWatermarkMinImageSize", OptimizerWatermarkMinImageSize);

@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library
     public partial class LibraryRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.stream.library.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The ID of the video library.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.WithLibraryItemRequestBuilder"/></returns>
         public global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.WithLibraryItemRequestBuilder this[long position]
         {

@@ -34,14 +34,18 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
         }
         /// <summary>
-        /// Set Thumbnail
+        /// Sets the video&apos;s thumbnail. If thumbnailUrl is omitted, the thumbnail is read from the request body as a raw image upload. If thumbnailUrl is one of thumbnail_1.jpg…thumbnail_5.jpg, an existing auto-generated thumbnail for the video is used instead. Any other value is fetched by the server as a URL, so it must point to a reachable, publicly accessible image.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel"/></returns>
         /// <param name="body">Binary request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 422 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel?> PostAsync(Stream body, Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Thumbnail.ThumbnailRequestBuilder.ThumbnailRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -56,12 +60,16 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Set Thumbnail
+        /// Sets the video&apos;s thumbnail. If thumbnailUrl is omitted, the thumbnail is read from the request body as a raw image upload. If thumbnailUrl is one of thumbnail_1.jpg…thumbnail_5.jpg, an existing auto-generated thumbnail for the video is used instead. Any other value is fetched by the server as a URL, so it must point to a reachable, publicly accessible image.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Binary request body</param>
@@ -92,23 +100,20 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             return new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Thumbnail.ThumbnailRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Set Thumbnail
+        /// Sets the video&apos;s thumbnail. If thumbnailUrl is omitted, the thumbnail is read from the request body as a raw image upload. If thumbnailUrl is one of thumbnail_1.jpg…thumbnail_5.jpg, an existing auto-generated thumbnail for the video is used instead. Any other value is fetched by the server as a URL, so it must point to a reachable, publicly accessible image.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ThumbnailRequestBuilderPostQueryParameters 
         {
+            /// <summary>Optional. One of thumbnail_1.jpg…thumbnail_5.jpg to reuse an auto-generated thumbnail, or a URL for the server to fetch. Omit to upload a raw image in the request body instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("thumbnailUrl")]
             public string? ThumbnailUrl { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("thumbnailUrl")]
             public string ThumbnailUrl { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

@@ -34,7 +34,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
         }
         /// <summary>
-        /// Transcribe video
+        /// Queues transcription for the video, generating captions. By default this is blocked if the video was already auto-transcribed; set force to true to re-queue (and re-bill) transcription anyway.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Transcribe video
+        /// Queues transcription for the video, generating captions. By default this is blocked if the video was already auto-transcribed; set force to true to re-queue (and re-bill) transcription anyway.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -98,15 +98,14 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             return new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Transcribe.TranscribeRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Transcribe video
+        /// Queues transcription for the video, generating captions. By default this is blocked if the video was already auto-transcribed; set force to true to re-queue (and re-bill) transcription anyway.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TranscribeRequestBuilderPostQueryParameters 
         {
-            #pragma warning disable CS1591
+            /// <summary>If set to true, re-queues transcription even if the video was already auto-transcribed. This re-bills transcription usage.</summary>
             [QueryParameter("force")]
             public bool? Force { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
     public partial class OutputsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.stream.library.item.videos.item.outputs.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The output codec to encode and add, must already be enabled for the library.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Outputs.Item.WithOutputCodecItemRequestBuilder"/></returns>
         public global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Outputs.Item.WithOutputCodecItemRequestBuilder this[int position]
         {

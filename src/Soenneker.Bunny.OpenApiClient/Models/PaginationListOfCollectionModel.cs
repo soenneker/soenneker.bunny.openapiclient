@@ -12,9 +12,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class PaginationListOfCollectionModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The current page of the response</summary>
+        /// <summary>The current page number of the result set (1-based).</summary>
         public long? CurrentPage { get; set; }
-        /// <summary>The result items on the current result</summary>
+        /// <summary>The items on the current page, in the order returned by the query; an empty list if no results match.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>? Items { get; set; }
@@ -22,9 +22,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel> Items { get; set; }
 #endif
-        /// <summary>The number of items returned per page</summary>
+        /// <summary>The effective page size after clamping the requested value; the last page may contain fewer items.</summary>
         public int? ItemsPerPage { get; set; }
-        /// <summary>The total number of items that can be returned</summary>
+        /// <summary>The total number of items across all pages matching the query, not just the current page.</summary>
         public long? TotalItems { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

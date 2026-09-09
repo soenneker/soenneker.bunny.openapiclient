@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
     public partial class CaptionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.stream.library.item.videos.item.captions.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The srclang shortcode for the caption, e.g. &quot;en&quot;.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Captions.Item.WithSrclangItemRequestBuilder"/></returns>
         public global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Captions.Item.WithSrclangItemRequestBuilder this[string position]
         {

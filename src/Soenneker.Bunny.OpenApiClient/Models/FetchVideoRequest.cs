@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty Headers { get; set; }
 #endif
-        /// <summary>The title that will be set to video.</summary>
+        /// <summary>The title that will be set to video. If omitted, the filename from the fetch URL is used instead, falling back to &quot;Fetched Video&quot; if that can&apos;t be determined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }

@@ -6938,11 +6938,13 @@
           "Manage Collections"
         ],
         "summary": "Get Collection",
+        "description": "Returns the details of a collection. Collections can group both videos and live streams, reflected separately in VideoCount and LiveStreamCount; PreviewImageUrls only reflects the videos in the collection.",
         "operationId": "StreamCollectionGetCollection",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -6952,6 +6954,7 @@
           {
             "name": "collectionId",
             "in": "path",
+            "description": "The unique ID of the collection.",
             "required": true,
             "schema": {
               "type": "string"
@@ -6960,6 +6963,7 @@
           {
             "name": "includeThumbnails",
             "in": "query",
+            "description": "If set to true, populates PreviewImageUrls with thumbnails for videos in the collection.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -6981,7 +6985,14 @@
             "description": "The requested collection was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7003,6 +7014,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7012,6 +7024,7 @@
           {
             "name": "collectionId",
             "in": "path",
+            "description": "The unique ID of the collection.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7039,17 +7052,55 @@
               }
             }
           },
+          "400": {
+            "description": "The collection name was missing or longer than 255 characters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
           "404": {
-            "description": "The requested collection was not found"
+            "description": "The requested collection was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -7063,11 +7114,13 @@
           "Manage Collections"
         ],
         "summary": "Delete Collection",
+        "description": "Permanently deletes the collection together with every video and live stream it contains \u2014 nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream; stop it before deleting the collection. This cannot be undone.",
         "operationId": "StreamCollectionDeleteCollection",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7077,6 +7130,7 @@
           {
             "name": "collectionId",
             "in": "path",
+            "description": "The unique ID of the collection.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7105,16 +7159,44 @@
             }
           },
           "404": {
-            "description": "The requested collection was not found"
+            "description": "The requested collection was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -7130,11 +7212,13 @@
           "Manage Collections"
         ],
         "summary": "Get Collection List",
+        "description": "Returns a paginated list of collections for the library. Collections can group both videos and live streams, reflected separately in VideoCount and LiveStreamCount; preview thumbnails only reflect the videos in each collection. When includeThumbnails is true, preview thumbnails are only populated for the first 60 collections of the returned page \u2014 later items in a larger page are returned without thumbnails.",
         "operationId": "StreamCollectionList",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7144,6 +7228,7 @@
           {
             "name": "page",
             "in": "query",
+            "description": "The page number to return, 1-based; values below 1 are treated as 1.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -7153,6 +7238,7 @@
           {
             "name": "itemsPerPage",
             "in": "query",
+            "description": "The number of items to return per page, clamped to a range of 10-1000.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -7162,6 +7248,7 @@
           {
             "name": "search",
             "in": "query",
+            "description": "Filters collections by name, case-insensitive substring match.",
             "schema": {
               "type": "string",
               "default": "",
@@ -7171,6 +7258,7 @@
           {
             "name": "orderBy",
             "in": "query",
+            "description": "The field to order results by. Possible values: date, title \u2014 any other value falls back to date.",
             "schema": {
               "type": "string",
               "default": "date",
@@ -7180,6 +7268,7 @@
           {
             "name": "includeThumbnails",
             "in": "query",
+            "description": "If set to true, populates PreviewImageUrls for each collection (only for the first 60 collections of the page).",
             "schema": {
               "type": "boolean",
               "default": false
@@ -7198,7 +7287,14 @@
             }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7220,6 +7316,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7248,11 +7345,35 @@
               }
             }
           },
+          "400": {
+            "description": "The collection name was missing or longer than 255 characters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7276,6 +7397,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7285,6 +7407,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7306,7 +7429,14 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7328,6 +7458,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7337,6 +7468,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7355,7 +7487,7 @@
         },
         "responses": {
           "200": {
-            "description": "The thumbnail was successfully set",
+            "description": "The video was successfully updated",
             "content": {
               "application/json": {
                 "schema": {
@@ -7365,16 +7497,44 @@
             }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -7388,11 +7548,13 @@
           "Manage Videos"
         ],
         "summary": "Delete Video",
+        "description": "Deletes the video. This cannot be undone. The video stops appearing in lookups right away, but playback may still be possible for some time afterward before access is fully revoked.",
         "operationId": "StreamVideoDeleteVideo",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7402,6 +7564,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7420,16 +7583,44 @@
             }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -7448,6 +7639,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7457,6 +7649,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7577,19 +7770,54 @@
             }
           },
           "400": {
-            "description": "The requested video was already uploaded"
+            "description": "The requested video was already uploaded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -7643,7 +7871,14 @@
             "description": "Video not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7662,11 +7897,13 @@
           "Manage Videos"
         ],
         "summary": "Get Video play data",
+        "description": "Returns playback URLs and metadata for the video. For libraries with token authentication enabled, token and expires must be a valid signed pair or the request is rejected.",
         "operationId": "StreamVideoGetVideoPlayData",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7676,6 +7913,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7684,6 +7922,7 @@
           {
             "name": "token",
             "in": "query",
+            "description": "Signed access token, required when the library has token authentication enabled.",
             "schema": {
               "type": "string",
               "default": "",
@@ -7693,6 +7932,7 @@
           {
             "name": "expires",
             "in": "query",
+            "description": "Unix timestamp (seconds) the token is valid until, required when the library has token authentication enabled.",
             "schema": {
               "type": "integer",
               "format": "int64",
@@ -7715,7 +7955,14 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7729,11 +7976,13 @@
           "Manage Videos"
         ],
         "summary": "Get Video heatmap data",
+        "description": "Returns raw heatmap data for the video, used to render the attention heatmap on the player timeline. Returns an empty string if the library has heatmaps disabled or no heatmap data exists yet.",
         "operationId": "StreamVideoGetVideoHeatmapData",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7743,6 +7992,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7751,6 +8001,7 @@
           {
             "name": "token",
             "in": "query",
+            "description": "Signed access token, required when the library has token authentication enabled.",
             "schema": {
               "type": "string",
               "default": "",
@@ -7760,6 +8011,7 @@
           {
             "name": "expires",
             "in": "query",
+            "description": "Unix timestamp (seconds) the token is valid until, required when the library has token authentication enabled.",
             "schema": {
               "type": "integer",
               "format": "int64",
@@ -7782,7 +8034,14 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7802,6 +8061,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7862,7 +8122,14 @@
             "description": "Video not found (when filtering by videoGuid)"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7881,11 +8148,13 @@
           "Manage Videos"
         ],
         "summary": "Reencode Video",
+        "description": "Re-encodes the video from its stored original file. Requires the original file to still be present in storage. If the library has transcribing enabled, this also re-queues (and re-bills) transcription.",
         "operationId": "StreamVideoReencodeVideo",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7895,6 +8164,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -7926,10 +8196,24 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -7948,11 +8232,13 @@
           "Manage Videos"
         ],
         "summary": "Add output codec to video",
+        "description": "Encodes and adds an additional output codec to an already-encoded video. Requires Premium Encoding to be enabled for the library and the codec to already be enabled for the library, and fails if the original source file is missing or the codec was already processed.",
         "operationId": "StreamVideoReencodeUsingCodec",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -7962,6 +8248,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string",
@@ -7971,6 +8258,7 @@
           {
             "name": "outputCodecId",
             "in": "path",
+            "description": "The output codec to encode and add, must already be enabled for the library.",
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/EncoderOutputCodec"
@@ -8002,10 +8290,24 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -8024,11 +8326,13 @@
           "Manage Videos"
         ],
         "summary": "Repackage Video",
+        "description": "Repackages the video from its existing .ts/.m4s segments without re-transcoding, primarily used to apply Enterprise DRM.",
         "operationId": "StreamVideoRepackage",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8038,6 +8342,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8071,10 +8376,24 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -8098,6 +8417,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8107,6 +8427,7 @@
           {
             "name": "page",
             "in": "query",
+            "description": "The page number to return, 1-based; values below 1 are treated as 1.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -8116,6 +8437,7 @@
           {
             "name": "itemsPerPage",
             "in": "query",
+            "description": "The number of items to return per page, clamped to a range of 10-1000.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -8125,6 +8447,7 @@
           {
             "name": "search",
             "in": "query",
+            "description": "Filters videos by title, case-insensitive substring match.",
             "schema": {
               "type": "string",
               "default": "",
@@ -8134,6 +8457,7 @@
           {
             "name": "collection",
             "in": "query",
+            "description": "Filters videos by collection ID.",
             "schema": {
               "type": "string",
               "default": "",
@@ -8143,6 +8467,7 @@
           {
             "name": "orderBy",
             "in": "query",
+            "description": "The field to order results by. Possible values: date, title \u2014 any other value falls back to date.",
             "schema": {
               "type": "string",
               "default": "date",
@@ -8172,7 +8497,14 @@
             }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -8204,6 +8536,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8233,10 +8566,24 @@
             }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "400": {
             "description": "Request was invalid",
@@ -8265,11 +8612,13 @@
           "Manage Videos"
         ],
         "summary": "Set Thumbnail",
+        "description": "Sets the video\u0027s thumbnail. If thumbnailUrl is omitted, the thumbnail is read from the request body as a raw image upload. If thumbnailUrl is one of thumbnail_1.jpg\u2026thumbnail_5.jpg, an existing auto-generated thumbnail for the video is used instead. Any other value is fetched by the server as a URL, so it must point to a reachable, publicly accessible image.",
         "operationId": "StreamVideoSetThumbnail",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8279,6 +8628,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8287,6 +8637,7 @@
           {
             "name": "thumbnailUrl",
             "in": "query",
+            "description": "Optional. One of thumbnail_1.jpg\u2026thumbnail_5.jpg to reuse an auto-generated thumbnail, or a URL for the server to fetch. Omit to upload a raw image in the request body instead.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -8325,13 +8676,34 @@
             }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "422": {
             "description": "Unable to fetch thumbnail from origin",
@@ -8344,7 +8716,14 @@
             }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -8365,6 +8744,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8374,6 +8754,7 @@
           {
             "name": "collectionId",
             "in": "query",
+            "description": "(Optional) The ID of the collection to put the created video in.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -8412,7 +8793,14 @@
             }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "400": {
             "description": "URL validation failed or request was invalid",
@@ -8445,13 +8833,34 @@
             }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -8472,6 +8881,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8481,6 +8891,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8489,6 +8900,7 @@
           {
             "name": "srclang",
             "in": "path",
+            "description": "The srclang shortcode for the caption, e.g. \u0022en\u0022.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8517,7 +8929,14 @@
             }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "400": {
             "description": "Failed uploading the captions",
@@ -8530,13 +8949,34 @@
             }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -8555,6 +8995,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8564,6 +9005,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8572,6 +9014,7 @@
           {
             "name": "srclang",
             "in": "path",
+            "description": "The srclang shortcode of the caption to delete, e.g. \u0022en\u0022.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8590,19 +9033,54 @@
             }
           },
           "404": {
-            "description": "The requested video was not found"
+            "description": "The requested video was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "400": {
-            "description": "Failed deleting the captions"
+            "description": "Failed deleting the captions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -8618,11 +9096,13 @@
           "Manage Videos"
         ],
         "summary": "Transcribe video",
+        "description": "Queues transcription for the video, generating captions. By default this is blocked if the video was already auto-transcribed; set force to true to re-queue (and re-bill) transcription anyway.",
         "operationId": "StreamVideoTranscribeVideo",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8632,6 +9112,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8640,6 +9121,7 @@
           {
             "name": "force",
             "in": "query",
+            "description": "If set to true, re-queues transcription even if the video was already auto-transcribed. This re-bills transcription usage.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -8731,11 +9213,13 @@
           "Manage Videos"
         ],
         "summary": "Trigger Smart actions",
+        "description": "Queues Smart Actions (title, description, chapters and/or moments generation) for a video that already has captions. This endpoint does not check the video library\u0027s Smart Actions setting \u2014 requests are accepted, processed and billed for transcription usage even when Smart Actions is disabled for the library. Requires at least one of GenerateTitle, GenerateDescription, GenerateChapters or GenerateMoments, and returns 429 once the library\u0027s Smart Actions usage threshold for the video is exceeded.",
         "operationId": "StreamVideoSmartGenerate",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8745,6 +9229,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8851,6 +9336,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8860,6 +9346,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8881,7 +9368,14 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -8905,6 +9399,7 @@
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8914,6 +9409,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8935,7 +9431,14 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authorization failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "429": {
             "description": "Rate limit exceeded"
@@ -8960,11 +9463,13 @@
           "Manage Videos"
         ],
         "summary": "Cleanup unconfigured resolutions",
+        "description": "Deletes stored resolution files that are no longer configured for the library, or the specific resolutions passed in resolutionsToDelete/allResolutions. This cannot be undone. If the library has \u0027keep original files\u0027 turned off, the original source file is also deleted as part of this cleanup even when deleteOriginal is not set.",
         "operationId": "StreamVideoDeleteResolutions",
         "parameters": [
           {
             "name": "libraryId",
             "in": "path",
+            "description": "The ID of the video library.",
             "required": true,
             "schema": {
               "type": "integer",
@@ -8974,6 +9479,7 @@
           {
             "name": "videoId",
             "in": "path",
+            "description": "The GUID of the video.",
             "required": true,
             "schema": {
               "type": "string"
@@ -8982,6 +9488,7 @@
           {
             "name": "resolutionsToDelete",
             "in": "query",
+            "description": "Comma-separated list of specific resolutions to delete (e.g. \u0022720p,480p\u0022), instead of relying on deleteNonConfiguredResolutions/allResolutions.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -8990,6 +9497,7 @@
           {
             "name": "deleteNonConfiguredResolutions",
             "in": "query",
+            "description": "If set to true, all resolutions not currently configured for the library will be deleted.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -8998,6 +9506,7 @@
           {
             "name": "allResolutions",
             "in": "query",
+            "description": "If set to true, all resolutions for the video will be deleted, regardless of library configuration. When targeting HLS resolutions (the default, or outputs=all), at least one resolution must remain after cleanup or the request is rejected \u2014 scope outputs to mp4 to remove every rendition.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -9006,6 +9515,7 @@
           {
             "name": "deleteOriginal",
             "in": "query",
+            "description": "If set to true, the original source file is deleted as well. Note: the original is also deleted when the library has \u0027keep original files\u0027 disabled, regardless of this flag.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -9023,6 +9533,7 @@
           {
             "name": "deleteMp4Files",
             "in": "query",
+            "description": "If set to true, MP4 fallback files for the deleted resolutions are removed too.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -9044,7 +9555,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/StatusModel"
+                  "$ref": "#/components/schemas/StatusModelOfResolutionsCleanupModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The cleanup was rejected, for example because it would leave the video with no available resolution. Data carries the plan as evaluated up to that point.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModelOfResolutionsCleanupModel"
                 }
               }
             }
@@ -9053,10 +9574,24 @@
             "description": "The requested video was not found"
           },
           "401": {
-            "description": "The request authentication failed"
+            "description": "The request authentication failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "403": {
-            "description": "The request authorization failed"
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -9074,11 +9609,14 @@
         "tags": [
           "OEmbed"
         ],
+        "summary": "Get oEmbed data",
+        "description": "Implements the oEmbed specification (oembed.com) for bunny.net video embed URLs, allowing third-party sites and tools to auto-generate an embeddable player for a pasted video link. url must be a bunny.net player URL for an existing video \u2014 either the legacy player (e.g. \u0022https://iframe.mediadelivery.net/embed/{libraryId}/{videoId}\u0022) or the new player (e.g. \u0022https://player.mediadelivery.net/embed/{libraryId}/{videoId}\u0022) \u2014 not an arbitrary link. Only the library ID and video ID segments are read, so /play/ URLs are accepted as well as /embed/ ones. For private libraries, the request must satisfy the library\u0027s referer restrictions and, separately, a valid token and expires pair if token authentication is enabled \u2014 one does not substitute for the other.",
         "operationId": "StreamOEmbedGetOEmbed",
         "parameters": [
           {
             "name": "url",
             "in": "query",
+            "description": "The bunny.net player URL of the video to generate oEmbed data for (legacy iframe.mediadelivery.net or new player.mediadelivery.net player). Both /embed/ and /play/ paths are accepted.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -9087,6 +9625,7 @@
           {
             "name": "maxWidth",
             "in": "query",
+            "description": "Maximum width in pixels for the embedded player; the player is scaled down to fit while preserving aspect ratio.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -9096,6 +9635,7 @@
           {
             "name": "maxHeight",
             "in": "query",
+            "description": "Maximum height in pixels for the embedded player; the player is scaled down to fit while preserving aspect ratio.",
             "schema": {
               "type": "integer",
               "format": "int32",
@@ -9105,6 +9645,7 @@
           {
             "name": "token",
             "in": "query",
+            "description": "Signed access token, required when the video library has token authentication enabled. An allowed referer is checked separately and does not exempt the request from this requirement.",
             "schema": {
               "type": "string",
               "default": "",
@@ -9114,6 +9655,7 @@
           {
             "name": "expires",
             "in": "query",
+            "description": "Unix timestamp (seconds) the token is valid until, required when the video library has token authentication enabled.",
             "schema": {
               "type": "integer",
               "format": "int64",
@@ -9123,7 +9665,7 @@
         ],
         "responses": {
           "200": {
-            "description": "200 response",
+            "description": "The oEmbed data for the video",
             "content": {
               "application/json": {
                 "schema": {
@@ -9131,6 +9673,15 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "The url could not be parsed"
+          },
+          "401": {
+            "description": "The video\u0027s library is private and no valid token/referer was provided"
+          },
+          "404": {
+            "description": "The url is not a recognized bunny.net player URL, or the video library or video does not exist"
           }
         }
       }
@@ -21762,10 +22313,6 @@
             "type": "boolean",
             "description": "Determines if the optimizer origin tunnel system is enabled for this zone"
           },
-          "OptimizerTunnelActiveProbingEnabled": {
-            "type": "boolean",
-            "description": "Determines if the optimizer tunnel system active probing should be enabled for this zone"
-          },
           "OptimizerDesktopMaxWidth": {
             "maximum": 5000.0,
             "minimum": 0.0,
@@ -23077,11 +23624,6 @@
             "description": "Determines if the optimizer origin tunnel system should be enabled for this zone",
             "nullable": true
           },
-          "OptimizerTunnelActiveProbingEnabled": {
-            "type": "boolean",
-            "description": "Determines if the optimizer tunnel system active probing should be enabled for this zone",
-            "nullable": true
-          },
           "OptimizerDesktopMaxWidth": {
             "maximum": 5000.0,
             "minimum": 0.0,
@@ -23942,11 +24484,6 @@
           "OptimizerTunnelEnabled": {
             "type": "boolean",
             "description": "Determines if the optimizer origin tunnel system should be enabled for this zone",
-            "nullable": true
-          },
-          "OptimizerTunnelActiveProbingEnabled": {
-            "type": "boolean",
-            "description": "Determines if the optimizer tunnel system active probing should be enabled for this zone",
             "nullable": true
           },
           "OptimizerDesktopMaxWidth": {
@@ -27906,17 +28443,22 @@
           },
           "videoCount": {
             "type": "integer",
-            "description": "The number of videos that the collection contains",
+            "description": "The number of on-demand videos in the collection. Live streams in the collection are not included in this count.",
+            "format": "int64"
+          },
+          "liveStreamCount": {
+            "type": "integer",
+            "description": "The number of live streams in the collection. On-demand videos are not included in this count.",
             "format": "int64"
           },
           "totalSize": {
             "type": "integer",
-            "description": "The total storage size of the collection",
+            "description": "The total storage size of all videos in the collection, in bytes.",
             "format": "int64"
           },
           "previewVideoIds": {
             "type": "string",
-            "description": "The IDs of videos to be used as preview icons",
+            "description": "Comma-separated list of video GUIDs used as preview thumbnails for the collection.",
             "nullable": true
           },
           "previewImageUrls": {
@@ -27925,46 +28467,6 @@
               "type": "string"
             },
             "description": "The URLs of preview images of videos in the collection",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PaginationListOfCollectionModel": {
-        "type": "object",
-        "properties": {
-          "totalItems": {
-            "type": "integer",
-            "description": "The total number of items that can be returned",
-            "format": "int64"
-          },
-          "currentPage": {
-            "type": "integer",
-            "description": "The current page of the response",
-            "format": "int64"
-          },
-          "itemsPerPage": {
-            "type": "integer",
-            "description": "The number of items returned per page",
-            "format": "int32"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CollectionModel"
-            },
-            "description": "The result items on the current result",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UpdateCollectionModel": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the collection",
             "nullable": true
           }
         },
@@ -27979,13 +28481,53 @@
           },
           "message": {
             "type": "string",
-            "description": "Response message description",
+            "description": "Human-readable message describing the result, typically populated with error details when Success is false.",
             "nullable": true
           },
           "statusCode": {
             "type": "integer",
-            "description": "The response status code",
+            "description": "The HTTP status code corresponding to the result of the request.",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaginationListOfCollectionModel": {
+        "type": "object",
+        "properties": {
+          "totalItems": {
+            "type": "integer",
+            "description": "The total number of items across all pages matching the query, not just the current page.",
+            "format": "int64"
+          },
+          "currentPage": {
+            "type": "integer",
+            "description": "The current page number of the result set (1-based).",
+            "format": "int64"
+          },
+          "itemsPerPage": {
+            "type": "integer",
+            "description": "The effective page size after clamping the requested value; the last page may contain fewer items.",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollectionModel"
+            },
+            "description": "The items on the current page, in the order returned by the query; an empty list if no results match.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCollectionModel": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name to assign to the collection. Required, up to 255 characters.",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -28063,7 +28605,7 @@
           },
           "rotation": {
             "type": "integer",
-            "description": "The rotation of the video",
+            "description": "Rotation of the source file in degrees as read from container metadata (e.g. 90, -90, 180, 270); null when no rotation metadata is present.",
             "nullable": true
           },
           "width": {
@@ -28078,13 +28620,13 @@
           },
           "availableResolutions": {
             "type": "string",
-            "description": "The available resolutions of the video",
+            "description": "Comma-separated list of resolution labels (e.g. \u0022360p,720p,1080p\u0022) that have finished encoding and are available for playback.",
             "nullable": true
           },
           "outputCodecs": {
             "minLength": 1,
             "type": "string",
-            "description": "Encoded output codecs of the video"
+            "description": "Comma-separated list of output codecs generated for this video (e.g. \u0022x264,vp9\u0022). See EncoderOutputCodec for possible values."
           },
           "thumbnailCount": {
             "type": "integer",
@@ -28093,12 +28635,12 @@
           },
           "encodeProgress": {
             "type": "integer",
-            "description": "The current encode progress of the video",
+            "description": "Encoding progress as a percentage from 0 to 100; reaches 100 when transcoding finishes.",
             "format": "int32"
           },
           "storageSize": {
             "type": "integer",
-            "description": "The amount of storage used by this video",
+            "description": "Total storage used by this video, in bytes.",
             "format": "int64"
           },
           "captions": {
@@ -28145,7 +28687,7 @@
           },
           "category": {
             "type": "string",
-            "description": "The automatically detected category of the video",
+            "description": "Automatically detected content category label; \u0022untagged\u0022 when no category has been determined yet.",
             "nullable": true
           },
           "chapters": {
@@ -28182,6 +28724,7 @@
           },
           "jitEncodingEnabled": {
             "type": "boolean",
+            "description": "Whether just-in-time encoding is enabled for this specific video, overriding the video library\u0027s default JitEncodingEnabled setting when set. Null means the library default applies.",
             "nullable": true
           },
           "smartGenerateStatus": {
@@ -28202,6 +28745,7 @@
           },
           "hasHighQualityPreview": {
             "type": "boolean",
+            "description": "Whether a high-quality animated preview has been generated for this video.",
             "nullable": true
           }
         },
@@ -28255,6 +28799,7 @@
           },
           "version": {
             "type": "integer",
+            "description": "Increments each time this caption is replaced; useful as a cache-busting value for the caption file URL.",
             "format": "int32"
           }
         },
@@ -28269,16 +28814,16 @@
           "title": {
             "minLength": 1,
             "type": "string",
-            "description": "The title of the chapter"
+            "description": "The title of the chapter, up to 255 characters."
           },
           "start": {
             "type": "integer",
-            "description": "The start time of the chapter in seconds",
+            "description": "The start time of the chapter in seconds. Must be less than End and within the video\u0027s duration; chapters must not overlap each other.",
             "format": "int32"
           },
           "end": {
             "type": "integer",
-            "description": "The end time of the chapter in seconds",
+            "description": "The end time of the chapter in seconds. Must be greater than Start and within the video\u0027s duration; chapters must not overlap each other.",
             "format": "int32"
           }
         },
@@ -28293,11 +28838,11 @@
           "label": {
             "minLength": 1,
             "type": "string",
-            "description": "The text description label for the chapter"
+            "description": "The text description label for the moment, up to 255 characters."
           },
           "timestamp": {
             "type": "integer",
-            "description": "The timestamp of the moment in seconds",
+            "description": "The timestamp of the moment in seconds. Must be within the video\u0027s duration.",
             "format": "int32"
           }
         },
@@ -28308,10 +28853,12 @@
         "properties": {
           "property": {
             "type": "string",
+            "description": "The meta tag key. Must match ^[A-Za-z0-9._:\u0027\u0022-]\u002B$. Setting a tag with the property \u0022description\u0022 also updates the video\u0027s Description field.",
             "nullable": true
           },
           "value": {
             "type": "string",
+            "description": "The meta tag value. HTML/markup is stripped and the value is stored as plain text.",
             "nullable": true
           }
         },
@@ -28322,20 +28869,23 @@
         "properties": {
           "timeStamp": {
             "type": "string",
+            "description": "Date and time when this message was added (UTC).",
             "format": "date-time"
           },
           "level": {
-            "$ref": "#/components/schemas/Severity"
+            "$ref": "#/components/schemas/TranscodingMessageModelLevel"
           },
           "issueCode": {
-            "$ref": "#/components/schemas/IssueCodes"
+            "$ref": "#/components/schemas/TranscodingMessageModelIssueCode"
           },
           "message": {
             "type": "string",
+            "description": "Human-readable description of the issue.",
             "nullable": true
           },
           "value": {
             "type": "string",
+            "description": "Additional context value for the issue, if applicable; otherwise empty.",
             "nullable": true
           }
         },
@@ -28457,118 +29007,148 @@
           },
           "libraryName": {
             "type": "string",
+            "description": "The name of the video library.",
             "nullable": true
           },
           "pullZoneId": {
             "type": "integer",
+            "description": "The pull zone ID backing the video library\u0027s CDN delivery.",
             "format": "int64"
           },
           "captionsPath": {
             "type": "string",
+            "description": "CDN URL of the directory containing the video\u0027s caption (.vtt) files.",
             "nullable": true
           },
           "seekPath": {
             "type": "string",
+            "description": "CDN URL of the directory containing the video\u0027s seek/scrub thumbnail sprites.",
             "nullable": true
           },
           "thumbnailUrl": {
             "type": "string",
+            "description": "CDN URL of the video\u0027s thumbnail image.",
             "nullable": true
           },
           "fallbackUrl": {
             "type": "string",
+            "description": "CDN URL prefix for the video\u0027s MP4 fallback renditions.",
             "nullable": true
           },
           "videoPlaylistUrl": {
             "type": "string",
+            "description": "CDN URL of the video\u0027s HLS master playlist.",
             "nullable": true
           },
           "originalUrl": {
             "type": "string",
+            "description": "CDN URL of the original uploaded source file. Only populated when the library allows early/original playback.",
             "nullable": true
           },
           "previewUrl": {
             "type": "string",
+            "description": "CDN URL of the video\u0027s animated preview (scrub thumbnail).",
             "nullable": true
           },
           "controls": {
             "type": "string",
+            "description": "Comma-separated list of player control identifiers enabled for this library.",
             "nullable": true
           },
           "enableDRM": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether DRM protection is enabled for this video."
           },
           "drmVersion": {
             "type": "integer",
+            "description": "DRM protection tier applied to this video, as an integer cast of the Basic/Enterprise tier enum. Only relevant when EnableDRM is true.",
             "format": "int32"
           },
           "playerKeyColor": {
             "type": "string",
+            "description": "The player\u0027s accent/key color, as a CSS color value.",
             "nullable": true
           },
           "vastTagUrl": {
             "type": "string",
+            "description": "VAST ad tag URL used to serve ads in the player; empty when ads are disabled.",
             "nullable": true
           },
           "viAiPublisherId": {
             "type": "string",
+            "description": "Publisher ID for the vi.ai advertising integration; ads are enabled in the player when this is non-empty.",
             "nullable": true
           },
           "captionsFontSize": {
             "type": "integer",
+            "description": "Caption font size in pixels.",
             "format": "int32"
           },
           "captionsFontColor": {
             "type": "string",
+            "description": "CSS color value for the caption text.",
             "nullable": true
           },
           "captionsBackground": {
             "type": "string",
+            "description": "CSS color value for the caption background.",
             "nullable": true
           },
           "uiLanguage": {
             "type": "string",
+            "description": "Locale code for the player\u0027s UI language (e.g. \u0022en\u0022).",
             "nullable": true
           },
           "allowEarlyPlay": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the video can be played from the original source file before encoding has finished."
           },
           "tokenAuthEnabled": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the library\u0027s CDN delivery requires signed URLs for playback assets (segments, manifests, thumbnails, etc.). This is a separate setting from whether this endpoint itself required a token to return data."
           },
           "enableMP4Fallback": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether MP4 fallback renditions are available for players that cannot use HLS."
           },
           "showHeatmap": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the attention heatmap is enabled for this library\u0027s player."
           },
           "fontFamily": {
             "type": "string",
+            "description": "CSS font-family value used by the player.",
             "nullable": true
           },
           "playbackSpeeds": {
             "type": "string",
+            "description": "Comma-separated list of playback speed multipliers offered to the viewer (e.g. \u00220.5,1,1.5,2\u0022).",
             "nullable": true
           },
           "widevineMinClientSecurityLevel": {
             "type": "integer",
+            "description": "Minimum required Widevine client security level (1-3). Ignored (always null here) when WidevineSdOnlyForL3 is enabled, since that setting takes precedence.",
             "format": "int32",
             "nullable": true
           },
           "widevineEmeRobustness": {
             "type": "string",
+            "description": "EME robustness string corresponding to WidevineMinClientSecurityLevel (e.g. \u0022SW_SECURE_CRYPTO\u0022, \u0022HW_SECURE_DECODE\u0022); null when no minimum level applies.",
             "nullable": true
           },
           "widevineSdOnlyForL3": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "When true, Widevine L3 (software-only) clients are capped to SD playback while stronger clients play at full quality; overrides WidevineMinClientSecurityLevel when both are set."
           },
           "maxSoftwareWidevineResolution": {
             "type": "integer",
+            "description": "Maximum vertical resolution allowed for software (L3) Widevine clients when WidevineSdOnlyForL3 is enabled; null otherwise.",
             "format": "int32",
             "nullable": true
           },
           "zoneTier": {
             "type": "integer",
+            "description": "Pull zone tier associated with this video library (integer enum value).",
             "format": "int32",
             "nullable": true
           },
@@ -28584,17 +29164,21 @@
             "$ref": "#/components/schemas/VideoPlayDataModelPreferredPlaybackSource"
           },
           "rememberPlayerPosition": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the player resumes from the viewer\u0027s last watched position."
           },
           "customCss": {
             "type": "string",
+            "description": "Custom CSS injected into the player. Only populated when the caller explicitly requests it.",
             "nullable": true
           },
           "exposeVideoMetadata": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether JSON-LD structured data (schema.org VideoObject markup) is rendered for this video, e.g. for SEO."
           },
           "enableCompactControls": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the player uses a compact control bar layout."
           }
         },
         "additionalProperties": false
@@ -28660,17 +29244,17 @@
         "properties": {
           "totalItems": {
             "type": "integer",
-            "description": "The total number of items that can be returned",
+            "description": "The total number of items across all pages matching the query, not just the current page.",
             "format": "int64"
           },
           "currentPage": {
             "type": "integer",
-            "description": "The current page of the response",
+            "description": "The current page number of the result set (1-based).",
             "format": "int64"
           },
           "itemsPerPage": {
             "type": "integer",
-            "description": "The number of items returned per page",
+            "description": "The effective page size after clamping the requested value; the last page may contain fewer items.",
             "format": "int32"
           },
           "items": {
@@ -28678,7 +29262,7 @@
             "items": {
               "$ref": "#/components/schemas/VideoModel"
             },
-            "description": "The result items on the current result",
+            "description": "The items on the current page, in the order returned by the query; an empty list if no results match.",
             "nullable": true
           }
         },
@@ -28719,7 +29303,7 @@
           },
           "collectionId": {
             "type": "string",
-            "description": "The ID of the collection where the video belongs",
+            "description": "The ID of the collection where the video belongs. Omit/null to leave the current collection unchanged; send an empty string to remove the video from its collection.",
             "nullable": true
           },
           "chapters": {
@@ -28727,7 +29311,7 @@
             "items": {
               "$ref": "#/components/schemas/ChapterModel"
             },
-            "description": "The list of chapters available for the video",
+            "description": "The list of chapters available for the video, up to 200. Omit/null to leave existing chapters unchanged; providing a list, including an empty one, fully replaces all existing chapters.",
             "nullable": true
           },
           "moments": {
@@ -28735,7 +29319,7 @@
             "items": {
               "$ref": "#/components/schemas/MomentModel"
             },
-            "description": "The list of moments available for the video",
+            "description": "The list of moments available for the video, up to 200. Omit/null to leave existing moments unchanged; providing a list, including an empty one, fully replaces all existing moments.",
             "nullable": true
           },
           "metaTags": {
@@ -28743,7 +29327,7 @@
             "items": {
               "$ref": "#/components/schemas/MetaTagModel"
             },
-            "description": "The meta tags added to the video",
+            "description": "The meta tags added to the video, up to 50. Omit/null to leave existing tags unchanged; providing a list, including an empty one, fully replaces all existing tags. Setting a tag with Property \u0022description\u0022 also updates the video\u0027s Description field.",
             "nullable": true
           }
         },
@@ -28765,7 +29349,7 @@
           },
           "title": {
             "type": "string",
-            "description": "The title that will be set to video.",
+            "description": "The title that will be set to video. If omitted, the filename from the fetch URL is used instead, falling back to \u0022Fetched Video\u0022 if that can\u0027t be determined.",
             "nullable": true
           }
         },
@@ -28780,12 +29364,12 @@
           },
           "message": {
             "type": "string",
-            "description": "Response message description",
+            "description": "Human-readable message describing the result, typically populated with error details when Success is false.",
             "nullable": true
           },
           "statusCode": {
             "type": "integer",
-            "description": "The response status code",
+            "description": "The HTTP status code corresponding to the result of the request.",
             "format": "int32"
           },
           "data": {
@@ -28829,8 +29413,10 @@
         "properties": {
           "srclang": {
             "type": "string",
-            "description": "The unique srclang shortcode for the caption",
-            "nullable": true
+            "description": "Not used \u2014 the caption\u0027s srclang is taken from the srclang route segment instead. Any value sent here is ignored.",
+            "nullable": true,
+            "deprecated": true,
+            "x-deprecatedMessage": "Not used \u2014 the caption\u0027s srclang is taken from the srclang route segment instead. Any value sent here is ignored."
           },
           "label": {
             "type": "string",
@@ -28924,12 +29510,12 @@
           },
           "message": {
             "type": "string",
-            "description": "Response message description",
+            "description": "Human-readable message describing the result, typically populated with error details when Success is false.",
             "nullable": true
           },
           "statusCode": {
             "type": "integer",
-            "description": "The response status code",
+            "description": "The HTTP status code corresponding to the result of the request.",
             "format": "int32"
           },
           "data": {
@@ -28942,10 +29528,12 @@
         "properties": {
           "videoId": {
             "type": "string",
+            "description": "The GUID of the video.",
             "nullable": true
           },
           "videoLibraryId": {
             "type": "integer",
+            "description": "The ID of the video library.",
             "format": "int64"
           },
           "availableResolutions": {
@@ -28953,6 +29541,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Resolutions currently ready to stream for this video.",
             "nullable": true
           },
           "configuredResolutions": {
@@ -28960,6 +29549,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Resolutions the video library is configured to encode; may not all exist yet for this video.",
             "nullable": true
           },
           "playlistResolutions": {
@@ -28967,6 +29557,7 @@
             "items": {
               "$ref": "#/components/schemas/ResolutionReference"
             },
+            "description": "Resolutions declared in the video\u0027s HLS master playlist.",
             "nullable": true
           },
           "storageResolutions": {
@@ -28974,6 +29565,7 @@
             "items": {
               "$ref": "#/components/schemas/ResolutionReference"
             },
+            "description": "Resolutions found as folders in object storage; can diverge from PlaylistResolutions.",
             "nullable": true
           },
           "mp4Resolutions": {
@@ -28981,6 +29573,7 @@
             "items": {
               "$ref": "#/components/schemas/ResolutionReference"
             },
+            "description": "Resolutions found as MP4 fallback files in object storage.",
             "nullable": true
           },
           "storageObjects": {
@@ -28988,6 +29581,7 @@
             "items": {
               "$ref": "#/components/schemas/StorageObjectModel"
             },
+            "description": "All storage objects found for this video.",
             "nullable": true
           },
           "oldResolutions": {
@@ -28995,13 +29589,16 @@
             "items": {
               "$ref": "#/components/schemas/StorageObjectModel"
             },
+            "description": "Storage folders using the legacy \u0022{width}x{height}\u0022 naming, populated only when HasBothOldAndNewResolutionFormat is true.",
             "nullable": true
           },
           "hasBothOldAndNewResolutionFormat": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "True when storage contains both the legacy \u0022{width}x{height}\u0022 folder naming and the current \u0022{height}p\u0022 naming for the same video \u2014 can happen when a codec was added via API rather than a full re-encode."
           },
           "hasOriginal": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the original uploaded source file is present in storage."
           }
         },
         "additionalProperties": false
@@ -29011,10 +29608,12 @@
         "properties": {
           "resolution": {
             "type": "string",
+            "description": "The resolution this reference applies to (e.g. \u0022720p\u0022).",
             "nullable": true
           },
           "path": {
             "type": "string",
+            "description": "The storage path where this resolution\u0027s files are found.",
             "nullable": true
           }
         },
@@ -29090,12 +29689,12 @@
           },
           "message": {
             "type": "string",
-            "description": "Response message description",
+            "description": "Human-readable message describing the result, typically populated with error details when Success is false.",
             "nullable": true
           },
           "statusCode": {
             "type": "integer",
-            "description": "The response status code",
+            "description": "The HTTP status code corresponding to the result of the request.",
             "format": "int32"
           },
           "data": {
@@ -29111,26 +29710,32 @@
           },
           "thumbnails": {
             "type": "integer",
+            "description": "Size in bytes of the video\u0027s JPEG thumbnails.",
             "format": "int64"
           },
           "previews": {
             "type": "integer",
+            "description": "Size in bytes of the video\u0027s GIF and WEBP previews.",
             "format": "int64"
           },
           "originals": {
             "type": "integer",
+            "description": "Size in bytes of the original uploaded video file.",
             "format": "int64"
           },
           "mp4Fallback": {
             "type": "integer",
+            "description": "Size in bytes of the MP4 fallback rendition.",
             "format": "int64"
           },
           "miscellaneous": {
             "type": "integer",
+            "description": "Size in bytes of everything else: playlists, manifests, captions, audio extracts, etc.",
             "format": "int64"
           },
           "calculatedAt": {
             "type": "string",
+            "description": "Timestamp when this storage size was calculated (UTC).",
             "format": "date-time"
           }
         },
@@ -29141,15 +29746,120 @@
         "properties": {
           "codec": {
             "type": "string",
+            "description": "Output codec name as used by the storage layout (e.g. \u0022h264\u0022, \u0022hevc\u0022, \u0022vp9\u0022, \u0022av1\u0022). Note that h264 is reported as \u0022x264\u0022 in VideoModel.OutputCodecs.",
             "nullable": true
           },
           "resolution": {
             "type": "string",
+            "description": "Resolution of this rendition (e.g. \u0022720p\u0022, \u00221080p\u0022), or a legacy \u0022{width}x{height}\u0022 value for older videos.",
             "nullable": true
           },
           "size": {
             "type": "integer",
+            "description": "Size of this rendition in bytes.",
             "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusModelOfResolutionsCleanupModel": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Determines if the request was successful"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable message describing the result, typically populated with error details when Success is false.",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "description": "The HTTP status code corresponding to the result of the request.",
+            "format": "int32"
+          },
+          "data": {
+            "$ref": "#/components/schemas/StatusModelOfResolutionsCleanupModelAllOf2Data"
+          }
+        }
+      },
+      "ResolutionsCleanupModel": {
+        "type": "object",
+        "properties": {
+          "videoId": {
+            "type": "string",
+            "description": "The GUID of the video.",
+            "nullable": true
+          },
+          "videoLibraryId": {
+            "type": "integer",
+            "description": "The ID of the video library.",
+            "format": "int64"
+          },
+          "resolutionsToDelete": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal as part of this cleanup, across the HLS playlist, object storage, and MP4 fallback set. Populated even when dryRun is true or an individual deletion fails \u2014 see UpdatedAvailableResolutions/ModifiedPlaylist/DeletedStorageObjects for what was actually changed.",
+            "nullable": true
+          },
+          "resolutionsToDeleteFromPlaylist": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal from the HLS master playlist. Populated even when dryRun is true.",
+            "nullable": true
+          },
+          "resolutionsToDeleteFromStorage": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal from object storage. Populated even when dryRun is true or an individual deletion fails.",
+            "nullable": true
+          },
+          "resolutionsToDeleteFromMp4": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal from the MP4 fallback set. Populated even when dryRun is true.",
+            "nullable": true
+          },
+          "storageObjectsToDelete": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Storage object paths selected for deletion as part of this cleanup. These are candidates, not confirmations: the list is populated even when dryRun is true or when an individual deletion fails \u2014 see DeletedStorageObjects for whether at least one deletion actually succeeded.",
+            "nullable": true
+          },
+          "availableResolutionsAfter": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The video\u0027s available resolutions after this cleanup.",
+            "nullable": true
+          },
+          "updatedAvailableResolutions": {
+            "type": "boolean",
+            "description": "Whether the video\u0027s AvailableResolutions field was rewritten as part of this cleanup."
+          },
+          "modifiedPlaylist": {
+            "type": "boolean",
+            "description": "Whether the HLS master playlist was rewritten to remove the deleted resolutions."
+          },
+          "deletedStorageObjects": {
+            "type": "boolean",
+            "description": "Whether at least one of the storage objects in StorageObjectsToDelete was actually deleted (always false when dryRun is true). Individual objects can still have failed to delete \u2014 their failures are logged and do not clear this flag \u2014 so this confirms the cleanup did something, not that it removed everything listed."
+          },
+          "deletedOriginal": {
+            "type": "boolean",
+            "description": "Whether the original uploaded source file was deleted from storage as part of this operation."
           }
         },
         "additionalProperties": false
@@ -29159,48 +29869,59 @@
         "properties": {
           "version": {
             "type": "string",
+            "description": "The oEmbed spec version implemented by this response. Always \u00221.0\u0022.",
             "nullable": true
           },
           "title": {
             "type": "string",
+            "description": "The title of the video.",
             "nullable": true
           },
           "type": {
             "type": "string",
+            "description": "The oEmbed resource type. Always \u0022video\u0022 for this endpoint.",
             "nullable": true
           },
           "thumbnail_url": {
             "type": "string",
+            "description": "The CDN URL of the video\u0027s thumbnail image.",
             "nullable": true
           },
           "thumbnail_width": {
             "type": "integer",
+            "description": "Width in pixels of the thumbnail image. Omitted for custom-uploaded thumbnails, whose dimensions are not known.",
             "format": "int32",
             "nullable": true
           },
           "thumbnail_height": {
             "type": "integer",
+            "description": "Height in pixels of the thumbnail image. Omitted for custom-uploaded thumbnails, whose dimensions are not known.",
             "format": "int32",
             "nullable": true
           },
           "width": {
             "type": "integer",
+            "description": "Width in pixels of the embedded player iframe, scaled to fit within maxWidth/maxHeight while preserving the video\u0027s aspect ratio.",
             "format": "int32"
           },
           "height": {
             "type": "integer",
+            "description": "Height in pixels of the embedded player iframe, scaled to fit within maxWidth/maxHeight while preserving the video\u0027s aspect ratio.",
             "format": "int32"
           },
           "html": {
             "type": "string",
+            "description": "The HTML \u003Ciframe\u003E markup required to embed the video player.",
             "nullable": true
           },
           "provider_name": {
             "type": "string",
+            "description": "The name of the embed provider. Always \u0022bunny.net\u0022.",
             "nullable": true
           },
           "provider_url": {
             "type": "string",
+            "description": "The URL of the embed provider. Always \u0022https://bunny.net/\u0022.",
             "nullable": true
           }
         },
@@ -38744,6 +39465,24 @@
         },
         "description": "Per-feature smart generate statuses (title, description, chapters, moments). Null for a feature on legacy rows."
       },
+      "TranscodingMessageModelLevel": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Severity"
+          }
+        ],
+        "description": "Message severity. See Severity."
+      },
+      "TranscodingMessageModelIssueCode": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/IssueCodes"
+          }
+        ],
+        "description": "Issue code identifying the specific transcoding problem. See IssueCodes."
+      },
       "SmartGenerateFeaturesStatusModelTitle": {
         "type": "object",
         "oneOf": [
@@ -38838,7 +39577,7 @@
           },
           "rotation": {
             "type": "integer",
-            "description": "The rotation of the video",
+            "description": "Rotation of the source file in degrees as read from container metadata (e.g. 90, -90, 180, 270); null when no rotation metadata is present.",
             "nullable": true
           },
           "width": {
@@ -38853,13 +39592,13 @@
           },
           "availableResolutions": {
             "type": "string",
-            "description": "The available resolutions of the video",
+            "description": "Comma-separated list of resolution labels (e.g. \u0022360p,720p,1080p\u0022) that have finished encoding and are available for playback.",
             "nullable": true
           },
           "outputCodecs": {
             "minLength": 1,
             "type": "string",
-            "description": "Encoded output codecs of the video"
+            "description": "Comma-separated list of output codecs generated for this video (e.g. \u0022x264,vp9\u0022). See EncoderOutputCodec for possible values."
           },
           "thumbnailCount": {
             "type": "integer",
@@ -38868,12 +39607,12 @@
           },
           "encodeProgress": {
             "type": "integer",
-            "description": "The current encode progress of the video",
+            "description": "Encoding progress as a percentage from 0 to 100; reaches 100 when transcoding finishes.",
             "format": "int32"
           },
           "storageSize": {
             "type": "integer",
-            "description": "The amount of storage used by this video",
+            "description": "Total storage used by this video, in bytes.",
             "format": "int64"
           },
           "captions": {
@@ -38920,7 +39659,7 @@
           },
           "category": {
             "type": "string",
-            "description": "The automatically detected category of the video",
+            "description": "Automatically detected content category label; \u0022untagged\u0022 when no category has been determined yet.",
             "nullable": true
           },
           "chapters": {
@@ -38957,6 +39696,7 @@
           },
           "jitEncodingEnabled": {
             "type": "boolean",
+            "description": "Whether just-in-time encoding is enabled for this specific video, overriding the video library\u0027s default JitEncodingEnabled setting when set. Null means the library default applies.",
             "nullable": true
           },
           "smartGenerateStatus": {
@@ -38977,6 +39717,7 @@
           },
           "hasHighQualityPreview": {
             "type": "boolean",
+            "description": "Whether a high-quality animated preview has been generated for this video.",
             "nullable": true
           }
         },
@@ -39014,6 +39755,15 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/StatusModelOfVideoStorageSizeModelAllOf2Data"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusModelOfResolutionsCleanupModelAllOf2": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/StatusModelOfResolutionsCleanupModelAllOf2Data"
           }
         },
         "additionalProperties": false
@@ -39146,7 +39896,8 @@
             "description": "UI-friendly summary of warnings found in the uploaded captions file",
             "nullable": true
           }
-        }
+        },
+        "description": "The response payload. Some endpoints also populate this with error details when Success is false \u2014 see the endpoint\u0027s own response documentation."
       },
       "StatusModelOfVideoResolutionsInfoModelAllOf2Data": {
         "type": "object",
@@ -39158,10 +39909,12 @@
         "properties": {
           "videoId": {
             "type": "string",
+            "description": "The GUID of the video.",
             "nullable": true
           },
           "videoLibraryId": {
             "type": "integer",
+            "description": "The ID of the video library.",
             "format": "int64"
           },
           "availableResolutions": {
@@ -39169,6 +39922,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Resolutions currently ready to stream for this video.",
             "nullable": true
           },
           "configuredResolutions": {
@@ -39176,6 +39930,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Resolutions the video library is configured to encode; may not all exist yet for this video.",
             "nullable": true
           },
           "playlistResolutions": {
@@ -39183,6 +39938,7 @@
             "items": {
               "$ref": "#/components/schemas/ResolutionReference"
             },
+            "description": "Resolutions declared in the video\u0027s HLS master playlist.",
             "nullable": true
           },
           "storageResolutions": {
@@ -39190,6 +39946,7 @@
             "items": {
               "$ref": "#/components/schemas/ResolutionReference"
             },
+            "description": "Resolutions found as folders in object storage; can diverge from PlaylistResolutions.",
             "nullable": true
           },
           "mp4Resolutions": {
@@ -39197,6 +39954,7 @@
             "items": {
               "$ref": "#/components/schemas/ResolutionReference"
             },
+            "description": "Resolutions found as MP4 fallback files in object storage.",
             "nullable": true
           },
           "storageObjects": {
@@ -39204,6 +39962,7 @@
             "items": {
               "$ref": "#/components/schemas/StorageObjectModel"
             },
+            "description": "All storage objects found for this video.",
             "nullable": true
           },
           "oldResolutions": {
@@ -39211,15 +39970,19 @@
             "items": {
               "$ref": "#/components/schemas/StorageObjectModel"
             },
+            "description": "Storage folders using the legacy \u0022{width}x{height}\u0022 naming, populated only when HasBothOldAndNewResolutionFormat is true.",
             "nullable": true
           },
           "hasBothOldAndNewResolutionFormat": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "True when storage contains both the legacy \u0022{width}x{height}\u0022 folder naming and the current \u0022{height}p\u0022 naming for the same video \u2014 can happen when a codec was added via API rather than a full re-encode."
           },
           "hasOriginal": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the original uploaded source file is present in storage."
           }
-        }
+        },
+        "description": "The response payload. Some endpoints also populate this with error details when Success is false \u2014 see the endpoint\u0027s own response documentation."
       },
       "StatusModelOfVideoStorageSizeModelAllOf2Data": {
         "type": "object",
@@ -39234,29 +39997,121 @@
           },
           "thumbnails": {
             "type": "integer",
+            "description": "Size in bytes of the video\u0027s JPEG thumbnails.",
             "format": "int64"
           },
           "previews": {
             "type": "integer",
+            "description": "Size in bytes of the video\u0027s GIF and WEBP previews.",
             "format": "int64"
           },
           "originals": {
             "type": "integer",
+            "description": "Size in bytes of the original uploaded video file.",
             "format": "int64"
           },
           "mp4Fallback": {
             "type": "integer",
+            "description": "Size in bytes of the MP4 fallback rendition.",
             "format": "int64"
           },
           "miscellaneous": {
             "type": "integer",
+            "description": "Size in bytes of everything else: playlists, manifests, captions, audio extracts, etc.",
             "format": "int64"
           },
           "calculatedAt": {
             "type": "string",
+            "description": "Timestamp when this storage size was calculated (UTC).",
             "format": "date-time"
           }
-        }
+        },
+        "description": "The response payload. Some endpoints also populate this with error details when Success is false \u2014 see the endpoint\u0027s own response documentation."
+      },
+      "StatusModelOfResolutionsCleanupModelAllOf2Data": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ResolutionsCleanupModel"
+          }
+        ],
+        "properties": {
+          "videoId": {
+            "type": "string",
+            "description": "The GUID of the video.",
+            "nullable": true
+          },
+          "videoLibraryId": {
+            "type": "integer",
+            "description": "The ID of the video library.",
+            "format": "int64"
+          },
+          "resolutionsToDelete": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal as part of this cleanup, across the HLS playlist, object storage, and MP4 fallback set. Populated even when dryRun is true or an individual deletion fails \u2014 see UpdatedAvailableResolutions/ModifiedPlaylist/DeletedStorageObjects for what was actually changed.",
+            "nullable": true
+          },
+          "resolutionsToDeleteFromPlaylist": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal from the HLS master playlist. Populated even when dryRun is true.",
+            "nullable": true
+          },
+          "resolutionsToDeleteFromStorage": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal from object storage. Populated even when dryRun is true or an individual deletion fails.",
+            "nullable": true
+          },
+          "resolutionsToDeleteFromMp4": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Resolutions selected for removal from the MP4 fallback set. Populated even when dryRun is true.",
+            "nullable": true
+          },
+          "storageObjectsToDelete": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Storage object paths selected for deletion as part of this cleanup. These are candidates, not confirmations: the list is populated even when dryRun is true or when an individual deletion fails \u2014 see DeletedStorageObjects for whether at least one deletion actually succeeded.",
+            "nullable": true
+          },
+          "availableResolutionsAfter": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The video\u0027s available resolutions after this cleanup.",
+            "nullable": true
+          },
+          "updatedAvailableResolutions": {
+            "type": "boolean",
+            "description": "Whether the video\u0027s AvailableResolutions field was rewritten as part of this cleanup."
+          },
+          "modifiedPlaylist": {
+            "type": "boolean",
+            "description": "Whether the HLS master playlist was rewritten to remove the deleted resolutions."
+          },
+          "deletedStorageObjects": {
+            "type": "boolean",
+            "description": "Whether at least one of the storage objects in StorageObjectsToDelete was actually deleted (always false when dryRun is true). Individual objects can still have failed to delete \u2014 their failures are logged and do not clear this flag \u2014 so this confirms the cleanup did something, not that it removed everything listed."
+          },
+          "deletedOriginal": {
+            "type": "boolean",
+            "description": "Whether the original uploaded source file was deleted from storage as part of this operation."
+          }
+        },
+        "description": "The response payload. Some endpoints also populate this with error details when Success is false \u2014 see the endpoint\u0027s own response documentation."
       },
       "OptimizerClassModelProperties": {
         "type": "object",
@@ -39749,6 +40604,7 @@
         "additionalProperties": {
           "$ref": "#/components/schemas/CodecRenditionSizeModel"
         },
+        "description": "Size in bytes of each encoded rendition, keyed by \u0022{resolution}-{codec}\u0022 (e.g. \u0022720p-h264\u0022). Videos encoded before the current storage layout can also report legacy \u0022{width}x{height}\u0022 resolutions, e.g. \u00221920x1080-h264\u0022.",
         "nullable": true
       },
       "ApiGuardianEndpointDetailsResponseBodySchemasYaml": {
@@ -42078,7 +42934,8 @@
         "type": "object",
         "additionalProperties": {
           "$ref": "#/components/schemas/CodecRenditionSizeModel"
-        }
+        },
+        "description": "Size in bytes of each encoded rendition, keyed by \u0022{resolution}-{codec}\u0022 (e.g. \u0022720p-h264\u0022). Videos encoded before the current storage layout can also report legacy \u0022{width}x{height}\u0022 resolutions, e.g. \u00221920x1080-h264\u0022."
       },
       "AcceptedResultValue": {
         "type": "object"

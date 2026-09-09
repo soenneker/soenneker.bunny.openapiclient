@@ -34,7 +34,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         {
         }
         /// <summary>
-        /// Trigger Smart actions
+        /// Queues Smart Actions (title, description, chapters and/or moments generation) for a video that already has captions. This endpoint does not check the video library&apos;s Smart Actions setting — requests are accepted, processed and billed for transcription usage even when Smart Actions is disabled for the library. Requires at least one of GenerateTitle, GenerateDescription, GenerateChapters or GenerateMoments, and returns 429 once the library&apos;s Smart Actions usage threshold for the video is exceeded.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel"/></returns>
         /// <param name="body">The request body</param>
@@ -69,7 +69,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Trigger Smart actions
+        /// Queues Smart Actions (title, description, chapters and/or moments generation) for a video that already has captions. This endpoint does not check the video library&apos;s Smart Actions setting — requests are accepted, processed and billed for transcription usage even when Smart Actions is disabled for the library. Requires at least one of GenerateTitle, GenerateDescription, GenerateChapters or GenerateMoments, and returns 429 once the library&apos;s Smart Actions usage threshold for the video is exceeded.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

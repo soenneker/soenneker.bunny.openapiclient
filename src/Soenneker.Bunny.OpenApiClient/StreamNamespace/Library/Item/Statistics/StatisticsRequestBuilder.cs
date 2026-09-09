@@ -39,6 +39,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel?> GetAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +50,11 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.

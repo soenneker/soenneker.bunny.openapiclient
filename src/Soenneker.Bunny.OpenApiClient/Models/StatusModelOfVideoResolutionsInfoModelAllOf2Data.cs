@@ -7,14 +7,15 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
+    /// <summary>
+    /// The response payload. Some endpoints also populate this with error details when Success is false — see the endpoint&apos;s own response documentation.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class StatusModelOfVideoResolutionsInfoModelAllOf2Data : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The availableResolutions property</summary>
+        /// <summary>Resolutions currently ready to stream for this video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AvailableResolutions { get; set; }
@@ -22,7 +23,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> AvailableResolutions { get; set; }
 #endif
-        /// <summary>The configuredResolutions property</summary>
+        /// <summary>Resolutions the video library is configured to encode; may not all exist yet for this video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ConfiguredResolutions { get; set; }
@@ -30,11 +31,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> ConfiguredResolutions { get; set; }
 #endif
-        /// <summary>The hasBothOldAndNewResolutionFormat property</summary>
+        /// <summary>True when storage contains both the legacy &quot;{width}x{height}&quot; folder naming and the current &quot;{height}p&quot; naming for the same video — can happen when a codec was added via API rather than a full re-encode.</summary>
         public bool? HasBothOldAndNewResolutionFormat { get; set; }
-        /// <summary>The hasOriginal property</summary>
+        /// <summary>Whether the original uploaded source file is present in storage.</summary>
         public bool? HasOriginal { get; set; }
-        /// <summary>The mp4Resolutions property</summary>
+        /// <summary>Resolutions found as MP4 fallback files in object storage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? Mp4Resolutions { get; set; }
@@ -42,7 +43,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> Mp4Resolutions { get; set; }
 #endif
-        /// <summary>The oldResolutions property</summary>
+        /// <summary>Storage folders using the legacy &quot;{width}x{height}&quot; naming, populated only when HasBothOldAndNewResolutionFormat is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? OldResolutions { get; set; }
@@ -50,7 +51,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> OldResolutions { get; set; }
 #endif
-        /// <summary>The playlistResolutions property</summary>
+        /// <summary>Resolutions declared in the video&apos;s HLS master playlist.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? PlaylistResolutions { get; set; }
@@ -58,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> PlaylistResolutions { get; set; }
 #endif
-        /// <summary>The storageObjects property</summary>
+        /// <summary>All storage objects found for this video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? StorageObjects { get; set; }
@@ -66,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> StorageObjects { get; set; }
 #endif
-        /// <summary>The storageResolutions property</summary>
+        /// <summary>Resolutions found as folders in object storage; can diverge from PlaylistResolutions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? StorageResolutions { get; set; }
@@ -74,7 +75,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> StorageResolutions { get; set; }
 #endif
-        /// <summary>The videoId property</summary>
+        /// <summary>The GUID of the video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VideoId { get; set; }
@@ -82,7 +83,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string VideoId { get; set; }
 #endif
-        /// <summary>The videoLibraryId property</summary>
+        /// <summary>The ID of the video library.</summary>
         public long? VideoLibraryId { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoResolutionsInfoModelAllOf2Data"/> and sets the default values.

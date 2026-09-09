@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class UpdateVideoModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The list of chapters available for the video</summary>
+        /// <summary>The list of chapters available for the video, up to 200. Omit/null to leave existing chapters unchanged; providing a list, including an empty one, fully replaces all existing chapters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel>? Chapters { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel> Chapters { get; set; }
 #endif
-        /// <summary>The ID of the collection where the video belongs</summary>
+        /// <summary>The ID of the collection where the video belongs. Omit/null to leave the current collection unchanged; send an empty string to remove the video from its collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CollectionId { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string CollectionId { get; set; }
 #endif
-        /// <summary>The meta tags added to the video</summary>
+        /// <summary>The meta tags added to the video, up to 50. Omit/null to leave existing tags unchanged; providing a list, including an empty one, fully replaces all existing tags. Setting a tag with Property &quot;description&quot; also updates the video&apos;s Description field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel>? MetaTags { get; set; }
@@ -36,7 +36,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel> MetaTags { get; set; }
 #endif
-        /// <summary>The list of moments available for the video</summary>
+        /// <summary>The list of moments available for the video, up to 200. Omit/null to leave existing moments unchanged; providing a list, including an empty one, fully replaces all existing moments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>? Moments { get; set; }

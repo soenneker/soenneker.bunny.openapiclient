@@ -15,7 +15,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The available resolutions of the video</summary>
+        /// <summary>Comma-separated list of resolution labels (e.g. &quot;360p,720p,1080p&quot;) that have finished encoding and are available for playback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AvailableResolutions { get; set; }
@@ -33,7 +33,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.CaptionModel> Captions { get; set; }
 #endif
-        /// <summary>The automatically detected category of the video</summary>
+        /// <summary>Automatically detected content category label; &quot;untagged&quot; when no category has been determined yet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Category { get; set; }
@@ -67,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
-        /// <summary>The current encode progress of the video</summary>
+        /// <summary>Encoding progress as a percentage from 0 to 100; reaches 100 when transcoding finishes.</summary>
         public int? EncodeProgress { get; set; }
         /// <summary>The framerate of the video</summary>
         public double? Framerate { get; set; }
@@ -79,7 +79,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Guid { get; set; }
 #endif
-        /// <summary>The hasHighQualityPreview property</summary>
+        /// <summary>Whether a high-quality animated preview has been generated for this video.</summary>
         public bool? HasHighQualityPreview { get; set; }
         /// <summary>Determines if the video has MP4 fallback files generated</summary>
         public bool? HasMP4Fallback { get; set; }
@@ -89,7 +89,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? Height { get; set; }
         /// <summary>Determines if the video is publically accessible</summary>
         public bool? IsPublic { get; set; }
-        /// <summary>The jitEncodingEnabled property</summary>
+        /// <summary>Whether just-in-time encoding is enabled for this specific video, overriding the video library&apos;s default JitEncodingEnabled setting when set. Null means the library default applies.</summary>
         public bool? JitEncodingEnabled { get; set; }
         /// <summary>The duration of the video in seconds</summary>
         public int? Length { get; set; }
@@ -117,7 +117,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string OriginalHash { get; set; }
 #endif
-        /// <summary>Encoded output codecs of the video</summary>
+        /// <summary>Comma-separated list of output codecs generated for this video (e.g. &quot;x264,vp9&quot;). See EncoderOutputCodec for possible values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OutputCodecs { get; set; }
@@ -125,7 +125,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string OutputCodecs { get; set; }
 #endif
-        /// <summary>The rotation of the video</summary>
+        /// <summary>Rotation of the source file in degrees as read from container metadata (e.g. 90, -90, 180, 270); null when no rotation metadata is present.</summary>
         public int? Rotation { get; set; }
         /// <summary>Per-feature smart generate statuses (title, description, chapters, moments). Null for a feature on legacy rows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -151,7 +151,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus Status { get; set; }
 #endif
-        /// <summary>The amount of storage used by this video</summary>
+        /// <summary>Total storage used by this video, in bytes.</summary>
         public long? StorageSize { get; set; }
         /// <summary>Thumbnail blurhash to show while the actual thumbnail is being loaded</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -20,6 +20,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Guid { get; set; }
 #endif
+        /// <summary>The number of live streams in the collection. On-demand videos are not included in this count.</summary>
+        public long? LiveStreamCount { get; set; }
         /// <summary>The name of the collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,7 +38,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> PreviewImageUrls { get; set; }
 #endif
-        /// <summary>The IDs of videos to be used as preview icons</summary>
+        /// <summary>Comma-separated list of video GUIDs used as preview thumbnails for the collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PreviewVideoIds { get; set; }
@@ -44,9 +46,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string PreviewVideoIds { get; set; }
 #endif
-        /// <summary>The total storage size of the collection</summary>
+        /// <summary>The total storage size of all videos in the collection, in bytes.</summary>
         public long? TotalSize { get; set; }
-        /// <summary>The number of videos that the collection contains</summary>
+        /// <summary>The number of on-demand videos in the collection. Live streams in the collection are not included in this count.</summary>
         public long? VideoCount { get; set; }
         /// <summary>The video library ID that contains the collection</summary>
         public long? VideoLibraryId { get; set; }
@@ -69,6 +71,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "guid", n => { Guid = n.GetStringValue(); } },
+                { "liveStreamCount", n => { LiveStreamCount = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "previewImageUrls", n => { PreviewImageUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "previewVideoIds", n => { PreviewVideoIds = n.GetStringValue(); } },
@@ -85,6 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("guid", Guid);
+            writer.WriteLongValue("liveStreamCount", LiveStreamCount);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<string>("previewImageUrls", PreviewImageUrls);
             writer.WriteStringValue("previewVideoIds", PreviewVideoIds);

@@ -12,9 +12,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class VideoOEmbedModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The height property</summary>
+        /// <summary>Height in pixels of the embedded player iframe, scaled to fit within maxWidth/maxHeight while preserving the video&apos;s aspect ratio.</summary>
         public int? Height { get; set; }
-        /// <summary>The html property</summary>
+        /// <summary>The HTML &lt;iframe&gt; markup required to embed the video player.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Html { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Html { get; set; }
 #endif
-        /// <summary>The provider_name property</summary>
+        /// <summary>The name of the embed provider. Always &quot;bunny.net&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProviderName { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ProviderName { get; set; }
 #endif
-        /// <summary>The provider_url property</summary>
+        /// <summary>The URL of the embed provider. Always &quot;https://bunny.net/&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProviderUrl { get; set; }
@@ -38,9 +38,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ProviderUrl { get; set; }
 #endif
-        /// <summary>The thumbnail_height property</summary>
+        /// <summary>Height in pixels of the thumbnail image. Omitted for custom-uploaded thumbnails, whose dimensions are not known.</summary>
         public int? ThumbnailHeight { get; set; }
-        /// <summary>The thumbnail_url property</summary>
+        /// <summary>The CDN URL of the video&apos;s thumbnail image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThumbnailUrl { get; set; }
@@ -48,9 +48,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ThumbnailUrl { get; set; }
 #endif
-        /// <summary>The thumbnail_width property</summary>
+        /// <summary>Width in pixels of the thumbnail image. Omitted for custom-uploaded thumbnails, whose dimensions are not known.</summary>
         public int? ThumbnailWidth { get; set; }
-        /// <summary>The title property</summary>
+        /// <summary>The title of the video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get; set; }
@@ -58,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The oEmbed resource type. Always &quot;video&quot; for this endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -66,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
-        /// <summary>The version property</summary>
+        /// <summary>The oEmbed spec version implemented by this response. Always &quot;1.0&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Version { get; set; }
 #endif
-        /// <summary>The width property</summary>
+        /// <summary>Width in pixels of the embedded player iframe, scaled to fit within maxWidth/maxHeight while preserving the video&apos;s aspect ratio.</summary>
         public int? Width { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

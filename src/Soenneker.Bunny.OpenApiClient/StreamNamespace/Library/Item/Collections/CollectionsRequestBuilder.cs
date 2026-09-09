@@ -19,7 +19,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
     public partial class CollectionsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.stream.library.item.collections.item collection</summary>
-        /// <param name="position">Unique identifier of the item</param>
+        /// <param name="position">The unique ID of the collection.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections.Item.WithCollectionItemRequestBuilder"/></returns>
         public global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections.Item.WithCollectionItemRequestBuilder this[string position]
         {
@@ -47,11 +47,12 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         {
         }
         /// <summary>
-        /// Get Collection List
+        /// Returns a paginated list of collections for the library. Collections can group both videos and live streams, reflected separately in VideoCount and LiveStreamCount; preview thumbnails only reflect the videos in each collection. When includeThumbnails is true, preview thumbnails are only populated for the first 60 collections of the returned page — later items in a larger page are returned without thumbnails.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel?> GetAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections.CollectionsRequestBuilder.CollectionsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -62,7 +63,11 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create Collection
@@ -71,6 +76,9 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.UpdateCollectionModel body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -82,10 +90,16 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get Collection List
+        /// Returns a paginated list of collections for the library. Collections can group both videos and live streams, reflected separately in VideoCount and LiveStreamCount; preview thumbnails only reflect the videos in each collection. When includeThumbnails is true, preview thumbnails are only populated for the first 60 collections of the returned page — later items in a larger page are returned without thumbnails.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -135,48 +149,39 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
             return new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections.CollectionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get Collection List
+        /// Returns a paginated list of collections for the library. Collections can group both videos and live streams, reflected separately in VideoCount and LiveStreamCount; preview thumbnails only reflect the videos in each collection. When includeThumbnails is true, preview thumbnails are only populated for the first 60 collections of the returned page — later items in a larger page are returned without thumbnails.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CollectionsRequestBuilderGetQueryParameters 
         {
-            #pragma warning disable CS1591
+            /// <summary>If set to true, populates PreviewImageUrls for each collection (only for the first 60 collections of the page).</summary>
             [QueryParameter("includeThumbnails")]
             public bool? IncludeThumbnails { get; set; }
-            #pragma warning restore CS1591
-            #pragma warning disable CS1591
+            /// <summary>The number of items to return per page, clamped to a range of 10-1000.</summary>
             [QueryParameter("itemsPerPage")]
             public int? ItemsPerPage { get; set; }
-            #pragma warning restore CS1591
+            /// <summary>The field to order results by. Possible values: date, title — any other value falls back to date.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("orderBy")]
             public string? OrderBy { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("orderBy")]
             public string OrderBy { get; set; }
-            #pragma warning restore CS1591
 #endif
-            #pragma warning disable CS1591
+            /// <summary>The page number to return, 1-based; values below 1 are treated as 1.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            #pragma warning restore CS1591
+            /// <summary>Filters collections by name, case-insensitive substring match.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            #pragma warning disable CS1591
             [QueryParameter("search")]
             public string? Search { get; set; }
-            #pragma warning restore CS1591
 #nullable restore
 #else
-            #pragma warning disable CS1591
             [QueryParameter("search")]
             public string Search { get; set; }
-            #pragma warning restore CS1591
 #endif
         }
     }

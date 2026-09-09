@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class ResolutionReference : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The path property</summary>
+        /// <summary>The storage path where this resolution&apos;s files are found.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Path { get; set; }
 #endif
-        /// <summary>The resolution property</summary>
+        /// <summary>The resolution this reference applies to (e.g. &quot;720p&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Resolution { get; set; }

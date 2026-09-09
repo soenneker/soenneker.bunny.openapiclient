@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class UpdateCollectionModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The name of the collection</summary>
+        /// <summary>The name to assign to the collection. Required, up to 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }

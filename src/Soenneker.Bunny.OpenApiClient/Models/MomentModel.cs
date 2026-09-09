@@ -12,7 +12,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class MomentModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The text description label for the chapter</summary>
+        /// <summary>The text description label for the moment, up to 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Label { get; set; }
@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Label { get; set; }
 #endif
-        /// <summary>The timestamp of the moment in seconds</summary>
+        /// <summary>The timestamp of the moment in seconds. Must be within the video&apos;s duration.</summary>
         public int? Timestamp { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

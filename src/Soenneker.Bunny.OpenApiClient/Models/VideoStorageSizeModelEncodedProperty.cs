@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
+    /// <summary>
+    /// Size in bytes of each encoded rendition, keyed by &quot;{resolution}-{codec}&quot; (e.g. &quot;720p-h264&quot;). Videos encoded before the current storage layout can also report legacy &quot;{width}x{height}&quot; resolutions, e.g. &quot;1920x1080-h264&quot;.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class VideoStorageSizeModelEncodedProperty : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

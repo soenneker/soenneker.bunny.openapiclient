@@ -14,7 +14,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The data property</summary>
+        /// <summary>The response payload. Some endpoints also populate this with error details when Success is false — see the endpoint&apos;s own response documentation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data? Data { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data Data { get; set; }
 #endif
-        /// <summary>Response message description</summary>
+        /// <summary>Human-readable message describing the result, typically populated with error details when Success is false.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The response status code</summary>
+        /// <summary>The HTTP status code corresponding to the result of the request.</summary>
         public int? StatusCode { get; set; }
         /// <summary>Determines if the request was successful</summary>
         public bool? Success { get; set; }

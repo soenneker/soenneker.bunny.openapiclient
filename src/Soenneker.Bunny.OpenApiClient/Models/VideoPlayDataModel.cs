@@ -12,9 +12,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     public partial class VideoPlayDataModel : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The allowEarlyPlay property</summary>
+        /// <summary>Whether the video can be played from the original source file before encoding has finished.</summary>
         public bool? AllowEarlyPlay { get; set; }
-        /// <summary>The captionsBackground property</summary>
+        /// <summary>CSS color value for the caption background.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CaptionsBackground { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string CaptionsBackground { get; set; }
 #endif
-        /// <summary>The captionsFontColor property</summary>
+        /// <summary>CSS color value for the caption text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CaptionsFontColor { get; set; }
@@ -30,9 +30,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string CaptionsFontColor { get; set; }
 #endif
-        /// <summary>The captionsFontSize property</summary>
+        /// <summary>Caption font size in pixels.</summary>
         public int? CaptionsFontSize { get; set; }
-        /// <summary>The captionsPath property</summary>
+        /// <summary>CDN URL of the directory containing the video&apos;s caption (.vtt) files.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CaptionsPath { get; set; }
@@ -40,7 +40,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string CaptionsPath { get; set; }
 #endif
-        /// <summary>The controls property</summary>
+        /// <summary>Comma-separated list of player control identifiers enabled for this library.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Controls { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Controls { get; set; }
 #endif
-        /// <summary>The customCss property</summary>
+        /// <summary>Custom CSS injected into the player. Only populated when the caller explicitly requests it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CustomCss { get; set; }
@@ -56,17 +56,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string CustomCss { get; set; }
 #endif
-        /// <summary>The drmVersion property</summary>
+        /// <summary>DRM protection tier applied to this video, as an integer cast of the Basic/Enterprise tier enum. Only relevant when EnableDRM is true.</summary>
         public int? DrmVersion { get; set; }
-        /// <summary>The enableCompactControls property</summary>
+        /// <summary>Whether the player uses a compact control bar layout.</summary>
         public bool? EnableCompactControls { get; set; }
-        /// <summary>The enableDRM property</summary>
+        /// <summary>Whether DRM protection is enabled for this video.</summary>
         public bool? EnableDRM { get; set; }
-        /// <summary>The enableMP4Fallback property</summary>
+        /// <summary>Whether MP4 fallback renditions are available for players that cannot use HLS.</summary>
         public bool? EnableMP4Fallback { get; set; }
-        /// <summary>The exposeVideoMetadata property</summary>
+        /// <summary>Whether JSON-LD structured data (schema.org VideoObject markup) is rendered for this video, e.g. for SEO.</summary>
         public bool? ExposeVideoMetadata { get; set; }
-        /// <summary>The fallbackUrl property</summary>
+        /// <summary>CDN URL prefix for the video&apos;s MP4 fallback renditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FallbackUrl { get; set; }
@@ -74,7 +74,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string FallbackUrl { get; set; }
 #endif
-        /// <summary>The fontFamily property</summary>
+        /// <summary>CSS font-family value used by the player.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FontFamily { get; set; }
@@ -86,7 +86,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? IsPlayable { get; set; }
         /// <summary>Determines if the HLS playlist is currently playable.</summary>
         public bool? IsPlaylistPlayable { get; set; }
-        /// <summary>The libraryName property</summary>
+        /// <summary>The name of the video library.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LibraryName { get; set; }
@@ -94,9 +94,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string LibraryName { get; set; }
 #endif
-        /// <summary>The maxSoftwareWidevineResolution property</summary>
+        /// <summary>Maximum vertical resolution allowed for software (L3) Widevine clients when WidevineSdOnlyForL3 is enabled; null otherwise.</summary>
         public int? MaxSoftwareWidevineResolution { get; set; }
-        /// <summary>The originalUrl property</summary>
+        /// <summary>CDN URL of the original uploaded source file. Only populated when the library allows early/original playback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OriginalUrl { get; set; }
@@ -104,7 +104,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string OriginalUrl { get; set; }
 #endif
-        /// <summary>The playbackSpeeds property</summary>
+        /// <summary>Comma-separated list of playback speed multipliers offered to the viewer (e.g. &quot;0.5,1,1.5,2&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PlaybackSpeeds { get; set; }
@@ -112,7 +112,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string PlaybackSpeeds { get; set; }
 #endif
-        /// <summary>The playerKeyColor property</summary>
+        /// <summary>The player&apos;s accent/key color, as a CSS color value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PlayerKeyColor { get; set; }
@@ -128,7 +128,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource PreferredPlaybackSource { get; set; }
 #endif
-        /// <summary>The previewUrl property</summary>
+        /// <summary>CDN URL of the video&apos;s animated preview (scrub thumbnail).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PreviewUrl { get; set; }
@@ -136,11 +136,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string PreviewUrl { get; set; }
 #endif
-        /// <summary>The pullZoneId property</summary>
+        /// <summary>The pull zone ID backing the video library&apos;s CDN delivery.</summary>
         public long? PullZoneId { get; set; }
-        /// <summary>The rememberPlayerPosition property</summary>
+        /// <summary>Whether the player resumes from the viewer&apos;s last watched position.</summary>
         public bool? RememberPlayerPosition { get; set; }
-        /// <summary>The seekPath property</summary>
+        /// <summary>CDN URL of the directory containing the video&apos;s seek/scrub thumbnail sprites.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SeekPath { get; set; }
@@ -148,9 +148,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string SeekPath { get; set; }
 #endif
-        /// <summary>The showHeatmap property</summary>
+        /// <summary>Whether the attention heatmap is enabled for this library&apos;s player.</summary>
         public bool? ShowHeatmap { get; set; }
-        /// <summary>The thumbnailUrl property</summary>
+        /// <summary>CDN URL of the video&apos;s thumbnail image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThumbnailUrl { get; set; }
@@ -158,9 +158,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ThumbnailUrl { get; set; }
 #endif
-        /// <summary>The tokenAuthEnabled property</summary>
+        /// <summary>Whether the library&apos;s CDN delivery requires signed URLs for playback assets (segments, manifests, thumbnails, etc.). This is a separate setting from whether this endpoint itself required a token to return data.</summary>
         public bool? TokenAuthEnabled { get; set; }
-        /// <summary>The uiLanguage property</summary>
+        /// <summary>Locale code for the player&apos;s UI language (e.g. &quot;en&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UiLanguage { get; set; }
@@ -168,7 +168,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string UiLanguage { get; set; }
 #endif
-        /// <summary>The vastTagUrl property</summary>
+        /// <summary>VAST ad tag URL used to serve ads in the player; empty when ads are disabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VastTagUrl { get; set; }
@@ -176,7 +176,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string VastTagUrl { get; set; }
 #endif
-        /// <summary>The viAiPublisherId property</summary>
+        /// <summary>Publisher ID for the vi.ai advertising integration; ads are enabled in the player when this is non-empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ViAiPublisherId { get; set; }
@@ -192,7 +192,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo Video { get; set; }
 #endif
-        /// <summary>The videoPlaylistUrl property</summary>
+        /// <summary>CDN URL of the video&apos;s HLS master playlist.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VideoPlaylistUrl { get; set; }
@@ -200,7 +200,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string VideoPlaylistUrl { get; set; }
 #endif
-        /// <summary>The widevineEmeRobustness property</summary>
+        /// <summary>EME robustness string corresponding to WidevineMinClientSecurityLevel (e.g. &quot;SW_SECURE_CRYPTO&quot;, &quot;HW_SECURE_DECODE&quot;); null when no minimum level applies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WidevineEmeRobustness { get; set; }
@@ -208,11 +208,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string WidevineEmeRobustness { get; set; }
 #endif
-        /// <summary>The widevineMinClientSecurityLevel property</summary>
+        /// <summary>Minimum required Widevine client security level (1-3). Ignored (always null here) when WidevineSdOnlyForL3 is enabled, since that setting takes precedence.</summary>
         public int? WidevineMinClientSecurityLevel { get; set; }
-        /// <summary>The widevineSdOnlyForL3 property</summary>
+        /// <summary>When true, Widevine L3 (software-only) clients are capped to SD playback while stronger clients play at full quality; overrides WidevineMinClientSecurityLevel when both are set.</summary>
         public bool? WidevineSdOnlyForL3 { get; set; }
-        /// <summary>The zoneTier property</summary>
+        /// <summary>Pull zone tier associated with this video library (integer enum value).</summary>
         public int? ZoneTier { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
