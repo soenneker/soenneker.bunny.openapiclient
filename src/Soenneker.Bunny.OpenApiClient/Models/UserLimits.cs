@@ -14,6 +14,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>The existingNumberOfApplications property</summary>
         public int? ExistingNumberOfApplications { get; set; }
+        /// <summary>The maxCpuMilliCoresPerPod property</summary>
+        public int? MaxCpuMilliCoresPerPod { get; set; }
+        /// <summary>The maxMemoryBytesPerPod property</summary>
+        public long? MaxMemoryBytesPerPod { get; set; }
         /// <summary>The maxNumberOfApplications property</summary>
         public int? MaxNumberOfApplications { get; set; }
         /// <summary>The maxNumberOfInstancesPerApplication property</summary>
@@ -45,6 +49,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "existingNumberOfApplications", n => { ExistingNumberOfApplications = n.GetIntValue(); } },
+                { "maxCpuMilliCoresPerPod", n => { MaxCpuMilliCoresPerPod = n.GetIntValue(); } },
+                { "maxMemoryBytesPerPod", n => { MaxMemoryBytesPerPod = n.GetLongValue(); } },
                 { "maxNumberOfApplications", n => { MaxNumberOfApplications = n.GetIntValue(); } },
                 { "maxNumberOfInstancesPerApplication", n => { MaxNumberOfInstancesPerApplication = n.GetIntValue(); } },
                 { "maxNumberOfInstancesPerRegion", n => { MaxNumberOfInstancesPerRegion = n.GetIntValue(); } },
@@ -61,6 +67,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("existingNumberOfApplications", ExistingNumberOfApplications);
+            writer.WriteIntValue("maxCpuMilliCoresPerPod", MaxCpuMilliCoresPerPod);
+            writer.WriteLongValue("maxMemoryBytesPerPod", MaxMemoryBytesPerPod);
             writer.WriteIntValue("maxNumberOfApplications", MaxNumberOfApplications);
             writer.WriteIntValue("maxNumberOfInstancesPerApplication", MaxNumberOfInstancesPerApplication);
             writer.WriteIntValue("maxNumberOfInstancesPerRegion", MaxNumberOfInstancesPerRegion);

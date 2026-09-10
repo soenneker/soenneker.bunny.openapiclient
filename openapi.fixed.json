@@ -37618,6 +37618,16 @@
             "format": "int32",
             "nullable": true
           },
+          "maxCpuMilliCoresPerPod": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxMemoryBytesPerPod": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
           "maxNumberOfInstancesPerRegion": {
             "type": "integer",
             "format": "int32"
