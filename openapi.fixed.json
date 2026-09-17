@@ -6703,9 +6703,9 @@
           "404": {
             "description": "The file on the given path does not exist.",
             "content": {
-              "application/json": {
+              "*/*": {
                 "schema": {
-                  "$ref": "#/components/schemas/StorageGetStorageZoneNamePathFileName404Response"
+                  "$ref": "#/components/schemas/StorageGetStorageZoneNamePathFileName404MediaResponseSchema"
                 }
               }
             }
@@ -6889,6 +6889,11 @@
           "200": {
             "description": "A JSON encoded array of objects.",
             "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/StorageGetStorageZoneNamePath200MediaResponseSchema"
+                }
+              },
               "application/json": {
                 "schema": {
                   "type": "object",
@@ -9782,6 +9787,11 @@
               "schema": {
                 "$ref": "#/components/schemas/CreateCustomAccessListRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomAccessListRequest"
+              }
             }
           },
           "required": true
@@ -9912,6 +9922,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAccessListConfigurationRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateAccessListConfigurationRequest"
               }
@@ -10141,6 +10156,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomAccessListRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCustomAccessListRequest"
               }
@@ -10524,6 +10544,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateApiGuardianConfigurationRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApiGuardianConfigurationRequest"
+              }
             }
           },
           "required": true
@@ -10653,6 +10678,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateApiGuardianEndpointRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateApiGuardianEndpointRequest"
+              }
             }
           },
           "required": true
@@ -10773,6 +10803,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpsertOpenApiSpecificationRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertOpenApiSpecificationRequest"
+              }
             }
           },
           "required": true
@@ -10888,6 +10923,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertOpenApiSpecificationRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpsertOpenApiSpecificationRequest"
               }
@@ -11186,6 +11226,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateBotCategorizationConfigurationRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBotCategorizationConfigurationRequest"
+              }
             }
           },
           "required": true
@@ -11332,6 +11377,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBotCategoryConfigurationRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateBotCategoryConfigurationRequest"
               }
@@ -11575,6 +11625,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBotDetectionRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateBotDetectionRequest"
               }
@@ -12176,6 +12231,11 @@
               "schema": {
                 "$ref": "#/components/schemas/EventLogsSearchRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/EventLogsSearchRequest"
+              }
             }
           }
         },
@@ -12274,6 +12334,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventLogsExportRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/EventLogsExportRequest"
               }
@@ -13307,6 +13372,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateWafRateLimitRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWafRateLimitRequest"
+              }
             }
           },
           "required": true
@@ -13458,6 +13528,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWafRateLimitRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/CreateWafRateLimitRequest"
               }
@@ -13910,6 +13985,11 @@
               "schema": {
                 "$ref": "#/components/schemas/CreateUnderAttackShieldZoneRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUnderAttackShieldZoneRequest"
+              }
             }
           },
           "required": true
@@ -14016,6 +14096,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateShieldZoneRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/CreateShieldZoneRequest"
               }
@@ -14143,6 +14228,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateShieldZoneRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateShieldZoneRequest"
               }
@@ -14346,6 +14436,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUploadScanningConfigurationRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateUploadScanningConfigurationRequest"
               }
@@ -14654,6 +14749,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReviewTriggeredRuleRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateReviewTriggeredRuleRequest"
               }
@@ -14970,6 +15070,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateCustomWafRuleRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomWafRuleRequest"
+              }
             }
           },
           "required": true
@@ -15067,6 +15172,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomWafRuleRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateCustomWafRuleRequest"
               }
@@ -15241,6 +15351,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomWafRuleRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/CreateCustomWafRuleRequest"
               }
@@ -17699,6 +17814,11 @@
               "schema": {
                 "$ref": "#/components/schemas/AddApplicationRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/AddApplicationRequest"
+              }
             }
           }
         },
@@ -17877,6 +17997,11 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchApplicationRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchApplicationRequest"
+              }
             }
           }
         },
@@ -17980,6 +18105,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddApplicationRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/AddApplicationRequest"
               }
@@ -18349,6 +18479,11 @@
               "schema": {
                 "$ref": "#/components/schemas/AutoscalingSettings"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/AutoscalingSettings"
+              }
             }
           }
         },
@@ -18478,6 +18613,11 @@
               "schema": {
                 "$ref": "#/components/schemas/ContainerRegistryRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/ContainerRegistryRequest"
+              }
             }
           }
         },
@@ -18544,6 +18684,11 @@
               "schema": {
                 "$ref": "#/components/schemas/SearchPublicContainerImagesRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchPublicContainerImagesRequest"
+              }
             }
           }
         },
@@ -18607,6 +18752,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImagesRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/ListContainerImagesRequest"
               }
@@ -18684,6 +18834,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContainerRegistryRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/ContainerRegistryRequest"
               }
@@ -18885,6 +19040,11 @@
               "schema": {
                 "$ref": "#/components/schemas/ListContainerImageTagsRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageTagsRequest"
+              }
             }
           }
         },
@@ -18951,6 +19111,11 @@
               "schema": {
                 "$ref": "#/components/schemas/ListContainerImageExposedPortsRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageExposedPortsRequest"
+              }
             }
           }
         },
@@ -19004,6 +19169,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetContainerImageDigestByTagRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/GetContainerImageDigestByTagRequest"
               }
@@ -19070,6 +19240,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetContainerConfigSuggestionsRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/GetContainerConfigSuggestionsRequest"
               }
@@ -19159,6 +19334,11 @@
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/MagicContainersSetContainerEnvironmentVariablesRequestRequestBody"
+              }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/MagicContainersSetContainerEnvironmentVariablesMediaRequestRequestBody"
               }
             }
           }
@@ -19264,6 +19444,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchContainerRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/PatchContainerRequest"
               }
@@ -19518,6 +19703,11 @@
               "schema": {
                 "$ref": "#/components/schemas/AddContainerRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/AddContainerRequest"
+              }
             }
           }
         },
@@ -19623,6 +19813,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EndpointRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/EndpointRequest"
               }
@@ -19870,6 +20065,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EndpointRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/EndpointRequest"
               }
@@ -20405,6 +20605,11 @@
               "schema": {
                 "$ref": "#/components/schemas/UpdateRegionSettingsRequest"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRegionSettingsRequest"
+              }
             }
           }
         },
@@ -20510,6 +20715,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchVolumeRequest"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/PatchVolumeRequest"
               }
@@ -42406,7 +42616,7 @@
           "$ref": "#/components/schemas/BillingSummaryItem"
         }
       },
-      "StorageGetStorageZoneNamePathFileName404Response": {
+      "StorageGetStorageZoneNamePathFileName404MediaResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ErrorObject"
@@ -42415,6 +42625,12 @@
       "StoragePutStorageZoneNamePathFileNameOctetStreamRequestRequestBody": {
         "type": "string",
         "format": "binary"
+      },
+      "StorageGetStorageZoneNamePath200MediaResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/StorageObject"
+        }
       },
       "StreamVideoUploadVideoOctetStreamRequestRequestBody": {
         "type": "string",
@@ -42522,6 +42738,12 @@
         }
       },
       "MagicContainersSetContainerEnvironmentVariablesRequestRequestBody": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "MagicContainersSetContainerEnvironmentVariablesMediaRequestRequestBody": {
         "type": "object",
         "additionalProperties": {
           "type": "string"

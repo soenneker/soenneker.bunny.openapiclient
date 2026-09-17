@@ -57,7 +57,6 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="List<global::Soenneker.Bunny.OpenApiClient.Models.ErrorObject>">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<Stream?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -68,11 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorObject.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Upload a file to a storage zone based on the URL path. If the directory tree does not exist, it will be created automatically. **The file content should be sent as the body of the request without any type of encoding.**
@@ -127,7 +122,6 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
