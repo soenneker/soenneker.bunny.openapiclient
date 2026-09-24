@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Overview container model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class OverviewContainer : IParsable
+    public partial class OverviewContainer : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpuUsage property</summary>
         public double? CpuUsage { get; set; }
         /// <summary>The exitCode property</summary>
@@ -72,6 +74,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The status property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.ContainerStatus? Status { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewContainer"/> and sets the default values.
+        /// </summary>
+        public OverviewContainer()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewContainer"/></returns>
@@ -120,6 +129,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("ramUsage", RamUsage);
             writer.WriteStringValue("reason", Reason);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ContainerStatus>("status", Status);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

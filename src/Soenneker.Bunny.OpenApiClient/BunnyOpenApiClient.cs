@@ -79,11 +79,6 @@ namespace Soenneker.Bunny.OpenApiClient
             ApiClientBuilder.RegisterDefaultDeserializer<JsonParseNodeFactory>();
             ApiClientBuilder.RegisterDefaultDeserializer<TextParseNodeFactory>();
             ApiClientBuilder.RegisterDefaultDeserializer<FormParseNodeFactory>();
-            if (string.IsNullOrEmpty(RequestAdapter.BaseUrl))
-            {
-                RequestAdapter.BaseUrl = "https://api.bunny.net";
-            }
-            PathParameters.TryAdd("baseurl", RequestAdapter.BaseUrl);
         }
     }
 }

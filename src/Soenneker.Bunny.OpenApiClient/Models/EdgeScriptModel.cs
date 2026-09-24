@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class EdgeScriptModel : IParsable
+    public partial class EdgeScriptModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CurrentReleaseId property</summary>
         public long? CurrentReleaseId { get; set; }
         /// <summary>The DefaultHostname property</summary>
@@ -89,6 +91,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string SystemHostname { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptModel"/> and sets the default values.
+        /// </summary>
+        public EdgeScriptModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptModel"/></returns>
@@ -149,6 +158,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("RepositoryId", RepositoryId);
             writer.WriteIntValue("ScriptType", ScriptType);
             writer.WriteStringValue("SystemHostname", SystemHostname);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaginationListModelOfDnsRecordModel : IParsable
+    public partial class PaginationListModelOfDnsRecordModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CurrentPage property</summary>
         public int? CurrentPage { get; set; }
         /// <summary>The HasMoreItems property</summary>
@@ -26,6 +28,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The TotalItems property</summary>
         public int? TotalItems { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel"/> and sets the default values.
+        /// </summary>
+        public PaginationListModelOfDnsRecordModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -61,6 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("HasMoreItems", HasMoreItems);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel>("Items", Items);
             writer.WriteIntValue("TotalItems", TotalItems);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>0 = PayPal1 = Crypto2 = CreditCard3 = MonthlyUsage4 = Refund5 = CouponCode6 = BankTransfer7 = AffiliateCredits</summary>
+        /// <summary>The value property</summary>
         public int? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType"/> and sets the default values.

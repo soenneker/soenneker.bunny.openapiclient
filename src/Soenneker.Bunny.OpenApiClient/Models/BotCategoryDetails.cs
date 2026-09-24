@@ -9,13 +9,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BotCategoryDetails : IParsable
+    public partial class BotCategoryDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>0 = None1 = Block2 = Allow</summary>
         public int? Action { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = None1 = SEO2 = AIScraper3 = AITool4 = Tool5 = Ads6 = Preview7 = Social255 = System</summary>
         public int? Category { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BotCategoryDetails"/> and sets the default values.
+        /// </summary>
+        public BotCategoryDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,6 +56,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("action", Action);
             writer.WriteIntValue("category", Category);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

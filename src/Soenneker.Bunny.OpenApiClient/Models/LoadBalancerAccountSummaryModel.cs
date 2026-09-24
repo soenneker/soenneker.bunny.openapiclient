@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class LoadBalancerAccountSummaryModel : IParsable
+    public partial class LoadBalancerAccountSummaryModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AttachedPullZoneCount property</summary>
         public int? AttachedPullZoneCount { get; set; }
         /// <summary>The LoadBalancerId property</summary>
@@ -20,6 +22,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? TotalRequests { get; set; }
         /// <summary>The TotalTraffic property</summary>
         public double? TotalTraffic { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAccountSummaryModel"/> and sets the default values.
+        /// </summary>
+        public LoadBalancerAccountSummaryModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,6 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("LoadBalancerId", LoadBalancerId);
             writer.WriteDoubleValue("TotalRequests", TotalRequests);
             writer.WriteDoubleValue("TotalTraffic", TotalTraffic);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

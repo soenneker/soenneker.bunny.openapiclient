@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Result of an Event Logs search. Exactly one of BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsSearchResponse.rows or BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsSearchResponse.groups is populated.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EventLogsSearchResponse : IParsable
+    public partial class EventLogsSearchResponse : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Generic response object containing status information for API operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,6 +45,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? Total { get; set; }
         /// <summary>Total number of pages for the current page size.</summary>
         public int? TotalPages { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EventLogsSearchResponse"/> and sets the default values.
+        /// </summary>
+        public EventLogsSearchResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -82,6 +91,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EventRow>("rows", Rows);
             writer.WriteLongValue("total", Total);
             writer.WriteIntValue("totalPages", TotalPages);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

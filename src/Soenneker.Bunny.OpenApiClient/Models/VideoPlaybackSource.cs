@@ -8,17 +8,35 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VideoPlaybackSource : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1"/></summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1? VideoPlaybackSourceOneOf1 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2"/></summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2? VideoPlaybackSourceOneOf2 { get; set; }
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3"/></summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3? VideoPlaybackSourceOneOf3 { get; set; }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1Wrapper? VideoPlaybackSourceOneOf1Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1Wrapper VideoPlaybackSourceOneOf1Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2Wrapper? VideoPlaybackSourceOneOf2Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2Wrapper VideoPlaybackSourceOneOf2Wrapper { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3Wrapper"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3Wrapper? VideoPlaybackSourceOneOf3Wrapper { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3Wrapper VideoPlaybackSourceOneOf3Wrapper { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,17 +47,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource();
-            if(parseNode.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1>() is global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1 videoPlaybackSourceOneOf1Value)
+            if("VideoPlaybackSourceOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VideoPlaybackSourceOneOf1 = videoPlaybackSourceOneOf1Value;
+                result.VideoPlaybackSourceOneOf1Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2>() is global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2 videoPlaybackSourceOneOf2Value)
+            else if("VideoPlaybackSourceOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VideoPlaybackSourceOneOf2 = videoPlaybackSourceOneOf2Value;
+                result.VideoPlaybackSourceOneOf2Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2Wrapper();
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3>() is global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3 videoPlaybackSourceOneOf3Value)
+            else if("VideoPlaybackSourceOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VideoPlaybackSourceOneOf3 = videoPlaybackSourceOneOf3Value;
+                result.VideoPlaybackSourceOneOf3Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3Wrapper();
             }
             return result;
         }
@@ -49,6 +67,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(VideoPlaybackSourceOneOf1Wrapper != null)
+            {
+                return VideoPlaybackSourceOneOf1Wrapper.GetFieldDeserializers();
+            }
+            else if(VideoPlaybackSourceOneOf2Wrapper != null)
+            {
+                return VideoPlaybackSourceOneOf2Wrapper.GetFieldDeserializers();
+            }
+            else if(VideoPlaybackSourceOneOf3Wrapper != null)
+            {
+                return VideoPlaybackSourceOneOf3Wrapper.GetFieldDeserializers();
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -58,17 +88,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(VideoPlaybackSourceOneOf1 != null)
+            if(VideoPlaybackSourceOneOf1Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1>(null, VideoPlaybackSourceOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf1Wrapper>(null, VideoPlaybackSourceOneOf1Wrapper);
             }
-            else if(VideoPlaybackSourceOneOf2 != null)
+            else if(VideoPlaybackSourceOneOf2Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2>(null, VideoPlaybackSourceOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf2Wrapper>(null, VideoPlaybackSourceOneOf2Wrapper);
             }
-            else if(VideoPlaybackSourceOneOf3 != null)
+            else if(VideoPlaybackSourceOneOf3Wrapper != null)
             {
-                writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3>(null, VideoPlaybackSourceOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSourceOneOf3Wrapper>(null, VideoPlaybackSourceOneOf3Wrapper);
             }
         }
     }

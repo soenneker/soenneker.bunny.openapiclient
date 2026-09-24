@@ -9,15 +9,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UploadScanning : IParsable
+    public partial class UploadScanning : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blockedRequests property</summary>
         public int? BlockedRequests { get; set; }
         /// <summary>The filesScanned property</summary>
         public int? FilesScanned { get; set; }
         /// <summary>The loggedRequests property</summary>
         public int? LoggedRequests { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UploadScanning"/> and sets the default values.
+        /// </summary>
+        public UploadScanning()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("blockedRequests", BlockedRequests);
             writer.WriteIntValue("filesScanned", FilesScanned);
             writer.WriteIntValue("loggedRequests", LoggedRequests);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

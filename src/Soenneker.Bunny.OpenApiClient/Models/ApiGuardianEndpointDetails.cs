@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Detailed view of a single API Guardian endpoint, including its validation settings,authentication requirements, and rate limiting configuration.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApiGuardianEndpointDetails : IParsable
+    public partial class ApiGuardianEndpointDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiGuardianEndpointId property</summary>
         public long? ApiGuardianEndpointId { get; set; }
         /// <summary>Authentication schemes required by this endpoint, derived from the OAS security requirements.Null when the endpoint has no security requirements.</summary>
@@ -82,10 +84,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty? ResponseBodySchemasYaml { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2? ResponseBodySchemasYaml { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty ResponseBodySchemasYaml { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2 ResponseBodySchemasYaml { get; set; }
 #endif
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get; set; }
@@ -97,6 +99,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? ValidateRequestBodySchema { get; set; }
         /// <summary>Whether outbound response bodies are validated against the OAS response schema.</summary>
         public bool? ValidateResponseBodySchema { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails"/> and sets the default values.
+        /// </summary>
+        public ApiGuardianEndpointDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -130,7 +139,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "requestBodySchemaYaml", n => { RequestBodySchemaYaml = n.GetStringValue(); } },
                 { "requestMethod", n => { RequestMethod = n.GetStringValue(); } },
                 { "requestPath", n => { RequestPath = n.GetStringValue(); } },
-                { "responseBodySchemasYaml", n => { ResponseBodySchemasYaml = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty.CreateFromDiscriminatorValue); } },
+                { "responseBodySchemasYaml", n => { ResponseBodySchemasYaml = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2.CreateFromDiscriminatorValue); } },
                 { "shieldZoneId", n => { ShieldZoneId = n.GetIntValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "validateAuthorization", n => { ValidateAuthorization = n.GetBoolValue(); } },
@@ -160,12 +169,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("requestBodySchemaYaml", RequestBodySchemaYaml);
             writer.WriteStringValue("requestMethod", RequestMethod);
             writer.WriteStringValue("requestPath", RequestPath);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty>("responseBodySchemasYaml", ResponseBodySchemasYaml);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2>("responseBodySchemasYaml", ResponseBodySchemasYaml);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteBoolValue("validateAuthorization", ValidateAuthorization);
             writer.WriteBoolValue("validateRequestBodySchema", ValidateRequestBodySchema);
             writer.WriteBoolValue("validateResponseBodySchema", ValidateResponseBodySchema);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

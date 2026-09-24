@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class LoadBalancerOriginGroupRequestsSeriesModel : IParsable
+    public partial class LoadBalancerOriginGroupRequestsSeriesModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The OriginGroupId property</summary>
         public long? OriginGroupId { get; set; }
         /// <summary>The OriginGroupName property</summary>
@@ -25,11 +27,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty? Values { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2? Values { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty Values { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2 Values { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel"/> and sets the default values.
+        /// </summary>
+        public LoadBalancerOriginGroupRequestsSeriesModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -50,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "OriginGroupId", n => { OriginGroupId = n.GetLongValue(); } },
                 { "OriginGroupName", n => { OriginGroupName = n.GetStringValue(); } },
-                { "Values", n => { Values = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty.CreateFromDiscriminatorValue); } },
+                { "Values", n => { Values = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,7 +71,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("OriginGroupId", OriginGroupId);
             writer.WriteStringValue("OriginGroupName", OriginGroupName);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty>("Values", Values);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2>("Values", Values);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

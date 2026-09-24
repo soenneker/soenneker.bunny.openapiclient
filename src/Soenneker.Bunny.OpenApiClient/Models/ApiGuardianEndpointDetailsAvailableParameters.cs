@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// All parameters defined in the OAS operation, grouped by location (path, query, header, cookie).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApiGuardianEndpointDetailsAvailableParameters : IParsable
+    public partial class ApiGuardianEndpointDetailsAvailableParameters : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Cookie property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,6 +47,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> Query { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsAvailableParameters"/> and sets the default values.
+        /// </summary>
+        public ApiGuardianEndpointDetailsAvailableParameters()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -80,6 +89,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("Header", Header);
             writer.WriteCollectionOfPrimitiveValues<string>("Path", Path);
             writer.WriteCollectionOfPrimitiveValues<string>("Query", Query);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

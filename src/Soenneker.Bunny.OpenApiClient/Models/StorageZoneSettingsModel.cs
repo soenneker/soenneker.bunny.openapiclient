@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class StorageZoneSettingsModel : IParsable
+    public partial class StorageZoneSettingsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The path to the custom file that will be returned in a case of 404</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,6 +40,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Rewrite 404 status code to 200 for URLs without extension</summary>
         public bool? Rewrite404To200 { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneSettingsModel"/> and sets the default values.
+        /// </summary>
+        public StorageZoneSettingsModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -73,6 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("OriginUrl", OriginUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("ReplicationZones", ReplicationZones);
             writer.WriteBoolValue("Rewrite404To200", Rewrite404To200);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

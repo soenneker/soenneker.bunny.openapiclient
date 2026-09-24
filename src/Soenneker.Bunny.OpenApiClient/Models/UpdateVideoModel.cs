@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UpdateVideoModel : IParsable
+    public partial class UpdateVideoModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The list of chapters available for the video, up to 200. Omit/null to leave existing chapters unchanged; providing a list, including an empty one, fully replaces all existing chapters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,6 +55,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateVideoModel"/> and sets the default values.
+        /// </summary>
+        public UpdateVideoModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateVideoModel"/></returns>
@@ -89,6 +98,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel>("metaTags", MetaTags);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>("moments", Moments);
             writer.WriteStringValue("title", Title);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

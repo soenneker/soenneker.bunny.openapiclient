@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class WafRuleMetrics : IParsable
+    public partial class WafRuleMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blockedRequests property</summary>
         public int? BlockedRequests { get; set; }
         /// <summary>The challengedRequests property</summary>
@@ -21,13 +23,20 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty? OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The totalTriggers property</summary>
         public int? TotalTriggers { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetrics"/> and sets the default values.
+        /// </summary>
+        public WafRuleMetrics()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -49,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "blockedRequests", n => { BlockedRequests = n.GetIntValue(); } },
                 { "challengedRequests", n => { ChallengedRequests = n.GetIntValue(); } },
                 { "loggedRequests", n => { LoggedRequests = n.GetIntValue(); } },
-                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "totalTriggers", n => { TotalTriggers = n.GetIntValue(); } },
             };
         }
@@ -63,8 +72,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("blockedRequests", BlockedRequests);
             writer.WriteIntValue("challengedRequests", ChallengedRequests);
             writer.WriteIntValue("loggedRequests", LoggedRequests);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
             writer.WriteIntValue("totalTriggers", TotalTriggers);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

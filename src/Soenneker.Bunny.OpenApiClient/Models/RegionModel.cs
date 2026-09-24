@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RegionModel : IParsable
+    public partial class RegionModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines weather this region can be selected as a DNS latency routing region</summary>
         public bool? AllowLatencyRouting { get; set; }
         /// <summary>The continent code of the region</summary>
@@ -54,6 +56,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string RegionCode { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.RegionModel"/> and sets the default values.
+        /// </summary>
+        public RegionModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -99,6 +108,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Name", Name);
             writer.WriteDecimalValue("PricePerGigabyte", PricePerGigabyte);
             writer.WriteStringValue("RegionCode", RegionCode);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CaptionModelAdd : IParsable
+    public partial class CaptionModelAdd : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Base64 encoded captions file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Srclang { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CaptionModelAdd"/> and sets the default values.
+        /// </summary>
+        public CaptionModelAdd()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,6 +79,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("captionsFile", CaptionsFile);
             writer.WriteStringValue("label", Label);
             writer.WriteStringValue("srclang", Srclang);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

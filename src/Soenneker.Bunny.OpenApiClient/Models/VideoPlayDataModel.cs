@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VideoPlayDataModel : IParsable
+    public partial class VideoPlayDataModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the video can be played from the original source file before encoding has finished.</summary>
         public bool? AllowEarlyPlay { get; set; }
         /// <summary>CSS color value for the caption background.</summary>
@@ -215,6 +217,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Pull zone tier associated with this video library (integer enum value).</summary>
         public int? ZoneTier { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModel"/> and sets the default values.
+        /// </summary>
+        public VideoPlayDataModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModel"/></returns>
@@ -317,6 +326,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("widevineMinClientSecurityLevel", WidevineMinClientSecurityLevel);
             writer.WriteBoolValue("widevineSdOnlyForL3", WidevineSdOnlyForL3);
             writer.WriteIntValue("zoneTier", ZoneTier);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

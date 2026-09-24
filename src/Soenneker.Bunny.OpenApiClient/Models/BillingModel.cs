@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BillingModel : IParsable
+    public partial class BillingModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The account wide pricing discount for Africa region.</summary>
         public int? AfricaDiscount { get; set; }
         /// <summary>The account wide pricing discount for Asia &amp; Oceania region.</summary>
@@ -57,10 +59,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed billing history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty? BillingHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2? BillingHistoryChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty BillingHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2 BillingHistoryChart { get; set; }
 #endif
         /// <summary>The list of billing records for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -273,6 +275,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The VAT rate for the user&apos;s account.</summary>
         public decimal? VATRate { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingModel"/> and sets the default values.
+        /// </summary>
+        public BillingModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingModel"/></returns>
@@ -302,7 +311,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "AvailableBalance", n => { AvailableBalance = n.GetDoubleValue(); } },
                 { "Balance", n => { Balance = n.GetDoubleValue(); } },
                 { "BillingEnabled", n => { BillingEnabled = n.GetBoolValue(); } },
-                { "BillingHistoryChart", n => { BillingHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty.CreateFromDiscriminatorValue); } },
+                { "BillingHistoryChart", n => { BillingHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2.CreateFromDiscriminatorValue); } },
                 { "BillingRecords", n => { BillingRecords = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>(global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "CouponBalance", n => { CouponBalance = n.GetDecimalValue(); } },
                 { "DrmBaseMonthlyPrice", n => { DrmBaseMonthlyPrice = n.GetDecimalValue(); } },
@@ -384,7 +393,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("AvailableBalance", AvailableBalance);
             writer.WriteDoubleValue("Balance", Balance);
             writer.WriteBoolValue("BillingEnabled", BillingEnabled);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty>("BillingHistoryChart", BillingHistoryChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2>("BillingHistoryChart", BillingHistoryChart);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>("BillingRecords", BillingRecords);
             writer.WriteDecimalValue("CouponBalance", CouponBalance);
             writer.WriteDecimalValue("DrmBaseMonthlyPrice", DrmBaseMonthlyPrice);
@@ -445,6 +454,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("SouthAmericaDiscount", SouthAmericaDiscount);
             writer.WriteDoubleValue("ThisMonthCharges", ThisMonthCharges);
             writer.WriteDecimalValue("VATRate", VATRate);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

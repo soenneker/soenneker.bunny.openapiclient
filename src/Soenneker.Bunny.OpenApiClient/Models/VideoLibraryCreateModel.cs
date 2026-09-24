@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VideoLibraryCreateModel : IParsable
+    public partial class VideoLibraryCreateModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) Determines if direct play URLs should be enabled for the library</summary>
         public bool? AllowDirectPlay { get; set; }
         /// <summary>(Optional) Enables Early Play. Enabling this also exposes originals via CDN settings consistent with the video library update API.</summary>
@@ -87,6 +89,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<string> TranscribingCaptionLanguages { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModel"/> and sets the default values.
+        /// </summary>
+        public VideoLibraryCreateModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModel"/></returns>
@@ -151,6 +160,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("PlayerVersion", PlayerVersion);
             writer.WriteCollectionOfPrimitiveValues<string>("ReplicationRegions", ReplicationRegions);
             writer.WriteCollectionOfPrimitiveValues<string>("TranscribingCaptionLanguages", TranscribingCaptionLanguages);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

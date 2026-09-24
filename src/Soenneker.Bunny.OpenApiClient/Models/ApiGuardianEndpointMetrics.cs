@@ -9,16 +9,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ApiGuardianEndpointMetrics : IParsable
+    public partial class ApiGuardianEndpointMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty? OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The totalBlockedRequests property</summary>
         public long? TotalBlockedRequests { get; set; }
@@ -32,6 +34,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? TotalRateLimited { get; set; }
         /// <summary>The totalRequestsInspected property</summary>
         public long? TotalRequestsInspected { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetrics"/> and sets the default values.
+        /// </summary>
+        public ApiGuardianEndpointMetrics()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -50,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "totalBlockedRequests", n => { TotalBlockedRequests = n.GetLongValue(); } },
                 { "totalFailedAuthenticationEnforcement", n => { TotalFailedAuthenticationEnforcement = n.GetLongValue(); } },
                 { "totalFailedRequestValidation", n => { TotalFailedRequestValidation = n.GetLongValue(); } },
@@ -66,13 +75,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty2>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
             writer.WriteLongValue("totalBlockedRequests", TotalBlockedRequests);
             writer.WriteLongValue("totalFailedAuthenticationEnforcement", TotalFailedAuthenticationEnforcement);
             writer.WriteLongValue("totalFailedRequestValidation", TotalFailedRequestValidation);
             writer.WriteLongValue("totalLoggedRequests", TotalLoggedRequests);
             writer.WriteLongValue("totalRateLimited", TotalRateLimited);
             writer.WriteLongValue("totalRequestsInspected", TotalRequestsInspected);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

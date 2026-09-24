@@ -23,10 +23,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The RequestsByMethod property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsSummaryModelRequestsByMethodProperty? RequestsByMethod { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod? RequestsByMethod { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsSummaryModelRequestsByMethodProperty RequestsByMethod { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod RequestsByMethod { get; set; }
 #endif
         /// <summary>The StickySessionHits property</summary>
         public double? StickySessionHits { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "AllOriginsExhausted", n => { AllOriginsExhausted = n.GetDoubleValue(); } },
                 { "AverageOriginRttMs", n => { AverageOriginRttMs = n.GetDoubleValue(); } },
                 { "AverageRetryDepth", n => { AverageRetryDepth = n.GetDoubleValue(); } },
-                { "RequestsByMethod", n => { RequestsByMethod = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsSummaryModelRequestsByMethodProperty>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsSummaryModelRequestsByMethodProperty.CreateFromDiscriminatorValue); } },
+                { "RequestsByMethod", n => { RequestsByMethod = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod.CreateFromDiscriminatorValue); } },
                 { "StickySessionHits", n => { StickySessionHits = n.GetDoubleValue(); } },
                 { "TotalRequests", n => { TotalRequests = n.GetDoubleValue(); } },
                 { "TotalTraffic", n => { TotalTraffic = n.GetDoubleValue(); } },
@@ -78,7 +78,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("AllOriginsExhausted", AllOriginsExhausted);
             writer.WriteDoubleValue("AverageOriginRttMs", AverageOriginRttMs);
             writer.WriteDoubleValue("AverageRetryDepth", AverageRetryDepth);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsSummaryModelRequestsByMethodProperty>("RequestsByMethod", RequestsByMethod);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod>("RequestsByMethod", RequestsByMethod);
             writer.WriteDoubleValue("StickySessionHits", StickySessionHits);
             writer.WriteDoubleValue("TotalRequests", TotalRequests);
             writer.WriteDoubleValue("TotalTraffic", TotalTraffic);

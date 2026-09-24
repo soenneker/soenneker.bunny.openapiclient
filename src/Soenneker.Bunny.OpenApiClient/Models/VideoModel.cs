@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VideoModel : IParsable
+    public partial class VideoModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Comma-separated list of resolution labels (e.g. &quot;360p,720p,1080p&quot;) that have finished encoding and are available for playback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -201,6 +203,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The width of the original video file</summary>
         public int? Width { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModel"/> and sets the default values.
+        /// </summary>
+        public VideoModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModel"/></returns>
@@ -301,6 +310,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("videoLibraryId", VideoLibraryId);
             writer.WriteLongValue("views", Views);
             writer.WriteIntValue("width", Width);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

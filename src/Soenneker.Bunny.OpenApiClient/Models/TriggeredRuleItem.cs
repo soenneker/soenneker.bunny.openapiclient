@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TriggeredRuleItem : IParsable
+    public partial class TriggeredRuleItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ruleDescription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,13 +41,20 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The topTargetedUrls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty? TopTargetedUrls { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2? TopTargetedUrls { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty TopTargetedUrls { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2 TopTargetedUrls { get; set; }
 #endif
         /// <summary>The totalTriggeredRequests property</summary>
         public int? TotalTriggeredRequests { get; private set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem"/> and sets the default values.
+        /// </summary>
+        public TriggeredRuleItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,7 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ruleDescription", n => { RuleDescription = n.GetStringValue(); } },
                 { "ruleId", n => { RuleId = n.GetStringValue(); } },
                 { "ruleLogs", n => { RuleLogs = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Log>(global::Soenneker.Bunny.OpenApiClient.Models.Log.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "topTargetedUrls", n => { TopTargetedUrls = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty.CreateFromDiscriminatorValue); } },
+                { "topTargetedUrls", n => { TopTargetedUrls = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2.CreateFromDiscriminatorValue); } },
                 { "totalTriggeredRequests", n => { TotalTriggeredRequests = n.GetIntValue(); } },
             };
         }
@@ -81,7 +90,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("ruleDescription", RuleDescription);
             writer.WriteStringValue("ruleId", RuleId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Log>("ruleLogs", RuleLogs);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty>("topTargetedUrls", TopTargetedUrls);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2>("topTargetedUrls", TopTargetedUrls);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

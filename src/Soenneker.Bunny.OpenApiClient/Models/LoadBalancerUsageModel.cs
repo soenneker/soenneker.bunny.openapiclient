@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class LoadBalancerUsageModel : IParsable
+    public partial class LoadBalancerUsageModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CurrentRequests property</summary>
         public long? CurrentRequests { get; set; }
         /// <summary>The IncludedRequests property</summary>
@@ -34,6 +36,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel> Tiers { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerUsageModel"/> and sets the default values.
+        /// </summary>
+        public LoadBalancerUsageModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -77,6 +86,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("PeriodStart", PeriodStart);
             writer.WriteDateTimeOffsetValue("ResetsAt", ResetsAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel>("Tiers", Tiers);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

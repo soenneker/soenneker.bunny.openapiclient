@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DnsZoneRecordScanJobResponse : IParsable
+    public partial class DnsZoneRecordScanJobResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The AccountId property</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string AccountId { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CompletedAt property</summary>
         public DateTimeOffset? CompletedAt { get; set; }
         /// <summary>The CreatedAt property</summary>
@@ -60,6 +62,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? Status { get; set; }
         /// <summary>The ZoneId property</summary>
         public long? ZoneId { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneRecordScanJobResponse"/> and sets the default values.
+        /// </summary>
+        public DnsZoneRecordScanJobResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -105,6 +114,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel>("Records", Records);
             writer.WriteIntValue("Status", Status);
             writer.WriteLongValue("ZoneId", ZoneId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

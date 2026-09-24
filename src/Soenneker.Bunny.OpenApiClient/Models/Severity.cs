@@ -8,42 +8,42 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Severity : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1? SeverityOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1Wrapper? SeverityOneOf1Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1 SeverityOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1Wrapper SeverityOneOf1Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2? SeverityOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2Wrapper? SeverityOneOf2Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2 SeverityOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2Wrapper SeverityOneOf2Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3? SeverityOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3Wrapper? SeverityOneOf3Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3 SeverityOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3Wrapper SeverityOneOf3Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4? SeverityOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4Wrapper? SeverityOneOf4Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4 SeverityOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4Wrapper SeverityOneOf4Wrapper { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -55,6 +55,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.Severity();
+            if("SeverityOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SeverityOneOf1Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1Wrapper();
+            }
+            else if("SeverityOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SeverityOneOf2Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2Wrapper();
+            }
+            else if("SeverityOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SeverityOneOf3Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3Wrapper();
+            }
+            else if("SeverityOneOf4Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SeverityOneOf4Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4Wrapper();
+            }
             return result;
         }
         /// <summary>
@@ -63,21 +79,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(SeverityOneOf1 != null)
+            if(SeverityOneOf1Wrapper != null)
             {
-                return SeverityOneOf1.GetFieldDeserializers();
+                return SeverityOneOf1Wrapper.GetFieldDeserializers();
             }
-            else if(SeverityOneOf2 != null)
+            else if(SeverityOneOf2Wrapper != null)
             {
-                return SeverityOneOf2.GetFieldDeserializers();
+                return SeverityOneOf2Wrapper.GetFieldDeserializers();
             }
-            else if(SeverityOneOf3 != null)
+            else if(SeverityOneOf3Wrapper != null)
             {
-                return SeverityOneOf3.GetFieldDeserializers();
+                return SeverityOneOf3Wrapper.GetFieldDeserializers();
             }
-            else if(SeverityOneOf4 != null)
+            else if(SeverityOneOf4Wrapper != null)
             {
-                return SeverityOneOf4.GetFieldDeserializers();
+                return SeverityOneOf4Wrapper.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -88,21 +104,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(SeverityOneOf1 != null)
+            if(SeverityOneOf1Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1>(null, SeverityOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf1Wrapper>(null, SeverityOneOf1Wrapper);
             }
-            else if(SeverityOneOf2 != null)
+            else if(SeverityOneOf2Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2>(null, SeverityOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf2Wrapper>(null, SeverityOneOf2Wrapper);
             }
-            else if(SeverityOneOf3 != null)
+            else if(SeverityOneOf3Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3>(null, SeverityOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf3Wrapper>(null, SeverityOneOf3Wrapper);
             }
-            else if(SeverityOneOf4 != null)
+            else if(SeverityOneOf4Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4>(null, SeverityOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SeverityOneOf4Wrapper>(null, SeverityOneOf4Wrapper);
             }
         }
     }

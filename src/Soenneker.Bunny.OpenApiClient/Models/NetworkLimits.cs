@@ -9,13 +9,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class NetworkLimits : IParsable
+    public partial class NetworkLimits : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The egressBandwidthLimit property</summary>
         public long? EgressBandwidthLimit { get; set; }
         /// <summary>The ingressBandwidthLimit property</summary>
         public long? IngressBandwidthLimit { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits"/> and sets the default values.
+        /// </summary>
+        public NetworkLimits()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,6 +56,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("egressBandwidthLimit", EgressBandwidthLimit);
             writer.WriteLongValue("ingressBandwidthLimit", IngressBandwidthLimit);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

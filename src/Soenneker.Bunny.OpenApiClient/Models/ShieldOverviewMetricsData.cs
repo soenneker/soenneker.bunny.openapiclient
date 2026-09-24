@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ShieldOverviewMetricsData : IParsable
+    public partial class ShieldOverviewMetricsData : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accessLists property</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric AccessLists { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiGuardian property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +77,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric Waf { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverviewMetricsData"/> and sets the default values.
+        /// </summary>
+        public ShieldOverviewMetricsData()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverviewMetricsData"/></returns>
@@ -121,6 +130,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("totalCleanRequestsLimit", TotalCleanRequestsLimit);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric>("uploadScanning", UploadScanning);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric>("waf", Waf);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

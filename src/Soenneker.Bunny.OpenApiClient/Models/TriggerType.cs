@@ -15,7 +15,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>0 = Url1 = RequestHeader2 = ResponseHeader3 = UrlExtension4 = CountryCode5 = RemoteIP6 = UrlQueryString7 = RandomChance8 = StatusCode9 = RequestMethod10 = CookieValue11 = CountryStateCode12 = OriginRetryAttemptCount13 = OriginConnectionError</summary>
+        /// <summary>The value property</summary>
         public int? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.TriggerType"/> and sets the default values.

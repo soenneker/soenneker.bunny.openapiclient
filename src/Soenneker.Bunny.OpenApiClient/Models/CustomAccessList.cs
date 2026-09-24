@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Represents a custom access list associated with a shield zone.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CustomAccessList : IParsable
+    public partial class CustomAccessList : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>SHA-256 checksum of the content for integrity verification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,6 +55,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>0 = IP1 = CIDR2 = ASN3 = Country4 = Organization5 = JA4</summary>
         public int? Type { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CustomAccessList"/> and sets the default values.
+        /// </summary>
+        public CustomAccessList()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -96,6 +105,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastModified", LastModified);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

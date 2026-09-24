@@ -9,11 +9,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ShieldOverview : IParsable
+    public partial class ShieldOverview : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accessListActions property</summary>
         public int? AccessListActions { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiGuardianBlocks property</summary>
         public int? ApiGuardianBlocks { get; set; }
         /// <summary>The botDetectionChallenged property</summary>
@@ -26,6 +28,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? UploadScanningBlocks { get; set; }
         /// <summary>The wafTriggeredRules property</summary>
         public int? WafTriggeredRules { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview"/> and sets the default values.
+        /// </summary>
+        public ShieldOverview()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,6 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("ratelimitBreaches", RatelimitBreaches);
             writer.WriteIntValue("uploadScanningBlocks", UploadScanningBlocks);
             writer.WriteIntValue("wafTriggeredRules", WafTriggeredRules);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

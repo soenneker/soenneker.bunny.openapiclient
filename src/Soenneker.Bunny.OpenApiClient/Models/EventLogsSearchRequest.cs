@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Request body for searching a Shield Zone&apos;s Event Logs within a time window.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EventLogsSearchRequest : IParsable
+    public partial class EventLogsSearchRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>When grouping, the number of time buckets for each group&apos;s sparkline histogram over thewindow. 0 (default) omits the sparkline; clamped to 500.</summary>
         public int? Buckets { get; set; }
         /// <summary>Optional filters, combined with AND. Repeated values within one filter combine with OR.</summary>
@@ -47,6 +49,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Window end as Unix time in milliseconds (UTC). Required; must be after BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsSearchRequest.from and within the last 72 hours.</summary>
         public long? To { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EventLogsSearchRequest"/> and sets the default values.
+        /// </summary>
+        public EventLogsSearchRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("pageSize", PageSize);
             writer.WriteStringValue("query", Query);
             writer.WriteLongValue("to", To);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

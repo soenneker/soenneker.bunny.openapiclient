@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ContainerRegistry : IParsable
+    public partial class ContainerRegistry : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accountId property</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string AccountId { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The createdAt property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The displayName property</summary>
@@ -87,6 +89,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string UserName { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerRegistry"/> and sets the default values.
+        /// </summary>
+        public ContainerRegistry()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerRegistry"/></returns>
@@ -138,6 +147,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("namespaceId", NamespaceId);
             writer.WriteStringValue("userId", UserId);
             writer.WriteStringValue("userName", UserName);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

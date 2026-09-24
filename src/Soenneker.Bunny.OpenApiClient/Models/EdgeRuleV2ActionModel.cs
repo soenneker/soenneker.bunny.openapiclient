@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class EdgeRuleV2ActionModel : IParsable
+    public partial class EdgeRuleV2ActionModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The ActionParameter1 property</summary>
@@ -38,6 +38,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>0 = ForceSSL1 = Redirect2 = OriginUrl3 = OverrideCacheTime4 = BlockRequest5 = SetResponseHeader6 = SetRequestHeader7 = ForceDownload8 = DisableTokenAuthentication9 = EnableTokenAuthentication10 = OverrideCacheTimePublic11 = IgnoreQueryString12 = DisableOptimizer13 = ForceCompression14 = SetStatusCode15 = BypassPermaCache16 = OverrideBrowserCacheTime17 = OriginStorage18 = SetNetworkRateLimit19 = SetConnectionLimit20 = SetRequestsPerSecondLimit21 = RunEdgeScript22 = OriginMagicContainers23 = DisableWAF24 = RetryOrigin25 = OverrideBrowserCacheResponseHeader26 = RemoveBrowserCacheResponseHeader27 = DisableShieldChallenge28 = DisableShield29 = DisableShieldBotDetection30 = BypassAwsS3Authentication31 = DisableShieldAccessLists32 = DisableShieldRateLimiting33 = EnableRequestCoalescing34 = DisableRequestCoalescing37 = StripCookiesClientToOrigin</summary>
         public int? ActionType { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel"/> and sets the default values.
+        /// </summary>
+        public EdgeRuleV2ActionModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -73,6 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("ActionParameter2", ActionParameter2);
             writer.WriteStringValue("ActionParameter3", ActionParameter3);
             writer.WriteIntValue("ActionType", ActionType);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

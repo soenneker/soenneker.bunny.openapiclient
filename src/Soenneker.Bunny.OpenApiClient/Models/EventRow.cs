@@ -11,23 +11,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// A single event returned in a flat (ungrouped) search.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EventRow : IParsable
+    public partial class EventRow : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Resolved dimension values for the event (e.g. ip, ruleId, url, ja4).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty? Fields { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty Fields { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2 Fields { get; set; }
 #endif
         /// <summary>The full request context for the event (JSON object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog? Log { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty? Log { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog Log { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty Log { get; set; }
 #endif
         /// <summary>Unique event identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,6 +41,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Event time as Unix time in milliseconds (UTC).</summary>
         public long? Timestamp { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EventRow"/> and sets the default values.
+        /// </summary>
+        public EventRow()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -57,8 +66,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty.CreateFromDiscriminatorValue); } },
-                { "log", n => { Log = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2.CreateFromDiscriminatorValue); } },
+                { "log", n => { Log = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty.CreateFromDiscriminatorValue); } },
                 { "logId", n => { LogId = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
@@ -70,10 +79,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty>("fields", Fields);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLog>("log", Log);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty>("log", Log);
             writer.WriteStringValue("logId", LogId);
             writer.WriteLongValue("timestamp", Timestamp);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

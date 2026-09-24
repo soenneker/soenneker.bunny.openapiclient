@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class OverageSegment : IParsable
+    public partial class OverageSegment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The overage property</summary>
         public long? Overage { get; set; }
         /// <summary>The overageAllowance property</summary>
@@ -22,6 +24,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public DateTimeOffset? PeriodStart { get; set; }
         /// <summary>0 = Basic1 = Advanced2 = Business3 = Enterprise</summary>
         public int? PlanType { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment"/> and sets the default values.
+        /// </summary>
+        public OverageSegment()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -59,6 +68,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("periodEnd", PeriodEnd);
             writer.WriteDateTimeOffsetValue("periodStart", PeriodStart);
             writer.WriteIntValue("planType", PlanType);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

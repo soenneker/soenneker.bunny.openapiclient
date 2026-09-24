@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UpdateUploadScanningConfigurationRequest : IParsable
+    public partial class UpdateUploadScanningConfigurationRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
         public int? AntivirusScanningMode { get; set; }
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
@@ -20,6 +22,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? IsEnabled { get; set; }
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateUploadScanningConfigurationRequest"/> and sets the default values.
+        /// </summary>
+        public UpdateUploadScanningConfigurationRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,6 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("csamScanningMode", CsamScanningMode);
             writer.WriteBoolValue("isEnabled", IsEnabled);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

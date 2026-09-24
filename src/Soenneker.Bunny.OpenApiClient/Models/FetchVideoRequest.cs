@@ -9,16 +9,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class FetchVideoRequest : IParsable
+    public partial class FetchVideoRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The headers that will be sent along with the fetch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty? Headers { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2? Headers { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty Headers { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2 Headers { get; set; }
 #endif
         /// <summary>The title that will be set to video. If omitted, the filename from the fetch URL is used instead, falling back to &quot;Fetched Video&quot; if that can&apos;t be determined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -37,6 +39,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Url { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequest"/> and sets the default values.
+        /// </summary>
+        public FetchVideoRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequest"/></returns>
@@ -54,7 +63,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty>(global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -66,9 +75,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2>("headers", Headers);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("url", Url);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

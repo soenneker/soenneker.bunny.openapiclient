@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Overview pod model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class OverviewPod : IParsable
+    public partial class OverviewPod : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The containers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,10 +60,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The outboundTrafficChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty? OutboundTrafficChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2? OutboundTrafficChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty OutboundTrafficChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2 OutboundTrafficChart { get; set; }
 #endif
         /// <summary>The ramUsage property</summary>
         public double? RamUsage { get; set; }
@@ -80,11 +82,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The volumesUtilizationPercentage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty? VolumesUtilizationPercentage { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2? VolumesUtilizationPercentage { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty VolumesUtilizationPercentage { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2 VolumesUtilizationPercentage { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod"/> and sets the default values.
+        /// </summary>
+        public OverviewPod()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -115,12 +124,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "outboundBandwidthBytesPerSecond", n => { OutboundBandwidthBytesPerSecond = n.GetDoubleValue(); } },
                 { "outboundConnectionsLimit", n => { OutboundConnectionsLimit = n.GetIntValue(); } },
                 { "outboundConnectionsRejectedDiff", n => { OutboundConnectionsRejectedDiff = n.GetLongValue(); } },
-                { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty.CreateFromDiscriminatorValue); } },
+                { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2.CreateFromDiscriminatorValue); } },
                 { "ramUsage", n => { RamUsage = n.GetDoubleValue(); } },
                 { "ramUsageBytes", n => { RamUsageBytes = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>(); } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "volumesUtilizationPercentage", n => { VolumesUtilizationPercentage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty.CreateFromDiscriminatorValue); } },
+                { "volumesUtilizationPercentage", n => { VolumesUtilizationPercentage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -142,12 +151,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("outboundBandwidthBytesPerSecond", OutboundBandwidthBytesPerSecond);
             writer.WriteIntValue("outboundConnectionsLimit", OutboundConnectionsLimit);
             writer.WriteLongValue("outboundConnectionsRejectedDiff", OutboundConnectionsRejectedDiff);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty>("outboundTrafficChart", OutboundTrafficChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2>("outboundTrafficChart", OutboundTrafficChart);
             writer.WriteDoubleValue("ramUsage", RamUsage);
             writer.WriteDoubleValue("ramUsageBytes", RamUsageBytes);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>("status", Status);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>("volumes", Volumes);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty>("volumesUtilizationPercentage", VolumesUtilizationPercentage);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2>("volumesUtilizationPercentage", VolumesUtilizationPercentage);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

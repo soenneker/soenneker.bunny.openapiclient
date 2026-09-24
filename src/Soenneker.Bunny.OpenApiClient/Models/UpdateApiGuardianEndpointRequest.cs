@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Patch request for updating an individual API Guardian endpoint.All fields are optional — only provided fields are applied.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateApiGuardianEndpointRequest : IParsable
+    public partial class UpdateApiGuardianEndpointRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enable SQL injection detection on the selected injection detection parameters.</summary>
         public bool? DetectParameterSqli { get; set; }
         /// <summary>Enable XSS detection on the selected injection detection parameters.</summary>
@@ -41,6 +43,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? ValidateRequestBodySchema { get; set; }
         /// <summary>Enable or disable response body schema validation.Only effective if the endpoint&apos;s OAS operation defines response schemas.</summary>
         public bool? ValidateResponseBodySchema { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequest"/> and sets the default values.
+        /// </summary>
+        public UpdateApiGuardianEndpointRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("validateAuthorization", ValidateAuthorization);
             writer.WriteBoolValue("validateRequestBodySchema", ValidateRequestBodySchema);
             writer.WriteBoolValue("validateResponseBodySchema", ValidateResponseBodySchema);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

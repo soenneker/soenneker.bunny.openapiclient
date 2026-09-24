@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DnsZoneDiscoveredRecordModel : IParsable
+    public partial class DnsZoneDiscoveredRecordModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The IsProxied property</summary>
         public bool? IsProxied { get; set; }
         /// <summary>Record name relative to the zone. &apos;@&apos; represents apex.</summary>
@@ -46,6 +48,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The Weight property</summary>
         public int? Weight { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel"/> and sets the default values.
+        /// </summary>
+        public DnsZoneDiscoveredRecordModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -89,6 +98,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType>("Type", Type);
             writer.WriteStringValue("Value", Value);
             writer.WriteIntValue("Weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

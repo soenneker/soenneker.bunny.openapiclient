@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// List endpoints response
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ListEndpointsResponse : IParsable
+    public partial class ListEndpointsResponse : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cursor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +39,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.ListMeta Meta { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ListEndpointsResponse"/> and sets the default values.
+        /// </summary>
+        public ListEndpointsResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -70,6 +79,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("cursor", Cursor);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointListItem>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ListMeta>("meta", Meta);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

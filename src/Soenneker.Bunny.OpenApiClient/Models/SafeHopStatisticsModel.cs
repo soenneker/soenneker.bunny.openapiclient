@@ -9,29 +9,38 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SafeHopStatisticsModel : IParsable
+    public partial class SafeHopStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The constructed chart of requests retried</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty? RequestsRetriedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2? RequestsRetriedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty RequestsRetriedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2 RequestsRetriedChart { get; set; }
 #endif
         /// <summary>The constructed chart of requests saved</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty? RequestsSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2? RequestsSavedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty RequestsSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2 RequestsSavedChart { get; set; }
 #endif
         /// <summary>The total number of retried requests</summary>
         public double? TotalRequestsRetried { get; set; }
         /// <summary>The total number of saved requests</summary>
         public double? TotalRequestsSaved { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModel"/> and sets the default values.
+        /// </summary>
+        public SafeHopStatisticsModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -50,8 +59,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "RequestsRetriedChart", n => { RequestsRetriedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty.CreateFromDiscriminatorValue); } },
-                { "RequestsSavedChart", n => { RequestsSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty.CreateFromDiscriminatorValue); } },
+                { "RequestsRetriedChart", n => { RequestsRetriedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "RequestsSavedChart", n => { RequestsSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2.CreateFromDiscriminatorValue); } },
                 { "TotalRequestsRetried", n => { TotalRequestsRetried = n.GetDoubleValue(); } },
                 { "TotalRequestsSaved", n => { TotalRequestsSaved = n.GetDoubleValue(); } },
             };
@@ -63,10 +72,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty>("RequestsRetriedChart", RequestsRetriedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty>("RequestsSavedChart", RequestsSavedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2>("RequestsRetriedChart", RequestsRetriedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2>("RequestsSavedChart", RequestsSavedChart);
             writer.WriteDoubleValue("TotalRequestsRetried", TotalRequestsRetried);
             writer.WriteDoubleValue("TotalRequestsSaved", TotalRequestsSaved);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

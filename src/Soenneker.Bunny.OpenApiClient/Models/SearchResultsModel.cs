@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SearchResultsModel : IParsable
+    public partial class SearchResultsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of results skipped in the search query</summary>
         public int? From { get; set; }
         /// <summary>The input query for the search request</summary>
@@ -34,6 +36,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? Size { get; set; }
         /// <summary>The total number of search results found matching the query</summary>
         public int? Total { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SearchResultsModel"/> and sets the default values.
+        /// </summary>
+        public SearchResultsModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -71,6 +80,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel>("SearchResults", SearchResults);
             writer.WriteIntValue("Size", Size);
             writer.WriteIntValue("Total", Total);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

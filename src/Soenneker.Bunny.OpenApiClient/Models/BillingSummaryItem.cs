@@ -9,15 +9,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BillingSummaryItem : IParsable
+    public partial class BillingSummaryItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total monthly bandwidth used by the pull zone</summary>
         public long? MonthlyBandwidthUsed { get; set; }
         /// <summary>The total credit amount used in this month by the Pull Zone</summary>
         public decimal? MonthlyUsage { get; set; }
         /// <summary>The ID of the pull zone</summary>
         public long? PullZoneId { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingSummaryItem"/> and sets the default values.
+        /// </summary>
+        public BillingSummaryItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("MonthlyBandwidthUsed", MonthlyBandwidthUsed);
             writer.WriteDecimalValue("MonthlyUsage", MonthlyUsage);
             writer.WriteLongValue("PullZoneId", PullZoneId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DnsRecordModel : IParsable
+    public partial class DnsRecordModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The Accelerated property</summary>
@@ -18,6 +18,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? AcceleratedPullZoneId { get; set; }
         /// <summary>0 = None1 = Pending2 = Processing3 = Completed4 = Failed</summary>
         public int? AccelerationStatus { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AutoSslIssuance property</summary>
         public bool? AutoSslIssuance { get; set; }
         /// <summary>The Comment property</summary>
@@ -125,6 +127,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Weight property</summary>
         public int? Weight { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel"/> and sets the default values.
+        /// </summary>
+        public DnsRecordModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel"/></returns>
@@ -203,6 +212,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("Type", Type);
             writer.WriteStringValue("Value", Value);
             writer.WriteIntValue("Weight", Weight);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

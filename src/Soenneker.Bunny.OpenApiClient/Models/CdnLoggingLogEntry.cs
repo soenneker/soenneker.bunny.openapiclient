@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// A single CDN access log entry. Field nullability mirrors the underlying data:fields sourced from optional HTTP headers (Referer, User-Agent, Content-Range,Authorization) are `null` when the header was absent. Extended fields(BodyBytesSent, ContentRange, AuthorizationHeader) are only populated whenextended logging is enabled for the pull zone.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CdnLoggingLogEntry : IParsable
+    public partial class CdnLoggingLogEntry : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Autonomous System Number derived from the client IP. `null` if unknown.</summary>
         public int? Asn { get; set; }
         /// <summary>Name of the organization that owns the AS. `null` if unknown.</summary>
@@ -146,6 +148,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string UserAgent { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CdnLoggingLogEntry"/> and sets the default values.
+        /// </summary>
+        public CdnLoggingLogEntry()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CdnLoggingLogEntry"/></returns>
@@ -214,6 +223,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("userAgent", UserAgent);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

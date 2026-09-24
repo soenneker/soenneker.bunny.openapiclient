@@ -9,15 +9,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DnsZoneImportResultModel : IParsable
+    public partial class DnsZoneImportResultModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The RecordsFailed property</summary>
         public int? RecordsFailed { get; set; }
         /// <summary>The RecordsSkipped property</summary>
         public int? RecordsSkipped { get; set; }
         /// <summary>The RecordsSuccessful property</summary>
         public int? RecordsSuccessful { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneImportResultModel"/> and sets the default values.
+        /// </summary>
+        public DnsZoneImportResultModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("RecordsFailed", RecordsFailed);
             writer.WriteIntValue("RecordsSkipped", RecordsSkipped);
             writer.WriteIntValue("RecordsSuccessful", RecordsSuccessful);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

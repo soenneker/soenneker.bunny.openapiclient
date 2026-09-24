@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class TranscribeSettings : IParsable
+    public partial class TranscribeSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether video chapters should be automatically generated.</summary>
         public bool? GenerateChapters { get; set; }
         /// <summary>Whether video description should be automatically generated.</summary>
@@ -36,6 +38,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> TargetLanguages { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.TranscribeSettings"/> and sets the default values.
+        /// </summary>
+        public TranscribeSettings()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -75,6 +84,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("generateTitle", GenerateTitle);
             writer.WriteStringValue("sourceLanguage", SourceLanguage);
             writer.WriteCollectionOfPrimitiveValues<string>("targetLanguages", TargetLanguages);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

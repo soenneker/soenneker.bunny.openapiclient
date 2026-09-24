@@ -9,13 +9,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateUnderAttackShieldZoneRequest : IParsable
+    public partial class CreateUnderAttackShieldZoneRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Basic1 = Advanced2 = Business3 = Enterprise</summary>
         public int? PlanType { get; set; }
         /// <summary>The pullZoneId property</summary>
         public long? PullZoneId { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateUnderAttackShieldZoneRequest"/> and sets the default values.
+        /// </summary>
+        public CreateUnderAttackShieldZoneRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,6 +56,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("planType", PlanType);
             writer.WriteLongValue("pullZoneId", PullZoneId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

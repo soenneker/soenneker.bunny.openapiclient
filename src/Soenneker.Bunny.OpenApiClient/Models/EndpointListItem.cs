@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Endpoint list item model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EndpointListItem : IParsable
+    public partial class EndpointListItem : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The containerId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -98,6 +100,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The type property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.EndpointType? Type { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EndpointListItem"/> and sets the default values.
+        /// </summary>
+        public EndpointListItem()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EndpointListItem"/></returns>
@@ -148,6 +157,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("pullZoneId", PullZoneId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession>("stickySessions", StickySessions);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.EndpointType>("type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

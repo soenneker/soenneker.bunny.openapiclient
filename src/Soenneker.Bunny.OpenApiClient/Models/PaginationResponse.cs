@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaginationResponse : IParsable
+    public partial class PaginationResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The currentPage property</summary>
         public int? CurrentPage { get; set; }
         /// <summary>The nextPage property</summary>
@@ -22,6 +24,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? TotalCount { get; set; }
         /// <summary>The totalPages property</summary>
         public int? TotalPages { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationResponse"/> and sets the default values.
+        /// </summary>
+        public PaginationResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -59,6 +68,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("pageSize", PageSize);
             writer.WriteIntValue("totalCount", TotalCount);
             writer.WriteIntValue("totalPages", TotalPages);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

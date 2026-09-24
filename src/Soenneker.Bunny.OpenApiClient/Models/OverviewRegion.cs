@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Overview region model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class OverviewRegion : IParsable
+    public partial class OverviewRegion : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The anycastTraffic property</summary>
         public double? AnycastTraffic { get; set; }
         /// <summary>The averageCPU property</summary>
@@ -45,6 +47,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public double? Requests { get; set; }
         /// <summary>The status property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus? Status { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion"/> and sets the default values.
+        /// </summary>
+        public OverviewRegion()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -92,6 +101,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("region", Region);
             writer.WriteDoubleValue("requests", Requests);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus>("status", Status);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -8,106 +8,106 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueCodes : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1? IssueCodesOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10Wrapper? IssueCodesOneOf10Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1 IssueCodesOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10Wrapper IssueCodesOneOf10Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10? IssueCodesOneOf10 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11Wrapper? IssueCodesOneOf11Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10 IssueCodesOneOf10 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11Wrapper IssueCodesOneOf11Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11? IssueCodesOneOf11 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12Wrapper? IssueCodesOneOf12Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11 IssueCodesOneOf11 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12Wrapper IssueCodesOneOf12Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12? IssueCodesOneOf12 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1Wrapper? IssueCodesOneOf1Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12 IssueCodesOneOf12 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1Wrapper IssueCodesOneOf1Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2? IssueCodesOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2Wrapper? IssueCodesOneOf2Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2 IssueCodesOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2Wrapper IssueCodesOneOf2Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3? IssueCodesOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3Wrapper? IssueCodesOneOf3Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3 IssueCodesOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3Wrapper IssueCodesOneOf3Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4? IssueCodesOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4Wrapper? IssueCodesOneOf4Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4 IssueCodesOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4Wrapper IssueCodesOneOf4Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5? IssueCodesOneOf5 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5Wrapper? IssueCodesOneOf5Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5 IssueCodesOneOf5 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5Wrapper IssueCodesOneOf5Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6? IssueCodesOneOf6 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6Wrapper? IssueCodesOneOf6Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6 IssueCodesOneOf6 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6Wrapper IssueCodesOneOf6Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7? IssueCodesOneOf7 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7Wrapper? IssueCodesOneOf7Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7 IssueCodesOneOf7 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7Wrapper IssueCodesOneOf7Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8? IssueCodesOneOf8 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8Wrapper? IssueCodesOneOf8Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8 IssueCodesOneOf8 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8Wrapper IssueCodesOneOf8Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9? IssueCodesOneOf9 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9Wrapper? IssueCodesOneOf9Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9 IssueCodesOneOf9 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9Wrapper IssueCodesOneOf9Wrapper { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -119,6 +119,54 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes();
+            if("IssueCodesOneOf10Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf10Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10Wrapper();
+            }
+            else if("IssueCodesOneOf11Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf11Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11Wrapper();
+            }
+            else if("IssueCodesOneOf12Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf12Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12Wrapper();
+            }
+            else if("IssueCodesOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf1Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1Wrapper();
+            }
+            else if("IssueCodesOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf2Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2Wrapper();
+            }
+            else if("IssueCodesOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf3Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3Wrapper();
+            }
+            else if("IssueCodesOneOf4Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf4Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4Wrapper();
+            }
+            else if("IssueCodesOneOf5Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf5Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5Wrapper();
+            }
+            else if("IssueCodesOneOf6Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf6Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6Wrapper();
+            }
+            else if("IssueCodesOneOf7Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf7Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7Wrapper();
+            }
+            else if("IssueCodesOneOf8Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf8Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8Wrapper();
+            }
+            else if("IssueCodesOneOf9Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.IssueCodesOneOf9Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9Wrapper();
+            }
             return result;
         }
         /// <summary>
@@ -127,53 +175,53 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(IssueCodesOneOf1 != null)
+            if(IssueCodesOneOf10Wrapper != null)
             {
-                return IssueCodesOneOf1.GetFieldDeserializers();
+                return IssueCodesOneOf10Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf10 != null)
+            else if(IssueCodesOneOf11Wrapper != null)
             {
-                return IssueCodesOneOf10.GetFieldDeserializers();
+                return IssueCodesOneOf11Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf11 != null)
+            else if(IssueCodesOneOf12Wrapper != null)
             {
-                return IssueCodesOneOf11.GetFieldDeserializers();
+                return IssueCodesOneOf12Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf12 != null)
+            else if(IssueCodesOneOf1Wrapper != null)
             {
-                return IssueCodesOneOf12.GetFieldDeserializers();
+                return IssueCodesOneOf1Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf2 != null)
+            else if(IssueCodesOneOf2Wrapper != null)
             {
-                return IssueCodesOneOf2.GetFieldDeserializers();
+                return IssueCodesOneOf2Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf3 != null)
+            else if(IssueCodesOneOf3Wrapper != null)
             {
-                return IssueCodesOneOf3.GetFieldDeserializers();
+                return IssueCodesOneOf3Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf4 != null)
+            else if(IssueCodesOneOf4Wrapper != null)
             {
-                return IssueCodesOneOf4.GetFieldDeserializers();
+                return IssueCodesOneOf4Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf5 != null)
+            else if(IssueCodesOneOf5Wrapper != null)
             {
-                return IssueCodesOneOf5.GetFieldDeserializers();
+                return IssueCodesOneOf5Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf6 != null)
+            else if(IssueCodesOneOf6Wrapper != null)
             {
-                return IssueCodesOneOf6.GetFieldDeserializers();
+                return IssueCodesOneOf6Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf7 != null)
+            else if(IssueCodesOneOf7Wrapper != null)
             {
-                return IssueCodesOneOf7.GetFieldDeserializers();
+                return IssueCodesOneOf7Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf8 != null)
+            else if(IssueCodesOneOf8Wrapper != null)
             {
-                return IssueCodesOneOf8.GetFieldDeserializers();
+                return IssueCodesOneOf8Wrapper.GetFieldDeserializers();
             }
-            else if(IssueCodesOneOf9 != null)
+            else if(IssueCodesOneOf9Wrapper != null)
             {
-                return IssueCodesOneOf9.GetFieldDeserializers();
+                return IssueCodesOneOf9Wrapper.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -184,53 +232,53 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(IssueCodesOneOf1 != null)
+            if(IssueCodesOneOf10Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1>(null, IssueCodesOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10Wrapper>(null, IssueCodesOneOf10Wrapper);
             }
-            else if(IssueCodesOneOf10 != null)
+            else if(IssueCodesOneOf11Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf10>(null, IssueCodesOneOf10);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11Wrapper>(null, IssueCodesOneOf11Wrapper);
             }
-            else if(IssueCodesOneOf11 != null)
+            else if(IssueCodesOneOf12Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf11>(null, IssueCodesOneOf11);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12Wrapper>(null, IssueCodesOneOf12Wrapper);
             }
-            else if(IssueCodesOneOf12 != null)
+            else if(IssueCodesOneOf1Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf12>(null, IssueCodesOneOf12);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf1Wrapper>(null, IssueCodesOneOf1Wrapper);
             }
-            else if(IssueCodesOneOf2 != null)
+            else if(IssueCodesOneOf2Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2>(null, IssueCodesOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf2Wrapper>(null, IssueCodesOneOf2Wrapper);
             }
-            else if(IssueCodesOneOf3 != null)
+            else if(IssueCodesOneOf3Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3>(null, IssueCodesOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf3Wrapper>(null, IssueCodesOneOf3Wrapper);
             }
-            else if(IssueCodesOneOf4 != null)
+            else if(IssueCodesOneOf4Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4>(null, IssueCodesOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf4Wrapper>(null, IssueCodesOneOf4Wrapper);
             }
-            else if(IssueCodesOneOf5 != null)
+            else if(IssueCodesOneOf5Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5>(null, IssueCodesOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf5Wrapper>(null, IssueCodesOneOf5Wrapper);
             }
-            else if(IssueCodesOneOf6 != null)
+            else if(IssueCodesOneOf6Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6>(null, IssueCodesOneOf6);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf6Wrapper>(null, IssueCodesOneOf6Wrapper);
             }
-            else if(IssueCodesOneOf7 != null)
+            else if(IssueCodesOneOf7Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7>(null, IssueCodesOneOf7);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf7Wrapper>(null, IssueCodesOneOf7Wrapper);
             }
-            else if(IssueCodesOneOf8 != null)
+            else if(IssueCodesOneOf8Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8>(null, IssueCodesOneOf8);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf8Wrapper>(null, IssueCodesOneOf8Wrapper);
             }
-            else if(IssueCodesOneOf9 != null)
+            else if(IssueCodesOneOf9Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9>(null, IssueCodesOneOf9);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodesOneOf9Wrapper>(null, IssueCodesOneOf9Wrapper);
             }
         }
     }

@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ContainerProbe : IParsable
+    public partial class ContainerProbe : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The failureThreshold property</summary>
         public int? FailureThreshold { get; set; }
         /// <summary>The grpc property</summary>
@@ -51,6 +53,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// </summary>
         public ContainerProbe()
         {
+            AdditionalData = new Dictionary<string, object>();
             FailureThreshold = 3;
             InitialDelaySeconds = 10;
             PeriodSeconds = 10;
@@ -100,6 +103,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("successThreshold", SuccessThreshold);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe>("tcpSocket", TcpSocket);
             writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -11,16 +11,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Represents a request to create a new Shield Zone.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class CreateShieldZoneRequest : IParsable
+    public partial class CreateShieldZoneRequest : IAdditionalDataHolder, IParsable
     {
         /// <summary>The accessLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty? AccessLists { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2? AccessLists { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty AccessLists { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2 AccessLists { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
         public int? AntivirusScanningMode { get; set; }
         /// <summary>0 = LogOnly1 = Challenge</summary>
@@ -37,6 +39,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest ShieldZone { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequest"/> and sets the default values.
+        /// </summary>
+        public CreateShieldZoneRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,7 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty.CreateFromDiscriminatorValue); } },
+                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2.CreateFromDiscriminatorValue); } },
                 { "antivirusScanningMode", n => { AntivirusScanningMode = n.GetIntValue(); } },
                 { "botDetectionExecutionMode", n => { BotDetectionExecutionMode = n.GetIntValue(); } },
                 { "csamScanningMode", n => { CsamScanningMode = n.GetIntValue(); } },
@@ -70,12 +79,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty>("accessLists", AccessLists);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2>("accessLists", AccessLists);
             writer.WriteIntValue("antivirusScanningMode", AntivirusScanningMode);
             writer.WriteIntValue("botDetectionExecutionMode", BotDetectionExecutionMode);
             writer.WriteIntValue("csamScanningMode", CsamScanningMode);
             writer.WriteLongValue("pullZoneId", PullZoneId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest>("shieldZone", ShieldZone);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

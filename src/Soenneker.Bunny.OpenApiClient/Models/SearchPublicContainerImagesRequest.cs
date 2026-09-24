@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SearchPublicContainerImagesRequest : IParsable
+    public partial class SearchPublicContainerImagesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The page property</summary>
         public int? Page { get; set; }
         /// <summary>The prefix property</summary>
@@ -32,6 +34,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The size property</summary>
         public int? Size { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SearchPublicContainerImagesRequest"/> and sets the default values.
+        /// </summary>
+        public SearchPublicContainerImagesRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,6 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("prefix", Prefix);
             writer.WriteStringValue("registryId", RegistryId);
             writer.WriteIntValue("size", Size);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

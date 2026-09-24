@@ -12,8 +12,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Represents the response for getting API Guardian configuration.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class GetApiGuardianResponse : ApiException, IParsable
+    public partial class GetApiGuardianResponse : ApiException, IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The full API Guardian state for a shield zone: global configuration and all endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,6 +34,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => Error?.MessageEscaped ?? string.Empty; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.GetApiGuardianResponse"/> and sets the default values.
+        /// </summary>
+        public GetApiGuardianResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -63,6 +72,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationResponse>("data", DataEscaped);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse>("error", Error);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

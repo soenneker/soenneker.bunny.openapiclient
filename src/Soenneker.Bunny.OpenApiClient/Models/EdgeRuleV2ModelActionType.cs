@@ -15,7 +15,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>0 = ForceSSL1 = Redirect2 = OriginUrl3 = OverrideCacheTime4 = BlockRequest5 = SetResponseHeader6 = SetRequestHeader7 = ForceDownload8 = DisableTokenAuthentication9 = EnableTokenAuthentication10 = OverrideCacheTimePublic11 = IgnoreQueryString12 = DisableOptimizer13 = ForceCompression14 = SetStatusCode15 = BypassPermaCache16 = OverrideBrowserCacheTime17 = OriginStorage18 = SetNetworkRateLimit19 = SetConnectionLimit20 = SetRequestsPerSecondLimit21 = RunEdgeScript22 = OriginMagicContainers23 = DisableWAF24 = RetryOrigin25 = OverrideBrowserCacheResponseHeader26 = RemoveBrowserCacheResponseHeader27 = DisableShieldChallenge28 = DisableShield29 = DisableShieldBotDetection30 = BypassAwsS3Authentication31 = DisableShieldAccessLists32 = DisableShieldRateLimiting33 = EnableRequestCoalescing34 = DisableRequestCoalescing37 = StripCookiesClientToOrigin</summary>
+        /// <summary>The value property</summary>
         public int? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType"/> and sets the default values.

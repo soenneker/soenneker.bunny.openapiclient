@@ -10,9 +10,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class StatusModel : ApiException, IParsable
+    public partial class StatusModel : ApiException, IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The primary error message.</summary>
         public override string Message { get => MessageEscaped ?? string.Empty; }
         /// <summary>Human-readable message describing the result, typically populated with error details when Success is false.</summary>
@@ -27,6 +29,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? StatusCode { get; set; }
         /// <summary>Determines if the request was successful</summary>
         public bool? Success { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel"/> and sets the default values.
+        /// </summary>
+        public StatusModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -60,6 +69,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("message", MessageEscaped);
             writer.WriteIntValue("statusCode", StatusCode);
             writer.WriteBoolValue("success", Success);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

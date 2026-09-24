@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaginationInfo : IParsable
+    public partial class PaginationInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>True if more results are available beyond this page.</summary>
         public bool? HasMore { get; set; }
         /// <summary>Limit that was applied to this query.</summary>
@@ -20,6 +22,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? Offset { get; set; }
         /// <summary>Number of entries actually returned (≤ bunnynet_cdn_log_api.Models.V2.PaginationInfo.Limit).</summary>
         public int? Returned { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationInfo"/> and sets the default values.
+        /// </summary>
+        public PaginationInfo()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,6 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("limit", Limit);
             writer.WriteLongValue("offset", Offset);
             writer.WriteIntValue("returned", Returned);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

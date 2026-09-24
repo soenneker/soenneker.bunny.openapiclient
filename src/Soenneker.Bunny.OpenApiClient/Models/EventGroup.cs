@@ -11,15 +11,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// An aggregated group of events (returned when the search request specifies groupBy).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class EventGroup : IParsable
+    public partial class EventGroup : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),and features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty? Context { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2? Context { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty Context { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2 Context { get; set; }
 #endif
         /// <summary>Number of events in the group.</summary>
         public long? Count { get; set; }
@@ -28,10 +30,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The group key: each requested groupBy dimension mapped to its value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty? Key { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2? Key { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty Key { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2 Key { get; set; }
 #endif
         /// <summary>Most recent event time in the group (Unix time in milliseconds, UTC).</summary>
         public long? LastSeen { get; set; }
@@ -43,6 +45,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<long?> Sparkline { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EventGroup"/> and sets the default values.
+        /// </summary>
+        public EventGroup()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -61,10 +70,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2.CreateFromDiscriminatorValue); } },
                 { "count", n => { Count = n.GetLongValue(); } },
                 { "firstSeen", n => { FirstSeen = n.GetLongValue(); } },
-                { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty.CreateFromDiscriminatorValue); } },
+                { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2.CreateFromDiscriminatorValue); } },
                 { "lastSeen", n => { LastSeen = n.GetLongValue(); } },
                 { "sparkline", n => { Sparkline = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
             };
@@ -76,12 +85,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2>("context", Context);
             writer.WriteLongValue("count", Count);
             writer.WriteLongValue("firstSeen", FirstSeen);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty>("key", Key);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2>("key", Key);
             writer.WriteLongValue("lastSeen", LastSeen);
             writer.WriteCollectionOfPrimitiveValues<long?>("sparkline", Sparkline);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

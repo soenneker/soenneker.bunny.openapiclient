@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VideoLibraryLanguage : IParsable
+    public partial class VideoLibraryLanguage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -34,6 +36,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? SupportTranscribing { get; set; }
         /// <summary>The TranscribingAccuracy property</summary>
         public int? TranscribingAccuracy { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryLanguage"/> and sets the default values.
+        /// </summary>
+        public VideoLibraryLanguage()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -71,6 +80,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("SupportPlayerTranslation", SupportPlayerTranslation);
             writer.WriteBoolValue("SupportTranscribing", SupportTranscribing);
             writer.WriteIntValue("TranscribingAccuracy", TranscribingAccuracy);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

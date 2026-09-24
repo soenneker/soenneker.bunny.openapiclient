@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ChapterModel : IParsable
+    public partial class ChapterModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The end time of the chapter in seconds. Must be greater than Start and within the video&apos;s duration; chapters must not overlap each other.</summary>
         public int? End { get; set; }
         /// <summary>The start time of the chapter in seconds. Must be less than End and within the video&apos;s duration; chapters must not overlap each other.</summary>
@@ -24,6 +26,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel"/> and sets the default values.
+        /// </summary>
+        public ChapterModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -57,6 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("end", End);
             writer.WriteIntValue("start", Start);
             writer.WriteStringValue("title", Title);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

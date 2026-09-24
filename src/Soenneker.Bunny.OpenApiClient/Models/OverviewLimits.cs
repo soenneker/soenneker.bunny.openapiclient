@@ -11,14 +11,23 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// What one instance of the application may use. The same for every instance, so it is stated once.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class OverviewLimits : IParsable
+    public partial class OverviewLimits : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpuCores property</summary>
         public double? CpuCores { get; set; }
         /// <summary>The outboundBandwidthBytesPerSecond property</summary>
         public double? OutboundBandwidthBytesPerSecond { get; set; }
         /// <summary>The ramBytes property</summary>
         public double? RamBytes { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits"/> and sets the default values.
+        /// </summary>
+        public OverviewLimits()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -52,6 +61,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("cpuCores", CpuCores);
             writer.WriteDoubleValue("outboundBandwidthBytesPerSecond", OutboundBandwidthBytesPerSecond);
             writer.WriteDoubleValue("ramBytes", RamBytes);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

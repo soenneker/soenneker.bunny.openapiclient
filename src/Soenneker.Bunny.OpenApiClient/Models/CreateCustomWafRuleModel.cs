@@ -9,11 +9,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateCustomWafRuleModel : IParsable
+    public partial class CreateCustomWafRuleModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>1 = Block2 = Log3 = Challenge4 = Allow5 = Bypass</summary>
         public int? ActionType { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The chainedRuleConditions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,6 +56,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes VariableTypes { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel"/> and sets the default values.
+        /// </summary>
+        public CreateCustomWafRuleModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -99,6 +108,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("transformationTypes", TransformationTypes);
             writer.WriteStringValue("value", Value);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes>("variableTypes", VariableTypes);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

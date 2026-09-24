@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PaginationListOfCollectionModel : IParsable
+    public partial class PaginationListOfCollectionModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current page number of the result set (1-based).</summary>
         public long? CurrentPage { get; set; }
         /// <summary>The items on the current page, in the order returned by the query; an empty list if no results match.</summary>
@@ -26,6 +28,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? ItemsPerPage { get; set; }
         /// <summary>The total number of items across all pages matching the query, not just the current page.</summary>
         public long? TotalItems { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel"/> and sets the default values.
+        /// </summary>
+        public PaginationListOfCollectionModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -61,6 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>("items", Items);
             writer.WriteIntValue("itemsPerPage", ItemsPerPage);
             writer.WriteLongValue("totalItems", TotalItems);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

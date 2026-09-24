@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Describes a single authentication scheme required by an endpoint,as extracted from the OpenAPI specification&apos;s securitySchemes.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AuthSchemeDetails : IParsable
+    public partial class AuthSchemeDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the header, query parameter, or cookie that carries the credential(e.g. &quot;Authorization&quot;, &quot;X-API-Key&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,6 +43,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The type of security scheme as defined in the OpenAPI specification.</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType? SchemeType { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails"/> and sets the default values.
+        /// </summary>
+        public AuthSchemeDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -78,6 +87,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation>("location", Location);
             writer.WriteStringValue("schemeName", SchemeName);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType>("schemeType", SchemeType);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

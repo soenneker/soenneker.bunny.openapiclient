@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ShieldZoneDefaults : IParsable
+    public partial class ShieldZoneDefaults : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accessLists property</summary>
@@ -20,6 +20,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList> AccessLists { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
         public int? AntivirusScanningMode { get; set; }
         /// <summary>0 = LogOnly1 = Challenge</summary>
@@ -34,6 +36,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest ShieldZone { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneDefaults"/> and sets the default values.
+        /// </summary>
+        public ShieldZoneDefaults()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -71,6 +80,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("botDetectionExecutionMode", BotDetectionExecutionMode);
             writer.WriteIntValue("csamScanningMode", CsamScanningMode);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest>("shieldZone", ShieldZone);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

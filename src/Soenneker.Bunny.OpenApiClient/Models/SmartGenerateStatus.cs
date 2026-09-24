@@ -8,50 +8,50 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SmartGenerateStatus : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1? SmartGenerateStatusOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1Wrapper? SmartGenerateStatusOneOf1Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1 SmartGenerateStatusOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1Wrapper SmartGenerateStatusOneOf1Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2? SmartGenerateStatusOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2Wrapper? SmartGenerateStatusOneOf2Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2 SmartGenerateStatusOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2Wrapper SmartGenerateStatusOneOf2Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3? SmartGenerateStatusOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3Wrapper? SmartGenerateStatusOneOf3Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3 SmartGenerateStatusOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3Wrapper SmartGenerateStatusOneOf3Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4? SmartGenerateStatusOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4Wrapper? SmartGenerateStatusOneOf4Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4 SmartGenerateStatusOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4Wrapper SmartGenerateStatusOneOf4Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5? SmartGenerateStatusOneOf5 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5Wrapper? SmartGenerateStatusOneOf5Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5 SmartGenerateStatusOneOf5 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5Wrapper SmartGenerateStatusOneOf5Wrapper { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,6 +63,26 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus();
+            if("SmartGenerateStatusOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SmartGenerateStatusOneOf1Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1Wrapper();
+            }
+            else if("SmartGenerateStatusOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SmartGenerateStatusOneOf2Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2Wrapper();
+            }
+            else if("SmartGenerateStatusOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SmartGenerateStatusOneOf3Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3Wrapper();
+            }
+            else if("SmartGenerateStatusOneOf4Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SmartGenerateStatusOneOf4Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4Wrapper();
+            }
+            else if("SmartGenerateStatusOneOf5Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.SmartGenerateStatusOneOf5Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5Wrapper();
+            }
             return result;
         }
         /// <summary>
@@ -71,25 +91,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(SmartGenerateStatusOneOf1 != null)
+            if(SmartGenerateStatusOneOf1Wrapper != null)
             {
-                return SmartGenerateStatusOneOf1.GetFieldDeserializers();
+                return SmartGenerateStatusOneOf1Wrapper.GetFieldDeserializers();
             }
-            else if(SmartGenerateStatusOneOf2 != null)
+            else if(SmartGenerateStatusOneOf2Wrapper != null)
             {
-                return SmartGenerateStatusOneOf2.GetFieldDeserializers();
+                return SmartGenerateStatusOneOf2Wrapper.GetFieldDeserializers();
             }
-            else if(SmartGenerateStatusOneOf3 != null)
+            else if(SmartGenerateStatusOneOf3Wrapper != null)
             {
-                return SmartGenerateStatusOneOf3.GetFieldDeserializers();
+                return SmartGenerateStatusOneOf3Wrapper.GetFieldDeserializers();
             }
-            else if(SmartGenerateStatusOneOf4 != null)
+            else if(SmartGenerateStatusOneOf4Wrapper != null)
             {
-                return SmartGenerateStatusOneOf4.GetFieldDeserializers();
+                return SmartGenerateStatusOneOf4Wrapper.GetFieldDeserializers();
             }
-            else if(SmartGenerateStatusOneOf5 != null)
+            else if(SmartGenerateStatusOneOf5Wrapper != null)
             {
-                return SmartGenerateStatusOneOf5.GetFieldDeserializers();
+                return SmartGenerateStatusOneOf5Wrapper.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -100,25 +120,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(SmartGenerateStatusOneOf1 != null)
+            if(SmartGenerateStatusOneOf1Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1>(null, SmartGenerateStatusOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf1Wrapper>(null, SmartGenerateStatusOneOf1Wrapper);
             }
-            else if(SmartGenerateStatusOneOf2 != null)
+            else if(SmartGenerateStatusOneOf2Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2>(null, SmartGenerateStatusOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf2Wrapper>(null, SmartGenerateStatusOneOf2Wrapper);
             }
-            else if(SmartGenerateStatusOneOf3 != null)
+            else if(SmartGenerateStatusOneOf3Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3>(null, SmartGenerateStatusOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf3Wrapper>(null, SmartGenerateStatusOneOf3Wrapper);
             }
-            else if(SmartGenerateStatusOneOf4 != null)
+            else if(SmartGenerateStatusOneOf4Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4>(null, SmartGenerateStatusOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf4Wrapper>(null, SmartGenerateStatusOneOf4Wrapper);
             }
-            else if(SmartGenerateStatusOneOf5 != null)
+            else if(SmartGenerateStatusOneOf5Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5>(null, SmartGenerateStatusOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatusOneOf5Wrapper>(null, SmartGenerateStatusOneOf5Wrapper);
             }
         }
     }

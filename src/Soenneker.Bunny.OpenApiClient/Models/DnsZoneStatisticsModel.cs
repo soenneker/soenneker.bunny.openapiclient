@@ -9,43 +9,52 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class DnsZoneStatisticsModel : IParsable
+    public partial class DnsZoneStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The NormalQueriesServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty? NormalQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2? NormalQueriesServedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty NormalQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2 NormalQueriesServedChart { get; set; }
 #endif
         /// <summary>The QueriesByTypeChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty? QueriesByTypeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2? QueriesByTypeChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty QueriesByTypeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2 QueriesByTypeChart { get; set; }
 #endif
         /// <summary>The QueriesServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty? QueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2? QueriesServedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty QueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2 QueriesServedChart { get; set; }
 #endif
         /// <summary>The SmartQueriesServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty? SmartQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2? SmartQueriesServedChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty SmartQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2 SmartQueriesServedChart { get; set; }
 #endif
         /// <summary>The TotalQueriesServed property</summary>
         public long? TotalQueriesServed { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModel"/> and sets the default values.
+        /// </summary>
+        public DnsZoneStatisticsModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -64,10 +73,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "NormalQueriesServedChart", n => { NormalQueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty.CreateFromDiscriminatorValue); } },
-                { "QueriesByTypeChart", n => { QueriesByTypeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty.CreateFromDiscriminatorValue); } },
-                { "QueriesServedChart", n => { QueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty.CreateFromDiscriminatorValue); } },
-                { "SmartQueriesServedChart", n => { SmartQueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty.CreateFromDiscriminatorValue); } },
+                { "NormalQueriesServedChart", n => { NormalQueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "QueriesByTypeChart", n => { QueriesByTypeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2.CreateFromDiscriminatorValue); } },
+                { "QueriesServedChart", n => { QueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "SmartQueriesServedChart", n => { SmartQueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2.CreateFromDiscriminatorValue); } },
                 { "TotalQueriesServed", n => { TotalQueriesServed = n.GetLongValue(); } },
             };
         }
@@ -78,11 +87,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty>("NormalQueriesServedChart", NormalQueriesServedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty>("QueriesByTypeChart", QueriesByTypeChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty>("QueriesServedChart", QueriesServedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty>("SmartQueriesServedChart", SmartQueriesServedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2>("NormalQueriesServedChart", NormalQueriesServedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2>("QueriesByTypeChart", QueriesByTypeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2>("QueriesServedChart", QueriesServedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2>("SmartQueriesServedChart", SmartQueriesServedChart);
             writer.WriteLongValue("TotalQueriesServed", TotalQueriesServed);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

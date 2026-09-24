@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class AddEdgeScriptVariableModel : IParsable
+    public partial class AddEdgeScriptVariableModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The DefaultValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,6 +32,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The Required property</summary>
         public bool? Required { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.AddEdgeScriptVariableModel"/> and sets the default values.
+        /// </summary>
+        public AddEdgeScriptVariableModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -63,6 +72,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("DefaultValue", DefaultValue);
             writer.WriteStringValue("Name", Name);
             writer.WriteBoolValue("Required", Required);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

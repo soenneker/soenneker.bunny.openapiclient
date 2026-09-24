@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UsageSummary : IParsable
+    public partial class UsageSummary : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The averageLatency property</summary>
         public double? AverageLatency { get; set; }
         /// <summary>The currentLatency property</summary>
@@ -19,10 +21,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The latencyChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty? LatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty2? LatencyChart { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty LatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty2 LatencyChart { get; set; }
 #endif
         /// <summary>The monthlyCost property</summary>
         public double? MonthlyCost { get; set; }
@@ -30,6 +32,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? Status { get; set; }
         /// <summary>The totalVolumeSizeInGb property</summary>
         public double? TotalVolumeSizeInGb { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UsageSummary"/> and sets the default values.
+        /// </summary>
+        public UsageSummary()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -50,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "averageLatency", n => { AverageLatency = n.GetDoubleValue(); } },
                 { "currentLatency", n => { CurrentLatency = n.GetDoubleValue(); } },
-                { "latencyChart", n => { LatencyChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty>(global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty.CreateFromDiscriminatorValue); } },
+                { "latencyChart", n => { LatencyChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty2.CreateFromDiscriminatorValue); } },
                 { "monthlyCost", n => { MonthlyCost = n.GetDoubleValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>(); } },
                 { "totalVolumeSizeInGb", n => { TotalVolumeSizeInGb = n.GetDoubleValue(); } },
@@ -65,10 +74,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("averageLatency", AverageLatency);
             writer.WriteDoubleValue("currentLatency", CurrentLatency);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty>("latencyChart", LatencyChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UsageSummaryLatencyChartProperty2>("latencyChart", LatencyChart);
             writer.WriteDoubleValue("monthlyCost", MonthlyCost);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>("status", Status);
             writer.WriteDoubleValue("totalVolumeSizeInGb", TotalVolumeSizeInGb);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CdnEndpointRequest : IParsable
+    public partial class CdnEndpointRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isSslEnabled property</summary>
         public bool? IsSslEnabled { get; set; }
         /// <summary>The portMappings property</summary>
@@ -32,6 +34,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings StickySessions { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest"/> and sets the default values.
+        /// </summary>
+        public CdnEndpointRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,6 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest>("portMappings", PortMappings);
             writer.WriteIntValue("pullZoneId", PullZoneId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings>("stickySessions", StickySessions);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

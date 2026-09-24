@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VideoLibraryModel : IParsable
+    public partial class VideoLibraryModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines direct play URLs are enabled for the library</summary>
         public bool? AllowDirectPlay { get; set; }
         /// <summary>Determines if the Early-Play feature is enabled</summary>
@@ -338,6 +340,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string WebhookUrl { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModel"/> and sets the default values.
+        /// </summary>
+        public VideoLibraryModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModel"/></returns>
@@ -526,6 +535,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("WatermarkVersion", WatermarkVersion);
             writer.WriteIntValue("WatermarkWidth", WatermarkWidth);
             writer.WriteStringValue("WebhookUrl", WebhookUrl);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

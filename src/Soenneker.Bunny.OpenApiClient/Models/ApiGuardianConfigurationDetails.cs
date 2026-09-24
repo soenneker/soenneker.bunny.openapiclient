@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Global API Guardian configuration for a shield zone.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ApiGuardianConfigurationDetails : IParsable
+    public partial class ApiGuardianConfigurationDetails : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Block1 = Log2 = Ignore</summary>
         public int? BodyLimitAction { get; set; }
         /// <summary>The createdAt property</summary>
@@ -53,6 +55,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Version { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails"/> and sets the default values.
+        /// </summary>
+        public ApiGuardianConfigurationDetails()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -108,6 +117,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("unmatchedPathAction", UnmatchedPathAction);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteStringValue("version", Version);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

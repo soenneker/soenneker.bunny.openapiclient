@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ShieldZoneMetrics : IParsable
+    public partial class ShieldZoneMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The accessList property</summary>
@@ -23,11 +23,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The accessListOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty? AccessListOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty2? AccessListOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty AccessListOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty2 AccessListOverviewPastTwentyEightDays { get; set; }
 #endif
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiGuardian property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,10 +41,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The apiGuardianOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty? ApiGuardianOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty2? ApiGuardianOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty ApiGuardianOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty2 ApiGuardianOverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The botDetection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,10 +57,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The botDetectionOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty? BotDetectionOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty2? BotDetectionOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty BotDetectionOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty2 BotDetectionOverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The dDoS property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,10 +73,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The dDoSOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty? DDoSOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty2? DDoSOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty DDoSOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty2 DDoSOverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The overview property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,10 +89,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty? OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The ratelimit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,10 +105,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ratelimitOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty? RatelimitOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty2? RatelimitOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty RatelimitOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty2 RatelimitOverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The totalBillableRequests property</summary>
         public long? TotalBillableRequests { get; set; }
@@ -123,10 +125,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The uploadScanningOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty? UploadScanningOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty2? UploadScanningOverviewPastTwentyEightDays { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty UploadScanningOverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty2 UploadScanningOverviewPastTwentyEightDays { get; set; }
 #endif
         /// <summary>The waf property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,6 +138,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.Waf Waf { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetrics"/> and sets the default values.
+        /// </summary>
+        public ShieldZoneMetrics()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -155,21 +164,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "accessList", n => { AccessList = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AccessList>(global::Soenneker.Bunny.OpenApiClient.Models.AccessList.CreateFromDiscriminatorValue); } },
-                { "accessListOverviewPastTwentyEightDays", n => { AccessListOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "accessListOverviewPastTwentyEightDays", n => { AccessListOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "apiGuardian", n => { ApiGuardian = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity.CreateFromDiscriminatorValue); } },
-                { "apiGuardianOverviewPastTwentyEightDays", n => { ApiGuardianOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "apiGuardianOverviewPastTwentyEightDays", n => { ApiGuardianOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "botDetection", n => { BotDetection = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionData>(global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionData.CreateFromDiscriminatorValue); } },
-                { "botDetectionOverviewPastTwentyEightDays", n => { BotDetectionOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "botDetectionOverviewPastTwentyEightDays", n => { BotDetectionOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "dDoS", n => { DDoS = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DDoS>(global::Soenneker.Bunny.OpenApiClient.Models.DDoS.CreateFromDiscriminatorValue); } },
-                { "dDoSOverviewPastTwentyEightDays", n => { DDoSOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "dDoSOverviewPastTwentyEightDays", n => { DDoSOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "overview", n => { Overview = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview.CreateFromDiscriminatorValue); } },
-                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "ratelimit", n => { Ratelimit = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Ratelimit>(global::Soenneker.Bunny.OpenApiClient.Models.Ratelimit.CreateFromDiscriminatorValue); } },
-                { "ratelimitOverviewPastTwentyEightDays", n => { RatelimitOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "ratelimitOverviewPastTwentyEightDays", n => { RatelimitOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "totalBillableRequests", n => { TotalBillableRequests = n.GetLongValue(); } },
                 { "totalCleanRequestsLimit", n => { TotalCleanRequestsLimit = n.GetLongValue(); } },
                 { "uploadScanning", n => { UploadScanning = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UploadScanning>(global::Soenneker.Bunny.OpenApiClient.Models.UploadScanning.CreateFromDiscriminatorValue); } },
-                { "uploadScanningOverviewPastTwentyEightDays", n => { UploadScanningOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty.CreateFromDiscriminatorValue); } },
+                { "uploadScanningOverviewPastTwentyEightDays", n => { UploadScanningOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
                 { "waf", n => { Waf = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Waf>(global::Soenneker.Bunny.OpenApiClient.Models.Waf.CreateFromDiscriminatorValue); } },
             };
         }
@@ -181,22 +190,23 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AccessList>("accessList", AccessList);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty>("accessListOverviewPastTwentyEightDays", AccessListOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsAccessListOverviewPastTwentyEightDaysProperty2>("accessListOverviewPastTwentyEightDays", AccessListOverviewPastTwentyEightDays);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity>("apiGuardian", ApiGuardian);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty>("apiGuardianOverviewPastTwentyEightDays", ApiGuardianOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsApiGuardianOverviewPastTwentyEightDaysProperty2>("apiGuardianOverviewPastTwentyEightDays", ApiGuardianOverviewPastTwentyEightDays);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionData>("botDetection", BotDetection);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty>("botDetectionOverviewPastTwentyEightDays", BotDetectionOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsBotDetectionOverviewPastTwentyEightDaysProperty2>("botDetectionOverviewPastTwentyEightDays", BotDetectionOverviewPastTwentyEightDays);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DDoS>("dDoS", DDoS);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty>("dDoSOverviewPastTwentyEightDays", DDoSOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsDDoSOverviewPastTwentyEightDaysProperty2>("dDoSOverviewPastTwentyEightDays", DDoSOverviewPastTwentyEightDays);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview>("overview", Overview);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsOverviewPastTwentyEightDaysProperty2>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Ratelimit>("ratelimit", Ratelimit);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty>("ratelimitOverviewPastTwentyEightDays", RatelimitOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsRatelimitOverviewPastTwentyEightDaysProperty2>("ratelimitOverviewPastTwentyEightDays", RatelimitOverviewPastTwentyEightDays);
             writer.WriteLongValue("totalBillableRequests", TotalBillableRequests);
             writer.WriteLongValue("totalCleanRequestsLimit", TotalCleanRequestsLimit);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UploadScanning>("uploadScanning", UploadScanning);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty>("uploadScanningOverviewPastTwentyEightDays", UploadScanningOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMetricsUploadScanningOverviewPastTwentyEightDaysProperty2>("uploadScanningOverviewPastTwentyEightDays", UploadScanningOverviewPastTwentyEightDays);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Waf>("waf", Waf);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

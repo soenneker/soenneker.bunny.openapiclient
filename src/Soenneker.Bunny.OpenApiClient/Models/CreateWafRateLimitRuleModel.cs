@@ -9,11 +9,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateWafRateLimitRuleModel : IParsable
+    public partial class CreateWafRateLimitRuleModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>1 = RateLimit2 = Log3 = Challenge</summary>
         public int? ActionType { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>30 = ForThirtySeconds60 = ForOneMinute300 = ForFiveMinutes900 = ForFifteenMinutes1800 = ForThirtyMinutes3600 = ForOneHour</summary>
         public int? BlockTime { get; set; }
         /// <summary>The chainedRuleConditions property</summary>
@@ -62,6 +64,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes VariableTypes { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModel"/> and sets the default values.
+        /// </summary>
+        public CreateWafRateLimitRuleModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -115,6 +124,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("transformationTypes", TransformationTypes);
             writer.WriteStringValue("value", Value);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes>("variableTypes", VariableTypes);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

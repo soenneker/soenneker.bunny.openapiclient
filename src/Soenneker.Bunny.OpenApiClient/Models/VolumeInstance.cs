@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Volume instance model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class VolumeInstance : IParsable
+    public partial class VolumeInstance : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attachedContainers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -60,6 +62,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The usage property</summary>
         public double? Usage { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VolumeInstance"/> and sets the default values.
+        /// </summary>
+        public VolumeInstance()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VolumeInstance"/></returns>
@@ -102,6 +111,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("size", Size);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VolumeStatus>("status", Status);
             writer.WriteDoubleValue("usage", Usage);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

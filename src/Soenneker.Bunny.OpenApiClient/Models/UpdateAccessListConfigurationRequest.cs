@@ -11,12 +11,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Request model for updating an access list configuration.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateAccessListConfigurationRequest : IParsable
+    public partial class UpdateAccessListConfigurationRequest : IAdditionalDataHolder, IParsable
     {
         /// <summary>0 = None1 = Allow2 = Block3 = Challenge4 = Log5 = Bypass</summary>
         public int? Action { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the access list should be enabled or disabled. If null, the current state is preserved.</summary>
         public bool? IsEnabled { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateAccessListConfigurationRequest"/> and sets the default values.
+        /// </summary>
+        public UpdateAccessListConfigurationRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -48,6 +57,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("action", Action);
             writer.WriteBoolValue("isEnabled", IsEnabled);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

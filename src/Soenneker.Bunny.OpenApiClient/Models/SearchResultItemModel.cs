@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class SearchResultItemModel : IParsable
+    public partial class SearchResultItemModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the search result item linked object</summary>
         public long? Id { get; set; }
         /// <summary>The name of the object found</summary>
@@ -30,6 +32,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel"/> and sets the default values.
+        /// </summary>
+        public SearchResultItemModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -63,6 +72,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("Id", Id);
             writer.WriteStringValue("Name", Name);
             writer.WriteStringValue("Type", Type);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

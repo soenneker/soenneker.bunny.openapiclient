@@ -8,82 +8,82 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8Wrapper"/>, <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9Wrapper"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VideoModelStatus : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1? VideoModelStatusOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1Wrapper? VideoModelStatusOneOf1Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1 VideoModelStatusOneOf1 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1Wrapper VideoModelStatusOneOf1Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2? VideoModelStatusOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2Wrapper? VideoModelStatusOneOf2Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2 VideoModelStatusOneOf2 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2Wrapper VideoModelStatusOneOf2Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3? VideoModelStatusOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3Wrapper? VideoModelStatusOneOf3Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3 VideoModelStatusOneOf3 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3Wrapper VideoModelStatusOneOf3Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4? VideoModelStatusOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4Wrapper? VideoModelStatusOneOf4Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4 VideoModelStatusOneOf4 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4Wrapper VideoModelStatusOneOf4Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5? VideoModelStatusOneOf5 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5Wrapper? VideoModelStatusOneOf5Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5 VideoModelStatusOneOf5 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5Wrapper VideoModelStatusOneOf5Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6? VideoModelStatusOneOf6 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6Wrapper? VideoModelStatusOneOf6Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6 VideoModelStatusOneOf6 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6Wrapper VideoModelStatusOneOf6Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7? VideoModelStatusOneOf7 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7Wrapper? VideoModelStatusOneOf7Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7 VideoModelStatusOneOf7 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7Wrapper VideoModelStatusOneOf7Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8? VideoModelStatusOneOf8 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8Wrapper? VideoModelStatusOneOf8Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8 VideoModelStatusOneOf8 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8Wrapper VideoModelStatusOneOf8Wrapper { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9"/></summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9Wrapper"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9? VideoModelStatusOneOf9 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9Wrapper? VideoModelStatusOneOf9Wrapper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9 VideoModelStatusOneOf9 { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9Wrapper VideoModelStatusOneOf9Wrapper { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -95,6 +95,42 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus();
+            if("VideoModelStatusOneOf1Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf1Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1Wrapper();
+            }
+            else if("VideoModelStatusOneOf2Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf2Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2Wrapper();
+            }
+            else if("VideoModelStatusOneOf3Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf3Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3Wrapper();
+            }
+            else if("VideoModelStatusOneOf4Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf4Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4Wrapper();
+            }
+            else if("VideoModelStatusOneOf5Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf5Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5Wrapper();
+            }
+            else if("VideoModelStatusOneOf6Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf6Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6Wrapper();
+            }
+            else if("VideoModelStatusOneOf7Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf7Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7Wrapper();
+            }
+            else if("VideoModelStatusOneOf8Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf8Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8Wrapper();
+            }
+            else if("VideoModelStatusOneOf9Wrapper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.VideoModelStatusOneOf9Wrapper = new global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9Wrapper();
+            }
             return result;
         }
         /// <summary>
@@ -103,41 +139,41 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(VideoModelStatusOneOf1 != null)
+            if(VideoModelStatusOneOf1Wrapper != null)
             {
-                return VideoModelStatusOneOf1.GetFieldDeserializers();
+                return VideoModelStatusOneOf1Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf2 != null)
+            else if(VideoModelStatusOneOf2Wrapper != null)
             {
-                return VideoModelStatusOneOf2.GetFieldDeserializers();
+                return VideoModelStatusOneOf2Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf3 != null)
+            else if(VideoModelStatusOneOf3Wrapper != null)
             {
-                return VideoModelStatusOneOf3.GetFieldDeserializers();
+                return VideoModelStatusOneOf3Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf4 != null)
+            else if(VideoModelStatusOneOf4Wrapper != null)
             {
-                return VideoModelStatusOneOf4.GetFieldDeserializers();
+                return VideoModelStatusOneOf4Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf5 != null)
+            else if(VideoModelStatusOneOf5Wrapper != null)
             {
-                return VideoModelStatusOneOf5.GetFieldDeserializers();
+                return VideoModelStatusOneOf5Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf6 != null)
+            else if(VideoModelStatusOneOf6Wrapper != null)
             {
-                return VideoModelStatusOneOf6.GetFieldDeserializers();
+                return VideoModelStatusOneOf6Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf7 != null)
+            else if(VideoModelStatusOneOf7Wrapper != null)
             {
-                return VideoModelStatusOneOf7.GetFieldDeserializers();
+                return VideoModelStatusOneOf7Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf8 != null)
+            else if(VideoModelStatusOneOf8Wrapper != null)
             {
-                return VideoModelStatusOneOf8.GetFieldDeserializers();
+                return VideoModelStatusOneOf8Wrapper.GetFieldDeserializers();
             }
-            else if(VideoModelStatusOneOf9 != null)
+            else if(VideoModelStatusOneOf9Wrapper != null)
             {
-                return VideoModelStatusOneOf9.GetFieldDeserializers();
+                return VideoModelStatusOneOf9Wrapper.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -148,41 +184,41 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(VideoModelStatusOneOf1 != null)
+            if(VideoModelStatusOneOf1Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1>(null, VideoModelStatusOneOf1);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf1Wrapper>(null, VideoModelStatusOneOf1Wrapper);
             }
-            else if(VideoModelStatusOneOf2 != null)
+            else if(VideoModelStatusOneOf2Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2>(null, VideoModelStatusOneOf2);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf2Wrapper>(null, VideoModelStatusOneOf2Wrapper);
             }
-            else if(VideoModelStatusOneOf3 != null)
+            else if(VideoModelStatusOneOf3Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3>(null, VideoModelStatusOneOf3);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf3Wrapper>(null, VideoModelStatusOneOf3Wrapper);
             }
-            else if(VideoModelStatusOneOf4 != null)
+            else if(VideoModelStatusOneOf4Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4>(null, VideoModelStatusOneOf4);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf4Wrapper>(null, VideoModelStatusOneOf4Wrapper);
             }
-            else if(VideoModelStatusOneOf5 != null)
+            else if(VideoModelStatusOneOf5Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5>(null, VideoModelStatusOneOf5);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf5Wrapper>(null, VideoModelStatusOneOf5Wrapper);
             }
-            else if(VideoModelStatusOneOf6 != null)
+            else if(VideoModelStatusOneOf6Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6>(null, VideoModelStatusOneOf6);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf6Wrapper>(null, VideoModelStatusOneOf6Wrapper);
             }
-            else if(VideoModelStatusOneOf7 != null)
+            else if(VideoModelStatusOneOf7Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7>(null, VideoModelStatusOneOf7);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf7Wrapper>(null, VideoModelStatusOneOf7Wrapper);
             }
-            else if(VideoModelStatusOneOf8 != null)
+            else if(VideoModelStatusOneOf8Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8>(null, VideoModelStatusOneOf8);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf8Wrapper>(null, VideoModelStatusOneOf8Wrapper);
             }
-            else if(VideoModelStatusOneOf9 != null)
+            else if(VideoModelStatusOneOf9Wrapper != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9>(null, VideoModelStatusOneOf9);
+                writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatusOneOf9Wrapper>(null, VideoModelStatusOneOf9Wrapper);
             }
         }
     }

@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class VideoOEmbedModel : IParsable
+    public partial class VideoOEmbedModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Height in pixels of the embedded player iframe, scaled to fit within maxWidth/maxHeight while preserving the video&apos;s aspect ratio.</summary>
         public int? Height { get; set; }
         /// <summary>The HTML &lt;iframe&gt; markup required to embed the video player.</summary>
@@ -77,6 +79,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Width in pixels of the embedded player iframe, scaled to fit within maxWidth/maxHeight while preserving the video&apos;s aspect ratio.</summary>
         public int? Width { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoOEmbedModel"/> and sets the default values.
+        /// </summary>
+        public VideoOEmbedModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoOEmbedModel"/></returns>
@@ -125,6 +134,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
             writer.WriteStringValue("version", Version);
             writer.WriteIntValue("width", Width);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

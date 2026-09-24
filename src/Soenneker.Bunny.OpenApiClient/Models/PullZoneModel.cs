@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PullZoneModel : IParsable
+    public partial class PullZoneModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>The list of extensions that will return the CORS headers</summary>
@@ -24,6 +24,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? AddCanonicalHeader { get; set; }
         /// <summary>Determines if the Pull Zone should forward the current hostname to the origin</summary>
         public bool? AddHostHeader { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Pull Zone specific pricing discount for Africa region.</summary>
         public int? AfricaDiscount { get; set; }
         /// <summary>The list of referrer hostnames that are allowed to access the pull zone.Requests containing the header Referer: hostname that is not on the list will be rejected.If empty, all the referrers are allowed</summary>
@@ -661,6 +663,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string ZoneSecurityKey { get; set; }
 #endif
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModel"/> and sets the default values.
+        /// </summary>
+        public PullZoneModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModel"/></returns>
@@ -1029,6 +1038,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ZoneSecurityEnabled", ZoneSecurityEnabled);
             writer.WriteBoolValue("ZoneSecurityIncludeHashRemoteIP", ZoneSecurityIncludeHashRemoteIP);
             writer.WriteStringValue("ZoneSecurityKey", ZoneSecurityKey);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

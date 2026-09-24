@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Patch request for updating the global API Guardian configuration.All fields are optional — only provided fields are applied.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateApiGuardianConfigurationRequest : IParsable
+    public partial class UpdateApiGuardianConfigurationRequest : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Block1 = Log2 = Ignore</summary>
         public int? BodyLimitAction { get; set; }
         /// <summary>0 = Log1 = Block</summary>
@@ -21,6 +23,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? IsEnabled { get; set; }
         /// <summary>0 = Block1 = Log2 = Ignore</summary>
         public int? UnmatchedPathAction { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianConfigurationRequest"/> and sets the default values.
+        /// </summary>
+        public UpdateApiGuardianConfigurationRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -56,6 +65,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("executionMode", ExecutionMode);
             writer.WriteBoolValue("isEnabled", IsEnabled);
             writer.WriteIntValue("unmatchedPathAction", UnmatchedPathAction);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

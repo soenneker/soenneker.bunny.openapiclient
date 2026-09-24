@@ -14,7 +14,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>0 = A1 = AAAA2 = CNAME3 = TXT4 = MX8 = SRV9 = CAA10 = PTR12 = NS13 = Svcb14 = HTTPS15 = TLSA16 = SOA</summary>
+        /// <summary>The value property</summary>
         public int? Value { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModelType"/> and sets the default values.

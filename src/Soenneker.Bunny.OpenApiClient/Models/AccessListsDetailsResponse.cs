@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Response containing comprehensive access list information for a Shield Zone, including both managed and custom lists.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class AccessListsDetailsResponse : IParsable
+    public partial class AccessListsDetailsResponse : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Total number of entries across all custom access lists for this Shield Zone.</summary>
         public int? CustomEntryCount { get; set; }
         /// <summary>Maximum number of entries allowed across all custom access lists based on the Shield plan.</summary>
@@ -45,6 +47,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails> ManagedLists { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.AccessListsDetailsResponse"/> and sets the default values.
+        /// </summary>
+        public AccessListsDetailsResponse()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -86,6 +95,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails>("customLists", CustomLists);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse>("error", Error);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails>("managedLists", ManagedLists);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

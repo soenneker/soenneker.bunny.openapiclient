@@ -9,15 +9,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class LoadBalancerPricingTierModel : IParsable
+    public partial class LoadBalancerPricingTierModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The PricePerMillion property</summary>
         public decimal? PricePerMillion { get; set; }
         /// <summary>The ThresholdFromMillions property</summary>
         public long? ThresholdFromMillions { get; set; }
         /// <summary>The ThresholdToMillions property</summary>
         public long? ThresholdToMillions { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel"/> and sets the default values.
+        /// </summary>
+        public LoadBalancerPricingTierModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDecimalValue("PricePerMillion", PricePerMillion);
             writer.WriteLongValue("ThresholdFromMillions", ThresholdFromMillions);
             writer.WriteLongValue("ThresholdToMillions", ThresholdToMillions);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

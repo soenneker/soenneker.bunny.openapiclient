@@ -11,8 +11,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Volume list item model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class VolumeInList : IParsable
+    public partial class VolumeInList : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The attachedInstancesCount property</summary>
         public int? AttachedInstancesCount { get; set; }
         /// <summary>The containersCount property</summary>
@@ -47,6 +49,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeInstance> VolumeInstances { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VolumeInList"/> and sets the default values.
+        /// </summary>
+        public VolumeInList()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("totalInstancesCount", TotalInstancesCount);
             writer.WriteDoubleValue("totalUsage", TotalUsage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeInstance>("volumeInstances", VolumeInstances);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

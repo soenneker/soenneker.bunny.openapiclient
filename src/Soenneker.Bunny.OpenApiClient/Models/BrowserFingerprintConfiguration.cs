@@ -9,15 +9,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BrowserFingerprintConfiguration : IParsable
+    public partial class BrowserFingerprintConfiguration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Unknown1 = Low2 = Medium3 = High4 = Custom</summary>
         public int? Aggression { get; set; }
         /// <summary>The complexEnabled property</summary>
         public bool? ComplexEnabled { get; set; }
         /// <summary>0 = Off1 = Low2 = Medium3 = High</summary>
         public int? Sensitivity { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration"/> and sets the default values.
+        /// </summary>
+        public BrowserFingerprintConfiguration()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -51,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("aggression", Aggression);
             writer.WriteBoolValue("complexEnabled", ComplexEnabled);
             writer.WriteIntValue("sensitivity", Sensitivity);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

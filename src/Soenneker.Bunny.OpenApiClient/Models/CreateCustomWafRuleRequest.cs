@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class CreateCustomWafRuleRequest : IParsable
+    public partial class CreateCustomWafRuleRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ruleConfiguration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,6 +40,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleRequest"/> and sets the default values.
+        /// </summary>
+        public CreateCustomWafRuleRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -73,6 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("ruleDescription", RuleDescription);
             writer.WriteStringValue("ruleName", RuleName);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

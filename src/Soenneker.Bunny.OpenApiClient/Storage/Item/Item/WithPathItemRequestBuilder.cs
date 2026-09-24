@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.Models;
 using Soenneker.Bunny.OpenApiClient.Storage.Item.Item.Item;
 using System.Collections.Generic;
 using System.IO;
@@ -48,20 +49,21 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item.Item
         /// <summary>
         /// Retrieve a list of files and directories located in the given directory.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathGetResponse"/></returns>
+        /// <returns>A List&lt;global::Soenneker.Bunny.OpenApiClient.Models.GetByStorageZoneNameByPath200ResponseSchemaItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Bunny.OpenApiClient.Models.GetByStorageZoneNameByPath200ResponseSchemaItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Bunny.OpenApiClient.Models.GetByStorageZoneNameByPath200ResponseSchemaItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathGetResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Bunny.OpenApiClient.Models.GetByStorageZoneNameByPath200ResponseSchemaItem>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.GetByStorageZoneNameByPath200ResponseSchemaItem.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Retrieve a list of files and directories located in the given directory.

@@ -9,7 +9,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PullZoneSettingsModel : IParsable
+    public partial class PullZoneSettingsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Sets the list of extensions that will return the CORS headers</summary>
@@ -24,6 +24,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? AddCanonicalHeader { get; set; }
         /// <summary>Determines if the zone should forward the requested host header to the origin</summary>
         public bool? AddHostHeader { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sets the list of referrer hostnames that are allowed to access the pull zone. Requests containing the header Referer: hostname that is not on the list will be rejected. If empty, all the referrers are allowed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -595,6 +597,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Determines if the token authentication IP validation should be enabled</summary>
         public bool? ZoneSecurityIncludeHashRemoteIP { get; set; }
         /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModel"/> and sets the default values.
+        /// </summary>
+        public PullZoneSettingsModel()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
+        /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModel"/></returns>
@@ -921,6 +930,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("VerifyOriginSSL", VerifyOriginSSL);
             writer.WriteBoolValue("ZoneSecurityEnabled", ZoneSecurityEnabled);
             writer.WriteBoolValue("ZoneSecurityIncludeHashRemoteIP", ZoneSecurityIncludeHashRemoteIP);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

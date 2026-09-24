@@ -11,12 +11,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Status grade model
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class DoubleStatusIndicator : IParsable
+    public partial class DoubleStatusIndicator : IAdditionalDataHolder, IParsable
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The indicator property</summary>
         public double? Indicator { get; set; }
         /// <summary>The statusGrade property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.Grade? StatusGrade { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator"/> and sets the default values.
+        /// </summary>
+        public DoubleStatusIndicator()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -48,6 +57,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("indicator", Indicator);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.Grade>("statusGrade", StatusGrade);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

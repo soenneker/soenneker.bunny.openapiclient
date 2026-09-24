@@ -9,9 +9,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class UpdateRegionSettingsRequest : IParsable
+    public partial class UpdateRegionSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowedRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -25,10 +27,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The nodeSelectors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty? NodeSelectors { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2? NodeSelectors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty NodeSelectors { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2 NodeSelectors { get; set; }
 #endif
         /// <summary>The requiredRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -38,6 +40,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> RequiredRegionIds { get; set; }
 #endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest"/> and sets the default values.
+        /// </summary>
+        public UpdateRegionSettingsRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -58,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "allowedRegionIds", n => { AllowedRegionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "maxAllowedRegions", n => { MaxAllowedRegions = n.GetIntValue(); } },
-                { "nodeSelectors", n => { NodeSelectors = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty.CreateFromDiscriminatorValue); } },
+                { "nodeSelectors", n => { NodeSelectors = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2.CreateFromDiscriminatorValue); } },
                 { "requiredRegionIds", n => { RequiredRegionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -71,8 +80,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("allowedRegionIds", AllowedRegionIds);
             writer.WriteIntValue("maxAllowedRegions", MaxAllowedRegions);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty>("nodeSelectors", NodeSelectors);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2>("nodeSelectors", NodeSelectors);
             writer.WriteCollectionOfPrimitiveValues<string>("requiredRegionIds", RequiredRegionIds);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

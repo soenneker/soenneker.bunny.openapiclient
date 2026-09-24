@@ -11,10 +11,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// Request body for setting a category-level action. Uses BunnyNet.Shield.Database.Enums.BotCategoryAction ratherthan BunnyNet.Shield.Database.Enums.BotCategorizationAction so the contract can only express actions valid for acategory (no Ignore).
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateBotCategoryConfigurationRequest : IParsable
+    public partial class UpdateBotCategoryConfigurationRequest : IAdditionalDataHolder, IParsable
     {
         /// <summary>0 = None1 = Block2 = Allow</summary>
         public int? Action { get; set; }
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategoryConfigurationRequest"/> and sets the default values.
+        /// </summary>
+        public UpdateBotCategoryConfigurationRequest()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -44,6 +53,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("action", Action);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }
