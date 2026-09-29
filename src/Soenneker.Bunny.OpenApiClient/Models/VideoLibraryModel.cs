@@ -183,6 +183,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string FontFamily { get; set; }
 #endif
+        /// <summary>Geo-blocking settings for the video library.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGeoBlocking? GeoBlocking { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGeoBlocking GeoBlocking { get; set; }
+#endif
         /// <summary>Describes Google Widevine DRM</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -406,6 +414,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ExposeVideoMetadata", n => { ExposeVideoMetadata = n.GetBoolValue(); } },
                 { "FeatureFlags", n => { FeatureFlags = n.GetStringValue(); } },
                 { "FontFamily", n => { FontFamily = n.GetStringValue(); } },
+                { "GeoBlocking", n => { GeoBlocking = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGeoBlocking>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGeoBlocking.CreateFromDiscriminatorValue); } },
                 { "GoogleWidevineDrm", n => { GoogleWidevineDrm = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGoogleWidevineDrm>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGoogleWidevineDrm.CreateFromDiscriminatorValue); } },
                 { "HasWatermark", n => { HasWatermark = n.GetBoolValue(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
@@ -496,6 +505,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ExposeVideoMetadata", ExposeVideoMetadata);
             writer.WriteStringValue("FeatureFlags", FeatureFlags);
             writer.WriteStringValue("FontFamily", FontFamily);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGeoBlocking>("GeoBlocking", GeoBlocking);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGoogleWidevineDrm>("GoogleWidevineDrm", GoogleWidevineDrm);
             writer.WriteBoolValue("HasWatermark", HasWatermark);
             writer.WriteLongValue("Id", Id);

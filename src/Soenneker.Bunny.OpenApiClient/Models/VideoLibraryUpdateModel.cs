@@ -138,6 +138,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string FontFamily { get; set; }
 #endif
+        /// <summary>(Optional) Geo-blocking settings for the video library.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking? GeoBlocking { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking GeoBlocking { get; set; }
+#endif
         /// <summary>(Optional) Configure Google Widevine DRM. Works only if Enterprise DRM is set up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -306,6 +314,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ExposeOriginals", n => { ExposeOriginals = n.GetBoolValue(); } },
                 { "ExposeVideoMetadata", n => { ExposeVideoMetadata = n.GetBoolValue(); } },
                 { "FontFamily", n => { FontFamily = n.GetStringValue(); } },
+                { "GeoBlocking", n => { GeoBlocking = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking.CreateFromDiscriminatorValue); } },
                 { "GoogleWidevineDrm", n => { GoogleWidevineDrm = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGoogleWidevineDrm>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGoogleWidevineDrm.CreateFromDiscriminatorValue); } },
                 { "JitEncodingEnabled", n => { JitEncodingEnabled = n.GetBoolValue(); } },
                 { "KeepOriginalFiles", n => { KeepOriginalFiles = n.GetBoolValue(); } },
@@ -374,6 +383,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ExposeOriginals", ExposeOriginals);
             writer.WriteBoolValue("ExposeVideoMetadata", ExposeVideoMetadata);
             writer.WriteStringValue("FontFamily", FontFamily);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking>("GeoBlocking", GeoBlocking);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGoogleWidevineDrm>("GoogleWidevineDrm", GoogleWidevineDrm);
             writer.WriteBoolValue("JitEncodingEnabled", JitEncodingEnabled);
             writer.WriteBoolValue("KeepOriginalFiles", KeepOriginalFiles);
