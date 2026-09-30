@@ -6186,6 +6186,1470 @@
         "x-hidden": true
       }
     },
+    "/core/loadbalancer/{loadBalancerId}/origingroup/{originGroupId}/origin": {
+      "post": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Add a new origin to an origin group",
+        "operationId": "CoreLoadBalancerOriginEndpointAddOrigin",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "originGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 2
+          }
+        ],
+        "requestBody": {
+          "description": "The model for the new origin",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadBalancerOriginCreateModel"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "model",
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "The newly created origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerOriginModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile or origin group was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/origingroup/{originGroupId}/origin/{originId}": {
+      "delete": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Delete an origin from an origin group",
+        "operationId": "CoreLoadBalancerOriginEndpointDeleteOrigin",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "originGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "originId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The origin was deleted"
+          },
+          "404": {
+            "description": "The Load Balancer, origin group, or origin was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Update an existing origin",
+        "operationId": "CoreLoadBalancerOriginEndpointUpdateOrigin",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "originGroupId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "originId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 3
+          }
+        ],
+        "requestBody": {
+          "description": "The model for the origin update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadBalancerOriginCreateModel"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "model",
+          "x-position": 4
+        },
+        "responses": {
+          "200": {
+            "description": "The updated origin",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerOriginModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer, origin group, or origin was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/origingroup": {
+      "post": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Add a new origin group to a Load Balancer profile",
+        "operationId": "CoreLoadBalancerOriginGroupEndpointAddOriginGroup",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "description": "The model for the new origin group",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OriginGroupCreateModel"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "model",
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The newly created origin group",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerOriginGroupModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/origingroup/{id}": {
+      "delete": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Delete an origin group from a Load Balancer profile",
+        "operationId": "CoreLoadBalancerOriginGroupEndpointDeleteOriginGroup",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The origin group was deleted"
+          },
+          "404": {
+            "description": "The Load Balancer profile or origin group was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Update an origin group in a Load Balancer profile",
+        "operationId": "CoreLoadBalancerOriginGroupEndpointUpdateOriginGroup",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 2
+          },
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "description": "The model for updating the origin group",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OriginGroupCreateModel"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "model",
+          "x-position": 3
+        },
+        "responses": {
+          "200": {
+            "description": "The updated origin group",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerOriginGroupModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile or origin group was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer": {
+      "post": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Create a new Load Balancer profile",
+        "operationId": "CoreLoadBalancerProfileEndpointCreateLoadBalancerProfile",
+        "requestBody": {
+          "description": "The model for the new Load Balancer profile",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadBalancerSettingsModel"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "model",
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "The newly created Load Balancer profile",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerProfileModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      },
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get the list of Load Balancer profiles",
+        "operationId": "CoreLoadBalancerProfileEndpointGetLoadBalancers",
+        "parameters": [
+          {
+            "name": "count",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 50
+            },
+            "x-position": 2
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The list of Load Balancer profiles",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoreLoadBalancerProfileEndpointGetLoadBalancers200Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get a Load Balancer profile",
+        "operationId": "CoreLoadBalancerProfileEndpointGetLoadBalancer",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Load Balancer profile",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerProfileModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Delete a Load Balancer profile",
+        "operationId": "CoreLoadBalancerProfileEndpointDeleteLoadBalancerProfile",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The Load Balancer profile was deleted"
+          },
+          "400": {
+            "description": "The Load Balancer profile is in use by one or more pull zones",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Update a Load Balancer profile",
+        "operationId": "CoreLoadBalancerProfileEndpointUpdateLoadBalancerProfile",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "description": "The model for updating the Load Balancer profile",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoadBalancerSettingsModel"
+              }
+            }
+          },
+          "required": true,
+          "x-name": "model",
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "The updated Load Balancer profile",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerProfileModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/statistics": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get Load Balancer statistics",
+        "operationId": "CoreLoadBalancerStatisticsEndpointGetLoadBalancerStatistics",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "exactRange",
+            "in": "query",
+            "description": "(Optional) If true and hourly=true, the exact hour components of from and to will be preserved instead of rounding to full-day boundaries.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 5
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "(Optional) The start date of the statistics. If no value is passed, the last 24 hours will be returned. Rounded to full-day boundaries unless hourly=true and exactRange=true.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "hourly",
+            "in": "query",
+            "description": "(Optional) If true, the statistics will be returned in hourly grouping. Hourly statistics are available for the last 30 days only.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 4
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "(Optional) The end date of the statistics. Rounded to full-day boundaries unless hourly=true and exactRange=true.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Load Balancer statistics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerStatisticsModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "429": {
+            "description": "Too many statistics requests, try again later",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/pullzones": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get the pull zones attached to a Load Balancer",
+        "operationId": "CoreLoadBalancerStatisticsEndpointGetAttachedPullZones",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 3
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The attached pull zones",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoreLoadBalancerStatisticsEndpointGetAttachedPullZones200Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/statistics": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get statistics roll-ups for all Load Balancers on the account",
+        "operationId": "CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics",
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 1
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Per-Load-Balancer roll-ups",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request was invalid",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/loadbalancer/{loadBalancerId}/usage": {
+      "get": {
+        "tags": [
+          "Load Balancer"
+        ],
+        "summary": "Get current-period request usage and pricing for a Load Balancer",
+        "operationId": "CoreLoadBalancerUsageEndpointGetLoadBalancerUsage",
+        "parameters": [
+          {
+            "name": "loadBalancerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "month",
+            "in": "query",
+            "description": "Month of the usage month, 1-12 (UTC). Defaults to the current month; supply together with year.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 3
+          },
+          {
+            "name": "year",
+            "in": "query",
+            "description": "Year of the usage month (UTC). Defaults to the current year; supply together with month.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The current usage and pricing",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoadBalancerUsageModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The requested month is invalid, incomplete, or in the future",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Load Balancer profile was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIPullZones",
+              "SubuserPullZones",
+              "SubuserManage",
+              "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
     "/core/dnszone/{id}/statistics": {
       "get": {
         "tags": [
@@ -8155,6 +9619,155 @@
         ]
       }
     },
+    "/stream/library/{libraryId}/statistics/encoding": {
+      "get": {
+        "tags": [
+          "Encoding Statistics"
+        ],
+        "summary": "Get Encoding Statistics",
+        "description": "Returns video encoding seconds for the library, split into premium and free tier. Each includes billable (normalized) and output seconds over time, plus totals by video codec, resolution, and JIT vs standard encoding. Data is available starting 2026-06-15.",
+        "operationId": "StreamEncodingStatisticsGetEncodingStatistics",
+        "parameters": [
+          {
+            "name": "libraryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "dateFrom",
+            "in": "query",
+            "description": "Optional start of the time range (UTC). Defaults to 14 days ago. Data is available starting 2026-06-15.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 2
+          },
+          {
+            "name": "dateTo",
+            "in": "query",
+            "description": "Optional end of the time range (UTC). If omitted, the current date is used.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "x-position": 3
+          },
+          {
+            "name": "hourly",
+            "in": "query",
+            "description": "Optional. If true, returns hourly data for ranges of up to 31 days within the last 89 days; otherwise daily (UTC). Default is daily.",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            },
+            "x-position": 4
+          },
+          {
+            "name": "jit",
+            "in": "query",
+            "description": "Optional. If true, only JIT encodes are included; if false, only standard encodes. Omit for both.",
+            "schema": {
+              "type": "boolean",
+              "nullable": true
+            },
+            "x-position": 7
+          },
+          {
+            "name": "resolutions",
+            "in": "query",
+            "description": "Optional highest output resolutions to include: 240, 360, 480, 540, 720, 1080, 1440, 2160. Repeat for multiple values.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              },
+              "nullable": true
+            },
+            "x-position": 6
+          },
+          {
+            "name": "videoCodecs",
+            "in": "query",
+            "description": "Optional video codecs to include: H264, VP9, HEVC, AV1. Repeat for multiple values.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "nullable": true
+            },
+            "x-position": 5
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns video encoding seconds for the requested video library, split by premium and free tier.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VideoEncodingStatisticsModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The date range or filters are invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The requested video library was not found."
+          },
+          "503": {
+            "description": "Encoding statistics are not available.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authentication failed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "stream_AccessKey": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://video.bunnycdn.com"
+          }
+        ]
+      }
+    },
     "/stream/library/{libraryId}/videos/{videoId}": {
       "get": {
         "tags": [
@@ -8891,7 +10504,7 @@
           "Manage Videos"
         ],
         "summary": "Get Video Statistics",
-        "description": "Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.",
+        "description": "Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Statistics are available for the last 1 year. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.",
         "operationId": "StreamVideoGetVideoStatistics",
         "parameters": [
           {
@@ -8908,7 +10521,7 @@
           {
             "name": "dateFrom",
             "in": "query",
-            "description": "Optional start of the time range (UTC). If omitted or invalid, the last 30 days are returned.",
+            "description": "Optional start of the time range (UTC). If omitted or invalid, the last 30 days are returned. Starts more than 1 year ago are moved to 1 year ago.",
             "schema": {
               "type": "string",
               "format": "date-time",
@@ -8955,6 +10568,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/VideoStatisticsModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The requested time range ends more than 1 year ago",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
                 }
               }
             }
@@ -29488,6 +31111,679 @@
           "Scripting_CDN_CPU"
         ]
       },
+      "LoadBalancerOriginModel": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "description": "The unique ID of the origin",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the origin",
+            "nullable": true
+          },
+          "Weight": {
+            "type": "integer",
+            "description": "The weight of the origin used for weighted load balancing",
+            "format": "int32"
+          },
+          "Enabled": {
+            "type": "boolean",
+            "description": "Whether traffic should route to this origin"
+          },
+          "HealthStatus": {
+            "$ref": "#/components/schemas/LoadBalancerOriginModelHealthStatus"
+          },
+          "OriginType": {
+            "$ref": "#/components/schemas/LoadBalancerOriginModelOriginType"
+          },
+          "EdgeScriptId": {
+            "type": "integer",
+            "description": "The ID of the Edge Script when using this origin type",
+            "format": "int64",
+            "nullable": true
+          },
+          "StorageZoneId": {
+            "type": "integer",
+            "description": "The ID of the Storage Zone when using this origin type",
+            "format": "int64",
+            "nullable": true
+          },
+          "StandardOrigin": {
+            "$ref": "#/components/schemas/LoadBalancerOriginModelStandardOrigin"
+          },
+          "MagicContainersOrigin": {
+            "$ref": "#/components/schemas/LoadBalancerOriginModelMagicContainersOrigin"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginModelAdditionalProperties"
+        }
+      },
+      "HealthStatus": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = Healthy\n1 = Degraded",
+        "x-enumNames": [
+          "Healthy",
+          "Degraded"
+        ]
+      },
+      "OriginType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = Standard\n1 = Storage\n2 = EdgeScript\n3 = MagicContainer",
+        "x-enumNames": [
+          "Standard",
+          "Storage",
+          "EdgeScript",
+          "MagicContainer"
+        ]
+      },
+      "StandardOriginModel": {
+        "type": "object",
+        "properties": {
+          "OriginUrl": {
+            "type": "string",
+            "description": "The URL of the origin server",
+            "nullable": true
+          },
+          "HostHeader": {
+            "type": "string",
+            "description": "The host header to send to the origin server",
+            "nullable": true
+          },
+          "VerifySsl": {
+            "type": "boolean",
+            "description": "Whether to verify the SSL certificate of the origin server",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/StandardOriginModelAdditionalProperties"
+        }
+      },
+      "MagicContainersOriginModel": {
+        "type": "object",
+        "properties": {
+          "AppId": {
+            "type": "string",
+            "description": "The ID of the Magic Containers app",
+            "nullable": true
+          },
+          "EndPointId": {
+            "type": "string",
+            "description": "The ID of the Magic Containers CDN endpoint. Anycast endpoints are not supported, add those as a Standard origin using their IP address and port",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/MagicContainersOriginModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerOriginCreateModel": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the origin",
+            "nullable": true
+          },
+          "Weight": {
+            "type": "integer",
+            "description": "The weight of the origin used for weighted load balancing",
+            "format": "byte",
+            "nullable": true
+          },
+          "Enabled": {
+            "type": "boolean",
+            "description": "Whether traffic should route to this origin",
+            "nullable": true
+          },
+          "OriginType": {
+            "$ref": "#/components/schemas/LoadBalancerOriginCreateModelOriginType"
+          },
+          "EdgeScriptId": {
+            "type": "integer",
+            "description": "The ID of the Edge Script to use as the origin - required when using the EdgeScript origin type",
+            "format": "int64",
+            "nullable": true
+          },
+          "StorageZoneId": {
+            "type": "integer",
+            "description": "The ID of the Storage Zone to use as the origin - required when using the Storage origin type",
+            "format": "int64",
+            "nullable": true
+          },
+          "StandardOrigin": {
+            "$ref": "#/components/schemas/LoadBalancerOriginCreateModelStandardOrigin"
+          },
+          "MagicContainersOrigin": {
+            "$ref": "#/components/schemas/LoadBalancerOriginCreateModelMagicContainersOrigin"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginCreateModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerOriginGroupModel": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "description": "The unique ID of the origin group",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the origin group",
+            "nullable": true
+          },
+          "Enabled": {
+            "type": "boolean",
+            "description": "Set to true if the origin group is enabled"
+          },
+          "Latitude": {
+            "type": "number",
+            "description": "The latitude of the origin group location",
+            "format": "double"
+          },
+          "Longitude": {
+            "type": "number",
+            "description": "The longitude of the origin group location",
+            "format": "double"
+          },
+          "Weight": {
+            "type": "integer",
+            "description": "The weight of the origin group used for weighted load balancing",
+            "format": "byte"
+          },
+          "Priority": {
+            "type": "integer",
+            "description": "The priority of the origin group used for failover load balancing",
+            "format": "byte"
+          },
+          "OriginLoadBalancingMethod": {
+            "$ref": "#/components/schemas/LoadBalancerOriginGroupModelOriginLoadBalancingMethod"
+          },
+          "Origins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginModel"
+            },
+            "description": "The list of origins associated with the origin group",
+            "nullable": true
+          },
+          "HealthCheckSettings": {
+            "$ref": "#/components/schemas/LoadBalancerOriginGroupModelHealthCheckSettings"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginGroupModelAdditionalProperties"
+        }
+      },
+      "OriginLoadBalancingMethod": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = RoundRobin\n1 = WeightedRandom\n2 = LeastConnections\n3 = Latency",
+        "x-enumNames": [
+          "RoundRobin",
+          "WeightedRandom",
+          "LeastConnections",
+          "Latency"
+        ]
+      },
+      "HealthCheckSettings": {
+        "type": "object",
+        "properties": {
+          "Enabled": {
+            "type": "boolean",
+            "description": "Whether health checking is enabled for this origin group",
+            "nullable": true
+          },
+          "Path": {
+            "type": "string",
+            "description": "The path used for health check requests",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/HealthCheckSettingsAdditionalProperties"
+        }
+      },
+      "OriginGroupCreateModel": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the origin group",
+            "nullable": true
+          },
+          "Enabled": {
+            "type": "boolean",
+            "description": "Set to true if the origin group is enabled",
+            "nullable": true
+          },
+          "HealthCheckSettings": {
+            "$ref": "#/components/schemas/OriginGroupCreateModelHealthCheckSettings"
+          },
+          "OriginLoadBalancingMethod": {
+            "$ref": "#/components/schemas/OriginGroupCreateModelOriginLoadBalancingMethod"
+          },
+          "Latitude": {
+            "type": "number",
+            "description": "The latitude of the origin group location",
+            "format": "double",
+            "nullable": true
+          },
+          "Longitude": {
+            "type": "number",
+            "description": "The longitude of the origin group location",
+            "format": "double",
+            "nullable": true
+          },
+          "Weight": {
+            "type": "integer",
+            "description": "The weight of the origin group used for weighted load balancing",
+            "format": "byte",
+            "nullable": true
+          },
+          "Priority": {
+            "type": "integer",
+            "description": "The priority of the origin group used for failover load balancing",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/OriginGroupCreateModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerProfileModel": {
+        "type": "object",
+        "properties": {
+          "LoadBalancerId": {
+            "type": "integer",
+            "description": "The unique ID of the Load Balancer",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the Load Balancer profile",
+            "nullable": true
+          },
+          "OriginGroupLoadBalancingMethod": {
+            "$ref": "#/components/schemas/LoadBalancerProfileModelOriginGroupLoadBalancingMethod"
+          },
+          "StickySessionType": {
+            "$ref": "#/components/schemas/LoadBalancerProfileModelStickySessionType"
+          },
+          "OriginGroups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginGroupModel"
+            },
+            "description": "The list of origin groups associated with the Load Balancer profile",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerProfileModelAdditionalProperties"
+        }
+      },
+      "OriginGroupLoadBalancingMethod": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = WeightedRandom\n1 = RoundRobin\n2 = GeoLocation\n3 = LowestAverageLatency",
+        "x-enumNames": [
+          "WeightedRandom",
+          "RoundRobin",
+          "GeoLocation",
+          "LowestAverageLatency"
+        ]
+      },
+      "LoadBalancerStickySessionType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false,
+        "description": "0 = Off\n1 = Cookie",
+        "x-enumNames": [
+          "Off",
+          "Cookie"
+        ]
+      },
+      "LoadBalancerSettingsModel": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the Load Balancer profile",
+            "nullable": true
+          },
+          "StickySessionType": {
+            "$ref": "#/components/schemas/LoadBalancerSettingsModelStickySessionType"
+          },
+          "OriginGroupLoadBalancingMethod": {
+            "$ref": "#/components/schemas/LoadBalancerSettingsModelOriginGroupLoadBalancingMethod"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerSettingsModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerStatisticsModel": {
+        "type": "object",
+        "properties": {
+          "Summary": {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsModelSummary"
+          },
+          "RequestsByOrigin": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModel"
+            },
+            "nullable": true
+          },
+          "RequestsByOriginGroup": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginGroupRequestsSeriesModel"
+            },
+            "nullable": true
+          },
+          "TrafficByOrigin": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModel"
+            },
+            "nullable": true
+          },
+          "OriginLatency": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginLatencySeriesModel"
+            },
+            "nullable": true
+          },
+          "OriginFailures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerOriginFailuresSeriesModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerStatisticsModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerStatisticsSummaryModel": {
+        "type": "object",
+        "properties": {
+          "TotalRequests": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalTraffic": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageOriginRttMs": {
+            "type": "number",
+            "format": "double"
+          },
+          "AllOriginsExhausted": {
+            "type": "number",
+            "format": "double"
+          },
+          "OriginErrorsServed": {
+            "type": "number",
+            "format": "double"
+          },
+          "HealthyResponsesServed": {
+            "type": "number",
+            "format": "double"
+          },
+          "FailoverCapped": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageRetryDepth": {
+            "type": "number",
+            "format": "double"
+          },
+          "StickySessionHits": {
+            "type": "number",
+            "format": "double"
+          },
+          "RequestsByMethod": {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsSummaryModelRequestsByMethodProperty2"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerStatisticsSummaryModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerOriginRequestsSeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModelValuesProperty2"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginRequestsSeriesModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginGroupId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginGroupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginGroupRequestsSeriesModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerOriginLatencySeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Percentile": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginLatencySeriesModelValuesProperty2"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginLatencySeriesModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerOriginFailuresSeriesModel": {
+        "type": "object",
+        "properties": {
+          "OriginId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "OriginName": {
+            "type": "string",
+            "nullable": true
+          },
+          "StatusCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "Values": {
+            "$ref": "#/components/schemas/LoadBalancerOriginFailuresSeriesModelValuesProperty2"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerOriginFailuresSeriesModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerAttachedZoneModel": {
+        "type": "object",
+        "properties": {
+          "PullZoneId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Hostname": {
+            "type": "string",
+            "nullable": true
+          },
+          "TrafficServed": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerAttachedZoneModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerAccountSummaryModel": {
+        "type": "object",
+        "properties": {
+          "LoadBalancerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "TotalRequests": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalTraffic": {
+            "type": "number",
+            "format": "double"
+          },
+          "AttachedPullZoneCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerAccountSummaryModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerUsageModel": {
+        "type": "object",
+        "properties": {
+          "LoadBalancerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "PeriodStart": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "PeriodEnd": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ResetsAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "CurrentRequests": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "IncludedRequests": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "MonthlyFee": {
+            "type": "number",
+            "format": "decimal",
+            "nullable": true
+          },
+          "Tiers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LoadBalancerPricingTierModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerUsageModelAdditionalProperties"
+        }
+      },
+      "LoadBalancerPricingTierModel": {
+        "type": "object",
+        "properties": {
+          "ThresholdFromMillions": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ThresholdToMillions": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "PricePerMillion": {
+            "type": "number",
+            "format": "decimal"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/LoadBalancerPricingTierModelAdditionalProperties"
+        }
+      },
       "DnsZoneRecordScanJobResponse": {
         "type": "object",
         "properties": {
@@ -31570,6 +33866,317 @@
         },
         "description": "(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)"
       },
+      "LoadBalancerOriginModelHealthStatus": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/HealthStatusWrapper"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerOriginModelHealthStatusValue"
+          }
+        },
+        "description": "Current health status of the origin"
+      },
+      "LoadBalancerOriginModelOriginType": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OriginTypeWrapper"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerOriginModelOriginTypeValue"
+          }
+        },
+        "description": "The type of origin to connect to"
+      },
+      "LoadBalancerOriginModelStandardOrigin": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/StandardOriginModel"
+          }
+        ],
+        "properties": {
+          "OriginUrl": {
+            "type": "string",
+            "description": "The URL of the origin server",
+            "nullable": true
+          },
+          "HostHeader": {
+            "type": "string",
+            "description": "The host header to send to the origin server",
+            "nullable": true
+          },
+          "VerifySsl": {
+            "type": "boolean",
+            "description": "Whether to verify the SSL certificate of the origin server",
+            "nullable": true
+          }
+        },
+        "description": "Standard Origin settings - Required with Standard origin type"
+      },
+      "LoadBalancerOriginModelMagicContainersOrigin": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/MagicContainersOriginModel"
+          }
+        ],
+        "properties": {
+          "AppId": {
+            "type": "string",
+            "description": "The ID of the Magic Containers app",
+            "nullable": true
+          },
+          "EndPointId": {
+            "type": "string",
+            "description": "The ID of the Magic Containers CDN endpoint. Anycast endpoints are not supported, add those as a Standard origin using their IP address and port",
+            "nullable": true
+          }
+        },
+        "description": "Magic Containers Origin settings - Required with Magic Containers origin type"
+      },
+      "LoadBalancerOriginCreateModelOriginType": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OriginTypeWrapper2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerOriginCreateModelOriginTypeValue"
+          }
+        },
+        "description": "The type of origin to connect to"
+      },
+      "LoadBalancerOriginCreateModelStandardOrigin": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/StandardOriginModel"
+          }
+        ],
+        "properties": {
+          "OriginUrl": {
+            "type": "string",
+            "description": "The URL of the origin server",
+            "nullable": true
+          },
+          "HostHeader": {
+            "type": "string",
+            "description": "The host header to send to the origin server",
+            "nullable": true
+          },
+          "VerifySsl": {
+            "type": "boolean",
+            "description": "Whether to verify the SSL certificate of the origin server",
+            "nullable": true
+          }
+        },
+        "description": "Standard origin settings - required when using the Standard origin type"
+      },
+      "LoadBalancerOriginCreateModelMagicContainersOrigin": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/MagicContainersOriginModel"
+          }
+        ],
+        "properties": {
+          "AppId": {
+            "type": "string",
+            "description": "The ID of the Magic Containers app",
+            "nullable": true
+          },
+          "EndPointId": {
+            "type": "string",
+            "description": "The ID of the Magic Containers CDN endpoint. Anycast endpoints are not supported, add those as a Standard origin using their IP address and port",
+            "nullable": true
+          }
+        },
+        "description": "Magic Containers origin settings - required when using the Magic Containers origin type"
+      },
+      "LoadBalancerOriginGroupModelOriginLoadBalancingMethod": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OriginLoadBalancingMethodWrapper"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerOriginGroupModelOriginLoadBalancingMethodValue"
+          }
+        },
+        "description": "The load balancing method used for selecting origins within the group"
+      },
+      "LoadBalancerOriginGroupModelHealthCheckSettings": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/HealthCheckSettings"
+          }
+        ],
+        "properties": {
+          "Enabled": {
+            "type": "boolean",
+            "description": "Whether health checking is enabled for this origin group",
+            "nullable": true
+          },
+          "Path": {
+            "type": "string",
+            "description": "The path used for health check requests",
+            "nullable": true
+          }
+        },
+        "description": "Health settings for the origin group"
+      },
+      "OriginGroupCreateModelHealthCheckSettings": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/HealthCheckSettings"
+          }
+        ],
+        "properties": {
+          "Enabled": {
+            "type": "boolean",
+            "description": "Whether health checking is enabled for this origin group",
+            "nullable": true
+          },
+          "Path": {
+            "type": "string",
+            "description": "The path used for health check requests",
+            "nullable": true
+          }
+        },
+        "description": "Health check settings for monitoring origins in the group"
+      },
+      "OriginGroupCreateModelOriginLoadBalancingMethod": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OriginLoadBalancingMethodWrapper2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginGroupCreateModelOriginLoadBalancingMethodValue"
+          }
+        },
+        "description": "The load balancing method used for selecting origins within the group"
+      },
+      "LoadBalancerProfileModelOriginGroupLoadBalancingMethod": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OriginGroupLoadBalancingMethodWrapper"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerProfileModelOriginGroupLoadBalancingMethodValue"
+          }
+        },
+        "description": "The load balancing method used for selecting origin groups"
+      },
+      "LoadBalancerProfileModelStickySessionType": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/LoadBalancerStickySessionTypeWrapper"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerProfileModelStickySessionTypeValue"
+          }
+        },
+        "description": "The sticky session type used for persisting client sessions"
+      },
+      "LoadBalancerSettingsModelStickySessionType": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/LoadBalancerStickySessionTypeWrapper2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerSettingsModelStickySessionTypeValue"
+          }
+        },
+        "description": "The sticky session type to use for persisting client to an origin"
+      },
+      "LoadBalancerSettingsModelOriginGroupLoadBalancingMethod": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/OriginGroupLoadBalancingMethodWrapper2"
+          }
+        ],
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerSettingsModelOriginGroupLoadBalancingMethodValue"
+          }
+        },
+        "description": "The load balancing method used for selecting origin groups"
+      },
+      "LoadBalancerStatisticsModelSummary": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsSummaryModel"
+          }
+        ],
+        "properties": {
+          "TotalRequests": {
+            "type": "number",
+            "format": "double"
+          },
+          "TotalTraffic": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageOriginRttMs": {
+            "type": "number",
+            "format": "double"
+          },
+          "AllOriginsExhausted": {
+            "type": "number",
+            "format": "double"
+          },
+          "OriginErrorsServed": {
+            "type": "number",
+            "format": "double"
+          },
+          "HealthyResponsesServed": {
+            "type": "number",
+            "format": "double"
+          },
+          "FailoverCapped": {
+            "type": "number",
+            "format": "double"
+          },
+          "AverageRetryDepth": {
+            "type": "number",
+            "format": "double"
+          },
+          "StickySessionHits": {
+            "type": "number",
+            "format": "double"
+          },
+          "RequestsByMethod": {
+            "$ref": "#/components/schemas/LoadBalancerStatisticsModelSummaryRequestsByMethod"
+          }
+        }
+      },
       "DnsZoneDiscoveredRecordModelType": {
         "type": "object",
         "oneOf": [
@@ -32243,6 +34850,46 @@
         "description": "The constructed 5XX error responses chart data",
         "nullable": true
       },
+      "LoadBalancerStatisticsSummaryModelRequestsByMethod": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginRequestsSeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginLatencySeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
+      "LoadBalancerOriginFailuresSeriesModelValues": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        },
+        "nullable": true
+      },
       "DnsZoneStatisticsModelQueriesServedChart": {
         "type": "object",
         "additionalProperties": {
@@ -32383,6 +35030,24 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageRegionModel"
+        }
+      },
+      "LoadBalancerProfileEndpointGetLoadBalancers200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerProfileModel"
+        }
+      },
+      "LoadBalancerStatisticsEndpointGetAttachedPullZones200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAttachedZoneModel"
+        }
+      },
+      "LoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAccountSummaryModel"
         }
       },
       "GetPaymentRequestsEndpointGetPaymentRequests200Response": {
@@ -33167,6 +35832,105 @@
           }
         }
       },
+      "HealthStatusWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/HealthStatusWrapperValue"
+          }
+        }
+      },
+      "OriginTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginTypeWrapperValue"
+          }
+        }
+      },
+      "OriginTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginTypeWrapper2Value"
+          }
+        }
+      },
+      "OriginLoadBalancingMethodWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginLoadBalancingMethodWrapperValue"
+          }
+        }
+      },
+      "OriginLoadBalancingMethodWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginLoadBalancingMethodWrapper2Value"
+          }
+        }
+      },
+      "OriginGroupLoadBalancingMethodWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginGroupLoadBalancingMethodWrapperValue"
+          }
+        }
+      },
+      "LoadBalancerStickySessionTypeWrapper": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerStickySessionTypeWrapperValue"
+          }
+        }
+      },
+      "LoadBalancerStickySessionTypeWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/LoadBalancerStickySessionTypeWrapper2Value"
+          }
+        }
+      },
+      "OriginGroupLoadBalancingMethodWrapper2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "$ref": "#/components/schemas/OriginGroupLoadBalancingMethodWrapper2Value"
+          }
+        }
+      },
       "DnsZoneDiscoveredRecordTypeWrapper": {
         "required": [
           "value"
@@ -33237,6 +36001,24 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageRegionModel"
+        }
+      },
+      "LoadBalancerProfileEndpointGetLoadBalancers200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerProfileModel"
+        }
+      },
+      "LoadBalancerStatisticsEndpointGetAttachedPullZones200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAttachedZoneModel"
+        }
+      },
+      "LoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAccountSummaryModel"
         }
       },
       "GetPaymentRequestsEndpointGetPaymentRequests200ResponseSchema": {
@@ -33523,6 +36305,41 @@
           "format": "double"
         },
         "description": "The constructed 5XX error responses chart data"
+      },
+      "LoadBalancerStatisticsSummaryModelRequestsByMethodProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginRequestsSeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginLatencySeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginFailuresSeriesModelValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
       },
       "DnsZoneStatisticsModelQueriesServedChartProperty": {
         "type": "object",
@@ -34235,6 +37052,78 @@
         },
         "additionalProperties": {
           "$ref": "#/components/schemas/UpdateCollectionModelAdditionalProperties"
+        }
+      },
+      "VideoEncodingStatisticsModel": {
+        "type": "object",
+        "properties": {
+          "hourly": {
+            "type": "boolean",
+            "description": "Indicates whether the charts use hourly or daily UTC buckets."
+          },
+          "total": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelTotal"
+          },
+          "premium": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelPremium"
+          },
+          "free": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelFree"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingStatisticsModelAdditionalProperties"
+        }
+      },
+      "VideoEncodingBreakdownModel": {
+        "type": "object",
+        "properties": {
+          "normalizedTotal": {
+            "type": "integer",
+            "description": "Billable encoding seconds in the selected period: counted per output codec and weighted by the video's highest resolution (x0.5 below 720p, x1 up to 1080p, x3 above).",
+            "format": "int64"
+          },
+          "normalizedChart": {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModelNormalizedChartProperty2"
+          },
+          "outputTotal": {
+            "type": "integer",
+            "description": "Encoded output seconds in the selected period: video length counted once per output codec, without resolution weighting.",
+            "format": "int64"
+          },
+          "outputChart": {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModelOutputChartProperty2"
+          },
+          "byVideoCodec": {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModelByVideoCodecProperty2"
+          },
+          "byResolution": {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModelByResolutionProperty2"
+          },
+          "byJit": {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModelByJitProperty2"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingBreakdownModelAdditionalProperties"
+        }
+      },
+      "VideoEncodingSecondsModel": {
+        "type": "object",
+        "properties": {
+          "normalized": {
+            "type": "integer",
+            "description": "Billable encoding seconds, weighted by resolution.",
+            "format": "int64"
+          },
+          "output": {
+            "type": "integer",
+            "description": "Encoded output seconds, without resolution weighting.",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModelAdditionalProperties"
         }
       },
       "VideoModel": {
@@ -35682,6 +38571,114 @@
           "$ref": "#/components/schemas/VideoOEmbedModelAdditionalProperties"
         }
       },
+      "VideoEncodingStatisticsModelTotal": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModel"
+          }
+        ],
+        "properties": {
+          "normalizedTotal": {
+            "type": "integer",
+            "description": "Billable encoding seconds in the selected period: counted per output codec and weighted by the video's highest resolution (x0.5 below 720p, x1 up to 1080p, x3 above).",
+            "format": "int64"
+          },
+          "normalizedChart": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelTotalNormalizedChart"
+          },
+          "outputTotal": {
+            "type": "integer",
+            "description": "Encoded output seconds in the selected period: video length counted once per output codec, without resolution weighting.",
+            "format": "int64"
+          },
+          "outputChart": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelTotalOutputChart"
+          },
+          "byVideoCodec": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelTotalByVideoCodec"
+          },
+          "byResolution": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelTotalByResolution"
+          },
+          "byJit": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelTotalByJit"
+          }
+        },
+        "description": "Combined premium and free encoding statistics for the selected period."
+      },
+      "VideoEncodingStatisticsModelPremium": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModel"
+          }
+        ],
+        "properties": {
+          "normalizedTotal": {
+            "type": "integer",
+            "description": "Billable encoding seconds in the selected period: counted per output codec and weighted by the video's highest resolution (x0.5 below 720p, x1 up to 1080p, x3 above).",
+            "format": "int64"
+          },
+          "normalizedChart": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelPremiumNormalizedChart"
+          },
+          "outputTotal": {
+            "type": "integer",
+            "description": "Encoded output seconds in the selected period: video length counted once per output codec, without resolution weighting.",
+            "format": "int64"
+          },
+          "outputChart": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelPremiumOutputChart"
+          },
+          "byVideoCodec": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelPremiumByVideoCodec"
+          },
+          "byResolution": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelPremiumByResolution"
+          },
+          "byJit": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelPremiumByJit"
+          }
+        },
+        "description": "Encoding statistics for videos encoded with the premium encoding tier."
+      },
+      "VideoEncodingStatisticsModelFree": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VideoEncodingBreakdownModel"
+          }
+        ],
+        "properties": {
+          "normalizedTotal": {
+            "type": "integer",
+            "description": "Billable encoding seconds in the selected period: counted per output codec and weighted by the video's highest resolution (x0.5 below 720p, x1 up to 1080p, x3 above).",
+            "format": "int64"
+          },
+          "normalizedChart": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelFreeNormalizedChart"
+          },
+          "outputTotal": {
+            "type": "integer",
+            "description": "Encoded output seconds in the selected period: video length counted once per output codec, without resolution weighting.",
+            "format": "int64"
+          },
+          "outputChart": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelFreeOutputChart"
+          },
+          "byVideoCodec": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelFreeByVideoCodec"
+          },
+          "byResolution": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelFreeByResolution"
+          },
+          "byJit": {
+            "$ref": "#/components/schemas/VideoEncodingStatisticsModelFreeByJit"
+          }
+        },
+        "description": "Encoding statistics for videos encoded with the free encoding tier."
+      },
       "VideoModelStatusComposed": {
         "type": "object",
         "oneOf": [
@@ -36284,6 +39281,48 @@
         },
         "description": "The response payload. Some endpoints also populate this with error details when Success is false — see the endpoint's own response documentation."
       },
+      "VideoEncodingBreakdownModelNormalizedChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC.",
+        "nullable": true
+      },
+      "VideoEncodingBreakdownModelOutputChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Encoded output seconds over time, grouped hourly or daily in UTC.",
+        "nullable": true
+      },
+      "VideoEncodingBreakdownModelByVideoCodec": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1).",
+        "nullable": true
+      },
+      "VideoEncodingBreakdownModelByResolution": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by the video's highest output resolution. 0 means the resolution was unknown.",
+        "nullable": true
+      },
+      "VideoEncodingBreakdownModelByJit": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by encoding type: 'jit' for just-in-time encodes, 'standard' for full encodes.",
+        "nullable": true
+      },
       "VideoHeatmapModelHeatmap": {
         "type": "object",
         "additionalProperties": {
@@ -36367,6 +39406,43 @@
       },
       "VideoReencodeUsingCodec400ResponseSchema": {
         "type": "string"
+      },
+      "VideoEncodingBreakdownModelNormalizedChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingBreakdownModelOutputChartProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Encoded output seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingBreakdownModelByVideoCodecProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1)."
+      },
+      "VideoEncodingBreakdownModelByResolutionProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by the video's highest output resolution. 0 means the resolution was unknown."
+      },
+      "VideoEncodingBreakdownModelByJitProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by encoding type: 'jit' for just-in-time encodes, 'standard' for full encodes."
       },
       "VideoHeatmapModelHeatmapProperty": {
         "type": "object",
@@ -47456,6 +50532,99 @@
         "type": "integer",
         "additionalProperties": false
       },
+      "LoadBalancerOriginModelHealthStatusValue": {
+        "title": "LoadBalancerOriginModelHealthStatus_value",
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginModelOriginTypeValue": {
+        "title": "LoadBalancerOriginModelOriginType_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginCreateModelOriginTypeValue": {
+        "title": "LoadBalancerOriginCreateModelOriginType_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerOriginGroupModelOriginLoadBalancingMethodValue": {
+        "title": "LoadBalancerOriginGroupModelOriginLoadBalancingMethod_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginGroupCreateModelOriginLoadBalancingMethodValue": {
+        "title": "OriginGroupCreateModelOriginLoadBalancingMethod_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerProfileModelOriginGroupLoadBalancingMethodValue": {
+        "title": "LoadBalancerProfileModelOriginGroupLoadBalancingMethod_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerProfileModelStickySessionTypeValue": {
+        "title": "LoadBalancerProfileModelStickySessionType_value",
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerSettingsModelStickySessionTypeValue": {
+        "title": "LoadBalancerSettingsModelStickySessionType_value",
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerSettingsModelOriginGroupLoadBalancingMethodValue": {
+        "title": "LoadBalancerSettingsModelOriginGroupLoadBalancingMethod_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
       "DnsZoneDiscoveredRecordModelTypeValue": {
         "title": "DnsZoneDiscoveredRecordModelType_value",
         "enum": [
@@ -48261,6 +51430,99 @@
         "type": "integer",
         "additionalProperties": false
       },
+      "HealthStatusWrapperValue": {
+        "title": "HealthStatusWrapper_value",
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginTypeWrapperValue": {
+        "title": "OriginTypeWrapper_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginTypeWrapper2Value": {
+        "title": "OriginTypeWrapper2_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginLoadBalancingMethodWrapperValue": {
+        "title": "OriginLoadBalancingMethodWrapper_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginLoadBalancingMethodWrapper2Value": {
+        "title": "OriginLoadBalancingMethodWrapper2_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginGroupLoadBalancingMethodWrapperValue": {
+        "title": "OriginGroupLoadBalancingMethodWrapper_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerStickySessionTypeWrapperValue": {
+        "title": "LoadBalancerStickySessionTypeWrapper_value",
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "LoadBalancerStickySessionTypeWrapper2Value": {
+        "title": "LoadBalancerStickySessionTypeWrapper2_value",
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
+      "OriginGroupLoadBalancingMethodWrapper2Value": {
+        "title": "OriginGroupLoadBalancingMethodWrapper2_value",
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "additionalProperties": false
+      },
       "DnsZoneDiscoveredRecordTypeWrapperValue": {
         "title": "DnsZoneDiscoveredRecordTypeWrapper_value",
         "enum": [
@@ -48747,6 +52009,24 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/StorageRegionModel"
+        }
+      },
+      "CoreLoadBalancerProfileEndpointGetLoadBalancers200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerProfileModel"
+        }
+      },
+      "CoreLoadBalancerStatisticsEndpointGetAttachedPullZones200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAttachedZoneModel"
+        }
+      },
+      "CoreLoadBalancerStatisticsEndpointGetLoadBalancerAccountStatistics200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LoadBalancerAccountSummaryModel"
         }
       },
       "CoreGetPaymentRequestsEndpointGetPaymentRequests200Response": {
@@ -49489,6 +52769,117 @@
         "type": "object",
         "not": { }
       },
+      "LoadBalancerOriginModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "StandardOriginModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "MagicContainersOriginModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerOriginCreateModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerOriginGroupModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "HealthCheckSettingsAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "OriginGroupCreateModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerProfileModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerSettingsModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerStatisticsModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerStatisticsSummaryModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerStatisticsSummaryModelRequestsByMethodProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginRequestsSeriesModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerOriginRequestsSeriesModelValuesProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginLatencySeriesModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerOriginLatencySeriesModelValuesProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerOriginFailuresSeriesModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerOriginFailuresSeriesModelValuesProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "LoadBalancerAttachedZoneModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerAccountSummaryModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerUsageModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "LoadBalancerPricingTierModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
       "DnsZoneRecordScanJobResponseAdditionalProperties": {
         "type": "object",
         "not": { }
@@ -49609,6 +53000,13 @@
         },
         "description": "The constructed affiliate conversion history chart data"
       },
+      "LoadBalancerStatisticsModelSummaryRequestsByMethod": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number",
+          "format": "double"
+        }
+      },
       "ErrorBodyAdditionalProperties": {
         "type": "object",
         "not": { }
@@ -49646,6 +53044,55 @@
         "not": { }
       },
       "UpdateCollectionModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "VideoEncodingStatisticsModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "VideoEncodingBreakdownModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
+      },
+      "VideoEncodingBreakdownModelNormalizedChartProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingBreakdownModelOutputChartProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Encoded output seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingBreakdownModelByVideoCodecProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1)."
+      },
+      "VideoEncodingBreakdownModelByResolutionProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by the video's highest output resolution. 0 means the resolution was unknown."
+      },
+      "VideoEncodingBreakdownModelByJitProperty2": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by encoding type: 'jit' for just-in-time encodes, 'standard' for full encodes."
+      },
+      "VideoEncodingSecondsModelAdditionalProperties": {
         "type": "object",
         "not": { }
       },
@@ -49802,6 +53249,117 @@
       "VideoOEmbedModelAdditionalProperties": {
         "type": "object",
         "not": { }
+      },
+      "VideoEncodingStatisticsModelTotalNormalizedChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingStatisticsModelTotalOutputChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Encoded output seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingStatisticsModelTotalByVideoCodec": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1)."
+      },
+      "VideoEncodingStatisticsModelTotalByResolution": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by the video's highest output resolution. 0 means the resolution was unknown."
+      },
+      "VideoEncodingStatisticsModelTotalByJit": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by encoding type: 'jit' for just-in-time encodes, 'standard' for full encodes."
+      },
+      "VideoEncodingStatisticsModelPremiumNormalizedChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingStatisticsModelPremiumOutputChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Encoded output seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingStatisticsModelPremiumByVideoCodec": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1)."
+      },
+      "VideoEncodingStatisticsModelPremiumByResolution": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by the video's highest output resolution. 0 means the resolution was unknown."
+      },
+      "VideoEncodingStatisticsModelPremiumByJit": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by encoding type: 'jit' for just-in-time encodes, 'standard' for full encodes."
+      },
+      "VideoEncodingStatisticsModelFreeNormalizedChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingStatisticsModelFreeOutputChart": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "description": "Encoded output seconds over time, grouped hourly or daily in UTC."
+      },
+      "VideoEncodingStatisticsModelFreeByVideoCodec": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1)."
+      },
+      "VideoEncodingStatisticsModelFreeByResolution": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by the video's highest output resolution. 0 means the resolution was unknown."
+      },
+      "VideoEncodingStatisticsModelFreeByJit": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/VideoEncodingSecondsModel"
+        },
+        "description": "Encoding seconds grouped by encoding type: 'jit' for just-in-time encodes, 'standard' for full encodes."
       },
       "StatusModelOfCaptionValidationModelAllOf2AdditionalProperties": {
         "type": "object",
@@ -51377,6 +54935,9 @@
       "name": "Pricing"
     },
     {
+      "name": "Load Balancer"
+    },
+    {
       "name": "DNS Zone"
     },
     {
@@ -51410,6 +54971,9 @@
       "name": "Manage Collections"
     },
     {
+      "name": "Encoding Statistics"
+    },
+    {
       "name": "Manage Videos"
     }
   ],
@@ -51423,5 +54987,5 @@
     "javascript",
     "python"
   ],
-  "x-generator": "NSwag v13.20.0.0 (NJsonSchema v10.9.0.0)"
+  "x-generator": "NSwag v13.20.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))"
 }

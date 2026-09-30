@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Bunny.OpenApiClient.Models;
+using Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics.Encoding;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -17,6 +18,11 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatisticsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The encoding property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics.Encoding.EncodingRequestBuilder Encoding
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics.Encoding.EncodingRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics.StatisticsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -34,11 +40,12 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics
         {
         }
         /// <summary>
-        /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.
+        /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Statistics are available for the last 1 year. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,12 +59,13 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
+                { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.
+        /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Statistics are available for the last 1 year. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -85,12 +93,12 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics
             return new global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Statistics.StatisticsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.
+        /// Returns time-series views and watch time, plus country-level aggregates, at the library level or for a specific video. Control the time window with dateFrom/dateTo and the granularity with hourly. Statistics are available for the last 1 year. Basic safeguards prevent spam and bot inflation by de-duplicating sessions and ignoring obviously invalid events.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatisticsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Optional start of the time range (UTC). If omitted or invalid, the last 30 days are returned.</summary>
+            /// <summary>Optional start of the time range (UTC). If omitted or invalid, the last 30 days are returned. Starts more than 1 year ago are moved to 1 year ago.</summary>
             [QueryParameter("dateFrom")]
             public DateTimeOffset? DateFrom { get; set; }
             /// <summary>Optional end of the time range (UTC). If omitted with a valid start, defaults to now; otherwise the last 30 days are returned.</summary>
