@@ -5359,7 +5359,8 @@
               "SubuserAPIStorage",
               "SubuserStorage",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -5369,7 +5370,8 @@
               "SubuserAPIStorage",
               "SubuserStorage",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
