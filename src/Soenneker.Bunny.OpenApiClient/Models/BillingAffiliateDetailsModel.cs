@@ -50,7 +50,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The bonus percentage given when claiming affiliate balance as bunny credits</summary>
         public decimal? ClaimBonusPercentage { get; set; }
-        /// <summary>The minimum amount required to request affiliate credits external payout</summary>
+        /// <summary>The smallest cash payout that can be requested</summary>
         public decimal? MinimumPayoutAmount { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModel"/> and sets the default values.

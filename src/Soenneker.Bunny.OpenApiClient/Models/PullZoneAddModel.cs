@@ -230,7 +230,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Determines if the error pages should be whitelabel or not</summary>
         public bool? ErrorPageWhitelabel { get; set; }
-        /// <summary>Determines if the zone should follow redirects return by the oprigin and cache the response</summary>
+        /// <summary>Determines if the zone should follow redirects return by the origin and cache the response</summary>
         public bool? FollowRedirects { get; set; }
         /// <summary>Determines if the Pull Zone should ignore query strings when serving cached objects (Vary by Query String)</summary>
         public bool? IgnoreQueryStrings { get; set; }
