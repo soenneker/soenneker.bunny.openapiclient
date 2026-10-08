@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find;
 using Soenneker.Bunny.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImagesRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The find property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find.FindRequestBuilder Find
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find.FindRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.ImagesRequestBuilder"/> and sets the default values.
         /// </summary>

@@ -22771,6 +22771,127 @@
         ]
       }
     },
+    "/magic-containers/registries/images/find": {
+      "post": {
+        "tags": [
+          "ContainerRegistries"
+        ],
+        "summary": "Find Container Image",
+        "description": "Parses an image reference like \"ghcr.io/owner/app:v1\" or \"owner/app\" and checks whether the image tag exists in the selected registries of the user (only those of the reference's host when it has one). Returns every registry that has the image tag with its id, hostname, the image namespace, name, tag and digest.",
+        "operationId": "magic_containers_FindContainerImage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindContainerImageRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindContainerImageRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindContainerImageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The image tag exists in at least one of the user's registries; every such registry is listed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FindContainerImageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request is invalid, e.g. no registry is selected.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "User is unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "None of the selected registries is the user's or is for the image host, or the image tag was not found in any of them.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "The image reference is invalid.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "502": {
+            "description": "The image was found nowhere and a registry failed to answer (also 503 and other registry errors).",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "magic_containers_AccessKey": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net/mc"
+          }
+        ]
+      }
+    },
     "/magic-containers/apps/{appId}/containers/{containerId}/env": {
       "put": {
         "tags": [
@@ -47462,6 +47583,92 @@
           "not": { }
         },
         "description": "RFC 7807 Problem Details response model."
+      },
+      "FindContainerImageRequest": {
+        "required": [
+          "image",
+          "registryIds"
+        ],
+        "type": "object",
+        "properties": {
+          "image": {
+            "maxLength": 512,
+            "minLength": 1,
+            "type": "string",
+            "description": "Image reference in the docker format: [registry/]namespace/name[:tag], e.g. \"ghcr.io/owner/app:v1\" or \"owner/app\".\nWithout a registry host all of the user's registries are searched.\nThe tag defaults to \"latest\"."
+          },
+          "registryIds": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The registries to search: ids of the user's registries, or \"dockerhub\" / \"github\". At least one is required;\nids that are not the user's registries are skipped. With a registry host in the image reference, only the\nselected registries of that host are searched."
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
+      },
+      "FindContainerImageResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FoundContainerImage"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ListMeta"
+          },
+          "cursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "Every registry of the user that has the image tag, in the order they were queried\n(the user's own private registries first, then public and platform ones)."
+      },
+      "FoundContainerImage": {
+        "required": [
+          "imageDigest",
+          "imageName",
+          "imageNamespace",
+          "imageTag",
+          "isPublic",
+          "registryHostname",
+          "registryId"
+        ],
+        "type": "object",
+        "properties": {
+          "imageNamespace": {
+            "type": "string"
+          },
+          "imageName": {
+            "type": "string"
+          },
+          "registryId": {
+            "type": "string"
+          },
+          "registryHostname": {
+            "type": "string"
+          },
+          "isPublic": {
+            "type": "boolean"
+          },
+          "imageTag": {
+            "type": "string"
+          },
+          "imageDigest": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
       },
       "GetContainerConfigSuggestionsRequest": {
         "required": [
