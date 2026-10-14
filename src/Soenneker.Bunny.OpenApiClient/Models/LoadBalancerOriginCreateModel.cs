@@ -34,7 +34,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The type of origin to connect to</summary>
+        /// <summary>The type of origin to connect to. Magic Container origins must be CDN endpoints; Anycast endpoints are not supported, use a Standard origin for those</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelOriginType? OriginType { get; set; }

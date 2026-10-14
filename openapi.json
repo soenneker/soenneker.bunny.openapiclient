@@ -33150,7 +33150,7 @@
             "$ref": "#/components/schemas/PullZoneType"
           }
         },
-        "description": "The type of the pull zone. Premium = 0, Volume = 1"
+        "description": "The type of the pull zone"
       },
       "PullZoneModelTlsSecurityLevel": {
         "type": "object",
@@ -33164,7 +33164,7 @@
             "$ref": "#/components/schemas/TlsSecurityLevelType"
           }
         },
-        "description": "The minimum TLS security level enforced on the Pull Zone (Legacy = 0, Compatible = 1, ModernOnly = 2)"
+        "description": "The minimum TLS security level enforced on the Pull Zone"
       },
       "PullZoneModelLogForwardingProtocol": {
         "type": "object",
@@ -33318,7 +33318,7 @@
             "$ref": "#/components/schemas/EdgeRuleActionType"
           }
         },
-        "description": "The action type of the edge rule. ForceSSL = 0, Redirect = 1, OriginUrl = 2, OverrideCacheTime = 3, BlockRequest = 4, SetResponseHeader = 5, SetRequestHeader = 6, ForceDownload = 7, DisableTokenAuthentication = 8, EnableTokenAuthentication = 9, OverrideCacheTimePublic = 10, IgnoreQueryString = 11, DisableOptimizer = 12, ForceCompression = 13, SetStatusCode = 14, BypassPermaCache = 15, OverrideBrowserCacheTime = 16"
+        "description": "The action type of the edge rule"
       },
       "EdgeRuleV2ModelTriggerMatchingType": {
         "type": "object",
@@ -33332,7 +33332,7 @@
             "$ref": "#/components/schemas/TriggerMatchingTypes"
           }
         },
-        "description": "The trigger matching type. MatchAny = 0, MatchAll = 1, MatchNone = 2"
+        "description": "The trigger matching type"
       },
       "TriggerType": {
         "type": "object",
@@ -33346,7 +33346,7 @@
             "$ref": "#/components/schemas/TriggerTypes"
           }
         },
-        "description": "The type of the trigger. Url = 0, RequestHeader = 1, ResponseHeader = 2, UrlExtension = 3, CountryCode = 4, RemoteIP = 5, UrlQueryString = 6, RandomChance = 7"
+        "description": "The type of the trigger"
       },
       "TriggerPatternMatchingType": {
         "type": "object",
@@ -33360,7 +33360,7 @@
             "$ref": "#/components/schemas/PatternMatchingTypes"
           }
         },
-        "description": "The type of pattern matching. MatchAny = 0, MatchAll = 1, MatchNone = 2"
+        "description": "The type of pattern matching"
       },
       "PullZoneSettingsModelIpFamilyPolicy": {
         "type": "object",
@@ -33404,7 +33404,7 @@
             "$ref": "#/components/schemas/TlsSecurityLevelType"
           }
         },
-        "description": "The minimum TLS security level enforced on this zone (Legacy = 0, Compatible = 1, ModernOnly = 2)"
+        "description": "The minimum TLS security level enforced on this zone"
       },
       "PullZoneSettingsModelLogForwardingProtocol": {
         "type": "object",
@@ -33460,7 +33460,7 @@
             "$ref": "#/components/schemas/PullZoneType"
           }
         },
-        "description": "The type of the pull zone. Premium = 0, Volume = 1"
+        "description": "The type of the pull zone"
       },
       "PullZoneSettingsModelLogAnonymizationType": {
         "type": "object",
@@ -33613,7 +33613,7 @@
             "$ref": "#/components/schemas/TlsSecurityLevelType"
           }
         },
-        "description": "The minimum TLS security level enforced on this zone (Legacy = 0, Compatible = 1, ModernOnly = 2)"
+        "description": "The minimum TLS security level enforced on this zone"
       },
       "PullZoneAddModelLogForwardingProtocol": {
         "type": "object",
@@ -33669,7 +33669,7 @@
             "$ref": "#/components/schemas/PullZoneType"
           }
         },
-        "description": "The type of the pull zone. Premium = 0, Volume = 1"
+        "description": "The type of the pull zone"
       },
       "PullZoneAddModelLogAnonymizationType": {
         "type": "object",
@@ -33924,7 +33924,7 @@
             "$ref": "#/components/schemas/PullZoneType"
           }
         },
-        "description": "The type of the pull zone attached. Premium = 0, Volume = 1"
+        "description": "The type of the pull zone attached"
       },
       "VideoLibraryModelEncodingTier": {
         "type": "object",
@@ -34138,7 +34138,7 @@
             "$ref": "#/components/schemas/OriginType"
           }
         },
-        "description": "The type of origin to connect to"
+        "description": "The type of origin to connect to. Magic Container origins must be CDN endpoints; Anycast endpoints are not supported, use a Standard origin for those"
       },
       "LoadBalancerOriginModelStandardOrigin": {
         "type": "object",
@@ -34199,7 +34199,7 @@
             "$ref": "#/components/schemas/OriginType"
           }
         },
-        "description": "The type of origin to connect to"
+        "description": "The type of origin to connect to. Magic Container origins must be CDN endpoints; Anycast endpoints are not supported, use a Standard origin for those"
       },
       "LoadBalancerOriginCreateModelStandardOrigin": {
         "type": "object",
@@ -34812,7 +34812,7 @@
             "$ref": "#/components/schemas/BillingRecordType"
           }
         },
-        "description": "The type of the billing record. PayPal = 0, Crypto = 1, CreditCard = 2, MonthlyUsage = 3, Refund = 4, CouponCode = 5, BankTransfer = 6, AffiliateCredits = 7"
+        "description": "The type of the billing record"
       },
       "OptimizerClassModelProperties": {
         "type": "object",

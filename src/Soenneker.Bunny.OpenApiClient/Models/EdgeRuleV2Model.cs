@@ -36,7 +36,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string ActionParameter3 { get; set; }
 #endif
-        /// <summary>The action type of the edge rule. ForceSSL = 0, Redirect = 1, OriginUrl = 2, OverrideCacheTime = 3, BlockRequest = 4, SetResponseHeader = 5, SetRequestHeader = 6, ForceDownload = 7, DisableTokenAuthentication = 8, EnableTokenAuthentication = 9, OverrideCacheTimePublic = 10, IgnoreQueryString = 11, DisableOptimizer = 12, ForceCompression = 13, SetStatusCode = 14, BypassPermaCache = 15, OverrideBrowserCacheTime = 16</summary>
+        /// <summary>The action type of the edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelActionType? ActionType { get; set; }
@@ -76,7 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? OrderIndex { get; set; }
         /// <summary>Determines if the edge rule is read-only and cannot be modified or deleted</summary>
         public bool? ReadOnly { get; set; }
-        /// <summary>The trigger matching type. MatchAny = 0, MatchAll = 1, MatchNone = 2</summary>
+        /// <summary>The trigger matching type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ModelTriggerMatchingType? TriggerMatchingType { get; set; }

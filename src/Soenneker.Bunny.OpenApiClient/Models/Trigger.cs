@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<string> PatternMatches { get; set; }
 #endif
-        /// <summary>The type of pattern matching. MatchAny = 0, MatchAll = 1, MatchNone = 2</summary>
+        /// <summary>The type of pattern matching</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType? PatternMatchingType { get; set; }
@@ -38,7 +38,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType PatternMatchingType { get; set; }
 #endif
-        /// <summary>The type of the trigger. Url = 0, RequestHeader = 1, ResponseHeader = 2, UrlExtension = 3, CountryCode = 4, RemoteIP = 5, UrlQueryString = 6, RandomChance = 7</summary>
+        /// <summary>The type of the trigger</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.TriggerType? Type { get; set; }

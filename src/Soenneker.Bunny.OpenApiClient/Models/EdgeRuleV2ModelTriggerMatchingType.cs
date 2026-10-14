@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// The trigger matching type. MatchAny = 0, MatchAll = 1, MatchNone = 2
+    /// The trigger matching type
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EdgeRuleV2ModelTriggerMatchingType : IAdditionalDataHolder, IParsable

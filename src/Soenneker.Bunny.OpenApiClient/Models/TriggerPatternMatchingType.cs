@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// The type of pattern matching. MatchAny = 0, MatchAll = 1, MatchNone = 2
+    /// The type of pattern matching
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TriggerPatternMatchingType : IAdditionalDataHolder, IParsable

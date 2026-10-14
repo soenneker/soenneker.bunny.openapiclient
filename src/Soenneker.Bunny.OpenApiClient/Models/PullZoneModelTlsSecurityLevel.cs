@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// The minimum TLS security level enforced on the Pull Zone (Legacy = 0, Compatible = 1, ModernOnly = 2)
+    /// The minimum TLS security level enforced on the Pull Zone
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PullZoneModelTlsSecurityLevel : IAdditionalDataHolder, IParsable

@@ -568,7 +568,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The ID of the storage zone that will be used as the origin</summary>
         public long? StorageZoneId { get; set; }
-        /// <summary>The minimum TLS security level enforced on this zone (Legacy = 0, Compatible = 1, ModernOnly = 2)</summary>
+        /// <summary>The minimum TLS security level enforced on this zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModelTlsSecurityLevel? TlsSecurityLevel { get; set; }
@@ -576,7 +576,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModelTlsSecurityLevel TlsSecurityLevel { get; set; }
 #endif
-        /// <summary>The type of the pull zone. Premium = 0, Volume = 1</summary>
+        /// <summary>The type of the pull zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModelType? Type { get; set; }

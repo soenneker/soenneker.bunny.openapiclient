@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// The type of the pull zone. Premium = 0, Volume = 1
+    /// The type of the pull zone
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PullZoneModelType : IAdditionalDataHolder, IParsable

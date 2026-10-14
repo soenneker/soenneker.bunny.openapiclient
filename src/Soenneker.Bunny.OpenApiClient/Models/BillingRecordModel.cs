@@ -54,7 +54,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The date and time when the billing record was created</summary>
         public DateTimeOffset? Timestamp { get; set; }
-        /// <summary>The type of the billing record. PayPal = 0, Crypto = 1, CreditCard = 2, MonthlyUsage = 3, Refund = 4, CouponCode = 5, BankTransfer = 6, AffiliateCredits = 7</summary>
+        /// <summary>The type of the billing record</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType? Type { get; set; }

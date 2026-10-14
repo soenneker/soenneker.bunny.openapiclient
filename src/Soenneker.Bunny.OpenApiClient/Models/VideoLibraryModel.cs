@@ -253,7 +253,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public decimal? PremiumEncodingPriceOverride { get; set; }
         /// <summary>The ID of the connected underlying pull zone</summary>
         public long? PullZoneId { get; set; }
-        /// <summary>The type of the pull zone attached. Premium = 0, Volume = 1</summary>
+        /// <summary>The type of the pull zone attached</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelPullZoneType? PullZoneType { get; set; }
