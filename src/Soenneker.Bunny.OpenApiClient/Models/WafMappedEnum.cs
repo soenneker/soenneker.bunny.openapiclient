@@ -44,6 +44,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The value property</summary>
         public int? Value { get; set; }
+        /// <summary>The valueConstraint property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint? ValueConstraint { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint ValueConstraint { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum"/> and sets the default values.
         /// </summary>
@@ -75,6 +83,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "recommendedOperator", n => { RecommendedOperator = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator>(global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator.CreateFromDiscriminatorValue); } },
                 { "supportedValues", n => { SupportedValues = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues>(global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetIntValue(); } },
+                { "valueConstraint", n => { ValueConstraint = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint>(global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator>("recommendedOperator", RecommendedOperator);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues>("supportedValues", SupportedValues);
             writer.WriteIntValue("value", Value);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint>("valueConstraint", ValueConstraint);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

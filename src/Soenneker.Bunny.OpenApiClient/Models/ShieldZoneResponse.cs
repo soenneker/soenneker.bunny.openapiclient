@@ -20,7 +20,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? DDoSChallengeWindow { get; set; }
         /// <summary>0 = Log1 = Block</summary>
         public int? DDoSExecutionMode { get; set; }
-        /// <summary>0 = Off1 = Low2 = Medium3 = High4 = Challenge</summary>
+        /// <summary>0 = Off1 = Low2 = Medium3 = High4 = Challenge5 = ChallengeInteractive</summary>
         public int? DDoSShieldSensitivity { get; set; }
         /// <summary>The learningMode property</summary>
         public bool? LearningMode { get; set; }

@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dDoSChallengeWindow property</summary>
         public int? DDoSChallengeWindow { get; set; }
-        /// <summary>0 = Off1 = Low2 = Medium3 = High4 = Challenge</summary>
+        /// <summary>0 = Off1 = Low2 = Medium3 = High4 = Challenge5 = ChallengeInteractive</summary>
         public int? DDoSShieldSensitivity { get; set; }
         /// <summary>The learningMode property</summary>
         public bool? LearningMode { get; set; }

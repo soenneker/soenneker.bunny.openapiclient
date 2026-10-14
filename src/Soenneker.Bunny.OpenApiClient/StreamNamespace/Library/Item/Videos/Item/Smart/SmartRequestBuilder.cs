@@ -46,6 +46,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 429 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateModel body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,6 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

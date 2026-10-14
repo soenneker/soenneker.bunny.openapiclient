@@ -11913,6 +11913,16 @@
                 }
               }
             }
+          },
+          "503": {
+            "description": "The smart action could not be queued; the requested features are marked as failed and the request can be retried",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -16043,6 +16053,8 @@
             "in": "query",
             "description": "(Optional) The page number of results.",
             "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
               "type": "integer",
               "description": "(Optional) The page number of results.",
               "format": "int32",
@@ -16054,6 +16066,8 @@
             "in": "query",
             "description": "(Optional) (Default: 10) The amount of results returned on one page.",
             "schema": {
+              "maximum": 10000,
+              "minimum": 1,
               "type": "integer",
               "description": "(Optional) (Default: 10) The amount of results returned on one page.",
               "format": "int32",
@@ -16502,6 +16516,8 @@
             "in": "query",
             "description": "(Optional) The page number of results.",
             "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
               "type": "integer",
               "description": "(Optional) The page number of results.",
               "format": "int32",
@@ -16513,6 +16529,8 @@
             "in": "query",
             "description": "(Optional) (Default: 10) The amount of results returned on one page.",
             "schema": {
+              "maximum": 10000,
+              "minimum": 1,
               "type": "integer",
               "description": "(Optional) (Default: 10) The amount of results returned on one page.",
               "format": "int32",
@@ -17881,6 +17899,8 @@
             "in": "query",
             "description": "(Optional) The page number of results.",
             "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
               "type": "integer",
               "description": "(Optional) The page number of results.",
               "format": "int32",
@@ -17892,6 +17912,8 @@
             "in": "query",
             "description": "(Optional) (Default: 10) The amount of results returned on one page.",
             "schema": {
+              "maximum": 10000,
+              "minimum": 1,
               "type": "integer",
               "description": "(Optional) (Default: 10) The amount of results returned on one page.",
               "format": "int32",
@@ -22491,6 +22513,97 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ListContainerImageTags200ResponseSchema"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "User is unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/magic_containers_ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable entity.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "magic_containers_AccessKey": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net/mc"
+          }
+        ]
+      }
+    },
+    "/magic-containers/registries/tags/paged": {
+      "post": {
+        "tags": [
+          "ContainerRegistries"
+        ],
+        "summary": "List Container Image Tags Page",
+        "description": "Lists one page of the tags of a container image, in the order the registry returns them (newest first for Docker Hub images whose tags the registry can't list in time). The response cursor is the cursor of the next page; it is empty on the last page.",
+        "operationId": "magic_containers_ListContainerImageTagsPage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageTagsPageRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageTagsPageRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListContainerImageTagsPageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The page of container image tags was successfully retrieved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListContainerImageTagsPageResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The request is invalid, e.g. the limit is out of range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
                 }
               }
             }
@@ -41517,20 +41630,22 @@
           1,
           2,
           3,
-          4
+          4,
+          5
         ],
         "type": "integer",
         "additionalProperties": {
           "not": { }
         },
-        "description": "0 = Off\n1 = Low\n2 = Medium\n3 = High\n4 = Challenge",
+        "description": "0 = Off\n1 = Low\n2 = Medium\n3 = High\n4 = Challenge\n5 = ChallengeInteractive",
         "format": "int32",
         "x-enum-varnames": [
           "Off",
           "Low",
           "Medium",
           "High",
-          "Challenge"
+          "Challenge",
+          "ChallengeInteractive"
         ]
       },
       "EventGroup": {
@@ -43944,6 +44059,9 @@
           },
           "recommendedOperator": {
             "$ref": "#/components/schemas/WafRecommendedOperator"
+          },
+          "valueConstraint": {
+            "$ref": "#/components/schemas/WafValueConstraint"
           }
         },
         "additionalProperties": {
@@ -44266,6 +44384,7 @@
           8,
           9,
           12,
+          13,
           14,
           15,
           17,
@@ -44275,7 +44394,7 @@
         "additionalProperties": {
           "not": { }
         },
-        "description": "0 = BEGINSWITH\n1 = ENDSWITH\n2 = CONTAINS\n3 = CONTAINSWORD\n4 = STRMATCH\n5 = EQ\n6 = GE\n7 = GT\n8 = LE\n9 = LT\n12 = WITHIN\n14 = RX\n15 = STREQ\n17 = DETECTSQLI\n18 = DETECTXSS",
+        "description": "0 = BEGINSWITH\n1 = ENDSWITH\n2 = CONTAINS\n3 = CONTAINSWORD\n4 = STRMATCH\n5 = EQ\n6 = GE\n7 = GT\n8 = LE\n9 = LT\n12 = WITHIN\n13 = IPMATCH\n14 = RX\n15 = STREQ\n17 = DETECTSQLI\n18 = DETECTXSS",
         "format": "int32",
         "x-enum-varnames": [
           "BEGINSWITH",
@@ -44289,6 +44408,7 @@
           "LE",
           "LT",
           "WITHIN",
+          "IPMATCH",
           "RX",
           "STREQ",
           "DETECTSQLI",
@@ -44406,6 +44526,59 @@
         },
         "additionalProperties": {
           "not": { }
+        }
+      },
+      "WafValueConstraint": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/WafValueKind"
+          },
+          "pattern": {
+            "type": "string",
+            "nullable": true
+          },
+          "maxLength": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "chainedMaxLength": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "example": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
+      },
+      "WafValueKind": {
+        "enum": [
+          "Text",
+          "Number",
+          "Regex",
+          "IPMatch"
+        ],
+        "type": "string",
+        "additionalProperties": {
+          "not": { }
+        },
+        "x-ms-enum": {
+          "name": "WafValueKind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "IPMatch",
+              "name": "IpMatch"
+            }
+          ]
         }
       },
       "ApiGuardianEndpointDetailsResponseBodySchemasYaml": {
@@ -48288,6 +48461,69 @@
             "maxLength": 100,
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
+      },
+      "ListContainerImageTagsPageRequest": {
+        "required": [
+          "imageName",
+          "imageNamespace",
+          "registryId"
+        ],
+        "type": "object",
+        "properties": {
+          "registryId": {
+            "minLength": 1,
+            "type": "string",
+            "description": "The registry identifier. Can be \"dockerhub\", \"github\", or a private registry ID."
+          },
+          "imageName": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "imageNamespace": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "limit": {
+            "maximum": 1000,
+            "minimum": 1,
+            "type": "integer",
+            "description": "The maximum number of tags in the page. Registries may return fewer.",
+            "format": "int32",
+            "default": 100
+          },
+          "cursor": {
+            "maxLength": 128,
+            "type": "string",
+            "description": "The cursor of the page to return, from the previous response; omit for the first page.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
+      },
+      "ListContainerImageTagsPageResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContainerImageTag"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ListMeta"
+          },
+          "cursor": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": {

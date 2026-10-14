@@ -14,7 +14,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
+        /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN13 = IPMATCH14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
         public int? Operator { get; set; }
         /// <summary>The values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -32,7 +32,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? IsNegated { get; set; }
         /// <summary>The isRegexVariable property</summary>
         public bool? IsRegexVariable { get; set; }
-        /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
+        /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN13 = IPMATCH14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
         public int? OperatorType { get; set; }
         /// <summary>The requestCount property</summary>
         public int? RequestCount { get; set; }
