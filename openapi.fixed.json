@@ -2962,41 +2962,6 @@
         ]
       }
     },
-    "/core/storagezone/regions": {
-      "get": {
-        "tags": [
-          "Storage Zone"
-        ],
-        "summary": "Get Storage Zone Regions",
-        "operationId": "CoreStorageZonePublicGetStorageZoneRegions",
-        "responses": {
-          "200": {
-            "description": "Available storage regions and tiers with list prices in USD per GB per month",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CoreStorageZonePublicGetStorageZoneRegions200Response"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [
-          {
-            "AccessKey": [ ]
-          }
-        ],
-        "servers": [
-          {
-            "url": "https://api.bunny.net",
-            "description": "bunny.net API Server"
-          }
-        ]
-      }
-    },
     "/core/storagezone": {
       "get": {
         "tags": [
@@ -5228,14 +5193,16 @@
             "AccessKey": [
               "User",
               "UserApi",
-              "Subuser"
+              "Subuser",
+              "ScopedApiKey"
             ]
           },
           {
             "bearer": [
               "User",
               "UserApi",
-              "Subuser"
+              "Subuser",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -5352,6 +5319,63 @@
               "SubuserStatistics",
               "SubuserManage",
               "SubuserAPIManage"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ]
+      }
+    },
+    "/core/storagezone/regions": {
+      "get": {
+        "tags": [
+          "Storage Zone"
+        ],
+        "summary": "Get Storage Zone Regions",
+        "operationId": "CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions",
+        "responses": {
+          "200": {
+            "description": "A list of available storage zone regions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions200Response"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIStorage",
+              "SubuserStorage",
+              "SubuserManage",
+              "SubuserAPIManage",
+              "ScopedApiKey"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIStorage",
+              "SubuserStorage",
+              "SubuserManage",
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6043,8 +6067,7 @@
               "User",
               "UserApi",
               "SubuserManage",
-              "SubuserAPIManage",
-              "ScopedApiKey"
+              "SubuserAPIManage"
             ]
           },
           {
@@ -6052,8 +6075,7 @@
               "User",
               "UserApi",
               "SubuserManage",
-              "SubuserAPIManage",
-              "ScopedApiKey"
+              "SubuserAPIManage"
             ]
           }
         ],
@@ -29388,63 +29410,6 @@
           "$ref": "#/components/schemas/RegionModelAdditionalProperties"
         }
       },
-      "StorageRegionModel": {
-        "type": "object",
-        "properties": {
-          "Code": {
-            "type": "string",
-            "description": "The storage region code",
-            "nullable": true
-          },
-          "Name": {
-            "type": "string",
-            "description": "The display name of the storage region",
-            "nullable": true
-          },
-          "Continent": {
-            "type": "string",
-            "description": "The continent code: EU (Europe), NA (North America), AS (Asia), OC (Oceania), SA (South America) or AF (Africa)",
-            "nullable": true
-          },
-          "Latitude": {
-            "type": "number",
-            "description": "The approximate latitude of the storage region in decimal degrees",
-            "format": "double"
-          },
-          "Longitude": {
-            "type": "number",
-            "description": "The approximate longitude of the storage region in decimal degrees",
-            "format": "double"
-          },
-          "PricePerGigabyte": {
-            "type": "number",
-            "description": "The standard storage price in USD per GB per month, before discounts",
-            "format": "decimal"
-          },
-          "Tier": {
-            "type": "integer",
-            "description": "The storage tier: 0 for Standard (HDD), 1 for Edge (SSD)",
-            "format": "int32"
-          },
-          "IsS3Supported": {
-            "type": "boolean",
-            "description": "Whether the region supports S3 compatibility"
-          },
-          "Hostname": {
-            "type": "string",
-            "description": "The storage API hostname for the region",
-            "nullable": true
-          },
-          "S3Hostname": {
-            "type": "string",
-            "description": "The S3 API hostname, or null when S3 compatibility is not supported",
-            "nullable": true
-          }
-        },
-        "additionalProperties": {
-          "$ref": "#/components/schemas/StorageRegionModelAdditionalProperties"
-        }
-      },
       "StorageZoneModel": {
         "type": "object",
         "properties": {
@@ -30924,6 +30889,29 @@
         },
         "additionalProperties": {
           "$ref": "#/components/schemas/StorageZoneEgressStatisticsModelAdditionalProperties"
+        }
+      },
+      "StorageRegionModel": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "The unique identifier for the storage region",
+            "nullable": true
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the storage region",
+            "nullable": true
+          },
+          "Url": {
+            "type": "string",
+            "description": "The storage endpoint URL for this region",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/StorageRegionModelAdditionalProperties"
         }
       },
       "StorageZoneStatisticsModel": {
@@ -35325,12 +35313,6 @@
           "$ref": "#/components/schemas/RegionModel"
         }
       },
-      "StorageZonePublicGetStorageZoneRegions200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/StorageRegionModel"
-        }
-      },
       "StorageZonePublicIndexAll200Response": {
         "type": "array",
         "items": {
@@ -35341,6 +35323,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VideoLibraryLanguage"
+        }
+      },
+      "GetStoragezoneRegionsEndpointGetStorageZoneRegions200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
       "LoadBalancerProfileEndpointGetLoadBalancers200Response": {
@@ -36296,12 +36284,6 @@
           "$ref": "#/components/schemas/RegionModel"
         }
       },
-      "StorageZonePublicGetStorageZoneRegions200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/StorageRegionModel"
-        }
-      },
       "StorageZonePublicIndexAll200ResponseSchema": {
         "type": "array",
         "items": {
@@ -36312,6 +36294,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VideoLibraryLanguage"
+        }
+      },
+      "GetStoragezoneRegionsEndpointGetStorageZoneRegions200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
       "LoadBalancerProfileEndpointGetLoadBalancers200ResponseSchema": {
@@ -52511,12 +52499,6 @@
           "$ref": "#/components/schemas/RegionModel"
         }
       },
-      "CoreStorageZonePublicGetStorageZoneRegions200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/StorageRegionModel"
-        }
-      },
       "CoreStorageZonePublicIndexAll200Response": {
         "type": "array",
         "items": {
@@ -52527,6 +52509,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/VideoLibraryLanguage"
+        }
+      },
+      "CoreGetStoragezoneRegionsEndpointGetStorageZoneRegions200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/StorageRegionModel"
         }
       },
       "CoreLoadBalancerProfileEndpointGetLoadBalancers200Response": {
@@ -52901,10 +52889,6 @@
         "type": "object",
         "not": { }
       },
-      "StorageRegionModelAdditionalProperties": {
-        "type": "object",
-        "not": { }
-      },
       "StorageZoneModelAdditionalProperties": {
         "type": "object",
         "not": { }
@@ -53054,6 +53038,10 @@
           "format": "int64"
         },
         "description": "Total download traffic across all protocols"
+      },
+      "StorageRegionModelAdditionalProperties": {
+        "type": "object",
+        "not": { }
       },
       "StorageZoneStatisticsModelAdditionalProperties": {
         "type": "object",
