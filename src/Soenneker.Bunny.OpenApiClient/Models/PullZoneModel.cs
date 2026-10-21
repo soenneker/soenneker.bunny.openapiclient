@@ -398,7 +398,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>Determines the image quality for desktop clients</summary>
         public int? OptimizerImageQuality { get; set; }
-        /// <summary>Determines if the llms.txt file can be generated and served by the Optimizer</summary>
+        /// <summary>Determines if the llms.txt file should be served when requested</summary>
         public bool? OptimizerLlmsTxt { get; set; }
         /// <summary>Determines if the CSS minifcation should be enabled</summary>
         public bool? OptimizerMinifyCSS { get; set; }

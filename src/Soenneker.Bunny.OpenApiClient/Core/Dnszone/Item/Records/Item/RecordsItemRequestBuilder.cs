@@ -39,6 +39,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.Item
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData">When receiving a 409 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,6 +53,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -207,6 +207,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? JitEncodingEnabled { get; set; }
         /// <summary>Determines if the original video files should be stored after encoding</summary>
         public bool? KeepOriginalFiles { get; set; }
+        /// <summary>The total number of live streams contained by the video library</summary>
+        public long? LiveStreamCount { get; set; }
         /// <summary>The MonthlyChargesEnterpriseDrm property</summary>
         public decimal? MonthlyChargesEnterpriseDrm { get; set; }
         /// <summary>The MonthlyChargesPremiumEncoding property</summary>
@@ -289,6 +291,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? StorageUsage { get; set; }
         /// <summary>The ID of the connected underlying storage zone</summary>
         public long? StorageZoneId { get; set; }
+        /// <summary>The total number of items contained by the video library</summary>
+        public long? TotalCount { get; set; }
         /// <summary>The amount of traffic usage this month</summary>
         public long? TrafficUsage { get; set; }
         /// <summary>The list of languages that the captions will be automatically transcribed to.</summary>
@@ -420,6 +424,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Id", n => { Id = n.GetLongValue(); } },
                 { "JitEncodingEnabled", n => { JitEncodingEnabled = n.GetBoolValue(); } },
                 { "KeepOriginalFiles", n => { KeepOriginalFiles = n.GetBoolValue(); } },
+                { "LiveStreamCount", n => { LiveStreamCount = n.GetLongValue(); } },
                 { "MonthlyChargesEnterpriseDrm", n => { MonthlyChargesEnterpriseDrm = n.GetDecimalValue(); } },
                 { "MonthlyChargesPremiumEncoding", n => { MonthlyChargesPremiumEncoding = n.GetDecimalValue(); } },
                 { "MonthlyChargesTranscribing", n => { MonthlyChargesTranscribing = n.GetDecimalValue(); } },
@@ -440,6 +445,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ShowHeatmap", n => { ShowHeatmap = n.GetBoolValue(); } },
                 { "StorageUsage", n => { StorageUsage = n.GetLongValue(); } },
                 { "StorageZoneId", n => { StorageZoneId = n.GetLongValue(); } },
+                { "TotalCount", n => { TotalCount = n.GetLongValue(); } },
                 { "TrafficUsage", n => { TrafficUsage = n.GetLongValue(); } },
                 { "TranscribingCaptionLanguages", n => { TranscribingCaptionLanguages = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "TranscribingPriceOverride", n => { TranscribingPriceOverride = n.GetDecimalValue(); } },
@@ -511,6 +517,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("Id", Id);
             writer.WriteBoolValue("JitEncodingEnabled", JitEncodingEnabled);
             writer.WriteBoolValue("KeepOriginalFiles", KeepOriginalFiles);
+            writer.WriteLongValue("LiveStreamCount", LiveStreamCount);
             writer.WriteDecimalValue("MonthlyChargesEnterpriseDrm", MonthlyChargesEnterpriseDrm);
             writer.WriteDecimalValue("MonthlyChargesPremiumEncoding", MonthlyChargesPremiumEncoding);
             writer.WriteDecimalValue("MonthlyChargesTranscribing", MonthlyChargesTranscribing);
@@ -531,6 +538,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ShowHeatmap", ShowHeatmap);
             writer.WriteLongValue("StorageUsage", StorageUsage);
             writer.WriteLongValue("StorageZoneId", StorageZoneId);
+            writer.WriteLongValue("TotalCount", TotalCount);
             writer.WriteLongValue("TrafficUsage", TrafficUsage);
             writer.WriteCollectionOfPrimitiveValues<string>("TranscribingCaptionLanguages", TranscribingCaptionLanguages);
             writer.WriteDecimalValue("TranscribingPriceOverride", TranscribingPriceOverride);

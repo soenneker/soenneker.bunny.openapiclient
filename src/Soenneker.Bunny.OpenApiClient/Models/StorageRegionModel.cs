@@ -14,15 +14,39 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The unique identifier for the storage region</summary>
+        /// <summary>The storage region code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Code { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Code { get; set; }
 #endif
-        /// <summary>The name of the storage region</summary>
+        /// <summary>The continent code: EU (Europe), NA (North America), AS (Asia), OC (Oceania), SA (South America) or AF (Africa)</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Continent { get; set; }
+#nullable restore
+#else
+        public string Continent { get; set; }
+#endif
+        /// <summary>The storage API endpoint, or null for SSD regions that cannot be selected as the main region</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Endpoint { get; set; }
+#nullable restore
+#else
+        public string Endpoint { get; set; }
+#endif
+        /// <summary>Whether the region can be selected as the main region for this storage tier</summary>
+        public bool? IsMainRegionSupported { get; set; }
+        /// <summary>Supports S3 replication; main-region use also requires IsMainRegionSupported</summary>
+        public bool? IsS3Supported { get; set; }
+        /// <summary>The approximate latitude of the storage region in decimal degrees</summary>
+        public double? Latitude { get; set; }
+        /// <summary>The approximate longitude of the storage region in decimal degrees</summary>
+        public double? Longitude { get; set; }
+        /// <summary>The display name of the storage region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get; set; }
@@ -30,14 +54,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
-        /// <summary>The storage endpoint URL for this region</summary>
+        /// <summary>The standard storage price in USD per GB per month, before discounts</summary>
+        public decimal? PricePerGigabyte { get; set; }
+        /// <summary>The S3 API endpoint, or null when S3 compatibility is not supported or the region cannot be selected as the main region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? S3Endpoint { get; set; }
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string S3Endpoint { get; set; }
 #endif
+        /// <summary>The storage tier: 0 for Standard (HDD), 1 for Edge (SSD)</summary>
+        public int? Tier { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageRegionModel"/> and sets the default values.
         /// </summary>
@@ -63,9 +91,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "Id", n => { Id = n.GetStringValue(); } },
+                { "Code", n => { Code = n.GetStringValue(); } },
+                { "Continent", n => { Continent = n.GetStringValue(); } },
+                { "Endpoint", n => { Endpoint = n.GetStringValue(); } },
+                { "IsMainRegionSupported", n => { IsMainRegionSupported = n.GetBoolValue(); } },
+                { "IsS3Supported", n => { IsS3Supported = n.GetBoolValue(); } },
+                { "Latitude", n => { Latitude = n.GetDoubleValue(); } },
+                { "Longitude", n => { Longitude = n.GetDoubleValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "Url", n => { Url = n.GetStringValue(); } },
+                { "PricePerGigabyte", n => { PricePerGigabyte = n.GetDecimalValue(); } },
+                { "S3Endpoint", n => { S3Endpoint = n.GetStringValue(); } },
+                { "Tier", n => { Tier = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +111,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("Id", Id);
+            writer.WriteStringValue("Code", Code);
+            writer.WriteStringValue("Continent", Continent);
+            writer.WriteStringValue("Endpoint", Endpoint);
+            writer.WriteBoolValue("IsMainRegionSupported", IsMainRegionSupported);
+            writer.WriteBoolValue("IsS3Supported", IsS3Supported);
+            writer.WriteDoubleValue("Latitude", Latitude);
+            writer.WriteDoubleValue("Longitude", Longitude);
             writer.WriteStringValue("Name", Name);
-            writer.WriteStringValue("Url", Url);
+            writer.WriteDecimalValue("PricePerGigabyte", PricePerGigabyte);
+            writer.WriteStringValue("S3Endpoint", S3Endpoint);
+            writer.WriteIntValue("Tier", Tier);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
