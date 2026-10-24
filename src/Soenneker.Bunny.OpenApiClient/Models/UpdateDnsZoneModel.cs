@@ -15,23 +15,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sets the certificate private key type for wildcard certificates for this zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelCertificateKeyType? CertificateKeyType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelCertificateKeyType CertificateKeyType { get; set; }
-#endif
+        public int? CertificateKeyType { get; set; }
         /// <summary>The CustomNameserversEnabled property</summary>
         public bool? CustomNameserversEnabled { get; set; }
         /// <summary>Gets the log anonymization type for this zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelLogAnonymizationType? LogAnonymizationType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelLogAnonymizationType LogAnonymizationType { get; set; }
-#endif
+        public int? LogAnonymizationType { get; set; }
         /// <summary>The LoggingEnabled property</summary>
         public bool? LoggingEnabled { get; set; }
         /// <summary>Determines if the log anonoymization should be enabled</summary>
@@ -85,9 +73,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CertificateKeyType", n => { CertificateKeyType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelCertificateKeyType>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelCertificateKeyType.CreateFromDiscriminatorValue); } },
+                { "CertificateKeyType", n => { CertificateKeyType = n.GetIntValue(); } },
                 { "CustomNameserversEnabled", n => { CustomNameserversEnabled = n.GetBoolValue(); } },
-                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelLogAnonymizationType>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelLogAnonymizationType.CreateFromDiscriminatorValue); } },
+                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
                 { "LoggingEnabled", n => { LoggingEnabled = n.GetBoolValue(); } },
                 { "LoggingIPAnonymizationEnabled", n => { LoggingIPAnonymizationEnabled = n.GetBoolValue(); } },
                 { "Nameserver1", n => { Nameserver1 = n.GetStringValue(); } },
@@ -102,9 +90,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelCertificateKeyType>("CertificateKeyType", CertificateKeyType);
+            writer.WriteIntValue("CertificateKeyType", CertificateKeyType);
             writer.WriteBoolValue("CustomNameserversEnabled", CustomNameserversEnabled);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateDnsZoneModelLogAnonymizationType>("LogAnonymizationType", LogAnonymizationType);
+            writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);
             writer.WriteBoolValue("LoggingEnabled", LoggingEnabled);
             writer.WriteBoolValue("LoggingIPAnonymizationEnabled", LoggingIPAnonymizationEnabled);
             writer.WriteStringValue("Nameserver1", Nameserver1);

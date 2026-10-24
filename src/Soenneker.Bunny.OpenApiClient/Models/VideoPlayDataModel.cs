@@ -123,13 +123,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string PlayerKeyColor { get; set; }
 #endif
         /// <summary>Preferred playback source for the current video state.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource? PreferredPlaybackSource { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource PreferredPlaybackSource { get; set; }
-#endif
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource? PreferredPlaybackSource { get; set; }
         /// <summary>CDN URL of the video&apos;s animated preview (scrub thumbnail).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -262,7 +256,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "originalUrl", n => { OriginalUrl = n.GetStringValue(); } },
                 { "playbackSpeeds", n => { PlaybackSpeeds = n.GetStringValue(); } },
                 { "playerKeyColor", n => { PlayerKeyColor = n.GetStringValue(); } },
-                { "preferredPlaybackSource", n => { PreferredPlaybackSource = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource>(global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource.CreateFromDiscriminatorValue); } },
+                { "preferredPlaybackSource", n => { PreferredPlaybackSource = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource>(); } },
                 { "previewUrl", n => { PreviewUrl = n.GetStringValue(); } },
                 { "pullZoneId", n => { PullZoneId = n.GetLongValue(); } },
                 { "rememberPlayerPosition", n => { RememberPlayerPosition = n.GetBoolValue(); } },
@@ -309,7 +303,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("originalUrl", OriginalUrl);
             writer.WriteStringValue("playbackSpeeds", PlaybackSpeeds);
             writer.WriteStringValue("playerKeyColor", PlayerKeyColor);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlaybackSource>("preferredPlaybackSource", PreferredPlaybackSource);
+            writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource>("preferredPlaybackSource", PreferredPlaybackSource);
             writer.WriteStringValue("previewUrl", PreviewUrl);
             writer.WriteLongValue("pullZoneId", PullZoneId);
             writer.WriteBoolValue("rememberPlayerPosition", RememberPlayerPosition);

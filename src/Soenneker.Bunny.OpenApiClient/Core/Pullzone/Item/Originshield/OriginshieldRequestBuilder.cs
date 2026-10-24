@@ -10,7 +10,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Originshield
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\originshield
+    /// Builds and executes requests for operations under \core\pullzone\{id}\originshield
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OriginshieldRequestBuilder : BaseRequestBuilder
@@ -25,7 +25,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Originshield
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OriginshieldRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/originshield", pathParameters)
+        public OriginshieldRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/originshield", pathParameters)
         {
         }
         /// <summary>
@@ -33,7 +33,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Originshield
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OriginshieldRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/originshield", rawUrl)
+        public OriginshieldRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/originshield", rawUrl)
         {
         }
     }

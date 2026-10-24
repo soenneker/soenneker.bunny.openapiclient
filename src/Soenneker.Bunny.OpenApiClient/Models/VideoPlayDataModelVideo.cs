@@ -136,21 +136,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus SmartGenerateFeaturesStatus { get; set; }
 #endif
         /// <summary>Aggregate smart generate status derived from per-feature statuses when present: InProgress, then Queued, then Failed, then Finished; otherwise the stored legacy value. See SmartGenerateFeaturesStatus.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? SmartGenerateStatus { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus SmartGenerateStatus { get; set; }
-#endif
+        public int? SmartGenerateStatus { get; set; }
         /// <summary>The status of the video. See VideoModelStatus.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus? Status { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus Status { get; set; }
-#endif
+        public int? Status { get; set; }
         /// <summary>Total storage used by this video, in bytes.</summary>
         public long? StorageSize { get; set; }
         /// <summary>Thumbnail blurhash to show while the actual thumbnail is being loaded</summary>
@@ -252,8 +240,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "outputCodecs", n => { OutputCodecs = n.GetStringValue(); } },
                 { "rotation", n => { Rotation = n.GetIntValue(); } },
                 { "smartGenerateFeaturesStatus", n => { SmartGenerateFeaturesStatus = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus>(global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus.CreateFromDiscriminatorValue); } },
-                { "smartGenerateStatus", n => { SmartGenerateStatus = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus>(global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus.CreateFromDiscriminatorValue); } },
+                { "smartGenerateStatus", n => { SmartGenerateStatus = n.GetIntValue(); } },
+                { "status", n => { Status = n.GetIntValue(); } },
                 { "storageSize", n => { StorageSize = n.GetLongValue(); } },
                 { "thumbnailBlurhash", n => { ThumbnailBlurhash = n.GetStringValue(); } },
                 { "thumbnailCount", n => { ThumbnailCount = n.GetIntValue(); } },
@@ -298,8 +286,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("outputCodecs", OutputCodecs);
             writer.WriteIntValue("rotation", Rotation);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus>("smartGenerateFeaturesStatus", SmartGenerateFeaturesStatus);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("smartGenerateStatus", SmartGenerateStatus);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelStatus>("status", Status);
+            writer.WriteIntValue("smartGenerateStatus", SmartGenerateStatus);
+            writer.WriteIntValue("status", Status);
             writer.WriteLongValue("storageSize", StorageSize);
             writer.WriteStringValue("thumbnailBlurhash", ThumbnailBlurhash);
             writer.WriteIntValue("thumbnailCount", ThumbnailCount);

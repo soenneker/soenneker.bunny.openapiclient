@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.RemoveBlockedIp
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\removeBlockedIp
+    /// Builds and executes requests for operations under \core\pullzone\{id}\removeBlockedIp
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RemoveBlockedIpRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.RemoveBlockedIp
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveBlockedIpRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/removeBlockedIp", pathParameters)
+        public RemoveBlockedIpRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/removeBlockedIp", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.RemoveBlockedIp
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RemoveBlockedIpRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/removeBlockedIp", rawUrl)
+        public RemoveBlockedIpRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/removeBlockedIp", rawUrl)
         {
         }
         /// <summary>

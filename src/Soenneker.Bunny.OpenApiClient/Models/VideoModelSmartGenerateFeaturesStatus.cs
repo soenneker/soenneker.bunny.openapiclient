@@ -16,37 +16,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Smart generate status for chapters, when applicable.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? Chapters { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus Chapters { get; set; }
-#endif
+        public int? Chapters { get; set; }
         /// <summary>Smart generate status for the video description, when applicable.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? Description { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus Description { get; set; }
-#endif
+        public int? Description { get; set; }
         /// <summary>Smart generate status for moments, when applicable.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? Moments { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus Moments { get; set; }
-#endif
+        public int? Moments { get; set; }
         /// <summary>Smart generate status for the video title, when applicable.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus? Title { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus Title { get; set; }
-#endif
+        public int? Title { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus"/> and sets the default values.
         /// </summary>
@@ -72,10 +48,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "chapters", n => { Chapters = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
-                { "description", n => { Description = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
-                { "moments", n => { Moments = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
-                { "title", n => { Title = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>(global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus.CreateFromDiscriminatorValue); } },
+                { "chapters", n => { Chapters = n.GetIntValue(); } },
+                { "description", n => { Description = n.GetIntValue(); } },
+                { "moments", n => { Moments = n.GetIntValue(); } },
+                { "title", n => { Title = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -85,10 +61,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("chapters", Chapters);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("description", Description);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("moments", Moments);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SmartGenerateStatus>("title", Title);
+            writer.WriteIntValue("chapters", Chapters);
+            writer.WriteIntValue("description", Description);
+            writer.WriteIntValue("moments", Moments);
+            writer.WriteIntValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

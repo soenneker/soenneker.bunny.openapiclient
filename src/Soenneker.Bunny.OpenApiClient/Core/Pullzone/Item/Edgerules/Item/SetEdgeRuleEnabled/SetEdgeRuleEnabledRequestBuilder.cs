@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Edgerules.Item.SetEdgeRuleEnabled
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\edgerules\{edgeRuleId}\setEdgeRuleEnabled
+    /// Builds and executes requests for operations under \core\pullzone\{id}\edgerules\{edgeRuleId}\setEdgeRuleEnabled
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetEdgeRuleEnabledRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Edgerules.Item.SetEdg
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetEdgeRuleEnabledRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/edgerules/{edgeRuleId}/setEdgeRuleEnabled", pathParameters)
+        public SetEdgeRuleEnabledRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/edgerules/{edgeRuleId}/setEdgeRuleEnabled", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Edgerules.Item.SetEdg
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SetEdgeRuleEnabledRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/edgerules/{edgeRuleId}/setEdgeRuleEnabled", rawUrl)
+        public SetEdgeRuleEnabledRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/edgerules/{edgeRuleId}/setEdgeRuleEnabled", rawUrl)
         {
         }
         /// <summary>

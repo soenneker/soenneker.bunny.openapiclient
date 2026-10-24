@@ -23,21 +23,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The load balancing method used for selecting origin groups</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelOriginGroupLoadBalancingMethod? OriginGroupLoadBalancingMethod { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelOriginGroupLoadBalancingMethod OriginGroupLoadBalancingMethod { get; set; }
-#endif
+        public int? OriginGroupLoadBalancingMethod { get; set; }
         /// <summary>The sticky session type to use for persisting client to an origin</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelStickySessionType? StickySessionType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelStickySessionType StickySessionType { get; set; }
-#endif
+        public int? StickySessionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModel"/> and sets the default values.
         /// </summary>
@@ -64,8 +52,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "OriginGroupLoadBalancingMethod", n => { OriginGroupLoadBalancingMethod = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelOriginGroupLoadBalancingMethod>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelOriginGroupLoadBalancingMethod.CreateFromDiscriminatorValue); } },
-                { "StickySessionType", n => { StickySessionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelStickySessionType>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelStickySessionType.CreateFromDiscriminatorValue); } },
+                { "OriginGroupLoadBalancingMethod", n => { OriginGroupLoadBalancingMethod = n.GetIntValue(); } },
+                { "StickySessionType", n => { StickySessionType = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -76,8 +64,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelOriginGroupLoadBalancingMethod>("OriginGroupLoadBalancingMethod", OriginGroupLoadBalancingMethod);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerSettingsModelStickySessionType>("StickySessionType", StickySessionType);
+            writer.WriteIntValue("OriginGroupLoadBalancingMethod", OriginGroupLoadBalancingMethod);
+            writer.WriteIntValue("StickySessionType", StickySessionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

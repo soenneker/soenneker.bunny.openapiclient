@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.AddCertificate
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\addCertificate
+    /// Builds and executes requests for operations under \core\pullzone\{id}\addCertificate
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AddCertificateRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.AddCertificate
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddCertificateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/addCertificate", pathParameters)
+        public AddCertificateRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/addCertificate", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.AddCertificate
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public AddCertificateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/addCertificate", rawUrl)
+        public AddCertificateRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/addCertificate", rawUrl)
         {
         }
         /// <summary>

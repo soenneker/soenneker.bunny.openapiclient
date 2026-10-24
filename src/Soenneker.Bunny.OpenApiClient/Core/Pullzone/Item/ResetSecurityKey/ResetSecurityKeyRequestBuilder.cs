@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.ResetSecurityKey
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\resetSecurityKey
+    /// Builds and executes requests for operations under \core\pullzone\{id}\resetSecurityKey
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResetSecurityKeyRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.ResetSecurityKey
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResetSecurityKeyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/resetSecurityKey", pathParameters)
+        public ResetSecurityKeyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/resetSecurityKey", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.ResetSecurityKey
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResetSecurityKeyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/resetSecurityKey", rawUrl)
+        public ResetSecurityKeyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/resetSecurityKey", rawUrl)
         {
         }
         /// <summary>

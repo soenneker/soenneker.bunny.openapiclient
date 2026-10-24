@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Originshield.Queuestatistics
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\originshield\queuestatistics
+    /// Builds and executes requests for operations under \core\pullzone\{id}\originshield\queuestatistics
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class QueuestatisticsRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Originshield.Queuesta
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public QueuestatisticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/originshield/queuestatistics{?dateFrom*,dateTo*,hourly*}", pathParameters)
+        public QueuestatisticsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/originshield/queuestatistics{?dateFrom*,dateTo*,hourly*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Originshield.Queuesta
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public QueuestatisticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/originshield/queuestatistics{?dateFrom*,dateTo*,hourly*}", rawUrl)
+        public QueuestatisticsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/originshield/queuestatistics{?dateFrom*,dateTo*,hourly*}", rawUrl)
         {
         }
         /// <summary>

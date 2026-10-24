@@ -37,13 +37,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The load balancing method used for selecting origins within the group</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginGroupCreateModelOriginLoadBalancingMethod? OriginLoadBalancingMethod { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginGroupCreateModelOriginLoadBalancingMethod OriginLoadBalancingMethod { get; set; }
-#endif
+        public int? OriginLoadBalancingMethod { get; set; }
         /// <summary>The priority of the origin group used for failover load balancing</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +84,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Latitude", n => { Latitude = n.GetDoubleValue(); } },
                 { "Longitude", n => { Longitude = n.GetDoubleValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "OriginLoadBalancingMethod", n => { OriginLoadBalancingMethod = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginGroupCreateModelOriginLoadBalancingMethod>(global::Soenneker.Bunny.OpenApiClient.Models.OriginGroupCreateModelOriginLoadBalancingMethod.CreateFromDiscriminatorValue); } },
+                { "OriginLoadBalancingMethod", n => { OriginLoadBalancingMethod = n.GetIntValue(); } },
                 { "Priority", n => { Priority = n.GetByteArrayValue(); } },
                 { "Weight", n => { Weight = n.GetByteArrayValue(); } },
             };
@@ -107,7 +101,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("Latitude", Latitude);
             writer.WriteDoubleValue("Longitude", Longitude);
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OriginGroupCreateModelOriginLoadBalancingMethod>("OriginLoadBalancingMethod", OriginLoadBalancingMethod);
+            writer.WriteIntValue("OriginLoadBalancingMethod", OriginLoadBalancingMethod);
             writer.WriteByteArrayValue("Priority", Priority);
             writer.WriteByteArrayValue("Weight", Weight);
             writer.WriteAdditionalData(AdditionalData);

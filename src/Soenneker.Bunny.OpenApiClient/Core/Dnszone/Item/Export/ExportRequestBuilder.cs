@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Export
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\dnszone\{-id}\export
+    /// Builds and executes requests for operations under \core\dnszone\{id}\export
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ExportRequestBuilder : BaseRequestBuilder
@@ -21,7 +21,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Export
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/export", pathParameters)
+        public ExportRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{id}/export", pathParameters)
         {
         }
         /// <summary>
@@ -29,7 +29,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Export
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ExportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/export", rawUrl)
+        public ExportRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{id}/export", rawUrl)
         {
         }
         /// <returns>A <see cref="Stream"/></returns>

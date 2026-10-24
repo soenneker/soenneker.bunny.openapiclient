@@ -35,13 +35,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type of origin to connect to. Magic Container origins must be CDN endpoints; Anycast endpoints are not supported, use a Standard origin for those</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelOriginType? OriginType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelOriginType OriginType { get; set; }
-#endif
+        public int? OriginType { get; set; }
         /// <summary>Standard origin settings - required when using the Standard origin type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -89,7 +83,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
                 { "MagicContainersOrigin", n => { MagicContainersOrigin = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin.CreateFromDiscriminatorValue); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "OriginType", n => { OriginType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelOriginType>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelOriginType.CreateFromDiscriminatorValue); } },
+                { "OriginType", n => { OriginType = n.GetIntValue(); } },
                 { "StandardOrigin", n => { StandardOrigin = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin.CreateFromDiscriminatorValue); } },
                 { "StorageZoneId", n => { StorageZoneId = n.GetLongValue(); } },
                 { "Weight", n => { Weight = n.GetByteArrayValue(); } },
@@ -106,7 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("Enabled", Enabled);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin>("MagicContainersOrigin", MagicContainersOrigin);
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelOriginType>("OriginType", OriginType);
+            writer.WriteIntValue("OriginType", OriginType);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin>("StandardOrigin", StandardOrigin);
             writer.WriteLongValue("StorageZoneId", StorageZoneId);
             writer.WriteByteArrayValue("Weight", Weight);

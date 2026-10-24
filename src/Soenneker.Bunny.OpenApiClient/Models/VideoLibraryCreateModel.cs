@@ -43,13 +43,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>(Optional) Determines if automatic transcribing title generation is enabled for this library. Enabling any smart generation feature turns on transcribing automatically.</summary>
         public bool? EnableTranscribingTitleGeneration { get; set; }
         /// <summary>(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier? EncodingTier { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier EncodingTier { get; set; }
-#endif
+        public int? EncodingTier { get; set; }
         /// <summary>(Optional) Determines whether JIT encoding should be used for the library. Supported in premium encoding only.</summary>
         public bool? JitEncodingEnabled { get; set; }
         /// <summary>(Optional) Determines if the original file should be kept after the video is processed.</summary>
@@ -124,7 +118,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "EnableTranscribingMomentsGeneration", n => { EnableTranscribingMomentsGeneration = n.GetBoolValue(); } },
                 { "EnableTranscribingTitleGeneration", n => { EnableTranscribingTitleGeneration = n.GetBoolValue(); } },
                 { "EnabledResolutions", n => { EnabledResolutions = n.GetStringValue(); } },
-                { "EncodingTier", n => { EncodingTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier.CreateFromDiscriminatorValue); } },
+                { "EncodingTier", n => { EncodingTier = n.GetIntValue(); } },
                 { "JitEncodingEnabled", n => { JitEncodingEnabled = n.GetBoolValue(); } },
                 { "KeepOriginalFiles", n => { KeepOriginalFiles = n.GetBoolValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
@@ -152,7 +146,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("EnableTranscribingDescriptionGeneration", EnableTranscribingDescriptionGeneration);
             writer.WriteBoolValue("EnableTranscribingMomentsGeneration", EnableTranscribingMomentsGeneration);
             writer.WriteBoolValue("EnableTranscribingTitleGeneration", EnableTranscribingTitleGeneration);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModelEncodingTier>("EncodingTier", EncodingTier);
+            writer.WriteIntValue("EncodingTier", EncodingTier);
             writer.WriteBoolValue("JitEncodingEnabled", JitEncodingEnabled);
             writer.WriteBoolValue("KeepOriginalFiles", KeepOriginalFiles);
             writer.WriteStringValue("Name", Name);

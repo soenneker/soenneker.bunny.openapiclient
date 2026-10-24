@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.Storage.Item
     public partial class WithStorageZoneNameItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.storage.item.item collection</summary>
-        /// <param name="position">The directory path that you want to list.</param>
+        /// <param name="position">The directory path to your file. If this is the root of your storage zone, you can ignore this parameter.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathItemRequestBuilder"/></returns>
         public global::Soenneker.Bunny.OpenApiClient.Storage.Item.Item.WithPathItemRequestBuilder this[string position]
         {

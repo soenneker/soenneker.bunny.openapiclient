@@ -14,7 +14,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\dnszone\{-id}\records
+    /// Builds and executes requests for operations under \core\dnszone\{id}\records
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RecordsRequestBuilder : BaseRequestBuilder
@@ -32,7 +32,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("id", position);
+                urlTplParams.Add("id2", position);
                 return new global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records.Item.RecordsItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
@@ -41,7 +41,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*,search*,type*}", pathParameters)
+        public RecordsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{id}/records{?page*,perPage*,search*,type*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RecordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{%2Did}/records{?page*,perPage*,search*,type*}", rawUrl)
+        public RecordsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/dnszone/{id}/records{?page*,perPage*,search*,type*}", rawUrl)
         {
         }
         /// <summary>
@@ -178,15 +178,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
             #pragma warning restore CS1591
 #endif
             /// <summary>The type of DNS Record</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
             [QueryParameter("type")]
-            public string? Type { get; set; }
-#nullable restore
-#else
-            [QueryParameter("type")]
-            public string Type { get; set; }
-#endif
+            public int? Type { get; set; }
         }
     }
 }

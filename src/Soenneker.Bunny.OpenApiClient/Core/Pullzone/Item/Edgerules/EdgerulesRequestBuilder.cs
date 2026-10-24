@@ -11,7 +11,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Edgerules
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\pullzone\{-id}\edgerules
+    /// Builds and executes requests for operations under \core\pullzone\{id}\edgerules
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EdgerulesRequestBuilder : BaseRequestBuilder
@@ -38,7 +38,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Edgerules
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EdgerulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/edgerules", pathParameters)
+        public EdgerulesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/edgerules", pathParameters)
         {
         }
         /// <summary>
@@ -46,7 +46,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.Edgerules
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public EdgerulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{%2Did}/edgerules", rawUrl)
+        public EdgerulesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/pullzone/{id}/edgerules", rawUrl)
         {
         }
     }

@@ -26,10 +26,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The full request context for the event (JSON object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty? Log { get; set; }
+        public UntypedNode? Log { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty Log { get; set; }
+        public UntypedNode Log { get; set; }
 #endif
         /// <summary>Unique event identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2.CreateFromDiscriminatorValue); } },
-                { "log", n => { Log = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty.CreateFromDiscriminatorValue); } },
+                { "log", n => { Log = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "logId", n => { LogId = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
             };
@@ -80,7 +80,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2>("fields", Fields);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowLogProperty>("log", Log);
+            writer.WriteObjectValue<UntypedNode>("log", Log);
             writer.WriteStringValue("logId", LogId);
             writer.WriteLongValue("timestamp", Timestamp);
             writer.WriteAdditionalData(AdditionalData);

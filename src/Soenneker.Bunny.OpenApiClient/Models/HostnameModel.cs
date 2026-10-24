@@ -31,21 +31,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string CertificateKey { get; set; }
 #endif
         /// <summary>The private key type to use for automatic certificates</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType? CertificateKeyType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType CertificateKeyType { get; set; }
-#endif
+        public int? CertificateKeyType { get; set; }
         /// <summary>The provisioned certificate type</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType? CertificateProvisionType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType CertificateProvisionType { get; set; }
-#endif
+        public int? CertificateProvisionType { get; set; }
         /// <summary>Determines if the Force SSL feature is enabled</summary>
         public bool? ForceSSL { get; set; }
         /// <summary>Determines if the hostname has an SSL certificate configured</summary>
@@ -91,8 +79,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "Certificate", n => { Certificate = n.GetStringValue(); } },
                 { "CertificateKey", n => { CertificateKey = n.GetStringValue(); } },
-                { "CertificateKeyType", n => { CertificateKeyType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType>(global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType.CreateFromDiscriminatorValue); } },
-                { "CertificateProvisionType", n => { CertificateProvisionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType>(global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType.CreateFromDiscriminatorValue); } },
+                { "CertificateKeyType", n => { CertificateKeyType = n.GetIntValue(); } },
+                { "CertificateProvisionType", n => { CertificateProvisionType = n.GetIntValue(); } },
                 { "ForceSSL", n => { ForceSSL = n.GetBoolValue(); } },
                 { "HasCertificate", n => { HasCertificate = n.GetBoolValue(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
@@ -110,8 +98,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Certificate", Certificate);
             writer.WriteStringValue("CertificateKey", CertificateKey);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateKeyType>("CertificateKeyType", CertificateKeyType);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModelCertificateProvisionType>("CertificateProvisionType", CertificateProvisionType);
+            writer.WriteIntValue("CertificateKeyType", CertificateKeyType);
+            writer.WriteIntValue("CertificateProvisionType", CertificateProvisionType);
             writer.WriteBoolValue("ForceSSL", ForceSSL);
             writer.WriteBoolValue("HasCertificate", HasCertificate);
             writer.WriteLongValue("Id", Id);

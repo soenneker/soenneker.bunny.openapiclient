@@ -105,13 +105,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The total amount of storage used by this zone</summary>
         public long? StorageUsed { get; set; }
         /// <summary>The Storage Zone S3 support type</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelStorageZoneType? StorageZoneType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelStorageZoneType StorageZoneType { get; set; }
-#endif
+        public int? StorageZoneType { get; set; }
         /// <summary>The ID of the user that owns the storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,13 +115,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string UserId { get; set; }
 #endif
         /// <summary>Determines the storage zone tier that is storing the data</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelZoneTier? ZoneTier { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelZoneTier ZoneTier { get; set; }
-#endif
+        public int? ZoneTier { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModel"/> and sets the default values.
         /// </summary>
@@ -171,9 +159,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "S3Hostname", n => { S3Hostname = n.GetStringValue(); } },
                 { "StorageHostname", n => { StorageHostname = n.GetStringValue(); } },
                 { "StorageUsed", n => { StorageUsed = n.GetLongValue(); } },
-                { "StorageZoneType", n => { StorageZoneType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelStorageZoneType>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelStorageZoneType.CreateFromDiscriminatorValue); } },
+                { "StorageZoneType", n => { StorageZoneType = n.GetIntValue(); } },
                 { "UserId", n => { UserId = n.GetStringValue(); } },
-                { "ZoneTier", n => { ZoneTier = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelZoneTier>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelZoneTier.CreateFromDiscriminatorValue); } },
+                { "ZoneTier", n => { ZoneTier = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -201,9 +189,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("S3Hostname", S3Hostname);
             writer.WriteStringValue("StorageHostname", StorageHostname);
             writer.WriteLongValue("StorageUsed", StorageUsed);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelStorageZoneType>("StorageZoneType", StorageZoneType);
+            writer.WriteIntValue("StorageZoneType", StorageZoneType);
             writer.WriteStringValue("UserId", UserId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelZoneTier>("ZoneTier", ZoneTier);
+            writer.WriteIntValue("ZoneTier", ZoneTier);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

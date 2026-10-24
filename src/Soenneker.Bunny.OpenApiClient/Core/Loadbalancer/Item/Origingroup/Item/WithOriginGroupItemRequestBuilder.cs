@@ -13,10 +13,10 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\loadbalancer\{loadBalancerId}\origingroup\{-id}
+    /// Builds and executes requests for operations under \core\loadbalancer\{loadBalancerId}\origingroup\{originGroupId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class ItemRequestBuilder : BaseRequestBuilder
+    public partial class WithOriginGroupItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The origin property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.Origin.OriginRequestBuilder Origin
@@ -24,19 +24,19 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item
             get => new global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.Origin.OriginRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{%2Did}", pathParameters)
+        public WithOriginGroupItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{originGroupId}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{%2Did}", rawUrl)
+        public WithOriginGroupItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{originGroupId}", rawUrl)
         {
         }
         /// <summary>
@@ -132,11 +132,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

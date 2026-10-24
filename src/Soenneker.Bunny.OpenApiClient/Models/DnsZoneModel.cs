@@ -15,13 +15,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The private key type to use for automatic certificates</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelCertificateKeyType? CertificateKeyType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelCertificateKeyType CertificateKeyType { get; set; }
-#endif
+        public int? CertificateKeyType { get; set; }
         /// <summary>The CustomNameserversEnabled property</summary>
         public bool? CustomNameserversEnabled { get; set; }
         /// <summary>The DateCreated property</summary>
@@ -41,13 +35,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Id property</summary>
         public long? Id { get; set; }
         /// <summary>Sets the log anonymization type for this zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelLogAnonymizationType? LogAnonymizationType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelLogAnonymizationType LogAnonymizationType { get; set; }
-#endif
+        public int? LogAnonymizationType { get; set; }
         /// <summary>The LoggingEnabled property</summary>
         public bool? LoggingEnabled { get; set; }
         /// <summary>Determines if the TLS 1 is enabled on the DNS Zone</summary>
@@ -113,14 +101,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "CertificateKeyType", n => { CertificateKeyType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelCertificateKeyType>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelCertificateKeyType.CreateFromDiscriminatorValue); } },
+                { "CertificateKeyType", n => { CertificateKeyType = n.GetIntValue(); } },
                 { "CustomNameserversEnabled", n => { CustomNameserversEnabled = n.GetBoolValue(); } },
                 { "DateCreated", n => { DateCreated = n.GetDateTimeOffsetValue(); } },
                 { "DateModified", n => { DateModified = n.GetDateTimeOffsetValue(); } },
                 { "DnsSecEnabled", n => { DnsSecEnabled = n.GetBoolValue(); } },
                 { "Domain", n => { Domain = n.GetStringValue(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
-                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelLogAnonymizationType>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelLogAnonymizationType.CreateFromDiscriminatorValue); } },
+                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
                 { "LoggingEnabled", n => { LoggingEnabled = n.GetBoolValue(); } },
                 { "LoggingIPAnonymizationEnabled", n => { LoggingIPAnonymizationEnabled = n.GetBoolValue(); } },
                 { "Nameserver1", n => { Nameserver1 = n.GetStringValue(); } },
@@ -138,14 +126,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelCertificateKeyType>("CertificateKeyType", CertificateKeyType);
+            writer.WriteIntValue("CertificateKeyType", CertificateKeyType);
             writer.WriteBoolValue("CustomNameserversEnabled", CustomNameserversEnabled);
             writer.WriteDateTimeOffsetValue("DateCreated", DateCreated);
             writer.WriteDateTimeOffsetValue("DateModified", DateModified);
             writer.WriteBoolValue("DnsSecEnabled", DnsSecEnabled);
             writer.WriteStringValue("Domain", Domain);
             writer.WriteLongValue("Id", Id);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModelLogAnonymizationType>("LogAnonymizationType", LogAnonymizationType);
+            writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);
             writer.WriteBoolValue("LoggingEnabled", LoggingEnabled);
             writer.WriteBoolValue("LoggingIPAnonymizationEnabled", LoggingIPAnonymizationEnabled);
             writer.WriteStringValue("Nameserver1", Nameserver1);

@@ -171,13 +171,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model> EdgeRules { get; set; }
 #endif
         /// <summary>The phase of the request where the script will be executed</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelEdgeScriptExecutionPhase? EdgeScriptExecutionPhase { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelEdgeScriptExecutionPhase EdgeScriptExecutionPhase { get; set; }
-#endif
+        public int? EdgeScriptExecutionPhase { get; set; }
         /// <summary>The ID of the edge script that the pull zone is linked to</summary>
         public long? EdgeScriptId { get; set; }
         /// <summary>Determines if the CORS headers should be enabled</summary>
@@ -273,13 +267,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>True if the Pull Zone is ignoring query strings when serving cached objects</summary>
         public bool? IgnoreQueryStrings { get; set; }
         /// <summary>Address-family policy: 0=IPv4Only, 1=DualStack, 2=DualStackPreferIPv6, 3=IPv6Only.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy? IpFamilyPolicy { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy IpFamilyPolicy { get; set; }
-#endif
+        public int? IpFamilyPolicy { get; set; }
         /// <summary>The amount of data after the rate limit will be activated</summary>
         public double? LimitRateAfter { get; set; }
         /// <summary>The maximum rate at which the zone will transfer data in kb/s. 0 for unlimited</summary>
@@ -287,13 +275,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ID of the Load Balancer profile used as the origin when OriginType is LoadBalancer</summary>
         public long? LoadBalancerId { get; set; }
         /// <summary>Gets the log anonymization type for this pull zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType? LogAnonymizationType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType LogAnonymizationType { get; set; }
-#endif
+        public int? LogAnonymizationType { get; set; }
         /// <summary>0 = Plain1 = JSON</summary>
         public int? LogFormat { get; set; }
         /// <summary>Determines if the log forawrding is enabled</summary>
@@ -311,13 +293,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The log forwarding port</summary>
         public int? LogForwardingPort { get; set; }
         /// <summary>Determines the log forwarding protocol type</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogForwardingProtocol? LogForwardingProtocol { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogForwardingProtocol LogForwardingProtocol { get; set; }
-#endif
+        public int? LogForwardingProtocol { get; set; }
         /// <summary>The log forwarding token value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -389,13 +365,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Determines if the optimizer class list should be enforced</summary>
         public bool? OptimizerForceClasses { get; set; }
         /// <summary>Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown? OptimizerHtmlToMarkdown { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown OptimizerHtmlToMarkdown { get; set; }
-#endif
+        public int? OptimizerHtmlToMarkdown { get; set; }
         /// <summary>Determines the image quality for desktop clients</summary>
         public int? OptimizerImageQuality { get; set; }
         /// <summary>Determines if the llms.txt file should be served when requested</summary>
@@ -441,13 +411,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Sets the offset of the watermark image</summary>
         public double? OptimizerWatermarkOffset { get; set; }
         /// <summary>Sets the position of the watermark image</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerWatermarkPosition? OptimizerWatermarkPosition { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerWatermarkPosition OptimizerWatermarkPosition { get; set; }
-#endif
+        public int? OptimizerWatermarkPosition { get; set; }
         /// <summary>Sets the URL of the watermark image</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -503,13 +467,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string OriginShieldZoneCode { get; set; }
 #endif
         /// <summary>The type of the origin for this Pull Zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOriginType? OriginType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOriginType OriginType { get; set; }
-#endif
+        public int? OriginType { get; set; }
         /// <summary>The origin URL of the pull zone where the files are fetched from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -521,13 +479,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The IP of the storage zone used for Perma-Cache</summary>
         public long? PermaCacheStorageZoneId { get; set; }
         /// <summary>Determines Perma-Cache behavior</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPermaCacheType? PermaCacheType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPermaCacheType PermaCacheType { get; set; }
-#endif
+        public int? PermaCacheType { get; set; }
         /// <summary>The custom preloading screen code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -553,13 +505,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Determines if the preloading screen is shown on the first load from a user.</summary>
         public bool? PreloadingScreenShowOnFirstVisit { get; set; }
         /// <summary>The currently configured preloading screem theme. (0 - Light, 1 - Dark)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPreloadingScreenTheme? PreloadingScreenTheme { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPreloadingScreenTheme PreloadingScreenTheme { get; set; }
-#endif
+        public int? PreloadingScreenTheme { get; set; }
         /// <summary>The custom price override for this zone. Unit is $/Byte.</summary>
         public decimal? PriceOverride { get; set; }
         /// <summary>Contains the list of vary parameters that will be used for vary cache by query string. If empty, all parameters will be used to construct the key</summary>
@@ -605,33 +551,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string StickySessionCookieName { get; set; }
 #endif
         /// <summary>Whether to use a Sticky Session mechanism for this pull zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelStickySessionType? StickySessionType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelStickySessionType StickySessionType { get; set; }
-#endif
+        public int? StickySessionType { get; set; }
         /// <summary>The ID of the storage zone that the pull zone is linked to</summary>
         public long? StorageZoneId { get; set; }
         /// <summary>The Suspended property</summary>
         public bool? Suspended { get; set; }
         /// <summary>The minimum TLS security level enforced on the Pull Zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelTlsSecurityLevel? TlsSecurityLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelTlsSecurityLevel TlsSecurityLevel { get; set; }
-#endif
+        public int? TlsSecurityLevel { get; set; }
         /// <summary>The type of the pull zone</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelType Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>Determines if cache update is performed in the background.</summary>
         public bool? UseBackgroundUpdate { get; set; }
         /// <summary>User Id of the pull zone owner</summary>
@@ -721,7 +649,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "DnsZoneId", n => { DnsZoneId = n.GetLongValue(); } },
                 { "EUUSDiscount", n => { EUUSDiscount = n.GetIntValue(); } },
                 { "EdgeRules", n => { EdgeRules = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "EdgeScriptExecutionPhase", n => { EdgeScriptExecutionPhase = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelEdgeScriptExecutionPhase>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelEdgeScriptExecutionPhase.CreateFromDiscriminatorValue); } },
+                { "EdgeScriptExecutionPhase", n => { EdgeScriptExecutionPhase = n.GetIntValue(); } },
                 { "EdgeScriptId", n => { EdgeScriptId = n.GetLongValue(); } },
                 { "EnableAccessControlOriginHeader", n => { EnableAccessControlOriginHeader = n.GetBoolValue(); } },
                 { "EnableAutoSSL", n => { EnableAutoSSL = n.GetBoolValue(); } },
@@ -759,17 +687,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Hostnames", n => { Hostnames = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel>(global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "Id", n => { Id = n.GetLongValue(); } },
                 { "IgnoreQueryStrings", n => { IgnoreQueryStrings = n.GetBoolValue(); } },
-                { "IpFamilyPolicy", n => { IpFamilyPolicy = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy.CreateFromDiscriminatorValue); } },
+                { "IpFamilyPolicy", n => { IpFamilyPolicy = n.GetIntValue(); } },
                 { "LimitRateAfter", n => { LimitRateAfter = n.GetDoubleValue(); } },
                 { "LimitRatePerSecond", n => { LimitRatePerSecond = n.GetDoubleValue(); } },
                 { "LoadBalancerId", n => { LoadBalancerId = n.GetLongValue(); } },
-                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType.CreateFromDiscriminatorValue); } },
+                { "LogAnonymizationType", n => { LogAnonymizationType = n.GetIntValue(); } },
                 { "LogFormat", n => { LogFormat = n.GetIntValue(); } },
                 { "LogForwardingEnabled", n => { LogForwardingEnabled = n.GetBoolValue(); } },
                 { "LogForwardingFormat", n => { LogForwardingFormat = n.GetIntValue(); } },
                 { "LogForwardingHostname", n => { LogForwardingHostname = n.GetStringValue(); } },
                 { "LogForwardingPort", n => { LogForwardingPort = n.GetIntValue(); } },
-                { "LogForwardingProtocol", n => { LogForwardingProtocol = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogForwardingProtocol>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogForwardingProtocol.CreateFromDiscriminatorValue); } },
+                { "LogForwardingProtocol", n => { LogForwardingProtocol = n.GetIntValue(); } },
                 { "LogForwardingToken", n => { LogForwardingToken = n.GetStringValue(); } },
                 { "LoggingIPAnonymizationEnabled", n => { LoggingIPAnonymizationEnabled = n.GetBoolValue(); } },
                 { "LoggingSaveToStorage", n => { LoggingSaveToStorage = n.GetBoolValue(); } },
@@ -790,7 +718,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "OptimizerEnableWebP", n => { OptimizerEnableWebP = n.GetBoolValue(); } },
                 { "OptimizerEnabled", n => { OptimizerEnabled = n.GetBoolValue(); } },
                 { "OptimizerForceClasses", n => { OptimizerForceClasses = n.GetBoolValue(); } },
-                { "OptimizerHtmlToMarkdown", n => { OptimizerHtmlToMarkdown = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown.CreateFromDiscriminatorValue); } },
+                { "OptimizerHtmlToMarkdown", n => { OptimizerHtmlToMarkdown = n.GetIntValue(); } },
                 { "OptimizerImageQuality", n => { OptimizerImageQuality = n.GetIntValue(); } },
                 { "OptimizerLlmsTxt", n => { OptimizerLlmsTxt = n.GetBoolValue(); } },
                 { "OptimizerMinifyCSS", n => { OptimizerMinifyCSS = n.GetBoolValue(); } },
@@ -807,7 +735,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "OptimizerWatermarkEnabled", n => { OptimizerWatermarkEnabled = n.GetBoolValue(); } },
                 { "OptimizerWatermarkMinImageSize", n => { OptimizerWatermarkMinImageSize = n.GetIntValue(); } },
                 { "OptimizerWatermarkOffset", n => { OptimizerWatermarkOffset = n.GetDoubleValue(); } },
-                { "OptimizerWatermarkPosition", n => { OptimizerWatermarkPosition = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerWatermarkPosition>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerWatermarkPosition.CreateFromDiscriminatorValue); } },
+                { "OptimizerWatermarkPosition", n => { OptimizerWatermarkPosition = n.GetIntValue(); } },
                 { "OptimizerWatermarkUrl", n => { OptimizerWatermarkUrl = n.GetStringValue(); } },
                 { "OriginConnectTimeout", n => { OriginConnectTimeout = n.GetIntValue(); } },
                 { "OriginHostHeader", n => { OriginHostHeader = n.GetStringValue(); } },
@@ -823,17 +751,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "OriginShieldMaxQueuedRequests", n => { OriginShieldMaxQueuedRequests = n.GetIntValue(); } },
                 { "OriginShieldQueueMaxWaitTime", n => { OriginShieldQueueMaxWaitTime = n.GetIntValue(); } },
                 { "OriginShieldZoneCode", n => { OriginShieldZoneCode = n.GetStringValue(); } },
-                { "OriginType", n => { OriginType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOriginType>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOriginType.CreateFromDiscriminatorValue); } },
+                { "OriginType", n => { OriginType = n.GetIntValue(); } },
                 { "OriginUrl", n => { OriginUrl = n.GetStringValue(); } },
                 { "PermaCacheStorageZoneId", n => { PermaCacheStorageZoneId = n.GetLongValue(); } },
-                { "PermaCacheType", n => { PermaCacheType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPermaCacheType>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPermaCacheType.CreateFromDiscriminatorValue); } },
+                { "PermaCacheType", n => { PermaCacheType = n.GetIntValue(); } },
                 { "PreloadingScreenCode", n => { PreloadingScreenCode = n.GetStringValue(); } },
                 { "PreloadingScreenCodeEnabled", n => { PreloadingScreenCodeEnabled = n.GetBoolValue(); } },
                 { "PreloadingScreenDelay", n => { PreloadingScreenDelay = n.GetIntValue(); } },
                 { "PreloadingScreenEnabled", n => { PreloadingScreenEnabled = n.GetBoolValue(); } },
                 { "PreloadingScreenLogoUrl", n => { PreloadingScreenLogoUrl = n.GetStringValue(); } },
                 { "PreloadingScreenShowOnFirstVisit", n => { PreloadingScreenShowOnFirstVisit = n.GetBoolValue(); } },
-                { "PreloadingScreenTheme", n => { PreloadingScreenTheme = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPreloadingScreenTheme>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPreloadingScreenTheme.CreateFromDiscriminatorValue); } },
+                { "PreloadingScreenTheme", n => { PreloadingScreenTheme = n.GetIntValue(); } },
                 { "PriceOverride", n => { PriceOverride = n.GetDecimalValue(); } },
                 { "QueryStringVaryParameters", n => { QueryStringVaryParameters = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "RequestCoalescingTimeout", n => { RequestCoalescingTimeout = n.GetIntValue(); } },
@@ -844,11 +772,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "SouthAmericaDiscount", n => { SouthAmericaDiscount = n.GetIntValue(); } },
                 { "StickySessionClientHeaders", n => { StickySessionClientHeaders = n.GetStringValue(); } },
                 { "StickySessionCookieName", n => { StickySessionCookieName = n.GetStringValue(); } },
-                { "StickySessionType", n => { StickySessionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelStickySessionType>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelStickySessionType.CreateFromDiscriminatorValue); } },
+                { "StickySessionType", n => { StickySessionType = n.GetIntValue(); } },
                 { "StorageZoneId", n => { StorageZoneId = n.GetLongValue(); } },
                 { "Suspended", n => { Suspended = n.GetBoolValue(); } },
-                { "TlsSecurityLevel", n => { TlsSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelTlsSecurityLevel>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelTlsSecurityLevel.CreateFromDiscriminatorValue); } },
-                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelType>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelType.CreateFromDiscriminatorValue); } },
+                { "TlsSecurityLevel", n => { TlsSecurityLevel = n.GetIntValue(); } },
+                { "Type", n => { Type = n.GetIntValue(); } },
                 { "UseBackgroundUpdate", n => { UseBackgroundUpdate = n.GetBoolValue(); } },
                 { "UseStaleWhileOffline", n => { UseStaleWhileOffline = n.GetBoolValue(); } },
                 { "UseStaleWhileUpdating", n => { UseStaleWhileUpdating = n.GetBoolValue(); } },
@@ -900,7 +828,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("DnsRecordValue", DnsRecordValue);
             writer.WriteLongValue("DnsZoneId", DnsZoneId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model>("EdgeRules", EdgeRules);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelEdgeScriptExecutionPhase>("EdgeScriptExecutionPhase", EdgeScriptExecutionPhase);
+            writer.WriteIntValue("EdgeScriptExecutionPhase", EdgeScriptExecutionPhase);
             writer.WriteLongValue("EdgeScriptId", EdgeScriptId);
             writer.WriteBoolValue("EnableAccessControlOriginHeader", EnableAccessControlOriginHeader);
             writer.WriteBoolValue("EnableAutoSSL", EnableAutoSSL);
@@ -939,17 +867,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel>("Hostnames", Hostnames);
             writer.WriteLongValue("Id", Id);
             writer.WriteBoolValue("IgnoreQueryStrings", IgnoreQueryStrings);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelIpFamilyPolicy>("IpFamilyPolicy", IpFamilyPolicy);
+            writer.WriteIntValue("IpFamilyPolicy", IpFamilyPolicy);
             writer.WriteDoubleValue("LimitRateAfter", LimitRateAfter);
             writer.WriteDoubleValue("LimitRatePerSecond", LimitRatePerSecond);
             writer.WriteLongValue("LoadBalancerId", LoadBalancerId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogAnonymizationType>("LogAnonymizationType", LogAnonymizationType);
+            writer.WriteIntValue("LogAnonymizationType", LogAnonymizationType);
             writer.WriteIntValue("LogFormat", LogFormat);
             writer.WriteBoolValue("LogForwardingEnabled", LogForwardingEnabled);
             writer.WriteIntValue("LogForwardingFormat", LogForwardingFormat);
             writer.WriteStringValue("LogForwardingHostname", LogForwardingHostname);
             writer.WriteIntValue("LogForwardingPort", LogForwardingPort);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelLogForwardingProtocol>("LogForwardingProtocol", LogForwardingProtocol);
+            writer.WriteIntValue("LogForwardingProtocol", LogForwardingProtocol);
             writer.WriteStringValue("LogForwardingToken", LogForwardingToken);
             writer.WriteBoolValue("LoggingIPAnonymizationEnabled", LoggingIPAnonymizationEnabled);
             writer.WriteBoolValue("LoggingSaveToStorage", LoggingSaveToStorage);
@@ -970,7 +898,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("OptimizerEnableUpscaling", OptimizerEnableUpscaling);
             writer.WriteBoolValue("OptimizerEnableWebP", OptimizerEnableWebP);
             writer.WriteBoolValue("OptimizerForceClasses", OptimizerForceClasses);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerHtmlToMarkdown>("OptimizerHtmlToMarkdown", OptimizerHtmlToMarkdown);
+            writer.WriteIntValue("OptimizerHtmlToMarkdown", OptimizerHtmlToMarkdown);
             writer.WriteIntValue("OptimizerImageQuality", OptimizerImageQuality);
             writer.WriteBoolValue("OptimizerLlmsTxt", OptimizerLlmsTxt);
             writer.WriteBoolValue("OptimizerMinifyCSS", OptimizerMinifyCSS);
@@ -987,7 +915,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("OptimizerWatermarkEnabled", OptimizerWatermarkEnabled);
             writer.WriteIntValue("OptimizerWatermarkMinImageSize", OptimizerWatermarkMinImageSize);
             writer.WriteDoubleValue("OptimizerWatermarkOffset", OptimizerWatermarkOffset);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOptimizerWatermarkPosition>("OptimizerWatermarkPosition", OptimizerWatermarkPosition);
+            writer.WriteIntValue("OptimizerWatermarkPosition", OptimizerWatermarkPosition);
             writer.WriteStringValue("OptimizerWatermarkUrl", OptimizerWatermarkUrl);
             writer.WriteIntValue("OriginConnectTimeout", OriginConnectTimeout);
             writer.WriteStringValue("OriginHostHeader", OriginHostHeader);
@@ -1003,17 +931,17 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("OriginShieldMaxQueuedRequests", OriginShieldMaxQueuedRequests);
             writer.WriteIntValue("OriginShieldQueueMaxWaitTime", OriginShieldQueueMaxWaitTime);
             writer.WriteStringValue("OriginShieldZoneCode", OriginShieldZoneCode);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelOriginType>("OriginType", OriginType);
+            writer.WriteIntValue("OriginType", OriginType);
             writer.WriteStringValue("OriginUrl", OriginUrl);
             writer.WriteLongValue("PermaCacheStorageZoneId", PermaCacheStorageZoneId);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPermaCacheType>("PermaCacheType", PermaCacheType);
+            writer.WriteIntValue("PermaCacheType", PermaCacheType);
             writer.WriteStringValue("PreloadingScreenCode", PreloadingScreenCode);
             writer.WriteBoolValue("PreloadingScreenCodeEnabled", PreloadingScreenCodeEnabled);
             writer.WriteIntValue("PreloadingScreenDelay", PreloadingScreenDelay);
             writer.WriteBoolValue("PreloadingScreenEnabled", PreloadingScreenEnabled);
             writer.WriteStringValue("PreloadingScreenLogoUrl", PreloadingScreenLogoUrl);
             writer.WriteBoolValue("PreloadingScreenShowOnFirstVisit", PreloadingScreenShowOnFirstVisit);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelPreloadingScreenTheme>("PreloadingScreenTheme", PreloadingScreenTheme);
+            writer.WriteIntValue("PreloadingScreenTheme", PreloadingScreenTheme);
             writer.WriteDecimalValue("PriceOverride", PriceOverride);
             writer.WriteCollectionOfPrimitiveValues<string>("QueryStringVaryParameters", QueryStringVaryParameters);
             writer.WriteIntValue("RequestCoalescingTimeout", RequestCoalescingTimeout);
@@ -1024,11 +952,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("SouthAmericaDiscount", SouthAmericaDiscount);
             writer.WriteStringValue("StickySessionClientHeaders", StickySessionClientHeaders);
             writer.WriteStringValue("StickySessionCookieName", StickySessionCookieName);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelStickySessionType>("StickySessionType", StickySessionType);
+            writer.WriteIntValue("StickySessionType", StickySessionType);
             writer.WriteLongValue("StorageZoneId", StorageZoneId);
             writer.WriteBoolValue("Suspended", Suspended);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelTlsSecurityLevel>("TlsSecurityLevel", TlsSecurityLevel);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneModelType>("Type", Type);
+            writer.WriteIntValue("TlsSecurityLevel", TlsSecurityLevel);
+            writer.WriteIntValue("Type", Type);
             writer.WriteBoolValue("UseBackgroundUpdate", UseBackgroundUpdate);
             writer.WriteStringValue("UserId", UserId);
             writer.WriteBoolValue("UseStaleWhileOffline", UseStaleWhileOffline);

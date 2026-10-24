@@ -62,14 +62,14 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Pullzone
         }
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.core.pullzone.item collection</summary>
         /// <param name="position">The ID of the Pull Zone that should be returned</param>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.PullzoneItemRequestBuilder"/></returns>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.PullzoneItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.Bunny.OpenApiClient.Core.Pullzone.Item.PullzoneItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

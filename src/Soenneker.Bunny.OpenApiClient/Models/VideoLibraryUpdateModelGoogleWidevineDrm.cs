@@ -18,13 +18,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>(Optional) Enables or disables Google Widevine Enterprise DRM</summary>
         public bool? Enabled { get; set; }
         /// <summary>(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel? MinClientSecurityLevel { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel MinClientSecurityLevel { get; set; }
-#endif
+        public int? MinClientSecurityLevel { get; set; }
         /// <summary>(Optional) Only allow audio and SD access to Widevine L3 clients</summary>
         public bool? SdOnlyForL3 { get; set; }
         /// <summary>
@@ -53,7 +47,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel>(global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel.CreateFromDiscriminatorValue); } },
+                { "MinClientSecurityLevel", n => { MinClientSecurityLevel = n.GetIntValue(); } },
                 { "SdOnlyForL3", n => { SdOnlyForL3 = n.GetBoolValue(); } },
             };
         }
@@ -65,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("Enabled", Enabled);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GoogleWidevineDrmUpdateModelMinClientSecurityLevel>("MinClientSecurityLevel", MinClientSecurityLevel);
+            writer.WriteIntValue("MinClientSecurityLevel", MinClientSecurityLevel);
             writer.WriteBoolValue("SdOnlyForL3", SdOnlyForL3);
             writer.WriteAdditionalData(AdditionalData);
         }

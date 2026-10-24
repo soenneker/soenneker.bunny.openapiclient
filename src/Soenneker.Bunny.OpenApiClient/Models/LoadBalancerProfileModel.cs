@@ -25,13 +25,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The load balancing method used for selecting origin groups</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelOriginGroupLoadBalancingMethod? OriginGroupLoadBalancingMethod { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelOriginGroupLoadBalancingMethod OriginGroupLoadBalancingMethod { get; set; }
-#endif
+        public int? OriginGroupLoadBalancingMethod { get; set; }
         /// <summary>The list of origin groups associated with the Load Balancer profile</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -41,13 +35,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel> OriginGroups { get; set; }
 #endif
         /// <summary>The sticky session type used for persisting client sessions</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelStickySessionType? StickySessionType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelStickySessionType StickySessionType { get; set; }
-#endif
+        public int? StickySessionType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModel"/> and sets the default values.
         /// </summary>
@@ -75,9 +63,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "LoadBalancerId", n => { LoadBalancerId = n.GetLongValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "OriginGroupLoadBalancingMethod", n => { OriginGroupLoadBalancingMethod = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelOriginGroupLoadBalancingMethod>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelOriginGroupLoadBalancingMethod.CreateFromDiscriminatorValue); } },
+                { "OriginGroupLoadBalancingMethod", n => { OriginGroupLoadBalancingMethod = n.GetIntValue(); } },
                 { "OriginGroups", n => { OriginGroups = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "StickySessionType", n => { StickySessionType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelStickySessionType>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelStickySessionType.CreateFromDiscriminatorValue); } },
+                { "StickySessionType", n => { StickySessionType = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -89,9 +77,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("LoadBalancerId", LoadBalancerId);
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelOriginGroupLoadBalancingMethod>("OriginGroupLoadBalancingMethod", OriginGroupLoadBalancingMethod);
+            writer.WriteIntValue("OriginGroupLoadBalancingMethod", OriginGroupLoadBalancingMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel>("OriginGroups", OriginGroups);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModelStickySessionType>("StickySessionType", StickySessionType);
+            writer.WriteIntValue("StickySessionType", StickySessionType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

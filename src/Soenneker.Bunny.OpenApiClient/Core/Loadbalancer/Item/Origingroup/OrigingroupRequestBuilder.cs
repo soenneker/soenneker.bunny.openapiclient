@@ -20,14 +20,14 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.core.loadbalancer.item.origingroup.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder"/></returns>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("originGroupId", position);
+                return new global::Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.WithOriginGroupItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

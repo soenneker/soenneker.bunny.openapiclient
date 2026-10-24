@@ -31,21 +31,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<string> PatternMatches { get; set; }
 #endif
         /// <summary>The type of pattern matching</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType? PatternMatchingType { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType PatternMatchingType { get; set; }
-#endif
+        public int? PatternMatchingType { get; set; }
         /// <summary>The type of the trigger</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggerType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggerType Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.Trigger"/> and sets the default values.
         /// </summary>
@@ -73,8 +61,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "Parameter1", n => { Parameter1 = n.GetStringValue(); } },
                 { "PatternMatches", n => { PatternMatches = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "PatternMatchingType", n => { PatternMatchingType = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType>(global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType.CreateFromDiscriminatorValue); } },
-                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggerType>(global::Soenneker.Bunny.OpenApiClient.Models.TriggerType.CreateFromDiscriminatorValue); } },
+                { "PatternMatchingType", n => { PatternMatchingType = n.GetIntValue(); } },
+                { "Type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -86,8 +74,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Parameter1", Parameter1);
             writer.WriteCollectionOfPrimitiveValues<string>("PatternMatches", PatternMatches);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggerPatternMatchingType>("PatternMatchingType", PatternMatchingType);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggerType>("Type", Type);
+            writer.WriteIntValue("PatternMatchingType", PatternMatchingType);
+            writer.WriteIntValue("Type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

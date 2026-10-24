@@ -32,14 +32,14 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
         }
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.core.dnszone.item collection</summary>
         /// <param name="position">The ID of the DNS Zone that will be returned</param>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.ItemRequestBuilder"/></returns>
-        public global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.ItemRequestBuilder this[long position]
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.DnszoneItemRequestBuilder"/></returns>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.DnszoneItemRequestBuilder this[long position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("%2Did", position);
-                return new global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("id", position);
+                return new global::Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.DnszoneItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

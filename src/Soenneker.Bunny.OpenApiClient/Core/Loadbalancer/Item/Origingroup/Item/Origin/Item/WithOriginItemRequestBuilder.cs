@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.Origin.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \core\loadbalancer\{loadBalancerId}\origingroup\{-id}\origin\{originId}
+    /// Builds and executes requests for operations under \core\loadbalancer\{loadBalancerId}\origingroup\{originGroupId}\origin\{originId}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithOriginItemRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOriginItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{%2Did}/origin/{originId}", pathParameters)
+        public WithOriginItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{originGroupId}/origin/{originId}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Origingroup.Item.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithOriginItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{%2Did}/origin/{originId}", rawUrl)
+        public WithOriginItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/core/loadbalancer/{loadBalancerId}/origingroup/{originGroupId}/origin/{originId}", rawUrl)
         {
         }
         /// <summary>

@@ -55,13 +55,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The date and time when the billing record was created</summary>
         public DateTimeOffset? Timestamp { get; set; }
         /// <summary>The type of the billing record</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType? Type { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType Type { get; set; }
-#endif
+        public int? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel"/> and sets the default values.
         /// </summary>
@@ -95,7 +89,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Payer", n => { Payer = n.GetStringValue(); } },
                 { "PaymentId", n => { PaymentId = n.GetStringValue(); } },
                 { "Timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
-                { "Type", n => { Type = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType>(global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType.CreateFromDiscriminatorValue); } },
+                { "Type", n => { Type = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -113,7 +107,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Payer", Payer);
             writer.WriteStringValue("PaymentId", PaymentId);
             writer.WriteDateTimeOffsetValue("Timestamp", Timestamp);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModelType>("Type", Type);
+            writer.WriteIntValue("Type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

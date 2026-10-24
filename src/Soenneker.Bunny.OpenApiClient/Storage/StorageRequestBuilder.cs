@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.Storage
     public partial class StorageRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Bunny.OpenApiClient.storage.item collection</summary>
-        /// <param name="position">he name of your storage zone where you are connecting to.</param>
+        /// <param name="position">The name of your storage zone where you are connecting to.</param>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Storage.Item.WithStorageZoneNameItemRequestBuilder"/></returns>
         public global::Soenneker.Bunny.OpenApiClient.Storage.Item.WithStorageZoneNameItemRequestBuilder this[string position]
         {

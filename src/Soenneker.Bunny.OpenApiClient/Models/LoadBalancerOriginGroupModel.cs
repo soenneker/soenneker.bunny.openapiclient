@@ -39,13 +39,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The load balancing method used for selecting origins within the group</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelOriginLoadBalancingMethod? OriginLoadBalancingMethod { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelOriginLoadBalancingMethod OriginLoadBalancingMethod { get; set; }
-#endif
+        public int? OriginLoadBalancingMethod { get; set; }
         /// <summary>The list of origins associated with the origin group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -101,7 +95,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Latitude", n => { Latitude = n.GetDoubleValue(); } },
                 { "Longitude", n => { Longitude = n.GetDoubleValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "OriginLoadBalancingMethod", n => { OriginLoadBalancingMethod = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelOriginLoadBalancingMethod>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelOriginLoadBalancingMethod.CreateFromDiscriminatorValue); } },
+                { "OriginLoadBalancingMethod", n => { OriginLoadBalancingMethod = n.GetIntValue(); } },
                 { "Origins", n => { Origins = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "Priority", n => { Priority = n.GetByteArrayValue(); } },
                 { "Weight", n => { Weight = n.GetByteArrayValue(); } },
@@ -120,7 +114,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("Latitude", Latitude);
             writer.WriteDoubleValue("Longitude", Longitude);
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelOriginLoadBalancingMethod>("OriginLoadBalancingMethod", OriginLoadBalancingMethod);
+            writer.WriteIntValue("OriginLoadBalancingMethod", OriginLoadBalancingMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>("Origins", Origins);
             writer.WriteByteArrayValue("Priority", Priority);
             writer.WriteByteArrayValue("Weight", Weight);

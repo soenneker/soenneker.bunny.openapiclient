@@ -15,21 +15,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Issue code identifying the specific transcoding problem. See IssueCodes.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes? IssueCode { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes IssueCode { get; set; }
-#endif
+        public int? IssueCode { get; set; }
         /// <summary>Message severity. See Severity.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.Severity? Level { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Bunny.OpenApiClient.Models.Severity Level { get; set; }
-#endif
+        public int? Level { get; set; }
         /// <summary>Human-readable description of the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -73,8 +61,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "issueCode", n => { IssueCode = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes>(global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes.CreateFromDiscriminatorValue); } },
-                { "level", n => { Level = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Severity>(global::Soenneker.Bunny.OpenApiClient.Models.Severity.CreateFromDiscriminatorValue); } },
+                { "issueCode", n => { IssueCode = n.GetIntValue(); } },
+                { "level", n => { Level = n.GetIntValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "timeStamp", n => { TimeStamp = n.GetDateTimeOffsetValue(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
@@ -87,8 +75,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IssueCodes>("issueCode", IssueCode);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Severity>("level", Level);
+            writer.WriteIntValue("issueCode", IssueCode);
+            writer.WriteIntValue("level", Level);
             writer.WriteStringValue("message", Message);
             writer.WriteDateTimeOffsetValue("timeStamp", TimeStamp);
             writer.WriteStringValue("value", Value);
