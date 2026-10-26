@@ -10342,7 +10342,7 @@
           "Manage Videos"
         ],
         "summary": "Get Video play data",
-        "description": "Returns playback URLs and metadata for the video. For libraries with token authentication enabled, token and expires must be a valid signed pair or the request is rejected.",
+        "description": "Returns playback URLs and metadata for the video. For libraries with token authentication enabled, token and expires must be a valid signed pair or the request is rejected. If the library also has CDN token authentication enabled, the returned CDN URLs are signed.",
         "operationId": "StreamVideoGetVideoPlayData",
         "parameters": [
           {
@@ -37084,7 +37084,8 @@
           8,
           9,
           10,
-          11
+          11,
+          12
         ],
         "type": "integer",
         "description": ""
@@ -38207,7 +38208,8 @@
           8,
           9,
           10,
-          11
+          11,
+          12
         ],
         "type": "integer",
         "description": "Issue code identifying the specific transcoding problem. See IssueCodes."
@@ -39192,6 +39194,14 @@
         ],
         "type": "integer",
         "description": "Marks that captions generation failed"
+      },
+      "IssueCodesOneOf13": {
+        "title": "UnsupportedFileType",
+        "enum": [
+          12
+        ],
+        "type": "integer",
+        "description": "Marks that the uploaded or fetched file is not video or audio, for example a photo or a document"
       },
       "SmartGenerateStatusOneOf1": {
         "title": "None",
