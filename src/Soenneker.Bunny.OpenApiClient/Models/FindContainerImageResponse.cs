@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Every registry of the user that has the image tag, in the order they were queried(the user&apos;s own private registries first, then public and platform ones).
+    /// Every registry of the user that has the image tag, in the order they were queried(the user&apos;s own private registries first, then public and platform ones). Empty when none has it.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FindContainerImageResponse : IAdditionalDataHolder, IParsable
@@ -39,6 +39,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public global::Soenneker.Bunny.OpenApiClient.Models.ListMeta Meta { get; set; }
 #endif
+        /// <summary>How each searched registry answered, in the order they were queried.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageRegistryResult>? Registries { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageRegistryResult> Registries { get; set; }
+#endif
+        /// <summary>The suggestions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions? Suggestions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions Suggestions { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse"/> and sets the default values.
         /// </summary>
@@ -67,6 +83,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "cursor", n => { Cursor = n.GetStringValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.FoundContainerImage>(global::Soenneker.Bunny.OpenApiClient.Models.FoundContainerImage.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ListMeta>(global::Soenneker.Bunny.OpenApiClient.Models.ListMeta.CreateFromDiscriminatorValue); } },
+                { "registries", n => { Registries = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageRegistryResult>(global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageRegistryResult.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "suggestions", n => { Suggestions = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions>(global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -79,6 +97,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("cursor", Cursor);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.FoundContainerImage>("items", Items);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ListMeta>("meta", Meta);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageRegistryResult>("registries", Registries);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions>("suggestions", Suggestions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

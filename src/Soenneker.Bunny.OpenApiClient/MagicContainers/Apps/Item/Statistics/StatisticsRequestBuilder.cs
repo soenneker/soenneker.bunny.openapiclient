@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Charts;
 using Soenneker.Bunny.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,12 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatisticsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The charts property</summary>
+        [Obsolete("")]
+        public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Charts.ChartsRequestBuilder Charts
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Charts.ChartsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.StatisticsRequestBuilder"/> and sets the default values.
         /// </summary>
@@ -43,6 +50,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 500 status code</exception>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.Statistics?> GetAsync(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -67,6 +75,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.StatisticsRequestBuilder.StatisticsRequestBuilderGetQueryParameters>>? requestConfiguration = default)
@@ -86,6 +95,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.StatisticsRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.StatisticsRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.StatisticsRequestBuilder(rawUrl, RequestAdapter);

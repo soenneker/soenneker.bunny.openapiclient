@@ -30,6 +30,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Description { get; set; }
 #endif
+        /// <summary>The digest of the image&apos;s manifest for the supported platform, to pin the tag to.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Digest { get; set; }
+#nullable restore
+#else
+        public string Digest { get; set; }
+#endif
+        /// <summary>The image&apos;s documentation (AppName, Description, Instructions, documented variables) is still being generated:ask again in a few seconds for it.</summary>
+        public bool? DocumentationPending { get; set; }
+        /// <summary>The image&apos;s documentation, from its org.opencontainers.image.documentation label.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DocumentationUrl { get; set; }
+#nullable restore
+#else
+        public string DocumentationUrl { get; set; }
+#endif
         /// <summary>The endpointSuggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,6 +72,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Instructions { get; set; }
 #endif
+        /// <summary>The probeSuggestions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbes? ProbeSuggestions { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbes ProbeSuggestions { get; set; }
+#endif
         /// <summary>The registryUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -61,6 +87,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #nullable restore
 #else
         public string RegistryUrl { get; set; }
+#endif
+        /// <summary>The image&apos;s source code, from its org.opencontainers.image.source label.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SourceUrl { get; set; }
+#nullable restore
+#else
+        public string SourceUrl { get; set; }
 #endif
         /// <summary>The volumeSuggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,10 +131,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "appName", n => { AppName = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
+                { "digest", n => { Digest = n.GetStringValue(); } },
+                { "documentationPending", n => { DocumentationPending = n.GetBoolValue(); } },
+                { "documentationUrl", n => { DocumentationUrl = n.GetStringValue(); } },
                 { "endpointSuggestions", n => { EndpointSuggestions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>(global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "environmentVariablesSuggestions", n => { EnvironmentVariablesSuggestions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion>(global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "instructions", n => { Instructions = n.GetStringValue(); } },
+                { "probeSuggestions", n => { ProbeSuggestions = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbes>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbes.CreateFromDiscriminatorValue); } },
                 { "registryUrl", n => { RegistryUrl = n.GetStringValue(); } },
+                { "sourceUrl", n => { SourceUrl = n.GetStringValue(); } },
                 { "volumeSuggestions", n => { VolumeSuggestions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>(global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -113,10 +152,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("appName", AppName);
             writer.WriteStringValue("description", Description);
+            writer.WriteStringValue("digest", Digest);
+            writer.WriteBoolValue("documentationPending", DocumentationPending);
+            writer.WriteStringValue("documentationUrl", DocumentationUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>("endpointSuggestions", EndpointSuggestions);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion>("environmentVariablesSuggestions", EnvironmentVariablesSuggestions);
             writer.WriteStringValue("instructions", Instructions);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbes>("probeSuggestions", ProbeSuggestions);
             writer.WriteStringValue("registryUrl", RegistryUrl);
+            writer.WriteStringValue("sourceUrl", SourceUrl);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>("volumeSuggestions", VolumeSuggestions);
             writer.WriteAdditionalData(AdditionalData);
         }

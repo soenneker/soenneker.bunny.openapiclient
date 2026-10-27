@@ -40,6 +40,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The required property</summary>
         public bool? Required { get; set; }
+        /// <summary>The source property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestionSource? Source { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestion"/> and sets the default values.
         /// </summary>
@@ -69,6 +71,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "required", n => { Required = n.GetBoolValue(); } },
+                { "source", n => { Source = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestionSource>(); } },
             };
         }
         /// <summary>
@@ -82,6 +85,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
             writer.WriteBoolValue("required", Required);
+            writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.EnvironmentVariableSuggestionSource>("source", Source);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

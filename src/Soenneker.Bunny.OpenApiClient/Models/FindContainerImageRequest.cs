@@ -14,7 +14,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Image reference in the docker format: [registry/]namespace/name[:tag], e.g. &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot;.Without a registry host all of the user&apos;s registries are searched.The tag defaults to &quot;latest&quot;.</summary>
+        /// <summary>Image reference in the docker format: [registry/]namespace/name[:tag], e.g. &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot;.Without a registry host all of the user&apos;s registries are searched.Without a tag nothing is found, not even &quot;latest&quot;: the image&apos;s tags are suggested instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Image { get; set; }

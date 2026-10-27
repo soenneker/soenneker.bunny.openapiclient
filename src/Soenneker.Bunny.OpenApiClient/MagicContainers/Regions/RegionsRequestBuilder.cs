@@ -28,7 +28,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RegionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions{?limit*,nextCursor*}", pathParameters)
+        public RegionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions{?gpuCount*,gpuType*,limit*,nextCursor*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,11 +36,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public RegionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions{?limit*,nextCursor*}", rawUrl)
+        public RegionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions{?gpuCount*,gpuType*,limit*,nextCursor*}", rawUrl)
         {
         }
         /// <summary>
-        /// Lists all available regions where applications can be deployed, including their anycast support and capacity status.
+        /// Lists all available regions where applications can be deployed, including their anycast support and capacity status. Optionally filter by GPU type and required GPU count.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ListRegionsResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.ListRegionsResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.ListRegionsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all available regions where applications can be deployed, including their anycast support and capacity status.
+        /// Lists all available regions where applications can be deployed, including their anycast support and capacity status. Optionally filter by GPU type and required GPU count.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -95,11 +95,28 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions
             return new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.RegionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all available regions where applications can be deployed, including their anycast support and capacity status.
+        /// Lists all available regions where applications can be deployed, including their anycast support and capacity status. Optionally filter by GPU type and required GPU count.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RegionsRequestBuilderGetQueryParameters 
         {
+            #pragma warning disable CS1591
+            [QueryParameter("gpuCount")]
+            public int? GpuCount { get; set; }
+            #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("gpuType")]
+            public string? GpuType { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("gpuType")]
+            public string GpuType { get; set; }
+            #pragma warning restore CS1591
+#endif
             #pragma warning disable CS1591
             [QueryParameter("limit")]
             public int? Limit { get; set; }

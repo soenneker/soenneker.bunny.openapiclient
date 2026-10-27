@@ -34,7 +34,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find
         {
         }
         /// <summary>
-        /// Parses an image reference like &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot; and checks whether the image tag exists in the selected registries of the user (only those of the reference&apos;s host when it has one). Returns every registry that has the image tag with its id, hostname, the image namespace, name, tag and digest.
+        /// Parses an image reference like &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot; and checks whether the image tag exists in the selected registries of the user (only those of the reference&apos;s host when it has one). A reference without a tag finds nothing, not even &quot;latest&quot;: the image&apos;s tags are suggested instead. Returns every registry that has the image tag with its id, hostname, the image namespace, name, tag and digest, and how each searched registry answered: found, not found, unauthorized (its credentials are refused) or unavailable. When none has it, suggests the image&apos;s tags from the registries that have the image, and images with a similar name.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -45,8 +45,6 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 422 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 502 status code</exception>
-        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -65,13 +63,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
-                { "502", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Parses an image reference like &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot; and checks whether the image tag exists in the selected registries of the user (only those of the reference&apos;s host when it has one). Returns every registry that has the image tag with its id, hostname, the image namespace, name, tag and digest.
+        /// Parses an image reference like &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot; and checks whether the image tag exists in the selected registries of the user (only those of the reference&apos;s host when it has one). A reference without a tag finds nothing, not even &quot;latest&quot;: the image&apos;s tags are suggested instead. Returns every registry that has the image tag with its id, hostname, the image namespace, name, tag and digest, and how each searched registry answered: found, not found, unauthorized (its credentials are refused) or unavailable. When none has it, suggests the image&apos;s tags from the registries that have the image, and images with a similar name.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -22,6 +22,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string DisplayName { get; set; }
 #endif
+        /// <summary>The registry&apos;s host, with an optional port (e.g. &quot;registry.example.com&quot; or &quot;registry.example.com:5000&quot;).Required for the Oci type and ignored for the others.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HostName { get; set; }
+#nullable restore
+#else
+        public string HostName { get; set; }
+#endif
         /// <summary>Password credentials for container registry</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -58,6 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
+                { "hostName", n => { HostName = n.GetStringValue(); } },
                 { "passwordCredentials", n => { PasswordCredentials = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Credentials>(global::Soenneker.Bunny.OpenApiClient.Models.Credentials.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RegistryType>(); } },
             };
@@ -70,6 +79,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("displayName", DisplayName);
+            writer.WriteStringValue("hostName", HostName);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Credentials>("passwordCredentials", PasswordCredentials);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RegistryType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);

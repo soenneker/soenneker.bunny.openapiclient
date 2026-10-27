@@ -30,6 +30,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest> ContainerTemplates { get; set; }
 #endif
+        /// <summary>The gpu property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig? Gpu { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig Gpu { get; set; }
+#endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,6 +101,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "autoScaling", n => { AutoScaling = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings>(global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings.CreateFromDiscriminatorValue); } },
                 { "containerTemplates", n => { ContainerTemplates = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "gpu", n => { Gpu = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig>(global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "regionSettings", n => { RegionSettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest.CreateFromDiscriminatorValue); } },
                 { "repositorySettings", n => { RepositorySettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings>(global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings.CreateFromDiscriminatorValue); } },
@@ -110,6 +119,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings>("autoScaling", AutoScaling);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest>("containerTemplates", ContainerTemplates);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig>("gpu", Gpu);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest>("regionSettings", RegionSettings);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings>("repositorySettings", RepositorySettings);

@@ -20,5 +20,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         #pragma warning disable CS1591
         BunnyRegistry,
         #pragma warning restore CS1591
+        [EnumMember(Value = "oci")]
+        #pragma warning disable CS1591
+        Oci,
+        #pragma warning restore CS1591
     }
 }

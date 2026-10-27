@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.Optimal
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OptimalRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions/optimal{?cdnServerToken*}", pathParameters)
+        public OptimalRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions/optimal{?cdnServerToken*,gpuCount*,gpuType*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,11 +30,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.Optimal
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OptimalRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions/optimal{?cdnServerToken*}", rawUrl)
+        public OptimalRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/magic-containers/regions/optimal{?cdnServerToken*,gpuCount*,gpuType*}", rawUrl)
         {
         }
         /// <summary>
-        /// Returns the optimal base region for deployment based on the user&apos;s CDN server token location.
+        /// Returns the optimal base region for deployment based on the user&apos;s CDN server token location. Optionally filter by GPU type and required GPU count.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OptimalBaseRegionResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.Optimal
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.OptimalBaseRegionResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.OptimalBaseRegionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the optimal base region for deployment based on the user&apos;s CDN server token location.
+        /// Returns the optimal base region for deployment based on the user&apos;s CDN server token location. Optionally filter by GPU type and required GPU count.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.Optimal
             return new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.Optimal.OptimalRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the optimal base region for deployment based on the user&apos;s CDN server token location.
+        /// Returns the optimal base region for deployment based on the user&apos;s CDN server token location. Optionally filter by GPU type and required GPU count.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class OptimalRequestBuilderGetQueryParameters 
@@ -103,6 +103,23 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Regions.Optimal
             #pragma warning disable CS1591
             [QueryParameter("cdnServerToken")]
             public string CdnServerToken { get; set; }
+            #pragma warning restore CS1591
+#endif
+            #pragma warning disable CS1591
+            [QueryParameter("gpuCount")]
+            public int? GpuCount { get; set; }
+            #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("gpuType")]
+            public string? GpuType { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("gpuType")]
+            public string GpuType { get; set; }
             #pragma warning restore CS1591
 #endif
         }
