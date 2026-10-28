@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines direct play URLs are enabled for the library</summary>
         public bool? AllowDirectPlay { get; set; }
-        /// <summary>Determines if the Early-Play feature is enabled. Always false while EnableDRM is true.</summary>
+        /// <summary>Determines if the Early-Play feature is enabled</summary>
         public bool? AllowEarlyPlay { get; set; }
         /// <summary>The list of allowed referrer domains allowed to access the library</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -133,7 +133,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string EnabledResolutions { get; set; }
 #endif
-        /// <summary>Determines if MediaCage DRM is enabled. While true, AllowEarlyPlay and ExposeOriginals are always false.</summary>
+        /// <summary>Determines if the DRM is enabled</summary>
         public bool? EnableDRM { get; set; }
         /// <summary>Determines if the MP4 fallback feature is enabled</summary>
         public bool? EnableMP4Fallback { get; set; }
@@ -151,7 +151,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? EnableTranscribingTitleGeneration { get; set; }
         /// <summary>Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.</summary>
         public int? EncodingTier { get; set; }
-        /// <summary>Marks whether original video files are exposed via CDN. Always false while EnableDRM is true; original files are not protected by DRM.</summary>
+        /// <summary>Marks whether original video files should be exposed via CDN.</summary>
         public bool? ExposeOriginals { get; set; }
         /// <summary>Marks whether video metadata in form of schema meta tags and LD+JSON should be exposed.</summary>
         public bool? ExposeVideoMetadata { get; set; }

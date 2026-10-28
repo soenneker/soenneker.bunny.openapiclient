@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) Determines if direct play URLs should be enabled for the library</summary>
         public bool? AllowDirectPlay { get; set; }
-        /// <summary>(Optional) Determines if the Early-Play feature should be enabled. Setting it to true also sets ExposeOriginals to true. Cannot be true while EnableDRM is true, and EnableDRM cannot be set to true while this is true, because Early Play serves the original file, which is not protected by DRM.</summary>
+        /// <summary>(Optional) Determines if the Early-Play feature should be enabled. Enabling this will enable Expose Originals.</summary>
         public bool? AllowEarlyPlay { get; set; }
         /// <summary>(Optional) Configure Apple FairPlay DRM. Works only if Enterprise DRM is set up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -92,7 +92,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string EnabledResolutions { get; set; }
 #endif
-        /// <summary>(Optional) Determines if MediaCage DRM should be enabled for this library. Cannot be set to true while AllowEarlyPlay or ExposeOriginals is true; set them to false first or in the same request, because original files are not protected by DRM.</summary>
+        /// <summary>(Optional) Determines if MediaCage DRM should be enabled for this library</summary>
         public bool? EnableDRM { get; set; }
         /// <summary>(Optional) Determines if MP4 fallback should be enabled for this library.</summary>
         public bool? EnableMP4Fallback { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? EnableTranscribingTitleGeneration { get; set; }
         /// <summary>(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.</summary>
         public int? EncodingTier { get; set; }
-        /// <summary>(Optional) Marks whether original video files should be exposed via CDN. Original files are not protected by DRM, so this cannot be true while EnableDRM is true, and EnableDRM cannot be set to true while this is true. Setting AllowEarlyPlay to true sets this to true.</summary>
+        /// <summary>(Optional) Marks whether original video files should be exposed via CDN. Originals are not protected by DRM. Enabling Early-Play will enable this.</summary>
         public bool? ExposeOriginals { get; set; }
         /// <summary>(Optional) Marks whether video metadata in form of schema meta tags and LD+JSON should be exposed.</summary>
         public bool? ExposeVideoMetadata { get; set; }
