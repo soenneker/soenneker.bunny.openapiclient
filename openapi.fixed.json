@@ -4567,6 +4567,97 @@
         ]
       }
     },
+    "/core/videolibrary/{id}/resetWebhookSigningSecret": {
+      "post": {
+        "tags": [
+          "Stream Video Library"
+        ],
+        "summary": "Reset Webhook Signing Secret",
+        "operationId": "CoreResetVideoLibraryWebhookSigningSecretEndpointResetVideoLibraryWebhookSigningSecret",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the video library that should have the webhook signing secret reset",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The webhook signing secret has been successfully changed"
+          },
+          "401": {
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "The Video Library is not accessible for the authenticated account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Video Library with the requested ID does not exist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIStream",
+              "SubuserStream",
+              "SubuserManage",
+              "SubuserAPIManage",
+              "ScopedApiKey"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIStream",
+              "SubuserStream",
+              "SubuserManage",
+              "SubuserAPIManage",
+              "ScopedApiKey"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ],
+        "x-hidden": true
+      }
+    },
     "/core/videolibrary/{id}/transcribing/statistics": {
       "get": {
         "tags": [
@@ -4900,6 +4991,97 @@
           },
           "401": {
             "description": "The request authorization failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "AccessKey": [
+              "User",
+              "UserApi",
+              "SubuserAPIStream",
+              "SubuserStream",
+              "SubuserManage",
+              "SubuserAPIManage",
+              "ScopedApiKey"
+            ]
+          },
+          {
+            "bearer": [
+              "User",
+              "UserApi",
+              "SubuserAPIStream",
+              "SubuserStream",
+              "SubuserManage",
+              "SubuserAPIManage",
+              "ScopedApiKey"
+            ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net",
+            "description": "bunny.net API Server"
+          }
+        ],
+        "x-hidden": true
+      }
+    },
+    "/core/videolibrary/{id}/live/resetAutoCreateStreamKey": {
+      "post": {
+        "tags": [
+          "Stream Video Library"
+        ],
+        "summary": "Reset Live Auto Create Stream Key",
+        "operationId": "CoreResetLiveAutoCreateStreamKeyEndpointResetLiveAutoCreateStreamKey",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the video library that should have the auto create stream key reset",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "The auto create stream key has been successfully changed"
+          },
+          "401": {
+            "description": "The request authorization failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "The Video Library is not accessible for the authenticated account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "The Video Library with the requested ID does not exist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiErrorData"
+                }
+              }
+            }
           },
           "500": {
             "description": "Internal Server Error"
@@ -5345,7 +5527,8 @@
               "SubuserAPIStatistics",
               "SubuserStatistics",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -5355,7 +5538,8 @@
               "SubuserAPIStatistics",
               "SubuserStatistics",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -5441,7 +5625,8 @@
               "SubuserAPIStatistics",
               "SubuserStatistics",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -5451,7 +5636,8 @@
               "SubuserAPIStatistics",
               "SubuserStatistics",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6270,7 +6456,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6280,7 +6467,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6360,7 +6548,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6370,7 +6559,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6478,7 +6668,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6488,7 +6679,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6578,7 +6770,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6588,7 +6781,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6658,7 +6852,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6668,7 +6863,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6766,7 +6962,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6776,7 +6973,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6854,7 +7052,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6864,7 +7063,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -6929,7 +7129,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -6939,7 +7140,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7006,7 +7208,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7016,7 +7219,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7084,7 +7288,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7094,7 +7299,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7182,7 +7388,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7192,7 +7399,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7321,7 +7529,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7331,7 +7540,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7428,7 +7638,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7438,7 +7649,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7515,7 +7727,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7525,7 +7738,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -7624,7 +7838,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           },
           {
@@ -7634,7 +7849,8 @@
               "SubuserAPIPullZones",
               "SubuserPullZones",
               "SubuserManage",
-              "SubuserAPIManage"
+              "SubuserAPIManage",
+              "ScopedApiKey"
             ]
           }
         ],
@@ -29896,7 +30112,7 @@
           },
           "AllowEarlyPlay": {
             "type": "boolean",
-            "description": "Determines if the Early-Play feature is enabled",
+            "description": "Determines if the Early-Play feature is enabled. Always false while EnableDRM is true.",
             "nullable": true
           },
           "PlayerTokenAuthenticationEnabled": {
@@ -29937,7 +30153,7 @@
           },
           "EnableDRM": {
             "type": "boolean",
-            "description": "Determines if the DRM is enabled"
+            "description": "Determines if MediaCage DRM is enabled. While true, AllowEarlyPlay and ExposeOriginals are always false."
           },
           "DrmVersion": {
             "$ref": "#/components/schemas/VideoLibraryModelDrmVersion"
@@ -30007,7 +30223,7 @@
           },
           "Controls": {
             "type": "string",
-            "description": "The list of controls on the video player.",
+            "description": "The comma-separated list of controls displayed in the video player. Possible values: play-large, play, progress, current-time, duration, mute, volume, captions, settings, pip, airplay, fullscreen, rewind, fast-forward, and chromecast. Empty when all player UI controls are removed.",
             "nullable": true
           },
           "PlaybackSpeeds": {
@@ -30138,7 +30354,7 @@
           },
           "ExposeOriginals": {
             "type": "boolean",
-            "description": "Marks whether original video files should be exposed via CDN."
+            "description": "Marks whether original video files are exposed via CDN. Always false while EnableDRM is true; original files are not protected by DRM."
           },
           "ExposeVideoMetadata": {
             "type": "boolean",
@@ -30561,7 +30777,7 @@
           },
           "AllowEarlyPlay": {
             "type": "boolean",
-            "description": "(Optional) Determines if the Early-Play feature should be enabled. Enabling this will enable Expose Originals.",
+            "description": "(Optional) Determines if the Early-Play feature should be enabled. Setting it to true also sets ExposeOriginals to true. Cannot be true while EnableDRM is true, and EnableDRM cannot be set to true while this is true, because Early Play serves the original file, which is not protected by DRM.",
             "nullable": true
           },
           "PlayerTokenAuthenticationEnabled": {
@@ -30591,7 +30807,7 @@
           },
           "EnableDRM": {
             "type": "boolean",
-            "description": "(Optional) Determines if MediaCage DRM should be enabled for this library",
+            "description": "(Optional) Determines if MediaCage DRM should be enabled for this library. Cannot be set to true while AllowEarlyPlay or ExposeOriginals is true; set them to false first or in the same request, because original files are not protected by DRM.",
             "nullable": true
           },
           "DrmVersion": {
@@ -30599,7 +30815,7 @@
           },
           "Controls": {
             "type": "string",
-            "description": "(Optional) The comma separated list of controls that will be displayed in the video player. Possible values: play-large, play, progress, current-time, mute, volume, captions, settings, pip, airplay, fullscreen.",
+            "description": "(Optional) A comma-separated list of controls to display in the video player. Possible values: play-large, play, progress, current-time, duration, mute, volume, captions, settings, pip, airplay, fullscreen, rewind, fast-forward, and chromecast. Set Controls to 0 to remove all player UI controls.",
             "nullable": true
           },
           "PlaybackSpeeds": {
@@ -30754,7 +30970,7 @@
           },
           "ExposeOriginals": {
             "type": "boolean",
-            "description": "(Optional) Marks whether original video files should be exposed via CDN. Originals are not protected by DRM. Enabling Early-Play will enable this.",
+            "description": "(Optional) Marks whether original video files should be exposed via CDN. Original files are not protected by DRM, so this cannot be true while EnableDRM is true, and EnableDRM cannot be set to true while this is true. Setting AllowEarlyPlay to true sets this to true.",
             "nullable": true
           },
           "ExposeVideoMetadata": {

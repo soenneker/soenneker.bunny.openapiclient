@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live.ResetAutoCreateStreamKey;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live.Thumbnail;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live.Watermark;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LiveRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The resetAutoCreateStreamKey property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live.ResetAutoCreateStreamKey.ResetAutoCreateStreamKeyRequestBuilder ResetAutoCreateStreamKey
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live.ResetAutoCreateStreamKey.ResetAutoCreateStreamKeyRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The thumbnail property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Live.Thumbnail.ThumbnailRequestBuilder Thumbnail
         {

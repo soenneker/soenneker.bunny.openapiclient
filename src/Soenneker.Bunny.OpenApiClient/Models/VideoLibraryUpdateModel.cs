@@ -16,7 +16,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) Determines if direct play URLs should be enabled for the library</summary>
         public bool? AllowDirectPlay { get; set; }
-        /// <summary>(Optional) Determines if the Early-Play feature should be enabled. Enabling this will enable Expose Originals.</summary>
+        /// <summary>(Optional) Determines if the Early-Play feature should be enabled. Setting it to true also sets ExposeOriginals to true. Cannot be true while EnableDRM is true, and EnableDRM cannot be set to true while this is true, because Early Play serves the original file, which is not protected by DRM.</summary>
         public bool? AllowEarlyPlay { get; set; }
         /// <summary>(Optional) Configure Apple FairPlay DRM. Works only if Enterprise DRM is set up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,7 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>(Optional) Sets the captions display font size</summary>
         public int? CaptionsFontSize { get; set; }
-        /// <summary>(Optional) The comma separated list of controls that will be displayed in the video player. Possible values: play-large, play, progress, current-time, mute, volume, captions, settings, pip, airplay, fullscreen.</summary>
+        /// <summary>(Optional) A comma-separated list of controls to display in the video player. Possible values: play-large, play, progress, current-time, duration, mute, volume, captions, settings, pip, airplay, fullscreen, rewind, fast-forward, and chromecast. Set Controls to 0 to remove all player UI controls.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Controls { get; set; }
@@ -92,7 +92,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string EnabledResolutions { get; set; }
 #endif
-        /// <summary>(Optional) Determines if MediaCage DRM should be enabled for this library</summary>
+        /// <summary>(Optional) Determines if MediaCage DRM should be enabled for this library. Cannot be set to true while AllowEarlyPlay or ExposeOriginals is true; set them to false first or in the same request, because original files are not protected by DRM.</summary>
         public bool? EnableDRM { get; set; }
         /// <summary>(Optional) Determines if MP4 fallback should be enabled for this library.</summary>
         public bool? EnableMP4Fallback { get; set; }
@@ -114,7 +114,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public bool? EnableTranscribingTitleGeneration { get; set; }
         /// <summary>(Optional) Defines encoding tier to be used with video library. premium is a paid tier that offers either JIT encoding or prioritized encoding and extra codec support.</summary>
         public int? EncodingTier { get; set; }
-        /// <summary>(Optional) Marks whether original video files should be exposed via CDN. Originals are not protected by DRM. Enabling Early-Play will enable this.</summary>
+        /// <summary>(Optional) Marks whether original video files should be exposed via CDN. Original files are not protected by DRM, so this cannot be true while EnableDRM is true, and EnableDRM cannot be set to true while this is true. Setting AllowEarlyPlay to true sets this to true.</summary>
         public bool? ExposeOriginals { get; set; }
         /// <summary>(Optional) Marks whether video metadata in form of schema meta tags and LD+JSON should be exposed.</summary>
         public bool? ExposeVideoMetadata { get; set; }

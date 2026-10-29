@@ -11,6 +11,7 @@ using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.RemoveAllowedReferrer
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.RemoveBlockedReferrer;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetApiKey;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetReadOnlyApiKey;
+using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetWebhookSigningSecret;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Transcribing;
 using Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Watermark;
 using Soenneker.Bunny.OpenApiClient.Models;
@@ -66,6 +67,11 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item
         public global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetReadOnlyApiKey.ResetReadOnlyApiKeyRequestBuilder ResetReadOnlyApiKey
         {
             get => new global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetReadOnlyApiKey.ResetReadOnlyApiKeyRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The resetWebhookSigningSecret property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetWebhookSigningSecret.ResetWebhookSigningSecretRequestBuilder ResetWebhookSigningSecret
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.ResetWebhookSigningSecret.ResetWebhookSigningSecretRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The transcribing property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item.Transcribing.TranscribingRequestBuilder Transcribing
