@@ -11,15 +11,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BillingSummaryItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("MonthlyBandwidthUsed") is { } nullNodeMonthlyBandwidthUsed && nullNodeMonthlyBandwidthUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyBandwidthUsed = null;
+            if (parseNode.GetChildNode("MonthlyUsage") is { } nullNodeMonthlyUsage && nullNodeMonthlyUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyUsage = null;
+            if (parseNode.GetChildNode("PullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The total monthly bandwidth used by the pull zone</summary>
-        public long? MonthlyBandwidthUsed { get; set; }
+        public long? MonthlyBandwidthUsed { get => _explicitNullValueMonthlyBandwidthUsed; set { _explicitNullValueMonthlyBandwidthUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyBandwidthUsed"); else _explicitNullProperties?.Remove("MonthlyBandwidthUsed"); } }
+        private long? _explicitNullValueMonthlyBandwidthUsed = default!;
         /// <summary>The total credit amount used in this month by the Pull Zone</summary>
-        public decimal? MonthlyUsage { get; set; }
+        public decimal? MonthlyUsage { get => _explicitNullValueMonthlyUsage; set { _explicitNullValueMonthlyUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyUsage"); else _explicitNullProperties?.Remove("MonthlyUsage"); } }
+        private decimal? _explicitNullValueMonthlyUsage = default!;
         /// <summary>The ID of the pull zone</summary>
-        public long? PullZoneId { get; set; }
+        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneId"); else _explicitNullProperties?.Remove("PullZoneId"); } }
+        private long? _explicitNullValuePullZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingSummaryItem"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BillingSummaryItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BillingSummaryItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BillingSummaryItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("MonthlyBandwidthUsed", MonthlyBandwidthUsed);
             writer.WriteDecimalValue("MonthlyUsage", MonthlyUsage);
             writer.WriteLongValue("PullZoneId", PullZoneId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

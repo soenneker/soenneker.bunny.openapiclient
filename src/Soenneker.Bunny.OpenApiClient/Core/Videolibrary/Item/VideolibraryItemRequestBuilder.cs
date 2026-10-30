@@ -114,7 +114,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get Video Library
@@ -140,6 +140,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -165,6 +167,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Videolibrary.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

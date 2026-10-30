@@ -11,46 +11,76 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class HostnameModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
+            if (parseNode.GetChildNode("CertificateKey") is { } nullNodeCertificateKey && nullNodeCertificateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateKey = null;
+            if (parseNode.GetChildNode("CertificateKeyType") is { } nullNodeCertificateKeyType && nullNodeCertificateKeyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateKeyType = null;
+            if (parseNode.GetChildNode("CertificateProvisionType") is { } nullNodeCertificateProvisionType && nullNodeCertificateProvisionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateProvisionType = null;
+            if (parseNode.GetChildNode("ForceSSL") is { } nullNodeForceSSL && nullNodeForceSSL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSSL = null;
+            if (parseNode.GetChildNode("HasCertificate") is { } nullNodeHasCertificate && nullNodeHasCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasCertificate = null;
+            if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("IsManagedHostname") is { } nullNodeIsManagedHostname && nullNodeIsManagedHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsManagedHostname = null;
+            if (parseNode.GetChildNode("IsSystemHostname") is { } nullNodeIsSystemHostname && nullNodeIsSystemHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSystemHostname = null;
+            if (parseNode.GetChildNode("Value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains the Base64Url encoded certificate for the hostname</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Certificate { get; set; }
+        public string? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Certificate"); else _explicitNullProperties?.Remove("Certificate"); } }
+        private string? _explicitNullValueCertificate = default!;
 #nullable restore
 #else
-        public string Certificate { get; set; }
+        public string Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Certificate"); else _explicitNullProperties?.Remove("Certificate"); } }
+        private string _explicitNullValueCertificate = default!;
 #endif
         /// <summary>Contains the Base64Url encoded certificate key for the hostname</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CertificateKey { get; set; }
+        public string? CertificateKey { get => _explicitNullValueCertificateKey; set { _explicitNullValueCertificateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKey"); else _explicitNullProperties?.Remove("CertificateKey"); } }
+        private string? _explicitNullValueCertificateKey = default!;
 #nullable restore
 #else
-        public string CertificateKey { get; set; }
+        public string CertificateKey { get => _explicitNullValueCertificateKey; set { _explicitNullValueCertificateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKey"); else _explicitNullProperties?.Remove("CertificateKey"); } }
+        private string _explicitNullValueCertificateKey = default!;
 #endif
-        /// <summary>The private key type to use for automatic certificates</summary>
-        public int? CertificateKeyType { get; set; }
-        /// <summary>The provisioned certificate type</summary>
-        public int? CertificateProvisionType { get; set; }
+        /// <summary>The private key type to use for automatic certificates0 = ECDSA1 = RSA</summary>
+        public int? CertificateKeyType { get => _explicitNullValueCertificateKeyType; set { _explicitNullValueCertificateKeyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKeyType"); else _explicitNullProperties?.Remove("CertificateKeyType"); } }
+        private int? _explicitNullValueCertificateKeyType = default!;
+        /// <summary>The provisioned certificate type0 = Unknown1 = HTTP-012 = DNS-013 = Custom4 = Managed</summary>
+        public int? CertificateProvisionType { get => _explicitNullValueCertificateProvisionType; set { _explicitNullValueCertificateProvisionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateProvisionType"); else _explicitNullProperties?.Remove("CertificateProvisionType"); } }
+        private int? _explicitNullValueCertificateProvisionType = default!;
         /// <summary>Determines if the Force SSL feature is enabled</summary>
-        public bool? ForceSSL { get; set; }
+        public bool? ForceSSL { get => _explicitNullValueForceSSL; set { _explicitNullValueForceSSL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ForceSSL"); else _explicitNullProperties?.Remove("ForceSSL"); } }
+        private bool? _explicitNullValueForceSSL = default!;
         /// <summary>Determines if the hostname has an SSL certificate configured</summary>
-        public bool? HasCertificate { get; set; }
+        public bool? HasCertificate { get => _explicitNullValueHasCertificate; set { _explicitNullValueHasCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HasCertificate"); else _explicitNullProperties?.Remove("HasCertificate"); } }
+        private bool? _explicitNullValueHasCertificate = default!;
         /// <summary>The unique ID of the hostname</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>Determines if this is a managed hostname controlled by bunny.net</summary>
-        public bool? IsManagedHostname { get; set; }
+        public bool? IsManagedHostname { get => _explicitNullValueIsManagedHostname; set { _explicitNullValueIsManagedHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsManagedHostname"); else _explicitNullProperties?.Remove("IsManagedHostname"); } }
+        private bool? _explicitNullValueIsManagedHostname = default!;
         /// <summary>Determines if this is a system hostname controlled by bunny.net</summary>
-        public bool? IsSystemHostname { get; set; }
+        public bool? IsSystemHostname { get => _explicitNullValueIsSystemHostname; set { _explicitNullValueIsSystemHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsSystemHostname"); else _explicitNullProperties?.Remove("IsSystemHostname"); } }
+        private bool? _explicitNullValueIsSystemHostname = default!;
         /// <summary>The hostname value for the domain name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Value"); else _explicitNullProperties?.Remove("Value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Value"); else _explicitNullProperties?.Remove("Value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel"/> and sets the default values.
@@ -67,7 +97,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.HostnameModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +136,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("IsManagedHostname", IsManagedHostname);
             writer.WriteBoolValue("IsSystemHostname", IsSystemHostname);
             writer.WriteStringValue("Value", Value);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

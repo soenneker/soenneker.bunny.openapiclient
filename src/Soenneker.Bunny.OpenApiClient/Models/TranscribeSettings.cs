@@ -11,32 +11,53 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TranscribeSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("generateChapters") is { } nullNodeGenerateChapters && nullNodeGenerateChapters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerateChapters = null;
+            if (parseNode.GetChildNode("generateDescription") is { } nullNodeGenerateDescription && nullNodeGenerateDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerateDescription = null;
+            if (parseNode.GetChildNode("generateMoments") is { } nullNodeGenerateMoments && nullNodeGenerateMoments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerateMoments = null;
+            if (parseNode.GetChildNode("generateTitle") is { } nullNodeGenerateTitle && nullNodeGenerateTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerateTitle = null;
+            if (parseNode.GetChildNode("sourceLanguage") is { } nullNodeSourceLanguage && nullNodeSourceLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceLanguage = null;
+            if (parseNode.GetChildNode("targetLanguages") is { } nullNodeTargetLanguages && nullNodeTargetLanguages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetLanguages = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether video chapters should be automatically generated.</summary>
-        public bool? GenerateChapters { get; set; }
+        public bool? GenerateChapters { get => _explicitNullValueGenerateChapters; set { _explicitNullValueGenerateChapters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generateChapters"); else _explicitNullProperties?.Remove("generateChapters"); } }
+        private bool? _explicitNullValueGenerateChapters = default!;
         /// <summary>Whether video description should be automatically generated.</summary>
-        public bool? GenerateDescription { get; set; }
+        public bool? GenerateDescription { get => _explicitNullValueGenerateDescription; set { _explicitNullValueGenerateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generateDescription"); else _explicitNullProperties?.Remove("generateDescription"); } }
+        private bool? _explicitNullValueGenerateDescription = default!;
         /// <summary>Whether video moments should be automatically generated.</summary>
-        public bool? GenerateMoments { get; set; }
+        public bool? GenerateMoments { get => _explicitNullValueGenerateMoments; set { _explicitNullValueGenerateMoments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generateMoments"); else _explicitNullProperties?.Remove("generateMoments"); } }
+        private bool? _explicitNullValueGenerateMoments = default!;
         /// <summary>Whether video title should be automatically generated.</summary>
-        public bool? GenerateTitle { get; set; }
+        public bool? GenerateTitle { get => _explicitNullValueGenerateTitle; set { _explicitNullValueGenerateTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generateTitle"); else _explicitNullProperties?.Remove("generateTitle"); } }
+        private bool? _explicitNullValueGenerateTitle = default!;
         /// <summary>Video source language, use ISO 639-1 language code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceLanguage { get; set; }
+        public string? SourceLanguage { get => _explicitNullValueSourceLanguage; set { _explicitNullValueSourceLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceLanguage"); else _explicitNullProperties?.Remove("sourceLanguage"); } }
+        private string? _explicitNullValueSourceLanguage = default!;
 #nullable restore
 #else
-        public string SourceLanguage { get; set; }
+        public string SourceLanguage { get => _explicitNullValueSourceLanguage; set { _explicitNullValueSourceLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceLanguage"); else _explicitNullProperties?.Remove("sourceLanguage"); } }
+        private string _explicitNullValueSourceLanguage = default!;
 #endif
         /// <summary>List of languages that will be used as target languages, use ISO 639-1 language codes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TargetLanguages { get; set; }
+        public List<string>? TargetLanguages { get => _explicitNullValueTargetLanguages; set { _explicitNullValueTargetLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetLanguages"); else _explicitNullProperties?.Remove("targetLanguages"); } }
+        private List<string>? _explicitNullValueTargetLanguages = default!;
 #nullable restore
 #else
-        public List<string> TargetLanguages { get; set; }
+        public List<string> TargetLanguages { get => _explicitNullValueTargetLanguages; set { _explicitNullValueTargetLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetLanguages"); else _explicitNullProperties?.Remove("targetLanguages"); } }
+        private List<string> _explicitNullValueTargetLanguages = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.TranscribeSettings"/> and sets the default values.
@@ -53,7 +74,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.TranscribeSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.TranscribeSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.TranscribeSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +105,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("generateTitle", GenerateTitle);
             writer.WriteStringValue("sourceLanguage", SourceLanguage);
             writer.WriteCollectionOfPrimitiveValues<string>("targetLanguages", TargetLanguages);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

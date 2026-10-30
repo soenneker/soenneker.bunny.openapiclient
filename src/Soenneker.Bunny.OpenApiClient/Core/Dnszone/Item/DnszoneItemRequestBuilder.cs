@@ -90,6 +90,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -109,7 +111,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update DNS Zones
@@ -129,7 +131,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneModel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete DNS Zone
@@ -206,10 +208,9 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DnszoneItemRequestBuilderGetQueryParameters 
         {
-            #pragma warning disable CS1591
+            /// <summary>0 = Full1 = Lite</summary>
             [QueryParameter("view")]
             public int? View { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

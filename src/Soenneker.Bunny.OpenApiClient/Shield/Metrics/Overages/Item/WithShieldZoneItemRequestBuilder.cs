@@ -55,6 +55,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.Metrics.Overages.Item
             {
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.UnauthorizedResult.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMonthlyOveragesResult>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMonthlyOveragesResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

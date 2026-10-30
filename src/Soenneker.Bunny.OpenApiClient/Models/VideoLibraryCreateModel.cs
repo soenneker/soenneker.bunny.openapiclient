@@ -11,76 +11,126 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VideoLibraryCreateModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AllowDirectPlay") is { } nullNodeAllowDirectPlay && nullNodeAllowDirectPlay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDirectPlay = null;
+            if (parseNode.GetChildNode("AllowEarlyPlay") is { } nullNodeAllowEarlyPlay && nullNodeAllowEarlyPlay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEarlyPlay = null;
+            if (parseNode.GetChildNode("BlockNoneReferrer") is { } nullNodeBlockNoneReferrer && nullNodeBlockNoneReferrer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockNoneReferrer = null;
+            if (parseNode.GetChildNode("EnabledResolutions") is { } nullNodeEnabledResolutions && nullNodeEnabledResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnabledResolutions = null;
+            if (parseNode.GetChildNode("EnableMP4Fallback") is { } nullNodeEnableMP4Fallback && nullNodeEnableMP4Fallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableMP4Fallback = null;
+            if (parseNode.GetChildNode("EnableMultiAudioTrackSupport") is { } nullNodeEnableMultiAudioTrackSupport && nullNodeEnableMultiAudioTrackSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableMultiAudioTrackSupport = null;
+            if (parseNode.GetChildNode("EnableTranscribing") is { } nullNodeEnableTranscribing && nullNodeEnableTranscribing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTranscribing = null;
+            if (parseNode.GetChildNode("EnableTranscribingChaptersGeneration") is { } nullNodeEnableTranscribingChaptersGeneration && nullNodeEnableTranscribingChaptersGeneration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTranscribingChaptersGeneration = null;
+            if (parseNode.GetChildNode("EnableTranscribingDescriptionGeneration") is { } nullNodeEnableTranscribingDescriptionGeneration && nullNodeEnableTranscribingDescriptionGeneration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTranscribingDescriptionGeneration = null;
+            if (parseNode.GetChildNode("EnableTranscribingMomentsGeneration") is { } nullNodeEnableTranscribingMomentsGeneration && nullNodeEnableTranscribingMomentsGeneration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTranscribingMomentsGeneration = null;
+            if (parseNode.GetChildNode("EnableTranscribingTitleGeneration") is { } nullNodeEnableTranscribingTitleGeneration && nullNodeEnableTranscribingTitleGeneration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTranscribingTitleGeneration = null;
+            if (parseNode.GetChildNode("EncodingTier") is { } nullNodeEncodingTier && nullNodeEncodingTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EncodingTier = null;
+            if (parseNode.GetChildNode("JitEncodingEnabled") is { } nullNodeJitEncodingEnabled && nullNodeJitEncodingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JitEncodingEnabled = null;
+            if (parseNode.GetChildNode("KeepOriginalFiles") is { } nullNodeKeepOriginalFiles && nullNodeKeepOriginalFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepOriginalFiles = null;
+            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("OutputCodecs") is { } nullNodeOutputCodecs && nullNodeOutputCodecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputCodecs = null;
+            if (parseNode.GetChildNode("PlayerVersion") is { } nullNodePlayerVersion && nullNodePlayerVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayerVersion = null;
+            if (parseNode.GetChildNode("ReplicationRegions") is { } nullNodeReplicationRegions && nullNodeReplicationRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationRegions = null;
+            if (parseNode.GetChildNode("TranscribingCaptionLanguages") is { } nullNodeTranscribingCaptionLanguages && nullNodeTranscribingCaptionLanguages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscribingCaptionLanguages = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) Determines if direct play URLs should be enabled for the library</summary>
-        public bool? AllowDirectPlay { get; set; }
+        public bool? AllowDirectPlay { get => _explicitNullValueAllowDirectPlay; set { _explicitNullValueAllowDirectPlay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowDirectPlay"); else _explicitNullProperties?.Remove("AllowDirectPlay"); } }
+        private bool? _explicitNullValueAllowDirectPlay = default!;
         /// <summary>(Optional) Enables Early Play. Enabling this also exposes originals via CDN settings consistent with the video library update API.</summary>
-        public bool? AllowEarlyPlay { get; set; }
+        public bool? AllowEarlyPlay { get => _explicitNullValueAllowEarlyPlay; set { _explicitNullValueAllowEarlyPlay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowEarlyPlay"); else _explicitNullProperties?.Remove("AllowEarlyPlay"); } }
+        private bool? _explicitNullValueAllowEarlyPlay = default!;
         /// <summary>(Optional) Determines if requests without a referer should be blocked.</summary>
-        public bool? BlockNoneReferrer { get; set; }
+        public bool? BlockNoneReferrer { get => _explicitNullValueBlockNoneReferrer; set { _explicitNullValueBlockNoneReferrer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockNoneReferrer"); else _explicitNullProperties?.Remove("BlockNoneReferrer"); } }
+        private bool? _explicitNullValueBlockNoneReferrer = default!;
         /// <summary>(Optional) Sets the enabled resolutions for the transcoding. At least one resolution should be enabled. Possible values: 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnabledResolutions { get; set; }
+        public string? EnabledResolutions { get => _explicitNullValueEnabledResolutions; set { _explicitNullValueEnabledResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnabledResolutions"); else _explicitNullProperties?.Remove("EnabledResolutions"); } }
+        private string? _explicitNullValueEnabledResolutions = default!;
 #nullable restore
 #else
-        public string EnabledResolutions { get; set; }
+        public string EnabledResolutions { get => _explicitNullValueEnabledResolutions; set { _explicitNullValueEnabledResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnabledResolutions"); else _explicitNullProperties?.Remove("EnabledResolutions"); } }
+        private string _explicitNullValueEnabledResolutions = default!;
 #endif
         /// <summary>(Optional) Determines if MP4 fallback should be enabled for this library.</summary>
-        public bool? EnableMP4Fallback { get; set; }
+        public bool? EnableMP4Fallback { get => _explicitNullValueEnableMP4Fallback; set { _explicitNullValueEnableMP4Fallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableMP4Fallback"); else _explicitNullProperties?.Remove("EnableMP4Fallback"); } }
+        private bool? _explicitNullValueEnableMP4Fallback = default!;
         /// <summary>(Optional) Determines if multiple output audio track support is enabled on video library.</summary>
-        public bool? EnableMultiAudioTrackSupport { get; set; }
+        public bool? EnableMultiAudioTrackSupport { get => _explicitNullValueEnableMultiAudioTrackSupport; set { _explicitNullValueEnableMultiAudioTrackSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableMultiAudioTrackSupport"); else _explicitNullProperties?.Remove("EnableMultiAudioTrackSupport"); } }
+        private bool? _explicitNullValueEnableMultiAudioTrackSupport = default!;
         /// <summary>(Optional) Enables automatic audio transcribing for this library.</summary>
-        public bool? EnableTranscribing { get; set; }
+        public bool? EnableTranscribing { get => _explicitNullValueEnableTranscribing; set { _explicitNullValueEnableTranscribing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTranscribing"); else _explicitNullProperties?.Remove("EnableTranscribing"); } }
+        private bool? _explicitNullValueEnableTranscribing = default!;
         /// <summary>(Optional) Determines if automatic transcribing chapters generation is enabled for this library. Enabling any smart generation feature turns on transcribing automatically.</summary>
-        public bool? EnableTranscribingChaptersGeneration { get; set; }
+        public bool? EnableTranscribingChaptersGeneration { get => _explicitNullValueEnableTranscribingChaptersGeneration; set { _explicitNullValueEnableTranscribingChaptersGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTranscribingChaptersGeneration"); else _explicitNullProperties?.Remove("EnableTranscribingChaptersGeneration"); } }
+        private bool? _explicitNullValueEnableTranscribingChaptersGeneration = default!;
         /// <summary>(Optional) Determines if automatic transcribing description generation is enabled for this library. Enabling any smart generation feature turns on transcribing automatically.</summary>
-        public bool? EnableTranscribingDescriptionGeneration { get; set; }
+        public bool? EnableTranscribingDescriptionGeneration { get => _explicitNullValueEnableTranscribingDescriptionGeneration; set { _explicitNullValueEnableTranscribingDescriptionGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTranscribingDescriptionGeneration"); else _explicitNullProperties?.Remove("EnableTranscribingDescriptionGeneration"); } }
+        private bool? _explicitNullValueEnableTranscribingDescriptionGeneration = default!;
         /// <summary>(Optional) Determines if automatic transcribing moments generation is enabled for this library. Enabling any smart generation feature turns on transcribing automatically.</summary>
-        public bool? EnableTranscribingMomentsGeneration { get; set; }
+        public bool? EnableTranscribingMomentsGeneration { get => _explicitNullValueEnableTranscribingMomentsGeneration; set { _explicitNullValueEnableTranscribingMomentsGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTranscribingMomentsGeneration"); else _explicitNullProperties?.Remove("EnableTranscribingMomentsGeneration"); } }
+        private bool? _explicitNullValueEnableTranscribingMomentsGeneration = default!;
         /// <summary>(Optional) Determines if automatic transcribing title generation is enabled for this library. Enabling any smart generation feature turns on transcribing automatically.</summary>
-        public bool? EnableTranscribingTitleGeneration { get; set; }
-        /// <summary>(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support.</summary>
-        public int? EncodingTier { get; set; }
+        public bool? EnableTranscribingTitleGeneration { get => _explicitNullValueEnableTranscribingTitleGeneration; set { _explicitNullValueEnableTranscribingTitleGeneration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTranscribingTitleGeneration"); else _explicitNullProperties?.Remove("EnableTranscribingTitleGeneration"); } }
+        private bool? _explicitNullValueEnableTranscribingTitleGeneration = default!;
+        /// <summary>(Optional) Defines encoding tier. Premium is a paid tier that offers prioritized encoding and extra codec support.0 = Free1 = Premium</summary>
+        public int? EncodingTier { get => _explicitNullValueEncodingTier; set { _explicitNullValueEncodingTier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EncodingTier"); else _explicitNullProperties?.Remove("EncodingTier"); } }
+        private int? _explicitNullValueEncodingTier = default!;
         /// <summary>(Optional) Determines whether JIT encoding should be used for the library. Supported in premium encoding only.</summary>
-        public bool? JitEncodingEnabled { get; set; }
+        public bool? JitEncodingEnabled { get => _explicitNullValueJitEncodingEnabled; set { _explicitNullValueJitEncodingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JitEncodingEnabled"); else _explicitNullProperties?.Remove("JitEncodingEnabled"); } }
+        private bool? _explicitNullValueJitEncodingEnabled = default!;
         /// <summary>(Optional) Determines if the original file should be kept after the video is processed.</summary>
-        public bool? KeepOriginalFiles { get; set; }
+        public bool? KeepOriginalFiles { get => _explicitNullValueKeepOriginalFiles; set { _explicitNullValueKeepOriginalFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("KeepOriginalFiles"); else _explicitNullProperties?.Remove("KeepOriginalFiles"); } }
+        private bool? _explicitNullValueKeepOriginalFiles = default!;
         /// <summary>The name of the Video Library.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>(Optional) Specifies which video codecs are used for encoding, provided as a comma-separated (CSV) string. Free encoding tier supports only x264. A premium encoding tier adds support for vp9, hevc, and av1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutputCodecs { get; set; }
+        public string? OutputCodecs { get => _explicitNullValueOutputCodecs; set { _explicitNullValueOutputCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutputCodecs"); else _explicitNullProperties?.Remove("OutputCodecs"); } }
+        private string? _explicitNullValueOutputCodecs = default!;
 #nullable restore
 #else
-        public string OutputCodecs { get; set; }
+        public string OutputCodecs { get => _explicitNullValueOutputCodecs; set { _explicitNullValueOutputCodecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OutputCodecs"); else _explicitNullProperties?.Remove("OutputCodecs"); } }
+        private string _explicitNullValueOutputCodecs = default!;
 #endif
         /// <summary>(Optional) Sets player version used for this library</summary>
-        public int? PlayerVersion { get; set; }
+        public int? PlayerVersion { get => _explicitNullValuePlayerVersion; set { _explicitNullValuePlayerVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PlayerVersion"); else _explicitNullProperties?.Remove("PlayerVersion"); } }
+        private int? _explicitNullValuePlayerVersion = default!;
         /// <summary>The geo-replication regions of the underlying storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReplicationRegions { get; set; }
+        public List<string>? ReplicationRegions { get => _explicitNullValueReplicationRegions; set { _explicitNullValueReplicationRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationRegions"); else _explicitNullProperties?.Remove("ReplicationRegions"); } }
+        private List<string>? _explicitNullValueReplicationRegions = default!;
 #nullable restore
 #else
-        public List<string> ReplicationRegions { get; set; }
+        public List<string> ReplicationRegions { get => _explicitNullValueReplicationRegions; set { _explicitNullValueReplicationRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationRegions"); else _explicitNullProperties?.Remove("ReplicationRegions"); } }
+        private List<string> _explicitNullValueReplicationRegions = default!;
 #endif
         /// <summary>(Optional) Languages that captions will be automatically transcribed to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TranscribingCaptionLanguages { get; set; }
+        public List<string>? TranscribingCaptionLanguages { get => _explicitNullValueTranscribingCaptionLanguages; set { _explicitNullValueTranscribingCaptionLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscribingCaptionLanguages"); else _explicitNullProperties?.Remove("TranscribingCaptionLanguages"); } }
+        private List<string>? _explicitNullValueTranscribingCaptionLanguages = default!;
 #nullable restore
 #else
-        public List<string> TranscribingCaptionLanguages { get; set; }
+        public List<string> TranscribingCaptionLanguages { get => _explicitNullValueTranscribingCaptionLanguages; set { _explicitNullValueTranscribingCaptionLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscribingCaptionLanguages"); else _explicitNullProperties?.Remove("TranscribingCaptionLanguages"); } }
+        private List<string> _explicitNullValueTranscribingCaptionLanguages = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModel"/> and sets the default values.
@@ -97,7 +147,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryCreateModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -154,6 +204,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("PlayerVersion", PlayerVersion);
             writer.WriteCollectionOfPrimitiveValues<string>("ReplicationRegions", ReplicationRegions);
             writer.WriteCollectionOfPrimitiveValues<string>("TranscribingCaptionLanguages", TranscribingCaptionLanguages);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

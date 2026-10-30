@@ -11,42 +11,63 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SourceCodeIntegrationModelDeployConfiguration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Branch") is { } nullNodeBranch && nullNodeBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Branch = null;
+            if (parseNode.GetChildNode("BuildCommand") is { } nullNodeBuildCommand && nullNodeBuildCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildCommand = null;
+            if (parseNode.GetChildNode("CreateWorkflow") is { } nullNodeCreateWorkflow && nullNodeCreateWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateWorkflow = null;
+            if (parseNode.GetChildNode("EntryFile") is { } nullNodeEntryFile && nullNodeEntryFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntryFile = null;
+            if (parseNode.GetChildNode("InstallCommand") is { } nullNodeInstallCommand && nullNodeInstallCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstallCommand = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Branch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Branch { get; set; }
+        public string? Branch { get => _explicitNullValueBranch; set { _explicitNullValueBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Branch"); else _explicitNullProperties?.Remove("Branch"); } }
+        private string? _explicitNullValueBranch = default!;
 #nullable restore
 #else
-        public string Branch { get; set; }
+        public string Branch { get => _explicitNullValueBranch; set { _explicitNullValueBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Branch"); else _explicitNullProperties?.Remove("Branch"); } }
+        private string _explicitNullValueBranch = default!;
 #endif
         /// <summary>The BuildCommand property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BuildCommand { get; set; }
+        public string? BuildCommand { get => _explicitNullValueBuildCommand; set { _explicitNullValueBuildCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BuildCommand"); else _explicitNullProperties?.Remove("BuildCommand"); } }
+        private string? _explicitNullValueBuildCommand = default!;
 #nullable restore
 #else
-        public string BuildCommand { get; set; }
+        public string BuildCommand { get => _explicitNullValueBuildCommand; set { _explicitNullValueBuildCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BuildCommand"); else _explicitNullProperties?.Remove("BuildCommand"); } }
+        private string _explicitNullValueBuildCommand = default!;
 #endif
         /// <summary>The CreateWorkflow property</summary>
-        public bool? CreateWorkflow { get; set; }
+        public bool? CreateWorkflow { get => _explicitNullValueCreateWorkflow; set { _explicitNullValueCreateWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CreateWorkflow"); else _explicitNullProperties?.Remove("CreateWorkflow"); } }
+        private bool? _explicitNullValueCreateWorkflow = default!;
         /// <summary>The EntryFile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EntryFile { get; set; }
+        public string? EntryFile { get => _explicitNullValueEntryFile; set { _explicitNullValueEntryFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EntryFile"); else _explicitNullProperties?.Remove("EntryFile"); } }
+        private string? _explicitNullValueEntryFile = default!;
 #nullable restore
 #else
-        public string EntryFile { get; set; }
+        public string EntryFile { get => _explicitNullValueEntryFile; set { _explicitNullValueEntryFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EntryFile"); else _explicitNullProperties?.Remove("EntryFile"); } }
+        private string _explicitNullValueEntryFile = default!;
 #endif
         /// <summary>The InstallCommand property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InstallCommand { get; set; }
+        public string? InstallCommand { get => _explicitNullValueInstallCommand; set { _explicitNullValueInstallCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InstallCommand"); else _explicitNullProperties?.Remove("InstallCommand"); } }
+        private string? _explicitNullValueInstallCommand = default!;
 #nullable restore
 #else
-        public string InstallCommand { get; set; }
+        public string InstallCommand { get => _explicitNullValueInstallCommand; set { _explicitNullValueInstallCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InstallCommand"); else _explicitNullProperties?.Remove("InstallCommand"); } }
+        private string _explicitNullValueInstallCommand = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("CreateWorkflow", CreateWorkflow);
             writer.WriteStringValue("EntryFile", EntryFile);
             writer.WriteStringValue("InstallCommand", InstallCommand);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

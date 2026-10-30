@@ -11,24 +11,37 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FindContainerImageSuggestions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("sameImageTags") is { } nullNodeSameImageTags && nullNodeSameImageTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SameImageTags = null;
+            if (parseNode.GetChildNode("similarImages") is { } nullNodeSimilarImages && nullNodeSimilarImages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimilarImages = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The image with its first tags, from each registry that has the image but not the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>? SameImageTags { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>? SameImageTags { get => _explicitNullValueSameImageTags; set { _explicitNullValueSameImageTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sameImageTags"); else _explicitNullProperties?.Remove("sameImageTags"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>? _explicitNullValueSameImageTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags> SameImageTags { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags> SameImageTags { get => _explicitNullValueSameImageTags; set { _explicitNullValueSameImageTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sameImageTags"); else _explicitNullProperties?.Remove("sameImageTags"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags> _explicitNullValueSameImageTags = default!;
 #endif
         /// <summary>Other images whose name is like the one asked for, from the registries&apos; search or catalog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>? SimilarImages { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>? SimilarImages { get => _explicitNullValueSimilarImages; set { _explicitNullValueSimilarImages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("similarImages"); else _explicitNullProperties?.Remove("similarImages"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>? _explicitNullValueSimilarImages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage> SimilarImages { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage> SimilarImages { get => _explicitNullValueSimilarImages; set { _explicitNullValueSimilarImages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("similarImages"); else _explicitNullProperties?.Remove("similarImages"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage> _explicitNullValueSimilarImages = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageSuggestions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>("sameImageTags", SameImageTags);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>("similarImages", SimilarImages);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

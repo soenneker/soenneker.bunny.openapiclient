@@ -11,17 +11,32 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IndividualRatelimit : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blockedBreaches") is { } nullNodeBlockedBreaches && nullNodeBlockedBreaches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedBreaches = null;
+            if (parseNode.GetChildNode("challengedBreaches") is { } nullNodeChallengedBreaches && nullNodeChallengedBreaches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChallengedBreaches = null;
+            if (parseNode.GetChildNode("loggedBreaches") is { } nullNodeLoggedBreaches && nullNodeLoggedBreaches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggedBreaches = null;
+            if (parseNode.GetChildNode("totalBreaches") is { } nullNodeTotalBreaches && nullNodeTotalBreaches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBreaches = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blockedBreaches property</summary>
-        public int? BlockedBreaches { get; set; }
+        public int? BlockedBreaches { get => _explicitNullValueBlockedBreaches; set { _explicitNullValueBlockedBreaches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedBreaches"); else _explicitNullProperties?.Remove("blockedBreaches"); } }
+        private int? _explicitNullValueBlockedBreaches = default!;
         /// <summary>The challengedBreaches property</summary>
-        public int? ChallengedBreaches { get; set; }
+        public int? ChallengedBreaches { get => _explicitNullValueChallengedBreaches; set { _explicitNullValueChallengedBreaches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challengedBreaches"); else _explicitNullProperties?.Remove("challengedBreaches"); } }
+        private int? _explicitNullValueChallengedBreaches = default!;
         /// <summary>The loggedBreaches property</summary>
-        public int? LoggedBreaches { get; set; }
+        public int? LoggedBreaches { get => _explicitNullValueLoggedBreaches; set { _explicitNullValueLoggedBreaches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loggedBreaches"); else _explicitNullProperties?.Remove("loggedBreaches"); } }
+        private int? _explicitNullValueLoggedBreaches = default!;
         /// <summary>The totalBreaches property</summary>
-        public int? TotalBreaches { get; set; }
+        public int? TotalBreaches { get => _explicitNullValueTotalBreaches; set { _explicitNullValueTotalBreaches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBreaches"); else _explicitNullProperties?.Remove("totalBreaches"); } }
+        private int? _explicitNullValueTotalBreaches = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("challengedBreaches", ChallengedBreaches);
             writer.WriteIntValue("loggedBreaches", LoggedBreaches);
             writer.WriteIntValue("totalBreaches", TotalBreaches);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

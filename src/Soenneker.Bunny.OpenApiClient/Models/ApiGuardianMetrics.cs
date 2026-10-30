@@ -11,29 +11,51 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiGuardianMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("overviewPastTwentyEightDays") is { } nullNodeOverviewPastTwentyEightDays && nullNodeOverviewPastTwentyEightDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverviewPastTwentyEightDays = null;
+            if (parseNode.GetChildNode("totalBlockedRequests") is { } nullNodeTotalBlockedRequests && nullNodeTotalBlockedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBlockedRequests = null;
+            if (parseNode.GetChildNode("totalFailedAuthenticationEnforcement") is { } nullNodeTotalFailedAuthenticationEnforcement && nullNodeTotalFailedAuthenticationEnforcement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFailedAuthenticationEnforcement = null;
+            if (parseNode.GetChildNode("totalFailedRequestValidation") is { } nullNodeTotalFailedRequestValidation && nullNodeTotalFailedRequestValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFailedRequestValidation = null;
+            if (parseNode.GetChildNode("totalLoggedRequests") is { } nullNodeTotalLoggedRequests && nullNodeTotalLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLoggedRequests = null;
+            if (parseNode.GetChildNode("totalRateLimited") is { } nullNodeTotalRateLimited && nullNodeTotalRateLimited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRateLimited = null;
+            if (parseNode.GetChildNode("totalRequestsInspected") is { } nullNodeTotalRequestsInspected && nullNodeTotalRequestsInspected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestsInspected = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty2? _explicitNullValueOverviewPastTwentyEightDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetricsOverviewPastTwentyEightDaysProperty2 _explicitNullValueOverviewPastTwentyEightDays = default!;
 #endif
         /// <summary>The totalBlockedRequests property</summary>
-        public long? TotalBlockedRequests { get; set; }
+        public long? TotalBlockedRequests { get => _explicitNullValueTotalBlockedRequests; set { _explicitNullValueTotalBlockedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBlockedRequests"); else _explicitNullProperties?.Remove("totalBlockedRequests"); } }
+        private long? _explicitNullValueTotalBlockedRequests = default!;
         /// <summary>The totalFailedAuthenticationEnforcement property</summary>
-        public long? TotalFailedAuthenticationEnforcement { get; set; }
+        public long? TotalFailedAuthenticationEnforcement { get => _explicitNullValueTotalFailedAuthenticationEnforcement; set { _explicitNullValueTotalFailedAuthenticationEnforcement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalFailedAuthenticationEnforcement"); else _explicitNullProperties?.Remove("totalFailedAuthenticationEnforcement"); } }
+        private long? _explicitNullValueTotalFailedAuthenticationEnforcement = default!;
         /// <summary>The totalFailedRequestValidation property</summary>
-        public long? TotalFailedRequestValidation { get; set; }
+        public long? TotalFailedRequestValidation { get => _explicitNullValueTotalFailedRequestValidation; set { _explicitNullValueTotalFailedRequestValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalFailedRequestValidation"); else _explicitNullProperties?.Remove("totalFailedRequestValidation"); } }
+        private long? _explicitNullValueTotalFailedRequestValidation = default!;
         /// <summary>The totalLoggedRequests property</summary>
-        public long? TotalLoggedRequests { get; set; }
+        public long? TotalLoggedRequests { get => _explicitNullValueTotalLoggedRequests; set { _explicitNullValueTotalLoggedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalLoggedRequests"); else _explicitNullProperties?.Remove("totalLoggedRequests"); } }
+        private long? _explicitNullValueTotalLoggedRequests = default!;
         /// <summary>The totalRateLimited property</summary>
-        public long? TotalRateLimited { get; set; }
+        public long? TotalRateLimited { get => _explicitNullValueTotalRateLimited; set { _explicitNullValueTotalRateLimited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRateLimited"); else _explicitNullProperties?.Remove("totalRateLimited"); } }
+        private long? _explicitNullValueTotalRateLimited = default!;
         /// <summary>The totalRequestsInspected property</summary>
-        public long? TotalRequestsInspected { get; set; }
+        public long? TotalRequestsInspected { get => _explicitNullValueTotalRequestsInspected; set { _explicitNullValueTotalRequestsInspected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalRequestsInspected"); else _explicitNullProperties?.Remove("totalRequestsInspected"); } }
+        private long? _explicitNullValueTotalRequestsInspected = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetrics"/> and sets the default values.
         /// </summary>
@@ -49,7 +71,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetrics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetrics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianMetrics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("totalLoggedRequests", TotalLoggedRequests);
             writer.WriteLongValue("totalRateLimited", TotalRateLimited);
             writer.WriteLongValue("totalRequestsInspected", TotalRequestsInspected);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

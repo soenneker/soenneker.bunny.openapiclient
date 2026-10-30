@@ -76,6 +76,8 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfVideoModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfVideoModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -105,6 +107,8 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.VideoModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.VideoModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

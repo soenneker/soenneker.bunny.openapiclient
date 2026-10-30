@@ -57,6 +57,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.RegionSettings
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -92,6 +94,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.RegionSettings
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

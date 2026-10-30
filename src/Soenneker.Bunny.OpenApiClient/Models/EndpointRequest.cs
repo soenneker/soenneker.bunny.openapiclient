@@ -11,32 +11,48 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EndpointRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("anycast") is { } nullNodeAnycast && nullNodeAnycast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Anycast = null;
+            if (parseNode.GetChildNode("cdn") is { } nullNodeCdn && nullNodeCdn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cdn = null;
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The anycast property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest? Anycast { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest? Anycast { get => _explicitNullValueAnycast; set { _explicitNullValueAnycast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycast"); else _explicitNullProperties?.Remove("anycast"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest? _explicitNullValueAnycast = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest Anycast { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest Anycast { get => _explicitNullValueAnycast; set { _explicitNullValueAnycast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycast"); else _explicitNullProperties?.Remove("anycast"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest _explicitNullValueAnycast = default!;
 #endif
         /// <summary>The cdn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest? Cdn { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest? Cdn { get => _explicitNullValueCdn; set { _explicitNullValueCdn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdn"); else _explicitNullProperties?.Remove("cdn"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest? _explicitNullValueCdn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest Cdn { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest Cdn { get => _explicitNullValueCdn; set { _explicitNullValueCdn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdn"); else _explicitNullProperties?.Remove("cdn"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest _explicitNullValueCdn = default!;
 #endif
         /// <summary>The displayName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest>("anycast", Anycast);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest>("cdn", Cdn);
             writer.WriteStringValue("displayName", DisplayName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

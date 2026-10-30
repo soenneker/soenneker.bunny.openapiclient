@@ -11,31 +11,50 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VideoLibraryLanguage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ShortCode") is { } nullNodeShortCode && nullNodeShortCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortCode = null;
+            if (parseNode.GetChildNode("SupportPlayerTranslation") is { } nullNodeSupportPlayerTranslation && nullNodeSupportPlayerTranslation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportPlayerTranslation = null;
+            if (parseNode.GetChildNode("SupportTranscribing") is { } nullNodeSupportTranscribing && nullNodeSupportTranscribing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportTranscribing = null;
+            if (parseNode.GetChildNode("TranscribingAccuracy") is { } nullNodeTranscribingAccuracy && nullNodeTranscribingAccuracy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscribingAccuracy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ShortCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortCode { get; set; }
+        public string? ShortCode { get => _explicitNullValueShortCode; set { _explicitNullValueShortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShortCode"); else _explicitNullProperties?.Remove("ShortCode"); } }
+        private string? _explicitNullValueShortCode = default!;
 #nullable restore
 #else
-        public string ShortCode { get; set; }
+        public string ShortCode { get => _explicitNullValueShortCode; set { _explicitNullValueShortCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShortCode"); else _explicitNullProperties?.Remove("ShortCode"); } }
+        private string _explicitNullValueShortCode = default!;
 #endif
         /// <summary>The SupportPlayerTranslation property</summary>
-        public bool? SupportPlayerTranslation { get; set; }
+        public bool? SupportPlayerTranslation { get => _explicitNullValueSupportPlayerTranslation; set { _explicitNullValueSupportPlayerTranslation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SupportPlayerTranslation"); else _explicitNullProperties?.Remove("SupportPlayerTranslation"); } }
+        private bool? _explicitNullValueSupportPlayerTranslation = default!;
         /// <summary>The SupportTranscribing property</summary>
-        public bool? SupportTranscribing { get; set; }
+        public bool? SupportTranscribing { get => _explicitNullValueSupportTranscribing; set { _explicitNullValueSupportTranscribing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SupportTranscribing"); else _explicitNullProperties?.Remove("SupportTranscribing"); } }
+        private bool? _explicitNullValueSupportTranscribing = default!;
         /// <summary>The TranscribingAccuracy property</summary>
-        public int? TranscribingAccuracy { get; set; }
+        public int? TranscribingAccuracy { get => _explicitNullValueTranscribingAccuracy; set { _explicitNullValueTranscribingAccuracy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscribingAccuracy"); else _explicitNullProperties?.Remove("TranscribingAccuracy"); } }
+        private int? _explicitNullValueTranscribingAccuracy = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryLanguage"/> and sets the default values.
         /// </summary>
@@ -51,7 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryLanguage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryLanguage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryLanguage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("SupportPlayerTranslation", SupportPlayerTranslation);
             writer.WriteBoolValue("SupportTranscribing", SupportTranscribing);
             writer.WriteIntValue("TranscribingAccuracy", TranscribingAccuracy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

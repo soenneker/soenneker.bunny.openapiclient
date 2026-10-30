@@ -59,6 +59,8 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoResolutionsInfoModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoResolutionsInfoModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

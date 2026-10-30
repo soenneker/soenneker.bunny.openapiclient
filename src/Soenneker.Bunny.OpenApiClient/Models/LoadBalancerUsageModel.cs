@@ -11,30 +11,54 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LoadBalancerUsageModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("CurrentRequests") is { } nullNodeCurrentRequests && nullNodeCurrentRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentRequests = null;
+            if (parseNode.GetChildNode("IncludedRequests") is { } nullNodeIncludedRequests && nullNodeIncludedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludedRequests = null;
+            if (parseNode.GetChildNode("LoadBalancerId") is { } nullNodeLoadBalancerId && nullNodeLoadBalancerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadBalancerId = null;
+            if (parseNode.GetChildNode("MonthlyFee") is { } nullNodeMonthlyFee && nullNodeMonthlyFee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyFee = null;
+            if (parseNode.GetChildNode("PeriodEnd") is { } nullNodePeriodEnd && nullNodePeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodEnd = null;
+            if (parseNode.GetChildNode("PeriodStart") is { } nullNodePeriodStart && nullNodePeriodStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodStart = null;
+            if (parseNode.GetChildNode("ResetsAt") is { } nullNodeResetsAt && nullNodeResetsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetsAt = null;
+            if (parseNode.GetChildNode("Tiers") is { } nullNodeTiers && nullNodeTiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tiers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CurrentRequests property</summary>
-        public long? CurrentRequests { get; set; }
+        public long? CurrentRequests { get => _explicitNullValueCurrentRequests; set { _explicitNullValueCurrentRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CurrentRequests"); else _explicitNullProperties?.Remove("CurrentRequests"); } }
+        private long? _explicitNullValueCurrentRequests = default!;
         /// <summary>The IncludedRequests property</summary>
-        public long? IncludedRequests { get; set; }
+        public long? IncludedRequests { get => _explicitNullValueIncludedRequests; set { _explicitNullValueIncludedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IncludedRequests"); else _explicitNullProperties?.Remove("IncludedRequests"); } }
+        private long? _explicitNullValueIncludedRequests = default!;
         /// <summary>The LoadBalancerId property</summary>
-        public long? LoadBalancerId { get; set; }
+        public long? LoadBalancerId { get => _explicitNullValueLoadBalancerId; set { _explicitNullValueLoadBalancerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadBalancerId"); else _explicitNullProperties?.Remove("LoadBalancerId"); } }
+        private long? _explicitNullValueLoadBalancerId = default!;
         /// <summary>The MonthlyFee property</summary>
-        public decimal? MonthlyFee { get; set; }
+        public decimal? MonthlyFee { get => _explicitNullValueMonthlyFee; set { _explicitNullValueMonthlyFee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyFee"); else _explicitNullProperties?.Remove("MonthlyFee"); } }
+        private decimal? _explicitNullValueMonthlyFee = default!;
         /// <summary>The PeriodEnd property</summary>
-        public DateTimeOffset? PeriodEnd { get; set; }
+        public DateTimeOffset? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PeriodEnd"); else _explicitNullProperties?.Remove("PeriodEnd"); } }
+        private DateTimeOffset? _explicitNullValuePeriodEnd = default!;
         /// <summary>The PeriodStart property</summary>
-        public DateTimeOffset? PeriodStart { get; set; }
+        public DateTimeOffset? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PeriodStart"); else _explicitNullProperties?.Remove("PeriodStart"); } }
+        private DateTimeOffset? _explicitNullValuePeriodStart = default!;
         /// <summary>The ResetsAt property</summary>
-        public DateTimeOffset? ResetsAt { get; set; }
+        public DateTimeOffset? ResetsAt { get => _explicitNullValueResetsAt; set { _explicitNullValueResetsAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ResetsAt"); else _explicitNullProperties?.Remove("ResetsAt"); } }
+        private DateTimeOffset? _explicitNullValueResetsAt = default!;
         /// <summary>The Tiers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel>? Tiers { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel>? Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tiers"); else _explicitNullProperties?.Remove("Tiers"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel>? _explicitNullValueTiers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel> Tiers { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel> Tiers { get => _explicitNullValueTiers; set { _explicitNullValueTiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tiers"); else _explicitNullProperties?.Remove("Tiers"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel> _explicitNullValueTiers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerUsageModel"/> and sets the default values.
@@ -51,7 +75,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerUsageModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerUsageModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerUsageModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +110,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("PeriodStart", PeriodStart);
             writer.WriteDateTimeOffsetValue("ResetsAt", ResetsAt);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel>("Tiers", Tiers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

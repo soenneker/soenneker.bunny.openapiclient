@@ -11,26 +11,41 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AddEdgeScriptModelIntegration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("DeployConfiguration") is { } nullNodeDeployConfiguration && nullNodeDeployConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeployConfiguration = null;
+            if (parseNode.GetChildNode("IntegrationId") is { } nullNodeIntegrationId && nullNodeIntegrationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationId = null;
+            if (parseNode.GetChildNode("RepositorySettings") is { } nullNodeRepositorySettings && nullNodeRepositorySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositorySettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The DeployConfiguration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration? DeployConfiguration { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration? DeployConfiguration { get => _explicitNullValueDeployConfiguration; set { _explicitNullValueDeployConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeployConfiguration"); else _explicitNullProperties?.Remove("DeployConfiguration"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration? _explicitNullValueDeployConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration DeployConfiguration { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration DeployConfiguration { get => _explicitNullValueDeployConfiguration; set { _explicitNullValueDeployConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DeployConfiguration"); else _explicitNullProperties?.Remove("DeployConfiguration"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration _explicitNullValueDeployConfiguration = default!;
 #endif
         /// <summary>The IntegrationId property</summary>
-        public long? IntegrationId { get; set; }
+        public long? IntegrationId { get => _explicitNullValueIntegrationId; set { _explicitNullValueIntegrationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IntegrationId"); else _explicitNullProperties?.Remove("IntegrationId"); } }
+        private long? _explicitNullValueIntegrationId = default!;
         /// <summary>The RepositorySettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings? RepositorySettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings? RepositorySettings { get => _explicitNullValueRepositorySettings; set { _explicitNullValueRepositorySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RepositorySettings"); else _explicitNullProperties?.Remove("RepositorySettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings? _explicitNullValueRepositorySettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings RepositorySettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings RepositorySettings { get => _explicitNullValueRepositorySettings; set { _explicitNullValueRepositorySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RepositorySettings"); else _explicitNullProperties?.Remove("RepositorySettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings _explicitNullValueRepositorySettings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.AddEdgeScriptModelIntegration"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.AddEdgeScriptModelIntegration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.AddEdgeScriptModelIntegration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.AddEdgeScriptModelIntegration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelDeployConfiguration>("DeployConfiguration", DeployConfiguration);
             writer.WriteLongValue("IntegrationId", IntegrationId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SourceCodeIntegrationModelRepositorySettings>("RepositorySettings", RepositorySettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

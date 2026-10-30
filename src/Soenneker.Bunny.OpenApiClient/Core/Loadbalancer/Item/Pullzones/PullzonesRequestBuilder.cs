@@ -55,6 +55,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Loadbalancer.Item.Pullzones
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAttachedZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAttachedZoneModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();

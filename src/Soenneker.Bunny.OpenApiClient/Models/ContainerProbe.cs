@@ -11,43 +11,69 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ContainerProbe : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("failureThreshold") is { } nullNodeFailureThreshold && nullNodeFailureThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureThreshold = null;
+            if (parseNode.GetChildNode("grpc") is { } nullNodeGrpc && nullNodeGrpc.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Grpc = null;
+            if (parseNode.GetChildNode("httpGet") is { } nullNodeHttpGet && nullNodeHttpGet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpGet = null;
+            if (parseNode.GetChildNode("initialDelaySeconds") is { } nullNodeInitialDelaySeconds && nullNodeInitialDelaySeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialDelaySeconds = null;
+            if (parseNode.GetChildNode("periodSeconds") is { } nullNodePeriodSeconds && nullNodePeriodSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodSeconds = null;
+            if (parseNode.GetChildNode("successThreshold") is { } nullNodeSuccessThreshold && nullNodeSuccessThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuccessThreshold = null;
+            if (parseNode.GetChildNode("tcpSocket") is { } nullNodeTcpSocket && nullNodeTcpSocket.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TcpSocket = null;
+            if (parseNode.GetChildNode("timeoutSeconds") is { } nullNodeTimeoutSeconds && nullNodeTimeoutSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutSeconds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The failureThreshold property</summary>
-        public int? FailureThreshold { get; set; }
+        public int? FailureThreshold { get => _explicitNullValueFailureThreshold; set { _explicitNullValueFailureThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureThreshold"); else _explicitNullProperties?.Remove("failureThreshold"); } }
+        private int? _explicitNullValueFailureThreshold = default!;
         /// <summary>The grpc property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GrpcProbe? Grpc { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GrpcProbe? Grpc { get => _explicitNullValueGrpc; set { _explicitNullValueGrpc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grpc"); else _explicitNullProperties?.Remove("grpc"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.GrpcProbe? _explicitNullValueGrpc = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GrpcProbe Grpc { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GrpcProbe Grpc { get => _explicitNullValueGrpc; set { _explicitNullValueGrpc = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("grpc"); else _explicitNullProperties?.Remove("grpc"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.GrpcProbe _explicitNullValueGrpc = default!;
 #endif
         /// <summary>The httpGet property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbe? HttpGet { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbe? HttpGet { get => _explicitNullValueHttpGet; set { _explicitNullValueHttpGet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpGet"); else _explicitNullProperties?.Remove("httpGet"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbe? _explicitNullValueHttpGet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbe HttpGet { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbe HttpGet { get => _explicitNullValueHttpGet; set { _explicitNullValueHttpGet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpGet"); else _explicitNullProperties?.Remove("httpGet"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbe _explicitNullValueHttpGet = default!;
 #endif
         /// <summary>The initialDelaySeconds property</summary>
-        public int? InitialDelaySeconds { get; set; }
+        public int? InitialDelaySeconds { get => _explicitNullValueInitialDelaySeconds; set { _explicitNullValueInitialDelaySeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialDelaySeconds"); else _explicitNullProperties?.Remove("initialDelaySeconds"); } }
+        private int? _explicitNullValueInitialDelaySeconds = default!;
         /// <summary>The periodSeconds property</summary>
-        public int? PeriodSeconds { get; set; }
+        public int? PeriodSeconds { get => _explicitNullValuePeriodSeconds; set { _explicitNullValuePeriodSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodSeconds"); else _explicitNullProperties?.Remove("periodSeconds"); } }
+        private int? _explicitNullValuePeriodSeconds = default!;
         /// <summary>The successThreshold property</summary>
-        public int? SuccessThreshold { get; set; }
+        public int? SuccessThreshold { get => _explicitNullValueSuccessThreshold; set { _explicitNullValueSuccessThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("successThreshold"); else _explicitNullProperties?.Remove("successThreshold"); } }
+        private int? _explicitNullValueSuccessThreshold = default!;
         /// <summary>The tcpSocket property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe? TcpSocket { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe? TcpSocket { get => _explicitNullValueTcpSocket; set { _explicitNullValueTcpSocket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tcpSocket"); else _explicitNullProperties?.Remove("tcpSocket"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe? _explicitNullValueTcpSocket = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe TcpSocket { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe TcpSocket { get => _explicitNullValueTcpSocket; set { _explicitNullValueTcpSocket = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tcpSocket"); else _explicitNullProperties?.Remove("tcpSocket"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe _explicitNullValueTcpSocket = default!;
 #endif
         /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get; set; }
+        public int? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
+        private int? _explicitNullValueTimeoutSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe"/> and sets the default values.
         /// </summary>
@@ -68,7 +94,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +129,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("successThreshold", SuccessThreshold);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TcpSocketProbe>("tcpSocket", TcpSocket);
             writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

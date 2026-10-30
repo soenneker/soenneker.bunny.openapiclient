@@ -12,27 +12,42 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LoadBalancerOriginCreateModelStandardOrigin : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("HostHeader") is { } nullNodeHostHeader && nullNodeHostHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostHeader = null;
+            if (parseNode.GetChildNode("OriginUrl") is { } nullNodeOriginUrl && nullNodeOriginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginUrl = null;
+            if (parseNode.GetChildNode("VerifySsl") is { } nullNodeVerifySsl && nullNodeVerifySsl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifySsl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The host header to send to the origin server</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostHeader { get; set; }
+        public string? HostHeader { get => _explicitNullValueHostHeader; set { _explicitNullValueHostHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostHeader"); else _explicitNullProperties?.Remove("HostHeader"); } }
+        private string? _explicitNullValueHostHeader = default!;
 #nullable restore
 #else
-        public string HostHeader { get; set; }
+        public string HostHeader { get => _explicitNullValueHostHeader; set { _explicitNullValueHostHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HostHeader"); else _explicitNullProperties?.Remove("HostHeader"); } }
+        private string _explicitNullValueHostHeader = default!;
 #endif
         /// <summary>The URL of the origin server</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginUrl { get; set; }
+        public string? OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        private string? _explicitNullValueOriginUrl = default!;
 #nullable restore
 #else
-        public string OriginUrl { get; set; }
+        public string OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        private string _explicitNullValueOriginUrl = default!;
 #endif
         /// <summary>Whether to verify the SSL certificate of the origin server</summary>
-        public bool? VerifySsl { get; set; }
+        public bool? VerifySsl { get => _explicitNullValueVerifySsl; set { _explicitNullValueVerifySsl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerifySsl"); else _explicitNullProperties?.Remove("VerifySsl"); } }
+        private bool? _explicitNullValueVerifySsl = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("HostHeader", HostHeader);
             writer.WriteStringValue("OriginUrl", OriginUrl);
             writer.WriteBoolValue("VerifySsl", VerifySsl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

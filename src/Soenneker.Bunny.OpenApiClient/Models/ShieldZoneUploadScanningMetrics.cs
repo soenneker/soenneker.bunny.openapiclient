@@ -11,23 +11,39 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ShieldZoneUploadScanningMetrics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("overviewPastTwentyEightDays") is { } nullNodeOverviewPastTwentyEightDays && nullNodeOverviewPastTwentyEightDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverviewPastTwentyEightDays = null;
+            if (parseNode.GetChildNode("totalBlockedRequests") is { } nullNodeTotalBlockedRequests && nullNodeTotalBlockedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBlockedRequests = null;
+            if (parseNode.GetChildNode("totalFilesScanned") is { } nullNodeTotalFilesScanned && nullNodeTotalFilesScanned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalFilesScanned = null;
+            if (parseNode.GetChildNode("totalLoggedRequests") is { } nullNodeTotalLoggedRequests && nullNodeTotalLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLoggedRequests = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2? _explicitNullValueOverviewPastTwentyEightDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2 _explicitNullValueOverviewPastTwentyEightDays = default!;
 #endif
         /// <summary>The totalBlockedRequests property</summary>
-        public int? TotalBlockedRequests { get; set; }
+        public int? TotalBlockedRequests { get => _explicitNullValueTotalBlockedRequests; set { _explicitNullValueTotalBlockedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBlockedRequests"); else _explicitNullProperties?.Remove("totalBlockedRequests"); } }
+        private int? _explicitNullValueTotalBlockedRequests = default!;
         /// <summary>The totalFilesScanned property</summary>
-        public int? TotalFilesScanned { get; set; }
+        public int? TotalFilesScanned { get => _explicitNullValueTotalFilesScanned; set { _explicitNullValueTotalFilesScanned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalFilesScanned"); else _explicitNullProperties?.Remove("totalFilesScanned"); } }
+        private int? _explicitNullValueTotalFilesScanned = default!;
         /// <summary>The totalLoggedRequests property</summary>
-        public int? TotalLoggedRequests { get; set; }
+        public int? TotalLoggedRequests { get => _explicitNullValueTotalLoggedRequests; set { _explicitNullValueTotalLoggedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalLoggedRequests"); else _explicitNullProperties?.Remove("totalLoggedRequests"); } }
+        private int? _explicitNullValueTotalLoggedRequests = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetrics"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetrics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetrics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetrics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("totalBlockedRequests", TotalBlockedRequests);
             writer.WriteIntValue("totalFilesScanned", TotalFilesScanned);
             writer.WriteIntValue("totalLoggedRequests", TotalLoggedRequests);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

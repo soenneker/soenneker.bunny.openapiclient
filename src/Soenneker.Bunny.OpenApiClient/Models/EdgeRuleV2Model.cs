@@ -11,74 +11,112 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EdgeRuleV2Model : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ActionParameter1") is { } nullNodeActionParameter1 && nullNodeActionParameter1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter1 = null;
+            if (parseNode.GetChildNode("ActionParameter2") is { } nullNodeActionParameter2 && nullNodeActionParameter2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter2 = null;
+            if (parseNode.GetChildNode("ActionParameter3") is { } nullNodeActionParameter3 && nullNodeActionParameter3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter3 = null;
+            if (parseNode.GetChildNode("ActionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("ExtraActions") is { } nullNodeExtraActions && nullNodeExtraActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraActions = null;
+            if (parseNode.GetChildNode("Guid") is { } nullNodeGuid && nullNodeGuid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Guid = null;
+            if (parseNode.GetChildNode("OrderIndex") is { } nullNodeOrderIndex && nullNodeOrderIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderIndex = null;
+            if (parseNode.GetChildNode("ReadOnly") is { } nullNodeReadOnly && nullNodeReadOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadOnly = null;
+            if (parseNode.GetChildNode("TriggerMatchingType") is { } nullNodeTriggerMatchingType && nullNodeTriggerMatchingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerMatchingType = null;
+            if (parseNode.GetChildNode("Triggers") is { } nullNodeTriggers && nullNodeTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Triggers = null;
+        }
+
         /// <summary>The Action parameter 1. The value depends on other parameters of the edge rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionParameter1 { get; set; }
+        public string? ActionParameter1 { get => _explicitNullValueActionParameter1; set { _explicitNullValueActionParameter1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter1"); else _explicitNullProperties?.Remove("ActionParameter1"); } }
+        private string? _explicitNullValueActionParameter1 = default!;
 #nullable restore
 #else
-        public string ActionParameter1 { get; set; }
+        public string ActionParameter1 { get => _explicitNullValueActionParameter1; set { _explicitNullValueActionParameter1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter1"); else _explicitNullProperties?.Remove("ActionParameter1"); } }
+        private string _explicitNullValueActionParameter1 = default!;
 #endif
         /// <summary>The Action parameter 2. The value depends on other parameters of the edge rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionParameter2 { get; set; }
+        public string? ActionParameter2 { get => _explicitNullValueActionParameter2; set { _explicitNullValueActionParameter2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter2"); else _explicitNullProperties?.Remove("ActionParameter2"); } }
+        private string? _explicitNullValueActionParameter2 = default!;
 #nullable restore
 #else
-        public string ActionParameter2 { get; set; }
+        public string ActionParameter2 { get => _explicitNullValueActionParameter2; set { _explicitNullValueActionParameter2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter2"); else _explicitNullProperties?.Remove("ActionParameter2"); } }
+        private string _explicitNullValueActionParameter2 = default!;
 #endif
         /// <summary>The Action parameter 3. The value depends on other parameters of the edge rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionParameter3 { get; set; }
+        public string? ActionParameter3 { get => _explicitNullValueActionParameter3; set { _explicitNullValueActionParameter3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter3"); else _explicitNullProperties?.Remove("ActionParameter3"); } }
+        private string? _explicitNullValueActionParameter3 = default!;
 #nullable restore
 #else
-        public string ActionParameter3 { get; set; }
+        public string ActionParameter3 { get => _explicitNullValueActionParameter3; set { _explicitNullValueActionParameter3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter3"); else _explicitNullProperties?.Remove("ActionParameter3"); } }
+        private string _explicitNullValueActionParameter3 = default!;
 #endif
-        /// <summary>The action type of the edge rule</summary>
-        public int? ActionType { get; set; }
+        /// <summary>The action type of the edge rule&lt;details&gt;&lt;summary&gt;Show all 38 values&lt;/summary&gt;| Value | Name ||---|---|| `0` | Force SSL || `1` | Redirect || `2` | Origin URL || `3` | Override Cache Time || `4` | Block Request || `5` | Set Response Header || `6` | Set Request Header || `7` | Force Download || `8` | Disable Token Authentication || `9` | Enable Token Authentication || `10` | Override Cache Time Public || `11` | Ignore Query String || `12` | Disable Optimizer || `13` | Force Compression || `14` | Set Status Code || `15` | Bypass Perma-Cache || `16` | Override Browser Cache Time || `17` | Origin Storage || `18` | Set Network Rate Limit || `19` | Set Connection Limit || `20` | Set Requests Per Second Limit || `21` | Run Edge Script || `22` | Origin Magic Containers || `23` | Disable WAF || `24` | Retry Origin || `25` | Override Browser Cache Response Header || `26` | Remove Browser Cache Response Header || `27` | Disable Shield Challenge || `28` | Disable Shield || `29` | Disable Shield Bot Detection || `30` | Bypass AWS S3 Authentication || `31` | Disable Shield Access Lists || `32` | Disable Shield Rate Limiting || `33` | Enable Request Coalescing || `34` | Disable Request Coalescing || `35` | Use Load Balancer || `36` | Force Load Balancer Sticky Session Mode || `37` | Strip Cookies (Client to Origin) |&lt;/details&gt;</summary>
+        public int? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionType"); else _explicitNullProperties?.Remove("ActionType"); } }
+        private int? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The description of the edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Determines if the edge rule is currently enabled or not</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The ExtraActions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel>? ExtraActions { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel>? ExtraActions { get => _explicitNullValueExtraActions; set { _explicitNullValueExtraActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExtraActions"); else _explicitNullProperties?.Remove("ExtraActions"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel>? _explicitNullValueExtraActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel> ExtraActions { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel> ExtraActions { get => _explicitNullValueExtraActions; set { _explicitNullValueExtraActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ExtraActions"); else _explicitNullProperties?.Remove("ExtraActions"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2ActionModel> _explicitNullValueExtraActions = default!;
 #endif
         /// <summary>The unique GUID of the edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Guid { get; set; }
+        public string? Guid { get => _explicitNullValueGuid; set { _explicitNullValueGuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Guid"); else _explicitNullProperties?.Remove("Guid"); } }
+        private string? _explicitNullValueGuid = default!;
 #nullable restore
 #else
-        public string Guid { get; set; }
+        public string Guid { get => _explicitNullValueGuid; set { _explicitNullValueGuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Guid"); else _explicitNullProperties?.Remove("Guid"); } }
+        private string _explicitNullValueGuid = default!;
 #endif
         /// <summary>The index of the edge rule in the list of execution priority</summary>
-        public int? OrderIndex { get; set; }
+        public int? OrderIndex { get => _explicitNullValueOrderIndex; set { _explicitNullValueOrderIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OrderIndex"); else _explicitNullProperties?.Remove("OrderIndex"); } }
+        private int? _explicitNullValueOrderIndex = default!;
         /// <summary>Determines if the edge rule is read-only and cannot be modified or deleted</summary>
-        public bool? ReadOnly { get; set; }
-        /// <summary>The trigger matching type</summary>
-        public int? TriggerMatchingType { get; set; }
+        public bool? ReadOnly { get => _explicitNullValueReadOnly; set { _explicitNullValueReadOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReadOnly"); else _explicitNullProperties?.Remove("ReadOnly"); } }
+        private bool? _explicitNullValueReadOnly = default!;
+        /// <summary>The trigger matching type0 = Match Any1 = Match All2 = Match None</summary>
+        public int? TriggerMatchingType { get => _explicitNullValueTriggerMatchingType; set { _explicitNullValueTriggerMatchingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TriggerMatchingType"); else _explicitNullProperties?.Remove("TriggerMatchingType"); } }
+        private int? _explicitNullValueTriggerMatchingType = default!;
         /// <summary>The Triggers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.Trigger>? Triggers { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.Trigger>? Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Triggers"); else _explicitNullProperties?.Remove("Triggers"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.Trigger>? _explicitNullValueTriggers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.Trigger> Triggers { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.Trigger> Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Triggers"); else _explicitNullProperties?.Remove("Triggers"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.Trigger> _explicitNullValueTriggers = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model"/> and sets the default values.
@@ -95,7 +133,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.EdgeRuleV2Model(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +176,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("ReadOnly", ReadOnly);
             writer.WriteIntValue("TriggerMatchingType", TriggerMatchingType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Trigger>("Triggers", Triggers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

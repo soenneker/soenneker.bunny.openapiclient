@@ -71,6 +71,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DeleteAllVolumeInstancesResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DeleteAllVolumeInstancesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -102,6 +104,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.UpdateVolumeResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.UpdateVolumeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

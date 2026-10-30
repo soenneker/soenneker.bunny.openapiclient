@@ -78,6 +78,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.AccessLists
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.AccessListsDetailsResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.AccessListsDetailsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -105,6 +107,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.AccessLists
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.CustomAccessListResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.CustomAccessListResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.CustomAccessListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

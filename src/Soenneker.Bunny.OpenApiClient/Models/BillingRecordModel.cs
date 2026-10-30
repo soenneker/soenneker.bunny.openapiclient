@@ -11,51 +11,80 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BillingRecordModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("DetailedDocumentDownloadUrl") is { } nullNodeDetailedDocumentDownloadUrl && nullNodeDetailedDocumentDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetailedDocumentDownloadUrl = null;
+            if (parseNode.GetChildNode("DocumentDownloadUrl") is { } nullNodeDocumentDownloadUrl && nullNodeDocumentDownloadUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentDownloadUrl = null;
+            if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("InvoiceAvailable") is { } nullNodeInvoiceAvailable && nullNodeInvoiceAvailable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvoiceAvailable = null;
+            if (parseNode.GetChildNode("Payer") is { } nullNodePayer && nullNodePayer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payer = null;
+            if (parseNode.GetChildNode("PaymentId") is { } nullNodePaymentId && nullNodePaymentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentId = null;
+            if (parseNode.GetChildNode("Timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount linked to the record model</summary>
-        public double? Amount { get; set; }
+        public double? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
+        private double? _explicitNullValueAmount = default!;
         /// <summary>The URL where the document with product usage breakdown can be downloaded. Null if this is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DetailedDocumentDownloadUrl { get; set; }
+        public string? DetailedDocumentDownloadUrl { get => _explicitNullValueDetailedDocumentDownloadUrl; set { _explicitNullValueDetailedDocumentDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DetailedDocumentDownloadUrl"); else _explicitNullProperties?.Remove("DetailedDocumentDownloadUrl"); } }
+        private string? _explicitNullValueDetailedDocumentDownloadUrl = default!;
 #nullable restore
 #else
-        public string DetailedDocumentDownloadUrl { get; set; }
+        public string DetailedDocumentDownloadUrl { get => _explicitNullValueDetailedDocumentDownloadUrl; set { _explicitNullValueDetailedDocumentDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DetailedDocumentDownloadUrl"); else _explicitNullProperties?.Remove("DetailedDocumentDownloadUrl"); } }
+        private string _explicitNullValueDetailedDocumentDownloadUrl = default!;
 #endif
         /// <summary>The URL where the invoice or document can be downloaded. Null if this is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentDownloadUrl { get; set; }
+        public string? DocumentDownloadUrl { get => _explicitNullValueDocumentDownloadUrl; set { _explicitNullValueDocumentDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentDownloadUrl"); else _explicitNullProperties?.Remove("DocumentDownloadUrl"); } }
+        private string? _explicitNullValueDocumentDownloadUrl = default!;
 #nullable restore
 #else
-        public string DocumentDownloadUrl { get; set; }
+        public string DocumentDownloadUrl { get => _explicitNullValueDocumentDownloadUrl; set { _explicitNullValueDocumentDownloadUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DocumentDownloadUrl"); else _explicitNullProperties?.Remove("DocumentDownloadUrl"); } }
+        private string _explicitNullValueDocumentDownloadUrl = default!;
 #endif
         /// <summary>The ID of the billing record</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>Determines if an invoice is available</summary>
-        public bool? InvoiceAvailable { get; set; }
+        public bool? InvoiceAvailable { get => _explicitNullValueInvoiceAvailable; set { _explicitNullValueInvoiceAvailable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("InvoiceAvailable"); else _explicitNullProperties?.Remove("InvoiceAvailable"); } }
+        private bool? _explicitNullValueInvoiceAvailable = default!;
         /// <summary>The payer reference that sent the payment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Payer { get; set; }
+        public string? Payer { get => _explicitNullValuePayer; set { _explicitNullValuePayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payer"); else _explicitNullProperties?.Remove("Payer"); } }
+        private string? _explicitNullValuePayer = default!;
 #nullable restore
 #else
-        public string Payer { get; set; }
+        public string Payer { get => _explicitNullValuePayer; set { _explicitNullValuePayer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Payer"); else _explicitNullProperties?.Remove("Payer"); } }
+        private string _explicitNullValuePayer = default!;
 #endif
         /// <summary>The external ID of the payment</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaymentId { get; set; }
+        public string? PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PaymentId"); else _explicitNullProperties?.Remove("PaymentId"); } }
+        private string? _explicitNullValuePaymentId = default!;
 #nullable restore
 #else
-        public string PaymentId { get; set; }
+        public string PaymentId { get => _explicitNullValuePaymentId; set { _explicitNullValuePaymentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PaymentId"); else _explicitNullProperties?.Remove("PaymentId"); } }
+        private string _explicitNullValuePaymentId = default!;
 #endif
         /// <summary>The date and time when the billing record was created</summary>
-        public DateTimeOffset? Timestamp { get; set; }
-        /// <summary>The type of the billing record</summary>
-        public int? Type { get; set; }
+        public DateTimeOffset? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Timestamp"); else _explicitNullProperties?.Remove("Timestamp"); } }
+        private DateTimeOffset? _explicitNullValueTimestamp = default!;
+        /// <summary>The type of the billing record0 = PayPal1 = Crypto2 = Credit Card3 = Monthly Usage4 = Refund5 = Coupon Code6 = Bank Transfer7 = Affiliate Credits</summary>
+        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private int? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel"/> and sets the default values.
         /// </summary>
@@ -71,7 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("PaymentId", PaymentId);
             writer.WriteDateTimeOffsetValue("Timestamp", Timestamp);
             writer.WriteIntValue("Type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -57,13 +57,15 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.CustomPage.Item
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a custom HTML response page for a Shield Zone
         /// </summary>
-        /// <returns>A <see cref="string"/></returns>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse">When receiving a 400 status code</exception>
@@ -71,11 +73,11 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.CustomPage.Item
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<string?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<string> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -84,8 +86,10 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.CustomPage.Item
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Upload a custom HTML response page for a Shield Zone
@@ -111,6 +115,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.CustomPage.Item
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

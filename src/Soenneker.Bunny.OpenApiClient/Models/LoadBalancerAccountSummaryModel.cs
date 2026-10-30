@@ -11,17 +11,32 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LoadBalancerAccountSummaryModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AttachedPullZoneCount") is { } nullNodeAttachedPullZoneCount && nullNodeAttachedPullZoneCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttachedPullZoneCount = null;
+            if (parseNode.GetChildNode("LoadBalancerId") is { } nullNodeLoadBalancerId && nullNodeLoadBalancerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadBalancerId = null;
+            if (parseNode.GetChildNode("TotalRequests") is { } nullNodeTotalRequests && nullNodeTotalRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequests = null;
+            if (parseNode.GetChildNode("TotalTraffic") is { } nullNodeTotalTraffic && nullNodeTotalTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTraffic = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AttachedPullZoneCount property</summary>
-        public int? AttachedPullZoneCount { get; set; }
+        public int? AttachedPullZoneCount { get => _explicitNullValueAttachedPullZoneCount; set { _explicitNullValueAttachedPullZoneCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AttachedPullZoneCount"); else _explicitNullProperties?.Remove("AttachedPullZoneCount"); } }
+        private int? _explicitNullValueAttachedPullZoneCount = default!;
         /// <summary>The LoadBalancerId property</summary>
-        public long? LoadBalancerId { get; set; }
+        public long? LoadBalancerId { get => _explicitNullValueLoadBalancerId; set { _explicitNullValueLoadBalancerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadBalancerId"); else _explicitNullProperties?.Remove("LoadBalancerId"); } }
+        private long? _explicitNullValueLoadBalancerId = default!;
         /// <summary>The TotalRequests property</summary>
-        public double? TotalRequests { get; set; }
+        public double? TotalRequests { get => _explicitNullValueTotalRequests; set { _explicitNullValueTotalRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalRequests"); else _explicitNullProperties?.Remove("TotalRequests"); } }
+        private double? _explicitNullValueTotalRequests = default!;
         /// <summary>The TotalTraffic property</summary>
-        public double? TotalTraffic { get; set; }
+        public double? TotalTraffic { get => _explicitNullValueTotalTraffic; set { _explicitNullValueTotalTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTraffic"); else _explicitNullProperties?.Remove("TotalTraffic"); } }
+        private double? _explicitNullValueTotalTraffic = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAccountSummaryModel"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAccountSummaryModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAccountSummaryModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAccountSummaryModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("LoadBalancerId", LoadBalancerId);
             writer.WriteDoubleValue("TotalRequests", TotalRequests);
             writer.WriteDoubleValue("TotalTraffic", TotalTraffic);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

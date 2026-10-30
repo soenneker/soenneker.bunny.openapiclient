@@ -59,6 +59,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Endpoints.Item
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -94,6 +96,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Endpoints.Item
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

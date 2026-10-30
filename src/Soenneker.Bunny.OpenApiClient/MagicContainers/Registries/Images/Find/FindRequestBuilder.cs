@@ -63,6 +63,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Images.Find
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.FindContainerImageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,37 +12,67 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateApiGuardianEndpointRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("detectParameterSqli") is { } nullNodeDetectParameterSqli && nullNodeDetectParameterSqli.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectParameterSqli = null;
+            if (parseNode.GetChildNode("detectParameterXss") is { } nullNodeDetectParameterXss && nullNodeDetectParameterXss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectParameterXss = null;
+            if (parseNode.GetChildNode("injectionDetectionParameters") is { } nullNodeInjectionDetectionParameters && nullNodeInjectionDetectionParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InjectionDetectionParameters = null;
+            if (parseNode.GetChildNode("isEnabled") is { } nullNodeIsEnabled && nullNodeIsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEnabled = null;
+            if (parseNode.GetChildNode("rateLimitingEnabled") is { } nullNodeRateLimitingEnabled && nullNodeRateLimitingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitingEnabled = null;
+            if (parseNode.GetChildNode("rateLimitingRequestCount") is { } nullNodeRateLimitingRequestCount && nullNodeRateLimitingRequestCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitingRequestCount = null;
+            if (parseNode.GetChildNode("rateLimitingTimeframe") is { } nullNodeRateLimitingTimeframe && nullNodeRateLimitingTimeframe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitingTimeframe = null;
+            if (parseNode.GetChildNode("rateLimitingType") is { } nullNodeRateLimitingType && nullNodeRateLimitingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitingType = null;
+            if (parseNode.GetChildNode("validateAuthorization") is { } nullNodeValidateAuthorization && nullNodeValidateAuthorization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidateAuthorization = null;
+            if (parseNode.GetChildNode("validateRequestBodySchema") is { } nullNodeValidateRequestBodySchema && nullNodeValidateRequestBodySchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidateRequestBodySchema = null;
+            if (parseNode.GetChildNode("validateResponseBodySchema") is { } nullNodeValidateResponseBodySchema && nullNodeValidateResponseBodySchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidateResponseBodySchema = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enable SQL injection detection on the selected injection detection parameters.</summary>
-        public bool? DetectParameterSqli { get; set; }
+        public bool? DetectParameterSqli { get => _explicitNullValueDetectParameterSqli; set { _explicitNullValueDetectParameterSqli = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detectParameterSqli"); else _explicitNullProperties?.Remove("detectParameterSqli"); } }
+        private bool? _explicitNullValueDetectParameterSqli = default!;
         /// <summary>Enable XSS detection on the selected injection detection parameters.</summary>
-        public bool? DetectParameterXss { get; set; }
+        public bool? DetectParameterXss { get => _explicitNullValueDetectParameterXss; set { _explicitNullValueDetectParameterXss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detectParameterXss"); else _explicitNullProperties?.Remove("detectParameterXss"); } }
+        private bool? _explicitNullValueDetectParameterXss = default!;
         /// <summary>Parameters to run injection detection on, grouped by location (path, query, header, cookie).Must be a subset of the endpoint&apos;s available parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequestInjectionDetectionParameters? InjectionDetectionParameters { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequestInjectionDetectionParameters? InjectionDetectionParameters { get => _explicitNullValueInjectionDetectionParameters; set { _explicitNullValueInjectionDetectionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("injectionDetectionParameters"); else _explicitNullProperties?.Remove("injectionDetectionParameters"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequestInjectionDetectionParameters? _explicitNullValueInjectionDetectionParameters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequestInjectionDetectionParameters InjectionDetectionParameters { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequestInjectionDetectionParameters InjectionDetectionParameters { get => _explicitNullValueInjectionDetectionParameters; set { _explicitNullValueInjectionDetectionParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("injectionDetectionParameters"); else _explicitNullProperties?.Remove("injectionDetectionParameters"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequestInjectionDetectionParameters _explicitNullValueInjectionDetectionParameters = default!;
 #endif
         /// <summary>Enable or disable this endpoint. Disabled endpoints are not enforced.</summary>
-        public bool? IsEnabled { get; set; }
+        public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEnabled"); else _explicitNullProperties?.Remove("isEnabled"); } }
+        private bool? _explicitNullValueIsEnabled = default!;
         /// <summary>Enable or disable per-endpoint rate limiting.</summary>
-        public bool? RateLimitingEnabled { get; set; }
+        public bool? RateLimitingEnabled { get => _explicitNullValueRateLimitingEnabled; set { _explicitNullValueRateLimitingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingEnabled"); else _explicitNullProperties?.Remove("rateLimitingEnabled"); } }
+        private bool? _explicitNullValueRateLimitingEnabled = default!;
         /// <summary>Maximum number of requests allowed within the timeframe before blocking. Must be greater than zero.</summary>
-        public int? RateLimitingRequestCount { get; set; }
+        public int? RateLimitingRequestCount { get => _explicitNullValueRateLimitingRequestCount; set { _explicitNullValueRateLimitingRequestCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingRequestCount"); else _explicitNullProperties?.Remove("rateLimitingRequestCount"); } }
+        private int? _explicitNullValueRateLimitingRequestCount = default!;
         /// <summary>1 = PerSecond10 = PerTenSeconds60 = PerOneMinute300 = PerFiveMinutes900 = PerFifteenMinutes3600 = PerOneHour</summary>
-        public int? RateLimitingTimeframe { get; set; }
+        public int? RateLimitingTimeframe { get => _explicitNullValueRateLimitingTimeframe; set { _explicitNullValueRateLimitingTimeframe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingTimeframe"); else _explicitNullProperties?.Remove("rateLimitingTimeframe"); } }
+        private int? _explicitNullValueRateLimitingTimeframe = default!;
         /// <summary>The rateLimitingType property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianRateLimitType? RateLimitingType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianRateLimitType? RateLimitingType { get => _explicitNullValueRateLimitingType; set { _explicitNullValueRateLimitingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingType"); else _explicitNullProperties?.Remove("rateLimitingType"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianRateLimitType? _explicitNullValueRateLimitingType = default!;
         /// <summary>Enable or disable enforcement of authentication requirementsas defined in the OAS security schemes.</summary>
-        public bool? ValidateAuthorization { get; set; }
+        public bool? ValidateAuthorization { get => _explicitNullValueValidateAuthorization; set { _explicitNullValueValidateAuthorization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validateAuthorization"); else _explicitNullProperties?.Remove("validateAuthorization"); } }
+        private bool? _explicitNullValueValidateAuthorization = default!;
         /// <summary>Enable or disable request body schema validation.Only effective if the endpoint&apos;s OAS operation defines a request body schema.</summary>
-        public bool? ValidateRequestBodySchema { get; set; }
+        public bool? ValidateRequestBodySchema { get => _explicitNullValueValidateRequestBodySchema; set { _explicitNullValueValidateRequestBodySchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validateRequestBodySchema"); else _explicitNullProperties?.Remove("validateRequestBodySchema"); } }
+        private bool? _explicitNullValueValidateRequestBodySchema = default!;
         /// <summary>Enable or disable response body schema validation.Only effective if the endpoint&apos;s OAS operation defines response schemas.</summary>
-        public bool? ValidateResponseBodySchema { get; set; }
+        public bool? ValidateResponseBodySchema { get => _explicitNullValueValidateResponseBodySchema; set { _explicitNullValueValidateResponseBodySchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validateResponseBodySchema"); else _explicitNullProperties?.Remove("validateResponseBodySchema"); } }
+        private bool? _explicitNullValueValidateResponseBodySchema = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequest"/> and sets the default values.
         /// </summary>
@@ -58,7 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.UpdateApiGuardianEndpointRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +129,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("validateAuthorization", ValidateAuthorization);
             writer.WriteBoolValue("validateRequestBodySchema", ValidateRequestBodySchema);
             writer.WriteBoolValue("validateResponseBodySchema", ValidateResponseBodySchema);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

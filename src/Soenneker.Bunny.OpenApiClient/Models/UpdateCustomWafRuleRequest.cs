@@ -11,32 +11,48 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateCustomWafRuleRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ruleConfiguration") is { } nullNodeRuleConfiguration && nullNodeRuleConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleConfiguration = null;
+            if (parseNode.GetChildNode("ruleDescription") is { } nullNodeRuleDescription && nullNodeRuleDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleDescription = null;
+            if (parseNode.GetChildNode("ruleName") is { } nullNodeRuleName && nullNodeRuleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ruleConfiguration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel? RuleConfiguration { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel? RuleConfiguration { get => _explicitNullValueRuleConfiguration; set { _explicitNullValueRuleConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConfiguration"); else _explicitNullProperties?.Remove("ruleConfiguration"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel? _explicitNullValueRuleConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel RuleConfiguration { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel RuleConfiguration { get => _explicitNullValueRuleConfiguration; set { _explicitNullValueRuleConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConfiguration"); else _explicitNullProperties?.Remove("ruleConfiguration"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel _explicitNullValueRuleConfiguration = default!;
 #endif
         /// <summary>The ruleDescription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleDescription { get; set; }
+        public string? RuleDescription { get => _explicitNullValueRuleDescription; set { _explicitNullValueRuleDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleDescription"); else _explicitNullProperties?.Remove("ruleDescription"); } }
+        private string? _explicitNullValueRuleDescription = default!;
 #nullable restore
 #else
-        public string RuleDescription { get; set; }
+        public string RuleDescription { get => _explicitNullValueRuleDescription; set { _explicitNullValueRuleDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleDescription"); else _explicitNullProperties?.Remove("ruleDescription"); } }
+        private string _explicitNullValueRuleDescription = default!;
 #endif
         /// <summary>The ruleName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleName { get; set; }
+        public string? RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleName"); else _explicitNullProperties?.Remove("ruleName"); } }
+        private string? _explicitNullValueRuleName = default!;
 #nullable restore
 #else
-        public string RuleName { get; set; }
+        public string RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleName"); else _explicitNullProperties?.Remove("ruleName"); } }
+        private string _explicitNullValueRuleName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateCustomWafRuleRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.UpdateCustomWafRuleRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.UpdateCustomWafRuleRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.UpdateCustomWafRuleRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel>("ruleConfiguration", RuleConfiguration);
             writer.WriteStringValue("ruleDescription", RuleDescription);
             writer.WriteStringValue("ruleName", RuleName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

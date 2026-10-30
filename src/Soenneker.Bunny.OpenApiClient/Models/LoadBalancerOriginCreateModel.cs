@@ -11,48 +11,75 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LoadBalancerOriginCreateModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("EdgeScriptId") is { } nullNodeEdgeScriptId && nullNodeEdgeScriptId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EdgeScriptId = null;
+            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("MagicContainersOrigin") is { } nullNodeMagicContainersOrigin && nullNodeMagicContainersOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicContainersOrigin = null;
+            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("OriginType") is { } nullNodeOriginType && nullNodeOriginType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginType = null;
+            if (parseNode.GetChildNode("StandardOrigin") is { } nullNodeStandardOrigin && nullNodeStandardOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardOrigin = null;
+            if (parseNode.GetChildNode("StorageZoneId") is { } nullNodeStorageZoneId && nullNodeStorageZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageZoneId = null;
+            if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ID of the Edge Script to use as the origin - required when using the EdgeScript origin type</summary>
-        public long? EdgeScriptId { get; set; }
+        public long? EdgeScriptId { get => _explicitNullValueEdgeScriptId; set { _explicitNullValueEdgeScriptId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EdgeScriptId"); else _explicitNullProperties?.Remove("EdgeScriptId"); } }
+        private long? _explicitNullValueEdgeScriptId = default!;
         /// <summary>Whether traffic should route to this origin</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Magic Containers origin settings - required when using the Magic Containers origin type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin? MagicContainersOrigin { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin? MagicContainersOrigin { get => _explicitNullValueMagicContainersOrigin; set { _explicitNullValueMagicContainersOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MagicContainersOrigin"); else _explicitNullProperties?.Remove("MagicContainersOrigin"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin? _explicitNullValueMagicContainersOrigin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin MagicContainersOrigin { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin MagicContainersOrigin { get => _explicitNullValueMagicContainersOrigin; set { _explicitNullValueMagicContainersOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MagicContainersOrigin"); else _explicitNullProperties?.Remove("MagicContainersOrigin"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelMagicContainersOrigin _explicitNullValueMagicContainersOrigin = default!;
 #endif
         /// <summary>The name of the origin</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The type of origin to connect to. Magic Container origins must be CDN endpoints; Anycast endpoints are not supported, use a Standard origin for those</summary>
-        public int? OriginType { get; set; }
+        /// <summary>The type of origin to connect to. Magic Container origins must be CDN endpoints; Anycast endpoints are not supported, use a Standard origin for those0 = Standard1 = Storage Zone2 = Edge Script3 = Magic Container</summary>
+        public int? OriginType { get => _explicitNullValueOriginType; set { _explicitNullValueOriginType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginType"); else _explicitNullProperties?.Remove("OriginType"); } }
+        private int? _explicitNullValueOriginType = default!;
         /// <summary>Standard origin settings - required when using the Standard origin type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin? StandardOrigin { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin? StandardOrigin { get => _explicitNullValueStandardOrigin; set { _explicitNullValueStandardOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StandardOrigin"); else _explicitNullProperties?.Remove("StandardOrigin"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin? _explicitNullValueStandardOrigin = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin StandardOrigin { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin StandardOrigin { get => _explicitNullValueStandardOrigin; set { _explicitNullValueStandardOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StandardOrigin"); else _explicitNullProperties?.Remove("StandardOrigin"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin _explicitNullValueStandardOrigin = default!;
 #endif
         /// <summary>The ID of the Storage Zone to use as the origin - required when using the Storage origin type</summary>
-        public long? StorageZoneId { get; set; }
+        public long? StorageZoneId { get => _explicitNullValueStorageZoneId; set { _explicitNullValueStorageZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageZoneId"); else _explicitNullProperties?.Remove("StorageZoneId"); } }
+        private long? _explicitNullValueStorageZoneId = default!;
         /// <summary>The weight of the origin used for weighted load balancing</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? Weight { get; set; }
+        public byte[]? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        private byte[]? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public byte[] Weight { get; set; }
+        public byte[] Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        private byte[] _explicitNullValueWeight = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModel"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin>("StandardOrigin", StandardOrigin);
             writer.WriteLongValue("StorageZoneId", StorageZoneId);
             writer.WriteByteArrayValue("Weight", Weight);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

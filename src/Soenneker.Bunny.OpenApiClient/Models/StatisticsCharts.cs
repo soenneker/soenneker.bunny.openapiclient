@@ -11,80 +11,114 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StatisticsCharts : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activeRegionsChart") is { } nullNodeActiveRegionsChart && nullNodeActiveRegionsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveRegionsChart = null;
+            if (parseNode.GetChildNode("cpuUsageSplitChart") is { } nullNodeCpuUsageSplitChart && nullNodeCpuUsageSplitChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpuUsageSplitChart = null;
+            if (parseNode.GetChildNode("instancesChart") is { } nullNodeInstancesChart && nullNodeInstancesChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstancesChart = null;
+            if (parseNode.GetChildNode("latencyChart") is { } nullNodeLatencyChart && nullNodeLatencyChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatencyChart = null;
+            if (parseNode.GetChildNode("ramUsageSplitChart") is { } nullNodeRamUsageSplitChart && nullNodeRamUsageSplitChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RamUsageSplitChart = null;
+            if (parseNode.GetChildNode("targetLatencyChart") is { } nullNodeTargetLatencyChart && nullNodeTargetLatencyChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetLatencyChart = null;
+            if (parseNode.GetChildNode("trafficSplitChart") is { } nullNodeTrafficSplitChart && nullNodeTrafficSplitChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficSplitChart = null;
+            if (parseNode.GetChildNode("volumesSplitCapacityChart") is { } nullNodeVolumesSplitCapacityChart && nullNodeVolumesSplitCapacityChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VolumesSplitCapacityChart = null;
+            if (parseNode.GetChildNode("volumesSplitUsageChart") is { } nullNodeVolumesSplitUsageChart && nullNodeVolumesSplitUsageChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VolumesSplitUsageChart = null;
+        }
+
         /// <summary>The activeRegionsChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsActiveRegionsChartProperty2? ActiveRegionsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsActiveRegionsChartProperty2? ActiveRegionsChart { get => _explicitNullValueActiveRegionsChart; set { _explicitNullValueActiveRegionsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeRegionsChart"); else _explicitNullProperties?.Remove("activeRegionsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsActiveRegionsChartProperty2? _explicitNullValueActiveRegionsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsActiveRegionsChartProperty2 ActiveRegionsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsActiveRegionsChartProperty2 ActiveRegionsChart { get => _explicitNullValueActiveRegionsChart; set { _explicitNullValueActiveRegionsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeRegionsChart"); else _explicitNullProperties?.Remove("activeRegionsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsActiveRegionsChartProperty2 _explicitNullValueActiveRegionsChart = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpuUsageSplitChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsCpuUsageSplitChartProperty2? CpuUsageSplitChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsCpuUsageSplitChartProperty2? CpuUsageSplitChart { get => _explicitNullValueCpuUsageSplitChart; set { _explicitNullValueCpuUsageSplitChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpuUsageSplitChart"); else _explicitNullProperties?.Remove("cpuUsageSplitChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsCpuUsageSplitChartProperty2? _explicitNullValueCpuUsageSplitChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsCpuUsageSplitChartProperty2 CpuUsageSplitChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsCpuUsageSplitChartProperty2 CpuUsageSplitChart { get => _explicitNullValueCpuUsageSplitChart; set { _explicitNullValueCpuUsageSplitChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpuUsageSplitChart"); else _explicitNullProperties?.Remove("cpuUsageSplitChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsCpuUsageSplitChartProperty2 _explicitNullValueCpuUsageSplitChart = default!;
 #endif
         /// <summary>The instancesChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsInstancesChartProperty2? InstancesChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsInstancesChartProperty2? InstancesChart { get => _explicitNullValueInstancesChart; set { _explicitNullValueInstancesChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instancesChart"); else _explicitNullProperties?.Remove("instancesChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsInstancesChartProperty2? _explicitNullValueInstancesChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsInstancesChartProperty2 InstancesChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsInstancesChartProperty2 InstancesChart { get => _explicitNullValueInstancesChart; set { _explicitNullValueInstancesChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instancesChart"); else _explicitNullProperties?.Remove("instancesChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsInstancesChartProperty2 _explicitNullValueInstancesChart = default!;
 #endif
         /// <summary>The latencyChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsLatencyChartProperty2? LatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsLatencyChartProperty2? LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsLatencyChartProperty2? _explicitNullValueLatencyChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsLatencyChartProperty2 LatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsLatencyChartProperty2 LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsLatencyChartProperty2 _explicitNullValueLatencyChart = default!;
 #endif
         /// <summary>The ramUsageSplitChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsRamUsageSplitChartProperty2? RamUsageSplitChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsRamUsageSplitChartProperty2? RamUsageSplitChart { get => _explicitNullValueRamUsageSplitChart; set { _explicitNullValueRamUsageSplitChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ramUsageSplitChart"); else _explicitNullProperties?.Remove("ramUsageSplitChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsRamUsageSplitChartProperty2? _explicitNullValueRamUsageSplitChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsRamUsageSplitChartProperty2 RamUsageSplitChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsRamUsageSplitChartProperty2 RamUsageSplitChart { get => _explicitNullValueRamUsageSplitChart; set { _explicitNullValueRamUsageSplitChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ramUsageSplitChart"); else _explicitNullProperties?.Remove("ramUsageSplitChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsRamUsageSplitChartProperty2 _explicitNullValueRamUsageSplitChart = default!;
 #endif
         /// <summary>The targetLatencyChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTargetLatencyChartProperty2? TargetLatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTargetLatencyChartProperty2? TargetLatencyChart { get => _explicitNullValueTargetLatencyChart; set { _explicitNullValueTargetLatencyChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetLatencyChart"); else _explicitNullProperties?.Remove("targetLatencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTargetLatencyChartProperty2? _explicitNullValueTargetLatencyChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTargetLatencyChartProperty2 TargetLatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTargetLatencyChartProperty2 TargetLatencyChart { get => _explicitNullValueTargetLatencyChart; set { _explicitNullValueTargetLatencyChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetLatencyChart"); else _explicitNullProperties?.Remove("targetLatencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTargetLatencyChartProperty2 _explicitNullValueTargetLatencyChart = default!;
 #endif
         /// <summary>The trafficSplitChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2? TrafficSplitChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2? TrafficSplitChart { get => _explicitNullValueTrafficSplitChart; set { _explicitNullValueTrafficSplitChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trafficSplitChart"); else _explicitNullProperties?.Remove("trafficSplitChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2? _explicitNullValueTrafficSplitChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2 TrafficSplitChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2 TrafficSplitChart { get => _explicitNullValueTrafficSplitChart; set { _explicitNullValueTrafficSplitChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trafficSplitChart"); else _explicitNullProperties?.Remove("trafficSplitChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2 _explicitNullValueTrafficSplitChart = default!;
 #endif
         /// <summary>The volumesSplitCapacityChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2? VolumesSplitCapacityChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2? VolumesSplitCapacityChart { get => _explicitNullValueVolumesSplitCapacityChart; set { _explicitNullValueVolumesSplitCapacityChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesSplitCapacityChart"); else _explicitNullProperties?.Remove("volumesSplitCapacityChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2? _explicitNullValueVolumesSplitCapacityChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2 VolumesSplitCapacityChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2 VolumesSplitCapacityChart { get => _explicitNullValueVolumesSplitCapacityChart; set { _explicitNullValueVolumesSplitCapacityChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesSplitCapacityChart"); else _explicitNullProperties?.Remove("volumesSplitCapacityChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2 _explicitNullValueVolumesSplitCapacityChart = default!;
 #endif
         /// <summary>The volumesSplitUsageChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2? VolumesSplitUsageChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2? VolumesSplitUsageChart { get => _explicitNullValueVolumesSplitUsageChart; set { _explicitNullValueVolumesSplitUsageChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesSplitUsageChart"); else _explicitNullProperties?.Remove("volumesSplitUsageChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2? _explicitNullValueVolumesSplitUsageChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2 VolumesSplitUsageChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2 VolumesSplitUsageChart { get => _explicitNullValueVolumesSplitUsageChart; set { _explicitNullValueVolumesSplitUsageChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesSplitUsageChart"); else _explicitNullProperties?.Remove("volumesSplitUsageChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2 _explicitNullValueVolumesSplitUsageChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts"/> and sets the default values.
@@ -101,7 +135,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,6 +172,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsTrafficSplitChartProperty2>("trafficSplitChart", TrafficSplitChart);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitCapacityChartProperty2>("volumesSplitCapacityChart", VolumesSplitCapacityChart);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsChartsVolumesSplitUsageChartProperty2>("volumesSplitUsageChart", VolumesSplitUsageChart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,21 +11,35 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BotCategorizationGroup : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bots") is { } nullNodeBots && nullNodeBots.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bots = null;
+            if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("categoryAction") is { } nullNodeCategoryAction && nullNodeCategoryAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryAction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bots property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails>? Bots { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails>? Bots { get => _explicitNullValueBots; set { _explicitNullValueBots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bots"); else _explicitNullProperties?.Remove("bots"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails>? _explicitNullValueBots = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails> Bots { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails> Bots { get => _explicitNullValueBots; set { _explicitNullValueBots = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bots"); else _explicitNullProperties?.Remove("bots"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails> _explicitNullValueBots = default!;
 #endif
         /// <summary>0 = None1 = SEO2 = AIScraper3 = AITool4 = Tool5 = Ads6 = Preview7 = Social255 = System</summary>
-        public int? Category { get; set; }
+        public int? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private int? _explicitNullValueCategory = default!;
         /// <summary>0 = None1 = Block2 = Allow</summary>
-        public int? CategoryAction { get; set; }
+        public int? CategoryAction { get => _explicitNullValueCategoryAction; set { _explicitNullValueCategoryAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryAction"); else _explicitNullProperties?.Remove("categoryAction"); } }
+        private int? _explicitNullValueCategoryAction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationGroup"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationGroup CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationGroup();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationGroup(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails>("bots", Bots);
             writer.WriteIntValue("category", Category);
             writer.WriteIntValue("categoryAction", CategoryAction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

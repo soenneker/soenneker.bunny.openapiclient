@@ -61,6 +61,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Registries.Tags.Paged
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.ListContainerImageTagsPageResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.ListContainerImageTagsPageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -11,30 +11,49 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WafChainedRuleConditionItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isNegated") is { } nullNodeIsNegated && nullNodeIsNegated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNegated = null;
+            if (parseNode.GetChildNode("isRegexVariable") is { } nullNodeIsRegexVariable && nullNodeIsRegexVariable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRegexVariable = null;
+            if (parseNode.GetChildNode("operatorType") is { } nullNodeOperatorType && nullNodeOperatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorType = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("variableTypes") is { } nullNodeVariableTypes && nullNodeVariableTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableTypes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isNegated property</summary>
-        public bool? IsNegated { get; set; }
+        public bool? IsNegated { get => _explicitNullValueIsNegated; set { _explicitNullValueIsNegated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNegated"); else _explicitNullProperties?.Remove("isNegated"); } }
+        private bool? _explicitNullValueIsNegated = default!;
         /// <summary>The isRegexVariable property</summary>
-        public bool? IsRegexVariable { get; set; }
+        public bool? IsRegexVariable { get => _explicitNullValueIsRegexVariable; set { _explicitNullValueIsRegexVariable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRegexVariable"); else _explicitNullProperties?.Remove("isRegexVariable"); } }
+        private bool? _explicitNullValueIsRegexVariable = default!;
         /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN13 = IPMATCH14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
-        public int? OperatorType { get; set; }
+        public int? OperatorType { get => _explicitNullValueOperatorType; set { _explicitNullValueOperatorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operatorType"); else _explicitNullProperties?.Remove("operatorType"); } }
+        private int? _explicitNullValueOperatorType = default!;
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>The variableTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes? VariableTypes { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes? VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes? _explicitNullValueVariableTypes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes VariableTypes { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes _explicitNullValueVariableTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem"/> and sets the default values.
@@ -51,7 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("operatorType", OperatorType);
             writer.WriteStringValue("value", Value);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItemVariableTypes>("variableTypes", VariableTypes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

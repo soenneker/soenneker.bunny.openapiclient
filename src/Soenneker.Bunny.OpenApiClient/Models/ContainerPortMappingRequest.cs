@@ -11,20 +11,34 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ContainerPortMappingRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("containerPort") is { } nullNodeContainerPort && nullNodeContainerPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerPort = null;
+            if (parseNode.GetChildNode("exposedPort") is { } nullNodeExposedPort && nullNodeExposedPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExposedPort = null;
+            if (parseNode.GetChildNode("protocols") is { } nullNodeProtocols && nullNodeProtocols.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Protocols = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The containerPort property</summary>
-        public int? ContainerPort { get; set; }
+        public int? ContainerPort { get => _explicitNullValueContainerPort; set { _explicitNullValueContainerPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerPort"); else _explicitNullProperties?.Remove("containerPort"); } }
+        private int? _explicitNullValueContainerPort = default!;
         /// <summary>The exposedPort property</summary>
-        public int? ExposedPort { get; set; }
+        public int? ExposedPort { get => _explicitNullValueExposedPort; set { _explicitNullValueExposedPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exposedPort"); else _explicitNullProperties?.Remove("exposedPort"); } }
+        private int? _explicitNullValueExposedPort = default!;
         /// <summary>The protocols property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.Protocol?>? Protocols { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.Protocol?>? Protocols { get => _explicitNullValueProtocols; set { _explicitNullValueProtocols = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocols"); else _explicitNullProperties?.Remove("protocols"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.Protocol?>? _explicitNullValueProtocols = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.Protocol?> Protocols { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.Protocol?> Protocols { get => _explicitNullValueProtocols; set { _explicitNullValueProtocols = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protocols"); else _explicitNullProperties?.Remove("protocols"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.Protocol?> _explicitNullValueProtocols = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("containerPort", ContainerPort);
             writer.WriteIntValue("exposedPort", ExposedPort);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Bunny.OpenApiClient.Models.Protocol>("protocols", Protocols);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,37 +11,57 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BotDetectionConfigurationState : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("browserFingerprint") is { } nullNodeBrowserFingerprint && nullNodeBrowserFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserFingerprint = null;
+            if (parseNode.GetChildNode("executionMode") is { } nullNodeExecutionMode && nullNodeExecutionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionMode = null;
+            if (parseNode.GetChildNode("ipAddress") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("requestIntegrity") is { } nullNodeRequestIntegrity && nullNodeRequestIntegrity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIntegrity = null;
+            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The browserFingerprint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration? BrowserFingerprint { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration? BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browserFingerprint"); else _explicitNullProperties?.Remove("browserFingerprint"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration? _explicitNullValueBrowserFingerprint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration BrowserFingerprint { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browserFingerprint"); else _explicitNullProperties?.Remove("browserFingerprint"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration _explicitNullValueBrowserFingerprint = default!;
 #endif
         /// <summary>0 = LogOnly1 = Challenge</summary>
-        public int? ExecutionMode { get; set; }
+        public int? ExecutionMode { get => _explicitNullValueExecutionMode; set { _explicitNullValueExecutionMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionMode"); else _explicitNullProperties?.Remove("executionMode"); } }
+        private int? _explicitNullValueExecutionMode = default!;
         /// <summary>The ipAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration? IpAddress { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipAddress"); else _explicitNullProperties?.Remove("ipAddress"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration IpAddress { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipAddress"); else _explicitNullProperties?.Remove("ipAddress"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>The requestIntegrity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration? RequestIntegrity { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration? RequestIntegrity { get => _explicitNullValueRequestIntegrity; set { _explicitNullValueRequestIntegrity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIntegrity"); else _explicitNullProperties?.Remove("requestIntegrity"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration? _explicitNullValueRequestIntegrity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration RequestIntegrity { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration RequestIntegrity { get => _explicitNullValueRequestIntegrity; set { _explicitNullValueRequestIntegrity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIntegrity"); else _explicitNullProperties?.Remove("requestIntegrity"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration _explicitNullValueRequestIntegrity = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
-        public int? ShieldZoneId { get; set; }
+        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        private int? _explicitNullValueShieldZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionConfigurationState"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionConfigurationState CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionConfigurationState();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionConfigurationState(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration>("ipAddress", IpAddress);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration>("requestIntegrity", RequestIntegrity);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

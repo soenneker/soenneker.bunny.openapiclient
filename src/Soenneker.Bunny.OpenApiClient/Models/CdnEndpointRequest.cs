@@ -11,28 +11,45 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CdnEndpointRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isSslEnabled") is { } nullNodeIsSslEnabled && nullNodeIsSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSslEnabled = null;
+            if (parseNode.GetChildNode("portMappings") is { } nullNodePortMappings && nullNodePortMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortMappings = null;
+            if (parseNode.GetChildNode("pullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
+            if (parseNode.GetChildNode("stickySessions") is { } nullNodeStickySessions && nullNodeStickySessions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isSslEnabled property</summary>
-        public bool? IsSslEnabled { get; set; }
+        public bool? IsSslEnabled { get => _explicitNullValueIsSslEnabled; set { _explicitNullValueIsSslEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSslEnabled"); else _explicitNullProperties?.Remove("isSslEnabled"); } }
+        private bool? _explicitNullValueIsSslEnabled = default!;
         /// <summary>The portMappings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest>? PortMappings { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest>? PortMappings { get => _explicitNullValuePortMappings; set { _explicitNullValuePortMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portMappings"); else _explicitNullProperties?.Remove("portMappings"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest>? _explicitNullValuePortMappings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest> PortMappings { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest> PortMappings { get => _explicitNullValuePortMappings; set { _explicitNullValuePortMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portMappings"); else _explicitNullProperties?.Remove("portMappings"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest> _explicitNullValuePortMappings = default!;
 #endif
         /// <summary>The pullZoneId property</summary>
-        public int? PullZoneId { get; set; }
+        public int? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
+        private int? _explicitNullValuePullZoneId = default!;
         /// <summary>The stickySessions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings? StickySessions { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings? StickySessions { get => _explicitNullValueStickySessions; set { _explicitNullValueStickySessions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stickySessions"); else _explicitNullProperties?.Remove("stickySessions"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings? _explicitNullValueStickySessions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings StickySessions { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings StickySessions { get => _explicitNullValueStickySessions; set { _explicitNullValueStickySessions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stickySessions"); else _explicitNullProperties?.Remove("stickySessions"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings _explicitNullValueStickySessions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerPortMappingRequest>("portMappings", PortMappings);
             writer.WriteIntValue("pullZoneId", PullZoneId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StickySessionSettings>("stickySessions", StickySessions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

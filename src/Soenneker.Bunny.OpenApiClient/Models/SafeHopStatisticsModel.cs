@@ -11,29 +11,46 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SafeHopStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("RequestsRetriedChart") is { } nullNodeRequestsRetriedChart && nullNodeRequestsRetriedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsRetriedChart = null;
+            if (parseNode.GetChildNode("RequestsSavedChart") is { } nullNodeRequestsSavedChart && nullNodeRequestsSavedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsSavedChart = null;
+            if (parseNode.GetChildNode("TotalRequestsRetried") is { } nullNodeTotalRequestsRetried && nullNodeTotalRequestsRetried.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestsRetried = null;
+            if (parseNode.GetChildNode("TotalRequestsSaved") is { } nullNodeTotalRequestsSaved && nullNodeTotalRequestsSaved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestsSaved = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The constructed chart of requests retried</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2? RequestsRetriedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2? RequestsRetriedChart { get => _explicitNullValueRequestsRetriedChart; set { _explicitNullValueRequestsRetriedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsRetriedChart"); else _explicitNullProperties?.Remove("RequestsRetriedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2? _explicitNullValueRequestsRetriedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2 RequestsRetriedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2 RequestsRetriedChart { get => _explicitNullValueRequestsRetriedChart; set { _explicitNullValueRequestsRetriedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsRetriedChart"); else _explicitNullProperties?.Remove("RequestsRetriedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2 _explicitNullValueRequestsRetriedChart = default!;
 #endif
         /// <summary>The constructed chart of requests saved</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2? RequestsSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2? RequestsSavedChart { get => _explicitNullValueRequestsSavedChart; set { _explicitNullValueRequestsSavedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsSavedChart"); else _explicitNullProperties?.Remove("RequestsSavedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2? _explicitNullValueRequestsSavedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2 RequestsSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2 RequestsSavedChart { get => _explicitNullValueRequestsSavedChart; set { _explicitNullValueRequestsSavedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsSavedChart"); else _explicitNullProperties?.Remove("RequestsSavedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2 _explicitNullValueRequestsSavedChart = default!;
 #endif
         /// <summary>The total number of retried requests</summary>
-        public double? TotalRequestsRetried { get; set; }
+        public double? TotalRequestsRetried { get => _explicitNullValueTotalRequestsRetried; set { _explicitNullValueTotalRequestsRetried = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalRequestsRetried"); else _explicitNullProperties?.Remove("TotalRequestsRetried"); } }
+        private double? _explicitNullValueTotalRequestsRetried = default!;
         /// <summary>The total number of saved requests</summary>
-        public double? TotalRequestsSaved { get; set; }
+        public double? TotalRequestsSaved { get => _explicitNullValueTotalRequestsSaved; set { _explicitNullValueTotalRequestsSaved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalRequestsSaved"); else _explicitNullProperties?.Remove("TotalRequestsSaved"); } }
+        private double? _explicitNullValueTotalRequestsSaved = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModel"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2>("RequestsSavedChart", RequestsSavedChart);
             writer.WriteDoubleValue("TotalRequestsRetried", TotalRequestsRetried);
             writer.WriteDoubleValue("TotalRequestsSaved", TotalRequestsSaved);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

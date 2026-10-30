@@ -11,28 +11,45 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LoadBalancerOriginLatencySeriesModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("OriginId") is { } nullNodeOriginId && nullNodeOriginId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginId = null;
+            if (parseNode.GetChildNode("OriginName") is { } nullNodeOriginName && nullNodeOriginName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginName = null;
+            if (parseNode.GetChildNode("Percentile") is { } nullNodePercentile && nullNodePercentile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Percentile = null;
+            if (parseNode.GetChildNode("Values") is { } nullNodeValues && nullNodeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Values = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The OriginId property</summary>
-        public long? OriginId { get; set; }
+        public long? OriginId { get => _explicitNullValueOriginId; set { _explicitNullValueOriginId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginId"); else _explicitNullProperties?.Remove("OriginId"); } }
+        private long? _explicitNullValueOriginId = default!;
         /// <summary>The OriginName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginName { get; set; }
+        public string? OriginName { get => _explicitNullValueOriginName; set { _explicitNullValueOriginName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginName"); else _explicitNullProperties?.Remove("OriginName"); } }
+        private string? _explicitNullValueOriginName = default!;
 #nullable restore
 #else
-        public string OriginName { get; set; }
+        public string OriginName { get => _explicitNullValueOriginName; set { _explicitNullValueOriginName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginName"); else _explicitNullProperties?.Remove("OriginName"); } }
+        private string _explicitNullValueOriginName = default!;
 #endif
         /// <summary>The Percentile property</summary>
-        public int? Percentile { get; set; }
+        public int? Percentile { get => _explicitNullValuePercentile; set { _explicitNullValuePercentile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Percentile"); else _explicitNullProperties?.Remove("Percentile"); } }
+        private int? _explicitNullValuePercentile = default!;
         /// <summary>The Values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2? Values { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2 Values { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2 _explicitNullValueValues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("OriginName", OriginName);
             writer.WriteIntValue("Percentile", Percentile);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModelValuesProperty2>("Values", Values);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

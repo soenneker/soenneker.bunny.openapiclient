@@ -11,68 +11,105 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StorageZoneEgressStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("FtpEgressChart") is { } nullNodeFtpEgressChart && nullNodeFtpEgressChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FtpEgressChart = null;
+            if (parseNode.GetChildNode("FtpEgressTotal") is { } nullNodeFtpEgressTotal && nullNodeFtpEgressTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FtpEgressTotal = null;
+            if (parseNode.GetChildNode("HttpEgressChart") is { } nullNodeHttpEgressChart && nullNodeHttpEgressChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpEgressChart = null;
+            if (parseNode.GetChildNode("HttpEgressTotal") is { } nullNodeHttpEgressTotal && nullNodeHttpEgressTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpEgressTotal = null;
+            if (parseNode.GetChildNode("S3EgressChart") is { } nullNodeS3EgressChart && nullNodeS3EgressChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3EgressChart = null;
+            if (parseNode.GetChildNode("S3EgressTotal") is { } nullNodeS3EgressTotal && nullNodeS3EgressTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3EgressTotal = null;
+            if (parseNode.GetChildNode("S3PresignedEgressChart") is { } nullNodeS3PresignedEgressChart && nullNodeS3PresignedEgressChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3PresignedEgressChart = null;
+            if (parseNode.GetChildNode("S3PresignedEgressTotal") is { } nullNodeS3PresignedEgressTotal && nullNodeS3PresignedEgressTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3PresignedEgressTotal = null;
+            if (parseNode.GetChildNode("SftpEgressChart") is { } nullNodeSftpEgressChart && nullNodeSftpEgressChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SftpEgressChart = null;
+            if (parseNode.GetChildNode("SftpEgressTotal") is { } nullNodeSftpEgressTotal && nullNodeSftpEgressTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SftpEgressTotal = null;
+            if (parseNode.GetChildNode("TotalEgress") is { } nullNodeTotalEgress && nullNodeTotalEgress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalEgress = null;
+            if (parseNode.GetChildNode("TotalEgressChart") is { } nullNodeTotalEgressChart && nullNodeTotalEgressChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalEgressChart = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Download traffic served over FTP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty2? FtpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty2? FtpEgressChart { get => _explicitNullValueFtpEgressChart; set { _explicitNullValueFtpEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FtpEgressChart"); else _explicitNullProperties?.Remove("FtpEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty2? _explicitNullValueFtpEgressChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty2 FtpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty2 FtpEgressChart { get => _explicitNullValueFtpEgressChart; set { _explicitNullValueFtpEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FtpEgressChart"); else _explicitNullProperties?.Remove("FtpEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelFtpEgressChartProperty2 _explicitNullValueFtpEgressChart = default!;
 #endif
         /// <summary>Total download traffic over FTP</summary>
-        public long? FtpEgressTotal { get; set; }
+        public long? FtpEgressTotal { get => _explicitNullValueFtpEgressTotal; set { _explicitNullValueFtpEgressTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FtpEgressTotal"); else _explicitNullProperties?.Remove("FtpEgressTotal"); } }
+        private long? _explicitNullValueFtpEgressTotal = default!;
         /// <summary>Download traffic served over HTTP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty2? HttpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty2? HttpEgressChart { get => _explicitNullValueHttpEgressChart; set { _explicitNullValueHttpEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HttpEgressChart"); else _explicitNullProperties?.Remove("HttpEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty2? _explicitNullValueHttpEgressChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty2 HttpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty2 HttpEgressChart { get => _explicitNullValueHttpEgressChart; set { _explicitNullValueHttpEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HttpEgressChart"); else _explicitNullProperties?.Remove("HttpEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelHttpEgressChartProperty2 _explicitNullValueHttpEgressChart = default!;
 #endif
         /// <summary>Total download traffic over HTTP</summary>
-        public long? HttpEgressTotal { get; set; }
+        public long? HttpEgressTotal { get => _explicitNullValueHttpEgressTotal; set { _explicitNullValueHttpEgressTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HttpEgressTotal"); else _explicitNullProperties?.Remove("HttpEgressTotal"); } }
+        private long? _explicitNullValueHttpEgressTotal = default!;
         /// <summary>Download traffic served over S3</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty2? S3EgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty2? S3EgressChart { get => _explicitNullValueS3EgressChart; set { _explicitNullValueS3EgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3EgressChart"); else _explicitNullProperties?.Remove("S3EgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty2? _explicitNullValueS3EgressChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty2 S3EgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty2 S3EgressChart { get => _explicitNullValueS3EgressChart; set { _explicitNullValueS3EgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3EgressChart"); else _explicitNullProperties?.Remove("S3EgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3EgressChartProperty2 _explicitNullValueS3EgressChart = default!;
 #endif
         /// <summary>Total download traffic over S3</summary>
-        public long? S3EgressTotal { get; set; }
+        public long? S3EgressTotal { get => _explicitNullValueS3EgressTotal; set { _explicitNullValueS3EgressTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3EgressTotal"); else _explicitNullProperties?.Remove("S3EgressTotal"); } }
+        private long? _explicitNullValueS3EgressTotal = default!;
         /// <summary>Download traffic served over presigned S3 URLs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty2? S3PresignedEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty2? S3PresignedEgressChart { get => _explicitNullValueS3PresignedEgressChart; set { _explicitNullValueS3PresignedEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3PresignedEgressChart"); else _explicitNullProperties?.Remove("S3PresignedEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty2? _explicitNullValueS3PresignedEgressChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty2 S3PresignedEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty2 S3PresignedEgressChart { get => _explicitNullValueS3PresignedEgressChart; set { _explicitNullValueS3PresignedEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3PresignedEgressChart"); else _explicitNullProperties?.Remove("S3PresignedEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelS3PresignedEgressChartProperty2 _explicitNullValueS3PresignedEgressChart = default!;
 #endif
         /// <summary>Total download traffic over presigned S3 URLs</summary>
-        public long? S3PresignedEgressTotal { get; set; }
+        public long? S3PresignedEgressTotal { get => _explicitNullValueS3PresignedEgressTotal; set { _explicitNullValueS3PresignedEgressTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3PresignedEgressTotal"); else _explicitNullProperties?.Remove("S3PresignedEgressTotal"); } }
+        private long? _explicitNullValueS3PresignedEgressTotal = default!;
         /// <summary>Download traffic served over SFTP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty2? SftpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty2? SftpEgressChart { get => _explicitNullValueSftpEgressChart; set { _explicitNullValueSftpEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SftpEgressChart"); else _explicitNullProperties?.Remove("SftpEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty2? _explicitNullValueSftpEgressChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty2 SftpEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty2 SftpEgressChart { get => _explicitNullValueSftpEgressChart; set { _explicitNullValueSftpEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SftpEgressChart"); else _explicitNullProperties?.Remove("SftpEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelSftpEgressChartProperty2 _explicitNullValueSftpEgressChart = default!;
 #endif
         /// <summary>Total download traffic over SFTP</summary>
-        public long? SftpEgressTotal { get; set; }
+        public long? SftpEgressTotal { get => _explicitNullValueSftpEgressTotal; set { _explicitNullValueSftpEgressTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SftpEgressTotal"); else _explicitNullProperties?.Remove("SftpEgressTotal"); } }
+        private long? _explicitNullValueSftpEgressTotal = default!;
         /// <summary>Total download traffic across all protocols</summary>
-        public long? TotalEgress { get; set; }
+        public long? TotalEgress { get => _explicitNullValueTotalEgress; set { _explicitNullValueTotalEgress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalEgress"); else _explicitNullProperties?.Remove("TotalEgress"); } }
+        private long? _explicitNullValueTotalEgress = default!;
         /// <summary>Total download traffic across all protocols</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2? TotalEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2? TotalEgressChart { get => _explicitNullValueTotalEgressChart; set { _explicitNullValueTotalEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalEgressChart"); else _explicitNullProperties?.Remove("TotalEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2? _explicitNullValueTotalEgressChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2 TotalEgressChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2 TotalEgressChart { get => _explicitNullValueTotalEgressChart; set { _explicitNullValueTotalEgressChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalEgressChart"); else _explicitNullProperties?.Remove("TotalEgressChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2 _explicitNullValueTotalEgressChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModel"/> and sets the default values.
@@ -89,7 +126,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +169,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("SftpEgressTotal", SftpEgressTotal);
             writer.WriteLongValue("TotalEgress", TotalEgress);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneEgressStatisticsModelTotalEgressChartProperty2>("TotalEgressChart", TotalEgressChart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

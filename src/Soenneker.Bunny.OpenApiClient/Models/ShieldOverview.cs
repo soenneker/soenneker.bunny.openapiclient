@@ -11,23 +11,44 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ShieldOverview : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessListActions") is { } nullNodeAccessListActions && nullNodeAccessListActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessListActions = null;
+            if (parseNode.GetChildNode("apiGuardianBlocks") is { } nullNodeApiGuardianBlocks && nullNodeApiGuardianBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiGuardianBlocks = null;
+            if (parseNode.GetChildNode("botDetectionChallenged") is { } nullNodeBotDetectionChallenged && nullNodeBotDetectionChallenged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotDetectionChallenged = null;
+            if (parseNode.GetChildNode("dDoSMitigated") is { } nullNodeDDoSMitigated && nullNodeDDoSMitigated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DDoSMitigated = null;
+            if (parseNode.GetChildNode("ratelimitBreaches") is { } nullNodeRatelimitBreaches && nullNodeRatelimitBreaches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatelimitBreaches = null;
+            if (parseNode.GetChildNode("uploadScanningBlocks") is { } nullNodeUploadScanningBlocks && nullNodeUploadScanningBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadScanningBlocks = null;
+            if (parseNode.GetChildNode("wafTriggeredRules") is { } nullNodeWafTriggeredRules && nullNodeWafTriggeredRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafTriggeredRules = null;
+        }
+
         /// <summary>The accessListActions property</summary>
-        public int? AccessListActions { get; set; }
+        public int? AccessListActions { get => _explicitNullValueAccessListActions; set { _explicitNullValueAccessListActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessListActions"); else _explicitNullProperties?.Remove("accessListActions"); } }
+        private int? _explicitNullValueAccessListActions = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The apiGuardianBlocks property</summary>
-        public int? ApiGuardianBlocks { get; set; }
+        public int? ApiGuardianBlocks { get => _explicitNullValueApiGuardianBlocks; set { _explicitNullValueApiGuardianBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiGuardianBlocks"); else _explicitNullProperties?.Remove("apiGuardianBlocks"); } }
+        private int? _explicitNullValueApiGuardianBlocks = default!;
         /// <summary>The botDetectionChallenged property</summary>
-        public int? BotDetectionChallenged { get; set; }
+        public int? BotDetectionChallenged { get => _explicitNullValueBotDetectionChallenged; set { _explicitNullValueBotDetectionChallenged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetectionChallenged"); else _explicitNullProperties?.Remove("botDetectionChallenged"); } }
+        private int? _explicitNullValueBotDetectionChallenged = default!;
         /// <summary>The dDoSMitigated property</summary>
-        public int? DDoSMitigated { get; set; }
+        public int? DDoSMitigated { get => _explicitNullValueDDoSMitigated; set { _explicitNullValueDDoSMitigated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dDoSMitigated"); else _explicitNullProperties?.Remove("dDoSMitigated"); } }
+        private int? _explicitNullValueDDoSMitigated = default!;
         /// <summary>The ratelimitBreaches property</summary>
-        public int? RatelimitBreaches { get; set; }
+        public int? RatelimitBreaches { get => _explicitNullValueRatelimitBreaches; set { _explicitNullValueRatelimitBreaches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitBreaches"); else _explicitNullProperties?.Remove("ratelimitBreaches"); } }
+        private int? _explicitNullValueRatelimitBreaches = default!;
         /// <summary>The uploadScanningBlocks property</summary>
-        public int? UploadScanningBlocks { get; set; }
+        public int? UploadScanningBlocks { get => _explicitNullValueUploadScanningBlocks; set { _explicitNullValueUploadScanningBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadScanningBlocks"); else _explicitNullProperties?.Remove("uploadScanningBlocks"); } }
+        private int? _explicitNullValueUploadScanningBlocks = default!;
         /// <summary>The wafTriggeredRules property</summary>
-        public int? WafTriggeredRules { get; set; }
+        public int? WafTriggeredRules { get => _explicitNullValueWafTriggeredRules; set { _explicitNullValueWafTriggeredRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafTriggeredRules"); else _explicitNullProperties?.Remove("wafTriggeredRules"); } }
+        private int? _explicitNullValueWafTriggeredRules = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview"/> and sets the default values.
         /// </summary>
@@ -43,7 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ShieldOverview(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +97,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("ratelimitBreaches", RatelimitBreaches);
             writer.WriteIntValue("uploadScanningBlocks", UploadScanningBlocks);
             writer.WriteIntValue("wafTriggeredRules", WafTriggeredRules);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

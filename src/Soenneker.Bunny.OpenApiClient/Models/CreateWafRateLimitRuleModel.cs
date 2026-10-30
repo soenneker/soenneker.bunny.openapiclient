@@ -11,58 +11,95 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreateWafRateLimitRuleModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("blockTime") is { } nullNodeBlockTime && nullNodeBlockTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockTime = null;
+            if (parseNode.GetChildNode("chainedRuleConditions") is { } nullNodeChainedRuleConditions && nullNodeChainedRuleConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChainedRuleConditions = null;
+            if (parseNode.GetChildNode("counterKeyType") is { } nullNodeCounterKeyType && nullNodeCounterKeyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CounterKeyType = null;
+            if (parseNode.GetChildNode("isNegated") is { } nullNodeIsNegated && nullNodeIsNegated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNegated = null;
+            if (parseNode.GetChildNode("isRegexVariable") is { } nullNodeIsRegexVariable && nullNodeIsRegexVariable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRegexVariable = null;
+            if (parseNode.GetChildNode("operatorType") is { } nullNodeOperatorType && nullNodeOperatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorType = null;
+            if (parseNode.GetChildNode("requestCount") is { } nullNodeRequestCount && nullNodeRequestCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestCount = null;
+            if (parseNode.GetChildNode("severityType") is { } nullNodeSeverityType && nullNodeSeverityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeverityType = null;
+            if (parseNode.GetChildNode("timeframe") is { } nullNodeTimeframe && nullNodeTimeframe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeframe = null;
+            if (parseNode.GetChildNode("transformationTypes") is { } nullNodeTransformationTypes && nullNodeTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformationTypes = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("variableTypes") is { } nullNodeVariableTypes && nullNodeVariableTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableTypes = null;
+        }
+
         /// <summary>1 = RateLimit2 = Log3 = Challenge</summary>
-        public int? ActionType { get; set; }
+        public int? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        private int? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>30 = ForThirtySeconds60 = ForOneMinute300 = ForFiveMinutes900 = ForFifteenMinutes1800 = ForThirtyMinutes3600 = ForOneHour</summary>
-        public int? BlockTime { get; set; }
+        public int? BlockTime { get => _explicitNullValueBlockTime; set { _explicitNullValueBlockTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockTime"); else _explicitNullProperties?.Remove("blockTime"); } }
+        private int? _explicitNullValueBlockTime = default!;
         /// <summary>The chainedRuleConditions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>? ChainedRuleConditions { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>? ChainedRuleConditions { get => _explicitNullValueChainedRuleConditions; set { _explicitNullValueChainedRuleConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedRuleConditions"); else _explicitNullProperties?.Remove("chainedRuleConditions"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>? _explicitNullValueChainedRuleConditions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> ChainedRuleConditions { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> ChainedRuleConditions { get => _explicitNullValueChainedRuleConditions; set { _explicitNullValueChainedRuleConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedRuleConditions"); else _explicitNullProperties?.Remove("chainedRuleConditions"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> _explicitNullValueChainedRuleConditions = default!;
 #endif
         /// <summary>0 = IP1 = Host2 = Country3 = City4 = ASN5 = Organization6 = JA47 = IP_JA4</summary>
-        public int? CounterKeyType { get; set; }
+        public int? CounterKeyType { get => _explicitNullValueCounterKeyType; set { _explicitNullValueCounterKeyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counterKeyType"); else _explicitNullProperties?.Remove("counterKeyType"); } }
+        private int? _explicitNullValueCounterKeyType = default!;
         /// <summary>The isNegated property</summary>
-        public bool? IsNegated { get; set; }
+        public bool? IsNegated { get => _explicitNullValueIsNegated; set { _explicitNullValueIsNegated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNegated"); else _explicitNullProperties?.Remove("isNegated"); } }
+        private bool? _explicitNullValueIsNegated = default!;
         /// <summary>The isRegexVariable property</summary>
-        public bool? IsRegexVariable { get; set; }
+        public bool? IsRegexVariable { get => _explicitNullValueIsRegexVariable; set { _explicitNullValueIsRegexVariable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRegexVariable"); else _explicitNullProperties?.Remove("isRegexVariable"); } }
+        private bool? _explicitNullValueIsRegexVariable = default!;
         /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN13 = IPMATCH14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
-        public int? OperatorType { get; set; }
+        public int? OperatorType { get => _explicitNullValueOperatorType; set { _explicitNullValueOperatorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operatorType"); else _explicitNullProperties?.Remove("operatorType"); } }
+        private int? _explicitNullValueOperatorType = default!;
         /// <summary>The requestCount property</summary>
-        public int? RequestCount { get; set; }
+        public int? RequestCount { get => _explicitNullValueRequestCount; set { _explicitNullValueRequestCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestCount"); else _explicitNullProperties?.Remove("requestCount"); } }
+        private int? _explicitNullValueRequestCount = default!;
         /// <summary>0 = NOTICE1 = WARNING2 = CRITICAL</summary>
-        public int? SeverityType { get; set; }
+        public int? SeverityType { get => _explicitNullValueSeverityType; set { _explicitNullValueSeverityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severityType"); else _explicitNullProperties?.Remove("severityType"); } }
+        private int? _explicitNullValueSeverityType = default!;
         /// <summary>1 = PerSecond10 = PerTenSeconds60 = PerOneMinute300 = PerFiveMinutes900 = PerFifteenMinutes3600 = PerOneHour</summary>
-        public int? Timeframe { get; set; }
+        public int? Timeframe { get => _explicitNullValueTimeframe; set { _explicitNullValueTimeframe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeframe"); else _explicitNullProperties?.Remove("timeframe"); } }
+        private int? _explicitNullValueTimeframe = default!;
         /// <summary>The transformationTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? TransformationTypes { get; set; }
+        public List<int?>? TransformationTypes { get => _explicitNullValueTransformationTypes; set { _explicitNullValueTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformationTypes"); else _explicitNullProperties?.Remove("transformationTypes"); } }
+        private List<int?>? _explicitNullValueTransformationTypes = default!;
 #nullable restore
 #else
-        public List<int?> TransformationTypes { get; set; }
+        public List<int?> TransformationTypes { get => _explicitNullValueTransformationTypes; set { _explicitNullValueTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformationTypes"); else _explicitNullProperties?.Remove("transformationTypes"); } }
+        private List<int?> _explicitNullValueTransformationTypes = default!;
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>The variableTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes? VariableTypes { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes? VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes? _explicitNullValueVariableTypes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes VariableTypes { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes _explicitNullValueVariableTypes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModel"/> and sets the default values.
@@ -79,7 +116,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +161,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("transformationTypes", TransformationTypes);
             writer.WriteStringValue("value", Value);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateWafRateLimitRuleModelVariableTypes>("variableTypes", VariableTypes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

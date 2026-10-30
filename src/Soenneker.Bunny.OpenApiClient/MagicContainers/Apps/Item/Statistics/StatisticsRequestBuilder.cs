@@ -19,7 +19,6 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
     public partial class StatisticsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The charts property</summary>
-        [Obsolete("")]
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Charts.ChartsRequestBuilder Charts
         {
             get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Charts.ChartsRequestBuilder(PathParameters, RequestAdapter);
@@ -67,6 +66,8 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersProblemDetails.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.ErrorDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.Statistics>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.Statistics.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

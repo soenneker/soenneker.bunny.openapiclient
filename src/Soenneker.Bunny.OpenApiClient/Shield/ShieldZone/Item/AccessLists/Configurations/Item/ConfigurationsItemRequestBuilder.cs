@@ -57,6 +57,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.AccessLists.Confi
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.UpdateAccessListConfigurationResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.UpdateAccessListConfigurationResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.UpdateAccessListConfigurationResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

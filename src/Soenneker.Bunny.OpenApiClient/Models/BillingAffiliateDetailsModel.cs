@@ -11,47 +11,72 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BillingAffiliateDetailsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AffiliateBalance") is { } nullNodeAffiliateBalance && nullNodeAffiliateBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateBalance = null;
+            if (parseNode.GetChildNode("AffiliateClicksChart") is { } nullNodeAffiliateClicksChart && nullNodeAffiliateClicksChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateClicksChart = null;
+            if (parseNode.GetChildNode("AffiliateConversionsChart") is { } nullNodeAffiliateConversionsChart && nullNodeAffiliateConversionsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateConversionsChart = null;
+            if (parseNode.GetChildNode("AffiliateSignupsChart") is { } nullNodeAffiliateSignupsChart && nullNodeAffiliateSignupsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateSignupsChart = null;
+            if (parseNode.GetChildNode("AffiliateUrl") is { } nullNodeAffiliateUrl && nullNodeAffiliateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AffiliateUrl = null;
+            if (parseNode.GetChildNode("ClaimBonusPercentage") is { } nullNodeClaimBonusPercentage && nullNodeClaimBonusPercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClaimBonusPercentage = null;
+            if (parseNode.GetChildNode("MinimumPayoutAmount") is { } nullNodeMinimumPayoutAmount && nullNodeMinimumPayoutAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumPayoutAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The amount of affiliate credits on the account</summary>
-        public decimal? AffiliateBalance { get; set; }
+        public decimal? AffiliateBalance { get => _explicitNullValueAffiliateBalance; set { _explicitNullValueAffiliateBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateBalance"); else _explicitNullProperties?.Remove("AffiliateBalance"); } }
+        private decimal? _explicitNullValueAffiliateBalance = default!;
         /// <summary>The constructed affiliate click history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty2? AffiliateClicksChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty2? AffiliateClicksChart { get => _explicitNullValueAffiliateClicksChart; set { _explicitNullValueAffiliateClicksChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateClicksChart"); else _explicitNullProperties?.Remove("AffiliateClicksChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty2? _explicitNullValueAffiliateClicksChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty2 AffiliateClicksChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty2 AffiliateClicksChart { get => _explicitNullValueAffiliateClicksChart; set { _explicitNullValueAffiliateClicksChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateClicksChart"); else _explicitNullProperties?.Remove("AffiliateClicksChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateClicksChartProperty2 _explicitNullValueAffiliateClicksChart = default!;
 #endif
         /// <summary>The constructed affiliate conversion history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty2? AffiliateConversionsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty2? AffiliateConversionsChart { get => _explicitNullValueAffiliateConversionsChart; set { _explicitNullValueAffiliateConversionsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateConversionsChart"); else _explicitNullProperties?.Remove("AffiliateConversionsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty2? _explicitNullValueAffiliateConversionsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty2 AffiliateConversionsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty2 AffiliateConversionsChart { get => _explicitNullValueAffiliateConversionsChart; set { _explicitNullValueAffiliateConversionsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateConversionsChart"); else _explicitNullProperties?.Remove("AffiliateConversionsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateConversionsChartProperty2 _explicitNullValueAffiliateConversionsChart = default!;
 #endif
         /// <summary>The constructed affiliate signup history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty2? AffiliateSignupsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty2? AffiliateSignupsChart { get => _explicitNullValueAffiliateSignupsChart; set { _explicitNullValueAffiliateSignupsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateSignupsChart"); else _explicitNullProperties?.Remove("AffiliateSignupsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty2? _explicitNullValueAffiliateSignupsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty2 AffiliateSignupsChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty2 AffiliateSignupsChart { get => _explicitNullValueAffiliateSignupsChart; set { _explicitNullValueAffiliateSignupsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateSignupsChart"); else _explicitNullProperties?.Remove("AffiliateSignupsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModelAffiliateSignupsChartProperty2 _explicitNullValueAffiliateSignupsChart = default!;
 #endif
         /// <summary>The affiliate URL for the currently authenticated user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AffiliateUrl { get; set; }
+        public string? AffiliateUrl { get => _explicitNullValueAffiliateUrl; set { _explicitNullValueAffiliateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateUrl"); else _explicitNullProperties?.Remove("AffiliateUrl"); } }
+        private string? _explicitNullValueAffiliateUrl = default!;
 #nullable restore
 #else
-        public string AffiliateUrl { get; set; }
+        public string AffiliateUrl { get => _explicitNullValueAffiliateUrl; set { _explicitNullValueAffiliateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AffiliateUrl"); else _explicitNullProperties?.Remove("AffiliateUrl"); } }
+        private string _explicitNullValueAffiliateUrl = default!;
 #endif
         /// <summary>The bonus percentage given when claiming affiliate balance as bunny credits</summary>
-        public decimal? ClaimBonusPercentage { get; set; }
+        public decimal? ClaimBonusPercentage { get => _explicitNullValueClaimBonusPercentage; set { _explicitNullValueClaimBonusPercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ClaimBonusPercentage"); else _explicitNullProperties?.Remove("ClaimBonusPercentage"); } }
+        private decimal? _explicitNullValueClaimBonusPercentage = default!;
         /// <summary>The smallest cash payout that can be requested</summary>
-        public decimal? MinimumPayoutAmount { get; set; }
+        public decimal? MinimumPayoutAmount { get => _explicitNullValueMinimumPayoutAmount; set { _explicitNullValueMinimumPayoutAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinimumPayoutAmount"); else _explicitNullProperties?.Remove("MinimumPayoutAmount"); } }
+        private decimal? _explicitNullValueMinimumPayoutAmount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModel"/> and sets the default values.
         /// </summary>
@@ -67,7 +92,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BillingAffiliateDetailsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +125,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("AffiliateUrl", AffiliateUrl);
             writer.WriteDecimalValue("ClaimBonusPercentage", ClaimBonusPercentage);
             writer.WriteDecimalValue("MinimumPayoutAmount", MinimumPayoutAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

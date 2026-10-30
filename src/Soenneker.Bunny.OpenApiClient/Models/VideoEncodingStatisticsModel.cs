@@ -11,34 +11,52 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VideoEncodingStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("free") is { } nullNodeFree && nullNodeFree.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Free = null;
+            if (parseNode.GetChildNode("hourly") is { } nullNodeHourly && nullNodeHourly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hourly = null;
+            if (parseNode.GetChildNode("premium") is { } nullNodePremium && nullNodePremium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Premium = null;
+            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Encoding statistics for videos encoded with the free encoding tier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelFree? Free { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelFree? Free { get => _explicitNullValueFree; set { _explicitNullValueFree = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free"); else _explicitNullProperties?.Remove("free"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelFree? _explicitNullValueFree = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelFree Free { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelFree Free { get => _explicitNullValueFree; set { _explicitNullValueFree = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("free"); else _explicitNullProperties?.Remove("free"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelFree _explicitNullValueFree = default!;
 #endif
         /// <summary>Indicates whether the charts use hourly or daily UTC buckets.</summary>
-        public bool? Hourly { get; set; }
+        public bool? Hourly { get => _explicitNullValueHourly; set { _explicitNullValueHourly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hourly"); else _explicitNullProperties?.Remove("hourly"); } }
+        private bool? _explicitNullValueHourly = default!;
         /// <summary>Encoding statistics for videos encoded with the premium encoding tier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium? Premium { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium? Premium { get => _explicitNullValuePremium; set { _explicitNullValuePremium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium"); else _explicitNullProperties?.Remove("premium"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium? _explicitNullValuePremium = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium Premium { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium Premium { get => _explicitNullValuePremium; set { _explicitNullValuePremium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premium"); else _explicitNullProperties?.Remove("premium"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium _explicitNullValuePremium = default!;
 #endif
         /// <summary>Combined premium and free encoding statistics for the selected period.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal? Total { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal? _explicitNullValueTotal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal Total { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal _explicitNullValueTotal = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModel"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("hourly", Hourly);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremium>("premium", Premium);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal>("total", Total);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

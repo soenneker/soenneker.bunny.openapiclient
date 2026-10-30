@@ -12,15 +12,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class OverviewLimits : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cpuCores") is { } nullNodeCpuCores && nullNodeCpuCores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpuCores = null;
+            if (parseNode.GetChildNode("outboundBandwidthBytesPerSecond") is { } nullNodeOutboundBandwidthBytesPerSecond && nullNodeOutboundBandwidthBytesPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundBandwidthBytesPerSecond = null;
+            if (parseNode.GetChildNode("ramBytes") is { } nullNodeRamBytes && nullNodeRamBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RamBytes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpuCores property</summary>
-        public double? CpuCores { get; set; }
+        public double? CpuCores { get => _explicitNullValueCpuCores; set { _explicitNullValueCpuCores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpuCores"); else _explicitNullProperties?.Remove("cpuCores"); } }
+        private double? _explicitNullValueCpuCores = default!;
         /// <summary>The outboundBandwidthBytesPerSecond property</summary>
-        public double? OutboundBandwidthBytesPerSecond { get; set; }
+        public double? OutboundBandwidthBytesPerSecond { get => _explicitNullValueOutboundBandwidthBytesPerSecond; set { _explicitNullValueOutboundBandwidthBytesPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundBandwidthBytesPerSecond"); else _explicitNullProperties?.Remove("outboundBandwidthBytesPerSecond"); } }
+        private double? _explicitNullValueOutboundBandwidthBytesPerSecond = default!;
         /// <summary>The ramBytes property</summary>
-        public double? RamBytes { get; set; }
+        public double? RamBytes { get => _explicitNullValueRamBytes; set { _explicitNullValueRamBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ramBytes"); else _explicitNullProperties?.Remove("ramBytes"); } }
+        private double? _explicitNullValueRamBytes = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("cpuCores", CpuCores);
             writer.WriteDoubleValue("outboundBandwidthBytesPerSecond", OutboundBandwidthBytesPerSecond);
             writer.WriteDoubleValue("ramBytes", RamBytes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

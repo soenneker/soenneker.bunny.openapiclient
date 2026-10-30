@@ -11,24 +11,37 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WafMappedEnumList : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enumName") is { } nullNodeEnumName && nullNodeEnumName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumName = null;
+            if (parseNode.GetChildNode("enumValues") is { } nullNodeEnumValues && nullNodeEnumValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnumValues = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The enumName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnumName { get; set; }
+        public string? EnumName { get => _explicitNullValueEnumName; set { _explicitNullValueEnumName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumName"); else _explicitNullProperties?.Remove("enumName"); } }
+        private string? _explicitNullValueEnumName = default!;
 #nullable restore
 #else
-        public string EnumName { get; set; }
+        public string EnumName { get => _explicitNullValueEnumName; set { _explicitNullValueEnumName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumName"); else _explicitNullProperties?.Remove("enumName"); } }
+        private string _explicitNullValueEnumName = default!;
 #endif
         /// <summary>The enumValues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum>? EnumValues { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum>? EnumValues { get => _explicitNullValueEnumValues; set { _explicitNullValueEnumValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumValues"); else _explicitNullProperties?.Remove("enumValues"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum>? _explicitNullValueEnumValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum> EnumValues { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum> EnumValues { get => _explicitNullValueEnumValues; set { _explicitNullValueEnumValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enumValues"); else _explicitNullProperties?.Remove("enumValues"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum> _explicitNullValueEnumValues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnumList"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnumList CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnumList();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnumList(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("enumName", EnumName);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.WafMappedEnum>("enumValues", EnumValues);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

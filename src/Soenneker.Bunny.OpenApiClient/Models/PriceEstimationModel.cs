@@ -11,30 +11,49 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PriceEstimationModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Breakdown") is { } nullNodeBreakdown && nullNodeBreakdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Breakdown = null;
+            if (parseNode.GetChildNode("EstimatedCost") is { } nullNodeEstimatedCost && nullNodeEstimatedCost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedCost = null;
+            if (parseNode.GetChildNode("PricePerUnit") is { } nullNodePricePerUnit && nullNodePricePerUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerUnit = null;
+            if (parseNode.GetChildNode("PricingType") is { } nullNodePricingType && nullNodePricingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingType = null;
+            if (parseNode.GetChildNode("UnitDescription") is { } nullNodeUnitDescription && nullNodeUnitDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitDescription = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Breakdown property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationBreakdownLine>? Breakdown { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationBreakdownLine>? Breakdown { get => _explicitNullValueBreakdown; set { _explicitNullValueBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Breakdown"); else _explicitNullProperties?.Remove("Breakdown"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationBreakdownLine>? _explicitNullValueBreakdown = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationBreakdownLine> Breakdown { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationBreakdownLine> Breakdown { get => _explicitNullValueBreakdown; set { _explicitNullValueBreakdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Breakdown"); else _explicitNullProperties?.Remove("Breakdown"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationBreakdownLine> _explicitNullValueBreakdown = default!;
 #endif
         /// <summary>The EstimatedCost property</summary>
-        public decimal? EstimatedCost { get; set; }
+        public decimal? EstimatedCost { get => _explicitNullValueEstimatedCost; set { _explicitNullValueEstimatedCost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EstimatedCost"); else _explicitNullProperties?.Remove("EstimatedCost"); } }
+        private decimal? _explicitNullValueEstimatedCost = default!;
         /// <summary>The PricePerUnit property</summary>
-        public decimal? PricePerUnit { get; set; }
-        /// <summary>0 = ListPrice1 = UserOverride2 = ResourceOverride</summary>
-        public int? PricingType { get; set; }
+        public decimal? PricePerUnit { get => _explicitNullValuePricePerUnit; set { _explicitNullValuePricePerUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerUnit"); else _explicitNullProperties?.Remove("PricePerUnit"); } }
+        private decimal? _explicitNullValuePricePerUnit = default!;
+        /// <summary>0 = List Price1 = User Override2 = Resource Override</summary>
+        public int? PricingType { get => _explicitNullValuePricingType; set { _explicitNullValuePricingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricingType"); else _explicitNullProperties?.Remove("PricingType"); } }
+        private int? _explicitNullValuePricingType = default!;
         /// <summary>The UnitDescription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitDescription { get; set; }
+        public string? UnitDescription { get => _explicitNullValueUnitDescription; set { _explicitNullValueUnitDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitDescription"); else _explicitNullProperties?.Remove("UnitDescription"); } }
+        private string? _explicitNullValueUnitDescription = default!;
 #nullable restore
 #else
-        public string UnitDescription { get; set; }
+        public string UnitDescription { get => _explicitNullValueUnitDescription; set { _explicitNullValueUnitDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UnitDescription"); else _explicitNullProperties?.Remove("UnitDescription"); } }
+        private string _explicitNullValueUnitDescription = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationModel"/> and sets the default values.
@@ -51,7 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.PriceEstimationModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDecimalValue("PricePerUnit", PricePerUnit);
             writer.WriteIntValue("PricingType", PricingType);
             writer.WriteStringValue("UnitDescription", UnitDescription);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

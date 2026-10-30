@@ -74,7 +74,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsZoneModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsZoneModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsZoneModel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add DNS Zone
@@ -97,6 +97,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -174,10 +176,9 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            #pragma warning disable CS1591
+            /// <summary>0 = Full1 = Lite</summary>
             [QueryParameter("view")]
             public int? View { get; set; }
-            #pragma warning restore CS1591
         }
     }
 }

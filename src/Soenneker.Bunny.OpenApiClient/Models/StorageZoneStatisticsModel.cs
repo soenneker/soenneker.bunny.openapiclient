@@ -11,24 +11,37 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StorageZoneStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("FileCountChart") is { } nullNodeFileCountChart && nullNodeFileCountChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileCountChart = null;
+            if (parseNode.GetChildNode("StorageUsedChart") is { } nullNodeStorageUsedChart && nullNodeStorageUsedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageUsedChart = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The constructed chart of requests stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2? FileCountChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2? FileCountChart { get => _explicitNullValueFileCountChart; set { _explicitNullValueFileCountChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileCountChart"); else _explicitNullProperties?.Remove("FileCountChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2? _explicitNullValueFileCountChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2 FileCountChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2 FileCountChart { get => _explicitNullValueFileCountChart; set { _explicitNullValueFileCountChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileCountChart"); else _explicitNullProperties?.Remove("FileCountChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2 _explicitNullValueFileCountChart = default!;
 #endif
         /// <summary>The constructed chart of the storage used by day</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2? StorageUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2? StorageUsedChart { get => _explicitNullValueStorageUsedChart; set { _explicitNullValueStorageUsedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageUsedChart"); else _explicitNullProperties?.Remove("StorageUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2? _explicitNullValueStorageUsedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2 StorageUsedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2 StorageUsedChart { get => _explicitNullValueStorageUsedChart; set { _explicitNullValueStorageUsedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageUsedChart"); else _explicitNullProperties?.Remove("StorageUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2 _explicitNullValueStorageUsedChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModel"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2>("FileCountChart", FileCountChart);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2>("StorageUsedChart", StorageUsedChart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,53 +11,79 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CountryModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("FlagUrl") is { } nullNodeFlagUrl && nullNodeFlagUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlagUrl = null;
+            if (parseNode.GetChildNode("IsEU") is { } nullNodeIsEU && nullNodeIsEU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEU = null;
+            if (parseNode.GetChildNode("IsoCode") is { } nullNodeIsoCode && nullNodeIsoCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsoCode = null;
+            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("PopList") is { } nullNodePopList && nullNodePopList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PopList = null;
+            if (parseNode.GetChildNode("TaxPrefix") is { } nullNodeTaxPrefix && nullNodeTaxPrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxPrefix = null;
+            if (parseNode.GetChildNode("TaxRate") is { } nullNodeTaxRate && nullNodeTaxRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The FlagUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlagUrl { get; set; }
+        public string? FlagUrl { get => _explicitNullValueFlagUrl; set { _explicitNullValueFlagUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FlagUrl"); else _explicitNullProperties?.Remove("FlagUrl"); } }
+        private string? _explicitNullValueFlagUrl = default!;
 #nullable restore
 #else
-        public string FlagUrl { get; set; }
+        public string FlagUrl { get => _explicitNullValueFlagUrl; set { _explicitNullValueFlagUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FlagUrl"); else _explicitNullProperties?.Remove("FlagUrl"); } }
+        private string _explicitNullValueFlagUrl = default!;
 #endif
         /// <summary>The IsEU property</summary>
-        public bool? IsEU { get; set; }
+        public bool? IsEU { get => _explicitNullValueIsEU; set { _explicitNullValueIsEU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsEU"); else _explicitNullProperties?.Remove("IsEU"); } }
+        private bool? _explicitNullValueIsEU = default!;
         /// <summary>The IsoCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IsoCode { get; set; }
+        public string? IsoCode { get => _explicitNullValueIsoCode; set { _explicitNullValueIsoCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsoCode"); else _explicitNullProperties?.Remove("IsoCode"); } }
+        private string? _explicitNullValueIsoCode = default!;
 #nullable restore
 #else
-        public string IsoCode { get; set; }
+        public string IsoCode { get => _explicitNullValueIsoCode; set { _explicitNullValueIsoCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsoCode"); else _explicitNullProperties?.Remove("IsoCode"); } }
+        private string _explicitNullValueIsoCode = default!;
 #endif
         /// <summary>The Name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The PopList property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PopList { get; set; }
+        public List<string>? PopList { get => _explicitNullValuePopList; set { _explicitNullValuePopList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PopList"); else _explicitNullProperties?.Remove("PopList"); } }
+        private List<string>? _explicitNullValuePopList = default!;
 #nullable restore
 #else
-        public List<string> PopList { get; set; }
+        public List<string> PopList { get => _explicitNullValuePopList; set { _explicitNullValuePopList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PopList"); else _explicitNullProperties?.Remove("PopList"); } }
+        private List<string> _explicitNullValuePopList = default!;
 #endif
         /// <summary>The TaxPrefix property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TaxPrefix { get; set; }
+        public string? TaxPrefix { get => _explicitNullValueTaxPrefix; set { _explicitNullValueTaxPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxPrefix"); else _explicitNullProperties?.Remove("TaxPrefix"); } }
+        private string? _explicitNullValueTaxPrefix = default!;
 #nullable restore
 #else
-        public string TaxPrefix { get; set; }
+        public string TaxPrefix { get => _explicitNullValueTaxPrefix; set { _explicitNullValueTaxPrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxPrefix"); else _explicitNullProperties?.Remove("TaxPrefix"); } }
+        private string _explicitNullValueTaxPrefix = default!;
 #endif
         /// <summary>The TaxRate property</summary>
-        public decimal? TaxRate { get; set; }
+        public decimal? TaxRate { get => _explicitNullValueTaxRate; set { _explicitNullValueTaxRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxRate"); else _explicitNullProperties?.Remove("TaxRate"); } }
+        private decimal? _explicitNullValueTaxRate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CountryModel"/> and sets the default values.
         /// </summary>
@@ -73,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.CountryModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.CountryModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.CountryModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -106,6 +132,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("PopList", PopList);
             writer.WriteStringValue("TaxPrefix", TaxPrefix);
             writer.WriteDecimalValue("TaxRate", TaxRate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

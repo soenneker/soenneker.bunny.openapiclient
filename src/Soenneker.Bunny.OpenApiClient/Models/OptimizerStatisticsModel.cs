@@ -11,48 +11,75 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OptimizerStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AverageCompressionChart") is { } nullNodeAverageCompressionChart && nullNodeAverageCompressionChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageCompressionChart = null;
+            if (parseNode.GetChildNode("AverageCompressionRatio") is { } nullNodeAverageCompressionRatio && nullNodeAverageCompressionRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageCompressionRatio = null;
+            if (parseNode.GetChildNode("AverageProcessingTime") is { } nullNodeAverageProcessingTime && nullNodeAverageProcessingTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageProcessingTime = null;
+            if (parseNode.GetChildNode("AverageProcessingTimeChart") is { } nullNodeAverageProcessingTimeChart && nullNodeAverageProcessingTimeChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageProcessingTimeChart = null;
+            if (parseNode.GetChildNode("RequestsOptimizedChart") is { } nullNodeRequestsOptimizedChart && nullNodeRequestsOptimizedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsOptimizedChart = null;
+            if (parseNode.GetChildNode("TotalRequestsOptimized") is { } nullNodeTotalRequestsOptimized && nullNodeTotalRequestsOptimized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequestsOptimized = null;
+            if (parseNode.GetChildNode("TotalTrafficSaved") is { } nullNodeTotalTrafficSaved && nullNodeTotalTrafficSaved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTrafficSaved = null;
+            if (parseNode.GetChildNode("TrafficSavedChart") is { } nullNodeTrafficSavedChart && nullNodeTrafficSavedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficSavedChart = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Average compression chart of the responses</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty2? AverageCompressionChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty2? AverageCompressionChart { get => _explicitNullValueAverageCompressionChart; set { _explicitNullValueAverageCompressionChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCompressionChart"); else _explicitNullProperties?.Remove("AverageCompressionChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty2? _explicitNullValueAverageCompressionChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty2 AverageCompressionChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty2 AverageCompressionChart { get => _explicitNullValueAverageCompressionChart; set { _explicitNullValueAverageCompressionChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCompressionChart"); else _explicitNullProperties?.Remove("AverageCompressionChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageCompressionChartProperty2 _explicitNullValueAverageCompressionChart = default!;
 #endif
         /// <summary>The average compression ratio of CDN responses</summary>
-        public double? AverageCompressionRatio { get; set; }
+        public double? AverageCompressionRatio { get => _explicitNullValueAverageCompressionRatio; set { _explicitNullValueAverageCompressionRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCompressionRatio"); else _explicitNullProperties?.Remove("AverageCompressionRatio"); } }
+        private double? _explicitNullValueAverageCompressionRatio = default!;
         /// <summary>The average processing time of each request</summary>
-        public double? AverageProcessingTime { get; set; }
+        public double? AverageProcessingTime { get => _explicitNullValueAverageProcessingTime; set { _explicitNullValueAverageProcessingTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageProcessingTime"); else _explicitNullProperties?.Remove("AverageProcessingTime"); } }
+        private double? _explicitNullValueAverageProcessingTime = default!;
         /// <summary>The constructed chart of saved traffic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty2? AverageProcessingTimeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty2? AverageProcessingTimeChart { get => _explicitNullValueAverageProcessingTimeChart; set { _explicitNullValueAverageProcessingTimeChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageProcessingTimeChart"); else _explicitNullProperties?.Remove("AverageProcessingTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty2? _explicitNullValueAverageProcessingTimeChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty2 AverageProcessingTimeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty2 AverageProcessingTimeChart { get => _explicitNullValueAverageProcessingTimeChart; set { _explicitNullValueAverageProcessingTimeChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageProcessingTimeChart"); else _explicitNullProperties?.Remove("AverageProcessingTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelAverageProcessingTimeChartProperty2 _explicitNullValueAverageProcessingTimeChart = default!;
 #endif
         /// <summary>The constructed chart of optimized requests</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty2? RequestsOptimizedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty2? RequestsOptimizedChart { get => _explicitNullValueRequestsOptimizedChart; set { _explicitNullValueRequestsOptimizedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsOptimizedChart"); else _explicitNullProperties?.Remove("RequestsOptimizedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty2? _explicitNullValueRequestsOptimizedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty2 RequestsOptimizedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty2 RequestsOptimizedChart { get => _explicitNullValueRequestsOptimizedChart; set { _explicitNullValueRequestsOptimizedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsOptimizedChart"); else _explicitNullProperties?.Remove("RequestsOptimizedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelRequestsOptimizedChartProperty2 _explicitNullValueRequestsOptimizedChart = default!;
 #endif
         /// <summary>The total number of optimized requests</summary>
-        public double? TotalRequestsOptimized { get; set; }
+        public double? TotalRequestsOptimized { get => _explicitNullValueTotalRequestsOptimized; set { _explicitNullValueTotalRequestsOptimized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalRequestsOptimized"); else _explicitNullProperties?.Remove("TotalRequestsOptimized"); } }
+        private double? _explicitNullValueTotalRequestsOptimized = default!;
         /// <summary>The total requests saved</summary>
-        public double? TotalTrafficSaved { get; set; }
+        public double? TotalTrafficSaved { get => _explicitNullValueTotalTrafficSaved; set { _explicitNullValueTotalTrafficSaved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTrafficSaved"); else _explicitNullProperties?.Remove("TotalTrafficSaved"); } }
+        private double? _explicitNullValueTotalTrafficSaved = default!;
         /// <summary>The constructed chart of saved traffic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2? TrafficSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2? TrafficSavedChart { get => _explicitNullValueTrafficSavedChart; set { _explicitNullValueTrafficSavedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficSavedChart"); else _explicitNullProperties?.Remove("TrafficSavedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2? _explicitNullValueTrafficSavedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2 TrafficSavedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2 TrafficSavedChart { get => _explicitNullValueTrafficSavedChart; set { _explicitNullValueTrafficSavedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficSavedChart"); else _explicitNullProperties?.Remove("TrafficSavedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2 _explicitNullValueTrafficSavedChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModel"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("TotalRequestsOptimized", TotalRequestsOptimized);
             writer.WriteDoubleValue("TotalTrafficSaved", TotalTrafficSaved);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OptimizerStatisticsModelTrafficSavedChartProperty2>("TrafficSavedChart", TrafficSavedChart);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

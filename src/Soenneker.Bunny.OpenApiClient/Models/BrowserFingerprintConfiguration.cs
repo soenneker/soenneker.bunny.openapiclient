@@ -11,15 +11,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BrowserFingerprintConfiguration : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aggression") is { } nullNodeAggression && nullNodeAggression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggression = null;
+            if (parseNode.GetChildNode("complexEnabled") is { } nullNodeComplexEnabled && nullNodeComplexEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComplexEnabled = null;
+            if (parseNode.GetChildNode("sensitivity") is { } nullNodeSensitivity && nullNodeSensitivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sensitivity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Unknown1 = Low2 = Medium3 = High4 = Custom</summary>
-        public int? Aggression { get; set; }
+        public int? Aggression { get => _explicitNullValueAggression; set { _explicitNullValueAggression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggression"); else _explicitNullProperties?.Remove("aggression"); } }
+        private int? _explicitNullValueAggression = default!;
         /// <summary>The complexEnabled property</summary>
-        public bool? ComplexEnabled { get; set; }
+        public bool? ComplexEnabled { get => _explicitNullValueComplexEnabled; set { _explicitNullValueComplexEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complexEnabled"); else _explicitNullProperties?.Remove("complexEnabled"); } }
+        private bool? _explicitNullValueComplexEnabled = default!;
         /// <summary>0 = Off1 = Low2 = Medium3 = High</summary>
-        public int? Sensitivity { get; set; }
+        public int? Sensitivity { get => _explicitNullValueSensitivity; set { _explicitNullValueSensitivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sensitivity"); else _explicitNullProperties?.Remove("sensitivity"); } }
+        private int? _explicitNullValueSensitivity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("aggression", Aggression);
             writer.WriteBoolValue("complexEnabled", ComplexEnabled);
             writer.WriteIntValue("sensitivity", Sensitivity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

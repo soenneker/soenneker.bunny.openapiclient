@@ -11,34 +11,52 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetUserAuditLogResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ContinuationToken") is { } nullNodeContinuationToken && nullNodeContinuationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContinuationToken = null;
+            if (parseNode.GetChildNode("HasMoreData") is { } nullNodeHasMoreData && nullNodeHasMoreData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMoreData = null;
+            if (parseNode.GetChildNode("Logs") is { } nullNodeLogs && nullNodeLogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logs = null;
+            if (parseNode.GetChildNode("StartToken") is { } nullNodeStartToken && nullNodeStartToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToken = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ContinuationToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContinuationToken { get; set; }
+        public string? ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContinuationToken"); else _explicitNullProperties?.Remove("ContinuationToken"); } }
+        private string? _explicitNullValueContinuationToken = default!;
 #nullable restore
 #else
-        public string ContinuationToken { get; set; }
+        public string ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContinuationToken"); else _explicitNullProperties?.Remove("ContinuationToken"); } }
+        private string _explicitNullValueContinuationToken = default!;
 #endif
         /// <summary>The HasMoreData property</summary>
-        public bool? HasMoreData { get; set; }
+        public bool? HasMoreData { get => _explicitNullValueHasMoreData; set { _explicitNullValueHasMoreData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HasMoreData"); else _explicitNullProperties?.Remove("HasMoreData"); } }
+        private bool? _explicitNullValueHasMoreData = default!;
         /// <summary>The Logs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog>? Logs { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog>? Logs { get => _explicitNullValueLogs; set { _explicitNullValueLogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Logs"); else _explicitNullProperties?.Remove("Logs"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog>? _explicitNullValueLogs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog> Logs { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog> Logs { get => _explicitNullValueLogs; set { _explicitNullValueLogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Logs"); else _explicitNullProperties?.Remove("Logs"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog> _explicitNullValueLogs = default!;
 #endif
         /// <summary>The StartToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartToken { get; set; }
+        public string? StartToken { get => _explicitNullValueStartToken; set { _explicitNullValueStartToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StartToken"); else _explicitNullProperties?.Remove("StartToken"); } }
+        private string? _explicitNullValueStartToken = default!;
 #nullable restore
 #else
-        public string StartToken { get; set; }
+        public string StartToken { get => _explicitNullValueStartToken; set { _explicitNullValueStartToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StartToken"); else _explicitNullProperties?.Remove("StartToken"); } }
+        private string _explicitNullValueStartToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.GetUserAuditLogResponse"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.GetUserAuditLogResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.GetUserAuditLogResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.GetUserAuditLogResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("HasMoreData", HasMoreData);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.UserAuditLog>("Logs", Logs);
             writer.WriteStringValue("StartToken", StartToken);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

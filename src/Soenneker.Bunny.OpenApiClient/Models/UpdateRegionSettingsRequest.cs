@@ -11,34 +11,52 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UpdateRegionSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowedRegionIds") is { } nullNodeAllowedRegionIds && nullNodeAllowedRegionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedRegionIds = null;
+            if (parseNode.GetChildNode("maxAllowedRegions") is { } nullNodeMaxAllowedRegions && nullNodeMaxAllowedRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAllowedRegions = null;
+            if (parseNode.GetChildNode("nodeSelectors") is { } nullNodeNodeSelectors && nullNodeNodeSelectors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeSelectors = null;
+            if (parseNode.GetChildNode("requiredRegionIds") is { } nullNodeRequiredRegionIds && nullNodeRequiredRegionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredRegionIds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allowedRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedRegionIds { get; set; }
+        public List<string>? AllowedRegionIds { get => _explicitNullValueAllowedRegionIds; set { _explicitNullValueAllowedRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedRegionIds"); else _explicitNullProperties?.Remove("allowedRegionIds"); } }
+        private List<string>? _explicitNullValueAllowedRegionIds = default!;
 #nullable restore
 #else
-        public List<string> AllowedRegionIds { get; set; }
+        public List<string> AllowedRegionIds { get => _explicitNullValueAllowedRegionIds; set { _explicitNullValueAllowedRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedRegionIds"); else _explicitNullProperties?.Remove("allowedRegionIds"); } }
+        private List<string> _explicitNullValueAllowedRegionIds = default!;
 #endif
         /// <summary>The maxAllowedRegions property</summary>
-        public int? MaxAllowedRegions { get; set; }
+        public int? MaxAllowedRegions { get => _explicitNullValueMaxAllowedRegions; set { _explicitNullValueMaxAllowedRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxAllowedRegions"); else _explicitNullProperties?.Remove("maxAllowedRegions"); } }
+        private int? _explicitNullValueMaxAllowedRegions = default!;
         /// <summary>The nodeSelectors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2? NodeSelectors { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2? NodeSelectors { get => _explicitNullValueNodeSelectors; set { _explicitNullValueNodeSelectors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeSelectors"); else _explicitNullProperties?.Remove("nodeSelectors"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2? _explicitNullValueNodeSelectors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2 NodeSelectors { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2 NodeSelectors { get => _explicitNullValueNodeSelectors; set { _explicitNullValueNodeSelectors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeSelectors"); else _explicitNullProperties?.Remove("nodeSelectors"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2 _explicitNullValueNodeSelectors = default!;
 #endif
         /// <summary>The requiredRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RequiredRegionIds { get; set; }
+        public List<string>? RequiredRegionIds { get => _explicitNullValueRequiredRegionIds; set { _explicitNullValueRequiredRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredRegionIds"); else _explicitNullProperties?.Remove("requiredRegionIds"); } }
+        private List<string>? _explicitNullValueRequiredRegionIds = default!;
 #nullable restore
 #else
-        public List<string> RequiredRegionIds { get; set; }
+        public List<string> RequiredRegionIds { get => _explicitNullValueRequiredRegionIds; set { _explicitNullValueRequiredRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredRegionIds"); else _explicitNullProperties?.Remove("requiredRegionIds"); } }
+        private List<string> _explicitNullValueRequiredRegionIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("maxAllowedRegions", MaxAllowedRegions);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2>("nodeSelectors", NodeSelectors);
             writer.WriteCollectionOfPrimitiveValues<string>("requiredRegionIds", RequiredRegionIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

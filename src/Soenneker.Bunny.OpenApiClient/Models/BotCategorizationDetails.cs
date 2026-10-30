@@ -11,24 +11,42 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BotCategorizationDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("botId") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
+            if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("isVerifiable") is { } nullNodeIsVerifiable && nullNodeIsVerifiable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVerifiable = null;
+            if (parseNode.GetChildNode("userAgentMatch") is { } nullNodeUserAgentMatch && nullNodeUserAgentMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgentMatch = null;
+        }
+
         /// <summary>0 = None1 = Block2 = Allow3 = Ignore</summary>
-        public int? Action { get; set; }
+        public int? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private int? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The botId property</summary>
-        public int? BotId { get; set; }
+        public int? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botId"); else _explicitNullProperties?.Remove("botId"); } }
+        private int? _explicitNullValueBotId = default!;
         /// <summary>0 = None1 = SEO2 = AIScraper3 = AITool4 = Tool5 = Ads6 = Preview7 = Social255 = System</summary>
-        public int? Category { get; set; }
+        public int? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private int? _explicitNullValueCategory = default!;
         /// <summary>The isVerifiable property</summary>
-        public bool? IsVerifiable { get; set; }
+        public bool? IsVerifiable { get => _explicitNullValueIsVerifiable; set { _explicitNullValueIsVerifiable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isVerifiable"); else _explicitNullProperties?.Remove("isVerifiable"); } }
+        private bool? _explicitNullValueIsVerifiable = default!;
         /// <summary>The userAgentMatch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAgentMatch { get; set; }
+        public string? UserAgentMatch { get => _explicitNullValueUserAgentMatch; set { _explicitNullValueUserAgentMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgentMatch"); else _explicitNullProperties?.Remove("userAgentMatch"); } }
+        private string? _explicitNullValueUserAgentMatch = default!;
 #nullable restore
 #else
-        public string UserAgentMatch { get; set; }
+        public string UserAgentMatch { get => _explicitNullValueUserAgentMatch; set { _explicitNullValueUserAgentMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgentMatch"); else _explicitNullProperties?.Remove("userAgentMatch"); } }
+        private string _explicitNullValueUserAgentMatch = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails"/> and sets the default values.
@@ -45,7 +63,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BotCategorizationDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,6 +92,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("category", Category);
             writer.WriteBoolValue("isVerifiable", IsVerifiable);
             writer.WriteStringValue("userAgentMatch", UserAgentMatch);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

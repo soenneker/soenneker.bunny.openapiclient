@@ -11,43 +11,64 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DnsZoneStatisticsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("NormalQueriesServedChart") is { } nullNodeNormalQueriesServedChart && nullNodeNormalQueriesServedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalQueriesServedChart = null;
+            if (parseNode.GetChildNode("QueriesByTypeChart") is { } nullNodeQueriesByTypeChart && nullNodeQueriesByTypeChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueriesByTypeChart = null;
+            if (parseNode.GetChildNode("QueriesServedChart") is { } nullNodeQueriesServedChart && nullNodeQueriesServedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueriesServedChart = null;
+            if (parseNode.GetChildNode("SmartQueriesServedChart") is { } nullNodeSmartQueriesServedChart && nullNodeSmartQueriesServedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmartQueriesServedChart = null;
+            if (parseNode.GetChildNode("TotalQueriesServed") is { } nullNodeTotalQueriesServed && nullNodeTotalQueriesServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalQueriesServed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The NormalQueriesServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2? NormalQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2? NormalQueriesServedChart { get => _explicitNullValueNormalQueriesServedChart; set { _explicitNullValueNormalQueriesServedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NormalQueriesServedChart"); else _explicitNullProperties?.Remove("NormalQueriesServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2? _explicitNullValueNormalQueriesServedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2 NormalQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2 NormalQueriesServedChart { get => _explicitNullValueNormalQueriesServedChart; set { _explicitNullValueNormalQueriesServedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NormalQueriesServedChart"); else _explicitNullProperties?.Remove("NormalQueriesServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChartProperty2 _explicitNullValueNormalQueriesServedChart = default!;
 #endif
         /// <summary>The QueriesByTypeChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2? QueriesByTypeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2? QueriesByTypeChart { get => _explicitNullValueQueriesByTypeChart; set { _explicitNullValueQueriesByTypeChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueriesByTypeChart"); else _explicitNullProperties?.Remove("QueriesByTypeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2? _explicitNullValueQueriesByTypeChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2 QueriesByTypeChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2 QueriesByTypeChart { get => _explicitNullValueQueriesByTypeChart; set { _explicitNullValueQueriesByTypeChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueriesByTypeChart"); else _explicitNullProperties?.Remove("QueriesByTypeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChartProperty2 _explicitNullValueQueriesByTypeChart = default!;
 #endif
         /// <summary>The QueriesServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2? QueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2? QueriesServedChart { get => _explicitNullValueQueriesServedChart; set { _explicitNullValueQueriesServedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueriesServedChart"); else _explicitNullProperties?.Remove("QueriesServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2? _explicitNullValueQueriesServedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2 QueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2 QueriesServedChart { get => _explicitNullValueQueriesServedChart; set { _explicitNullValueQueriesServedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueriesServedChart"); else _explicitNullProperties?.Remove("QueriesServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2 _explicitNullValueQueriesServedChart = default!;
 #endif
         /// <summary>The SmartQueriesServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2? SmartQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2? SmartQueriesServedChart { get => _explicitNullValueSmartQueriesServedChart; set { _explicitNullValueSmartQueriesServedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartQueriesServedChart"); else _explicitNullProperties?.Remove("SmartQueriesServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2? _explicitNullValueSmartQueriesServedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2 SmartQueriesServedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2 SmartQueriesServedChart { get => _explicitNullValueSmartQueriesServedChart; set { _explicitNullValueSmartQueriesServedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SmartQueriesServedChart"); else _explicitNullProperties?.Remove("SmartQueriesServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2 _explicitNullValueSmartQueriesServedChart = default!;
 #endif
         /// <summary>The TotalQueriesServed property</summary>
-        public long? TotalQueriesServed { get; set; }
+        public long? TotalQueriesServed { get => _explicitNullValueTotalQueriesServed; set { _explicitNullValueTotalQueriesServed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalQueriesServed"); else _explicitNullProperties?.Remove("TotalQueriesServed"); } }
+        private long? _explicitNullValueTotalQueriesServed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModel"/> and sets the default values.
         /// </summary>
@@ -63,7 +84,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesServedChartProperty2>("QueriesServedChart", QueriesServedChart);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelSmartQueriesServedChartProperty2>("SmartQueriesServedChart", SmartQueriesServedChart);
             writer.WriteLongValue("TotalQueriesServed", TotalQueriesServed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

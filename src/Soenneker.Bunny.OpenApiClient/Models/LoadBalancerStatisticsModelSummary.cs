@@ -11,35 +11,63 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LoadBalancerStatisticsModelSummary : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AllOriginsExhausted") is { } nullNodeAllOriginsExhausted && nullNodeAllOriginsExhausted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllOriginsExhausted = null;
+            if (parseNode.GetChildNode("AverageOriginRttMs") is { } nullNodeAverageOriginRttMs && nullNodeAverageOriginRttMs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageOriginRttMs = null;
+            if (parseNode.GetChildNode("AverageRetryDepth") is { } nullNodeAverageRetryDepth && nullNodeAverageRetryDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageRetryDepth = null;
+            if (parseNode.GetChildNode("FailoverCapped") is { } nullNodeFailoverCapped && nullNodeFailoverCapped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailoverCapped = null;
+            if (parseNode.GetChildNode("HealthyResponsesServed") is { } nullNodeHealthyResponsesServed && nullNodeHealthyResponsesServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HealthyResponsesServed = null;
+            if (parseNode.GetChildNode("OriginErrorsServed") is { } nullNodeOriginErrorsServed && nullNodeOriginErrorsServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginErrorsServed = null;
+            if (parseNode.GetChildNode("RequestsByMethod") is { } nullNodeRequestsByMethod && nullNodeRequestsByMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsByMethod = null;
+            if (parseNode.GetChildNode("StickySessionHits") is { } nullNodeStickySessionHits && nullNodeStickySessionHits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessionHits = null;
+            if (parseNode.GetChildNode("TotalRequests") is { } nullNodeTotalRequests && nullNodeTotalRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalRequests = null;
+            if (parseNode.GetChildNode("TotalTraffic") is { } nullNodeTotalTraffic && nullNodeTotalTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTraffic = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The AllOriginsExhausted property</summary>
-        public double? AllOriginsExhausted { get; set; }
+        public double? AllOriginsExhausted { get => _explicitNullValueAllOriginsExhausted; set { _explicitNullValueAllOriginsExhausted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllOriginsExhausted"); else _explicitNullProperties?.Remove("AllOriginsExhausted"); } }
+        private double? _explicitNullValueAllOriginsExhausted = default!;
         /// <summary>The AverageOriginRttMs property</summary>
-        public double? AverageOriginRttMs { get; set; }
+        public double? AverageOriginRttMs { get => _explicitNullValueAverageOriginRttMs; set { _explicitNullValueAverageOriginRttMs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageOriginRttMs"); else _explicitNullProperties?.Remove("AverageOriginRttMs"); } }
+        private double? _explicitNullValueAverageOriginRttMs = default!;
         /// <summary>The AverageRetryDepth property</summary>
-        public double? AverageRetryDepth { get; set; }
+        public double? AverageRetryDepth { get => _explicitNullValueAverageRetryDepth; set { _explicitNullValueAverageRetryDepth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageRetryDepth"); else _explicitNullProperties?.Remove("AverageRetryDepth"); } }
+        private double? _explicitNullValueAverageRetryDepth = default!;
         /// <summary>The FailoverCapped property</summary>
-        public double? FailoverCapped { get; set; }
+        public double? FailoverCapped { get => _explicitNullValueFailoverCapped; set { _explicitNullValueFailoverCapped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FailoverCapped"); else _explicitNullProperties?.Remove("FailoverCapped"); } }
+        private double? _explicitNullValueFailoverCapped = default!;
         /// <summary>The HealthyResponsesServed property</summary>
-        public double? HealthyResponsesServed { get; set; }
+        public double? HealthyResponsesServed { get => _explicitNullValueHealthyResponsesServed; set { _explicitNullValueHealthyResponsesServed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HealthyResponsesServed"); else _explicitNullProperties?.Remove("HealthyResponsesServed"); } }
+        private double? _explicitNullValueHealthyResponsesServed = default!;
         /// <summary>The OriginErrorsServed property</summary>
-        public double? OriginErrorsServed { get; set; }
+        public double? OriginErrorsServed { get => _explicitNullValueOriginErrorsServed; set { _explicitNullValueOriginErrorsServed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginErrorsServed"); else _explicitNullProperties?.Remove("OriginErrorsServed"); } }
+        private double? _explicitNullValueOriginErrorsServed = default!;
         /// <summary>The RequestsByMethod property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod? RequestsByMethod { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod? RequestsByMethod { get => _explicitNullValueRequestsByMethod; set { _explicitNullValueRequestsByMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByMethod"); else _explicitNullProperties?.Remove("RequestsByMethod"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod? _explicitNullValueRequestsByMethod = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod RequestsByMethod { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod RequestsByMethod { get => _explicitNullValueRequestsByMethod; set { _explicitNullValueRequestsByMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByMethod"); else _explicitNullProperties?.Remove("RequestsByMethod"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummaryRequestsByMethod _explicitNullValueRequestsByMethod = default!;
 #endif
         /// <summary>The StickySessionHits property</summary>
-        public double? StickySessionHits { get; set; }
+        public double? StickySessionHits { get => _explicitNullValueStickySessionHits; set { _explicitNullValueStickySessionHits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionHits"); else _explicitNullProperties?.Remove("StickySessionHits"); } }
+        private double? _explicitNullValueStickySessionHits = default!;
         /// <summary>The TotalRequests property</summary>
-        public double? TotalRequests { get; set; }
+        public double? TotalRequests { get => _explicitNullValueTotalRequests; set { _explicitNullValueTotalRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalRequests"); else _explicitNullProperties?.Remove("TotalRequests"); } }
+        private double? _explicitNullValueTotalRequests = default!;
         /// <summary>The TotalTraffic property</summary>
-        public double? TotalTraffic { get; set; }
+        public double? TotalTraffic { get => _explicitNullValueTotalTraffic; set { _explicitNullValueTotalTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTraffic"); else _explicitNullProperties?.Remove("TotalTraffic"); } }
+        private double? _explicitNullValueTotalTraffic = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary"/> and sets the default values.
         /// </summary>
@@ -55,7 +83,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +122,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("StickySessionHits", StickySessionHits);
             writer.WriteDoubleValue("TotalRequests", TotalRequests);
             writer.WriteDoubleValue("TotalTraffic", TotalTraffic);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,21 +12,35 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingModelMonthlyAiGatewayCachedTokens : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("MeasuringUnit") is { } nullNodeMeasuringUnit && nullNodeMeasuringUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeasuringUnit = null;
+            if (parseNode.GetChildNode("TotalUnits") is { } nullNodeTotalUnits && nullNodeTotalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalUnits = null;
+            if (parseNode.GetChildNode("Usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Measuring Unit for TotalUnits (e.g. Rows, GB, Seconds, Bytes, Block-seconds)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MeasuringUnit { get; set; }
+        public string? MeasuringUnit { get => _explicitNullValueMeasuringUnit; set { _explicitNullValueMeasuringUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MeasuringUnit"); else _explicitNullProperties?.Remove("MeasuringUnit"); } }
+        private string? _explicitNullValueMeasuringUnit = default!;
 #nullable restore
 #else
-        public string MeasuringUnit { get; set; }
+        public string MeasuringUnit { get => _explicitNullValueMeasuringUnit; set { _explicitNullValueMeasuringUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MeasuringUnit"); else _explicitNullProperties?.Remove("MeasuringUnit"); } }
+        private string _explicitNullValueMeasuringUnit = default!;
 #endif
         /// <summary>The billed quantity for the related product</summary>
-        public long? TotalUnits { get; set; }
+        public long? TotalUnits { get => _explicitNullValueTotalUnits; set { _explicitNullValueTotalUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalUnits"); else _explicitNullProperties?.Remove("TotalUnits"); } }
+        private long? _explicitNullValueTotalUnits = default!;
         /// <summary>The usage based charge in USD</summary>
-        public decimal? Usage { get; set; }
+        public decimal? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Usage"); else _explicitNullProperties?.Remove("Usage"); } }
+        private decimal? _explicitNullValueUsage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens"/> and sets the default values.
         /// </summary>
@@ -42,7 +56,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("MeasuringUnit", MeasuringUnit);
             writer.WriteLongValue("TotalUnits", TotalUnits);
             writer.WriteDecimalValue("Usage", Usage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -62,7 +62,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfEdgeScriptModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfEdgeScriptModel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfEdgeScriptModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfEdgeScriptModel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Add Edge Script
@@ -86,6 +86,8 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptingApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -169,7 +171,7 @@ namespace Soenneker.Bunny.OpenApiClient.EdgeScripting.Compute.Script
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Filter by edge script type</summary>
+            /// <summary>Filter by edge script type0 = DNS1 = CDN2 = Middleware</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("type")]

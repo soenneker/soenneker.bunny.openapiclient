@@ -12,27 +12,42 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VideoLibraryUpdateModelGeoBlocking : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AllowedCountries") is { } nullNodeAllowedCountries && nullNodeAllowedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCountries = null;
+            if (parseNode.GetChildNode("BlockedCountries") is { } nullNodeBlockedCountries && nullNodeBlockedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCountries = null;
+            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) The list of countries allowed to access the video library, 2 letter ISO 3166-1 code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedCountries { get; set; }
+        public List<string>? AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedCountries"); else _explicitNullProperties?.Remove("AllowedCountries"); } }
+        private List<string>? _explicitNullValueAllowedCountries = default!;
 #nullable restore
 #else
-        public List<string> AllowedCountries { get; set; }
+        public List<string> AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedCountries"); else _explicitNullProperties?.Remove("AllowedCountries"); } }
+        private List<string> _explicitNullValueAllowedCountries = default!;
 #endif
         /// <summary>(Optional) The list of countries blocked from accessing the video library, 2 letter ISO 3166-1 code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BlockedCountries { get; set; }
+        public List<string>? BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
+        private List<string>? _explicitNullValueBlockedCountries = default!;
 #nullable restore
 #else
-        public List<string> BlockedCountries { get; set; }
+        public List<string> BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
+        private List<string> _explicitNullValueBlockedCountries = default!;
 #endif
         /// <summary>(Optional) Whether geo-blocking is enabled for the video library</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("AllowedCountries", AllowedCountries);
             writer.WriteCollectionOfPrimitiveValues<string>("BlockedCountries", BlockedCountries);
             writer.WriteBoolValue("Enabled", Enabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

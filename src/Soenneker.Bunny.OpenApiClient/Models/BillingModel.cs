@@ -11,277 +11,452 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BillingModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AfricaDiscount") is { } nullNodeAfricaDiscount && nullNodeAfricaDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AfricaDiscount = null;
+            if (parseNode.GetChildNode("AsiaOceaniaDiscount") is { } nullNodeAsiaOceaniaDiscount && nullNodeAsiaOceaniaDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AsiaOceaniaDiscount = null;
+            if (parseNode.GetChildNode("AutomaticPaymentAmount") is { } nullNodeAutomaticPaymentAmount && nullNodeAutomaticPaymentAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticPaymentAmount = null;
+            if (parseNode.GetChildNode("AutomaticPaymentCardType") is { } nullNodeAutomaticPaymentCardType && nullNodeAutomaticPaymentCardType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticPaymentCardType = null;
+            if (parseNode.GetChildNode("AutomaticPaymentFailureCount") is { } nullNodeAutomaticPaymentFailureCount && nullNodeAutomaticPaymentFailureCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticPaymentFailureCount = null;
+            if (parseNode.GetChildNode("AutomaticPaymentIdentifier") is { } nullNodeAutomaticPaymentIdentifier && nullNodeAutomaticPaymentIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticPaymentIdentifier = null;
+            if (parseNode.GetChildNode("AutomaticPaymentImageUrl") is { } nullNodeAutomaticPaymentImageUrl && nullNodeAutomaticPaymentImageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticPaymentImageUrl = null;
+            if (parseNode.GetChildNode("AutomaticRechargeEnabled") is { } nullNodeAutomaticRechargeEnabled && nullNodeAutomaticRechargeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticRechargeEnabled = null;
+            if (parseNode.GetChildNode("AutomaticRechargeTreshold") is { } nullNodeAutomaticRechargeTreshold && nullNodeAutomaticRechargeTreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutomaticRechargeTreshold = null;
+            if (parseNode.GetChildNode("AvailableBalance") is { } nullNodeAvailableBalance && nullNodeAvailableBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableBalance = null;
+            if (parseNode.GetChildNode("Balance") is { } nullNodeBalance && nullNodeBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Balance = null;
+            if (parseNode.GetChildNode("BillingEnabled") is { } nullNodeBillingEnabled && nullNodeBillingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingEnabled = null;
+            if (parseNode.GetChildNode("BillingHistoryChart") is { } nullNodeBillingHistoryChart && nullNodeBillingHistoryChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingHistoryChart = null;
+            if (parseNode.GetChildNode("BillingRecords") is { } nullNodeBillingRecords && nullNodeBillingRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingRecords = null;
+            if (parseNode.GetChildNode("CouponBalance") is { } nullNodeCouponBalance && nullNodeCouponBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CouponBalance = null;
+            if (parseNode.GetChildNode("DrmBaseMonthlyPrice") is { } nullNodeDrmBaseMonthlyPrice && nullNodeDrmBaseMonthlyPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DrmBaseMonthlyPrice = null;
+            if (parseNode.GetChildNode("DrmCostPerLicense") is { } nullNodeDrmCostPerLicense && nullNodeDrmCostPerLicense.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DrmCostPerLicense = null;
+            if (parseNode.GetChildNode("EUUSDiscount") is { } nullNodeEUUSDiscount && nullNodeEUUSDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EUUSDiscount = null;
+            if (parseNode.GetChildNode("LastRechargeBalance") is { } nullNodeLastRechargeBalance && nullNodeLastRechargeBalance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastRechargeBalance = null;
+            if (parseNode.GetChildNode("MinimumMonthlyCommit") is { } nullNodeMinimumMonthlyCommit && nullNodeMinimumMonthlyCommit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumMonthlyCommit = null;
+            if (parseNode.GetChildNode("MonthlyAiGatewayCachedTokens") is { } nullNodeMonthlyAiGatewayCachedTokens && nullNodeMonthlyAiGatewayCachedTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyAiGatewayCachedTokens = null;
+            if (parseNode.GetChildNode("MonthlyAiGatewayInputTokens") is { } nullNodeMonthlyAiGatewayInputTokens && nullNodeMonthlyAiGatewayInputTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyAiGatewayInputTokens = null;
+            if (parseNode.GetChildNode("MonthlyAiGatewayOtherCharges") is { } nullNodeMonthlyAiGatewayOtherCharges && nullNodeMonthlyAiGatewayOtherCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyAiGatewayOtherCharges = null;
+            if (parseNode.GetChildNode("MonthlyAiGatewayOutputTokens") is { } nullNodeMonthlyAiGatewayOutputTokens && nullNodeMonthlyAiGatewayOutputTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyAiGatewayOutputTokens = null;
+            if (parseNode.GetChildNode("MonthlyBandwidthUsed") is { } nullNodeMonthlyBandwidthUsed && nullNodeMonthlyBandwidthUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyBandwidthUsed = null;
+            if (parseNode.GetChildNode("MonthlyChargesAFTraffic") is { } nullNodeMonthlyChargesAFTraffic && nullNodeMonthlyChargesAFTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesAFTraffic = null;
+            if (parseNode.GetChildNode("MonthlyChargesAiGateway") is { } nullNodeMonthlyChargesAiGateway && nullNodeMonthlyChargesAiGateway.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesAiGateway = null;
+            if (parseNode.GetChildNode("MonthlyChargesASIATraffic") is { } nullNodeMonthlyChargesASIATraffic && nullNodeMonthlyChargesASIATraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesASIATraffic = null;
+            if (parseNode.GetChildNode("MonthlyChargesDB") is { } nullNodeMonthlyChargesDB && nullNodeMonthlyChargesDB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesDB = null;
+            if (parseNode.GetChildNode("MonthlyChargesDNS") is { } nullNodeMonthlyChargesDNS && nullNodeMonthlyChargesDNS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesDNS = null;
+            if (parseNode.GetChildNode("MonthlyChargesDrm") is { } nullNodeMonthlyChargesDrm && nullNodeMonthlyChargesDrm.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesDrm = null;
+            if (parseNode.GetChildNode("MonthlyChargesEUTraffic") is { } nullNodeMonthlyChargesEUTraffic && nullNodeMonthlyChargesEUTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesEUTraffic = null;
+            if (parseNode.GetChildNode("MonthlyChargesExtraDnsZones") is { } nullNodeMonthlyChargesExtraDnsZones && nullNodeMonthlyChargesExtraDnsZones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesExtraDnsZones = null;
+            if (parseNode.GetChildNode("MonthlyChargesExtraPullZones") is { } nullNodeMonthlyChargesExtraPullZones && nullNodeMonthlyChargesExtraPullZones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesExtraPullZones = null;
+            if (parseNode.GetChildNode("MonthlyChargesExtraStorageZones") is { } nullNodeMonthlyChargesExtraStorageZones && nullNodeMonthlyChargesExtraStorageZones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesExtraStorageZones = null;
+            if (parseNode.GetChildNode("MonthlyChargesExtraVideoLibraries") is { } nullNodeMonthlyChargesExtraVideoLibraries && nullNodeMonthlyChargesExtraVideoLibraries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesExtraVideoLibraries = null;
+            if (parseNode.GetChildNode("MonthlyChargesLoadBalancer") is { } nullNodeMonthlyChargesLoadBalancer && nullNodeMonthlyChargesLoadBalancer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesLoadBalancer = null;
+            if (parseNode.GetChildNode("MonthlyChargesMagicContainers") is { } nullNodeMonthlyChargesMagicContainers && nullNodeMonthlyChargesMagicContainers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesMagicContainers = null;
+            if (parseNode.GetChildNode("MonthlyChargesOptimizer") is { } nullNodeMonthlyChargesOptimizer && nullNodeMonthlyChargesOptimizer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesOptimizer = null;
+            if (parseNode.GetChildNode("MonthlyChargesPremiumEncoding") is { } nullNodeMonthlyChargesPremiumEncoding && nullNodeMonthlyChargesPremiumEncoding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesPremiumEncoding = null;
+            if (parseNode.GetChildNode("MonthlyChargesSATraffic") is { } nullNodeMonthlyChargesSATraffic && nullNodeMonthlyChargesSATraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesSATraffic = null;
+            if (parseNode.GetChildNode("MonthlyChargesScripting") is { } nullNodeMonthlyChargesScripting && nullNodeMonthlyChargesScripting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesScripting = null;
+            if (parseNode.GetChildNode("MonthlyChargesScriptingCpu") is { } nullNodeMonthlyChargesScriptingCpu && nullNodeMonthlyChargesScriptingCpu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesScriptingCpu = null;
+            if (parseNode.GetChildNode("MonthlyChargesScriptingRequests") is { } nullNodeMonthlyChargesScriptingRequests && nullNodeMonthlyChargesScriptingRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesScriptingRequests = null;
+            if (parseNode.GetChildNode("MonthlyChargesShield") is { } nullNodeMonthlyChargesShield && nullNodeMonthlyChargesShield.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesShield = null;
+            if (parseNode.GetChildNode("MonthlyChargesStorage") is { } nullNodeMonthlyChargesStorage && nullNodeMonthlyChargesStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesStorage = null;
+            if (parseNode.GetChildNode("MonthlyChargesTaxes") is { } nullNodeMonthlyChargesTaxes && nullNodeMonthlyChargesTaxes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesTaxes = null;
+            if (parseNode.GetChildNode("MonthlyChargesTranscribe") is { } nullNodeMonthlyChargesTranscribe && nullNodeMonthlyChargesTranscribe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesTranscribe = null;
+            if (parseNode.GetChildNode("MonthlyChargesUSTraffic") is { } nullNodeMonthlyChargesUSTraffic && nullNodeMonthlyChargesUSTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesUSTraffic = null;
+            if (parseNode.GetChildNode("MonthlyChargesWebSockets") is { } nullNodeMonthlyChargesWebSockets && nullNodeMonthlyChargesWebSockets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyChargesWebSockets = null;
+            if (parseNode.GetChildNode("MonthlyCouponUsage") is { } nullNodeMonthlyCouponUsage && nullNodeMonthlyCouponUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyCouponUsage = null;
+            if (parseNode.GetChildNode("MonthlyDBReads") is { } nullNodeMonthlyDBReads && nullNodeMonthlyDBReads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDBReads = null;
+            if (parseNode.GetChildNode("MonthlyDBReplica") is { } nullNodeMonthlyDBReplica && nullNodeMonthlyDBReplica.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDBReplica = null;
+            if (parseNode.GetChildNode("MonthlyDBStorage") is { } nullNodeMonthlyDBStorage && nullNodeMonthlyDBStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDBStorage = null;
+            if (parseNode.GetChildNode("MonthlyDBWrites") is { } nullNodeMonthlyDBWrites && nullNodeMonthlyDBWrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDBWrites = null;
+            if (parseNode.GetChildNode("MonthlyDnsNormalQueriesServed") is { } nullNodeMonthlyDnsNormalQueriesServed && nullNodeMonthlyDnsNormalQueriesServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDnsNormalQueriesServed = null;
+            if (parseNode.GetChildNode("MonthlyDnsSmartQueriesServed") is { } nullNodeMonthlyDnsSmartQueriesServed && nullNodeMonthlyDnsSmartQueriesServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDnsSmartQueriesServed = null;
+            if (parseNode.GetChildNode("MonthlyDRMLicensesIssued") is { } nullNodeMonthlyDRMLicensesIssued && nullNodeMonthlyDRMLicensesIssued.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyDRMLicensesIssued = null;
+            if (parseNode.GetChildNode("MonthlyMcCpu") is { } nullNodeMonthlyMcCpu && nullNodeMonthlyMcCpu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMcCpu = null;
+            if (parseNode.GetChildNode("MonthlyMcEgressTraffic") is { } nullNodeMonthlyMcEgressTraffic && nullNodeMonthlyMcEgressTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMcEgressTraffic = null;
+            if (parseNode.GetChildNode("MonthlyMcIngressTraffic") is { } nullNodeMonthlyMcIngressTraffic && nullNodeMonthlyMcIngressTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMcIngressTraffic = null;
+            if (parseNode.GetChildNode("MonthlyMcIp") is { } nullNodeMonthlyMcIp && nullNodeMonthlyMcIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMcIp = null;
+            if (parseNode.GetChildNode("MonthlyMcMemory") is { } nullNodeMonthlyMcMemory && nullNodeMonthlyMcMemory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMcMemory = null;
+            if (parseNode.GetChildNode("MonthlyMcVolumes") is { } nullNodeMonthlyMcVolumes && nullNodeMonthlyMcVolumes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMcVolumes = null;
+            if (parseNode.GetChildNode("MonthlyPremiumEncodingBillableMinutes") is { } nullNodeMonthlyPremiumEncodingBillableMinutes && nullNodeMonthlyPremiumEncodingBillableMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyPremiumEncodingBillableMinutes = null;
+            if (parseNode.GetChildNode("MonthlyScriptingCpuTime") is { } nullNodeMonthlyScriptingCpuTime && nullNodeMonthlyScriptingCpuTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyScriptingCpuTime = null;
+            if (parseNode.GetChildNode("MonthlyScriptingRequests") is { } nullNodeMonthlyScriptingRequests && nullNodeMonthlyScriptingRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyScriptingRequests = null;
+            if (parseNode.GetChildNode("MonthlyTranscriptionMinutes") is { } nullNodeMonthlyTranscriptionMinutes && nullNodeMonthlyTranscriptionMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyTranscriptionMinutes = null;
+            if (parseNode.GetChildNode("NextMonthVATRate") is { } nullNodeNextMonthVATRate && nullNodeNextMonthVATRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextMonthVATRate = null;
+            if (parseNode.GetChildNode("OptimizerMonthlyPrice") is { } nullNodeOptimizerMonthlyPrice && nullNodeOptimizerMonthlyPrice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerMonthlyPrice = null;
+            if (parseNode.GetChildNode("SavedPaymentMethods") is { } nullNodeSavedPaymentMethods && nullNodeSavedPaymentMethods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SavedPaymentMethods = null;
+            if (parseNode.GetChildNode("SouthAmericaDiscount") is { } nullNodeSouthAmericaDiscount && nullNodeSouthAmericaDiscount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SouthAmericaDiscount = null;
+            if (parseNode.GetChildNode("ThisMonthCharges") is { } nullNodeThisMonthCharges && nullNodeThisMonthCharges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThisMonthCharges = null;
+            if (parseNode.GetChildNode("VATRate") is { } nullNodeVATRate && nullNodeVATRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VATRate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The account wide pricing discount for Africa region.</summary>
-        public int? AfricaDiscount { get; set; }
+        public int? AfricaDiscount { get => _explicitNullValueAfricaDiscount; set { _explicitNullValueAfricaDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AfricaDiscount"); else _explicitNullProperties?.Remove("AfricaDiscount"); } }
+        private int? _explicitNullValueAfricaDiscount = default!;
         /// <summary>The account wide pricing discount for Asia &amp; Oceania region.</summary>
-        public int? AsiaOceaniaDiscount { get; set; }
+        public int? AsiaOceaniaDiscount { get => _explicitNullValueAsiaOceaniaDiscount; set { _explicitNullValueAsiaOceaniaDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AsiaOceaniaDiscount"); else _explicitNullProperties?.Remove("AsiaOceaniaDiscount"); } }
+        private int? _explicitNullValueAsiaOceaniaDiscount = default!;
         /// <summary>If an automatic payments are configured, this contains the payment amount that will be made during an automatic recharge</summary>
-        public decimal? AutomaticPaymentAmount { get; set; }
+        public decimal? AutomaticPaymentAmount { get => _explicitNullValueAutomaticPaymentAmount; set { _explicitNullValueAutomaticPaymentAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentAmount"); else _explicitNullProperties?.Remove("AutomaticPaymentAmount"); } }
+        private decimal? _explicitNullValueAutomaticPaymentAmount = default!;
         /// <summary>If an automatic payment method is configured with a credit card, this will contain the name of the payment credit card</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutomaticPaymentCardType { get; set; }
+        public string? AutomaticPaymentCardType { get => _explicitNullValueAutomaticPaymentCardType; set { _explicitNullValueAutomaticPaymentCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentCardType"); else _explicitNullProperties?.Remove("AutomaticPaymentCardType"); } }
+        private string? _explicitNullValueAutomaticPaymentCardType = default!;
 #nullable restore
 #else
-        public string AutomaticPaymentCardType { get; set; }
+        public string AutomaticPaymentCardType { get => _explicitNullValueAutomaticPaymentCardType; set { _explicitNullValueAutomaticPaymentCardType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentCardType"); else _explicitNullProperties?.Remove("AutomaticPaymentCardType"); } }
+        private string _explicitNullValueAutomaticPaymentCardType = default!;
 #endif
         /// <summary>Determines the number of failed automatic recharges that the system made since the last successful payment.</summary>
-        public int? AutomaticPaymentFailureCount { get; set; }
+        public int? AutomaticPaymentFailureCount { get => _explicitNullValueAutomaticPaymentFailureCount; set { _explicitNullValueAutomaticPaymentFailureCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentFailureCount"); else _explicitNullProperties?.Remove("AutomaticPaymentFailureCount"); } }
+        private int? _explicitNullValueAutomaticPaymentFailureCount = default!;
         /// <summary>If an automatic payment method is configured, this will contain the identifier of the payment method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutomaticPaymentIdentifier { get; set; }
+        public string? AutomaticPaymentIdentifier { get => _explicitNullValueAutomaticPaymentIdentifier; set { _explicitNullValueAutomaticPaymentIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentIdentifier"); else _explicitNullProperties?.Remove("AutomaticPaymentIdentifier"); } }
+        private string? _explicitNullValueAutomaticPaymentIdentifier = default!;
 #nullable restore
 #else
-        public string AutomaticPaymentIdentifier { get; set; }
+        public string AutomaticPaymentIdentifier { get => _explicitNullValueAutomaticPaymentIdentifier; set { _explicitNullValueAutomaticPaymentIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentIdentifier"); else _explicitNullProperties?.Remove("AutomaticPaymentIdentifier"); } }
+        private string _explicitNullValueAutomaticPaymentIdentifier = default!;
 #endif
         /// <summary>If an automatic payment method is configured, this will contain the image url of the payment method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutomaticPaymentImageUrl { get; set; }
+        public string? AutomaticPaymentImageUrl { get => _explicitNullValueAutomaticPaymentImageUrl; set { _explicitNullValueAutomaticPaymentImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentImageUrl"); else _explicitNullProperties?.Remove("AutomaticPaymentImageUrl"); } }
+        private string? _explicitNullValueAutomaticPaymentImageUrl = default!;
 #nullable restore
 #else
-        public string AutomaticPaymentImageUrl { get; set; }
+        public string AutomaticPaymentImageUrl { get => _explicitNullValueAutomaticPaymentImageUrl; set { _explicitNullValueAutomaticPaymentImageUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticPaymentImageUrl"); else _explicitNullProperties?.Remove("AutomaticPaymentImageUrl"); } }
+        private string _explicitNullValueAutomaticPaymentImageUrl = default!;
 #endif
         /// <summary>Determines if automatic recharge is currently enabled.</summary>
-        public bool? AutomaticRechargeEnabled { get; set; }
+        public bool? AutomaticRechargeEnabled { get => _explicitNullValueAutomaticRechargeEnabled; set { _explicitNullValueAutomaticRechargeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticRechargeEnabled"); else _explicitNullProperties?.Remove("AutomaticRechargeEnabled"); } }
+        private bool? _explicitNullValueAutomaticRechargeEnabled = default!;
         /// <summary>If an automatic payments are configured, this contains the account balance amount that will trigger an automatic recharge</summary>
-        public decimal? AutomaticRechargeTreshold { get; set; }
+        public decimal? AutomaticRechargeTreshold { get => _explicitNullValueAutomaticRechargeTreshold; set { _explicitNullValueAutomaticRechargeTreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AutomaticRechargeTreshold"); else _explicitNullProperties?.Remove("AutomaticRechargeTreshold"); } }
+        private decimal? _explicitNullValueAutomaticRechargeTreshold = default!;
         /// <summary>The current account balance plus available (unexpired) coupon credit</summary>
-        public double? AvailableBalance { get; set; }
+        public double? AvailableBalance { get => _explicitNullValueAvailableBalance; set { _explicitNullValueAvailableBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AvailableBalance"); else _explicitNullProperties?.Remove("AvailableBalance"); } }
+        private double? _explicitNullValueAvailableBalance = default!;
         /// <summary>The current account balance</summary>
-        public double? Balance { get; set; }
+        public double? Balance { get => _explicitNullValueBalance; set { _explicitNullValueBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Balance"); else _explicitNullProperties?.Remove("Balance"); } }
+        private double? _explicitNullValueBalance = default!;
         /// <summary>Determines if billing is currently enabled for this user.</summary>
-        public bool? BillingEnabled { get; set; }
+        public bool? BillingEnabled { get => _explicitNullValueBillingEnabled; set { _explicitNullValueBillingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingEnabled"); else _explicitNullProperties?.Remove("BillingEnabled"); } }
+        private bool? _explicitNullValueBillingEnabled = default!;
         /// <summary>The constructed billing history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2? BillingHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2? BillingHistoryChart { get => _explicitNullValueBillingHistoryChart; set { _explicitNullValueBillingHistoryChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingHistoryChart"); else _explicitNullProperties?.Remove("BillingHistoryChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2? _explicitNullValueBillingHistoryChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2 BillingHistoryChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2 BillingHistoryChart { get => _explicitNullValueBillingHistoryChart; set { _explicitNullValueBillingHistoryChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingHistoryChart"); else _explicitNullProperties?.Remove("BillingHistoryChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelBillingHistoryChartProperty2 _explicitNullValueBillingHistoryChart = default!;
 #endif
         /// <summary>The list of billing records for this account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>? BillingRecords { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>? BillingRecords { get => _explicitNullValueBillingRecords; set { _explicitNullValueBillingRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingRecords"); else _explicitNullProperties?.Remove("BillingRecords"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel>? _explicitNullValueBillingRecords = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel> BillingRecords { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel> BillingRecords { get => _explicitNullValueBillingRecords; set { _explicitNullValueBillingRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingRecords"); else _explicitNullProperties?.Remove("BillingRecords"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BillingRecordModel> _explicitNullValueBillingRecords = default!;
 #endif
         /// <summary>All available (unexpired) coupon money on the account</summary>
-        public decimal? CouponBalance { get; set; }
+        public decimal? CouponBalance { get => _explicitNullValueCouponBalance; set { _explicitNullValueCouponBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CouponBalance"); else _explicitNullProperties?.Remove("CouponBalance"); } }
+        private decimal? _explicitNullValueCouponBalance = default!;
         /// <summary>DRM (Enterprise) base monthly price per video library.</summary>
-        public decimal? DrmBaseMonthlyPrice { get; set; }
+        public decimal? DrmBaseMonthlyPrice { get => _explicitNullValueDrmBaseMonthlyPrice; set { _explicitNullValueDrmBaseMonthlyPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DrmBaseMonthlyPrice"); else _explicitNullProperties?.Remove("DrmBaseMonthlyPrice"); } }
+        private decimal? _explicitNullValueDrmBaseMonthlyPrice = default!;
         /// <summary>DRM (Enterprise) cost per license or default pricing tier applied if null.</summary>
-        public decimal? DrmCostPerLicense { get; set; }
+        public decimal? DrmCostPerLicense { get => _explicitNullValueDrmCostPerLicense; set { _explicitNullValueDrmCostPerLicense = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DrmCostPerLicense"); else _explicitNullProperties?.Remove("DrmCostPerLicense"); } }
+        private decimal? _explicitNullValueDrmCostPerLicense = default!;
         /// <summary>The account wide pricing discount for EU and US region.</summary>
-        public int? EUUSDiscount { get; set; }
+        public int? EUUSDiscount { get => _explicitNullValueEUUSDiscount; set { _explicitNullValueEUUSDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EUUSDiscount"); else _explicitNullProperties?.Remove("EUUSDiscount"); } }
+        private int? _explicitNullValueEUUSDiscount = default!;
         /// <summary>Last recharge amount balance</summary>
-        public double? LastRechargeBalance { get; set; }
+        public double? LastRechargeBalance { get => _explicitNullValueLastRechargeBalance; set { _explicitNullValueLastRechargeBalance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LastRechargeBalance"); else _explicitNullProperties?.Remove("LastRechargeBalance"); } }
+        private double? _explicitNullValueLastRechargeBalance = default!;
         /// <summary>Determines the minimum monthly commit of the user.</summary>
-        public double? MinimumMonthlyCommit { get; set; }
+        public double? MinimumMonthlyCommit { get => _explicitNullValueMinimumMonthlyCommit; set { _explicitNullValueMinimumMonthlyCommit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinimumMonthlyCommit"); else _explicitNullProperties?.Remove("MinimumMonthlyCommit"); } }
+        private double? _explicitNullValueMinimumMonthlyCommit = default!;
         /// <summary>The monthly charges and usage for AI Gateway cached tokens</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens? MonthlyAiGatewayCachedTokens { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens? MonthlyAiGatewayCachedTokens { get => _explicitNullValueMonthlyAiGatewayCachedTokens; set { _explicitNullValueMonthlyAiGatewayCachedTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayCachedTokens"); else _explicitNullProperties?.Remove("MonthlyAiGatewayCachedTokens"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens? _explicitNullValueMonthlyAiGatewayCachedTokens = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens MonthlyAiGatewayCachedTokens { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens MonthlyAiGatewayCachedTokens { get => _explicitNullValueMonthlyAiGatewayCachedTokens; set { _explicitNullValueMonthlyAiGatewayCachedTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayCachedTokens"); else _explicitNullProperties?.Remove("MonthlyAiGatewayCachedTokens"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayCachedTokens _explicitNullValueMonthlyAiGatewayCachedTokens = default!;
 #endif
         /// <summary>The monthly charges and usage for AI Gateway input tokens</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens? MonthlyAiGatewayInputTokens { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens? MonthlyAiGatewayInputTokens { get => _explicitNullValueMonthlyAiGatewayInputTokens; set { _explicitNullValueMonthlyAiGatewayInputTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayInputTokens"); else _explicitNullProperties?.Remove("MonthlyAiGatewayInputTokens"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens? _explicitNullValueMonthlyAiGatewayInputTokens = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens MonthlyAiGatewayInputTokens { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens MonthlyAiGatewayInputTokens { get => _explicitNullValueMonthlyAiGatewayInputTokens; set { _explicitNullValueMonthlyAiGatewayInputTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayInputTokens"); else _explicitNullProperties?.Remove("MonthlyAiGatewayInputTokens"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayInputTokens _explicitNullValueMonthlyAiGatewayInputTokens = default!;
 #endif
         /// <summary>The monthly AI Gateway charges that aren&apos;t for input, output or cached tokens, and the number of requests that had them</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOtherCharges? MonthlyAiGatewayOtherCharges { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOtherCharges? MonthlyAiGatewayOtherCharges { get => _explicitNullValueMonthlyAiGatewayOtherCharges; set { _explicitNullValueMonthlyAiGatewayOtherCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayOtherCharges"); else _explicitNullProperties?.Remove("MonthlyAiGatewayOtherCharges"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOtherCharges? _explicitNullValueMonthlyAiGatewayOtherCharges = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOtherCharges MonthlyAiGatewayOtherCharges { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOtherCharges MonthlyAiGatewayOtherCharges { get => _explicitNullValueMonthlyAiGatewayOtherCharges; set { _explicitNullValueMonthlyAiGatewayOtherCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayOtherCharges"); else _explicitNullProperties?.Remove("MonthlyAiGatewayOtherCharges"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOtherCharges _explicitNullValueMonthlyAiGatewayOtherCharges = default!;
 #endif
         /// <summary>The monthly charges and usage for AI Gateway output tokens</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens? MonthlyAiGatewayOutputTokens { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens? MonthlyAiGatewayOutputTokens { get => _explicitNullValueMonthlyAiGatewayOutputTokens; set { _explicitNullValueMonthlyAiGatewayOutputTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayOutputTokens"); else _explicitNullProperties?.Remove("MonthlyAiGatewayOutputTokens"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens? _explicitNullValueMonthlyAiGatewayOutputTokens = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens MonthlyAiGatewayOutputTokens { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens MonthlyAiGatewayOutputTokens { get => _explicitNullValueMonthlyAiGatewayOutputTokens; set { _explicitNullValueMonthlyAiGatewayOutputTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyAiGatewayOutputTokens"); else _explicitNullProperties?.Remove("MonthlyAiGatewayOutputTokens"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyAiGatewayOutputTokens _explicitNullValueMonthlyAiGatewayOutputTokens = default!;
 #endif
         /// <summary>Total bandwidth used by the account during this month.</summary>
-        public long? MonthlyBandwidthUsed { get; set; }
+        public long? MonthlyBandwidthUsed { get => _explicitNullValueMonthlyBandwidthUsed; set { _explicitNullValueMonthlyBandwidthUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyBandwidthUsed"); else _explicitNullProperties?.Remove("MonthlyBandwidthUsed"); } }
+        private long? _explicitNullValueMonthlyBandwidthUsed = default!;
         /// <summary>The total charges this month paid for African traffic</summary>
-        public double? MonthlyChargesAFTraffic { get; set; }
+        public double? MonthlyChargesAFTraffic { get => _explicitNullValueMonthlyChargesAFTraffic; set { _explicitNullValueMonthlyChargesAFTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesAFTraffic"); else _explicitNullProperties?.Remove("MonthlyChargesAFTraffic"); } }
+        private double? _explicitNullValueMonthlyChargesAFTraffic = default!;
         /// <summary>The total monthly charges for AI Gateway</summary>
-        public decimal? MonthlyChargesAiGateway { get; set; }
+        public decimal? MonthlyChargesAiGateway { get => _explicitNullValueMonthlyChargesAiGateway; set { _explicitNullValueMonthlyChargesAiGateway = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesAiGateway"); else _explicitNullProperties?.Remove("MonthlyChargesAiGateway"); } }
+        private decimal? _explicitNullValueMonthlyChargesAiGateway = default!;
         /// <summary>The total charges this month paid for Asian and Oceanian traffic</summary>
-        public double? MonthlyChargesASIATraffic { get; set; }
+        public double? MonthlyChargesASIATraffic { get => _explicitNullValueMonthlyChargesASIATraffic; set { _explicitNullValueMonthlyChargesASIATraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesASIATraffic"); else _explicitNullProperties?.Remove("MonthlyChargesASIATraffic"); } }
+        private double? _explicitNullValueMonthlyChargesASIATraffic = default!;
         /// <summary>The total monthly charges for DB</summary>
-        public decimal? MonthlyChargesDB { get; set; }
+        public decimal? MonthlyChargesDB { get => _explicitNullValueMonthlyChargesDB; set { _explicitNullValueMonthlyChargesDB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesDB"); else _explicitNullProperties?.Remove("MonthlyChargesDB"); } }
+        private decimal? _explicitNullValueMonthlyChargesDB = default!;
         /// <summary>The total monthly charges for Bunny DNS</summary>
-        public double? MonthlyChargesDNS { get; set; }
+        public double? MonthlyChargesDNS { get => _explicitNullValueMonthlyChargesDNS; set { _explicitNullValueMonthlyChargesDNS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesDNS"); else _explicitNullProperties?.Remove("MonthlyChargesDNS"); } }
+        private double? _explicitNullValueMonthlyChargesDNS = default!;
         /// <summary>The total monthly charges for DRM</summary>
-        public double? MonthlyChargesDrm { get; set; }
+        public double? MonthlyChargesDrm { get => _explicitNullValueMonthlyChargesDrm; set { _explicitNullValueMonthlyChargesDrm = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesDrm"); else _explicitNullProperties?.Remove("MonthlyChargesDrm"); } }
+        private double? _explicitNullValueMonthlyChargesDrm = default!;
         /// <summary>The total charges this month paid for European traffic</summary>
-        public double? MonthlyChargesEUTraffic { get; set; }
+        public double? MonthlyChargesEUTraffic { get => _explicitNullValueMonthlyChargesEUTraffic; set { _explicitNullValueMonthlyChargesEUTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesEUTraffic"); else _explicitNullProperties?.Remove("MonthlyChargesEUTraffic"); } }
+        private double? _explicitNullValueMonthlyChargesEUTraffic = default!;
         /// <summary>The monthly charges caused by extra DNS zones.</summary>
-        public double? MonthlyChargesExtraDnsZones { get; set; }
+        public double? MonthlyChargesExtraDnsZones { get => _explicitNullValueMonthlyChargesExtraDnsZones; set { _explicitNullValueMonthlyChargesExtraDnsZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesExtraDnsZones"); else _explicitNullProperties?.Remove("MonthlyChargesExtraDnsZones"); } }
+        private double? _explicitNullValueMonthlyChargesExtraDnsZones = default!;
         /// <summary>The monthly charges caused by extra pull zones.</summary>
-        public double? MonthlyChargesExtraPullZones { get; set; }
+        public double? MonthlyChargesExtraPullZones { get => _explicitNullValueMonthlyChargesExtraPullZones; set { _explicitNullValueMonthlyChargesExtraPullZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesExtraPullZones"); else _explicitNullProperties?.Remove("MonthlyChargesExtraPullZones"); } }
+        private double? _explicitNullValueMonthlyChargesExtraPullZones = default!;
         /// <summary>The monthly charges caused by extra storage zones.</summary>
-        public double? MonthlyChargesExtraStorageZones { get; set; }
+        public double? MonthlyChargesExtraStorageZones { get => _explicitNullValueMonthlyChargesExtraStorageZones; set { _explicitNullValueMonthlyChargesExtraStorageZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesExtraStorageZones"); else _explicitNullProperties?.Remove("MonthlyChargesExtraStorageZones"); } }
+        private double? _explicitNullValueMonthlyChargesExtraStorageZones = default!;
         /// <summary>The monthly charges caused by extra video libraries.</summary>
-        public double? MonthlyChargesExtraVideoLibraries { get; set; }
+        public double? MonthlyChargesExtraVideoLibraries { get => _explicitNullValueMonthlyChargesExtraVideoLibraries; set { _explicitNullValueMonthlyChargesExtraVideoLibraries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesExtraVideoLibraries"); else _explicitNullProperties?.Remove("MonthlyChargesExtraVideoLibraries"); } }
+        private double? _explicitNullValueMonthlyChargesExtraVideoLibraries = default!;
         /// <summary>The total monthly charges for Load Balancer</summary>
-        public decimal? MonthlyChargesLoadBalancer { get; set; }
+        public decimal? MonthlyChargesLoadBalancer { get => _explicitNullValueMonthlyChargesLoadBalancer; set { _explicitNullValueMonthlyChargesLoadBalancer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesLoadBalancer"); else _explicitNullProperties?.Remove("MonthlyChargesLoadBalancer"); } }
+        private decimal? _explicitNullValueMonthlyChargesLoadBalancer = default!;
         /// <summary>The total monthly charges for Magic Containers</summary>
-        public decimal? MonthlyChargesMagicContainers { get; set; }
+        public decimal? MonthlyChargesMagicContainers { get => _explicitNullValueMonthlyChargesMagicContainers; set { _explicitNullValueMonthlyChargesMagicContainers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesMagicContainers"); else _explicitNullProperties?.Remove("MonthlyChargesMagicContainers"); } }
+        private decimal? _explicitNullValueMonthlyChargesMagicContainers = default!;
         /// <summary>The monthly charges caused by optimizer.</summary>
-        public double? MonthlyChargesOptimizer { get; set; }
+        public double? MonthlyChargesOptimizer { get => _explicitNullValueMonthlyChargesOptimizer; set { _explicitNullValueMonthlyChargesOptimizer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesOptimizer"); else _explicitNullProperties?.Remove("MonthlyChargesOptimizer"); } }
+        private double? _explicitNullValueMonthlyChargesOptimizer = default!;
         /// <summary>The total monthly charges for Bunny Stream Premium Encoding</summary>
-        public decimal? MonthlyChargesPremiumEncoding { get; set; }
+        public decimal? MonthlyChargesPremiumEncoding { get => _explicitNullValueMonthlyChargesPremiumEncoding; set { _explicitNullValueMonthlyChargesPremiumEncoding = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesPremiumEncoding"); else _explicitNullProperties?.Remove("MonthlyChargesPremiumEncoding"); } }
+        private decimal? _explicitNullValueMonthlyChargesPremiumEncoding = default!;
         /// <summary>The total charges this month paid for South American traffic</summary>
-        public double? MonthlyChargesSATraffic { get; set; }
+        public double? MonthlyChargesSATraffic { get => _explicitNullValueMonthlyChargesSATraffic; set { _explicitNullValueMonthlyChargesSATraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesSATraffic"); else _explicitNullProperties?.Remove("MonthlyChargesSATraffic"); } }
+        private double? _explicitNullValueMonthlyChargesSATraffic = default!;
         /// <summary>The total monthly charges for Bunny Edge Scripting</summary>
-        public double? MonthlyChargesScripting { get; set; }
+        public double? MonthlyChargesScripting { get => _explicitNullValueMonthlyChargesScripting; set { _explicitNullValueMonthlyChargesScripting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesScripting"); else _explicitNullProperties?.Remove("MonthlyChargesScripting"); } }
+        private double? _explicitNullValueMonthlyChargesScripting = default!;
         /// <summary>The total monthly charges for Bunny Edge Scripting CPU usage</summary>
-        public double? MonthlyChargesScriptingCpu { get; set; }
+        public double? MonthlyChargesScriptingCpu { get => _explicitNullValueMonthlyChargesScriptingCpu; set { _explicitNullValueMonthlyChargesScriptingCpu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesScriptingCpu"); else _explicitNullProperties?.Remove("MonthlyChargesScriptingCpu"); } }
+        private double? _explicitNullValueMonthlyChargesScriptingCpu = default!;
         /// <summary>The total monthly charges for Bunny Edge Scripting Requests</summary>
-        public double? MonthlyChargesScriptingRequests { get; set; }
+        public double? MonthlyChargesScriptingRequests { get => _explicitNullValueMonthlyChargesScriptingRequests; set { _explicitNullValueMonthlyChargesScriptingRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesScriptingRequests"); else _explicitNullProperties?.Remove("MonthlyChargesScriptingRequests"); } }
+        private double? _explicitNullValueMonthlyChargesScriptingRequests = default!;
         /// <summary>The total monthly charges for Shield</summary>
-        public decimal? MonthlyChargesShield { get; set; }
+        public decimal? MonthlyChargesShield { get => _explicitNullValueMonthlyChargesShield; set { _explicitNullValueMonthlyChargesShield = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesShield"); else _explicitNullProperties?.Remove("MonthlyChargesShield"); } }
+        private decimal? _explicitNullValueMonthlyChargesShield = default!;
         /// <summary>The total charges this month paid for Edge Storage</summary>
-        public double? MonthlyChargesStorage { get; set; }
+        public double? MonthlyChargesStorage { get => _explicitNullValueMonthlyChargesStorage; set { _explicitNullValueMonthlyChargesStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesStorage"); else _explicitNullProperties?.Remove("MonthlyChargesStorage"); } }
+        private double? _explicitNullValueMonthlyChargesStorage = default!;
         /// <summary>The total monthly charges for Taxes</summary>
-        public decimal? MonthlyChargesTaxes { get; set; }
+        public decimal? MonthlyChargesTaxes { get => _explicitNullValueMonthlyChargesTaxes; set { _explicitNullValueMonthlyChargesTaxes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesTaxes"); else _explicitNullProperties?.Remove("MonthlyChargesTaxes"); } }
+        private decimal? _explicitNullValueMonthlyChargesTaxes = default!;
         /// <summary>The total monthly charges for Bunny Stream Transcribe</summary>
-        public double? MonthlyChargesTranscribe { get; set; }
+        public double? MonthlyChargesTranscribe { get => _explicitNullValueMonthlyChargesTranscribe; set { _explicitNullValueMonthlyChargesTranscribe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesTranscribe"); else _explicitNullProperties?.Remove("MonthlyChargesTranscribe"); } }
+        private double? _explicitNullValueMonthlyChargesTranscribe = default!;
         /// <summary>The total charges this month paid for North American traffic</summary>
-        public double? MonthlyChargesUSTraffic { get; set; }
+        public double? MonthlyChargesUSTraffic { get => _explicitNullValueMonthlyChargesUSTraffic; set { _explicitNullValueMonthlyChargesUSTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesUSTraffic"); else _explicitNullProperties?.Remove("MonthlyChargesUSTraffic"); } }
+        private double? _explicitNullValueMonthlyChargesUSTraffic = default!;
         /// <summary>The total monthly charges for WebSockets</summary>
-        public decimal? MonthlyChargesWebSockets { get; set; }
+        public decimal? MonthlyChargesWebSockets { get => _explicitNullValueMonthlyChargesWebSockets; set { _explicitNullValueMonthlyChargesWebSockets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyChargesWebSockets"); else _explicitNullProperties?.Remove("MonthlyChargesWebSockets"); } }
+        private decimal? _explicitNullValueMonthlyChargesWebSockets = default!;
         /// <summary>The total coupon credit used this month across all services</summary>
-        public decimal? MonthlyCouponUsage { get; set; }
+        public decimal? MonthlyCouponUsage { get => _explicitNullValueMonthlyCouponUsage; set { _explicitNullValueMonthlyCouponUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyCouponUsage"); else _explicitNullProperties?.Remove("MonthlyCouponUsage"); } }
+        private decimal? _explicitNullValueMonthlyCouponUsage = default!;
         /// <summary>The monthly charges and usage for BunnyDB row reads</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads? MonthlyDBReads { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads? MonthlyDBReads { get => _explicitNullValueMonthlyDBReads; set { _explicitNullValueMonthlyDBReads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBReads"); else _explicitNullProperties?.Remove("MonthlyDBReads"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads? _explicitNullValueMonthlyDBReads = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads MonthlyDBReads { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads MonthlyDBReads { get => _explicitNullValueMonthlyDBReads; set { _explicitNullValueMonthlyDBReads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBReads"); else _explicitNullProperties?.Remove("MonthlyDBReads"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReads _explicitNullValueMonthlyDBReads = default!;
 #endif
         /// <summary>The monthly charges and usage for BunnyDB replica storage</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica? MonthlyDBReplica { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica? MonthlyDBReplica { get => _explicitNullValueMonthlyDBReplica; set { _explicitNullValueMonthlyDBReplica = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBReplica"); else _explicitNullProperties?.Remove("MonthlyDBReplica"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica? _explicitNullValueMonthlyDBReplica = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica MonthlyDBReplica { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica MonthlyDBReplica { get => _explicitNullValueMonthlyDBReplica; set { _explicitNullValueMonthlyDBReplica = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBReplica"); else _explicitNullProperties?.Remove("MonthlyDBReplica"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbReplica _explicitNullValueMonthlyDBReplica = default!;
 #endif
         /// <summary>The monthly charges and usage for BunnyDB storage</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage? MonthlyDBStorage { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage? MonthlyDBStorage { get => _explicitNullValueMonthlyDBStorage; set { _explicitNullValueMonthlyDBStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBStorage"); else _explicitNullProperties?.Remove("MonthlyDBStorage"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage? _explicitNullValueMonthlyDBStorage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage MonthlyDBStorage { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage MonthlyDBStorage { get => _explicitNullValueMonthlyDBStorage; set { _explicitNullValueMonthlyDBStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBStorage"); else _explicitNullProperties?.Remove("MonthlyDBStorage"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage _explicitNullValueMonthlyDBStorage = default!;
 #endif
         /// <summary>The monthly charges and usage for BunnyDB row writes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbWrites? MonthlyDBWrites { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbWrites? MonthlyDBWrites { get => _explicitNullValueMonthlyDBWrites; set { _explicitNullValueMonthlyDBWrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBWrites"); else _explicitNullProperties?.Remove("MonthlyDBWrites"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbWrites? _explicitNullValueMonthlyDBWrites = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbWrites MonthlyDBWrites { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbWrites MonthlyDBWrites { get => _explicitNullValueMonthlyDBWrites; set { _explicitNullValueMonthlyDBWrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDBWrites"); else _explicitNullProperties?.Remove("MonthlyDBWrites"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbWrites _explicitNullValueMonthlyDBWrites = default!;
 #endif
         /// <summary>Total number of Bunny DNS normal queries served this month.</summary>
-        public long? MonthlyDnsNormalQueriesServed { get; set; }
+        public long? MonthlyDnsNormalQueriesServed { get => _explicitNullValueMonthlyDnsNormalQueriesServed; set { _explicitNullValueMonthlyDnsNormalQueriesServed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDnsNormalQueriesServed"); else _explicitNullProperties?.Remove("MonthlyDnsNormalQueriesServed"); } }
+        private long? _explicitNullValueMonthlyDnsNormalQueriesServed = default!;
         /// <summary>Total number of Bunny DNS smart queries served this month.</summary>
-        public long? MonthlyDnsSmartQueriesServed { get; set; }
+        public long? MonthlyDnsSmartQueriesServed { get => _explicitNullValueMonthlyDnsSmartQueriesServed; set { _explicitNullValueMonthlyDnsSmartQueriesServed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDnsSmartQueriesServed"); else _explicitNullProperties?.Remove("MonthlyDnsSmartQueriesServed"); } }
+        private long? _explicitNullValueMonthlyDnsSmartQueriesServed = default!;
         /// <summary>DRM (enterprise) licenses issued this month.</summary>
-        public long? MonthlyDRMLicensesIssued { get; set; }
+        public long? MonthlyDRMLicensesIssued { get => _explicitNullValueMonthlyDRMLicensesIssued; set { _explicitNullValueMonthlyDRMLicensesIssued = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyDRMLicensesIssued"); else _explicitNullProperties?.Remove("MonthlyDRMLicensesIssued"); } }
+        private long? _explicitNullValueMonthlyDRMLicensesIssued = default!;
         /// <summary>The monthly charges and usage for Magic Containers CPU</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcCpu? MonthlyMcCpu { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcCpu? MonthlyMcCpu { get => _explicitNullValueMonthlyMcCpu; set { _explicitNullValueMonthlyMcCpu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcCpu"); else _explicitNullProperties?.Remove("MonthlyMcCpu"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcCpu? _explicitNullValueMonthlyMcCpu = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcCpu MonthlyMcCpu { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcCpu MonthlyMcCpu { get => _explicitNullValueMonthlyMcCpu; set { _explicitNullValueMonthlyMcCpu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcCpu"); else _explicitNullProperties?.Remove("MonthlyMcCpu"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcCpu _explicitNullValueMonthlyMcCpu = default!;
 #endif
         /// <summary>The monthly charges and usage for Magic Containers Egress Traffic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcEgressTraffic? MonthlyMcEgressTraffic { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcEgressTraffic? MonthlyMcEgressTraffic { get => _explicitNullValueMonthlyMcEgressTraffic; set { _explicitNullValueMonthlyMcEgressTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcEgressTraffic"); else _explicitNullProperties?.Remove("MonthlyMcEgressTraffic"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcEgressTraffic? _explicitNullValueMonthlyMcEgressTraffic = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcEgressTraffic MonthlyMcEgressTraffic { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcEgressTraffic MonthlyMcEgressTraffic { get => _explicitNullValueMonthlyMcEgressTraffic; set { _explicitNullValueMonthlyMcEgressTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcEgressTraffic"); else _explicitNullProperties?.Remove("MonthlyMcEgressTraffic"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcEgressTraffic _explicitNullValueMonthlyMcEgressTraffic = default!;
 #endif
         /// <summary>The monthly charges and usage for Magic Containers Ingress Traffic</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIngressTraffic? MonthlyMcIngressTraffic { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIngressTraffic? MonthlyMcIngressTraffic { get => _explicitNullValueMonthlyMcIngressTraffic; set { _explicitNullValueMonthlyMcIngressTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcIngressTraffic"); else _explicitNullProperties?.Remove("MonthlyMcIngressTraffic"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIngressTraffic? _explicitNullValueMonthlyMcIngressTraffic = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIngressTraffic MonthlyMcIngressTraffic { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIngressTraffic MonthlyMcIngressTraffic { get => _explicitNullValueMonthlyMcIngressTraffic; set { _explicitNullValueMonthlyMcIngressTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcIngressTraffic"); else _explicitNullProperties?.Remove("MonthlyMcIngressTraffic"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIngressTraffic _explicitNullValueMonthlyMcIngressTraffic = default!;
 #endif
         /// <summary>The monthly charges and usage for Magic Containers Anycast IP</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIp? MonthlyMcIp { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIp? MonthlyMcIp { get => _explicitNullValueMonthlyMcIp; set { _explicitNullValueMonthlyMcIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcIp"); else _explicitNullProperties?.Remove("MonthlyMcIp"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIp? _explicitNullValueMonthlyMcIp = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIp MonthlyMcIp { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIp MonthlyMcIp { get => _explicitNullValueMonthlyMcIp; set { _explicitNullValueMonthlyMcIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcIp"); else _explicitNullProperties?.Remove("MonthlyMcIp"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcIp _explicitNullValueMonthlyMcIp = default!;
 #endif
         /// <summary>The monthly charges and usage for Magic Containers Memory</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcMemory? MonthlyMcMemory { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcMemory? MonthlyMcMemory { get => _explicitNullValueMonthlyMcMemory; set { _explicitNullValueMonthlyMcMemory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcMemory"); else _explicitNullProperties?.Remove("MonthlyMcMemory"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcMemory? _explicitNullValueMonthlyMcMemory = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcMemory MonthlyMcMemory { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcMemory MonthlyMcMemory { get => _explicitNullValueMonthlyMcMemory; set { _explicitNullValueMonthlyMcMemory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcMemory"); else _explicitNullProperties?.Remove("MonthlyMcMemory"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcMemory _explicitNullValueMonthlyMcMemory = default!;
 #endif
         /// <summary>The monthly charges and usage for Magic Containers Persistent Volumes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcVolumes? MonthlyMcVolumes { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcVolumes? MonthlyMcVolumes { get => _explicitNullValueMonthlyMcVolumes; set { _explicitNullValueMonthlyMcVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcVolumes"); else _explicitNullProperties?.Remove("MonthlyMcVolumes"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcVolumes? _explicitNullValueMonthlyMcVolumes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcVolumes MonthlyMcVolumes { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcVolumes MonthlyMcVolumes { get => _explicitNullValueMonthlyMcVolumes; set { _explicitNullValueMonthlyMcVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyMcVolumes"); else _explicitNullProperties?.Remove("MonthlyMcVolumes"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyMcVolumes _explicitNullValueMonthlyMcVolumes = default!;
 #endif
         /// <summary>Total billable minutes used for Bunny Stream Premium Encoding this month.</summary>
-        public long? MonthlyPremiumEncodingBillableMinutes { get; set; }
+        public long? MonthlyPremiumEncodingBillableMinutes { get => _explicitNullValueMonthlyPremiumEncodingBillableMinutes; set { _explicitNullValueMonthlyPremiumEncodingBillableMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyPremiumEncodingBillableMinutes"); else _explicitNullProperties?.Remove("MonthlyPremiumEncodingBillableMinutes"); } }
+        private long? _explicitNullValueMonthlyPremiumEncodingBillableMinutes = default!;
         /// <summary>Total edge script CPU time (milliseconds) used this month.</summary>
-        public long? MonthlyScriptingCpuTime { get; set; }
+        public long? MonthlyScriptingCpuTime { get => _explicitNullValueMonthlyScriptingCpuTime; set { _explicitNullValueMonthlyScriptingCpuTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyScriptingCpuTime"); else _explicitNullProperties?.Remove("MonthlyScriptingCpuTime"); } }
+        private long? _explicitNullValueMonthlyScriptingCpuTime = default!;
         /// <summary>Total number of edge script requests this month.</summary>
-        public long? MonthlyScriptingRequests { get; set; }
+        public long? MonthlyScriptingRequests { get => _explicitNullValueMonthlyScriptingRequests; set { _explicitNullValueMonthlyScriptingRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyScriptingRequests"); else _explicitNullProperties?.Remove("MonthlyScriptingRequests"); } }
+        private long? _explicitNullValueMonthlyScriptingRequests = default!;
         /// <summary>Total minutes used for Bunny Stream Transcribe this month.</summary>
-        public long? MonthlyTranscriptionMinutes { get; set; }
+        public long? MonthlyTranscriptionMinutes { get => _explicitNullValueMonthlyTranscriptionMinutes; set { _explicitNullValueMonthlyTranscriptionMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyTranscriptionMinutes"); else _explicitNullProperties?.Remove("MonthlyTranscriptionMinutes"); } }
+        private long? _explicitNullValueMonthlyTranscriptionMinutes = default!;
         /// <summary>Next month VAT rate for the user&apos;s account.</summary>
-        public decimal? NextMonthVATRate { get; set; }
+        public decimal? NextMonthVATRate { get => _explicitNullValueNextMonthVATRate; set { _explicitNullValueNextMonthVATRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("NextMonthVATRate"); else _explicitNullProperties?.Remove("NextMonthVATRate"); } }
+        private decimal? _explicitNullValueNextMonthVATRate = default!;
         /// <summary>Optimizer monthly price per pull zone for this account (unless overridden on pull zone level).</summary>
-        public decimal? OptimizerMonthlyPrice { get; set; }
+        public decimal? OptimizerMonthlyPrice { get => _explicitNullValueOptimizerMonthlyPrice; set { _explicitNullValueOptimizerMonthlyPrice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerMonthlyPrice"); else _explicitNullProperties?.Remove("OptimizerMonthlyPrice"); } }
+        private decimal? _explicitNullValueOptimizerMonthlyPrice = default!;
         /// <summary>Contains the list of saved payment methods on the user&apos;s account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>? SavedPaymentMethods { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>? SavedPaymentMethods { get => _explicitNullValueSavedPaymentMethods; set { _explicitNullValueSavedPaymentMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SavedPaymentMethods"); else _explicitNullProperties?.Remove("SavedPaymentMethods"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod>? _explicitNullValueSavedPaymentMethods = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod> SavedPaymentMethods { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod> SavedPaymentMethods { get => _explicitNullValueSavedPaymentMethods; set { _explicitNullValueSavedPaymentMethods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SavedPaymentMethods"); else _explicitNullProperties?.Remove("SavedPaymentMethods"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BillingSavedPaymentMethod> _explicitNullValueSavedPaymentMethods = default!;
 #endif
         /// <summary>The account wide pricing discount for South America region.</summary>
-        public int? SouthAmericaDiscount { get; set; }
+        public int? SouthAmericaDiscount { get => _explicitNullValueSouthAmericaDiscount; set { _explicitNullValueSouthAmericaDiscount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SouthAmericaDiscount"); else _explicitNullProperties?.Remove("SouthAmericaDiscount"); } }
+        private int? _explicitNullValueSouthAmericaDiscount = default!;
         /// <summary>The current account charges of the running month</summary>
-        public double? ThisMonthCharges { get; set; }
+        public double? ThisMonthCharges { get => _explicitNullValueThisMonthCharges; set { _explicitNullValueThisMonthCharges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThisMonthCharges"); else _explicitNullProperties?.Remove("ThisMonthCharges"); } }
+        private double? _explicitNullValueThisMonthCharges = default!;
         /// <summary>The VAT rate for the user&apos;s account.</summary>
-        public decimal? VATRate { get; set; }
+        public decimal? VATRate { get => _explicitNullValueVATRate; set { _explicitNullValueVATRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VATRate"); else _explicitNullProperties?.Remove("VATRate"); } }
+        private decimal? _explicitNullValueVATRate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingModel"/> and sets the default values.
         /// </summary>
@@ -297,7 +472,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.BillingModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.BillingModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.BillingModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -464,6 +639,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("SouthAmericaDiscount", SouthAmericaDiscount);
             writer.WriteDoubleValue("ThisMonthCharges", ThisMonthCharges);
             writer.WriteDecimalValue("VATRate", VATRate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

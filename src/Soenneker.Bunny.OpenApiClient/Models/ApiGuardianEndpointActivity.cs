@@ -11,21 +11,40 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiGuardianEndpointActivity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blockedRequests") is { } nullNodeBlockedRequests && nullNodeBlockedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedRequests = null;
+            if (parseNode.GetChildNode("failedAuthenticationEnforcement") is { } nullNodeFailedAuthenticationEnforcement && nullNodeFailedAuthenticationEnforcement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedAuthenticationEnforcement = null;
+            if (parseNode.GetChildNode("failedRequestValidation") is { } nullNodeFailedRequestValidation && nullNodeFailedRequestValidation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedRequestValidation = null;
+            if (parseNode.GetChildNode("loggedRequests") is { } nullNodeLoggedRequests && nullNodeLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggedRequests = null;
+            if (parseNode.GetChildNode("rateLimited") is { } nullNodeRateLimited && nullNodeRateLimited.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimited = null;
+            if (parseNode.GetChildNode("requestsInspected") is { } nullNodeRequestsInspected && nullNodeRequestsInspected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsInspected = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blockedRequests property</summary>
-        public int? BlockedRequests { get; set; }
+        public int? BlockedRequests { get => _explicitNullValueBlockedRequests; set { _explicitNullValueBlockedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedRequests"); else _explicitNullProperties?.Remove("blockedRequests"); } }
+        private int? _explicitNullValueBlockedRequests = default!;
         /// <summary>The failedAuthenticationEnforcement property</summary>
-        public int? FailedAuthenticationEnforcement { get; set; }
+        public int? FailedAuthenticationEnforcement { get => _explicitNullValueFailedAuthenticationEnforcement; set { _explicitNullValueFailedAuthenticationEnforcement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failedAuthenticationEnforcement"); else _explicitNullProperties?.Remove("failedAuthenticationEnforcement"); } }
+        private int? _explicitNullValueFailedAuthenticationEnforcement = default!;
         /// <summary>The failedRequestValidation property</summary>
-        public int? FailedRequestValidation { get; set; }
+        public int? FailedRequestValidation { get => _explicitNullValueFailedRequestValidation; set { _explicitNullValueFailedRequestValidation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failedRequestValidation"); else _explicitNullProperties?.Remove("failedRequestValidation"); } }
+        private int? _explicitNullValueFailedRequestValidation = default!;
         /// <summary>The loggedRequests property</summary>
-        public int? LoggedRequests { get; set; }
+        public int? LoggedRequests { get => _explicitNullValueLoggedRequests; set { _explicitNullValueLoggedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loggedRequests"); else _explicitNullProperties?.Remove("loggedRequests"); } }
+        private int? _explicitNullValueLoggedRequests = default!;
         /// <summary>The rateLimited property</summary>
-        public int? RateLimited { get; set; }
+        public int? RateLimited { get => _explicitNullValueRateLimited; set { _explicitNullValueRateLimited = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimited"); else _explicitNullProperties?.Remove("rateLimited"); } }
+        private int? _explicitNullValueRateLimited = default!;
         /// <summary>The requestsInspected property</summary>
-        public int? RequestsInspected { get; set; }
+        public int? RequestsInspected { get => _explicitNullValueRequestsInspected; set { _explicitNullValueRequestsInspected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestsInspected"); else _explicitNullProperties?.Remove("requestsInspected"); } }
+        private int? _explicitNullValueRequestsInspected = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity"/> and sets the default values.
         /// </summary>
@@ -41,7 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointActivity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +91,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("loggedRequests", LoggedRequests);
             writer.WriteIntValue("rateLimited", RateLimited);
             writer.WriteIntValue("requestsInspected", RequestsInspected);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

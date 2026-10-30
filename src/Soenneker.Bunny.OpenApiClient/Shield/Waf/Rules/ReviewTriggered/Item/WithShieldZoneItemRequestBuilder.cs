@@ -53,6 +53,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.Waf.Rules.ReviewTriggered.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.UnauthorizedResult.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.GetTriggeredRulesResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.GetTriggeredRulesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -78,6 +80,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.Waf.Rules.ReviewTriggered.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.UnauthorizedResult.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.UpdateReviewTriggeredRuleResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.UpdateReviewTriggeredRuleResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

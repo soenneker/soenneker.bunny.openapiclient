@@ -12,53 +12,79 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VideoEncodingStatisticsModelTotal : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("byJit") is { } nullNodeByJit && nullNodeByJit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByJit = null;
+            if (parseNode.GetChildNode("byResolution") is { } nullNodeByResolution && nullNodeByResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByResolution = null;
+            if (parseNode.GetChildNode("byVideoCodec") is { } nullNodeByVideoCodec && nullNodeByVideoCodec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ByVideoCodec = null;
+            if (parseNode.GetChildNode("normalizedChart") is { } nullNodeNormalizedChart && nullNodeNormalizedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedChart = null;
+            if (parseNode.GetChildNode("normalizedTotal") is { } nullNodeNormalizedTotal && nullNodeNormalizedTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NormalizedTotal = null;
+            if (parseNode.GetChildNode("outputChart") is { } nullNodeOutputChart && nullNodeOutputChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputChart = null;
+            if (parseNode.GetChildNode("outputTotal") is { } nullNodeOutputTotal && nullNodeOutputTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputTotal = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Encoding seconds grouped by encoding type: &apos;jit&apos; for just-in-time encodes, &apos;standard&apos; for full encodes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByJit? ByJit { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByJit? ByJit { get => _explicitNullValueByJit; set { _explicitNullValueByJit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byJit"); else _explicitNullProperties?.Remove("byJit"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByJit? _explicitNullValueByJit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByJit ByJit { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByJit ByJit { get => _explicitNullValueByJit; set { _explicitNullValueByJit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byJit"); else _explicitNullProperties?.Remove("byJit"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByJit _explicitNullValueByJit = default!;
 #endif
         /// <summary>Encoding seconds grouped by the video&apos;s highest output resolution. 0 means the resolution was unknown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution? ByResolution { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution? ByResolution { get => _explicitNullValueByResolution; set { _explicitNullValueByResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byResolution"); else _explicitNullProperties?.Remove("byResolution"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution? _explicitNullValueByResolution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution ByResolution { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution ByResolution { get => _explicitNullValueByResolution; set { _explicitNullValueByResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byResolution"); else _explicitNullProperties?.Remove("byResolution"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution _explicitNullValueByResolution = default!;
 #endif
         /// <summary>Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByVideoCodec? ByVideoCodec { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByVideoCodec? ByVideoCodec { get => _explicitNullValueByVideoCodec; set { _explicitNullValueByVideoCodec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byVideoCodec"); else _explicitNullProperties?.Remove("byVideoCodec"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByVideoCodec? _explicitNullValueByVideoCodec = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByVideoCodec ByVideoCodec { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByVideoCodec ByVideoCodec { get => _explicitNullValueByVideoCodec; set { _explicitNullValueByVideoCodec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byVideoCodec"); else _explicitNullProperties?.Remove("byVideoCodec"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByVideoCodec _explicitNullValueByVideoCodec = default!;
 #endif
         /// <summary>Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalNormalizedChart? NormalizedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalNormalizedChart? NormalizedChart { get => _explicitNullValueNormalizedChart; set { _explicitNullValueNormalizedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedChart"); else _explicitNullProperties?.Remove("normalizedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalNormalizedChart? _explicitNullValueNormalizedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalNormalizedChart NormalizedChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalNormalizedChart NormalizedChart { get => _explicitNullValueNormalizedChart; set { _explicitNullValueNormalizedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedChart"); else _explicitNullProperties?.Remove("normalizedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalNormalizedChart _explicitNullValueNormalizedChart = default!;
 #endif
         /// <summary>Billable encoding seconds in the selected period: counted per output codec and weighted by the video&apos;s highest resolution (x0.5 below 720p, x1 up to 1080p, x3 above).</summary>
-        public long? NormalizedTotal { get; set; }
+        public long? NormalizedTotal { get => _explicitNullValueNormalizedTotal; set { _explicitNullValueNormalizedTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedTotal"); else _explicitNullProperties?.Remove("normalizedTotal"); } }
+        private long? _explicitNullValueNormalizedTotal = default!;
         /// <summary>Encoded output seconds over time, grouped hourly or daily in UTC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart? OutputChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart? OutputChart { get => _explicitNullValueOutputChart; set { _explicitNullValueOutputChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputChart"); else _explicitNullProperties?.Remove("outputChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart? _explicitNullValueOutputChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart OutputChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart OutputChart { get => _explicitNullValueOutputChart; set { _explicitNullValueOutputChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputChart"); else _explicitNullProperties?.Remove("outputChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart _explicitNullValueOutputChart = default!;
 #endif
         /// <summary>Encoded output seconds in the selected period: video length counted once per output codec, without resolution weighting.</summary>
-        public long? OutputTotal { get; set; }
+        public long? OutputTotal { get => _explicitNullValueOutputTotal; set { _explicitNullValueOutputTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputTotal"); else _explicitNullProperties?.Remove("outputTotal"); } }
+        private long? _explicitNullValueOutputTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal"/> and sets the default values.
         /// </summary>
@@ -74,7 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotal(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -107,6 +133,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("normalizedTotal", NormalizedTotal);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalOutputChart>("outputChart", OutputChart);
             writer.WriteLongValue("outputTotal", OutputTotal);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

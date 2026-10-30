@@ -72,6 +72,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.PaginationListModelOfDnsRecordModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -97,6 +99,8 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.ApiErrorData.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -177,7 +181,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Dnszone.Item.Records
             public string Search { get; set; }
             #pragma warning restore CS1591
 #endif
-            /// <summary>The type of DNS Record</summary>
+            /// <summary>The type of DNS Record&lt;details&gt;&lt;summary&gt;Show all 16 values&lt;/summary&gt;| Value | Name ||---|---|| `0` | A || `1` | AAAA || `2` | CNAME || `3` | TXT || `4` | MX || `5` | Redirect || `6` | Flatten || `7` | Pull Zone || `8` | SRV || `9` | CAA || `10` | PTR || `11` | Script || `12` | NS || `13` | SVCB || `14` | HTTPS || `15` | TLSA |&lt;/details&gt;</summary>
             [QueryParameter("type")]
             public int? Type { get; set; }
         }

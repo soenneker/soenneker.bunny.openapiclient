@@ -12,99 +12,146 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Overview : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("activeInstances") is { } nullNodeActiveInstances && nullNodeActiveInstances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveInstances = null;
+            if (parseNode.GetChildNode("activeRegions") is { } nullNodeActiveRegions && nullNodeActiveRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveRegions = null;
+            if (parseNode.GetChildNode("averageCPU") is { } nullNodeAverageCPU && nullNodeAverageCPU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageCPU = null;
+            if (parseNode.GetChildNode("averageLatency") is { } nullNodeAverageLatency && nullNodeAverageLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageLatency = null;
+            if (parseNode.GetChildNode("averageRAM") is { } nullNodeAverageRAM && nullNodeAverageRAM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageRAM = null;
+            if (parseNode.GetChildNode("averageVolumesUsage") is { } nullNodeAverageVolumesUsage && nullNodeAverageVolumesUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageVolumesUsage = null;
+            if (parseNode.GetChildNode("currentLatency") is { } nullNodeCurrentLatency && nullNodeCurrentLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentLatency = null;
+            if (parseNode.GetChildNode("desiredInstances") is { } nullNodeDesiredInstances && nullNodeDesiredInstances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DesiredInstances = null;
+            if (parseNode.GetChildNode("latencyChart") is { } nullNodeLatencyChart && nullNodeLatencyChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LatencyChart = null;
+            if (parseNode.GetChildNode("limits") is { } nullNodeLimits && nullNodeLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limits = null;
+            if (parseNode.GetChildNode("monthlyCost") is { } nullNodeMonthlyCost && nullNodeMonthlyCost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyCost = null;
+            if (parseNode.GetChildNode("regions") is { } nullNodeRegions && nullNodeRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Regions = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("targetLatency") is { } nullNodeTargetLatency && nullNodeTargetLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetLatency = null;
+            if (parseNode.GetChildNode("totalVolumeSizeInGb") is { } nullNodeTotalVolumeSizeInGb && nullNodeTotalVolumeSizeInGb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalVolumeSizeInGb = null;
+        }
+
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator? ActiveInstances { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator? ActiveInstances { get => _explicitNullValueActiveInstances; set { _explicitNullValueActiveInstances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeInstances"); else _explicitNullProperties?.Remove("activeInstances"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator? _explicitNullValueActiveInstances = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator ActiveInstances { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator ActiveInstances { get => _explicitNullValueActiveInstances; set { _explicitNullValueActiveInstances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeInstances"); else _explicitNullProperties?.Remove("activeInstances"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator _explicitNullValueActiveInstances = default!;
 #endif
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator? ActiveRegions { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator? ActiveRegions { get => _explicitNullValueActiveRegions; set { _explicitNullValueActiveRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeRegions"); else _explicitNullProperties?.Remove("activeRegions"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator? _explicitNullValueActiveRegions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator ActiveRegions { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator ActiveRegions { get => _explicitNullValueActiveRegions; set { _explicitNullValueActiveRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activeRegions"); else _explicitNullProperties?.Remove("activeRegions"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator _explicitNullValueActiveRegions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? AverageCPU { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? AverageCPU { get => _explicitNullValueAverageCPU; set { _explicitNullValueAverageCPU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageCPU"); else _explicitNullProperties?.Remove("averageCPU"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? _explicitNullValueAverageCPU = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator AverageCPU { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator AverageCPU { get => _explicitNullValueAverageCPU; set { _explicitNullValueAverageCPU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageCPU"); else _explicitNullProperties?.Remove("averageCPU"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator _explicitNullValueAverageCPU = default!;
 #endif
         /// <summary>The averageLatency property</summary>
-        public double? AverageLatency { get; set; }
+        public double? AverageLatency { get => _explicitNullValueAverageLatency; set { _explicitNullValueAverageLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageLatency"); else _explicitNullProperties?.Remove("averageLatency"); } }
+        private double? _explicitNullValueAverageLatency = default!;
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? AverageRAM { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? AverageRAM { get => _explicitNullValueAverageRAM; set { _explicitNullValueAverageRAM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageRAM"); else _explicitNullProperties?.Remove("averageRAM"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? _explicitNullValueAverageRAM = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator AverageRAM { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator AverageRAM { get => _explicitNullValueAverageRAM; set { _explicitNullValueAverageRAM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageRAM"); else _explicitNullProperties?.Remove("averageRAM"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator _explicitNullValueAverageRAM = default!;
 #endif
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? AverageVolumesUsage { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? AverageVolumesUsage { get => _explicitNullValueAverageVolumesUsage; set { _explicitNullValueAverageVolumesUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageVolumesUsage"); else _explicitNullProperties?.Remove("averageVolumesUsage"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? _explicitNullValueAverageVolumesUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator AverageVolumesUsage { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator AverageVolumesUsage { get => _explicitNullValueAverageVolumesUsage; set { _explicitNullValueAverageVolumesUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageVolumesUsage"); else _explicitNullProperties?.Remove("averageVolumesUsage"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator _explicitNullValueAverageVolumesUsage = default!;
 #endif
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? CurrentLatency { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? CurrentLatency { get => _explicitNullValueCurrentLatency; set { _explicitNullValueCurrentLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentLatency"); else _explicitNullProperties?.Remove("currentLatency"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? _explicitNullValueCurrentLatency = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator CurrentLatency { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator CurrentLatency { get => _explicitNullValueCurrentLatency; set { _explicitNullValueCurrentLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentLatency"); else _explicitNullProperties?.Remove("currentLatency"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator _explicitNullValueCurrentLatency = default!;
 #endif
         /// <summary>The desiredInstances property</summary>
-        public int? DesiredInstances { get; set; }
+        public int? DesiredInstances { get => _explicitNullValueDesiredInstances; set { _explicitNullValueDesiredInstances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("desiredInstances"); else _explicitNullProperties?.Remove("desiredInstances"); } }
+        private int? _explicitNullValueDesiredInstances = default!;
         /// <summary>The latencyChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2? LatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2? LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2? _explicitNullValueLatencyChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2 LatencyChart { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2 LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2 _explicitNullValueLatencyChart = default!;
 #endif
         /// <summary>What one instance of the application may use. The same for every instance, so it is stated once.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits? Limits { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits? Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits? _explicitNullValueLimits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits Limits { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits _explicitNullValueLimits = default!;
 #endif
         /// <summary>The monthlyCost property</summary>
-        public double? MonthlyCost { get; set; }
+        public double? MonthlyCost { get => _explicitNullValueMonthlyCost; set { _explicitNullValueMonthlyCost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthlyCost"); else _explicitNullProperties?.Remove("monthlyCost"); } }
+        private double? _explicitNullValueMonthlyCost = default!;
         /// <summary>The regions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>? Regions { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>? Regions { get => _explicitNullValueRegions; set { _explicitNullValueRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regions"); else _explicitNullProperties?.Remove("regions"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>? _explicitNullValueRegions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion> Regions { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion> Regions { get => _explicitNullValueRegions; set { _explicitNullValueRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regions"); else _explicitNullProperties?.Remove("regions"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion> _explicitNullValueRegions = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? Status { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? _explicitNullValueStatus = default!;
         /// <summary>Status grade model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? TargetLatency { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? TargetLatency { get => _explicitNullValueTargetLatency; set { _explicitNullValueTargetLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetLatency"); else _explicitNullProperties?.Remove("targetLatency"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator? _explicitNullValueTargetLatency = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator TargetLatency { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator TargetLatency { get => _explicitNullValueTargetLatency; set { _explicitNullValueTargetLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetLatency"); else _explicitNullProperties?.Remove("targetLatency"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator _explicitNullValueTargetLatency = default!;
 #endif
         /// <summary>The totalVolumeSizeInGb property</summary>
-        public double? TotalVolumeSizeInGb { get; set; }
+        public double? TotalVolumeSizeInGb { get => _explicitNullValueTotalVolumeSizeInGb; set { _explicitNullValueTotalVolumeSizeInGb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalVolumeSizeInGb"); else _explicitNullProperties?.Remove("totalVolumeSizeInGb"); } }
+        private double? _explicitNullValueTotalVolumeSizeInGb = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.Overview"/> and sets the default values.
         /// </summary>
@@ -120,7 +167,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.Overview CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.Overview();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.Overview(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -169,6 +216,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>("targetLatency", TargetLatency);
             writer.WriteDoubleValue("totalVolumeSizeInGb", TotalVolumeSizeInGb);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

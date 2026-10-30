@@ -12,92 +12,133 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Application : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("autoScaling") is { } nullNodeAutoScaling && nullNodeAutoScaling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoScaling = null;
+            if (parseNode.GetChildNode("containerInstances") is { } nullNodeContainerInstances && nullNodeContainerInstances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerInstances = null;
+            if (parseNode.GetChildNode("containerTemplates") is { } nullNodeContainerTemplates && nullNodeContainerTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerTemplates = null;
+            if (parseNode.GetChildNode("displayEndpoint") is { } nullNodeDisplayEndpoint && nullNodeDisplayEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayEndpoint = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("networkSettings") is { } nullNodeNetworkSettings && nullNodeNetworkSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NetworkSettings = null;
+            if (parseNode.GetChildNode("regionSettings") is { } nullNodeRegionSettings && nullNodeRegionSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionSettings = null;
+            if (parseNode.GetChildNode("repositorySettings") is { } nullNodeRepositorySettings && nullNodeRepositorySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositorySettings = null;
+            if (parseNode.GetChildNode("runtimeType") is { } nullNodeRuntimeType && nullNodeRuntimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeType = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("volumes") is { } nullNodeVolumes && nullNodeVolumes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volumes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The autoScaling property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings? AutoScaling { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings? AutoScaling { get => _explicitNullValueAutoScaling; set { _explicitNullValueAutoScaling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoScaling"); else _explicitNullProperties?.Remove("autoScaling"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings? _explicitNullValueAutoScaling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings AutoScaling { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings AutoScaling { get => _explicitNullValueAutoScaling; set { _explicitNullValueAutoScaling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoScaling"); else _explicitNullProperties?.Remove("autoScaling"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings _explicitNullValueAutoScaling = default!;
 #endif
         /// <summary>The containerInstances property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance>? ContainerInstances { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance>? ContainerInstances { get => _explicitNullValueContainerInstances; set { _explicitNullValueContainerInstances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerInstances"); else _explicitNullProperties?.Remove("containerInstances"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance>? _explicitNullValueContainerInstances = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance> ContainerInstances { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance> ContainerInstances { get => _explicitNullValueContainerInstances; set { _explicitNullValueContainerInstances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerInstances"); else _explicitNullProperties?.Remove("containerInstances"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance> _explicitNullValueContainerInstances = default!;
 #endif
         /// <summary>The containerTemplates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerTemplate>? ContainerTemplates { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerTemplate>? ContainerTemplates { get => _explicitNullValueContainerTemplates; set { _explicitNullValueContainerTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerTemplates"); else _explicitNullProperties?.Remove("containerTemplates"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerTemplate>? _explicitNullValueContainerTemplates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerTemplate> ContainerTemplates { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerTemplate> ContainerTemplates { get => _explicitNullValueContainerTemplates; set { _explicitNullValueContainerTemplates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerTemplates"); else _explicitNullProperties?.Remove("containerTemplates"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerTemplate> _explicitNullValueContainerTemplates = default!;
 #endif
         /// <summary>Display endpoint model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.DisplayEndpoint? DisplayEndpoint { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DisplayEndpoint? DisplayEndpoint { get => _explicitNullValueDisplayEndpoint; set { _explicitNullValueDisplayEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayEndpoint"); else _explicitNullProperties?.Remove("displayEndpoint"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DisplayEndpoint? _explicitNullValueDisplayEndpoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.DisplayEndpoint DisplayEndpoint { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DisplayEndpoint DisplayEndpoint { get => _explicitNullValueDisplayEndpoint; set { _explicitNullValueDisplayEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayEndpoint"); else _explicitNullProperties?.Remove("displayEndpoint"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.DisplayEndpoint _explicitNullValueDisplayEndpoint = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The networkSettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits? NetworkSettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits? NetworkSettings { get => _explicitNullValueNetworkSettings; set { _explicitNullValueNetworkSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networkSettings"); else _explicitNullProperties?.Remove("networkSettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits? _explicitNullValueNetworkSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits NetworkSettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits NetworkSettings { get => _explicitNullValueNetworkSettings; set { _explicitNullValueNetworkSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("networkSettings"); else _explicitNullProperties?.Remove("networkSettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits _explicitNullValueNetworkSettings = default!;
 #endif
         /// <summary>Region settings model</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings? RegionSettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings? RegionSettings { get => _explicitNullValueRegionSettings; set { _explicitNullValueRegionSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regionSettings"); else _explicitNullProperties?.Remove("regionSettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings? _explicitNullValueRegionSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings RegionSettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings RegionSettings { get => _explicitNullValueRegionSettings; set { _explicitNullValueRegionSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regionSettings"); else _explicitNullProperties?.Remove("regionSettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings _explicitNullValueRegionSettings = default!;
 #endif
         /// <summary>The repositorySettings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings? RepositorySettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings? RepositorySettings { get => _explicitNullValueRepositorySettings; set { _explicitNullValueRepositorySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repositorySettings"); else _explicitNullProperties?.Remove("repositorySettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings? _explicitNullValueRepositorySettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings RepositorySettings { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings RepositorySettings { get => _explicitNullValueRepositorySettings; set { _explicitNullValueRepositorySettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repositorySettings"); else _explicitNullProperties?.Remove("repositorySettings"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings _explicitNullValueRepositorySettings = default!;
 #endif
         /// <summary>The runtimeType property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? RuntimeType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? RuntimeType { get => _explicitNullValueRuntimeType; set { _explicitNullValueRuntimeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeType"); else _explicitNullProperties?.Remove("runtimeType"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? _explicitNullValueRuntimeType = default!;
         /// <summary>The status property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? Status { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? _explicitNullValueStatus = default!;
         /// <summary>The volumes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate>? Volumes { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate>? Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate>? _explicitNullValueVolumes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate> Volumes { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate> Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate> _explicitNullValueVolumes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.Application"/> and sets the default values.
@@ -114,7 +155,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.Application CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.Application();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.Application(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -157,6 +198,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>("runtimeType", RuntimeType);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>("status", Status);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate>("volumes", Volumes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

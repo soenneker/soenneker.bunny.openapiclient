@@ -53,6 +53,8 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZones.PullzoneMapping
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.UnauthorizedResult.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.GetShieldZonePullzoneMappingResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.GetShieldZonePullzoneMappingResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

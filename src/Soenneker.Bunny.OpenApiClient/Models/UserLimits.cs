@@ -11,27 +11,52 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UserLimits : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("existingNumberOfApplications") is { } nullNodeExistingNumberOfApplications && nullNodeExistingNumberOfApplications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingNumberOfApplications = null;
+            if (parseNode.GetChildNode("maxCpuMilliCoresPerPod") is { } nullNodeMaxCpuMilliCoresPerPod && nullNodeMaxCpuMilliCoresPerPod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxCpuMilliCoresPerPod = null;
+            if (parseNode.GetChildNode("maxMemoryBytesPerPod") is { } nullNodeMaxMemoryBytesPerPod && nullNodeMaxMemoryBytesPerPod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxMemoryBytesPerPod = null;
+            if (parseNode.GetChildNode("maxNumberOfApplications") is { } nullNodeMaxNumberOfApplications && nullNodeMaxNumberOfApplications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxNumberOfApplications = null;
+            if (parseNode.GetChildNode("maxNumberOfInstancesPerApplication") is { } nullNodeMaxNumberOfInstancesPerApplication && nullNodeMaxNumberOfInstancesPerApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxNumberOfInstancesPerApplication = null;
+            if (parseNode.GetChildNode("maxNumberOfInstancesPerRegion") is { } nullNodeMaxNumberOfInstancesPerRegion && nullNodeMaxNumberOfInstancesPerRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxNumberOfInstancesPerRegion = null;
+            if (parseNode.GetChildNode("maxNumberOfRegionsPerApplication") is { } nullNodeMaxNumberOfRegionsPerApplication && nullNodeMaxNumberOfRegionsPerApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxNumberOfRegionsPerApplication = null;
+            if (parseNode.GetChildNode("maxNumberOfVolumesPerApplication") is { } nullNodeMaxNumberOfVolumesPerApplication && nullNodeMaxNumberOfVolumesPerApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxNumberOfVolumesPerApplication = null;
+            if (parseNode.GetChildNode("maxVolumeSize") is { } nullNodeMaxVolumeSize && nullNodeMaxVolumeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxVolumeSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The existingNumberOfApplications property</summary>
-        public int? ExistingNumberOfApplications { get; set; }
+        public int? ExistingNumberOfApplications { get => _explicitNullValueExistingNumberOfApplications; set { _explicitNullValueExistingNumberOfApplications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existingNumberOfApplications"); else _explicitNullProperties?.Remove("existingNumberOfApplications"); } }
+        private int? _explicitNullValueExistingNumberOfApplications = default!;
         /// <summary>The maxCpuMilliCoresPerPod property</summary>
-        public int? MaxCpuMilliCoresPerPod { get; set; }
+        public int? MaxCpuMilliCoresPerPod { get => _explicitNullValueMaxCpuMilliCoresPerPod; set { _explicitNullValueMaxCpuMilliCoresPerPod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxCpuMilliCoresPerPod"); else _explicitNullProperties?.Remove("maxCpuMilliCoresPerPod"); } }
+        private int? _explicitNullValueMaxCpuMilliCoresPerPod = default!;
         /// <summary>The maxMemoryBytesPerPod property</summary>
-        public long? MaxMemoryBytesPerPod { get; set; }
+        public long? MaxMemoryBytesPerPod { get => _explicitNullValueMaxMemoryBytesPerPod; set { _explicitNullValueMaxMemoryBytesPerPod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxMemoryBytesPerPod"); else _explicitNullProperties?.Remove("maxMemoryBytesPerPod"); } }
+        private long? _explicitNullValueMaxMemoryBytesPerPod = default!;
         /// <summary>The maxNumberOfApplications property</summary>
-        public int? MaxNumberOfApplications { get; set; }
+        public int? MaxNumberOfApplications { get => _explicitNullValueMaxNumberOfApplications; set { _explicitNullValueMaxNumberOfApplications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNumberOfApplications"); else _explicitNullProperties?.Remove("maxNumberOfApplications"); } }
+        private int? _explicitNullValueMaxNumberOfApplications = default!;
         /// <summary>The maxNumberOfInstancesPerApplication property</summary>
-        public int? MaxNumberOfInstancesPerApplication { get; set; }
+        public int? MaxNumberOfInstancesPerApplication { get => _explicitNullValueMaxNumberOfInstancesPerApplication; set { _explicitNullValueMaxNumberOfInstancesPerApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNumberOfInstancesPerApplication"); else _explicitNullProperties?.Remove("maxNumberOfInstancesPerApplication"); } }
+        private int? _explicitNullValueMaxNumberOfInstancesPerApplication = default!;
         /// <summary>The maxNumberOfInstancesPerRegion property</summary>
-        public int? MaxNumberOfInstancesPerRegion { get; set; }
+        public int? MaxNumberOfInstancesPerRegion { get => _explicitNullValueMaxNumberOfInstancesPerRegion; set { _explicitNullValueMaxNumberOfInstancesPerRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNumberOfInstancesPerRegion"); else _explicitNullProperties?.Remove("maxNumberOfInstancesPerRegion"); } }
+        private int? _explicitNullValueMaxNumberOfInstancesPerRegion = default!;
         /// <summary>The maxNumberOfRegionsPerApplication property</summary>
-        public int? MaxNumberOfRegionsPerApplication { get; set; }
+        public int? MaxNumberOfRegionsPerApplication { get => _explicitNullValueMaxNumberOfRegionsPerApplication; set { _explicitNullValueMaxNumberOfRegionsPerApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNumberOfRegionsPerApplication"); else _explicitNullProperties?.Remove("maxNumberOfRegionsPerApplication"); } }
+        private int? _explicitNullValueMaxNumberOfRegionsPerApplication = default!;
         /// <summary>The maxNumberOfVolumesPerApplication property</summary>
-        public int? MaxNumberOfVolumesPerApplication { get; set; }
+        public int? MaxNumberOfVolumesPerApplication { get => _explicitNullValueMaxNumberOfVolumesPerApplication; set { _explicitNullValueMaxNumberOfVolumesPerApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNumberOfVolumesPerApplication"); else _explicitNullProperties?.Remove("maxNumberOfVolumesPerApplication"); } }
+        private int? _explicitNullValueMaxNumberOfVolumesPerApplication = default!;
         /// <summary>The maxVolumeSize property</summary>
-        public int? MaxVolumeSize { get; set; }
+        public int? MaxVolumeSize { get => _explicitNullValueMaxVolumeSize; set { _explicitNullValueMaxVolumeSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxVolumeSize"); else _explicitNullProperties?.Remove("maxVolumeSize"); } }
+        private int? _explicitNullValueMaxVolumeSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UserLimits"/> and sets the default values.
         /// </summary>
@@ -47,7 +72,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.UserLimits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.UserLimits();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.UserLimits(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +109,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("maxNumberOfRegionsPerApplication", MaxNumberOfRegionsPerApplication);
             writer.WriteIntValue("maxNumberOfVolumesPerApplication", MaxNumberOfVolumesPerApplication);
             writer.WriteIntValue("maxVolumeSize", MaxVolumeSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

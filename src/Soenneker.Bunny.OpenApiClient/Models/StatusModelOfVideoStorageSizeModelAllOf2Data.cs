@@ -12,29 +12,51 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatusModelOfVideoStorageSizeModelAllOf2Data : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("calculatedAt") is { } nullNodeCalculatedAt && nullNodeCalculatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CalculatedAt = null;
+            if (parseNode.GetChildNode("encoded") is { } nullNodeEncoded && nullNodeEncoded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Encoded = null;
+            if (parseNode.GetChildNode("miscellaneous") is { } nullNodeMiscellaneous && nullNodeMiscellaneous.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Miscellaneous = null;
+            if (parseNode.GetChildNode("mp4Fallback") is { } nullNodeMp4Fallback && nullNodeMp4Fallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mp4Fallback = null;
+            if (parseNode.GetChildNode("originals") is { } nullNodeOriginals && nullNodeOriginals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Originals = null;
+            if (parseNode.GetChildNode("previews") is { } nullNodePreviews && nullNodePreviews.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Previews = null;
+            if (parseNode.GetChildNode("thumbnails") is { } nullNodeThumbnails && nullNodeThumbnails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumbnails = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Timestamp when this storage size was calculated (UTC).</summary>
-        public DateTimeOffset? CalculatedAt { get; set; }
+        public DateTimeOffset? CalculatedAt { get => _explicitNullValueCalculatedAt; set { _explicitNullValueCalculatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("calculatedAt"); else _explicitNullProperties?.Remove("calculatedAt"); } }
+        private DateTimeOffset? _explicitNullValueCalculatedAt = default!;
         /// <summary>Size in bytes of each encoded rendition, keyed by &quot;{resolution}-{codec}&quot; (e.g. &quot;720p-h264&quot;). Videos encoded before the current storage layout can also report legacy &quot;{width}x{height}&quot; resolutions, e.g. &quot;1920x1080-h264&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded? Encoded { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded? Encoded { get => _explicitNullValueEncoded; set { _explicitNullValueEncoded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded"); else _explicitNullProperties?.Remove("encoded"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded? _explicitNullValueEncoded = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded Encoded { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded Encoded { get => _explicitNullValueEncoded; set { _explicitNullValueEncoded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded"); else _explicitNullProperties?.Remove("encoded"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded _explicitNullValueEncoded = default!;
 #endif
         /// <summary>Size in bytes of everything else: playlists, manifests, captions, audio extracts, etc.</summary>
-        public long? Miscellaneous { get; set; }
+        public long? Miscellaneous { get => _explicitNullValueMiscellaneous; set { _explicitNullValueMiscellaneous = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("miscellaneous"); else _explicitNullProperties?.Remove("miscellaneous"); } }
+        private long? _explicitNullValueMiscellaneous = default!;
         /// <summary>Size in bytes of the MP4 fallback rendition.</summary>
-        public long? Mp4Fallback { get; set; }
+        public long? Mp4Fallback { get => _explicitNullValueMp4Fallback; set { _explicitNullValueMp4Fallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mp4Fallback"); else _explicitNullProperties?.Remove("mp4Fallback"); } }
+        private long? _explicitNullValueMp4Fallback = default!;
         /// <summary>Size in bytes of the original uploaded video file.</summary>
-        public long? Originals { get; set; }
+        public long? Originals { get => _explicitNullValueOriginals; set { _explicitNullValueOriginals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originals"); else _explicitNullProperties?.Remove("originals"); } }
+        private long? _explicitNullValueOriginals = default!;
         /// <summary>Size in bytes of the video&apos;s GIF and WEBP previews.</summary>
-        public long? Previews { get; set; }
+        public long? Previews { get => _explicitNullValuePreviews; set { _explicitNullValuePreviews = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previews"); else _explicitNullProperties?.Remove("previews"); } }
+        private long? _explicitNullValuePreviews = default!;
         /// <summary>Size in bytes of the video&apos;s JPEG thumbnails.</summary>
-        public long? Thumbnails { get; set; }
+        public long? Thumbnails { get => _explicitNullValueThumbnails; set { _explicitNullValueThumbnails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnails"); else _explicitNullProperties?.Remove("thumbnails"); } }
+        private long? _explicitNullValueThumbnails = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data"/> and sets the default values.
         /// </summary>
@@ -50,7 +72,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2Data(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,6 +105,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("originals", Originals);
             writer.WriteLongValue("previews", Previews);
             writer.WriteLongValue("thumbnails", Thumbnails);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

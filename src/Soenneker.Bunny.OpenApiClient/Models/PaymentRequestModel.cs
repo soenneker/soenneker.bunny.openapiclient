@@ -11,51 +11,85 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PaymentRequestModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Amount") is { } nullNodeAmount && nullNodeAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Amount = null;
+            if (parseNode.GetChildNode("BankTransferReference") is { } nullNodeBankTransferReference && nullNodeBankTransferReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BankTransferReference = null;
+            if (parseNode.GetChildNode("BillingInvoiceDownloadLink") is { } nullNodeBillingInvoiceDownloadLink && nullNodeBillingInvoiceDownloadLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInvoiceDownloadLink = null;
+            if (parseNode.GetChildNode("BillingInvoiceId") is { } nullNodeBillingInvoiceId && nullNodeBillingInvoiceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingInvoiceId = null;
+            if (parseNode.GetChildNode("DateDue") is { } nullNodeDateDue && nullNodeDateDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateDue = null;
+            if (parseNode.GetChildNode("DateGenerated") is { } nullNodeDateGenerated && nullNodeDateGenerated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateGenerated = null;
+            if (parseNode.GetChildNode("DatePaid") is { } nullNodeDatePaid && nullNodeDatePaid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatePaid = null;
+            if (parseNode.GetChildNode("Description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("Paid") is { } nullNodePaid && nullNodePaid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paid = null;
+            if (parseNode.GetChildNode("TaxedAmount") is { } nullNodeTaxedAmount && nullNodeTaxedAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxedAmount = null;
+            if (parseNode.GetChildNode("TaxRate") is { } nullNodeTaxRate && nullNodeTaxRate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TaxRate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Amount property</summary>
-        public decimal? Amount { get; set; }
+        public decimal? Amount { get => _explicitNullValueAmount; set { _explicitNullValueAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Amount"); else _explicitNullProperties?.Remove("Amount"); } }
+        private decimal? _explicitNullValueAmount = default!;
         /// <summary>The BankTransferReference property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BankTransferReference { get; set; }
+        public string? BankTransferReference { get => _explicitNullValueBankTransferReference; set { _explicitNullValueBankTransferReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BankTransferReference"); else _explicitNullProperties?.Remove("BankTransferReference"); } }
+        private string? _explicitNullValueBankTransferReference = default!;
 #nullable restore
 #else
-        public string BankTransferReference { get; set; }
+        public string BankTransferReference { get => _explicitNullValueBankTransferReference; set { _explicitNullValueBankTransferReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BankTransferReference"); else _explicitNullProperties?.Remove("BankTransferReference"); } }
+        private string _explicitNullValueBankTransferReference = default!;
 #endif
         /// <summary>The BillingInvoiceDownloadLink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BillingInvoiceDownloadLink { get; set; }
+        public string? BillingInvoiceDownloadLink { get => _explicitNullValueBillingInvoiceDownloadLink; set { _explicitNullValueBillingInvoiceDownloadLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingInvoiceDownloadLink"); else _explicitNullProperties?.Remove("BillingInvoiceDownloadLink"); } }
+        private string? _explicitNullValueBillingInvoiceDownloadLink = default!;
 #nullable restore
 #else
-        public string BillingInvoiceDownloadLink { get; set; }
+        public string BillingInvoiceDownloadLink { get => _explicitNullValueBillingInvoiceDownloadLink; set { _explicitNullValueBillingInvoiceDownloadLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingInvoiceDownloadLink"); else _explicitNullProperties?.Remove("BillingInvoiceDownloadLink"); } }
+        private string _explicitNullValueBillingInvoiceDownloadLink = default!;
 #endif
         /// <summary>The BillingInvoiceId property</summary>
-        public long? BillingInvoiceId { get; set; }
+        public long? BillingInvoiceId { get => _explicitNullValueBillingInvoiceId; set { _explicitNullValueBillingInvoiceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BillingInvoiceId"); else _explicitNullProperties?.Remove("BillingInvoiceId"); } }
+        private long? _explicitNullValueBillingInvoiceId = default!;
         /// <summary>The DateDue property</summary>
-        public DateTimeOffset? DateDue { get; set; }
+        public DateTimeOffset? DateDue { get => _explicitNullValueDateDue; set { _explicitNullValueDateDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateDue"); else _explicitNullProperties?.Remove("DateDue"); } }
+        private DateTimeOffset? _explicitNullValueDateDue = default!;
         /// <summary>The DateGenerated property</summary>
-        public DateTimeOffset? DateGenerated { get; set; }
+        public DateTimeOffset? DateGenerated { get => _explicitNullValueDateGenerated; set { _explicitNullValueDateGenerated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DateGenerated"); else _explicitNullProperties?.Remove("DateGenerated"); } }
+        private DateTimeOffset? _explicitNullValueDateGenerated = default!;
         /// <summary>The DatePaid property</summary>
-        public DateTimeOffset? DatePaid { get; set; }
+        public DateTimeOffset? DatePaid { get => _explicitNullValueDatePaid; set { _explicitNullValueDatePaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DatePaid"); else _explicitNullProperties?.Remove("DatePaid"); } }
+        private DateTimeOffset? _explicitNullValueDatePaid = default!;
         /// <summary>The Description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Description"); else _explicitNullProperties?.Remove("Description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The Id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The Paid property</summary>
-        public bool? Paid { get; set; }
+        public bool? Paid { get => _explicitNullValuePaid; set { _explicitNullValuePaid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Paid"); else _explicitNullProperties?.Remove("Paid"); } }
+        private bool? _explicitNullValuePaid = default!;
         /// <summary>The TaxedAmount property</summary>
-        public decimal? TaxedAmount { get; set; }
+        public decimal? TaxedAmount { get => _explicitNullValueTaxedAmount; set { _explicitNullValueTaxedAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxedAmount"); else _explicitNullProperties?.Remove("TaxedAmount"); } }
+        private decimal? _explicitNullValueTaxedAmount = default!;
         /// <summary>The TaxRate property</summary>
-        public decimal? TaxRate { get; set; }
+        public decimal? TaxRate { get => _explicitNullValueTaxRate; set { _explicitNullValueTaxRate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TaxRate"); else _explicitNullProperties?.Remove("TaxRate"); } }
+        private decimal? _explicitNullValueTaxRate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaymentRequestModel"/> and sets the default values.
         /// </summary>
@@ -71,7 +105,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.PaymentRequestModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.PaymentRequestModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.PaymentRequestModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +148,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("Paid", Paid);
             writer.WriteDecimalValue("TaxedAmount", TaxedAmount);
             writer.WriteDecimalValue("TaxRate", TaxRate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

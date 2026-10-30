@@ -12,37 +12,57 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AuthSchemeDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("credentialName") is { } nullNodeCredentialName && nullNodeCredentialName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CredentialName = null;
+            if (parseNode.GetChildNode("httpScheme") is { } nullNodeHttpScheme && nullNodeHttpScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpScheme = null;
+            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("schemeName") is { } nullNodeSchemeName && nullNodeSchemeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchemeName = null;
+            if (parseNode.GetChildNode("schemeType") is { } nullNodeSchemeType && nullNodeSchemeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchemeType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The name of the header, query parameter, or cookie that carries the credential(e.g. &quot;Authorization&quot;, &quot;X-API-Key&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CredentialName { get; set; }
+        public string? CredentialName { get => _explicitNullValueCredentialName; set { _explicitNullValueCredentialName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentialName"); else _explicitNullProperties?.Remove("credentialName"); } }
+        private string? _explicitNullValueCredentialName = default!;
 #nullable restore
 #else
-        public string CredentialName { get; set; }
+        public string CredentialName { get => _explicitNullValueCredentialName; set { _explicitNullValueCredentialName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentialName"); else _explicitNullProperties?.Remove("credentialName"); } }
+        private string _explicitNullValueCredentialName = default!;
 #endif
         /// <summary>For HTTP auth schemes, the scheme name (e.g. &quot;bearer&quot;, &quot;basic&quot;). Null for non-HTTP schemes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpScheme { get; set; }
+        public string? HttpScheme { get => _explicitNullValueHttpScheme; set { _explicitNullValueHttpScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpScheme"); else _explicitNullProperties?.Remove("httpScheme"); } }
+        private string? _explicitNullValueHttpScheme = default!;
 #nullable restore
 #else
-        public string HttpScheme { get; set; }
+        public string HttpScheme { get => _explicitNullValueHttpScheme; set { _explicitNullValueHttpScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpScheme"); else _explicitNullProperties?.Remove("httpScheme"); } }
+        private string _explicitNullValueHttpScheme = default!;
 #endif
         /// <summary>Where an authentication credential is transmitted in the HTTP request.</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation? Location { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation? _explicitNullValueLocation = default!;
         /// <summary>The OpenAPI security scheme reference name (e.g. &quot;bearerAuth&quot;, &quot;apiKey&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SchemeName { get; set; }
+        public string? SchemeName { get => _explicitNullValueSchemeName; set { _explicitNullValueSchemeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeName"); else _explicitNullProperties?.Remove("schemeName"); } }
+        private string? _explicitNullValueSchemeName = default!;
 #nullable restore
 #else
-        public string SchemeName { get; set; }
+        public string SchemeName { get => _explicitNullValueSchemeName; set { _explicitNullValueSchemeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeName"); else _explicitNullProperties?.Remove("schemeName"); } }
+        private string _explicitNullValueSchemeName = default!;
 #endif
         /// <summary>The type of security scheme as defined in the OpenAPI specification.</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType? SchemeType { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType? SchemeType { get => _explicitNullValueSchemeType; set { _explicitNullValueSchemeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeType"); else _explicitNullProperties?.Remove("schemeType"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType? _explicitNullValueSchemeType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails"/> and sets the default values.
         /// </summary>
@@ -58,7 +78,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation>("location", Location);
             writer.WriteStringValue("schemeName", SchemeName);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType>("schemeType", SchemeType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,75 +12,113 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StatusModelOfResolutionsCleanupModelAllOf2Data : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("availableResolutionsAfter") is { } nullNodeAvailableResolutionsAfter && nullNodeAvailableResolutionsAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableResolutionsAfter = null;
+            if (parseNode.GetChildNode("deletedOriginal") is { } nullNodeDeletedOriginal && nullNodeDeletedOriginal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletedOriginal = null;
+            if (parseNode.GetChildNode("deletedStorageObjects") is { } nullNodeDeletedStorageObjects && nullNodeDeletedStorageObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeletedStorageObjects = null;
+            if (parseNode.GetChildNode("modifiedPlaylist") is { } nullNodeModifiedPlaylist && nullNodeModifiedPlaylist.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModifiedPlaylist = null;
+            if (parseNode.GetChildNode("resolutionsToDelete") is { } nullNodeResolutionsToDelete && nullNodeResolutionsToDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionsToDelete = null;
+            if (parseNode.GetChildNode("resolutionsToDeleteFromMp4") is { } nullNodeResolutionsToDeleteFromMp4 && nullNodeResolutionsToDeleteFromMp4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionsToDeleteFromMp4 = null;
+            if (parseNode.GetChildNode("resolutionsToDeleteFromPlaylist") is { } nullNodeResolutionsToDeleteFromPlaylist && nullNodeResolutionsToDeleteFromPlaylist.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionsToDeleteFromPlaylist = null;
+            if (parseNode.GetChildNode("resolutionsToDeleteFromStorage") is { } nullNodeResolutionsToDeleteFromStorage && nullNodeResolutionsToDeleteFromStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolutionsToDeleteFromStorage = null;
+            if (parseNode.GetChildNode("storageObjectsToDelete") is { } nullNodeStorageObjectsToDelete && nullNodeStorageObjectsToDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageObjectsToDelete = null;
+            if (parseNode.GetChildNode("updatedAvailableResolutions") is { } nullNodeUpdatedAvailableResolutions && nullNodeUpdatedAvailableResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAvailableResolutions = null;
+            if (parseNode.GetChildNode("videoId") is { } nullNodeVideoId && nullNodeVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoId = null;
+            if (parseNode.GetChildNode("videoLibraryId") is { } nullNodeVideoLibraryId && nullNodeVideoLibraryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoLibraryId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The video&apos;s available resolutions after this cleanup.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AvailableResolutionsAfter { get; set; }
+        public List<string>? AvailableResolutionsAfter { get => _explicitNullValueAvailableResolutionsAfter; set { _explicitNullValueAvailableResolutionsAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableResolutionsAfter"); else _explicitNullProperties?.Remove("availableResolutionsAfter"); } }
+        private List<string>? _explicitNullValueAvailableResolutionsAfter = default!;
 #nullable restore
 #else
-        public List<string> AvailableResolutionsAfter { get; set; }
+        public List<string> AvailableResolutionsAfter { get => _explicitNullValueAvailableResolutionsAfter; set { _explicitNullValueAvailableResolutionsAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableResolutionsAfter"); else _explicitNullProperties?.Remove("availableResolutionsAfter"); } }
+        private List<string> _explicitNullValueAvailableResolutionsAfter = default!;
 #endif
         /// <summary>Whether the original uploaded source file was deleted from storage as part of this operation.</summary>
-        public bool? DeletedOriginal { get; set; }
+        public bool? DeletedOriginal { get => _explicitNullValueDeletedOriginal; set { _explicitNullValueDeletedOriginal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletedOriginal"); else _explicitNullProperties?.Remove("deletedOriginal"); } }
+        private bool? _explicitNullValueDeletedOriginal = default!;
         /// <summary>Whether at least one of the storage objects in StorageObjectsToDelete was actually deleted (always false when dryRun is true). Individual objects can still have failed to delete — their failures are logged and do not clear this flag — so this confirms the cleanup did something, not that it removed everything listed.</summary>
-        public bool? DeletedStorageObjects { get; set; }
+        public bool? DeletedStorageObjects { get => _explicitNullValueDeletedStorageObjects; set { _explicitNullValueDeletedStorageObjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletedStorageObjects"); else _explicitNullProperties?.Remove("deletedStorageObjects"); } }
+        private bool? _explicitNullValueDeletedStorageObjects = default!;
         /// <summary>Whether the HLS master playlist was rewritten to remove the deleted resolutions.</summary>
-        public bool? ModifiedPlaylist { get; set; }
+        public bool? ModifiedPlaylist { get => _explicitNullValueModifiedPlaylist; set { _explicitNullValueModifiedPlaylist = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modifiedPlaylist"); else _explicitNullProperties?.Remove("modifiedPlaylist"); } }
+        private bool? _explicitNullValueModifiedPlaylist = default!;
         /// <summary>Resolutions selected for removal as part of this cleanup, across the HLS playlist, object storage, and MP4 fallback set. Populated even when dryRun is true or an individual deletion fails — see UpdatedAvailableResolutions/ModifiedPlaylist/DeletedStorageObjects for what was actually changed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResolutionsToDelete { get; set; }
+        public List<string>? ResolutionsToDelete { get => _explicitNullValueResolutionsToDelete; set { _explicitNullValueResolutionsToDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDelete"); else _explicitNullProperties?.Remove("resolutionsToDelete"); } }
+        private List<string>? _explicitNullValueResolutionsToDelete = default!;
 #nullable restore
 #else
-        public List<string> ResolutionsToDelete { get; set; }
+        public List<string> ResolutionsToDelete { get => _explicitNullValueResolutionsToDelete; set { _explicitNullValueResolutionsToDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDelete"); else _explicitNullProperties?.Remove("resolutionsToDelete"); } }
+        private List<string> _explicitNullValueResolutionsToDelete = default!;
 #endif
         /// <summary>Resolutions selected for removal from the MP4 fallback set. Populated even when dryRun is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResolutionsToDeleteFromMp4 { get; set; }
+        public List<string>? ResolutionsToDeleteFromMp4 { get => _explicitNullValueResolutionsToDeleteFromMp4; set { _explicitNullValueResolutionsToDeleteFromMp4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDeleteFromMp4"); else _explicitNullProperties?.Remove("resolutionsToDeleteFromMp4"); } }
+        private List<string>? _explicitNullValueResolutionsToDeleteFromMp4 = default!;
 #nullable restore
 #else
-        public List<string> ResolutionsToDeleteFromMp4 { get; set; }
+        public List<string> ResolutionsToDeleteFromMp4 { get => _explicitNullValueResolutionsToDeleteFromMp4; set { _explicitNullValueResolutionsToDeleteFromMp4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDeleteFromMp4"); else _explicitNullProperties?.Remove("resolutionsToDeleteFromMp4"); } }
+        private List<string> _explicitNullValueResolutionsToDeleteFromMp4 = default!;
 #endif
         /// <summary>Resolutions selected for removal from the HLS master playlist. Populated even when dryRun is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResolutionsToDeleteFromPlaylist { get; set; }
+        public List<string>? ResolutionsToDeleteFromPlaylist { get => _explicitNullValueResolutionsToDeleteFromPlaylist; set { _explicitNullValueResolutionsToDeleteFromPlaylist = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDeleteFromPlaylist"); else _explicitNullProperties?.Remove("resolutionsToDeleteFromPlaylist"); } }
+        private List<string>? _explicitNullValueResolutionsToDeleteFromPlaylist = default!;
 #nullable restore
 #else
-        public List<string> ResolutionsToDeleteFromPlaylist { get; set; }
+        public List<string> ResolutionsToDeleteFromPlaylist { get => _explicitNullValueResolutionsToDeleteFromPlaylist; set { _explicitNullValueResolutionsToDeleteFromPlaylist = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDeleteFromPlaylist"); else _explicitNullProperties?.Remove("resolutionsToDeleteFromPlaylist"); } }
+        private List<string> _explicitNullValueResolutionsToDeleteFromPlaylist = default!;
 #endif
         /// <summary>Resolutions selected for removal from object storage. Populated even when dryRun is true or an individual deletion fails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ResolutionsToDeleteFromStorage { get; set; }
+        public List<string>? ResolutionsToDeleteFromStorage { get => _explicitNullValueResolutionsToDeleteFromStorage; set { _explicitNullValueResolutionsToDeleteFromStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDeleteFromStorage"); else _explicitNullProperties?.Remove("resolutionsToDeleteFromStorage"); } }
+        private List<string>? _explicitNullValueResolutionsToDeleteFromStorage = default!;
 #nullable restore
 #else
-        public List<string> ResolutionsToDeleteFromStorage { get; set; }
+        public List<string> ResolutionsToDeleteFromStorage { get => _explicitNullValueResolutionsToDeleteFromStorage; set { _explicitNullValueResolutionsToDeleteFromStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolutionsToDeleteFromStorage"); else _explicitNullProperties?.Remove("resolutionsToDeleteFromStorage"); } }
+        private List<string> _explicitNullValueResolutionsToDeleteFromStorage = default!;
 #endif
         /// <summary>Storage object paths selected for deletion as part of this cleanup. These are candidates, not confirmations: the list is populated even when dryRun is true or when an individual deletion fails — see DeletedStorageObjects for whether at least one deletion actually succeeded.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? StorageObjectsToDelete { get; set; }
+        public List<string>? StorageObjectsToDelete { get => _explicitNullValueStorageObjectsToDelete; set { _explicitNullValueStorageObjectsToDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageObjectsToDelete"); else _explicitNullProperties?.Remove("storageObjectsToDelete"); } }
+        private List<string>? _explicitNullValueStorageObjectsToDelete = default!;
 #nullable restore
 #else
-        public List<string> StorageObjectsToDelete { get; set; }
+        public List<string> StorageObjectsToDelete { get => _explicitNullValueStorageObjectsToDelete; set { _explicitNullValueStorageObjectsToDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageObjectsToDelete"); else _explicitNullProperties?.Remove("storageObjectsToDelete"); } }
+        private List<string> _explicitNullValueStorageObjectsToDelete = default!;
 #endif
         /// <summary>Whether the video&apos;s AvailableResolutions field was rewritten as part of this cleanup.</summary>
-        public bool? UpdatedAvailableResolutions { get; set; }
+        public bool? UpdatedAvailableResolutions { get => _explicitNullValueUpdatedAvailableResolutions; set { _explicitNullValueUpdatedAvailableResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAvailableResolutions"); else _explicitNullProperties?.Remove("updatedAvailableResolutions"); } }
+        private bool? _explicitNullValueUpdatedAvailableResolutions = default!;
         /// <summary>The GUID of the video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoId { get; set; }
+        public string? VideoId { get => _explicitNullValueVideoId; set { _explicitNullValueVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoId"); else _explicitNullProperties?.Remove("videoId"); } }
+        private string? _explicitNullValueVideoId = default!;
 #nullable restore
 #else
-        public string VideoId { get; set; }
+        public string VideoId { get => _explicitNullValueVideoId; set { _explicitNullValueVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoId"); else _explicitNullProperties?.Remove("videoId"); } }
+        private string _explicitNullValueVideoId = default!;
 #endif
         /// <summary>The ID of the video library.</summary>
-        public long? VideoLibraryId { get; set; }
+        public long? VideoLibraryId { get => _explicitNullValueVideoLibraryId; set { _explicitNullValueVideoLibraryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoLibraryId"); else _explicitNullProperties?.Remove("videoLibraryId"); } }
+        private long? _explicitNullValueVideoLibraryId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModelAllOf2Data"/> and sets the default values.
         /// </summary>
@@ -96,7 +134,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModelAllOf2Data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModelAllOf2Data();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfResolutionsCleanupModelAllOf2Data(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -139,6 +177,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("updatedAvailableResolutions", UpdatedAvailableResolutions);
             writer.WriteStringValue("videoId", VideoId);
             writer.WriteLongValue("videoLibraryId", VideoLibraryId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

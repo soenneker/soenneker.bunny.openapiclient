@@ -11,35 +11,53 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StorageZoneSettingsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("Custom404FilePath") is { } nullNodeCustom404FilePath && nullNodeCustom404FilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Custom404FilePath = null;
+            if (parseNode.GetChildNode("OriginUrl") is { } nullNodeOriginUrl && nullNodeOriginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginUrl = null;
+            if (parseNode.GetChildNode("ReplicationZones") is { } nullNodeReplicationZones && nullNodeReplicationZones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationZones = null;
+            if (parseNode.GetChildNode("Rewrite404To200") is { } nullNodeRewrite404To200 && nullNodeRewrite404To200.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rewrite404To200 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The path to the custom file that will be returned in a case of 404</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Custom404FilePath { get; set; }
+        public string? Custom404FilePath { get => _explicitNullValueCustom404FilePath; set { _explicitNullValueCustom404FilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Custom404FilePath"); else _explicitNullProperties?.Remove("Custom404FilePath"); } }
+        private string? _explicitNullValueCustom404FilePath = default!;
 #nullable restore
 #else
-        public string Custom404FilePath { get; set; }
+        public string Custom404FilePath { get => _explicitNullValueCustom404FilePath; set { _explicitNullValueCustom404FilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Custom404FilePath"); else _explicitNullProperties?.Remove("Custom404FilePath"); } }
+        private string _explicitNullValueCustom404FilePath = default!;
 #endif
         /// <summary>The origin URL of the storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginUrl { get; set; }
+        public string? OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        private string? _explicitNullValueOriginUrl = default!;
 #nullable restore
 #else
-        public string OriginUrl { get; set; }
+        public string OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        private string _explicitNullValueOriginUrl = default!;
 #endif
         /// <summary>The list of replication zones enabld for the storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReplicationZones { get; set; }
+        public List<string>? ReplicationZones { get => _explicitNullValueReplicationZones; set { _explicitNullValueReplicationZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationZones"); else _explicitNullProperties?.Remove("ReplicationZones"); } }
+        private List<string>? _explicitNullValueReplicationZones = default!;
 #nullable restore
 #else
-        public List<string> ReplicationZones { get; set; }
+        public List<string> ReplicationZones { get => _explicitNullValueReplicationZones; set { _explicitNullValueReplicationZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationZones"); else _explicitNullProperties?.Remove("ReplicationZones"); } }
+        private List<string> _explicitNullValueReplicationZones = default!;
 #endif
         /// <summary>Rewrite 404 status code to 200 for URLs without extension</summary>
-        public bool? Rewrite404To200 { get; set; }
+        public bool? Rewrite404To200 { get => _explicitNullValueRewrite404To200; set { _explicitNullValueRewrite404To200 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Rewrite404To200"); else _explicitNullProperties?.Remove("Rewrite404To200"); } }
+        private bool? _explicitNullValueRewrite404To200 = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneSettingsModel"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneSettingsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneSettingsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneSettingsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("OriginUrl", OriginUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("ReplicationZones", ReplicationZones);
             writer.WriteBoolValue("Rewrite404To200", Rewrite404To200);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

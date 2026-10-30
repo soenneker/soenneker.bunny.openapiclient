@@ -11,15 +11,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LoadBalancerPricingTierModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("PricePerMillion") is { } nullNodePricePerMillion && nullNodePricePerMillion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerMillion = null;
+            if (parseNode.GetChildNode("ThresholdFromMillions") is { } nullNodeThresholdFromMillions && nullNodeThresholdFromMillions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThresholdFromMillions = null;
+            if (parseNode.GetChildNode("ThresholdToMillions") is { } nullNodeThresholdToMillions && nullNodeThresholdToMillions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThresholdToMillions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The PricePerMillion property</summary>
-        public decimal? PricePerMillion { get; set; }
+        public decimal? PricePerMillion { get => _explicitNullValuePricePerMillion; set { _explicitNullValuePricePerMillion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerMillion"); else _explicitNullProperties?.Remove("PricePerMillion"); } }
+        private decimal? _explicitNullValuePricePerMillion = default!;
         /// <summary>The ThresholdFromMillions property</summary>
-        public long? ThresholdFromMillions { get; set; }
+        public long? ThresholdFromMillions { get => _explicitNullValueThresholdFromMillions; set { _explicitNullValueThresholdFromMillions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThresholdFromMillions"); else _explicitNullProperties?.Remove("ThresholdFromMillions"); } }
+        private long? _explicitNullValueThresholdFromMillions = default!;
         /// <summary>The ThresholdToMillions property</summary>
-        public long? ThresholdToMillions { get; set; }
+        public long? ThresholdToMillions { get => _explicitNullValueThresholdToMillions; set { _explicitNullValueThresholdToMillions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThresholdToMillions"); else _explicitNullProperties?.Remove("ThresholdToMillions"); } }
+        private long? _explicitNullValueThresholdToMillions = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDecimalValue("PricePerMillion", PricePerMillion);
             writer.WriteLongValue("ThresholdFromMillions", ThresholdFromMillions);
             writer.WriteLongValue("ThresholdToMillions", ThresholdToMillions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

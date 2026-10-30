@@ -11,13 +11,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NetworkLimits : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("egressBandwidthLimit") is { } nullNodeEgressBandwidthLimit && nullNodeEgressBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EgressBandwidthLimit = null;
+            if (parseNode.GetChildNode("ingressBandwidthLimit") is { } nullNodeIngressBandwidthLimit && nullNodeIngressBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IngressBandwidthLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The egressBandwidthLimit property</summary>
-        public long? EgressBandwidthLimit { get; set; }
+        public long? EgressBandwidthLimit { get => _explicitNullValueEgressBandwidthLimit; set { _explicitNullValueEgressBandwidthLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("egressBandwidthLimit"); else _explicitNullProperties?.Remove("egressBandwidthLimit"); } }
+        private long? _explicitNullValueEgressBandwidthLimit = default!;
         /// <summary>The ingressBandwidthLimit property</summary>
-        public long? IngressBandwidthLimit { get; set; }
+        public long? IngressBandwidthLimit { get => _explicitNullValueIngressBandwidthLimit; set { _explicitNullValueIngressBandwidthLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ingressBandwidthLimit"); else _explicitNullProperties?.Remove("ingressBandwidthLimit"); } }
+        private long? _explicitNullValueIngressBandwidthLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("egressBandwidthLimit", EgressBandwidthLimit);
             writer.WriteLongValue("ingressBandwidthLimit", IngressBandwidthLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

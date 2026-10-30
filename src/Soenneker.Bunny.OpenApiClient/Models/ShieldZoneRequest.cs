@@ -11,82 +11,136 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ShieldZoneRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dDoSChallengeWindow") is { } nullNodeDDoSChallengeWindow && nullNodeDDoSChallengeWindow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DDoSChallengeWindow = null;
+            if (parseNode.GetChildNode("dDoSShieldSensitivity") is { } nullNodeDDoSShieldSensitivity && nullNodeDDoSShieldSensitivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DDoSShieldSensitivity = null;
+            if (parseNode.GetChildNode("learningMode") is { } nullNodeLearningMode && nullNodeLearningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LearningMode = null;
+            if (parseNode.GetChildNode("learningModeUntil") is { } nullNodeLearningModeUntil && nullNodeLearningModeUntil.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LearningModeUntil = null;
+            if (parseNode.GetChildNode("planType") is { } nullNodePlanType && nullNodePlanType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanType = null;
+            if (parseNode.GetChildNode("premiumPlan") is { } nullNodePremiumPlan && nullNodePremiumPlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PremiumPlan = null;
+            if (parseNode.GetChildNode("requestBodyLoggingEnabled") is { } nullNodeRequestBodyLoggingEnabled && nullNodeRequestBodyLoggingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestBodyLoggingEnabled = null;
+            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+            if (parseNode.GetChildNode("wafCustomRuleOrder") is { } nullNodeWafCustomRuleOrder && nullNodeWafCustomRuleOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafCustomRuleOrder = null;
+            if (parseNode.GetChildNode("wafDisabledRules") is { } nullNodeWafDisabledRules && nullNodeWafDisabledRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafDisabledRules = null;
+            if (parseNode.GetChildNode("wafEnabled") is { } nullNodeWafEnabled && nullNodeWafEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafEnabled = null;
+            if (parseNode.GetChildNode("wafEngineConfig") is { } nullNodeWafEngineConfig && nullNodeWafEngineConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafEngineConfig = null;
+            if (parseNode.GetChildNode("wafExecutionMode") is { } nullNodeWafExecutionMode && nullNodeWafExecutionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafExecutionMode = null;
+            if (parseNode.GetChildNode("wafLogOnlyRules") is { } nullNodeWafLogOnlyRules && nullNodeWafLogOnlyRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafLogOnlyRules = null;
+            if (parseNode.GetChildNode("wafProfileId") is { } nullNodeWafProfileId && nullNodeWafProfileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafProfileId = null;
+            if (parseNode.GetChildNode("wafRealtimeThreatIntelligenceEnabled") is { } nullNodeWafRealtimeThreatIntelligenceEnabled && nullNodeWafRealtimeThreatIntelligenceEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafRealtimeThreatIntelligenceEnabled = null;
+            if (parseNode.GetChildNode("wafRequestBodyLimitAction") is { } nullNodeWafRequestBodyLimitAction && nullNodeWafRequestBodyLimitAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafRequestBodyLimitAction = null;
+            if (parseNode.GetChildNode("wafRequestHeaderLoggingEnabled") is { } nullNodeWafRequestHeaderLoggingEnabled && nullNodeWafRequestHeaderLoggingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafRequestHeaderLoggingEnabled = null;
+            if (parseNode.GetChildNode("wafRequestIgnoredHeaders") is { } nullNodeWafRequestIgnoredHeaders && nullNodeWafRequestIgnoredHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafRequestIgnoredHeaders = null;
+            if (parseNode.GetChildNode("wafResponseBodyLimitAction") is { } nullNodeWafResponseBodyLimitAction && nullNodeWafResponseBodyLimitAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WafResponseBodyLimitAction = null;
+            if (parseNode.GetChildNode("whitelabelResponsePages") is { } nullNodeWhitelabelResponsePages && nullNodeWhitelabelResponsePages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhitelabelResponsePages = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dDoSChallengeWindow property</summary>
-        public int? DDoSChallengeWindow { get; set; }
+        public int? DDoSChallengeWindow { get => _explicitNullValueDDoSChallengeWindow; set { _explicitNullValueDDoSChallengeWindow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dDoSChallengeWindow"); else _explicitNullProperties?.Remove("dDoSChallengeWindow"); } }
+        private int? _explicitNullValueDDoSChallengeWindow = default!;
         /// <summary>0 = Off1 = Low2 = Medium3 = High4 = Challenge5 = ChallengeInteractive</summary>
-        public int? DDoSShieldSensitivity { get; set; }
+        public int? DDoSShieldSensitivity { get => _explicitNullValueDDoSShieldSensitivity; set { _explicitNullValueDDoSShieldSensitivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dDoSShieldSensitivity"); else _explicitNullProperties?.Remove("dDoSShieldSensitivity"); } }
+        private int? _explicitNullValueDDoSShieldSensitivity = default!;
         /// <summary>The learningMode property</summary>
-        public bool? LearningMode { get; set; }
+        public bool? LearningMode { get => _explicitNullValueLearningMode; set { _explicitNullValueLearningMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("learningMode"); else _explicitNullProperties?.Remove("learningMode"); } }
+        private bool? _explicitNullValueLearningMode = default!;
         /// <summary>The learningModeUntil property</summary>
-        public DateTimeOffset? LearningModeUntil { get; set; }
+        public DateTimeOffset? LearningModeUntil { get => _explicitNullValueLearningModeUntil; set { _explicitNullValueLearningModeUntil = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("learningModeUntil"); else _explicitNullProperties?.Remove("learningModeUntil"); } }
+        private DateTimeOffset? _explicitNullValueLearningModeUntil = default!;
         /// <summary>0 = Basic1 = Advanced2 = Business3 = Enterprise</summary>
-        public int? PlanType { get; set; }
+        public int? PlanType { get => _explicitNullValuePlanType; set { _explicitNullValuePlanType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planType"); else _explicitNullProperties?.Remove("planType"); } }
+        private int? _explicitNullValuePlanType = default!;
         /// <summary>The premiumPlan property</summary>
         [Obsolete("")]
-        public bool? PremiumPlan { get; set; }
+        public bool? PremiumPlan { get => _explicitNullValuePremiumPlan; set { _explicitNullValuePremiumPlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("premiumPlan"); else _explicitNullProperties?.Remove("premiumPlan"); } }
+        private bool? _explicitNullValuePremiumPlan = default!;
         /// <summary>The requestBodyLoggingEnabled property</summary>
-        public bool? RequestBodyLoggingEnabled { get; set; }
+        public bool? RequestBodyLoggingEnabled { get => _explicitNullValueRequestBodyLoggingEnabled; set { _explicitNullValueRequestBodyLoggingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestBodyLoggingEnabled"); else _explicitNullProperties?.Remove("requestBodyLoggingEnabled"); } }
+        private bool? _explicitNullValueRequestBodyLoggingEnabled = default!;
         /// <summary>The shieldZoneId property</summary>
-        public long? ShieldZoneId { get; set; }
+        public long? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        private long? _explicitNullValueShieldZoneId = default!;
         /// <summary>The wafCustomRuleOrder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? WafCustomRuleOrder { get; set; }
+        public List<long?>? WafCustomRuleOrder { get => _explicitNullValueWafCustomRuleOrder; set { _explicitNullValueWafCustomRuleOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafCustomRuleOrder"); else _explicitNullProperties?.Remove("wafCustomRuleOrder"); } }
+        private List<long?>? _explicitNullValueWafCustomRuleOrder = default!;
 #nullable restore
 #else
-        public List<long?> WafCustomRuleOrder { get; set; }
+        public List<long?> WafCustomRuleOrder { get => _explicitNullValueWafCustomRuleOrder; set { _explicitNullValueWafCustomRuleOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafCustomRuleOrder"); else _explicitNullProperties?.Remove("wafCustomRuleOrder"); } }
+        private List<long?> _explicitNullValueWafCustomRuleOrder = default!;
 #endif
         /// <summary>The wafDisabledRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WafDisabledRules { get; set; }
+        public List<string>? WafDisabledRules { get => _explicitNullValueWafDisabledRules; set { _explicitNullValueWafDisabledRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafDisabledRules"); else _explicitNullProperties?.Remove("wafDisabledRules"); } }
+        private List<string>? _explicitNullValueWafDisabledRules = default!;
 #nullable restore
 #else
-        public List<string> WafDisabledRules { get; set; }
+        public List<string> WafDisabledRules { get => _explicitNullValueWafDisabledRules; set { _explicitNullValueWafDisabledRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafDisabledRules"); else _explicitNullProperties?.Remove("wafDisabledRules"); } }
+        private List<string> _explicitNullValueWafDisabledRules = default!;
 #endif
         /// <summary>The wafEnabled property</summary>
-        public bool? WafEnabled { get; set; }
+        public bool? WafEnabled { get => _explicitNullValueWafEnabled; set { _explicitNullValueWafEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafEnabled"); else _explicitNullProperties?.Remove("wafEnabled"); } }
+        private bool? _explicitNullValueWafEnabled = default!;
         /// <summary>The wafEngineConfig property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel>? WafEngineConfig { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel>? WafEngineConfig { get => _explicitNullValueWafEngineConfig; set { _explicitNullValueWafEngineConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafEngineConfig"); else _explicitNullProperties?.Remove("wafEngineConfig"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel>? _explicitNullValueWafEngineConfig = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel> WafEngineConfig { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel> WafEngineConfig { get => _explicitNullValueWafEngineConfig; set { _explicitNullValueWafEngineConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafEngineConfig"); else _explicitNullProperties?.Remove("wafEngineConfig"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneWafConfigVariableModel> _explicitNullValueWafEngineConfig = default!;
 #endif
         /// <summary>0 = Log1 = Block</summary>
-        public int? WafExecutionMode { get; set; }
+        public int? WafExecutionMode { get => _explicitNullValueWafExecutionMode; set { _explicitNullValueWafExecutionMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafExecutionMode"); else _explicitNullProperties?.Remove("wafExecutionMode"); } }
+        private int? _explicitNullValueWafExecutionMode = default!;
         /// <summary>The wafLogOnlyRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WafLogOnlyRules { get; set; }
+        public List<string>? WafLogOnlyRules { get => _explicitNullValueWafLogOnlyRules; set { _explicitNullValueWafLogOnlyRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafLogOnlyRules"); else _explicitNullProperties?.Remove("wafLogOnlyRules"); } }
+        private List<string>? _explicitNullValueWafLogOnlyRules = default!;
 #nullable restore
 #else
-        public List<string> WafLogOnlyRules { get; set; }
+        public List<string> WafLogOnlyRules { get => _explicitNullValueWafLogOnlyRules; set { _explicitNullValueWafLogOnlyRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafLogOnlyRules"); else _explicitNullProperties?.Remove("wafLogOnlyRules"); } }
+        private List<string> _explicitNullValueWafLogOnlyRules = default!;
 #endif
         /// <summary>The wafProfileId property</summary>
-        public int? WafProfileId { get; set; }
+        public int? WafProfileId { get => _explicitNullValueWafProfileId; set { _explicitNullValueWafProfileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafProfileId"); else _explicitNullProperties?.Remove("wafProfileId"); } }
+        private int? _explicitNullValueWafProfileId = default!;
         /// <summary>The wafRealtimeThreatIntelligenceEnabled property</summary>
-        public bool? WafRealtimeThreatIntelligenceEnabled { get; set; }
+        public bool? WafRealtimeThreatIntelligenceEnabled { get => _explicitNullValueWafRealtimeThreatIntelligenceEnabled; set { _explicitNullValueWafRealtimeThreatIntelligenceEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafRealtimeThreatIntelligenceEnabled"); else _explicitNullProperties?.Remove("wafRealtimeThreatIntelligenceEnabled"); } }
+        private bool? _explicitNullValueWafRealtimeThreatIntelligenceEnabled = default!;
         /// <summary>0 = Block1 = Log2 = Ignore</summary>
-        public int? WafRequestBodyLimitAction { get; set; }
+        public int? WafRequestBodyLimitAction { get => _explicitNullValueWafRequestBodyLimitAction; set { _explicitNullValueWafRequestBodyLimitAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafRequestBodyLimitAction"); else _explicitNullProperties?.Remove("wafRequestBodyLimitAction"); } }
+        private int? _explicitNullValueWafRequestBodyLimitAction = default!;
         /// <summary>The wafRequestHeaderLoggingEnabled property</summary>
-        public bool? WafRequestHeaderLoggingEnabled { get; set; }
+        public bool? WafRequestHeaderLoggingEnabled { get => _explicitNullValueWafRequestHeaderLoggingEnabled; set { _explicitNullValueWafRequestHeaderLoggingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafRequestHeaderLoggingEnabled"); else _explicitNullProperties?.Remove("wafRequestHeaderLoggingEnabled"); } }
+        private bool? _explicitNullValueWafRequestHeaderLoggingEnabled = default!;
         /// <summary>The wafRequestIgnoredHeaders property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WafRequestIgnoredHeaders { get; set; }
+        public List<string>? WafRequestIgnoredHeaders { get => _explicitNullValueWafRequestIgnoredHeaders; set { _explicitNullValueWafRequestIgnoredHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafRequestIgnoredHeaders"); else _explicitNullProperties?.Remove("wafRequestIgnoredHeaders"); } }
+        private List<string>? _explicitNullValueWafRequestIgnoredHeaders = default!;
 #nullable restore
 #else
-        public List<string> WafRequestIgnoredHeaders { get; set; }
+        public List<string> WafRequestIgnoredHeaders { get => _explicitNullValueWafRequestIgnoredHeaders; set { _explicitNullValueWafRequestIgnoredHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafRequestIgnoredHeaders"); else _explicitNullProperties?.Remove("wafRequestIgnoredHeaders"); } }
+        private List<string> _explicitNullValueWafRequestIgnoredHeaders = default!;
 #endif
         /// <summary>0 = Block1 = Log2 = Ignore</summary>
-        public int? WafResponseBodyLimitAction { get; set; }
+        public int? WafResponseBodyLimitAction { get => _explicitNullValueWafResponseBodyLimitAction; set { _explicitNullValueWafResponseBodyLimitAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wafResponseBodyLimitAction"); else _explicitNullProperties?.Remove("wafResponseBodyLimitAction"); } }
+        private int? _explicitNullValueWafResponseBodyLimitAction = default!;
         /// <summary>The whitelabelResponsePages property</summary>
-        public bool? WhitelabelResponsePages { get; set; }
+        public bool? WhitelabelResponsePages { get => _explicitNullValueWhitelabelResponsePages; set { _explicitNullValueWhitelabelResponsePages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("whitelabelResponsePages"); else _explicitNullProperties?.Remove("whitelabelResponsePages"); } }
+        private bool? _explicitNullValueWhitelabelResponsePages = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest"/> and sets the default values.
         /// </summary>
@@ -102,7 +156,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -163,6 +217,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("wafRequestIgnoredHeaders", WafRequestIgnoredHeaders);
             writer.WriteIntValue("wafResponseBodyLimitAction", WafResponseBodyLimitAction);
             writer.WriteBoolValue("whitelabelResponsePages", WhitelabelResponsePages);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

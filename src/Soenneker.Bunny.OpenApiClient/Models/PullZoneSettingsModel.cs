@@ -11,501 +11,840 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PullZoneSettingsModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("AccessControlOriginHeaderExtensions") is { } nullNodeAccessControlOriginHeaderExtensions && nullNodeAccessControlOriginHeaderExtensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessControlOriginHeaderExtensions = null;
+            if (parseNode.GetChildNode("AddCanonicalHeader") is { } nullNodeAddCanonicalHeader && nullNodeAddCanonicalHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddCanonicalHeader = null;
+            if (parseNode.GetChildNode("AddHostHeader") is { } nullNodeAddHostHeader && nullNodeAddHostHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddHostHeader = null;
+            if (parseNode.GetChildNode("AllowedReferrers") is { } nullNodeAllowedReferrers && nullNodeAllowedReferrers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedReferrers = null;
+            if (parseNode.GetChildNode("AWSSigningEnabled") is { } nullNodeAWSSigningEnabled && nullNodeAWSSigningEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AWSSigningEnabled = null;
+            if (parseNode.GetChildNode("AWSSigningKey") is { } nullNodeAWSSigningKey && nullNodeAWSSigningKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AWSSigningKey = null;
+            if (parseNode.GetChildNode("AWSSigningRegionName") is { } nullNodeAWSSigningRegionName && nullNodeAWSSigningRegionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AWSSigningRegionName = null;
+            if (parseNode.GetChildNode("AWSSigningSecret") is { } nullNodeAWSSigningSecret && nullNodeAWSSigningSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AWSSigningSecret = null;
+            if (parseNode.GetChildNode("BlockedCountries") is { } nullNodeBlockedCountries && nullNodeBlockedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCountries = null;
+            if (parseNode.GetChildNode("BlockedIps") is { } nullNodeBlockedIps && nullNodeBlockedIps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedIps = null;
+            if (parseNode.GetChildNode("BlockedReferrers") is { } nullNodeBlockedReferrers && nullNodeBlockedReferrers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedReferrers = null;
+            if (parseNode.GetChildNode("BlockNoneReferrer") is { } nullNodeBlockNoneReferrer && nullNodeBlockNoneReferrer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockNoneReferrer = null;
+            if (parseNode.GetChildNode("BlockPostRequests") is { } nullNodeBlockPostRequests && nullNodeBlockPostRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockPostRequests = null;
+            if (parseNode.GetChildNode("BlockRootPathAccess") is { } nullNodeBlockRootPathAccess && nullNodeBlockRootPathAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockRootPathAccess = null;
+            if (parseNode.GetChildNode("BudgetRedirectedCountries") is { } nullNodeBudgetRedirectedCountries && nullNodeBudgetRedirectedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BudgetRedirectedCountries = null;
+            if (parseNode.GetChildNode("BunnyAiImageBlueprints") is { } nullNodeBunnyAiImageBlueprints && nullNodeBunnyAiImageBlueprints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BunnyAiImageBlueprints = null;
+            if (parseNode.GetChildNode("BurstSize") is { } nullNodeBurstSize && nullNodeBurstSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BurstSize = null;
+            if (parseNode.GetChildNode("CacheControlBrowserMaxAgeOverride") is { } nullNodeCacheControlBrowserMaxAgeOverride && nullNodeCacheControlBrowserMaxAgeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheControlBrowserMaxAgeOverride = null;
+            if (parseNode.GetChildNode("CacheControlMaxAgeOverride") is { } nullNodeCacheControlMaxAgeOverride && nullNodeCacheControlMaxAgeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheControlMaxAgeOverride = null;
+            if (parseNode.GetChildNode("CacheControlPublicMaxAgeOverride") is { } nullNodeCacheControlPublicMaxAgeOverride && nullNodeCacheControlPublicMaxAgeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheControlPublicMaxAgeOverride = null;
+            if (parseNode.GetChildNode("CacheErrorResponses") is { } nullNodeCacheErrorResponses && nullNodeCacheErrorResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheErrorResponses = null;
+            if (parseNode.GetChildNode("CacheKeyHeaders") is { } nullNodeCacheKeyHeaders && nullNodeCacheKeyHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheKeyHeaders = null;
+            if (parseNode.GetChildNode("ConnectionLimitPerIPCount") is { } nullNodeConnectionLimitPerIPCount && nullNodeConnectionLimitPerIPCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionLimitPerIPCount = null;
+            if (parseNode.GetChildNode("CookieVaryParameters") is { } nullNodeCookieVaryParameters && nullNodeCookieVaryParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CookieVaryParameters = null;
+            if (parseNode.GetChildNode("DisableCookies") is { } nullNodeDisableCookies && nullNodeDisableCookies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableCookies = null;
+            if (parseNode.GetChildNode("DisableLetsEncrypt") is { } nullNodeDisableLetsEncrypt && nullNodeDisableLetsEncrypt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableLetsEncrypt = null;
+            if (parseNode.GetChildNode("DnsOriginPort") is { } nullNodeDnsOriginPort && nullNodeDnsOriginPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DnsOriginPort = null;
+            if (parseNode.GetChildNode("DnsOriginScheme") is { } nullNodeDnsOriginScheme && nullNodeDnsOriginScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DnsOriginScheme = null;
+            if (parseNode.GetChildNode("EdgeScriptExecutionPhase") is { } nullNodeEdgeScriptExecutionPhase && nullNodeEdgeScriptExecutionPhase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EdgeScriptExecutionPhase = null;
+            if (parseNode.GetChildNode("EdgeScriptId") is { } nullNodeEdgeScriptId && nullNodeEdgeScriptId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EdgeScriptId = null;
+            if (parseNode.GetChildNode("EnableAccessControlOriginHeader") is { } nullNodeEnableAccessControlOriginHeader && nullNodeEnableAccessControlOriginHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAccessControlOriginHeader = null;
+            if (parseNode.GetChildNode("EnableAutoSSL") is { } nullNodeEnableAutoSSL && nullNodeEnableAutoSSL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAutoSSL = null;
+            if (parseNode.GetChildNode("EnableAvifVary") is { } nullNodeEnableAvifVary && nullNodeEnableAvifVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableAvifVary = null;
+            if (parseNode.GetChildNode("EnableBunnyImageAi") is { } nullNodeEnableBunnyImageAi && nullNodeEnableBunnyImageAi.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableBunnyImageAi = null;
+            if (parseNode.GetChildNode("EnableCacheSlice") is { } nullNodeEnableCacheSlice && nullNodeEnableCacheSlice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCacheSlice = null;
+            if (parseNode.GetChildNode("EnableCookieVary") is { } nullNodeEnableCookieVary && nullNodeEnableCookieVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCookieVary = null;
+            if (parseNode.GetChildNode("EnableCountryCodeVary") is { } nullNodeEnableCountryCodeVary && nullNodeEnableCountryCodeVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCountryCodeVary = null;
+            if (parseNode.GetChildNode("EnableCountryStateCodeVary") is { } nullNodeEnableCountryStateCodeVary && nullNodeEnableCountryStateCodeVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCountryStateCodeVary = null;
+            if (parseNode.GetChildNode("EnableGeoZoneAF") is { } nullNodeEnableGeoZoneAF && nullNodeEnableGeoZoneAF.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableGeoZoneAF = null;
+            if (parseNode.GetChildNode("EnableGeoZoneASIA") is { } nullNodeEnableGeoZoneASIA && nullNodeEnableGeoZoneASIA.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableGeoZoneASIA = null;
+            if (parseNode.GetChildNode("EnableGeoZoneEU") is { } nullNodeEnableGeoZoneEU && nullNodeEnableGeoZoneEU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableGeoZoneEU = null;
+            if (parseNode.GetChildNode("EnableGeoZoneSA") is { } nullNodeEnableGeoZoneSA && nullNodeEnableGeoZoneSA.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableGeoZoneSA = null;
+            if (parseNode.GetChildNode("EnableGeoZoneUS") is { } nullNodeEnableGeoZoneUS && nullNodeEnableGeoZoneUS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableGeoZoneUS = null;
+            if (parseNode.GetChildNode("EnableHostnameVary") is { } nullNodeEnableHostnameVary && nullNodeEnableHostnameVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableHostnameVary = null;
+            if (parseNode.GetChildNode("EnableLogging") is { } nullNodeEnableLogging && nullNodeEnableLogging.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableLogging = null;
+            if (parseNode.GetChildNode("EnableMobileVary") is { } nullNodeEnableMobileVary && nullNodeEnableMobileVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableMobileVary = null;
+            if (parseNode.GetChildNode("EnableOriginShield") is { } nullNodeEnableOriginShield && nullNodeEnableOriginShield.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableOriginShield = null;
+            if (parseNode.GetChildNode("EnableQueryStringOrdering") is { } nullNodeEnableQueryStringOrdering && nullNodeEnableQueryStringOrdering.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableQueryStringOrdering = null;
+            if (parseNode.GetChildNode("EnableRequestCoalescing") is { } nullNodeEnableRequestCoalescing && nullNodeEnableRequestCoalescing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableRequestCoalescing = null;
+            if (parseNode.GetChildNode("EnableSafeHop") is { } nullNodeEnableSafeHop && nullNodeEnableSafeHop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSafeHop = null;
+            if (parseNode.GetChildNode("EnableSmartCache") is { } nullNodeEnableSmartCache && nullNodeEnableSmartCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSmartCache = null;
+            if (parseNode.GetChildNode("EnableTLS1") is { } nullNodeEnableTLS1 && nullNodeEnableTLS1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTLS1 = null;
+            if (parseNode.GetChildNode("EnableTLS1_1") is { } nullNodeEnableTLS11 && nullNodeEnableTLS11.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableTLS11 = null;
+            if (parseNode.GetChildNode("EnableWebpVary") is { } nullNodeEnableWebpVary && nullNodeEnableWebpVary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableWebpVary = null;
+            if (parseNode.GetChildNode("EnableWebSockets") is { } nullNodeEnableWebSockets && nullNodeEnableWebSockets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableWebSockets = null;
+            if (parseNode.GetChildNode("ErrorPageCustomCode") is { } nullNodeErrorPageCustomCode && nullNodeErrorPageCustomCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPageCustomCode = null;
+            if (parseNode.GetChildNode("ErrorPageEnableCustomCode") is { } nullNodeErrorPageEnableCustomCode && nullNodeErrorPageEnableCustomCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPageEnableCustomCode = null;
+            if (parseNode.GetChildNode("ErrorPageEnableStatuspageWidget") is { } nullNodeErrorPageEnableStatuspageWidget && nullNodeErrorPageEnableStatuspageWidget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPageEnableStatuspageWidget = null;
+            if (parseNode.GetChildNode("ErrorPageStatuspageCode") is { } nullNodeErrorPageStatuspageCode && nullNodeErrorPageStatuspageCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPageStatuspageCode = null;
+            if (parseNode.GetChildNode("ErrorPageWhitelabel") is { } nullNodeErrorPageWhitelabel && nullNodeErrorPageWhitelabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPageWhitelabel = null;
+            if (parseNode.GetChildNode("FollowRedirects") is { } nullNodeFollowRedirects && nullNodeFollowRedirects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowRedirects = null;
+            if (parseNode.GetChildNode("IgnoreQueryStrings") is { } nullNodeIgnoreQueryStrings && nullNodeIgnoreQueryStrings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreQueryStrings = null;
+            if (parseNode.GetChildNode("IpFamilyPolicy") is { } nullNodeIpFamilyPolicy && nullNodeIpFamilyPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpFamilyPolicy = null;
+            if (parseNode.GetChildNode("LimitRateAfter") is { } nullNodeLimitRateAfter && nullNodeLimitRateAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitRateAfter = null;
+            if (parseNode.GetChildNode("LimitRatePerSecond") is { } nullNodeLimitRatePerSecond && nullNodeLimitRatePerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitRatePerSecond = null;
+            if (parseNode.GetChildNode("LoadBalancerId") is { } nullNodeLoadBalancerId && nullNodeLoadBalancerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadBalancerId = null;
+            if (parseNode.GetChildNode("LogAnonymizationType") is { } nullNodeLogAnonymizationType && nullNodeLogAnonymizationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogAnonymizationType = null;
+            if (parseNode.GetChildNode("LogFormat") is { } nullNodeLogFormat && nullNodeLogFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogFormat = null;
+            if (parseNode.GetChildNode("LogForwardingEnabled") is { } nullNodeLogForwardingEnabled && nullNodeLogForwardingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogForwardingEnabled = null;
+            if (parseNode.GetChildNode("LogForwardingFormat") is { } nullNodeLogForwardingFormat && nullNodeLogForwardingFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogForwardingFormat = null;
+            if (parseNode.GetChildNode("LogForwardingHostname") is { } nullNodeLogForwardingHostname && nullNodeLogForwardingHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogForwardingHostname = null;
+            if (parseNode.GetChildNode("LogForwardingPort") is { } nullNodeLogForwardingPort && nullNodeLogForwardingPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogForwardingPort = null;
+            if (parseNode.GetChildNode("LogForwardingProtocol") is { } nullNodeLogForwardingProtocol && nullNodeLogForwardingProtocol.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogForwardingProtocol = null;
+            if (parseNode.GetChildNode("LogForwardingToken") is { } nullNodeLogForwardingToken && nullNodeLogForwardingToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogForwardingToken = null;
+            if (parseNode.GetChildNode("LoggingIPAnonymizationEnabled") is { } nullNodeLoggingIPAnonymizationEnabled && nullNodeLoggingIPAnonymizationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingIPAnonymizationEnabled = null;
+            if (parseNode.GetChildNode("LoggingSaveToStorage") is { } nullNodeLoggingSaveToStorage && nullNodeLoggingSaveToStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingSaveToStorage = null;
+            if (parseNode.GetChildNode("LoggingStorageZoneId") is { } nullNodeLoggingStorageZoneId && nullNodeLoggingStorageZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingStorageZoneId = null;
+            if (parseNode.GetChildNode("MagicContainersAppId") is { } nullNodeMagicContainersAppId && nullNodeMagicContainersAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicContainersAppId = null;
+            if (parseNode.GetChildNode("MagicContainersEndpointId") is { } nullNodeMagicContainersEndpointId && nullNodeMagicContainersEndpointId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MagicContainersEndpointId = null;
+            if (parseNode.GetChildNode("MaxWebSocketConnections") is { } nullNodeMaxWebSocketConnections && nullNodeMaxWebSocketConnections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxWebSocketConnections = null;
+            if (parseNode.GetChildNode("MiddlewareScriptId") is { } nullNodeMiddlewareScriptId && nullNodeMiddlewareScriptId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MiddlewareScriptId = null;
+            if (parseNode.GetChildNode("MonthlyBandwidthLimit") is { } nullNodeMonthlyBandwidthLimit && nullNodeMonthlyBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyBandwidthLimit = null;
+            if (parseNode.GetChildNode("OptimizerAutomaticOptimizationEnabled") is { } nullNodeOptimizerAutomaticOptimizationEnabled && nullNodeOptimizerAutomaticOptimizationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerAutomaticOptimizationEnabled = null;
+            if (parseNode.GetChildNode("OptimizerClasses") is { } nullNodeOptimizerClasses && nullNodeOptimizerClasses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerClasses = null;
+            if (parseNode.GetChildNode("OptimizerDesktopMaxWidth") is { } nullNodeOptimizerDesktopMaxWidth && nullNodeOptimizerDesktopMaxWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerDesktopMaxWidth = null;
+            if (parseNode.GetChildNode("OptimizerEnabled") is { } nullNodeOptimizerEnabled && nullNodeOptimizerEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerEnabled = null;
+            if (parseNode.GetChildNode("OptimizerEnableManipulationEngine") is { } nullNodeOptimizerEnableManipulationEngine && nullNodeOptimizerEnableManipulationEngine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerEnableManipulationEngine = null;
+            if (parseNode.GetChildNode("OptimizerEnableUpscaling") is { } nullNodeOptimizerEnableUpscaling && nullNodeOptimizerEnableUpscaling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerEnableUpscaling = null;
+            if (parseNode.GetChildNode("OptimizerEnableWebP") is { } nullNodeOptimizerEnableWebP && nullNodeOptimizerEnableWebP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerEnableWebP = null;
+            if (parseNode.GetChildNode("OptimizerForceClasses") is { } nullNodeOptimizerForceClasses && nullNodeOptimizerForceClasses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerForceClasses = null;
+            if (parseNode.GetChildNode("OptimizerHtmlToMarkdown") is { } nullNodeOptimizerHtmlToMarkdown && nullNodeOptimizerHtmlToMarkdown.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerHtmlToMarkdown = null;
+            if (parseNode.GetChildNode("OptimizerImageQuality") is { } nullNodeOptimizerImageQuality && nullNodeOptimizerImageQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerImageQuality = null;
+            if (parseNode.GetChildNode("OptimizerLlmsTxt") is { } nullNodeOptimizerLlmsTxt && nullNodeOptimizerLlmsTxt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerLlmsTxt = null;
+            if (parseNode.GetChildNode("OptimizerMinifyCSS") is { } nullNodeOptimizerMinifyCSS && nullNodeOptimizerMinifyCSS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerMinifyCSS = null;
+            if (parseNode.GetChildNode("OptimizerMinifyJavaScript") is { } nullNodeOptimizerMinifyJavaScript && nullNodeOptimizerMinifyJavaScript.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerMinifyJavaScript = null;
+            if (parseNode.GetChildNode("OptimizerMobileImageQuality") is { } nullNodeOptimizerMobileImageQuality && nullNodeOptimizerMobileImageQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerMobileImageQuality = null;
+            if (parseNode.GetChildNode("OptimizerMobileMaxWidth") is { } nullNodeOptimizerMobileMaxWidth && nullNodeOptimizerMobileMaxWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerMobileMaxWidth = null;
+            if (parseNode.GetChildNode("OptimizerPrerenderHtml") is { } nullNodeOptimizerPrerenderHtml && nullNodeOptimizerPrerenderHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerPrerenderHtml = null;
+            if (parseNode.GetChildNode("OptimizerStaticHtmlEnabled") is { } nullNodeOptimizerStaticHtmlEnabled && nullNodeOptimizerStaticHtmlEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerStaticHtmlEnabled = null;
+            if (parseNode.GetChildNode("OptimizerStaticHtmlWordPressBypassCookie") is { } nullNodeOptimizerStaticHtmlWordPressBypassCookie && nullNodeOptimizerStaticHtmlWordPressBypassCookie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerStaticHtmlWordPressBypassCookie = null;
+            if (parseNode.GetChildNode("OptimizerStaticHtmlWordPressPath") is { } nullNodeOptimizerStaticHtmlWordPressPath && nullNodeOptimizerStaticHtmlWordPressPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerStaticHtmlWordPressPath = null;
+            if (parseNode.GetChildNode("OptimizerTunnelActiveProbingEnabled") is { } nullNodeOptimizerTunnelActiveProbingEnabled && nullNodeOptimizerTunnelActiveProbingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerTunnelActiveProbingEnabled = null;
+            if (parseNode.GetChildNode("OptimizerTunnelEnabled") is { } nullNodeOptimizerTunnelEnabled && nullNodeOptimizerTunnelEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerTunnelEnabled = null;
+            if (parseNode.GetChildNode("OptimizerWatermarkEnabled") is { } nullNodeOptimizerWatermarkEnabled && nullNodeOptimizerWatermarkEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerWatermarkEnabled = null;
+            if (parseNode.GetChildNode("OptimizerWatermarkMinImageSize") is { } nullNodeOptimizerWatermarkMinImageSize && nullNodeOptimizerWatermarkMinImageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerWatermarkMinImageSize = null;
+            if (parseNode.GetChildNode("OptimizerWatermarkOffset") is { } nullNodeOptimizerWatermarkOffset && nullNodeOptimizerWatermarkOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerWatermarkOffset = null;
+            if (parseNode.GetChildNode("OptimizerWatermarkPosition") is { } nullNodeOptimizerWatermarkPosition && nullNodeOptimizerWatermarkPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerWatermarkPosition = null;
+            if (parseNode.GetChildNode("OptimizerWatermarkUrl") is { } nullNodeOptimizerWatermarkUrl && nullNodeOptimizerWatermarkUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptimizerWatermarkUrl = null;
+            if (parseNode.GetChildNode("OriginConnectTimeout") is { } nullNodeOriginConnectTimeout && nullNodeOriginConnectTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginConnectTimeout = null;
+            if (parseNode.GetChildNode("OriginHostHeader") is { } nullNodeOriginHostHeader && nullNodeOriginHostHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginHostHeader = null;
+            if (parseNode.GetChildNode("OriginResponseTimeout") is { } nullNodeOriginResponseTimeout && nullNodeOriginResponseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginResponseTimeout = null;
+            if (parseNode.GetChildNode("OriginRetries") is { } nullNodeOriginRetries && nullNodeOriginRetries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRetries = null;
+            if (parseNode.GetChildNode("OriginRetry5XXResponses") is { } nullNodeOriginRetry5XXResponses && nullNodeOriginRetry5XXResponses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRetry5XXResponses = null;
+            if (parseNode.GetChildNode("OriginRetryConnectionTimeout") is { } nullNodeOriginRetryConnectionTimeout && nullNodeOriginRetryConnectionTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRetryConnectionTimeout = null;
+            if (parseNode.GetChildNode("OriginRetryDelay") is { } nullNodeOriginRetryDelay && nullNodeOriginRetryDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRetryDelay = null;
+            if (parseNode.GetChildNode("OriginRetryResponseTimeout") is { } nullNodeOriginRetryResponseTimeout && nullNodeOriginRetryResponseTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginRetryResponseTimeout = null;
+            if (parseNode.GetChildNode("OriginShieldEnableConcurrencyLimit") is { } nullNodeOriginShieldEnableConcurrencyLimit && nullNodeOriginShieldEnableConcurrencyLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginShieldEnableConcurrencyLimit = null;
+            if (parseNode.GetChildNode("OriginShieldMaxConcurrentRequests") is { } nullNodeOriginShieldMaxConcurrentRequests && nullNodeOriginShieldMaxConcurrentRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginShieldMaxConcurrentRequests = null;
+            if (parseNode.GetChildNode("OriginShieldMaxQueuedRequests") is { } nullNodeOriginShieldMaxQueuedRequests && nullNodeOriginShieldMaxQueuedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginShieldMaxQueuedRequests = null;
+            if (parseNode.GetChildNode("OriginShieldQueueMaxWaitTime") is { } nullNodeOriginShieldQueueMaxWaitTime && nullNodeOriginShieldQueueMaxWaitTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginShieldQueueMaxWaitTime = null;
+            if (parseNode.GetChildNode("OriginShieldZoneCode") is { } nullNodeOriginShieldZoneCode && nullNodeOriginShieldZoneCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginShieldZoneCode = null;
+            if (parseNode.GetChildNode("OriginType") is { } nullNodeOriginType && nullNodeOriginType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginType = null;
+            if (parseNode.GetChildNode("OriginUrl") is { } nullNodeOriginUrl && nullNodeOriginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginUrl = null;
+            if (parseNode.GetChildNode("PermaCacheStorageZoneId") is { } nullNodePermaCacheStorageZoneId && nullNodePermaCacheStorageZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermaCacheStorageZoneId = null;
+            if (parseNode.GetChildNode("PermaCacheType") is { } nullNodePermaCacheType && nullNodePermaCacheType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermaCacheType = null;
+            if (parseNode.GetChildNode("PreloadingScreenCode") is { } nullNodePreloadingScreenCode && nullNodePreloadingScreenCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenCode = null;
+            if (parseNode.GetChildNode("PreloadingScreenCodeEnabled") is { } nullNodePreloadingScreenCodeEnabled && nullNodePreloadingScreenCodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenCodeEnabled = null;
+            if (parseNode.GetChildNode("PreloadingScreenDelay") is { } nullNodePreloadingScreenDelay && nullNodePreloadingScreenDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenDelay = null;
+            if (parseNode.GetChildNode("PreloadingScreenEnabled") is { } nullNodePreloadingScreenEnabled && nullNodePreloadingScreenEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenEnabled = null;
+            if (parseNode.GetChildNode("PreloadingScreenLogoUrl") is { } nullNodePreloadingScreenLogoUrl && nullNodePreloadingScreenLogoUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenLogoUrl = null;
+            if (parseNode.GetChildNode("PreloadingScreenShowOnFirstVisit") is { } nullNodePreloadingScreenShowOnFirstVisit && nullNodePreloadingScreenShowOnFirstVisit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenShowOnFirstVisit = null;
+            if (parseNode.GetChildNode("PreloadingScreenTheme") is { } nullNodePreloadingScreenTheme && nullNodePreloadingScreenTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreloadingScreenTheme = null;
+            if (parseNode.GetChildNode("QueryStringVaryParameters") is { } nullNodeQueryStringVaryParameters && nullNodeQueryStringVaryParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryStringVaryParameters = null;
+            if (parseNode.GetChildNode("RequestCoalescingTimeout") is { } nullNodeRequestCoalescingTimeout && nullNodeRequestCoalescingTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestCoalescingTimeout = null;
+            if (parseNode.GetChildNode("RequestLimit") is { } nullNodeRequestLimit && nullNodeRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestLimit = null;
+            if (parseNode.GetChildNode("RoutingFilters") is { } nullNodeRoutingFilters && nullNodeRoutingFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoutingFilters = null;
+            if (parseNode.GetChildNode("ShieldDDosProtectionEnabled") is { } nullNodeShieldDDosProtectionEnabled && nullNodeShieldDDosProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldDDosProtectionEnabled = null;
+            if (parseNode.GetChildNode("ShieldDDosProtectionType") is { } nullNodeShieldDDosProtectionType && nullNodeShieldDDosProtectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldDDosProtectionType = null;
+            if (parseNode.GetChildNode("StickySessionClientHeaders") is { } nullNodeStickySessionClientHeaders && nullNodeStickySessionClientHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessionClientHeaders = null;
+            if (parseNode.GetChildNode("StickySessionCookieName") is { } nullNodeStickySessionCookieName && nullNodeStickySessionCookieName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessionCookieName = null;
+            if (parseNode.GetChildNode("StickySessionType") is { } nullNodeStickySessionType && nullNodeStickySessionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessionType = null;
+            if (parseNode.GetChildNode("StorageZoneId") is { } nullNodeStorageZoneId && nullNodeStorageZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageZoneId = null;
+            if (parseNode.GetChildNode("TlsSecurityLevel") is { } nullNodeTlsSecurityLevel && nullNodeTlsSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TlsSecurityLevel = null;
+            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("UseBackgroundUpdate") is { } nullNodeUseBackgroundUpdate && nullNodeUseBackgroundUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseBackgroundUpdate = null;
+            if (parseNode.GetChildNode("UseStaleWhileOffline") is { } nullNodeUseStaleWhileOffline && nullNodeUseStaleWhileOffline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseStaleWhileOffline = null;
+            if (parseNode.GetChildNode("UseStaleWhileUpdating") is { } nullNodeUseStaleWhileUpdating && nullNodeUseStaleWhileUpdating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseStaleWhileUpdating = null;
+            if (parseNode.GetChildNode("VerifyOriginSSL") is { } nullNodeVerifyOriginSSL && nullNodeVerifyOriginSSL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifyOriginSSL = null;
+            if (parseNode.GetChildNode("ZoneSecurityEnabled") is { } nullNodeZoneSecurityEnabled && nullNodeZoneSecurityEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneSecurityEnabled = null;
+            if (parseNode.GetChildNode("ZoneSecurityIncludeHashRemoteIP") is { } nullNodeZoneSecurityIncludeHashRemoteIP && nullNodeZoneSecurityIncludeHashRemoteIP.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneSecurityIncludeHashRemoteIP = null;
+        }
+
         /// <summary>Sets the list of extensions that will return the CORS headers</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AccessControlOriginHeaderExtensions { get; set; }
+        public List<string>? AccessControlOriginHeaderExtensions { get => _explicitNullValueAccessControlOriginHeaderExtensions; set { _explicitNullValueAccessControlOriginHeaderExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessControlOriginHeaderExtensions"); else _explicitNullProperties?.Remove("AccessControlOriginHeaderExtensions"); } }
+        private List<string>? _explicitNullValueAccessControlOriginHeaderExtensions = default!;
 #nullable restore
 #else
-        public List<string> AccessControlOriginHeaderExtensions { get; set; }
+        public List<string> AccessControlOriginHeaderExtensions { get => _explicitNullValueAccessControlOriginHeaderExtensions; set { _explicitNullValueAccessControlOriginHeaderExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccessControlOriginHeaderExtensions"); else _explicitNullProperties?.Remove("AccessControlOriginHeaderExtensions"); } }
+        private List<string> _explicitNullValueAccessControlOriginHeaderExtensions = default!;
 #endif
         /// <summary>Determines if the canonical header should be added by this zone</summary>
-        public bool? AddCanonicalHeader { get; set; }
+        public bool? AddCanonicalHeader { get => _explicitNullValueAddCanonicalHeader; set { _explicitNullValueAddCanonicalHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddCanonicalHeader"); else _explicitNullProperties?.Remove("AddCanonicalHeader"); } }
+        private bool? _explicitNullValueAddCanonicalHeader = default!;
         /// <summary>Determines if the zone should forward the requested host header to the origin</summary>
-        public bool? AddHostHeader { get; set; }
+        public bool? AddHostHeader { get => _explicitNullValueAddHostHeader; set { _explicitNullValueAddHostHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AddHostHeader"); else _explicitNullProperties?.Remove("AddHostHeader"); } }
+        private bool? _explicitNullValueAddHostHeader = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sets the list of referrer hostnames that are allowed to access the pull zone. Requests containing the header Referer: hostname that is not on the list will be rejected. If empty, all the referrers are allowed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedReferrers { get; set; }
+        public List<string>? AllowedReferrers { get => _explicitNullValueAllowedReferrers; set { _explicitNullValueAllowedReferrers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedReferrers"); else _explicitNullProperties?.Remove("AllowedReferrers"); } }
+        private List<string>? _explicitNullValueAllowedReferrers = default!;
 #nullable restore
 #else
-        public List<string> AllowedReferrers { get; set; }
+        public List<string> AllowedReferrers { get => _explicitNullValueAllowedReferrers; set { _explicitNullValueAllowedReferrers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedReferrers"); else _explicitNullProperties?.Remove("AllowedReferrers"); } }
+        private List<string> _explicitNullValueAllowedReferrers = default!;
 #endif
         /// <summary>Determines if the AWS signing should be enabled or not</summary>
-        public bool? AWSSigningEnabled { get; set; }
+        public bool? AWSSigningEnabled { get => _explicitNullValueAWSSigningEnabled; set { _explicitNullValueAWSSigningEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningEnabled"); else _explicitNullProperties?.Remove("AWSSigningEnabled"); } }
+        private bool? _explicitNullValueAWSSigningEnabled = default!;
         /// <summary>Sets the AWS signing key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AWSSigningKey { get; set; }
+        public string? AWSSigningKey { get => _explicitNullValueAWSSigningKey; set { _explicitNullValueAWSSigningKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningKey"); else _explicitNullProperties?.Remove("AWSSigningKey"); } }
+        private string? _explicitNullValueAWSSigningKey = default!;
 #nullable restore
 #else
-        public string AWSSigningKey { get; set; }
+        public string AWSSigningKey { get => _explicitNullValueAWSSigningKey; set { _explicitNullValueAWSSigningKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningKey"); else _explicitNullProperties?.Remove("AWSSigningKey"); } }
+        private string _explicitNullValueAWSSigningKey = default!;
 #endif
         /// <summary>Sets the AWS signing region name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AWSSigningRegionName { get; set; }
+        public string? AWSSigningRegionName { get => _explicitNullValueAWSSigningRegionName; set { _explicitNullValueAWSSigningRegionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningRegionName"); else _explicitNullProperties?.Remove("AWSSigningRegionName"); } }
+        private string? _explicitNullValueAWSSigningRegionName = default!;
 #nullable restore
 #else
-        public string AWSSigningRegionName { get; set; }
+        public string AWSSigningRegionName { get => _explicitNullValueAWSSigningRegionName; set { _explicitNullValueAWSSigningRegionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningRegionName"); else _explicitNullProperties?.Remove("AWSSigningRegionName"); } }
+        private string _explicitNullValueAWSSigningRegionName = default!;
 #endif
         /// <summary>Sets the AWS signing secret key</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AWSSigningSecret { get; set; }
+        public string? AWSSigningSecret { get => _explicitNullValueAWSSigningSecret; set { _explicitNullValueAWSSigningSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningSecret"); else _explicitNullProperties?.Remove("AWSSigningSecret"); } }
+        private string? _explicitNullValueAWSSigningSecret = default!;
 #nullable restore
 #else
-        public string AWSSigningSecret { get; set; }
+        public string AWSSigningSecret { get => _explicitNullValueAWSSigningSecret; set { _explicitNullValueAWSSigningSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AWSSigningSecret"); else _explicitNullProperties?.Remove("AWSSigningSecret"); } }
+        private string _explicitNullValueAWSSigningSecret = default!;
 #endif
         /// <summary>Sets the list of two letter Alpha2 country codes that will be blocked from accessing the zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BlockedCountries { get; set; }
+        public List<string>? BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
+        private List<string>? _explicitNullValueBlockedCountries = default!;
 #nullable restore
 #else
-        public List<string> BlockedCountries { get; set; }
+        public List<string> BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
+        private List<string> _explicitNullValueBlockedCountries = default!;
 #endif
         /// <summary>Sets the list of IPs that are blocked from accessing the pull zone. Requests coming from the following IPs will be rejected. If empty, all the IPs will be allowed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BlockedIps { get; set; }
+        public List<string>? BlockedIps { get => _explicitNullValueBlockedIps; set { _explicitNullValueBlockedIps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedIps"); else _explicitNullProperties?.Remove("BlockedIps"); } }
+        private List<string>? _explicitNullValueBlockedIps = default!;
 #nullable restore
 #else
-        public List<string> BlockedIps { get; set; }
+        public List<string> BlockedIps { get => _explicitNullValueBlockedIps; set { _explicitNullValueBlockedIps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedIps"); else _explicitNullProperties?.Remove("BlockedIps"); } }
+        private List<string> _explicitNullValueBlockedIps = default!;
 #endif
         /// <summary>Sets the list of referrer hostnames that are blocked from accessing the pull zone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BlockedReferrers { get; set; }
+        public List<string>? BlockedReferrers { get => _explicitNullValueBlockedReferrers; set { _explicitNullValueBlockedReferrers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedReferrers"); else _explicitNullProperties?.Remove("BlockedReferrers"); } }
+        private List<string>? _explicitNullValueBlockedReferrers = default!;
 #nullable restore
 #else
-        public List<string> BlockedReferrers { get; set; }
+        public List<string> BlockedReferrers { get => _explicitNullValueBlockedReferrers; set { _explicitNullValueBlockedReferrers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedReferrers"); else _explicitNullProperties?.Remove("BlockedReferrers"); } }
+        private List<string> _explicitNullValueBlockedReferrers = default!;
 #endif
         /// <summary>The BlockNoneReferrer property</summary>
-        public bool? BlockNoneReferrer { get; set; }
+        public bool? BlockNoneReferrer { get => _explicitNullValueBlockNoneReferrer; set { _explicitNullValueBlockNoneReferrer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockNoneReferrer"); else _explicitNullProperties?.Remove("BlockNoneReferrer"); } }
+        private bool? _explicitNullValueBlockNoneReferrer = default!;
         /// <summary>Determines if the POST requests to this zone should be rejected.</summary>
-        public bool? BlockPostRequests { get; set; }
+        public bool? BlockPostRequests { get => _explicitNullValueBlockPostRequests; set { _explicitNullValueBlockPostRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockPostRequests"); else _explicitNullProperties?.Remove("BlockPostRequests"); } }
+        private bool? _explicitNullValueBlockPostRequests = default!;
         /// <summary>Determines if the zone should block requests to the root of the zone.</summary>
-        public bool? BlockRootPathAccess { get; set; }
+        public bool? BlockRootPathAccess { get => _explicitNullValueBlockRootPathAccess; set { _explicitNullValueBlockRootPathAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockRootPathAccess"); else _explicitNullProperties?.Remove("BlockRootPathAccess"); } }
+        private bool? _explicitNullValueBlockRootPathAccess = default!;
         /// <summary>Sets the list of two letter Alpha2 country codes that will be redirected to the cheapest possible region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BudgetRedirectedCountries { get; set; }
+        public List<string>? BudgetRedirectedCountries { get => _explicitNullValueBudgetRedirectedCountries; set { _explicitNullValueBudgetRedirectedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BudgetRedirectedCountries"); else _explicitNullProperties?.Remove("BudgetRedirectedCountries"); } }
+        private List<string>? _explicitNullValueBudgetRedirectedCountries = default!;
 #nullable restore
 #else
-        public List<string> BudgetRedirectedCountries { get; set; }
+        public List<string> BudgetRedirectedCountries { get => _explicitNullValueBudgetRedirectedCountries; set { _explicitNullValueBudgetRedirectedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BudgetRedirectedCountries"); else _explicitNullProperties?.Remove("BudgetRedirectedCountries"); } }
+        private List<string> _explicitNullValueBudgetRedirectedCountries = default!;
 #endif
         /// <summary>The BunnyAiImageBlueprints property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModel>? BunnyAiImageBlueprints { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModel>? BunnyAiImageBlueprints { get => _explicitNullValueBunnyAiImageBlueprints; set { _explicitNullValueBunnyAiImageBlueprints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BunnyAiImageBlueprints"); else _explicitNullProperties?.Remove("BunnyAiImageBlueprints"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModel>? _explicitNullValueBunnyAiImageBlueprints = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModel> BunnyAiImageBlueprints { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModel> BunnyAiImageBlueprints { get => _explicitNullValueBunnyAiImageBlueprints; set { _explicitNullValueBunnyAiImageBlueprints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BunnyAiImageBlueprints"); else _explicitNullProperties?.Remove("BunnyAiImageBlueprints"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.BunnyAiImageBlueprintModel> _explicitNullValueBunnyAiImageBlueprints = default!;
 #endif
         /// <summary>Determines the maximum burst requests before an IP is blocked</summary>
-        public int? BurstSize { get; set; }
+        public int? BurstSize { get => _explicitNullValueBurstSize; set { _explicitNullValueBurstSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BurstSize"); else _explicitNullProperties?.Remove("BurstSize"); } }
+        private int? _explicitNullValueBurstSize = default!;
         /// <summary>(Deprecated) Sets the browser cache control override setting for this zone</summary>
-        public long? CacheControlBrowserMaxAgeOverride { get; set; }
+        public long? CacheControlBrowserMaxAgeOverride { get => _explicitNullValueCacheControlBrowserMaxAgeOverride; set { _explicitNullValueCacheControlBrowserMaxAgeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheControlBrowserMaxAgeOverride"); else _explicitNullProperties?.Remove("CacheControlBrowserMaxAgeOverride"); } }
+        private long? _explicitNullValueCacheControlBrowserMaxAgeOverride = default!;
         /// <summary>Sets the cache control override setting for this zone</summary>
-        public long? CacheControlMaxAgeOverride { get; set; }
+        public long? CacheControlMaxAgeOverride { get => _explicitNullValueCacheControlMaxAgeOverride; set { _explicitNullValueCacheControlMaxAgeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheControlMaxAgeOverride"); else _explicitNullProperties?.Remove("CacheControlMaxAgeOverride"); } }
+        private long? _explicitNullValueCacheControlMaxAgeOverride = default!;
         /// <summary>Sets the browser cache control override setting for this zone</summary>
-        public long? CacheControlPublicMaxAgeOverride { get; set; }
+        public long? CacheControlPublicMaxAgeOverride { get => _explicitNullValueCacheControlPublicMaxAgeOverride; set { _explicitNullValueCacheControlPublicMaxAgeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheControlPublicMaxAgeOverride"); else _explicitNullProperties?.Remove("CacheControlPublicMaxAgeOverride"); } }
+        private long? _explicitNullValueCacheControlPublicMaxAgeOverride = default!;
         /// <summary>Determines if the cache error responses should be enabled on the zone</summary>
-        public bool? CacheErrorResponses { get; set; }
+        public bool? CacheErrorResponses { get => _explicitNullValueCacheErrorResponses; set { _explicitNullValueCacheErrorResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheErrorResponses"); else _explicitNullProperties?.Remove("CacheErrorResponses"); } }
+        private bool? _explicitNullValueCacheErrorResponses = default!;
         /// <summary>Vary Cache by Request Headers (comma delimited)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CacheKeyHeaders { get; set; }
+        public string? CacheKeyHeaders { get => _explicitNullValueCacheKeyHeaders; set { _explicitNullValueCacheKeyHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheKeyHeaders"); else _explicitNullProperties?.Remove("CacheKeyHeaders"); } }
+        private string? _explicitNullValueCacheKeyHeaders = default!;
 #nullable restore
 #else
-        public string CacheKeyHeaders { get; set; }
+        public string CacheKeyHeaders { get => _explicitNullValueCacheKeyHeaders; set { _explicitNullValueCacheKeyHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheKeyHeaders"); else _explicitNullProperties?.Remove("CacheKeyHeaders"); } }
+        private string _explicitNullValueCacheKeyHeaders = default!;
 #endif
         /// <summary>Determines the maximum number of connections per IP that will be allowed to connect to this Pull Zone</summary>
-        public int? ConnectionLimitPerIPCount { get; set; }
+        public int? ConnectionLimitPerIPCount { get => _explicitNullValueConnectionLimitPerIPCount; set { _explicitNullValueConnectionLimitPerIPCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConnectionLimitPerIPCount"); else _explicitNullProperties?.Remove("ConnectionLimitPerIPCount"); } }
+        private int? _explicitNullValueConnectionLimitPerIPCount = default!;
         /// <summary>Contains the list of vary parameters that will be used for vary cache by cookie string.Only alphanumeric characters, dashes and underscores are allowed (values that contain other characters are ignorred). If empty, cookie vary will not be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CookieVaryParameters { get; set; }
+        public List<string>? CookieVaryParameters { get => _explicitNullValueCookieVaryParameters; set { _explicitNullValueCookieVaryParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CookieVaryParameters"); else _explicitNullProperties?.Remove("CookieVaryParameters"); } }
+        private List<string>? _explicitNullValueCookieVaryParameters = default!;
 #nullable restore
 #else
-        public List<string> CookieVaryParameters { get; set; }
+        public List<string> CookieVaryParameters { get => _explicitNullValueCookieVaryParameters; set { _explicitNullValueCookieVaryParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CookieVaryParameters"); else _explicitNullProperties?.Remove("CookieVaryParameters"); } }
+        private List<string> _explicitNullValueCookieVaryParameters = default!;
 #endif
         /// <summary>Determines if the Pull Zone should automatically remove cookies from the responses</summary>
-        public bool? DisableCookies { get; set; }
+        public bool? DisableCookies { get => _explicitNullValueDisableCookies; set { _explicitNullValueDisableCookies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DisableCookies"); else _explicitNullProperties?.Remove("DisableCookies"); } }
+        private bool? _explicitNullValueDisableCookies = default!;
         /// <summary>If set to true, the built-in let&apos;s encrypt will be disabled and requests are passed to the origin.</summary>
-        public bool? DisableLetsEncrypt { get; set; }
+        public bool? DisableLetsEncrypt { get => _explicitNullValueDisableLetsEncrypt; set { _explicitNullValueDisableLetsEncrypt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DisableLetsEncrypt"); else _explicitNullProperties?.Remove("DisableLetsEncrypt"); } }
+        private bool? _explicitNullValueDisableLetsEncrypt = default!;
         /// <summary>Determines the origin port of the pull zone.</summary>
-        public int? DnsOriginPort { get; set; }
+        public int? DnsOriginPort { get => _explicitNullValueDnsOriginPort; set { _explicitNullValueDnsOriginPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DnsOriginPort"); else _explicitNullProperties?.Remove("DnsOriginPort"); } }
+        private int? _explicitNullValueDnsOriginPort = default!;
         /// <summary>Determines the origin scheme of the pull zone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DnsOriginScheme { get; set; }
+        public string? DnsOriginScheme { get => _explicitNullValueDnsOriginScheme; set { _explicitNullValueDnsOriginScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DnsOriginScheme"); else _explicitNullProperties?.Remove("DnsOriginScheme"); } }
+        private string? _explicitNullValueDnsOriginScheme = default!;
 #nullable restore
 #else
-        public string DnsOriginScheme { get; set; }
+        public string DnsOriginScheme { get => _explicitNullValueDnsOriginScheme; set { _explicitNullValueDnsOriginScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DnsOriginScheme"); else _explicitNullProperties?.Remove("DnsOriginScheme"); } }
+        private string _explicitNullValueDnsOriginScheme = default!;
 #endif
-        /// <summary>The execution phase of the edge script</summary>
-        public int? EdgeScriptExecutionPhase { get; set; }
+        /// <summary>The execution phase of the edge script0 = Cache1 = Load Balancer2 = Pre-Cache</summary>
+        public int? EdgeScriptExecutionPhase { get => _explicitNullValueEdgeScriptExecutionPhase; set { _explicitNullValueEdgeScriptExecutionPhase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EdgeScriptExecutionPhase"); else _explicitNullProperties?.Remove("EdgeScriptExecutionPhase"); } }
+        private int? _explicitNullValueEdgeScriptExecutionPhase = default!;
         /// <summary>The ID of the edge script that will be used as the origin</summary>
-        public long? EdgeScriptId { get; set; }
+        public long? EdgeScriptId { get => _explicitNullValueEdgeScriptId; set { _explicitNullValueEdgeScriptId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EdgeScriptId"); else _explicitNullProperties?.Remove("EdgeScriptId"); } }
+        private long? _explicitNullValueEdgeScriptId = default!;
         /// <summary>Determines if CORS headers should be enabled</summary>
-        public bool? EnableAccessControlOriginHeader { get; set; }
+        public bool? EnableAccessControlOriginHeader { get => _explicitNullValueEnableAccessControlOriginHeader; set { _explicitNullValueEnableAccessControlOriginHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableAccessControlOriginHeader"); else _explicitNullProperties?.Remove("EnableAccessControlOriginHeader"); } }
+        private bool? _explicitNullValueEnableAccessControlOriginHeader = default!;
         /// <summary>If set to true, any hostnames added to this Pull Zone will automatically enable SSL.</summary>
-        public bool? EnableAutoSSL { get; set; }
+        public bool? EnableAutoSSL { get => _explicitNullValueEnableAutoSSL; set { _explicitNullValueEnableAutoSSL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableAutoSSL"); else _explicitNullProperties?.Remove("EnableAutoSSL"); } }
+        private bool? _explicitNullValueEnableAutoSSL = default!;
         /// <summary>Determines if the AVIF Vary feature should be enabled.</summary>
-        public bool? EnableAvifVary { get; set; }
+        public bool? EnableAvifVary { get => _explicitNullValueEnableAvifVary; set { _explicitNullValueEnableAvifVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableAvifVary"); else _explicitNullProperties?.Remove("EnableAvifVary"); } }
+        private bool? _explicitNullValueEnableAvifVary = default!;
         /// <summary>The EnableBunnyImageAi property</summary>
-        public bool? EnableBunnyImageAi { get; set; }
+        public bool? EnableBunnyImageAi { get => _explicitNullValueEnableBunnyImageAi; set { _explicitNullValueEnableBunnyImageAi = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableBunnyImageAi"); else _explicitNullProperties?.Remove("EnableBunnyImageAi"); } }
+        private bool? _explicitNullValueEnableBunnyImageAi = default!;
         /// <summary>Determines if cache slicing (Optimize for video) should be enabled for this zone</summary>
-        public bool? EnableCacheSlice { get; set; }
+        public bool? EnableCacheSlice { get => _explicitNullValueEnableCacheSlice; set { _explicitNullValueEnableCacheSlice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableCacheSlice"); else _explicitNullProperties?.Remove("EnableCacheSlice"); } }
+        private bool? _explicitNullValueEnableCacheSlice = default!;
         /// <summary>Determines if the Cookie Vary feature is enabled.</summary>
-        public bool? EnableCookieVary { get; set; }
+        public bool? EnableCookieVary { get => _explicitNullValueEnableCookieVary; set { _explicitNullValueEnableCookieVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableCookieVary"); else _explicitNullProperties?.Remove("EnableCookieVary"); } }
+        private bool? _explicitNullValueEnableCookieVary = default!;
         /// <summary>Determines if the Country Code Vary feature should be enabled.</summary>
-        public bool? EnableCountryCodeVary { get; set; }
+        public bool? EnableCountryCodeVary { get => _explicitNullValueEnableCountryCodeVary; set { _explicitNullValueEnableCountryCodeVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableCountryCodeVary"); else _explicitNullProperties?.Remove("EnableCountryCodeVary"); } }
+        private bool? _explicitNullValueEnableCountryCodeVary = default!;
         /// <summary>Determines if the Country State Code Vary feature should be enabled.</summary>
-        public bool? EnableCountryStateCodeVary { get; set; }
+        public bool? EnableCountryStateCodeVary { get => _explicitNullValueEnableCountryStateCodeVary; set { _explicitNullValueEnableCountryStateCodeVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableCountryStateCodeVary"); else _explicitNullProperties?.Remove("EnableCountryStateCodeVary"); } }
+        private bool? _explicitNullValueEnableCountryStateCodeVary = default!;
         /// <summary>Determines if the delivery from the Africa region should be enabled for this pull zone</summary>
-        public bool? EnableGeoZoneAF { get; set; }
+        public bool? EnableGeoZoneAF { get => _explicitNullValueEnableGeoZoneAF; set { _explicitNullValueEnableGeoZoneAF = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableGeoZoneAF"); else _explicitNullProperties?.Remove("EnableGeoZoneAF"); } }
+        private bool? _explicitNullValueEnableGeoZoneAF = default!;
         /// <summary>Determines if the delivery from the Asia / Oceania regions should be enabled for this pull zone</summary>
-        public bool? EnableGeoZoneASIA { get; set; }
+        public bool? EnableGeoZoneASIA { get => _explicitNullValueEnableGeoZoneASIA; set { _explicitNullValueEnableGeoZoneASIA = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableGeoZoneASIA"); else _explicitNullProperties?.Remove("EnableGeoZoneASIA"); } }
+        private bool? _explicitNullValueEnableGeoZoneASIA = default!;
         /// <summary>Determines if the delivery from the Europe region should be enabled for this pull zone</summary>
-        public bool? EnableGeoZoneEU { get; set; }
+        public bool? EnableGeoZoneEU { get => _explicitNullValueEnableGeoZoneEU; set { _explicitNullValueEnableGeoZoneEU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableGeoZoneEU"); else _explicitNullProperties?.Remove("EnableGeoZoneEU"); } }
+        private bool? _explicitNullValueEnableGeoZoneEU = default!;
         /// <summary>Determines if the delivery from the South America region should be enabled for this pull zone</summary>
-        public bool? EnableGeoZoneSA { get; set; }
+        public bool? EnableGeoZoneSA { get => _explicitNullValueEnableGeoZoneSA; set { _explicitNullValueEnableGeoZoneSA = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableGeoZoneSA"); else _explicitNullProperties?.Remove("EnableGeoZoneSA"); } }
+        private bool? _explicitNullValueEnableGeoZoneSA = default!;
         /// <summary>Determines if the delivery from the North America region should be enabled for this pull zone</summary>
-        public bool? EnableGeoZoneUS { get; set; }
+        public bool? EnableGeoZoneUS { get => _explicitNullValueEnableGeoZoneUS; set { _explicitNullValueEnableGeoZoneUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableGeoZoneUS"); else _explicitNullProperties?.Remove("EnableGeoZoneUS"); } }
+        private bool? _explicitNullValueEnableGeoZoneUS = default!;
         /// <summary>Determines if the Hostname Vary feature should be enabled.</summary>
-        public bool? EnableHostnameVary { get; set; }
+        public bool? EnableHostnameVary { get => _explicitNullValueEnableHostnameVary; set { _explicitNullValueEnableHostnameVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableHostnameVary"); else _explicitNullProperties?.Remove("EnableHostnameVary"); } }
+        private bool? _explicitNullValueEnableHostnameVary = default!;
         /// <summary>Determines if the logging should be enabled for this zone</summary>
-        public bool? EnableLogging { get; set; }
+        public bool? EnableLogging { get => _explicitNullValueEnableLogging; set { _explicitNullValueEnableLogging = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableLogging"); else _explicitNullProperties?.Remove("EnableLogging"); } }
+        private bool? _explicitNullValueEnableLogging = default!;
         /// <summary>Determines if the Mobile Vary feature is enabled.</summary>
-        public bool? EnableMobileVary { get; set; }
+        public bool? EnableMobileVary { get => _explicitNullValueEnableMobileVary; set { _explicitNullValueEnableMobileVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableMobileVary"); else _explicitNullProperties?.Remove("EnableMobileVary"); } }
+        private bool? _explicitNullValueEnableMobileVary = default!;
         /// <summary>Determines if the origin shield should be enabled</summary>
-        public bool? EnableOriginShield { get; set; }
+        public bool? EnableOriginShield { get => _explicitNullValueEnableOriginShield; set { _explicitNullValueEnableOriginShield = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableOriginShield"); else _explicitNullProperties?.Remove("EnableOriginShield"); } }
+        private bool? _explicitNullValueEnableOriginShield = default!;
         /// <summary>Determines if the query string ordering should be enabled.</summary>
-        public bool? EnableQueryStringOrdering { get; set; }
+        public bool? EnableQueryStringOrdering { get => _explicitNullValueEnableQueryStringOrdering; set { _explicitNullValueEnableQueryStringOrdering = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableQueryStringOrdering"); else _explicitNullProperties?.Remove("EnableQueryStringOrdering"); } }
+        private bool? _explicitNullValueEnableQueryStringOrdering = default!;
         /// <summary>Determines if request coalescing is currently enabled.</summary>
-        public bool? EnableRequestCoalescing { get; set; }
+        public bool? EnableRequestCoalescing { get => _explicitNullValueEnableRequestCoalescing; set { _explicitNullValueEnableRequestCoalescing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableRequestCoalescing"); else _explicitNullProperties?.Remove("EnableRequestCoalescing"); } }
+        private bool? _explicitNullValueEnableRequestCoalescing = default!;
         /// <summary>The EnableSafeHop property</summary>
-        public bool? EnableSafeHop { get; set; }
+        public bool? EnableSafeHop { get => _explicitNullValueEnableSafeHop; set { _explicitNullValueEnableSafeHop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableSafeHop"); else _explicitNullProperties?.Remove("EnableSafeHop"); } }
+        private bool? _explicitNullValueEnableSafeHop = default!;
         /// <summary>The EnableSmartCache property</summary>
-        public bool? EnableSmartCache { get; set; }
+        public bool? EnableSmartCache { get => _explicitNullValueEnableSmartCache; set { _explicitNullValueEnableSmartCache = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableSmartCache"); else _explicitNullProperties?.Remove("EnableSmartCache"); } }
+        private bool? _explicitNullValueEnableSmartCache = default!;
         /// <summary>Determines if the TLS 1 should be enabled on this zone</summary>
-        public bool? EnableTLS1 { get; set; }
+        public bool? EnableTLS1 { get => _explicitNullValueEnableTLS1; set { _explicitNullValueEnableTLS1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTLS1"); else _explicitNullProperties?.Remove("EnableTLS1"); } }
+        private bool? _explicitNullValueEnableTLS1 = default!;
         /// <summary>Determines if the TLS 1.1 should be enabled on this zone</summary>
-        public bool? EnableTLS11 { get; set; }
+        public bool? EnableTLS11 { get => _explicitNullValueEnableTLS11; set { _explicitNullValueEnableTLS11 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableTLS1_1"); else _explicitNullProperties?.Remove("EnableTLS1_1"); } }
+        private bool? _explicitNullValueEnableTLS11 = default!;
         /// <summary>Determines if the WebP Vary feature should be enabled.</summary>
-        public bool? EnableWebpVary { get; set; }
+        public bool? EnableWebpVary { get => _explicitNullValueEnableWebpVary; set { _explicitNullValueEnableWebpVary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableWebpVary"); else _explicitNullProperties?.Remove("EnableWebpVary"); } }
+        private bool? _explicitNullValueEnableWebpVary = default!;
         /// <summary>Determines if WebSocket connections are allowed for this Pull Zone.</summary>
-        public bool? EnableWebSockets { get; set; }
+        public bool? EnableWebSockets { get => _explicitNullValueEnableWebSockets; set { _explicitNullValueEnableWebSockets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EnableWebSockets"); else _explicitNullProperties?.Remove("EnableWebSockets"); } }
+        private bool? _explicitNullValueEnableWebSockets = default!;
         /// <summary>Contains the custom error page code that will be returned</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorPageCustomCode { get; set; }
+        public string? ErrorPageCustomCode { get => _explicitNullValueErrorPageCustomCode; set { _explicitNullValueErrorPageCustomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageCustomCode"); else _explicitNullProperties?.Remove("ErrorPageCustomCode"); } }
+        private string? _explicitNullValueErrorPageCustomCode = default!;
 #nullable restore
 #else
-        public string ErrorPageCustomCode { get; set; }
+        public string ErrorPageCustomCode { get => _explicitNullValueErrorPageCustomCode; set { _explicitNullValueErrorPageCustomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageCustomCode"); else _explicitNullProperties?.Remove("ErrorPageCustomCode"); } }
+        private string _explicitNullValueErrorPageCustomCode = default!;
 #endif
         /// <summary>Determines if custom error page code should be enabled.</summary>
-        public bool? ErrorPageEnableCustomCode { get; set; }
+        public bool? ErrorPageEnableCustomCode { get => _explicitNullValueErrorPageEnableCustomCode; set { _explicitNullValueErrorPageEnableCustomCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageEnableCustomCode"); else _explicitNullProperties?.Remove("ErrorPageEnableCustomCode"); } }
+        private bool? _explicitNullValueErrorPageEnableCustomCode = default!;
         /// <summary>Determines if the statuspage widget should be displayed on the error pages</summary>
-        public bool? ErrorPageEnableStatuspageWidget { get; set; }
+        public bool? ErrorPageEnableStatuspageWidget { get => _explicitNullValueErrorPageEnableStatuspageWidget; set { _explicitNullValueErrorPageEnableStatuspageWidget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageEnableStatuspageWidget"); else _explicitNullProperties?.Remove("ErrorPageEnableStatuspageWidget"); } }
+        private bool? _explicitNullValueErrorPageEnableStatuspageWidget = default!;
         /// <summary>The statuspage code that will be used to build the status widget</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorPageStatuspageCode { get; set; }
+        public string? ErrorPageStatuspageCode { get => _explicitNullValueErrorPageStatuspageCode; set { _explicitNullValueErrorPageStatuspageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageStatuspageCode"); else _explicitNullProperties?.Remove("ErrorPageStatuspageCode"); } }
+        private string? _explicitNullValueErrorPageStatuspageCode = default!;
 #nullable restore
 #else
-        public string ErrorPageStatuspageCode { get; set; }
+        public string ErrorPageStatuspageCode { get => _explicitNullValueErrorPageStatuspageCode; set { _explicitNullValueErrorPageStatuspageCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageStatuspageCode"); else _explicitNullProperties?.Remove("ErrorPageStatuspageCode"); } }
+        private string _explicitNullValueErrorPageStatuspageCode = default!;
 #endif
         /// <summary>Determines if the error pages should be whitelabel or not</summary>
-        public bool? ErrorPageWhitelabel { get; set; }
+        public bool? ErrorPageWhitelabel { get => _explicitNullValueErrorPageWhitelabel; set { _explicitNullValueErrorPageWhitelabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorPageWhitelabel"); else _explicitNullProperties?.Remove("ErrorPageWhitelabel"); } }
+        private bool? _explicitNullValueErrorPageWhitelabel = default!;
         /// <summary>Determines if the zone should follow redirects return by the origin and cache the response</summary>
-        public bool? FollowRedirects { get; set; }
+        public bool? FollowRedirects { get => _explicitNullValueFollowRedirects; set { _explicitNullValueFollowRedirects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FollowRedirects"); else _explicitNullProperties?.Remove("FollowRedirects"); } }
+        private bool? _explicitNullValueFollowRedirects = default!;
         /// <summary>Determines if the Pull Zone should ignore query strings when serving cached objects (Vary by Query String)</summary>
-        public bool? IgnoreQueryStrings { get; set; }
-        /// <summary>Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.</summary>
-        public int? IpFamilyPolicy { get; set; }
+        public bool? IgnoreQueryStrings { get => _explicitNullValueIgnoreQueryStrings; set { _explicitNullValueIgnoreQueryStrings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IgnoreQueryStrings"); else _explicitNullProperties?.Remove("IgnoreQueryStrings"); } }
+        private bool? _explicitNullValueIgnoreQueryStrings = default!;
+        /// <summary>Address-family policy: 0=IPv4Only, 1=DualStack (default, best latency and compatibility), 2=DualStackPreferIPv6, 3=IPv6Only.0 = IPv4 Only1 = Dual Stack2 = Dual Stack (Prefer IPv6)3 = IPv6 Only</summary>
+        public int? IpFamilyPolicy { get => _explicitNullValueIpFamilyPolicy; set { _explicitNullValueIpFamilyPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IpFamilyPolicy"); else _explicitNullProperties?.Remove("IpFamilyPolicy"); } }
+        private int? _explicitNullValueIpFamilyPolicy = default!;
         /// <summary>Determines the amount of traffic transferred before the client is limited</summary>
-        public double? LimitRateAfter { get; set; }
+        public double? LimitRateAfter { get => _explicitNullValueLimitRateAfter; set { _explicitNullValueLimitRateAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LimitRateAfter"); else _explicitNullProperties?.Remove("LimitRateAfter"); } }
+        private double? _explicitNullValueLimitRateAfter = default!;
         /// <summary>Determines the maximum number of requests per second coming from a single IP before it is blocked.</summary>
-        public int? LimitRatePerSecond { get; set; }
+        public int? LimitRatePerSecond { get => _explicitNullValueLimitRatePerSecond; set { _explicitNullValueLimitRatePerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LimitRatePerSecond"); else _explicitNullProperties?.Remove("LimitRatePerSecond"); } }
+        private int? _explicitNullValueLimitRatePerSecond = default!;
         /// <summary>If using a load balancer origin, the ID of the load balancer to use</summary>
-        public long? LoadBalancerId { get; set; }
-        /// <summary>Sets the log anonymization type for this pull zone</summary>
-        public int? LogAnonymizationType { get; set; }
+        public long? LoadBalancerId { get => _explicitNullValueLoadBalancerId; set { _explicitNullValueLoadBalancerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadBalancerId"); else _explicitNullProperties?.Remove("LoadBalancerId"); } }
+        private long? _explicitNullValueLoadBalancerId = default!;
+        /// <summary>Sets the log anonymization type for this pull zone0 = One Digit1 = Drop</summary>
+        public int? LogAnonymizationType { get => _explicitNullValueLogAnonymizationType; set { _explicitNullValueLogAnonymizationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogAnonymizationType"); else _explicitNullProperties?.Remove("LogAnonymizationType"); } }
+        private int? _explicitNullValueLogAnonymizationType = default!;
         /// <summary>0 = Plain1 = JSON</summary>
-        public int? LogFormat { get; set; }
+        public int? LogFormat { get => _explicitNullValueLogFormat; set { _explicitNullValueLogFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogFormat"); else _explicitNullProperties?.Remove("LogFormat"); } }
+        private int? _explicitNullValueLogFormat = default!;
         /// <summary>Sets the log forwarding token for the zone</summary>
-        public bool? LogForwardingEnabled { get; set; }
+        public bool? LogForwardingEnabled { get => _explicitNullValueLogForwardingEnabled; set { _explicitNullValueLogForwardingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingEnabled"); else _explicitNullProperties?.Remove("LogForwardingEnabled"); } }
+        private bool? _explicitNullValueLogForwardingEnabled = default!;
         /// <summary>0 = Plain1 = JSON</summary>
-        public int? LogForwardingFormat { get; set; }
+        public int? LogForwardingFormat { get => _explicitNullValueLogForwardingFormat; set { _explicitNullValueLogForwardingFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingFormat"); else _explicitNullProperties?.Remove("LogForwardingFormat"); } }
+        private int? _explicitNullValueLogForwardingFormat = default!;
         /// <summary>Sets the log forwarding destination hostname for the zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogForwardingHostname { get; set; }
+        public string? LogForwardingHostname { get => _explicitNullValueLogForwardingHostname; set { _explicitNullValueLogForwardingHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingHostname"); else _explicitNullProperties?.Remove("LogForwardingHostname"); } }
+        private string? _explicitNullValueLogForwardingHostname = default!;
 #nullable restore
 #else
-        public string LogForwardingHostname { get; set; }
+        public string LogForwardingHostname { get => _explicitNullValueLogForwardingHostname; set { _explicitNullValueLogForwardingHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingHostname"); else _explicitNullProperties?.Remove("LogForwardingHostname"); } }
+        private string _explicitNullValueLogForwardingHostname = default!;
 #endif
         /// <summary>Sets the log forwarding port for the zone</summary>
-        public int? LogForwardingPort { get; set; }
-        /// <summary>Sets the log forwarding protocol type</summary>
-        public int? LogForwardingProtocol { get; set; }
+        public int? LogForwardingPort { get => _explicitNullValueLogForwardingPort; set { _explicitNullValueLogForwardingPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingPort"); else _explicitNullProperties?.Remove("LogForwardingPort"); } }
+        private int? _explicitNullValueLogForwardingPort = default!;
+        /// <summary>Sets the log forwarding protocol type0 = UDP1 = TCP2 = TCP Encrypted3 = Datadog</summary>
+        public int? LogForwardingProtocol { get => _explicitNullValueLogForwardingProtocol; set { _explicitNullValueLogForwardingProtocol = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingProtocol"); else _explicitNullProperties?.Remove("LogForwardingProtocol"); } }
+        private int? _explicitNullValueLogForwardingProtocol = default!;
         /// <summary>Sets the log forwarding token for the zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LogForwardingToken { get; set; }
+        public string? LogForwardingToken { get => _explicitNullValueLogForwardingToken; set { _explicitNullValueLogForwardingToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingToken"); else _explicitNullProperties?.Remove("LogForwardingToken"); } }
+        private string? _explicitNullValueLogForwardingToken = default!;
 #nullable restore
 #else
-        public string LogForwardingToken { get; set; }
+        public string LogForwardingToken { get => _explicitNullValueLogForwardingToken; set { _explicitNullValueLogForwardingToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogForwardingToken"); else _explicitNullProperties?.Remove("LogForwardingToken"); } }
+        private string _explicitNullValueLogForwardingToken = default!;
 #endif
         /// <summary>Determines if the log anonoymization should be enabled</summary>
-        public bool? LoggingIPAnonymizationEnabled { get; set; }
+        public bool? LoggingIPAnonymizationEnabled { get => _explicitNullValueLoggingIPAnonymizationEnabled; set { _explicitNullValueLoggingIPAnonymizationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingIPAnonymizationEnabled"); else _explicitNullProperties?.Remove("LoggingIPAnonymizationEnabled"); } }
+        private bool? _explicitNullValueLoggingIPAnonymizationEnabled = default!;
         /// <summary>Determines if the logging permanent storage should be enabled</summary>
-        public bool? LoggingSaveToStorage { get; set; }
+        public bool? LoggingSaveToStorage { get => _explicitNullValueLoggingSaveToStorage; set { _explicitNullValueLoggingSaveToStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingSaveToStorage"); else _explicitNullProperties?.Remove("LoggingSaveToStorage"); } }
+        private bool? _explicitNullValueLoggingSaveToStorage = default!;
         /// <summary>Sets the Storage Zone id that should contain the logs from this Pull Zone</summary>
-        public long? LoggingStorageZoneId { get; set; }
+        public long? LoggingStorageZoneId { get => _explicitNullValueLoggingStorageZoneId; set { _explicitNullValueLoggingStorageZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingStorageZoneId"); else _explicitNullProperties?.Remove("LoggingStorageZoneId"); } }
+        private long? _explicitNullValueLoggingStorageZoneId = default!;
         /// <summary>The MagicContainersAppId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MagicContainersAppId { get; set; }
+        public string? MagicContainersAppId { get => _explicitNullValueMagicContainersAppId; set { _explicitNullValueMagicContainersAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MagicContainersAppId"); else _explicitNullProperties?.Remove("MagicContainersAppId"); } }
+        private string? _explicitNullValueMagicContainersAppId = default!;
 #nullable restore
 #else
-        public string MagicContainersAppId { get; set; }
+        public string MagicContainersAppId { get => _explicitNullValueMagicContainersAppId; set { _explicitNullValueMagicContainersAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MagicContainersAppId"); else _explicitNullProperties?.Remove("MagicContainersAppId"); } }
+        private string _explicitNullValueMagicContainersAppId = default!;
 #endif
         /// <summary>The MagicContainersEndpointId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MagicContainersEndpointId { get; set; }
+        public string? MagicContainersEndpointId { get => _explicitNullValueMagicContainersEndpointId; set { _explicitNullValueMagicContainersEndpointId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MagicContainersEndpointId"); else _explicitNullProperties?.Remove("MagicContainersEndpointId"); } }
+        private string? _explicitNullValueMagicContainersEndpointId = default!;
 #nullable restore
 #else
-        public string MagicContainersEndpointId { get; set; }
+        public string MagicContainersEndpointId { get => _explicitNullValueMagicContainersEndpointId; set { _explicitNullValueMagicContainersEndpointId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MagicContainersEndpointId"); else _explicitNullProperties?.Remove("MagicContainersEndpointId"); } }
+        private string _explicitNullValueMagicContainersEndpointId = default!;
 #endif
         /// <summary>The maximum global simultaneous WebSocket connections allowed for this Pull Zone. Allowed tiers: 500, 1,000, 2,500, 5,000, 10,000, 25,000. If you send a non-tier value, the value is rounded up to the next tier. Values over 25,000 are rejected, please contact sales if required.</summary>
-        public int? MaxWebSocketConnections { get; set; }
+        public int? MaxWebSocketConnections { get => _explicitNullValueMaxWebSocketConnections; set { _explicitNullValueMaxWebSocketConnections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MaxWebSocketConnections"); else _explicitNullProperties?.Remove("MaxWebSocketConnections"); } }
+        private int? _explicitNullValueMaxWebSocketConnections = default!;
         /// <summary>The ID of the middleware script</summary>
-        public long? MiddlewareScriptId { get; set; }
+        public long? MiddlewareScriptId { get => _explicitNullValueMiddlewareScriptId; set { _explicitNullValueMiddlewareScriptId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MiddlewareScriptId"); else _explicitNullProperties?.Remove("MiddlewareScriptId"); } }
+        private long? _explicitNullValueMiddlewareScriptId = default!;
         /// <summary>Sets the monthly limit of bandwidth in bytes that the pullzone is allowed to use</summary>
-        public long? MonthlyBandwidthLimit { get; set; }
+        public long? MonthlyBandwidthLimit { get => _explicitNullValueMonthlyBandwidthLimit; set { _explicitNullValueMonthlyBandwidthLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MonthlyBandwidthLimit"); else _explicitNullProperties?.Remove("MonthlyBandwidthLimit"); } }
+        private long? _explicitNullValueMonthlyBandwidthLimit = default!;
         /// <summary>Determines if the automatic image optimization should be enabled</summary>
-        public bool? OptimizerAutomaticOptimizationEnabled { get; set; }
+        public bool? OptimizerAutomaticOptimizationEnabled { get => _explicitNullValueOptimizerAutomaticOptimizationEnabled; set { _explicitNullValueOptimizerAutomaticOptimizationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerAutomaticOptimizationEnabled"); else _explicitNullProperties?.Remove("OptimizerAutomaticOptimizationEnabled"); } }
+        private bool? _explicitNullValueOptimizerAutomaticOptimizationEnabled = default!;
         /// <summary>Determines the list of optimizer classes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel>? OptimizerClasses { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel>? OptimizerClasses { get => _explicitNullValueOptimizerClasses; set { _explicitNullValueOptimizerClasses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerClasses"); else _explicitNullProperties?.Remove("OptimizerClasses"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel>? _explicitNullValueOptimizerClasses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel> OptimizerClasses { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel> OptimizerClasses { get => _explicitNullValueOptimizerClasses; set { _explicitNullValueOptimizerClasses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerClasses"); else _explicitNullProperties?.Remove("OptimizerClasses"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel> _explicitNullValueOptimizerClasses = default!;
 #endif
         /// <summary>Determines the maximum automatic image size for desktop clients</summary>
-        public int? OptimizerDesktopMaxWidth { get; set; }
+        public int? OptimizerDesktopMaxWidth { get => _explicitNullValueOptimizerDesktopMaxWidth; set { _explicitNullValueOptimizerDesktopMaxWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerDesktopMaxWidth"); else _explicitNullProperties?.Remove("OptimizerDesktopMaxWidth"); } }
+        private int? _explicitNullValueOptimizerDesktopMaxWidth = default!;
         /// <summary>Determines if the optimizer should be enabled for this zone</summary>
-        public bool? OptimizerEnabled { get; set; }
+        public bool? OptimizerEnabled { get => _explicitNullValueOptimizerEnabled; set { _explicitNullValueOptimizerEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerEnabled"); else _explicitNullProperties?.Remove("OptimizerEnabled"); } }
+        private bool? _explicitNullValueOptimizerEnabled = default!;
         /// <summary>Determines the image manipulation should be enabled</summary>
-        public bool? OptimizerEnableManipulationEngine { get; set; }
+        public bool? OptimizerEnableManipulationEngine { get => _explicitNullValueOptimizerEnableManipulationEngine; set { _explicitNullValueOptimizerEnableManipulationEngine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerEnableManipulationEngine"); else _explicitNullProperties?.Remove("OptimizerEnableManipulationEngine"); } }
+        private bool? _explicitNullValueOptimizerEnableManipulationEngine = default!;
         /// <summary>Determines if Optimizer is allowed to upscale images</summary>
-        public bool? OptimizerEnableUpscaling { get; set; }
+        public bool? OptimizerEnableUpscaling { get => _explicitNullValueOptimizerEnableUpscaling; set { _explicitNullValueOptimizerEnableUpscaling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerEnableUpscaling"); else _explicitNullProperties?.Remove("OptimizerEnableUpscaling"); } }
+        private bool? _explicitNullValueOptimizerEnableUpscaling = default!;
         /// <summary>Determines if the WebP optimization should be enabled</summary>
-        public bool? OptimizerEnableWebP { get; set; }
+        public bool? OptimizerEnableWebP { get => _explicitNullValueOptimizerEnableWebP; set { _explicitNullValueOptimizerEnableWebP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerEnableWebP"); else _explicitNullProperties?.Remove("OptimizerEnableWebP"); } }
+        private bool? _explicitNullValueOptimizerEnableWebP = default!;
         /// <summary>Determines if the optimizer classes should be forced</summary>
-        public bool? OptimizerForceClasses { get; set; }
-        /// <summary>Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use</summary>
-        public int? OptimizerHtmlToMarkdown { get; set; }
+        public bool? OptimizerForceClasses { get => _explicitNullValueOptimizerForceClasses; set { _explicitNullValueOptimizerForceClasses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerForceClasses"); else _explicitNullProperties?.Remove("OptimizerForceClasses"); } }
+        private bool? _explicitNullValueOptimizerForceClasses = default!;
+        /// <summary>Determines if Markdown automatic generation for AI systems is enabled and which pipeline to use0 = Off1 = Simple2 = Prerendered</summary>
+        public int? OptimizerHtmlToMarkdown { get => _explicitNullValueOptimizerHtmlToMarkdown; set { _explicitNullValueOptimizerHtmlToMarkdown = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerHtmlToMarkdown"); else _explicitNullProperties?.Remove("OptimizerHtmlToMarkdown"); } }
+        private int? _explicitNullValueOptimizerHtmlToMarkdown = default!;
         /// <summary>Determines the image quality for desktop clients</summary>
-        public int? OptimizerImageQuality { get; set; }
+        public int? OptimizerImageQuality { get => _explicitNullValueOptimizerImageQuality; set { _explicitNullValueOptimizerImageQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerImageQuality"); else _explicitNullProperties?.Remove("OptimizerImageQuality"); } }
+        private int? _explicitNullValueOptimizerImageQuality = default!;
         /// <summary>Determines if the llms.txt file should be served when requested</summary>
-        public bool? OptimizerLlmsTxt { get; set; }
+        public bool? OptimizerLlmsTxt { get => _explicitNullValueOptimizerLlmsTxt; set { _explicitNullValueOptimizerLlmsTxt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerLlmsTxt"); else _explicitNullProperties?.Remove("OptimizerLlmsTxt"); } }
+        private bool? _explicitNullValueOptimizerLlmsTxt = default!;
         /// <summary>Determines if the CSS minifcation should be enabled</summary>
-        public bool? OptimizerMinifyCSS { get; set; }
+        public bool? OptimizerMinifyCSS { get => _explicitNullValueOptimizerMinifyCSS; set { _explicitNullValueOptimizerMinifyCSS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerMinifyCSS"); else _explicitNullProperties?.Remove("OptimizerMinifyCSS"); } }
+        private bool? _explicitNullValueOptimizerMinifyCSS = default!;
         /// <summary>Determines if the JavaScript minifcation should be enabled</summary>
-        public bool? OptimizerMinifyJavaScript { get; set; }
+        public bool? OptimizerMinifyJavaScript { get => _explicitNullValueOptimizerMinifyJavaScript; set { _explicitNullValueOptimizerMinifyJavaScript = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerMinifyJavaScript"); else _explicitNullProperties?.Remove("OptimizerMinifyJavaScript"); } }
+        private bool? _explicitNullValueOptimizerMinifyJavaScript = default!;
         /// <summary>Determines the image quality for mobile clients</summary>
-        public int? OptimizerMobileImageQuality { get; set; }
+        public int? OptimizerMobileImageQuality { get => _explicitNullValueOptimizerMobileImageQuality; set { _explicitNullValueOptimizerMobileImageQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerMobileImageQuality"); else _explicitNullProperties?.Remove("OptimizerMobileImageQuality"); } }
+        private int? _explicitNullValueOptimizerMobileImageQuality = default!;
         /// <summary>Determines the maximum automatic image size for mobile clients</summary>
-        public int? OptimizerMobileMaxWidth { get; set; }
+        public int? OptimizerMobileMaxWidth { get => _explicitNullValueOptimizerMobileMaxWidth; set { _explicitNullValueOptimizerMobileMaxWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerMobileMaxWidth"); else _explicitNullProperties?.Remove("OptimizerMobileMaxWidth"); } }
+        private int? _explicitNullValueOptimizerMobileMaxWidth = default!;
         /// <summary>Determines if the SEO HTML prerender should be enabled</summary>
-        public bool? OptimizerPrerenderHtml { get; set; }
+        public bool? OptimizerPrerenderHtml { get => _explicitNullValueOptimizerPrerenderHtml; set { _explicitNullValueOptimizerPrerenderHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerPrerenderHtml"); else _explicitNullProperties?.Remove("OptimizerPrerenderHtml"); } }
+        private bool? _explicitNullValueOptimizerPrerenderHtml = default!;
         /// <summary>Determines whether optimizer static html feature enabled</summary>
-        public bool? OptimizerStaticHtmlEnabled { get; set; }
+        public bool? OptimizerStaticHtmlEnabled { get => _explicitNullValueOptimizerStaticHtmlEnabled; set { _explicitNullValueOptimizerStaticHtmlEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerStaticHtmlEnabled"); else _explicitNullProperties?.Remove("OptimizerStaticHtmlEnabled"); } }
+        private bool? _explicitNullValueOptimizerStaticHtmlEnabled = default!;
         /// <summary>Wordpress cookie which should be bypassed by permacache in edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptimizerStaticHtmlWordPressBypassCookie { get; set; }
+        public string? OptimizerStaticHtmlWordPressBypassCookie { get => _explicitNullValueOptimizerStaticHtmlWordPressBypassCookie; set { _explicitNullValueOptimizerStaticHtmlWordPressBypassCookie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerStaticHtmlWordPressBypassCookie"); else _explicitNullProperties?.Remove("OptimizerStaticHtmlWordPressBypassCookie"); } }
+        private string? _explicitNullValueOptimizerStaticHtmlWordPressBypassCookie = default!;
 #nullable restore
 #else
-        public string OptimizerStaticHtmlWordPressBypassCookie { get; set; }
+        public string OptimizerStaticHtmlWordPressBypassCookie { get => _explicitNullValueOptimizerStaticHtmlWordPressBypassCookie; set { _explicitNullValueOptimizerStaticHtmlWordPressBypassCookie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerStaticHtmlWordPressBypassCookie"); else _explicitNullProperties?.Remove("OptimizerStaticHtmlWordPressBypassCookie"); } }
+        private string _explicitNullValueOptimizerStaticHtmlWordPressBypassCookie = default!;
 #endif
         /// <summary>Wordpress html path which should be bypassed by permacache in edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptimizerStaticHtmlWordPressPath { get; set; }
+        public string? OptimizerStaticHtmlWordPressPath { get => _explicitNullValueOptimizerStaticHtmlWordPressPath; set { _explicitNullValueOptimizerStaticHtmlWordPressPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerStaticHtmlWordPressPath"); else _explicitNullProperties?.Remove("OptimizerStaticHtmlWordPressPath"); } }
+        private string? _explicitNullValueOptimizerStaticHtmlWordPressPath = default!;
 #nullable restore
 #else
-        public string OptimizerStaticHtmlWordPressPath { get; set; }
+        public string OptimizerStaticHtmlWordPressPath { get => _explicitNullValueOptimizerStaticHtmlWordPressPath; set { _explicitNullValueOptimizerStaticHtmlWordPressPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerStaticHtmlWordPressPath"); else _explicitNullProperties?.Remove("OptimizerStaticHtmlWordPressPath"); } }
+        private string _explicitNullValueOptimizerStaticHtmlWordPressPath = default!;
 #endif
         /// <summary>Determines if the optimizer tunnel system active probing should be enabled for this zone</summary>
-        public bool? OptimizerTunnelActiveProbingEnabled { get; set; }
+        public bool? OptimizerTunnelActiveProbingEnabled { get => _explicitNullValueOptimizerTunnelActiveProbingEnabled; set { _explicitNullValueOptimizerTunnelActiveProbingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerTunnelActiveProbingEnabled"); else _explicitNullProperties?.Remove("OptimizerTunnelActiveProbingEnabled"); } }
+        private bool? _explicitNullValueOptimizerTunnelActiveProbingEnabled = default!;
         /// <summary>Determines if the optimizer origin tunnel system should be enabled for this zone</summary>
-        public bool? OptimizerTunnelEnabled { get; set; }
+        public bool? OptimizerTunnelEnabled { get => _explicitNullValueOptimizerTunnelEnabled; set { _explicitNullValueOptimizerTunnelEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerTunnelEnabled"); else _explicitNullProperties?.Remove("OptimizerTunnelEnabled"); } }
+        private bool? _explicitNullValueOptimizerTunnelEnabled = default!;
         /// <summary>Determines if image watermarking should be enabled</summary>
-        public bool? OptimizerWatermarkEnabled { get; set; }
+        public bool? OptimizerWatermarkEnabled { get => _explicitNullValueOptimizerWatermarkEnabled; set { _explicitNullValueOptimizerWatermarkEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerWatermarkEnabled"); else _explicitNullProperties?.Remove("OptimizerWatermarkEnabled"); } }
+        private bool? _explicitNullValueOptimizerWatermarkEnabled = default!;
         /// <summary>Sets the minimum image size to which the watermark will be added</summary>
-        public int? OptimizerWatermarkMinImageSize { get; set; }
+        public int? OptimizerWatermarkMinImageSize { get => _explicitNullValueOptimizerWatermarkMinImageSize; set { _explicitNullValueOptimizerWatermarkMinImageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerWatermarkMinImageSize"); else _explicitNullProperties?.Remove("OptimizerWatermarkMinImageSize"); } }
+        private int? _explicitNullValueOptimizerWatermarkMinImageSize = default!;
         /// <summary>Sets the offset of the watermark image</summary>
-        public double? OptimizerWatermarkOffset { get; set; }
-        /// <summary>Sets the position of the watermark image</summary>
-        public int? OptimizerWatermarkPosition { get; set; }
+        public double? OptimizerWatermarkOffset { get => _explicitNullValueOptimizerWatermarkOffset; set { _explicitNullValueOptimizerWatermarkOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerWatermarkOffset"); else _explicitNullProperties?.Remove("OptimizerWatermarkOffset"); } }
+        private double? _explicitNullValueOptimizerWatermarkOffset = default!;
+        /// <summary>Sets the position of the watermark image0 = Bottom Left1 = Bottom Right2 = Top Left3 = Top Right4 = Center5 = Center Stretch</summary>
+        public int? OptimizerWatermarkPosition { get => _explicitNullValueOptimizerWatermarkPosition; set { _explicitNullValueOptimizerWatermarkPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerWatermarkPosition"); else _explicitNullProperties?.Remove("OptimizerWatermarkPosition"); } }
+        private int? _explicitNullValueOptimizerWatermarkPosition = default!;
         /// <summary>Sets the URL of the watermark image</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptimizerWatermarkUrl { get; set; }
+        public string? OptimizerWatermarkUrl { get => _explicitNullValueOptimizerWatermarkUrl; set { _explicitNullValueOptimizerWatermarkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerWatermarkUrl"); else _explicitNullProperties?.Remove("OptimizerWatermarkUrl"); } }
+        private string? _explicitNullValueOptimizerWatermarkUrl = default!;
 #nullable restore
 #else
-        public string OptimizerWatermarkUrl { get; set; }
+        public string OptimizerWatermarkUrl { get => _explicitNullValueOptimizerWatermarkUrl; set { _explicitNullValueOptimizerWatermarkUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OptimizerWatermarkUrl"); else _explicitNullProperties?.Remove("OptimizerWatermarkUrl"); } }
+        private string _explicitNullValueOptimizerWatermarkUrl = default!;
 #endif
         /// <summary>The amount of seconds to wait when connecting to the origin. Otherwise the request will fail or retry.</summary>
-        public int? OriginConnectTimeout { get; set; }
+        public int? OriginConnectTimeout { get => _explicitNullValueOriginConnectTimeout; set { _explicitNullValueOriginConnectTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginConnectTimeout"); else _explicitNullProperties?.Remove("OriginConnectTimeout"); } }
+        private int? _explicitNullValueOriginConnectTimeout = default!;
         /// <summary>Sets the host header that will be sent to the origin</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginHostHeader { get; set; }
+        public string? OriginHostHeader { get => _explicitNullValueOriginHostHeader; set { _explicitNullValueOriginHostHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginHostHeader"); else _explicitNullProperties?.Remove("OriginHostHeader"); } }
+        private string? _explicitNullValueOriginHostHeader = default!;
 #nullable restore
 #else
-        public string OriginHostHeader { get; set; }
+        public string OriginHostHeader { get => _explicitNullValueOriginHostHeader; set { _explicitNullValueOriginHostHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginHostHeader"); else _explicitNullProperties?.Remove("OriginHostHeader"); } }
+        private string _explicitNullValueOriginHostHeader = default!;
 #endif
         /// <summary>The amount of seconds to wait when waiting for the origin reply. Otherwise the request will fail or retry.</summary>
-        public int? OriginResponseTimeout { get; set; }
+        public int? OriginResponseTimeout { get => _explicitNullValueOriginResponseTimeout; set { _explicitNullValueOriginResponseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginResponseTimeout"); else _explicitNullProperties?.Remove("OriginResponseTimeout"); } }
+        private int? _explicitNullValueOriginResponseTimeout = default!;
         /// <summary>The number of retries to the origin server</summary>
-        public int? OriginRetries { get; set; }
+        public int? OriginRetries { get => _explicitNullValueOriginRetries; set { _explicitNullValueOriginRetries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRetries"); else _explicitNullProperties?.Remove("OriginRetries"); } }
+        private int? _explicitNullValueOriginRetries = default!;
         /// <summary>Determines if we should retry the request in case of a 5XX response.</summary>
-        public bool? OriginRetry5XXResponses { get; set; }
+        public bool? OriginRetry5XXResponses { get => _explicitNullValueOriginRetry5XXResponses; set { _explicitNullValueOriginRetry5XXResponses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRetry5XXResponses"); else _explicitNullProperties?.Remove("OriginRetry5XXResponses"); } }
+        private bool? _explicitNullValueOriginRetry5XXResponses = default!;
         /// <summary>Determines if we should retry the request in case of a connection timeout.</summary>
-        public bool? OriginRetryConnectionTimeout { get; set; }
+        public bool? OriginRetryConnectionTimeout { get => _explicitNullValueOriginRetryConnectionTimeout; set { _explicitNullValueOriginRetryConnectionTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRetryConnectionTimeout"); else _explicitNullProperties?.Remove("OriginRetryConnectionTimeout"); } }
+        private bool? _explicitNullValueOriginRetryConnectionTimeout = default!;
         /// <summary>Determines the amount of time that the CDN should wait before retrying an origin request.</summary>
-        public int? OriginRetryDelay { get; set; }
+        public int? OriginRetryDelay { get => _explicitNullValueOriginRetryDelay; set { _explicitNullValueOriginRetryDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRetryDelay"); else _explicitNullProperties?.Remove("OriginRetryDelay"); } }
+        private int? _explicitNullValueOriginRetryDelay = default!;
         /// <summary>Determines if we should retry the request in case of a response timeout.</summary>
-        public bool? OriginRetryResponseTimeout { get; set; }
+        public bool? OriginRetryResponseTimeout { get => _explicitNullValueOriginRetryResponseTimeout; set { _explicitNullValueOriginRetryResponseTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginRetryResponseTimeout"); else _explicitNullProperties?.Remove("OriginRetryResponseTimeout"); } }
+        private bool? _explicitNullValueOriginRetryResponseTimeout = default!;
         /// <summary>Determines if the origin shield concurrency limit is enabled.</summary>
-        public bool? OriginShieldEnableConcurrencyLimit { get; set; }
+        public bool? OriginShieldEnableConcurrencyLimit { get => _explicitNullValueOriginShieldEnableConcurrencyLimit; set { _explicitNullValueOriginShieldEnableConcurrencyLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldEnableConcurrencyLimit"); else _explicitNullProperties?.Remove("OriginShieldEnableConcurrencyLimit"); } }
+        private bool? _explicitNullValueOriginShieldEnableConcurrencyLimit = default!;
         /// <summary>Determines the number of maximum concurrent requests allowed to the origin.</summary>
-        public int? OriginShieldMaxConcurrentRequests { get; set; }
+        public int? OriginShieldMaxConcurrentRequests { get => _explicitNullValueOriginShieldMaxConcurrentRequests; set { _explicitNullValueOriginShieldMaxConcurrentRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldMaxConcurrentRequests"); else _explicitNullProperties?.Remove("OriginShieldMaxConcurrentRequests"); } }
+        private int? _explicitNullValueOriginShieldMaxConcurrentRequests = default!;
         /// <summary>Determines the max number of origin requests that will remain in the queue</summary>
-        public int? OriginShieldMaxQueuedRequests { get; set; }
+        public int? OriginShieldMaxQueuedRequests { get => _explicitNullValueOriginShieldMaxQueuedRequests; set { _explicitNullValueOriginShieldMaxQueuedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldMaxQueuedRequests"); else _explicitNullProperties?.Remove("OriginShieldMaxQueuedRequests"); } }
+        private int? _explicitNullValueOriginShieldMaxQueuedRequests = default!;
         /// <summary>Determines the max queue wait time</summary>
-        public int? OriginShieldQueueMaxWaitTime { get; set; }
+        public int? OriginShieldQueueMaxWaitTime { get => _explicitNullValueOriginShieldQueueMaxWaitTime; set { _explicitNullValueOriginShieldQueueMaxWaitTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldQueueMaxWaitTime"); else _explicitNullProperties?.Remove("OriginShieldQueueMaxWaitTime"); } }
+        private int? _explicitNullValueOriginShieldQueueMaxWaitTime = default!;
         /// <summary>Determines the zone code where the origin shield should be set up</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginShieldZoneCode { get; set; }
+        public string? OriginShieldZoneCode { get => _explicitNullValueOriginShieldZoneCode; set { _explicitNullValueOriginShieldZoneCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldZoneCode"); else _explicitNullProperties?.Remove("OriginShieldZoneCode"); } }
+        private string? _explicitNullValueOriginShieldZoneCode = default!;
 #nullable restore
 #else
-        public string OriginShieldZoneCode { get; set; }
+        public string OriginShieldZoneCode { get => _explicitNullValueOriginShieldZoneCode; set { _explicitNullValueOriginShieldZoneCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldZoneCode"); else _explicitNullProperties?.Remove("OriginShieldZoneCode"); } }
+        private string _explicitNullValueOriginShieldZoneCode = default!;
 #endif
-        /// <summary>Determine the type of the origin for this Pull Zone</summary>
-        public int? OriginType { get; set; }
+        /// <summary>Determine the type of the origin for this Pull Zone0 = Origin URL1 = DNS Accelerate2 = Storage Zone3 = Load Balancer4 = Edge Script5 = Magic Containers6 = Push Zone</summary>
+        public int? OriginType { get => _explicitNullValueOriginType; set { _explicitNullValueOriginType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginType"); else _explicitNullProperties?.Remove("OriginType"); } }
+        private int? _explicitNullValueOriginType = default!;
         /// <summary>Sets the origin URL of the Pull Zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginUrl { get; set; }
+        public string? OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        private string? _explicitNullValueOriginUrl = default!;
 #nullable restore
 #else
-        public string OriginUrl { get; set; }
+        public string OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        private string _explicitNullValueOriginUrl = default!;
 #endif
         /// <summary>The ID of the storage zone that should be used as the Perma-Cache</summary>
-        public long? PermaCacheStorageZoneId { get; set; }
-        /// <summary>Determines Perma-Cache behavior</summary>
-        public int? PermaCacheType { get; set; }
+        public long? PermaCacheStorageZoneId { get => _explicitNullValuePermaCacheStorageZoneId; set { _explicitNullValuePermaCacheStorageZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PermaCacheStorageZoneId"); else _explicitNullProperties?.Remove("PermaCacheStorageZoneId"); } }
+        private long? _explicitNullValuePermaCacheStorageZoneId = default!;
+        /// <summary>Determines Perma-Cache behavior0 = Automatic1 = Manual</summary>
+        public int? PermaCacheType { get => _explicitNullValuePermaCacheType; set { _explicitNullValuePermaCacheType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PermaCacheType"); else _explicitNullProperties?.Remove("PermaCacheType"); } }
+        private int? _explicitNullValuePermaCacheType = default!;
         /// <summary>The custom preloading screen coed</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreloadingScreenCode { get; set; }
+        public string? PreloadingScreenCode { get => _explicitNullValuePreloadingScreenCode; set { _explicitNullValuePreloadingScreenCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenCode"); else _explicitNullProperties?.Remove("PreloadingScreenCode"); } }
+        private string? _explicitNullValuePreloadingScreenCode = default!;
 #nullable restore
 #else
-        public string PreloadingScreenCode { get; set; }
+        public string PreloadingScreenCode { get => _explicitNullValuePreloadingScreenCode; set { _explicitNullValuePreloadingScreenCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenCode"); else _explicitNullProperties?.Remove("PreloadingScreenCode"); } }
+        private string _explicitNullValuePreloadingScreenCode = default!;
 #endif
         /// <summary>Determines if the custom preloader screen should be enabled</summary>
-        public bool? PreloadingScreenCodeEnabled { get; set; }
+        public bool? PreloadingScreenCodeEnabled { get => _explicitNullValuePreloadingScreenCodeEnabled; set { _explicitNullValuePreloadingScreenCodeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenCodeEnabled"); else _explicitNullProperties?.Remove("PreloadingScreenCodeEnabled"); } }
+        private bool? _explicitNullValuePreloadingScreenCodeEnabled = default!;
         /// <summary>The delay in miliseconds after which the preloading screen will be displayed (0 - 10000ms)</summary>
-        public int? PreloadingScreenDelay { get; set; }
+        public int? PreloadingScreenDelay { get => _explicitNullValuePreloadingScreenDelay; set { _explicitNullValuePreloadingScreenDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenDelay"); else _explicitNullProperties?.Remove("PreloadingScreenDelay"); } }
+        private int? _explicitNullValuePreloadingScreenDelay = default!;
         /// <summary>Determines if the preloading screen is currently enabled</summary>
-        public bool? PreloadingScreenEnabled { get; set; }
+        public bool? PreloadingScreenEnabled { get => _explicitNullValuePreloadingScreenEnabled; set { _explicitNullValuePreloadingScreenEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenEnabled"); else _explicitNullProperties?.Remove("PreloadingScreenEnabled"); } }
+        private bool? _explicitNullValuePreloadingScreenEnabled = default!;
         /// <summary>The preloading screen logo URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreloadingScreenLogoUrl { get; set; }
+        public string? PreloadingScreenLogoUrl { get => _explicitNullValuePreloadingScreenLogoUrl; set { _explicitNullValuePreloadingScreenLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenLogoUrl"); else _explicitNullProperties?.Remove("PreloadingScreenLogoUrl"); } }
+        private string? _explicitNullValuePreloadingScreenLogoUrl = default!;
 #nullable restore
 #else
-        public string PreloadingScreenLogoUrl { get; set; }
+        public string PreloadingScreenLogoUrl { get => _explicitNullValuePreloadingScreenLogoUrl; set { _explicitNullValuePreloadingScreenLogoUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenLogoUrl"); else _explicitNullProperties?.Remove("PreloadingScreenLogoUrl"); } }
+        private string _explicitNullValuePreloadingScreenLogoUrl = default!;
 #endif
         /// <summary>Determines if the preloading screen is shown on the first load from a user.</summary>
-        public bool? PreloadingScreenShowOnFirstVisit { get; set; }
-        /// <summary>The currently configured preloading screem theme. (0 - Light, 1 - Dark)</summary>
-        public int? PreloadingScreenTheme { get; set; }
+        public bool? PreloadingScreenShowOnFirstVisit { get => _explicitNullValuePreloadingScreenShowOnFirstVisit; set { _explicitNullValuePreloadingScreenShowOnFirstVisit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenShowOnFirstVisit"); else _explicitNullProperties?.Remove("PreloadingScreenShowOnFirstVisit"); } }
+        private bool? _explicitNullValuePreloadingScreenShowOnFirstVisit = default!;
+        /// <summary>The currently configured preloading screem theme. (0 - Light, 1 - Dark)0 = Light1 = Dark</summary>
+        public int? PreloadingScreenTheme { get => _explicitNullValuePreloadingScreenTheme; set { _explicitNullValuePreloadingScreenTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PreloadingScreenTheme"); else _explicitNullProperties?.Remove("PreloadingScreenTheme"); } }
+        private int? _explicitNullValuePreloadingScreenTheme = default!;
         /// <summary>Contains the list of vary parameters that will be used for vary cache by query string. Only alphanumeric characters, dashes and underscores are allowed (values that contain other characters are ignorred). If empty, all parameters will be used to construct the key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? QueryStringVaryParameters { get; set; }
+        public List<string>? QueryStringVaryParameters { get => _explicitNullValueQueryStringVaryParameters; set { _explicitNullValueQueryStringVaryParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueryStringVaryParameters"); else _explicitNullProperties?.Remove("QueryStringVaryParameters"); } }
+        private List<string>? _explicitNullValueQueryStringVaryParameters = default!;
 #nullable restore
 #else
-        public List<string> QueryStringVaryParameters { get; set; }
+        public List<string> QueryStringVaryParameters { get => _explicitNullValueQueryStringVaryParameters; set { _explicitNullValueQueryStringVaryParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueryStringVaryParameters"); else _explicitNullProperties?.Remove("QueryStringVaryParameters"); } }
+        private List<string> _explicitNullValueQueryStringVaryParameters = default!;
 #endif
         /// <summary>Determines the lock time for coalesced requests.</summary>
-        public int? RequestCoalescingTimeout { get; set; }
+        public int? RequestCoalescingTimeout { get => _explicitNullValueRequestCoalescingTimeout; set { _explicitNullValueRequestCoalescingTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestCoalescingTimeout"); else _explicitNullProperties?.Remove("RequestCoalescingTimeout"); } }
+        private int? _explicitNullValueRequestCoalescingTimeout = default!;
         /// <summary>Determines the maximum number of requests per second that will be allowed to connect to this Pull Zone</summary>
-        public int? RequestLimit { get; set; }
+        public int? RequestLimit { get => _explicitNullValueRequestLimit; set { _explicitNullValueRequestLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestLimit"); else _explicitNullProperties?.Remove("RequestLimit"); } }
+        private int? _explicitNullValueRequestLimit = default!;
         /// <summary>The list of routing filters enabled for this zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RoutingFilters { get; set; }
+        public List<string>? RoutingFilters { get => _explicitNullValueRoutingFilters; set { _explicitNullValueRoutingFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingFilters"); else _explicitNullProperties?.Remove("RoutingFilters"); } }
+        private List<string>? _explicitNullValueRoutingFilters = default!;
 #nullable restore
 #else
-        public List<string> RoutingFilters { get; set; }
+        public List<string> RoutingFilters { get => _explicitNullValueRoutingFilters; set { _explicitNullValueRoutingFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RoutingFilters"); else _explicitNullProperties?.Remove("RoutingFilters"); } }
+        private List<string> _explicitNullValueRoutingFilters = default!;
 #endif
         /// <summary>The ShieldDDosProtectionEnabled property</summary>
-        public bool? ShieldDDosProtectionEnabled { get; set; }
-        /// <summary>0 = DetectOnly1 = ActiveStandard2 = ActiveAggressive</summary>
-        public int? ShieldDDosProtectionType { get; set; }
+        public bool? ShieldDDosProtectionEnabled { get => _explicitNullValueShieldDDosProtectionEnabled; set { _explicitNullValueShieldDDosProtectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShieldDDosProtectionEnabled"); else _explicitNullProperties?.Remove("ShieldDDosProtectionEnabled"); } }
+        private bool? _explicitNullValueShieldDDosProtectionEnabled = default!;
+        /// <summary>0 = Detect Only1 = Active Standard2 = Active Aggressive</summary>
+        public int? ShieldDDosProtectionType { get => _explicitNullValueShieldDDosProtectionType; set { _explicitNullValueShieldDDosProtectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ShieldDDosProtectionType"); else _explicitNullProperties?.Remove("ShieldDDosProtectionType"); } }
+        private int? _explicitNullValueShieldDDosProtectionType = default!;
         /// <summary>A set of comma-separated header names used to identify clients</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StickySessionClientHeaders { get; set; }
+        public string? StickySessionClientHeaders { get => _explicitNullValueStickySessionClientHeaders; set { _explicitNullValueStickySessionClientHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionClientHeaders"); else _explicitNullProperties?.Remove("StickySessionClientHeaders"); } }
+        private string? _explicitNullValueStickySessionClientHeaders = default!;
 #nullable restore
 #else
-        public string StickySessionClientHeaders { get; set; }
+        public string StickySessionClientHeaders { get => _explicitNullValueStickySessionClientHeaders; set { _explicitNullValueStickySessionClientHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionClientHeaders"); else _explicitNullProperties?.Remove("StickySessionClientHeaders"); } }
+        private string _explicitNullValueStickySessionClientHeaders = default!;
 #endif
         /// <summary>Sticky Session Cookie Name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StickySessionCookieName { get; set; }
+        public string? StickySessionCookieName { get => _explicitNullValueStickySessionCookieName; set { _explicitNullValueStickySessionCookieName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionCookieName"); else _explicitNullProperties?.Remove("StickySessionCookieName"); } }
+        private string? _explicitNullValueStickySessionCookieName = default!;
 #nullable restore
 #else
-        public string StickySessionCookieName { get; set; }
+        public string StickySessionCookieName { get => _explicitNullValueStickySessionCookieName; set { _explicitNullValueStickySessionCookieName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionCookieName"); else _explicitNullProperties?.Remove("StickySessionCookieName"); } }
+        private string _explicitNullValueStickySessionCookieName = default!;
 #endif
-        /// <summary>Whether to use a Sticky Session mechanism for this pull zone</summary>
-        public int? StickySessionType { get; set; }
+        /// <summary>Whether to use a Sticky Session mechanism for this pull zone0 = Off1 = On</summary>
+        public int? StickySessionType { get => _explicitNullValueStickySessionType; set { _explicitNullValueStickySessionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionType"); else _explicitNullProperties?.Remove("StickySessionType"); } }
+        private int? _explicitNullValueStickySessionType = default!;
         /// <summary>The ID of the storage zone that will be used as the origin</summary>
-        public long? StorageZoneId { get; set; }
-        /// <summary>The minimum TLS security level enforced on this zone</summary>
-        public int? TlsSecurityLevel { get; set; }
-        /// <summary>The type of the pull zone</summary>
-        public int? Type { get; set; }
+        public long? StorageZoneId { get => _explicitNullValueStorageZoneId; set { _explicitNullValueStorageZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageZoneId"); else _explicitNullProperties?.Remove("StorageZoneId"); } }
+        private long? _explicitNullValueStorageZoneId = default!;
+        /// <summary>The minimum TLS security level enforced on this zone0 = Legacy1 = Compatible2 = Modern Only</summary>
+        public int? TlsSecurityLevel { get => _explicitNullValueTlsSecurityLevel; set { _explicitNullValueTlsSecurityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TlsSecurityLevel"); else _explicitNullProperties?.Remove("TlsSecurityLevel"); } }
+        private int? _explicitNullValueTlsSecurityLevel = default!;
+        /// <summary>The type of the pull zone0 = Premium1 = Volume</summary>
+        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        private int? _explicitNullValueType = default!;
         /// <summary>Determines if cache update is performed in the background.</summary>
-        public bool? UseBackgroundUpdate { get; set; }
+        public bool? UseBackgroundUpdate { get => _explicitNullValueUseBackgroundUpdate; set { _explicitNullValueUseBackgroundUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UseBackgroundUpdate"); else _explicitNullProperties?.Remove("UseBackgroundUpdate"); } }
+        private bool? _explicitNullValueUseBackgroundUpdate = default!;
         /// <summary>Determines if we should use stale cache while the origin is offline</summary>
-        public bool? UseStaleWhileOffline { get; set; }
+        public bool? UseStaleWhileOffline { get => _explicitNullValueUseStaleWhileOffline; set { _explicitNullValueUseStaleWhileOffline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UseStaleWhileOffline"); else _explicitNullProperties?.Remove("UseStaleWhileOffline"); } }
+        private bool? _explicitNullValueUseStaleWhileOffline = default!;
         /// <summary>Determines if we should use stale cache while cache is updating</summary>
-        public bool? UseStaleWhileUpdating { get; set; }
+        public bool? UseStaleWhileUpdating { get => _explicitNullValueUseStaleWhileUpdating; set { _explicitNullValueUseStaleWhileUpdating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UseStaleWhileUpdating"); else _explicitNullProperties?.Remove("UseStaleWhileUpdating"); } }
+        private bool? _explicitNullValueUseStaleWhileUpdating = default!;
         /// <summary>Determines if the SSL certificate should be verified when connecting to the origin</summary>
-        public bool? VerifyOriginSSL { get; set; }
+        public bool? VerifyOriginSSL { get => _explicitNullValueVerifyOriginSSL; set { _explicitNullValueVerifyOriginSSL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("VerifyOriginSSL"); else _explicitNullProperties?.Remove("VerifyOriginSSL"); } }
+        private bool? _explicitNullValueVerifyOriginSSL = default!;
         /// <summary>Determines if the zone token authentication security should be enabled</summary>
-        public bool? ZoneSecurityEnabled { get; set; }
+        public bool? ZoneSecurityEnabled { get => _explicitNullValueZoneSecurityEnabled; set { _explicitNullValueZoneSecurityEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneSecurityEnabled"); else _explicitNullProperties?.Remove("ZoneSecurityEnabled"); } }
+        private bool? _explicitNullValueZoneSecurityEnabled = default!;
         /// <summary>Determines if the token authentication IP validation should be enabled</summary>
-        public bool? ZoneSecurityIncludeHashRemoteIP { get; set; }
+        public bool? ZoneSecurityIncludeHashRemoteIP { get => _explicitNullValueZoneSecurityIncludeHashRemoteIP; set { _explicitNullValueZoneSecurityIncludeHashRemoteIP = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneSecurityIncludeHashRemoteIP"); else _explicitNullProperties?.Remove("ZoneSecurityIncludeHashRemoteIP"); } }
+        private bool? _explicitNullValueZoneSecurityIncludeHashRemoteIP = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModel"/> and sets the default values.
         /// </summary>
@@ -521,7 +860,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.PullZoneSettingsModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -840,6 +1179,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteBoolValue("VerifyOriginSSL", VerifyOriginSSL);
             writer.WriteBoolValue("ZoneSecurityEnabled", ZoneSecurityEnabled);
             writer.WriteBoolValue("ZoneSecurityIncludeHashRemoteIP", ZoneSecurityIncludeHashRemoteIP);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,15 +11,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DnsZoneImportResultModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("RecordsFailed") is { } nullNodeRecordsFailed && nullNodeRecordsFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsFailed = null;
+            if (parseNode.GetChildNode("RecordsSkipped") is { } nullNodeRecordsSkipped && nullNodeRecordsSkipped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsSkipped = null;
+            if (parseNode.GetChildNode("RecordsSuccessful") is { } nullNodeRecordsSuccessful && nullNodeRecordsSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsSuccessful = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The RecordsFailed property</summary>
-        public int? RecordsFailed { get; set; }
+        public int? RecordsFailed { get => _explicitNullValueRecordsFailed; set { _explicitNullValueRecordsFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsFailed"); else _explicitNullProperties?.Remove("RecordsFailed"); } }
+        private int? _explicitNullValueRecordsFailed = default!;
         /// <summary>The RecordsSkipped property</summary>
-        public int? RecordsSkipped { get; set; }
+        public int? RecordsSkipped { get => _explicitNullValueRecordsSkipped; set { _explicitNullValueRecordsSkipped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsSkipped"); else _explicitNullProperties?.Remove("RecordsSkipped"); } }
+        private int? _explicitNullValueRecordsSkipped = default!;
         /// <summary>The RecordsSuccessful property</summary>
-        public int? RecordsSuccessful { get; set; }
+        public int? RecordsSuccessful { get => _explicitNullValueRecordsSuccessful; set { _explicitNullValueRecordsSuccessful = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsSuccessful"); else _explicitNullProperties?.Remove("RecordsSuccessful"); } }
+        private int? _explicitNullValueRecordsSuccessful = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneImportResultModel"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneImportResultModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneImportResultModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneImportResultModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("RecordsFailed", RecordsFailed);
             writer.WriteIntValue("RecordsSkipped", RecordsSkipped);
             writer.WriteIntValue("RecordsSuccessful", RecordsSuccessful);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

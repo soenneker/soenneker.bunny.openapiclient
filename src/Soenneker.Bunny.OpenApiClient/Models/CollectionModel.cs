@@ -11,49 +11,76 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CollectionModel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("guid") is { } nullNodeGuid && nullNodeGuid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Guid = null;
+            if (parseNode.GetChildNode("liveStreamCount") is { } nullNodeLiveStreamCount && nullNodeLiveStreamCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LiveStreamCount = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("previewImageUrls") is { } nullNodePreviewImageUrls && nullNodePreviewImageUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewImageUrls = null;
+            if (parseNode.GetChildNode("previewVideoIds") is { } nullNodePreviewVideoIds && nullNodePreviewVideoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewVideoIds = null;
+            if (parseNode.GetChildNode("totalSize") is { } nullNodeTotalSize && nullNodeTotalSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalSize = null;
+            if (parseNode.GetChildNode("videoCount") is { } nullNodeVideoCount && nullNodeVideoCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoCount = null;
+            if (parseNode.GetChildNode("videoLibraryId") is { } nullNodeVideoLibraryId && nullNodeVideoLibraryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoLibraryId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique ID of the collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Guid { get; set; }
+        public string? Guid { get => _explicitNullValueGuid; set { _explicitNullValueGuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guid"); else _explicitNullProperties?.Remove("guid"); } }
+        private string? _explicitNullValueGuid = default!;
 #nullable restore
 #else
-        public string Guid { get; set; }
+        public string Guid { get => _explicitNullValueGuid; set { _explicitNullValueGuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("guid"); else _explicitNullProperties?.Remove("guid"); } }
+        private string _explicitNullValueGuid = default!;
 #endif
         /// <summary>The number of live streams in the collection. On-demand videos are not included in this count.</summary>
-        public long? LiveStreamCount { get; set; }
+        public long? LiveStreamCount { get => _explicitNullValueLiveStreamCount; set { _explicitNullValueLiveStreamCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liveStreamCount"); else _explicitNullProperties?.Remove("liveStreamCount"); } }
+        private long? _explicitNullValueLiveStreamCount = default!;
         /// <summary>The name of the collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The URLs of preview images of videos in the collection</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PreviewImageUrls { get; set; }
+        public List<string>? PreviewImageUrls { get => _explicitNullValuePreviewImageUrls; set { _explicitNullValuePreviewImageUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewImageUrls"); else _explicitNullProperties?.Remove("previewImageUrls"); } }
+        private List<string>? _explicitNullValuePreviewImageUrls = default!;
 #nullable restore
 #else
-        public List<string> PreviewImageUrls { get; set; }
+        public List<string> PreviewImageUrls { get => _explicitNullValuePreviewImageUrls; set { _explicitNullValuePreviewImageUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewImageUrls"); else _explicitNullProperties?.Remove("previewImageUrls"); } }
+        private List<string> _explicitNullValuePreviewImageUrls = default!;
 #endif
         /// <summary>Comma-separated list of video GUIDs used as preview thumbnails for the collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviewVideoIds { get; set; }
+        public string? PreviewVideoIds { get => _explicitNullValuePreviewVideoIds; set { _explicitNullValuePreviewVideoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewVideoIds"); else _explicitNullProperties?.Remove("previewVideoIds"); } }
+        private string? _explicitNullValuePreviewVideoIds = default!;
 #nullable restore
 #else
-        public string PreviewVideoIds { get; set; }
+        public string PreviewVideoIds { get => _explicitNullValuePreviewVideoIds; set { _explicitNullValuePreviewVideoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewVideoIds"); else _explicitNullProperties?.Remove("previewVideoIds"); } }
+        private string _explicitNullValuePreviewVideoIds = default!;
 #endif
         /// <summary>The total storage size of all videos in the collection, in bytes.</summary>
-        public long? TotalSize { get; set; }
+        public long? TotalSize { get => _explicitNullValueTotalSize; set { _explicitNullValueTotalSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalSize"); else _explicitNullProperties?.Remove("totalSize"); } }
+        private long? _explicitNullValueTotalSize = default!;
         /// <summary>The number of on-demand videos in the collection. Live streams in the collection are not included in this count.</summary>
-        public long? VideoCount { get; set; }
+        public long? VideoCount { get => _explicitNullValueVideoCount; set { _explicitNullValueVideoCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoCount"); else _explicitNullProperties?.Remove("videoCount"); } }
+        private long? _explicitNullValueVideoCount = default!;
         /// <summary>The video library ID that contains the collection</summary>
-        public long? VideoLibraryId { get; set; }
+        public long? VideoLibraryId { get => _explicitNullValueVideoLibraryId; set { _explicitNullValueVideoLibraryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoLibraryId"); else _explicitNullProperties?.Remove("videoLibraryId"); } }
+        private long? _explicitNullValueVideoLibraryId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel"/> and sets the default values.
         /// </summary>
@@ -69,7 +96,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("totalSize", TotalSize);
             writer.WriteLongValue("videoCount", VideoCount);
             writer.WriteLongValue("videoLibraryId", VideoLibraryId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

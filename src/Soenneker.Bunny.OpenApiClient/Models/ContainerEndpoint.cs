@@ -12,77 +12,112 @@ namespace Soenneker.Bunny.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContainerEndpoint : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("internalIpAddresses") is { } nullNodeInternalIpAddresses && nullNodeInternalIpAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalIpAddresses = null;
+            if (parseNode.GetChildNode("isSslEnabled") is { } nullNodeIsSslEnabled && nullNodeIsSslEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsSslEnabled = null;
+            if (parseNode.GetChildNode("portMappings") is { } nullNodePortMappings && nullNodePortMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortMappings = null;
+            if (parseNode.GetChildNode("publicHost") is { } nullNodePublicHost && nullNodePublicHost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicHost = null;
+            if (parseNode.GetChildNode("publicIpAddresses") is { } nullNodePublicIpAddresses && nullNodePublicIpAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicIpAddresses = null;
+            if (parseNode.GetChildNode("pullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
+            if (parseNode.GetChildNode("stickySessions") is { } nullNodeStickySessions && nullNodeStickySessions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessions = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The displayName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>Unique endpoint id. Use this value as `container_endpoint_id` when creating a pull zone that targets this endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The internalIpAddresses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>? InternalIpAddresses { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>? InternalIpAddresses { get => _explicitNullValueInternalIpAddresses; set { _explicitNullValueInternalIpAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalIpAddresses"); else _explicitNullProperties?.Remove("internalIpAddresses"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>? _explicitNullValueInternalIpAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp> InternalIpAddresses { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp> InternalIpAddresses { get => _explicitNullValueInternalIpAddresses; set { _explicitNullValueInternalIpAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internalIpAddresses"); else _explicitNullProperties?.Remove("internalIpAddresses"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp> _explicitNullValueInternalIpAddresses = default!;
 #endif
         /// <summary>The isSslEnabled property</summary>
-        public bool? IsSslEnabled { get; set; }
+        public bool? IsSslEnabled { get => _explicitNullValueIsSslEnabled; set { _explicitNullValueIsSslEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isSslEnabled"); else _explicitNullProperties?.Remove("isSslEnabled"); } }
+        private bool? _explicitNullValueIsSslEnabled = default!;
         /// <summary>The portMappings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping>? PortMappings { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping>? PortMappings { get => _explicitNullValuePortMappings; set { _explicitNullValuePortMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portMappings"); else _explicitNullProperties?.Remove("portMappings"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping>? _explicitNullValuePortMappings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping> PortMappings { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping> PortMappings { get => _explicitNullValuePortMappings; set { _explicitNullValuePortMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portMappings"); else _explicitNullProperties?.Remove("portMappings"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointPortMapping> _explicitNullValuePortMappings = default!;
 #endif
         /// <summary>The publicHost property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PublicHost { get; set; }
+        public string? PublicHost { get => _explicitNullValuePublicHost; set { _explicitNullValuePublicHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicHost"); else _explicitNullProperties?.Remove("publicHost"); } }
+        private string? _explicitNullValuePublicHost = default!;
 #nullable restore
 #else
-        public string PublicHost { get; set; }
+        public string PublicHost { get => _explicitNullValuePublicHost; set { _explicitNullValuePublicHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicHost"); else _explicitNullProperties?.Remove("publicHost"); } }
+        private string _explicitNullValuePublicHost = default!;
 #endif
         /// <summary>The publicIpAddresses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>? PublicIpAddresses { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>? PublicIpAddresses { get => _explicitNullValuePublicIpAddresses; set { _explicitNullValuePublicIpAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicIpAddresses"); else _explicitNullProperties?.Remove("publicIpAddresses"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp>? _explicitNullValuePublicIpAddresses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp> PublicIpAddresses { get; set; }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp> PublicIpAddresses { get => _explicitNullValuePublicIpAddresses; set { _explicitNullValuePublicIpAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicIpAddresses"); else _explicitNullProperties?.Remove("publicIpAddresses"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointInternalIp> _explicitNullValuePublicIpAddresses = default!;
 #endif
         /// <summary>The pullZoneId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullZoneId { get; set; }
+        public string? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
+        private string? _explicitNullValuePullZoneId = default!;
 #nullable restore
 #else
-        public string PullZoneId { get; set; }
+        public string PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
+        private string _explicitNullValuePullZoneId = default!;
 #endif
         /// <summary>The stickySessions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession? StickySessions { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession? StickySessions { get => _explicitNullValueStickySessions; set { _explicitNullValueStickySessions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stickySessions"); else _explicitNullProperties?.Remove("stickySessions"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession? _explicitNullValueStickySessions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession StickySessions { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession StickySessions { get => _explicitNullValueStickySessions; set { _explicitNullValueStickySessions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stickySessions"); else _explicitNullProperties?.Remove("stickySessions"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession _explicitNullValueStickySessions = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.EndpointType? Type { get; set; }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EndpointType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EndpointType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerEndpoint"/> and sets the default values.
         /// </summary>
@@ -98,7 +133,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public static global::Soenneker.Bunny.OpenApiClient.Models.ContainerEndpoint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Bunny.OpenApiClient.Models.ContainerEndpoint();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.ContainerEndpoint(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -137,6 +172,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("pullZoneId", PullZoneId);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EndpointStickySession>("stickySessions", StickySessions);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.EndpointType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
