@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
-            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+            if (parseNode.GetChildNode("errorResponse") is null) { _explicitNullValueErrorResponse = default!; _explicitNullProperties?.Remove("errorResponse"); }
+            else if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
+            if (parseNode.GetChildNode("success") is null) { _explicitNullValueSuccess = default!; _explicitNullProperties?.Remove("success"); }
+            else if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Generic response object containing status information for API operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? _explicitNullValueErrorResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse _explicitNullValueErrorResponse = default!;
 #endif
         /// <summary>The success property</summary>
-        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; AdditionalData?.Remove("success"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
         private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateReviewTriggeredRuleResponse"/> and sets the default values.

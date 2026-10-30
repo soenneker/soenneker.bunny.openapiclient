@@ -19,10 +19,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorKey") is { } nullNodeErrorKey && nullNodeErrorKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorKey = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessageEscaped && nullNodeMessageEscaped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageEscaped = null;
-            if (parseNode.GetChildNode("statusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
-            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+            if (parseNode.GetChildNode("errorKey") is null) { _explicitNullValueErrorKey = default!; _explicitNullProperties?.Remove("errorKey"); }
+            else if (parseNode.GetChildNode("errorKey") is { } nullNodeErrorKey && nullNodeErrorKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorKey = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessageEscaped = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessageEscaped && nullNodeMessageEscaped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageEscaped = null;
+            if (parseNode.GetChildNode("statusCode") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("statusCode"); }
+            else if (parseNode.GetChildNode("statusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("success") is null) { _explicitNullValueSuccess = default!; _explicitNullProperties?.Remove("success"); }
+            else if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,11 +34,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Unique error key for programmatic error handling, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorKey"); else _explicitNullProperties?.Remove("errorKey"); } }
+        public string? ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; AdditionalData?.Remove("errorKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorKey"); else _explicitNullProperties?.Remove("errorKey"); } }
         private string? _explicitNullValueErrorKey = default!;
 #nullable restore
 #else
-        public string ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorKey"); else _explicitNullProperties?.Remove("errorKey"); } }
+        public string ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; AdditionalData?.Remove("errorKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorKey"); else _explicitNullProperties?.Remove("errorKey"); } }
         private string _explicitNullValueErrorKey = default!;
 #endif
         /// <summary>The primary error message.</summary>
@@ -42,18 +46,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Human-readable message describing the result of the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessageEscaped = default!;
 #nullable restore
 #else
-        public string MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessageEscaped = default!;
 #endif
         /// <summary>100 = Continue101 = SwitchingProtocols102 = Processing103 = EarlyHints200 = OK201 = Created202 = Accepted203 = NonAuthoritativeInformation204 = NoContent205 = ResetContent206 = PartialContent207 = MultiStatus208 = AlreadyReported226 = IMUsed300 = MultipleChoices300 = Ambiguous301 = MovedPermanently301 = Moved302 = Found302 = Redirect303 = SeeOther303 = RedirectMethod304 = NotModified305 = UseProxy306 = Unused307 = TemporaryRedirect307 = RedirectKeepVerb308 = PermanentRedirect400 = BadRequest401 = Unauthorized402 = PaymentRequired403 = Forbidden404 = NotFound405 = MethodNotAllowed406 = NotAcceptable407 = ProxyAuthenticationRequired408 = RequestTimeout409 = Conflict410 = Gone411 = LengthRequired412 = PreconditionFailed413 = RequestEntityTooLarge414 = RequestUriTooLong415 = UnsupportedMediaType416 = RequestedRangeNotSatisfiable417 = ExpectationFailed421 = MisdirectedRequest422 = UnprocessableEntity422 = UnprocessableContent423 = Locked424 = FailedDependency426 = UpgradeRequired428 = PreconditionRequired429 = TooManyRequests431 = RequestHeaderFieldsTooLarge451 = UnavailableForLegalReasons500 = InternalServerError501 = NotImplemented502 = BadGateway503 = ServiceUnavailable504 = GatewayTimeout505 = HttpVersionNotSupported506 = VariantAlsoNegotiates507 = InsufficientStorage508 = LoopDetected510 = NotExtended511 = NetworkAuthenticationRequired</summary>
-        public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
+        public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("statusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
         private int? _explicitNullValueStatusCode = default!;
         /// <summary>Indicates whether the operation was successful.</summary>
-        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; AdditionalData?.Remove("success"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
         private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse"/> and sets the default values.

@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
-            if (parseNode.GetChildNode("imageName") is { } nullNodeImageName && nullNodeImageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageName = null;
-            if (parseNode.GetChildNode("imageNamespace") is { } nullNodeImageNamespace && nullNodeImageNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageNamespace = null;
-            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
-            if (parseNode.GetChildNode("registryId") is { } nullNodeRegistryId && nullNodeRegistryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryId = null;
+            if (parseNode.GetChildNode("cursor") is null) { _explicitNullValueCursor = default!; _explicitNullProperties?.Remove("cursor"); }
+            else if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("imageName") is null) { _explicitNullValueImageName = default!; _explicitNullProperties?.Remove("imageName"); }
+            else if (parseNode.GetChildNode("imageName") is { } nullNodeImageName && nullNodeImageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageName = null;
+            if (parseNode.GetChildNode("imageNamespace") is null) { _explicitNullValueImageNamespace = default!; _explicitNullProperties?.Remove("imageNamespace"); }
+            else if (parseNode.GetChildNode("imageNamespace") is { } nullNodeImageNamespace && nullNodeImageNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageNamespace = null;
+            if (parseNode.GetChildNode("limit") is null) { _explicitNullValueLimit = default!; _explicitNullProperties?.Remove("limit"); }
+            else if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("registryId") is null) { _explicitNullValueRegistryId = default!; _explicitNullProperties?.Remove("registryId"); }
+            else if (parseNode.GetChildNode("registryId") is { } nullNodeRegistryId && nullNodeRegistryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The cursor of the page to return, from the previous response; omit for the first page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; AdditionalData?.Remove("cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
         private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; AdditionalData?.Remove("cursor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
         private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>The imageName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
+        public string? ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; AdditionalData?.Remove("imageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
         private string? _explicitNullValueImageName = default!;
 #nullable restore
 #else
-        public string ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
+        public string ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; AdditionalData?.Remove("imageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
         private string _explicitNullValueImageName = default!;
 #endif
         /// <summary>The imageNamespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
+        public string? ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; AdditionalData?.Remove("imageNamespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
         private string? _explicitNullValueImageNamespace = default!;
 #nullable restore
 #else
-        public string ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
+        public string ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; AdditionalData?.Remove("imageNamespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
         private string _explicitNullValueImageNamespace = default!;
 #endif
         /// <summary>The maximum number of tags in the page. Registries may return fewer.</summary>
-        public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        public int? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; AdditionalData?.Remove("limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
         private int? _explicitNullValueLimit = default!;
         /// <summary>The registry identifier. Can be &quot;dockerhub&quot;, &quot;github&quot;, or a private registry ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
+        public string? RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; AdditionalData?.Remove("registryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
         private string? _explicitNullValueRegistryId = default!;
 #nullable restore
 #else
-        public string RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
+        public string RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; AdditionalData?.Remove("registryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
         private string _explicitNullValueRegistryId = default!;
 #endif
         /// <summary>

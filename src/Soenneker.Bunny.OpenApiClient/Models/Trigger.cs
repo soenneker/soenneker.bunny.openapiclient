@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Parameter1") is { } nullNodeParameter1 && nullNodeParameter1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter1 = null;
-            if (parseNode.GetChildNode("PatternMatches") is { } nullNodePatternMatches && nullNodePatternMatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatternMatches = null;
-            if (parseNode.GetChildNode("PatternMatchingType") is { } nullNodePatternMatchingType && nullNodePatternMatchingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatternMatchingType = null;
-            if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("Parameter1") is null) { _explicitNullValueParameter1 = default!; _explicitNullProperties?.Remove("Parameter1"); }
+            else if (parseNode.GetChildNode("Parameter1") is { } nullNodeParameter1 && nullNodeParameter1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter1 = null;
+            if (parseNode.GetChildNode("PatternMatches") is null) { _explicitNullValuePatternMatches = default!; _explicitNullProperties?.Remove("PatternMatches"); }
+            else if (parseNode.GetChildNode("PatternMatches") is { } nullNodePatternMatches && nullNodePatternMatches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatternMatches = null;
+            if (parseNode.GetChildNode("PatternMatchingType") is null) { _explicitNullValuePatternMatchingType = default!; _explicitNullProperties?.Remove("PatternMatchingType"); }
+            else if (parseNode.GetChildNode("PatternMatchingType") is { } nullNodePatternMatchingType && nullNodePatternMatchingType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatternMatchingType = null;
+            if (parseNode.GetChildNode("Type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("Type"); }
+            else if (parseNode.GetChildNode("Type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,28 +32,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The trigger parameter 1. The value depends on the type of trigger.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter1 { get => _explicitNullValueParameter1; set { _explicitNullValueParameter1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1"); else _explicitNullProperties?.Remove("Parameter1"); } }
+        public string? Parameter1 { get => _explicitNullValueParameter1; set { _explicitNullValueParameter1 = value; AdditionalData?.Remove("Parameter1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1"); else _explicitNullProperties?.Remove("Parameter1"); } }
         private string? _explicitNullValueParameter1 = default!;
 #nullable restore
 #else
-        public string Parameter1 { get => _explicitNullValueParameter1; set { _explicitNullValueParameter1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1"); else _explicitNullProperties?.Remove("Parameter1"); } }
+        public string Parameter1 { get => _explicitNullValueParameter1; set { _explicitNullValueParameter1 = value; AdditionalData?.Remove("Parameter1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Parameter1"); else _explicitNullProperties?.Remove("Parameter1"); } }
         private string _explicitNullValueParameter1 = default!;
 #endif
         /// <summary>The list of pattern matches that will trigger the edge rule</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PatternMatches { get => _explicitNullValuePatternMatches; set { _explicitNullValuePatternMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PatternMatches"); else _explicitNullProperties?.Remove("PatternMatches"); } }
+        public List<string>? PatternMatches { get => _explicitNullValuePatternMatches; set { _explicitNullValuePatternMatches = value; AdditionalData?.Remove("PatternMatches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PatternMatches"); else _explicitNullProperties?.Remove("PatternMatches"); } }
         private List<string>? _explicitNullValuePatternMatches = default!;
 #nullable restore
 #else
-        public List<string> PatternMatches { get => _explicitNullValuePatternMatches; set { _explicitNullValuePatternMatches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PatternMatches"); else _explicitNullProperties?.Remove("PatternMatches"); } }
+        public List<string> PatternMatches { get => _explicitNullValuePatternMatches; set { _explicitNullValuePatternMatches = value; AdditionalData?.Remove("PatternMatches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PatternMatches"); else _explicitNullProperties?.Remove("PatternMatches"); } }
         private List<string> _explicitNullValuePatternMatches = default!;
 #endif
         /// <summary>The type of pattern matching0 = Match Any1 = Match All2 = Match None</summary>
-        public int? PatternMatchingType { get => _explicitNullValuePatternMatchingType; set { _explicitNullValuePatternMatchingType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PatternMatchingType"); else _explicitNullProperties?.Remove("PatternMatchingType"); } }
+        public int? PatternMatchingType { get => _explicitNullValuePatternMatchingType; set { _explicitNullValuePatternMatchingType = value; AdditionalData?.Remove("PatternMatchingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PatternMatchingType"); else _explicitNullProperties?.Remove("PatternMatchingType"); } }
         private int? _explicitNullValuePatternMatchingType = default!;
         /// <summary>The type of the trigger&lt;details&gt;&lt;summary&gt;Show all 14 values&lt;/summary&gt;| Value | Name ||---|---|| `0` | URL || `1` | Request Header || `2` | Response Header || `3` | URL Extension || `4` | Country Code || `5` | Remote IP || `6` | URL Query String || `7` | Random Chance || `8` | Status Code || `9` | Request Method || `10` | Cookie Value || `11` | Country State Code || `12` | Origin Retry Attempt Count || `13` | Origin Connection Error |&lt;/details&gt;</summary>
-        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
+        public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("Type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Type"); else _explicitNullProperties?.Remove("Type"); } }
         private int? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.Trigger"/> and sets the default values.

@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ruleConfiguration") is { } nullNodeRuleConfiguration && nullNodeRuleConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleConfiguration = null;
-            if (parseNode.GetChildNode("ruleDescription") is { } nullNodeRuleDescription && nullNodeRuleDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleDescription = null;
-            if (parseNode.GetChildNode("ruleName") is { } nullNodeRuleName && nullNodeRuleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleName = null;
-            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+            if (parseNode.GetChildNode("ruleConfiguration") is null) { _explicitNullValueRuleConfiguration = default!; _explicitNullProperties?.Remove("ruleConfiguration"); }
+            else if (parseNode.GetChildNode("ruleConfiguration") is { } nullNodeRuleConfiguration && nullNodeRuleConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleConfiguration = null;
+            if (parseNode.GetChildNode("ruleDescription") is null) { _explicitNullValueRuleDescription = default!; _explicitNullProperties?.Remove("ruleDescription"); }
+            else if (parseNode.GetChildNode("ruleDescription") is { } nullNodeRuleDescription && nullNodeRuleDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleDescription = null;
+            if (parseNode.GetChildNode("ruleName") is null) { _explicitNullValueRuleName = default!; _explicitNullProperties?.Remove("ruleName"); }
+            else if (parseNode.GetChildNode("ruleName") is { } nullNodeRuleName && nullNodeRuleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleName = null;
+            if (parseNode.GetChildNode("shieldZoneId") is null) { _explicitNullValueShieldZoneId = default!; _explicitNullProperties?.Remove("shieldZoneId"); }
+            else if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ruleConfiguration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel? RuleConfiguration { get => _explicitNullValueRuleConfiguration; set { _explicitNullValueRuleConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConfiguration"); else _explicitNullProperties?.Remove("ruleConfiguration"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel? RuleConfiguration { get => _explicitNullValueRuleConfiguration; set { _explicitNullValueRuleConfiguration = value; AdditionalData?.Remove("ruleConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConfiguration"); else _explicitNullProperties?.Remove("ruleConfiguration"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel? _explicitNullValueRuleConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel RuleConfiguration { get => _explicitNullValueRuleConfiguration; set { _explicitNullValueRuleConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConfiguration"); else _explicitNullProperties?.Remove("ruleConfiguration"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel RuleConfiguration { get => _explicitNullValueRuleConfiguration; set { _explicitNullValueRuleConfiguration = value; AdditionalData?.Remove("ruleConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConfiguration"); else _explicitNullProperties?.Remove("ruleConfiguration"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModel _explicitNullValueRuleConfiguration = default!;
 #endif
         /// <summary>The ruleDescription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleDescription { get => _explicitNullValueRuleDescription; set { _explicitNullValueRuleDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleDescription"); else _explicitNullProperties?.Remove("ruleDescription"); } }
+        public string? RuleDescription { get => _explicitNullValueRuleDescription; set { _explicitNullValueRuleDescription = value; AdditionalData?.Remove("ruleDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleDescription"); else _explicitNullProperties?.Remove("ruleDescription"); } }
         private string? _explicitNullValueRuleDescription = default!;
 #nullable restore
 #else
-        public string RuleDescription { get => _explicitNullValueRuleDescription; set { _explicitNullValueRuleDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleDescription"); else _explicitNullProperties?.Remove("ruleDescription"); } }
+        public string RuleDescription { get => _explicitNullValueRuleDescription; set { _explicitNullValueRuleDescription = value; AdditionalData?.Remove("ruleDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleDescription"); else _explicitNullProperties?.Remove("ruleDescription"); } }
         private string _explicitNullValueRuleDescription = default!;
 #endif
         /// <summary>The ruleName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleName"); else _explicitNullProperties?.Remove("ruleName"); } }
+        public string? RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; AdditionalData?.Remove("ruleName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleName"); else _explicitNullProperties?.Remove("ruleName"); } }
         private string? _explicitNullValueRuleName = default!;
 #nullable restore
 #else
-        public string RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleName"); else _explicitNullProperties?.Remove("ruleName"); } }
+        public string RuleName { get => _explicitNullValueRuleName; set { _explicitNullValueRuleName = value; AdditionalData?.Remove("ruleName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleName"); else _explicitNullProperties?.Remove("ruleName"); } }
         private string _explicitNullValueRuleName = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
-        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private int? _explicitNullValueShieldZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleRequest"/> and sets the default values.

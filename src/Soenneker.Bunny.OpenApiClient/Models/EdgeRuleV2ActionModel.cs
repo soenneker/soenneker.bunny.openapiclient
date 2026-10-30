@@ -17,44 +17,48 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ActionParameter1") is { } nullNodeActionParameter1 && nullNodeActionParameter1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter1 = null;
-            if (parseNode.GetChildNode("ActionParameter2") is { } nullNodeActionParameter2 && nullNodeActionParameter2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter2 = null;
-            if (parseNode.GetChildNode("ActionParameter3") is { } nullNodeActionParameter3 && nullNodeActionParameter3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter3 = null;
-            if (parseNode.GetChildNode("ActionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("ActionParameter1") is null) { _explicitNullValueActionParameter1 = default!; _explicitNullProperties?.Remove("ActionParameter1"); }
+            else if (parseNode.GetChildNode("ActionParameter1") is { } nullNodeActionParameter1 && nullNodeActionParameter1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter1 = null;
+            if (parseNode.GetChildNode("ActionParameter2") is null) { _explicitNullValueActionParameter2 = default!; _explicitNullProperties?.Remove("ActionParameter2"); }
+            else if (parseNode.GetChildNode("ActionParameter2") is { } nullNodeActionParameter2 && nullNodeActionParameter2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter2 = null;
+            if (parseNode.GetChildNode("ActionParameter3") is null) { _explicitNullValueActionParameter3 = default!; _explicitNullProperties?.Remove("ActionParameter3"); }
+            else if (parseNode.GetChildNode("ActionParameter3") is { } nullNodeActionParameter3 && nullNodeActionParameter3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionParameter3 = null;
+            if (parseNode.GetChildNode("ActionType") is null) { _explicitNullValueActionType = default!; _explicitNullProperties?.Remove("ActionType"); }
+            else if (parseNode.GetChildNode("ActionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
         }
 
         /// <summary>The ActionParameter1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionParameter1 { get => _explicitNullValueActionParameter1; set { _explicitNullValueActionParameter1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter1"); else _explicitNullProperties?.Remove("ActionParameter1"); } }
+        public string? ActionParameter1 { get => _explicitNullValueActionParameter1; set { _explicitNullValueActionParameter1 = value; AdditionalData?.Remove("ActionParameter1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter1"); else _explicitNullProperties?.Remove("ActionParameter1"); } }
         private string? _explicitNullValueActionParameter1 = default!;
 #nullable restore
 #else
-        public string ActionParameter1 { get => _explicitNullValueActionParameter1; set { _explicitNullValueActionParameter1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter1"); else _explicitNullProperties?.Remove("ActionParameter1"); } }
+        public string ActionParameter1 { get => _explicitNullValueActionParameter1; set { _explicitNullValueActionParameter1 = value; AdditionalData?.Remove("ActionParameter1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter1"); else _explicitNullProperties?.Remove("ActionParameter1"); } }
         private string _explicitNullValueActionParameter1 = default!;
 #endif
         /// <summary>The ActionParameter2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionParameter2 { get => _explicitNullValueActionParameter2; set { _explicitNullValueActionParameter2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter2"); else _explicitNullProperties?.Remove("ActionParameter2"); } }
+        public string? ActionParameter2 { get => _explicitNullValueActionParameter2; set { _explicitNullValueActionParameter2 = value; AdditionalData?.Remove("ActionParameter2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter2"); else _explicitNullProperties?.Remove("ActionParameter2"); } }
         private string? _explicitNullValueActionParameter2 = default!;
 #nullable restore
 #else
-        public string ActionParameter2 { get => _explicitNullValueActionParameter2; set { _explicitNullValueActionParameter2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter2"); else _explicitNullProperties?.Remove("ActionParameter2"); } }
+        public string ActionParameter2 { get => _explicitNullValueActionParameter2; set { _explicitNullValueActionParameter2 = value; AdditionalData?.Remove("ActionParameter2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter2"); else _explicitNullProperties?.Remove("ActionParameter2"); } }
         private string _explicitNullValueActionParameter2 = default!;
 #endif
         /// <summary>The ActionParameter3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActionParameter3 { get => _explicitNullValueActionParameter3; set { _explicitNullValueActionParameter3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter3"); else _explicitNullProperties?.Remove("ActionParameter3"); } }
+        public string? ActionParameter3 { get => _explicitNullValueActionParameter3; set { _explicitNullValueActionParameter3 = value; AdditionalData?.Remove("ActionParameter3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter3"); else _explicitNullProperties?.Remove("ActionParameter3"); } }
         private string? _explicitNullValueActionParameter3 = default!;
 #nullable restore
 #else
-        public string ActionParameter3 { get => _explicitNullValueActionParameter3; set { _explicitNullValueActionParameter3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter3"); else _explicitNullProperties?.Remove("ActionParameter3"); } }
+        public string ActionParameter3 { get => _explicitNullValueActionParameter3; set { _explicitNullValueActionParameter3 = value; AdditionalData?.Remove("ActionParameter3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionParameter3"); else _explicitNullProperties?.Remove("ActionParameter3"); } }
         private string _explicitNullValueActionParameter3 = default!;
 #endif
         /// <summary>&lt;details&gt;&lt;summary&gt;Show all 38 values&lt;/summary&gt;| Value | Name ||---|---|| `0` | Force SSL || `1` | Redirect || `2` | Origin URL || `3` | Override Cache Time || `4` | Block Request || `5` | Set Response Header || `6` | Set Request Header || `7` | Force Download || `8` | Disable Token Authentication || `9` | Enable Token Authentication || `10` | Override Cache Time Public || `11` | Ignore Query String || `12` | Disable Optimizer || `13` | Force Compression || `14` | Set Status Code || `15` | Bypass Perma-Cache || `16` | Override Browser Cache Time || `17` | Origin Storage || `18` | Set Network Rate Limit || `19` | Set Connection Limit || `20` | Set Requests Per Second Limit || `21` | Run Edge Script || `22` | Origin Magic Containers || `23` | Disable WAF || `24` | Retry Origin || `25` | Override Browser Cache Response Header || `26` | Remove Browser Cache Response Header || `27` | Disable Shield Challenge || `28` | Disable Shield || `29` | Disable Shield Bot Detection || `30` | Bypass AWS S3 Authentication || `31` | Disable Shield Access Lists || `32` | Disable Shield Rate Limiting || `33` | Enable Request Coalescing || `34` | Disable Request Coalescing || `35` | Use Load Balancer || `36` | Force Load Balancer Sticky Session Mode || `37` | Strip Cookies (Client to Origin) |&lt;/details&gt;</summary>
-        public int? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionType"); else _explicitNullProperties?.Remove("ActionType"); } }
+        public int? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; AdditionalData?.Remove("ActionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ActionType"); else _explicitNullProperties?.Remove("ActionType"); } }
         private int? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

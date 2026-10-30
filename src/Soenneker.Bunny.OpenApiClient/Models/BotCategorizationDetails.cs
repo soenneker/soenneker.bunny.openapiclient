@@ -17,35 +17,40 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
-            if (parseNode.GetChildNode("botId") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
-            if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
-            if (parseNode.GetChildNode("isVerifiable") is { } nullNodeIsVerifiable && nullNodeIsVerifiable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVerifiable = null;
-            if (parseNode.GetChildNode("userAgentMatch") is { } nullNodeUserAgentMatch && nullNodeUserAgentMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgentMatch = null;
+            if (parseNode.GetChildNode("action") is null) { _explicitNullValueAction = default!; _explicitNullProperties?.Remove("action"); }
+            else if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("botId") is null) { _explicitNullValueBotId = default!; _explicitNullProperties?.Remove("botId"); }
+            else if (parseNode.GetChildNode("botId") is { } nullNodeBotId && nullNodeBotId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotId = null;
+            if (parseNode.GetChildNode("category") is null) { _explicitNullValueCategory = default!; _explicitNullProperties?.Remove("category"); }
+            else if (parseNode.GetChildNode("category") is { } nullNodeCategory && nullNodeCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Category = null;
+            if (parseNode.GetChildNode("isVerifiable") is null) { _explicitNullValueIsVerifiable = default!; _explicitNullProperties?.Remove("isVerifiable"); }
+            else if (parseNode.GetChildNode("isVerifiable") is { } nullNodeIsVerifiable && nullNodeIsVerifiable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVerifiable = null;
+            if (parseNode.GetChildNode("userAgentMatch") is null) { _explicitNullValueUserAgentMatch = default!; _explicitNullProperties?.Remove("userAgentMatch"); }
+            else if (parseNode.GetChildNode("userAgentMatch") is { } nullNodeUserAgentMatch && nullNodeUserAgentMatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAgentMatch = null;
         }
 
         /// <summary>0 = None1 = Block2 = Allow3 = Ignore</summary>
-        public int? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        public int? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; AdditionalData?.Remove("action"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
         private int? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The botId property</summary>
-        public int? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botId"); else _explicitNullProperties?.Remove("botId"); } }
+        public int? BotId { get => _explicitNullValueBotId; set { _explicitNullValueBotId = value; AdditionalData?.Remove("botId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botId"); else _explicitNullProperties?.Remove("botId"); } }
         private int? _explicitNullValueBotId = default!;
         /// <summary>0 = None1 = SEO2 = AIScraper3 = AITool4 = Tool5 = Ads6 = Preview7 = Social255 = System</summary>
-        public int? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        public int? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private int? _explicitNullValueCategory = default!;
         /// <summary>The isVerifiable property</summary>
-        public bool? IsVerifiable { get => _explicitNullValueIsVerifiable; set { _explicitNullValueIsVerifiable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isVerifiable"); else _explicitNullProperties?.Remove("isVerifiable"); } }
+        public bool? IsVerifiable { get => _explicitNullValueIsVerifiable; set { _explicitNullValueIsVerifiable = value; AdditionalData?.Remove("isVerifiable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isVerifiable"); else _explicitNullProperties?.Remove("isVerifiable"); } }
         private bool? _explicitNullValueIsVerifiable = default!;
         /// <summary>The userAgentMatch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserAgentMatch { get => _explicitNullValueUserAgentMatch; set { _explicitNullValueUserAgentMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgentMatch"); else _explicitNullProperties?.Remove("userAgentMatch"); } }
+        public string? UserAgentMatch { get => _explicitNullValueUserAgentMatch; set { _explicitNullValueUserAgentMatch = value; AdditionalData?.Remove("userAgentMatch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgentMatch"); else _explicitNullProperties?.Remove("userAgentMatch"); } }
         private string? _explicitNullValueUserAgentMatch = default!;
 #nullable restore
 #else
-        public string UserAgentMatch { get => _explicitNullValueUserAgentMatch; set { _explicitNullValueUserAgentMatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgentMatch"); else _explicitNullProperties?.Remove("userAgentMatch"); } }
+        public string UserAgentMatch { get => _explicitNullValueUserAgentMatch; set { _explicitNullValueUserAgentMatch = value; AdditionalData?.Remove("userAgentMatch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userAgentMatch"); else _explicitNullProperties?.Remove("userAgentMatch"); } }
         private string _explicitNullValueUserAgentMatch = default!;
 #endif
         /// <summary>

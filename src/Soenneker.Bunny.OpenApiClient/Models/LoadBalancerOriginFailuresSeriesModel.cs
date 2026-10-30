@@ -17,45 +17,49 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("OriginId") is { } nullNodeOriginId && nullNodeOriginId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginId = null;
-            if (parseNode.GetChildNode("OriginName") is { } nullNodeOriginName && nullNodeOriginName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginName = null;
-            if (parseNode.GetChildNode("StatusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
-            if (parseNode.GetChildNode("Values") is { } nullNodeValues && nullNodeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Values = null;
+            if (parseNode.GetChildNode("OriginId") is null) { _explicitNullValueOriginId = default!; _explicitNullProperties?.Remove("OriginId"); }
+            else if (parseNode.GetChildNode("OriginId") is { } nullNodeOriginId && nullNodeOriginId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginId = null;
+            if (parseNode.GetChildNode("OriginName") is null) { _explicitNullValueOriginName = default!; _explicitNullProperties?.Remove("OriginName"); }
+            else if (parseNode.GetChildNode("OriginName") is { } nullNodeOriginName && nullNodeOriginName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginName = null;
+            if (parseNode.GetChildNode("StatusCode") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("StatusCode"); }
+            else if (parseNode.GetChildNode("StatusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("Values") is null) { _explicitNullValueValues = default!; _explicitNullProperties?.Remove("Values"); }
+            else if (parseNode.GetChildNode("Values") is { } nullNodeValues && nullNodeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Values = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The OriginId property</summary>
-        public long? OriginId { get => _explicitNullValueOriginId; set { _explicitNullValueOriginId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginId"); else _explicitNullProperties?.Remove("OriginId"); } }
+        public long? OriginId { get => _explicitNullValueOriginId; set { _explicitNullValueOriginId = value; AdditionalData?.Remove("OriginId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginId"); else _explicitNullProperties?.Remove("OriginId"); } }
         private long? _explicitNullValueOriginId = default!;
         /// <summary>The OriginName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginName { get => _explicitNullValueOriginName; set { _explicitNullValueOriginName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginName"); else _explicitNullProperties?.Remove("OriginName"); } }
+        public string? OriginName { get => _explicitNullValueOriginName; set { _explicitNullValueOriginName = value; AdditionalData?.Remove("OriginName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginName"); else _explicitNullProperties?.Remove("OriginName"); } }
         private string? _explicitNullValueOriginName = default!;
 #nullable restore
 #else
-        public string OriginName { get => _explicitNullValueOriginName; set { _explicitNullValueOriginName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginName"); else _explicitNullProperties?.Remove("OriginName"); } }
+        public string OriginName { get => _explicitNullValueOriginName; set { _explicitNullValueOriginName = value; AdditionalData?.Remove("OriginName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginName"); else _explicitNullProperties?.Remove("OriginName"); } }
         private string _explicitNullValueOriginName = default!;
 #endif
         /// <summary>The StatusCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
+        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("StatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
         private string? _explicitNullValueStatusCode = default!;
 #nullable restore
 #else
-        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
+        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("StatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
         private string _explicitNullValueStatusCode = default!;
 #endif
         /// <summary>The Values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModelValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModelValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModelValuesProperty2? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModelValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModelValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModelValuesProperty2 _explicitNullValueValues = default!;
 #endif
         /// <summary>

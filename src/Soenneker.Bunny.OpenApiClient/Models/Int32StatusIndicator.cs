@@ -18,17 +18,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("indicator") is { } nullNodeIndicator && nullNodeIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Indicator = null;
-            if (parseNode.GetChildNode("statusGrade") is { } nullNodeStatusGrade && nullNodeStatusGrade.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusGrade = null;
+            if (parseNode.GetChildNode("indicator") is null) { _explicitNullValueIndicator = default!; _explicitNullProperties?.Remove("indicator"); }
+            else if (parseNode.GetChildNode("indicator") is { } nullNodeIndicator && nullNodeIndicator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Indicator = null;
+            if (parseNode.GetChildNode("statusGrade") is null) { _explicitNullValueStatusGrade = default!; _explicitNullProperties?.Remove("statusGrade"); }
+            else if (parseNode.GetChildNode("statusGrade") is { } nullNodeStatusGrade && nullNodeStatusGrade.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusGrade = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The indicator property</summary>
-        public int? Indicator { get => _explicitNullValueIndicator; set { _explicitNullValueIndicator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indicator"); else _explicitNullProperties?.Remove("indicator"); } }
+        public int? Indicator { get => _explicitNullValueIndicator; set { _explicitNullValueIndicator = value; AdditionalData?.Remove("indicator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("indicator"); else _explicitNullProperties?.Remove("indicator"); } }
         private int? _explicitNullValueIndicator = default!;
         /// <summary>The statusGrade property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.Grade? StatusGrade { get => _explicitNullValueStatusGrade; set { _explicitNullValueStatusGrade = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusGrade"); else _explicitNullProperties?.Remove("statusGrade"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Grade? StatusGrade { get => _explicitNullValueStatusGrade; set { _explicitNullValueStatusGrade = value; AdditionalData?.Remove("statusGrade"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusGrade"); else _explicitNullProperties?.Remove("statusGrade"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.Grade? _explicitNullValueStatusGrade = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.Int32StatusIndicator"/> and sets the default values.
@@ -56,7 +58,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "indicator", n => { Indicator = n.GetIntValue(); } },
-                { "statusGrade", n => { StatusGrade = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.Grade>(); } },
+                { "statusGrade", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.Grade>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatusGrade = default; _explicitNullProperties?.Remove("statusGrade"); AdditionalData["statusGrade"] = unknown; } else { StatusGrade = parsed; AdditionalData.Remove("statusGrade"); } } },
             };
         }
         /// <summary>

@@ -17,301 +17,339 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowEarlyPlay") is { } nullNodeAllowEarlyPlay && nullNodeAllowEarlyPlay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEarlyPlay = null;
-            if (parseNode.GetChildNode("captionsBackground") is { } nullNodeCaptionsBackground && nullNodeCaptionsBackground.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsBackground = null;
-            if (parseNode.GetChildNode("captionsFontColor") is { } nullNodeCaptionsFontColor && nullNodeCaptionsFontColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsFontColor = null;
-            if (parseNode.GetChildNode("captionsFontSize") is { } nullNodeCaptionsFontSize && nullNodeCaptionsFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsFontSize = null;
-            if (parseNode.GetChildNode("captionsPath") is { } nullNodeCaptionsPath && nullNodeCaptionsPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsPath = null;
-            if (parseNode.GetChildNode("controls") is { } nullNodeControls && nullNodeControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Controls = null;
-            if (parseNode.GetChildNode("customCss") is { } nullNodeCustomCss && nullNodeCustomCss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomCss = null;
-            if (parseNode.GetChildNode("drmVersion") is { } nullNodeDrmVersion && nullNodeDrmVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DrmVersion = null;
-            if (parseNode.GetChildNode("enableCompactControls") is { } nullNodeEnableCompactControls && nullNodeEnableCompactControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCompactControls = null;
-            if (parseNode.GetChildNode("enableDRM") is { } nullNodeEnableDRM && nullNodeEnableDRM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableDRM = null;
-            if (parseNode.GetChildNode("enableMP4Fallback") is { } nullNodeEnableMP4Fallback && nullNodeEnableMP4Fallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableMP4Fallback = null;
-            if (parseNode.GetChildNode("exposeVideoMetadata") is { } nullNodeExposeVideoMetadata && nullNodeExposeVideoMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExposeVideoMetadata = null;
-            if (parseNode.GetChildNode("fallbackUrl") is { } nullNodeFallbackUrl && nullNodeFallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackUrl = null;
-            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
-            if (parseNode.GetChildNode("isPlayable") is { } nullNodeIsPlayable && nullNodeIsPlayable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlayable = null;
-            if (parseNode.GetChildNode("isPlaylistPlayable") is { } nullNodeIsPlaylistPlayable && nullNodeIsPlaylistPlayable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlaylistPlayable = null;
-            if (parseNode.GetChildNode("libraryName") is { } nullNodeLibraryName && nullNodeLibraryName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LibraryName = null;
-            if (parseNode.GetChildNode("maxSoftwareWidevineResolution") is { } nullNodeMaxSoftwareWidevineResolution && nullNodeMaxSoftwareWidevineResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSoftwareWidevineResolution = null;
-            if (parseNode.GetChildNode("originalUrl") is { } nullNodeOriginalUrl && nullNodeOriginalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalUrl = null;
-            if (parseNode.GetChildNode("playbackSpeeds") is { } nullNodePlaybackSpeeds && nullNodePlaybackSpeeds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaybackSpeeds = null;
-            if (parseNode.GetChildNode("playerKeyColor") is { } nullNodePlayerKeyColor && nullNodePlayerKeyColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayerKeyColor = null;
-            if (parseNode.GetChildNode("preferredPlaybackSource") is { } nullNodePreferredPlaybackSource && nullNodePreferredPlaybackSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredPlaybackSource = null;
-            if (parseNode.GetChildNode("previewUrl") is { } nullNodePreviewUrl && nullNodePreviewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewUrl = null;
-            if (parseNode.GetChildNode("pullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
-            if (parseNode.GetChildNode("rememberPlayerPosition") is { } nullNodeRememberPlayerPosition && nullNodeRememberPlayerPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RememberPlayerPosition = null;
-            if (parseNode.GetChildNode("seekPath") is { } nullNodeSeekPath && nullNodeSeekPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeekPath = null;
-            if (parseNode.GetChildNode("showHeatmap") is { } nullNodeShowHeatmap && nullNodeShowHeatmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowHeatmap = null;
-            if (parseNode.GetChildNode("thumbnailUrl") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
-            if (parseNode.GetChildNode("tokenAuthEnabled") is { } nullNodeTokenAuthEnabled && nullNodeTokenAuthEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenAuthEnabled = null;
-            if (parseNode.GetChildNode("uiLanguage") is { } nullNodeUiLanguage && nullNodeUiLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiLanguage = null;
-            if (parseNode.GetChildNode("vastTagUrl") is { } nullNodeVastTagUrl && nullNodeVastTagUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VastTagUrl = null;
-            if (parseNode.GetChildNode("viAiPublisherId") is { } nullNodeViAiPublisherId && nullNodeViAiPublisherId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViAiPublisherId = null;
-            if (parseNode.GetChildNode("video") is { } nullNodeVideo && nullNodeVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Video = null;
-            if (parseNode.GetChildNode("videoPlaylistUrl") is { } nullNodeVideoPlaylistUrl && nullNodeVideoPlaylistUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoPlaylistUrl = null;
-            if (parseNode.GetChildNode("widevineEmeRobustness") is { } nullNodeWidevineEmeRobustness && nullNodeWidevineEmeRobustness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidevineEmeRobustness = null;
-            if (parseNode.GetChildNode("widevineMinClientSecurityLevel") is { } nullNodeWidevineMinClientSecurityLevel && nullNodeWidevineMinClientSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidevineMinClientSecurityLevel = null;
-            if (parseNode.GetChildNode("widevineSdOnlyForL3") is { } nullNodeWidevineSdOnlyForL3 && nullNodeWidevineSdOnlyForL3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidevineSdOnlyForL3 = null;
-            if (parseNode.GetChildNode("zoneTier") is { } nullNodeZoneTier && nullNodeZoneTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneTier = null;
+            if (parseNode.GetChildNode("allowEarlyPlay") is null) { _explicitNullValueAllowEarlyPlay = default!; _explicitNullProperties?.Remove("allowEarlyPlay"); }
+            else if (parseNode.GetChildNode("allowEarlyPlay") is { } nullNodeAllowEarlyPlay && nullNodeAllowEarlyPlay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEarlyPlay = null;
+            if (parseNode.GetChildNode("captionsBackground") is null) { _explicitNullValueCaptionsBackground = default!; _explicitNullProperties?.Remove("captionsBackground"); }
+            else if (parseNode.GetChildNode("captionsBackground") is { } nullNodeCaptionsBackground && nullNodeCaptionsBackground.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsBackground = null;
+            if (parseNode.GetChildNode("captionsFontColor") is null) { _explicitNullValueCaptionsFontColor = default!; _explicitNullProperties?.Remove("captionsFontColor"); }
+            else if (parseNode.GetChildNode("captionsFontColor") is { } nullNodeCaptionsFontColor && nullNodeCaptionsFontColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsFontColor = null;
+            if (parseNode.GetChildNode("captionsFontSize") is null) { _explicitNullValueCaptionsFontSize = default!; _explicitNullProperties?.Remove("captionsFontSize"); }
+            else if (parseNode.GetChildNode("captionsFontSize") is { } nullNodeCaptionsFontSize && nullNodeCaptionsFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsFontSize = null;
+            if (parseNode.GetChildNode("captionsPath") is null) { _explicitNullValueCaptionsPath = default!; _explicitNullProperties?.Remove("captionsPath"); }
+            else if (parseNode.GetChildNode("captionsPath") is { } nullNodeCaptionsPath && nullNodeCaptionsPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CaptionsPath = null;
+            if (parseNode.GetChildNode("controls") is null) { _explicitNullValueControls = default!; _explicitNullProperties?.Remove("controls"); }
+            else if (parseNode.GetChildNode("controls") is { } nullNodeControls && nullNodeControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Controls = null;
+            if (parseNode.GetChildNode("customCss") is null) { _explicitNullValueCustomCss = default!; _explicitNullProperties?.Remove("customCss"); }
+            else if (parseNode.GetChildNode("customCss") is { } nullNodeCustomCss && nullNodeCustomCss.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomCss = null;
+            if (parseNode.GetChildNode("drmVersion") is null) { _explicitNullValueDrmVersion = default!; _explicitNullProperties?.Remove("drmVersion"); }
+            else if (parseNode.GetChildNode("drmVersion") is { } nullNodeDrmVersion && nullNodeDrmVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DrmVersion = null;
+            if (parseNode.GetChildNode("enableCompactControls") is null) { _explicitNullValueEnableCompactControls = default!; _explicitNullProperties?.Remove("enableCompactControls"); }
+            else if (parseNode.GetChildNode("enableCompactControls") is { } nullNodeEnableCompactControls && nullNodeEnableCompactControls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCompactControls = null;
+            if (parseNode.GetChildNode("enableDRM") is null) { _explicitNullValueEnableDRM = default!; _explicitNullProperties?.Remove("enableDRM"); }
+            else if (parseNode.GetChildNode("enableDRM") is { } nullNodeEnableDRM && nullNodeEnableDRM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableDRM = null;
+            if (parseNode.GetChildNode("enableMP4Fallback") is null) { _explicitNullValueEnableMP4Fallback = default!; _explicitNullProperties?.Remove("enableMP4Fallback"); }
+            else if (parseNode.GetChildNode("enableMP4Fallback") is { } nullNodeEnableMP4Fallback && nullNodeEnableMP4Fallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableMP4Fallback = null;
+            if (parseNode.GetChildNode("exposeVideoMetadata") is null) { _explicitNullValueExposeVideoMetadata = default!; _explicitNullProperties?.Remove("exposeVideoMetadata"); }
+            else if (parseNode.GetChildNode("exposeVideoMetadata") is { } nullNodeExposeVideoMetadata && nullNodeExposeVideoMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExposeVideoMetadata = null;
+            if (parseNode.GetChildNode("fallbackUrl") is null) { _explicitNullValueFallbackUrl = default!; _explicitNullProperties?.Remove("fallbackUrl"); }
+            else if (parseNode.GetChildNode("fallbackUrl") is { } nullNodeFallbackUrl && nullNodeFallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FallbackUrl = null;
+            if (parseNode.GetChildNode("fontFamily") is null) { _explicitNullValueFontFamily = default!; _explicitNullProperties?.Remove("fontFamily"); }
+            else if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("isPlayable") is null) { _explicitNullValueIsPlayable = default!; _explicitNullProperties?.Remove("isPlayable"); }
+            else if (parseNode.GetChildNode("isPlayable") is { } nullNodeIsPlayable && nullNodeIsPlayable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlayable = null;
+            if (parseNode.GetChildNode("isPlaylistPlayable") is null) { _explicitNullValueIsPlaylistPlayable = default!; _explicitNullProperties?.Remove("isPlaylistPlayable"); }
+            else if (parseNode.GetChildNode("isPlaylistPlayable") is { } nullNodeIsPlaylistPlayable && nullNodeIsPlaylistPlayable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPlaylistPlayable = null;
+            if (parseNode.GetChildNode("libraryName") is null) { _explicitNullValueLibraryName = default!; _explicitNullProperties?.Remove("libraryName"); }
+            else if (parseNode.GetChildNode("libraryName") is { } nullNodeLibraryName && nullNodeLibraryName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LibraryName = null;
+            if (parseNode.GetChildNode("maxSoftwareWidevineResolution") is null) { _explicitNullValueMaxSoftwareWidevineResolution = default!; _explicitNullProperties?.Remove("maxSoftwareWidevineResolution"); }
+            else if (parseNode.GetChildNode("maxSoftwareWidevineResolution") is { } nullNodeMaxSoftwareWidevineResolution && nullNodeMaxSoftwareWidevineResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSoftwareWidevineResolution = null;
+            if (parseNode.GetChildNode("originalUrl") is null) { _explicitNullValueOriginalUrl = default!; _explicitNullProperties?.Remove("originalUrl"); }
+            else if (parseNode.GetChildNode("originalUrl") is { } nullNodeOriginalUrl && nullNodeOriginalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalUrl = null;
+            if (parseNode.GetChildNode("playbackSpeeds") is null) { _explicitNullValuePlaybackSpeeds = default!; _explicitNullProperties?.Remove("playbackSpeeds"); }
+            else if (parseNode.GetChildNode("playbackSpeeds") is { } nullNodePlaybackSpeeds && nullNodePlaybackSpeeds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaybackSpeeds = null;
+            if (parseNode.GetChildNode("playerKeyColor") is null) { _explicitNullValuePlayerKeyColor = default!; _explicitNullProperties?.Remove("playerKeyColor"); }
+            else if (parseNode.GetChildNode("playerKeyColor") is { } nullNodePlayerKeyColor && nullNodePlayerKeyColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlayerKeyColor = null;
+            if (parseNode.GetChildNode("preferredPlaybackSource") is null) { _explicitNullValuePreferredPlaybackSource = default!; _explicitNullProperties?.Remove("preferredPlaybackSource"); }
+            else if (parseNode.GetChildNode("preferredPlaybackSource") is { } nullNodePreferredPlaybackSource && nullNodePreferredPlaybackSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreferredPlaybackSource = null;
+            if (parseNode.GetChildNode("previewUrl") is null) { _explicitNullValuePreviewUrl = default!; _explicitNullProperties?.Remove("previewUrl"); }
+            else if (parseNode.GetChildNode("previewUrl") is { } nullNodePreviewUrl && nullNodePreviewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewUrl = null;
+            if (parseNode.GetChildNode("pullZoneId") is null) { _explicitNullValuePullZoneId = default!; _explicitNullProperties?.Remove("pullZoneId"); }
+            else if (parseNode.GetChildNode("pullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
+            if (parseNode.GetChildNode("rememberPlayerPosition") is null) { _explicitNullValueRememberPlayerPosition = default!; _explicitNullProperties?.Remove("rememberPlayerPosition"); }
+            else if (parseNode.GetChildNode("rememberPlayerPosition") is { } nullNodeRememberPlayerPosition && nullNodeRememberPlayerPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RememberPlayerPosition = null;
+            if (parseNode.GetChildNode("seekPath") is null) { _explicitNullValueSeekPath = default!; _explicitNullProperties?.Remove("seekPath"); }
+            else if (parseNode.GetChildNode("seekPath") is { } nullNodeSeekPath && nullNodeSeekPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeekPath = null;
+            if (parseNode.GetChildNode("showHeatmap") is null) { _explicitNullValueShowHeatmap = default!; _explicitNullProperties?.Remove("showHeatmap"); }
+            else if (parseNode.GetChildNode("showHeatmap") is { } nullNodeShowHeatmap && nullNodeShowHeatmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowHeatmap = null;
+            if (parseNode.GetChildNode("thumbnailUrl") is null) { _explicitNullValueThumbnailUrl = default!; _explicitNullProperties?.Remove("thumbnailUrl"); }
+            else if (parseNode.GetChildNode("thumbnailUrl") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
+            if (parseNode.GetChildNode("tokenAuthEnabled") is null) { _explicitNullValueTokenAuthEnabled = default!; _explicitNullProperties?.Remove("tokenAuthEnabled"); }
+            else if (parseNode.GetChildNode("tokenAuthEnabled") is { } nullNodeTokenAuthEnabled && nullNodeTokenAuthEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenAuthEnabled = null;
+            if (parseNode.GetChildNode("uiLanguage") is null) { _explicitNullValueUiLanguage = default!; _explicitNullProperties?.Remove("uiLanguage"); }
+            else if (parseNode.GetChildNode("uiLanguage") is { } nullNodeUiLanguage && nullNodeUiLanguage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UiLanguage = null;
+            if (parseNode.GetChildNode("vastTagUrl") is null) { _explicitNullValueVastTagUrl = default!; _explicitNullProperties?.Remove("vastTagUrl"); }
+            else if (parseNode.GetChildNode("vastTagUrl") is { } nullNodeVastTagUrl && nullNodeVastTagUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VastTagUrl = null;
+            if (parseNode.GetChildNode("viAiPublisherId") is null) { _explicitNullValueViAiPublisherId = default!; _explicitNullProperties?.Remove("viAiPublisherId"); }
+            else if (parseNode.GetChildNode("viAiPublisherId") is { } nullNodeViAiPublisherId && nullNodeViAiPublisherId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViAiPublisherId = null;
+            if (parseNode.GetChildNode("video") is null) { _explicitNullValueVideo = default!; _explicitNullProperties?.Remove("video"); }
+            else if (parseNode.GetChildNode("video") is { } nullNodeVideo && nullNodeVideo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Video = null;
+            if (parseNode.GetChildNode("videoPlaylistUrl") is null) { _explicitNullValueVideoPlaylistUrl = default!; _explicitNullProperties?.Remove("videoPlaylistUrl"); }
+            else if (parseNode.GetChildNode("videoPlaylistUrl") is { } nullNodeVideoPlaylistUrl && nullNodeVideoPlaylistUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoPlaylistUrl = null;
+            if (parseNode.GetChildNode("widevineEmeRobustness") is null) { _explicitNullValueWidevineEmeRobustness = default!; _explicitNullProperties?.Remove("widevineEmeRobustness"); }
+            else if (parseNode.GetChildNode("widevineEmeRobustness") is { } nullNodeWidevineEmeRobustness && nullNodeWidevineEmeRobustness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidevineEmeRobustness = null;
+            if (parseNode.GetChildNode("widevineMinClientSecurityLevel") is null) { _explicitNullValueWidevineMinClientSecurityLevel = default!; _explicitNullProperties?.Remove("widevineMinClientSecurityLevel"); }
+            else if (parseNode.GetChildNode("widevineMinClientSecurityLevel") is { } nullNodeWidevineMinClientSecurityLevel && nullNodeWidevineMinClientSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidevineMinClientSecurityLevel = null;
+            if (parseNode.GetChildNode("widevineSdOnlyForL3") is null) { _explicitNullValueWidevineSdOnlyForL3 = default!; _explicitNullProperties?.Remove("widevineSdOnlyForL3"); }
+            else if (parseNode.GetChildNode("widevineSdOnlyForL3") is { } nullNodeWidevineSdOnlyForL3 && nullNodeWidevineSdOnlyForL3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WidevineSdOnlyForL3 = null;
+            if (parseNode.GetChildNode("zoneTier") is null) { _explicitNullValueZoneTier = default!; _explicitNullProperties?.Remove("zoneTier"); }
+            else if (parseNode.GetChildNode("zoneTier") is { } nullNodeZoneTier && nullNodeZoneTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneTier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the video can be played from the original source file before encoding has finished.</summary>
-        public bool? AllowEarlyPlay { get => _explicitNullValueAllowEarlyPlay; set { _explicitNullValueAllowEarlyPlay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowEarlyPlay"); else _explicitNullProperties?.Remove("allowEarlyPlay"); } }
+        public bool? AllowEarlyPlay { get => _explicitNullValueAllowEarlyPlay; set { _explicitNullValueAllowEarlyPlay = value; AdditionalData?.Remove("allowEarlyPlay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowEarlyPlay"); else _explicitNullProperties?.Remove("allowEarlyPlay"); } }
         private bool? _explicitNullValueAllowEarlyPlay = default!;
         /// <summary>CSS color value for the caption background.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptionsBackground { get => _explicitNullValueCaptionsBackground; set { _explicitNullValueCaptionsBackground = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsBackground"); else _explicitNullProperties?.Remove("captionsBackground"); } }
+        public string? CaptionsBackground { get => _explicitNullValueCaptionsBackground; set { _explicitNullValueCaptionsBackground = value; AdditionalData?.Remove("captionsBackground"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsBackground"); else _explicitNullProperties?.Remove("captionsBackground"); } }
         private string? _explicitNullValueCaptionsBackground = default!;
 #nullable restore
 #else
-        public string CaptionsBackground { get => _explicitNullValueCaptionsBackground; set { _explicitNullValueCaptionsBackground = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsBackground"); else _explicitNullProperties?.Remove("captionsBackground"); } }
+        public string CaptionsBackground { get => _explicitNullValueCaptionsBackground; set { _explicitNullValueCaptionsBackground = value; AdditionalData?.Remove("captionsBackground"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsBackground"); else _explicitNullProperties?.Remove("captionsBackground"); } }
         private string _explicitNullValueCaptionsBackground = default!;
 #endif
         /// <summary>CSS color value for the caption text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptionsFontColor { get => _explicitNullValueCaptionsFontColor; set { _explicitNullValueCaptionsFontColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsFontColor"); else _explicitNullProperties?.Remove("captionsFontColor"); } }
+        public string? CaptionsFontColor { get => _explicitNullValueCaptionsFontColor; set { _explicitNullValueCaptionsFontColor = value; AdditionalData?.Remove("captionsFontColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsFontColor"); else _explicitNullProperties?.Remove("captionsFontColor"); } }
         private string? _explicitNullValueCaptionsFontColor = default!;
 #nullable restore
 #else
-        public string CaptionsFontColor { get => _explicitNullValueCaptionsFontColor; set { _explicitNullValueCaptionsFontColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsFontColor"); else _explicitNullProperties?.Remove("captionsFontColor"); } }
+        public string CaptionsFontColor { get => _explicitNullValueCaptionsFontColor; set { _explicitNullValueCaptionsFontColor = value; AdditionalData?.Remove("captionsFontColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsFontColor"); else _explicitNullProperties?.Remove("captionsFontColor"); } }
         private string _explicitNullValueCaptionsFontColor = default!;
 #endif
         /// <summary>Caption font size in pixels.</summary>
-        public int? CaptionsFontSize { get => _explicitNullValueCaptionsFontSize; set { _explicitNullValueCaptionsFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsFontSize"); else _explicitNullProperties?.Remove("captionsFontSize"); } }
+        public int? CaptionsFontSize { get => _explicitNullValueCaptionsFontSize; set { _explicitNullValueCaptionsFontSize = value; AdditionalData?.Remove("captionsFontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsFontSize"); else _explicitNullProperties?.Remove("captionsFontSize"); } }
         private int? _explicitNullValueCaptionsFontSize = default!;
         /// <summary>CDN URL of the directory containing the video&apos;s caption (.vtt) files.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CaptionsPath { get => _explicitNullValueCaptionsPath; set { _explicitNullValueCaptionsPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsPath"); else _explicitNullProperties?.Remove("captionsPath"); } }
+        public string? CaptionsPath { get => _explicitNullValueCaptionsPath; set { _explicitNullValueCaptionsPath = value; AdditionalData?.Remove("captionsPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsPath"); else _explicitNullProperties?.Remove("captionsPath"); } }
         private string? _explicitNullValueCaptionsPath = default!;
 #nullable restore
 #else
-        public string CaptionsPath { get => _explicitNullValueCaptionsPath; set { _explicitNullValueCaptionsPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsPath"); else _explicitNullProperties?.Remove("captionsPath"); } }
+        public string CaptionsPath { get => _explicitNullValueCaptionsPath; set { _explicitNullValueCaptionsPath = value; AdditionalData?.Remove("captionsPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("captionsPath"); else _explicitNullProperties?.Remove("captionsPath"); } }
         private string _explicitNullValueCaptionsPath = default!;
 #endif
         /// <summary>Comma-separated list of player control identifiers enabled for this library.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Controls { get => _explicitNullValueControls; set { _explicitNullValueControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controls"); else _explicitNullProperties?.Remove("controls"); } }
+        public string? Controls { get => _explicitNullValueControls; set { _explicitNullValueControls = value; AdditionalData?.Remove("controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controls"); else _explicitNullProperties?.Remove("controls"); } }
         private string? _explicitNullValueControls = default!;
 #nullable restore
 #else
-        public string Controls { get => _explicitNullValueControls; set { _explicitNullValueControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controls"); else _explicitNullProperties?.Remove("controls"); } }
+        public string Controls { get => _explicitNullValueControls; set { _explicitNullValueControls = value; AdditionalData?.Remove("controls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("controls"); else _explicitNullProperties?.Remove("controls"); } }
         private string _explicitNullValueControls = default!;
 #endif
         /// <summary>Custom CSS injected into the player. Only populated when the caller explicitly requests it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomCss { get => _explicitNullValueCustomCss; set { _explicitNullValueCustomCss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customCss"); else _explicitNullProperties?.Remove("customCss"); } }
+        public string? CustomCss { get => _explicitNullValueCustomCss; set { _explicitNullValueCustomCss = value; AdditionalData?.Remove("customCss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customCss"); else _explicitNullProperties?.Remove("customCss"); } }
         private string? _explicitNullValueCustomCss = default!;
 #nullable restore
 #else
-        public string CustomCss { get => _explicitNullValueCustomCss; set { _explicitNullValueCustomCss = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customCss"); else _explicitNullProperties?.Remove("customCss"); } }
+        public string CustomCss { get => _explicitNullValueCustomCss; set { _explicitNullValueCustomCss = value; AdditionalData?.Remove("customCss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customCss"); else _explicitNullProperties?.Remove("customCss"); } }
         private string _explicitNullValueCustomCss = default!;
 #endif
         /// <summary>DRM protection tier applied to this video, as an integer cast of the Basic/Enterprise tier enum. Only relevant when EnableDRM is true.</summary>
-        public int? DrmVersion { get => _explicitNullValueDrmVersion; set { _explicitNullValueDrmVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drmVersion"); else _explicitNullProperties?.Remove("drmVersion"); } }
+        public int? DrmVersion { get => _explicitNullValueDrmVersion; set { _explicitNullValueDrmVersion = value; AdditionalData?.Remove("drmVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drmVersion"); else _explicitNullProperties?.Remove("drmVersion"); } }
         private int? _explicitNullValueDrmVersion = default!;
         /// <summary>Whether the player uses a compact control bar layout.</summary>
-        public bool? EnableCompactControls { get => _explicitNullValueEnableCompactControls; set { _explicitNullValueEnableCompactControls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableCompactControls"); else _explicitNullProperties?.Remove("enableCompactControls"); } }
+        public bool? EnableCompactControls { get => _explicitNullValueEnableCompactControls; set { _explicitNullValueEnableCompactControls = value; AdditionalData?.Remove("enableCompactControls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableCompactControls"); else _explicitNullProperties?.Remove("enableCompactControls"); } }
         private bool? _explicitNullValueEnableCompactControls = default!;
         /// <summary>Whether DRM protection is enabled for this video.</summary>
-        public bool? EnableDRM { get => _explicitNullValueEnableDRM; set { _explicitNullValueEnableDRM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableDRM"); else _explicitNullProperties?.Remove("enableDRM"); } }
+        public bool? EnableDRM { get => _explicitNullValueEnableDRM; set { _explicitNullValueEnableDRM = value; AdditionalData?.Remove("enableDRM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableDRM"); else _explicitNullProperties?.Remove("enableDRM"); } }
         private bool? _explicitNullValueEnableDRM = default!;
         /// <summary>Whether MP4 fallback renditions are available for players that cannot use HLS.</summary>
-        public bool? EnableMP4Fallback { get => _explicitNullValueEnableMP4Fallback; set { _explicitNullValueEnableMP4Fallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableMP4Fallback"); else _explicitNullProperties?.Remove("enableMP4Fallback"); } }
+        public bool? EnableMP4Fallback { get => _explicitNullValueEnableMP4Fallback; set { _explicitNullValueEnableMP4Fallback = value; AdditionalData?.Remove("enableMP4Fallback"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableMP4Fallback"); else _explicitNullProperties?.Remove("enableMP4Fallback"); } }
         private bool? _explicitNullValueEnableMP4Fallback = default!;
         /// <summary>Whether JSON-LD structured data (schema.org VideoObject markup) is rendered for this video, e.g. for SEO.</summary>
-        public bool? ExposeVideoMetadata { get => _explicitNullValueExposeVideoMetadata; set { _explicitNullValueExposeVideoMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exposeVideoMetadata"); else _explicitNullProperties?.Remove("exposeVideoMetadata"); } }
+        public bool? ExposeVideoMetadata { get => _explicitNullValueExposeVideoMetadata; set { _explicitNullValueExposeVideoMetadata = value; AdditionalData?.Remove("exposeVideoMetadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exposeVideoMetadata"); else _explicitNullProperties?.Remove("exposeVideoMetadata"); } }
         private bool? _explicitNullValueExposeVideoMetadata = default!;
         /// <summary>CDN URL prefix for the video&apos;s MP4 fallback renditions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FallbackUrl { get => _explicitNullValueFallbackUrl; set { _explicitNullValueFallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackUrl"); else _explicitNullProperties?.Remove("fallbackUrl"); } }
+        public string? FallbackUrl { get => _explicitNullValueFallbackUrl; set { _explicitNullValueFallbackUrl = value; AdditionalData?.Remove("fallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackUrl"); else _explicitNullProperties?.Remove("fallbackUrl"); } }
         private string? _explicitNullValueFallbackUrl = default!;
 #nullable restore
 #else
-        public string FallbackUrl { get => _explicitNullValueFallbackUrl; set { _explicitNullValueFallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackUrl"); else _explicitNullProperties?.Remove("fallbackUrl"); } }
+        public string FallbackUrl { get => _explicitNullValueFallbackUrl; set { _explicitNullValueFallbackUrl = value; AdditionalData?.Remove("fallbackUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallbackUrl"); else _explicitNullProperties?.Remove("fallbackUrl"); } }
         private string _explicitNullValueFallbackUrl = default!;
 #endif
         /// <summary>CSS font-family value used by the player.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        public string? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; AdditionalData?.Remove("fontFamily"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
         private string? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public string FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        public string FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; AdditionalData?.Remove("fontFamily"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
         private string _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>Determines if the video is currently playable using either playlist or original source.</summary>
-        public bool? IsPlayable { get => _explicitNullValueIsPlayable; set { _explicitNullValueIsPlayable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPlayable"); else _explicitNullProperties?.Remove("isPlayable"); } }
+        public bool? IsPlayable { get => _explicitNullValueIsPlayable; set { _explicitNullValueIsPlayable = value; AdditionalData?.Remove("isPlayable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPlayable"); else _explicitNullProperties?.Remove("isPlayable"); } }
         private bool? _explicitNullValueIsPlayable = default!;
         /// <summary>Determines if the HLS playlist is currently playable.</summary>
-        public bool? IsPlaylistPlayable { get => _explicitNullValueIsPlaylistPlayable; set { _explicitNullValueIsPlaylistPlayable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPlaylistPlayable"); else _explicitNullProperties?.Remove("isPlaylistPlayable"); } }
+        public bool? IsPlaylistPlayable { get => _explicitNullValueIsPlaylistPlayable; set { _explicitNullValueIsPlaylistPlayable = value; AdditionalData?.Remove("isPlaylistPlayable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPlaylistPlayable"); else _explicitNullProperties?.Remove("isPlaylistPlayable"); } }
         private bool? _explicitNullValueIsPlaylistPlayable = default!;
         /// <summary>The name of the video library.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LibraryName { get => _explicitNullValueLibraryName; set { _explicitNullValueLibraryName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("libraryName"); else _explicitNullProperties?.Remove("libraryName"); } }
+        public string? LibraryName { get => _explicitNullValueLibraryName; set { _explicitNullValueLibraryName = value; AdditionalData?.Remove("libraryName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("libraryName"); else _explicitNullProperties?.Remove("libraryName"); } }
         private string? _explicitNullValueLibraryName = default!;
 #nullable restore
 #else
-        public string LibraryName { get => _explicitNullValueLibraryName; set { _explicitNullValueLibraryName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("libraryName"); else _explicitNullProperties?.Remove("libraryName"); } }
+        public string LibraryName { get => _explicitNullValueLibraryName; set { _explicitNullValueLibraryName = value; AdditionalData?.Remove("libraryName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("libraryName"); else _explicitNullProperties?.Remove("libraryName"); } }
         private string _explicitNullValueLibraryName = default!;
 #endif
         /// <summary>Maximum vertical resolution allowed for software (L3) Widevine clients when WidevineSdOnlyForL3 is enabled; null otherwise.</summary>
-        public int? MaxSoftwareWidevineResolution { get => _explicitNullValueMaxSoftwareWidevineResolution; set { _explicitNullValueMaxSoftwareWidevineResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxSoftwareWidevineResolution"); else _explicitNullProperties?.Remove("maxSoftwareWidevineResolution"); } }
+        public int? MaxSoftwareWidevineResolution { get => _explicitNullValueMaxSoftwareWidevineResolution; set { _explicitNullValueMaxSoftwareWidevineResolution = value; AdditionalData?.Remove("maxSoftwareWidevineResolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxSoftwareWidevineResolution"); else _explicitNullProperties?.Remove("maxSoftwareWidevineResolution"); } }
         private int? _explicitNullValueMaxSoftwareWidevineResolution = default!;
         /// <summary>CDN URL of the original uploaded source file. Only populated when the library allows early/original playback.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalUrl { get => _explicitNullValueOriginalUrl; set { _explicitNullValueOriginalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalUrl"); else _explicitNullProperties?.Remove("originalUrl"); } }
+        public string? OriginalUrl { get => _explicitNullValueOriginalUrl; set { _explicitNullValueOriginalUrl = value; AdditionalData?.Remove("originalUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalUrl"); else _explicitNullProperties?.Remove("originalUrl"); } }
         private string? _explicitNullValueOriginalUrl = default!;
 #nullable restore
 #else
-        public string OriginalUrl { get => _explicitNullValueOriginalUrl; set { _explicitNullValueOriginalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalUrl"); else _explicitNullProperties?.Remove("originalUrl"); } }
+        public string OriginalUrl { get => _explicitNullValueOriginalUrl; set { _explicitNullValueOriginalUrl = value; AdditionalData?.Remove("originalUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalUrl"); else _explicitNullProperties?.Remove("originalUrl"); } }
         private string _explicitNullValueOriginalUrl = default!;
 #endif
         /// <summary>Comma-separated list of playback speed multipliers offered to the viewer (e.g. &quot;0.5,1,1.5,2&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlaybackSpeeds { get => _explicitNullValuePlaybackSpeeds; set { _explicitNullValuePlaybackSpeeds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbackSpeeds"); else _explicitNullProperties?.Remove("playbackSpeeds"); } }
+        public string? PlaybackSpeeds { get => _explicitNullValuePlaybackSpeeds; set { _explicitNullValuePlaybackSpeeds = value; AdditionalData?.Remove("playbackSpeeds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbackSpeeds"); else _explicitNullProperties?.Remove("playbackSpeeds"); } }
         private string? _explicitNullValuePlaybackSpeeds = default!;
 #nullable restore
 #else
-        public string PlaybackSpeeds { get => _explicitNullValuePlaybackSpeeds; set { _explicitNullValuePlaybackSpeeds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbackSpeeds"); else _explicitNullProperties?.Remove("playbackSpeeds"); } }
+        public string PlaybackSpeeds { get => _explicitNullValuePlaybackSpeeds; set { _explicitNullValuePlaybackSpeeds = value; AdditionalData?.Remove("playbackSpeeds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playbackSpeeds"); else _explicitNullProperties?.Remove("playbackSpeeds"); } }
         private string _explicitNullValuePlaybackSpeeds = default!;
 #endif
         /// <summary>The player&apos;s accent/key color, as a CSS color value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlayerKeyColor { get => _explicitNullValuePlayerKeyColor; set { _explicitNullValuePlayerKeyColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playerKeyColor"); else _explicitNullProperties?.Remove("playerKeyColor"); } }
+        public string? PlayerKeyColor { get => _explicitNullValuePlayerKeyColor; set { _explicitNullValuePlayerKeyColor = value; AdditionalData?.Remove("playerKeyColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playerKeyColor"); else _explicitNullProperties?.Remove("playerKeyColor"); } }
         private string? _explicitNullValuePlayerKeyColor = default!;
 #nullable restore
 #else
-        public string PlayerKeyColor { get => _explicitNullValuePlayerKeyColor; set { _explicitNullValuePlayerKeyColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playerKeyColor"); else _explicitNullProperties?.Remove("playerKeyColor"); } }
+        public string PlayerKeyColor { get => _explicitNullValuePlayerKeyColor; set { _explicitNullValuePlayerKeyColor = value; AdditionalData?.Remove("playerKeyColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playerKeyColor"); else _explicitNullProperties?.Remove("playerKeyColor"); } }
         private string _explicitNullValuePlayerKeyColor = default!;
 #endif
         /// <summary>Preferred playback source for the current video state.</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource? PreferredPlaybackSource { get => _explicitNullValuePreferredPlaybackSource; set { _explicitNullValuePreferredPlaybackSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferredPlaybackSource"); else _explicitNullProperties?.Remove("preferredPlaybackSource"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource? PreferredPlaybackSource { get => _explicitNullValuePreferredPlaybackSource; set { _explicitNullValuePreferredPlaybackSource = value; AdditionalData?.Remove("preferredPlaybackSource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preferredPlaybackSource"); else _explicitNullProperties?.Remove("preferredPlaybackSource"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource? _explicitNullValuePreferredPlaybackSource = default!;
         /// <summary>CDN URL of the video&apos;s animated preview (scrub thumbnail).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
+        public string? PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; AdditionalData?.Remove("previewUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
         private string? _explicitNullValuePreviewUrl = default!;
 #nullable restore
 #else
-        public string PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
+        public string PreviewUrl { get => _explicitNullValuePreviewUrl; set { _explicitNullValuePreviewUrl = value; AdditionalData?.Remove("previewUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("previewUrl"); else _explicitNullProperties?.Remove("previewUrl"); } }
         private string _explicitNullValuePreviewUrl = default!;
 #endif
         /// <summary>The pull zone ID backing the video library&apos;s CDN delivery.</summary>
-        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
+        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; AdditionalData?.Remove("pullZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
         private long? _explicitNullValuePullZoneId = default!;
         /// <summary>Whether the player resumes from the viewer&apos;s last watched position.</summary>
-        public bool? RememberPlayerPosition { get => _explicitNullValueRememberPlayerPosition; set { _explicitNullValueRememberPlayerPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rememberPlayerPosition"); else _explicitNullProperties?.Remove("rememberPlayerPosition"); } }
+        public bool? RememberPlayerPosition { get => _explicitNullValueRememberPlayerPosition; set { _explicitNullValueRememberPlayerPosition = value; AdditionalData?.Remove("rememberPlayerPosition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rememberPlayerPosition"); else _explicitNullProperties?.Remove("rememberPlayerPosition"); } }
         private bool? _explicitNullValueRememberPlayerPosition = default!;
         /// <summary>CDN URL of the directory containing the video&apos;s seek/scrub thumbnail sprites.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SeekPath { get => _explicitNullValueSeekPath; set { _explicitNullValueSeekPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seekPath"); else _explicitNullProperties?.Remove("seekPath"); } }
+        public string? SeekPath { get => _explicitNullValueSeekPath; set { _explicitNullValueSeekPath = value; AdditionalData?.Remove("seekPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seekPath"); else _explicitNullProperties?.Remove("seekPath"); } }
         private string? _explicitNullValueSeekPath = default!;
 #nullable restore
 #else
-        public string SeekPath { get => _explicitNullValueSeekPath; set { _explicitNullValueSeekPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seekPath"); else _explicitNullProperties?.Remove("seekPath"); } }
+        public string SeekPath { get => _explicitNullValueSeekPath; set { _explicitNullValueSeekPath = value; AdditionalData?.Remove("seekPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seekPath"); else _explicitNullProperties?.Remove("seekPath"); } }
         private string _explicitNullValueSeekPath = default!;
 #endif
         /// <summary>Whether the attention heatmap is enabled for this library&apos;s player.</summary>
-        public bool? ShowHeatmap { get => _explicitNullValueShowHeatmap; set { _explicitNullValueShowHeatmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showHeatmap"); else _explicitNullProperties?.Remove("showHeatmap"); } }
+        public bool? ShowHeatmap { get => _explicitNullValueShowHeatmap; set { _explicitNullValueShowHeatmap = value; AdditionalData?.Remove("showHeatmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showHeatmap"); else _explicitNullProperties?.Remove("showHeatmap"); } }
         private bool? _explicitNullValueShowHeatmap = default!;
         /// <summary>CDN URL of the video&apos;s thumbnail image.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
+        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; AdditionalData?.Remove("thumbnailUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
         private string? _explicitNullValueThumbnailUrl = default!;
 #nullable restore
 #else
-        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
+        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; AdditionalData?.Remove("thumbnailUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailUrl"); else _explicitNullProperties?.Remove("thumbnailUrl"); } }
         private string _explicitNullValueThumbnailUrl = default!;
 #endif
         /// <summary>Whether the library&apos;s CDN delivery requires signed URLs for playback assets (segments, manifests, thumbnails, etc.). This is a separate setting from whether this endpoint itself required a token to return data.</summary>
-        public bool? TokenAuthEnabled { get => _explicitNullValueTokenAuthEnabled; set { _explicitNullValueTokenAuthEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokenAuthEnabled"); else _explicitNullProperties?.Remove("tokenAuthEnabled"); } }
+        public bool? TokenAuthEnabled { get => _explicitNullValueTokenAuthEnabled; set { _explicitNullValueTokenAuthEnabled = value; AdditionalData?.Remove("tokenAuthEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokenAuthEnabled"); else _explicitNullProperties?.Remove("tokenAuthEnabled"); } }
         private bool? _explicitNullValueTokenAuthEnabled = default!;
         /// <summary>Locale code for the player&apos;s UI language (e.g. &quot;en&quot;).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UiLanguage { get => _explicitNullValueUiLanguage; set { _explicitNullValueUiLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiLanguage"); else _explicitNullProperties?.Remove("uiLanguage"); } }
+        public string? UiLanguage { get => _explicitNullValueUiLanguage; set { _explicitNullValueUiLanguage = value; AdditionalData?.Remove("uiLanguage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiLanguage"); else _explicitNullProperties?.Remove("uiLanguage"); } }
         private string? _explicitNullValueUiLanguage = default!;
 #nullable restore
 #else
-        public string UiLanguage { get => _explicitNullValueUiLanguage; set { _explicitNullValueUiLanguage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiLanguage"); else _explicitNullProperties?.Remove("uiLanguage"); } }
+        public string UiLanguage { get => _explicitNullValueUiLanguage; set { _explicitNullValueUiLanguage = value; AdditionalData?.Remove("uiLanguage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uiLanguage"); else _explicitNullProperties?.Remove("uiLanguage"); } }
         private string _explicitNullValueUiLanguage = default!;
 #endif
         /// <summary>VAST ad tag URL used to serve ads in the player; empty when ads are disabled.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VastTagUrl { get => _explicitNullValueVastTagUrl; set { _explicitNullValueVastTagUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vastTagUrl"); else _explicitNullProperties?.Remove("vastTagUrl"); } }
+        public string? VastTagUrl { get => _explicitNullValueVastTagUrl; set { _explicitNullValueVastTagUrl = value; AdditionalData?.Remove("vastTagUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vastTagUrl"); else _explicitNullProperties?.Remove("vastTagUrl"); } }
         private string? _explicitNullValueVastTagUrl = default!;
 #nullable restore
 #else
-        public string VastTagUrl { get => _explicitNullValueVastTagUrl; set { _explicitNullValueVastTagUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vastTagUrl"); else _explicitNullProperties?.Remove("vastTagUrl"); } }
+        public string VastTagUrl { get => _explicitNullValueVastTagUrl; set { _explicitNullValueVastTagUrl = value; AdditionalData?.Remove("vastTagUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vastTagUrl"); else _explicitNullProperties?.Remove("vastTagUrl"); } }
         private string _explicitNullValueVastTagUrl = default!;
 #endif
         /// <summary>Publisher ID for the vi.ai advertising integration; ads are enabled in the player when this is non-empty.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViAiPublisherId { get => _explicitNullValueViAiPublisherId; set { _explicitNullValueViAiPublisherId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viAiPublisherId"); else _explicitNullProperties?.Remove("viAiPublisherId"); } }
+        public string? ViAiPublisherId { get => _explicitNullValueViAiPublisherId; set { _explicitNullValueViAiPublisherId = value; AdditionalData?.Remove("viAiPublisherId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viAiPublisherId"); else _explicitNullProperties?.Remove("viAiPublisherId"); } }
         private string? _explicitNullValueViAiPublisherId = default!;
 #nullable restore
 #else
-        public string ViAiPublisherId { get => _explicitNullValueViAiPublisherId; set { _explicitNullValueViAiPublisherId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viAiPublisherId"); else _explicitNullProperties?.Remove("viAiPublisherId"); } }
+        public string ViAiPublisherId { get => _explicitNullValueViAiPublisherId; set { _explicitNullValueViAiPublisherId = value; AdditionalData?.Remove("viAiPublisherId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viAiPublisherId"); else _explicitNullProperties?.Remove("viAiPublisherId"); } }
         private string _explicitNullValueViAiPublisherId = default!;
 #endif
         /// <summary>Video data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo? Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo? Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; AdditionalData?.Remove("video"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo? _explicitNullValueVideo = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo Video { get => _explicitNullValueVideo; set { _explicitNullValueVideo = value; AdditionalData?.Remove("video"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("video"); else _explicitNullProperties?.Remove("video"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelVideo _explicitNullValueVideo = default!;
 #endif
         /// <summary>CDN URL of the video&apos;s HLS master playlist.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoPlaylistUrl { get => _explicitNullValueVideoPlaylistUrl; set { _explicitNullValueVideoPlaylistUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoPlaylistUrl"); else _explicitNullProperties?.Remove("videoPlaylistUrl"); } }
+        public string? VideoPlaylistUrl { get => _explicitNullValueVideoPlaylistUrl; set { _explicitNullValueVideoPlaylistUrl = value; AdditionalData?.Remove("videoPlaylistUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoPlaylistUrl"); else _explicitNullProperties?.Remove("videoPlaylistUrl"); } }
         private string? _explicitNullValueVideoPlaylistUrl = default!;
 #nullable restore
 #else
-        public string VideoPlaylistUrl { get => _explicitNullValueVideoPlaylistUrl; set { _explicitNullValueVideoPlaylistUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoPlaylistUrl"); else _explicitNullProperties?.Remove("videoPlaylistUrl"); } }
+        public string VideoPlaylistUrl { get => _explicitNullValueVideoPlaylistUrl; set { _explicitNullValueVideoPlaylistUrl = value; AdditionalData?.Remove("videoPlaylistUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoPlaylistUrl"); else _explicitNullProperties?.Remove("videoPlaylistUrl"); } }
         private string _explicitNullValueVideoPlaylistUrl = default!;
 #endif
         /// <summary>EME robustness string corresponding to WidevineMinClientSecurityLevel (e.g. &quot;SW_SECURE_CRYPTO&quot;, &quot;HW_SECURE_DECODE&quot;); null when no minimum level applies.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WidevineEmeRobustness { get => _explicitNullValueWidevineEmeRobustness; set { _explicitNullValueWidevineEmeRobustness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineEmeRobustness"); else _explicitNullProperties?.Remove("widevineEmeRobustness"); } }
+        public string? WidevineEmeRobustness { get => _explicitNullValueWidevineEmeRobustness; set { _explicitNullValueWidevineEmeRobustness = value; AdditionalData?.Remove("widevineEmeRobustness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineEmeRobustness"); else _explicitNullProperties?.Remove("widevineEmeRobustness"); } }
         private string? _explicitNullValueWidevineEmeRobustness = default!;
 #nullable restore
 #else
-        public string WidevineEmeRobustness { get => _explicitNullValueWidevineEmeRobustness; set { _explicitNullValueWidevineEmeRobustness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineEmeRobustness"); else _explicitNullProperties?.Remove("widevineEmeRobustness"); } }
+        public string WidevineEmeRobustness { get => _explicitNullValueWidevineEmeRobustness; set { _explicitNullValueWidevineEmeRobustness = value; AdditionalData?.Remove("widevineEmeRobustness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineEmeRobustness"); else _explicitNullProperties?.Remove("widevineEmeRobustness"); } }
         private string _explicitNullValueWidevineEmeRobustness = default!;
 #endif
         /// <summary>Minimum required Widevine client security level (1-3). Ignored (always null here) when WidevineSdOnlyForL3 is enabled, since that setting takes precedence.</summary>
-        public int? WidevineMinClientSecurityLevel { get => _explicitNullValueWidevineMinClientSecurityLevel; set { _explicitNullValueWidevineMinClientSecurityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineMinClientSecurityLevel"); else _explicitNullProperties?.Remove("widevineMinClientSecurityLevel"); } }
+        public int? WidevineMinClientSecurityLevel { get => _explicitNullValueWidevineMinClientSecurityLevel; set { _explicitNullValueWidevineMinClientSecurityLevel = value; AdditionalData?.Remove("widevineMinClientSecurityLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineMinClientSecurityLevel"); else _explicitNullProperties?.Remove("widevineMinClientSecurityLevel"); } }
         private int? _explicitNullValueWidevineMinClientSecurityLevel = default!;
         /// <summary>When true, Widevine L3 (software-only) clients are capped to SD playback while stronger clients play at full quality; overrides WidevineMinClientSecurityLevel when both are set.</summary>
-        public bool? WidevineSdOnlyForL3 { get => _explicitNullValueWidevineSdOnlyForL3; set { _explicitNullValueWidevineSdOnlyForL3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineSdOnlyForL3"); else _explicitNullProperties?.Remove("widevineSdOnlyForL3"); } }
+        public bool? WidevineSdOnlyForL3 { get => _explicitNullValueWidevineSdOnlyForL3; set { _explicitNullValueWidevineSdOnlyForL3 = value; AdditionalData?.Remove("widevineSdOnlyForL3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("widevineSdOnlyForL3"); else _explicitNullProperties?.Remove("widevineSdOnlyForL3"); } }
         private bool? _explicitNullValueWidevineSdOnlyForL3 = default!;
         /// <summary>Pull zone tier associated with this video library (integer enum value).</summary>
-        public int? ZoneTier { get => _explicitNullValueZoneTier; set { _explicitNullValueZoneTier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zoneTier"); else _explicitNullProperties?.Remove("zoneTier"); } }
+        public int? ZoneTier { get => _explicitNullValueZoneTier; set { _explicitNullValueZoneTier = value; AdditionalData?.Remove("zoneTier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("zoneTier"); else _explicitNullProperties?.Remove("zoneTier"); } }
         private int? _explicitNullValueZoneTier = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModel"/> and sets the default values.
@@ -359,7 +397,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "originalUrl", n => { OriginalUrl = n.GetStringValue(); } },
                 { "playbackSpeeds", n => { PlaybackSpeeds = n.GetStringValue(); } },
                 { "playerKeyColor", n => { PlayerKeyColor = n.GetStringValue(); } },
-                { "preferredPlaybackSource", n => { PreferredPlaybackSource = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource>(); } },
+                { "preferredPlaybackSource", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoPlayDataModelPreferredPlaybackSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePreferredPlaybackSource = default; _explicitNullProperties?.Remove("preferredPlaybackSource"); AdditionalData["preferredPlaybackSource"] = unknown; } else { PreferredPlaybackSource = parsed; AdditionalData.Remove("preferredPlaybackSource"); } } },
                 { "previewUrl", n => { PreviewUrl = n.GetStringValue(); } },
                 { "pullZoneId", n => { PullZoneId = n.GetLongValue(); } },
                 { "rememberPlayerPosition", n => { RememberPlayerPosition = n.GetBoolValue(); } },

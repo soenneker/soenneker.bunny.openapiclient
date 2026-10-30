@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("continuationToken") is { } nullNodeContinuationToken && nullNodeContinuationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContinuationToken = null;
-            if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
-            if (parseNode.GetChildNode("hasMoreData") is { } nullNodeHasMoreData && nullNodeHasMoreData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMoreData = null;
-            if (parseNode.GetChildNode("logs") is { } nullNodeLogs && nullNodeLogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logs = null;
-            if (parseNode.GetChildNode("startToken") is { } nullNodeStartToken && nullNodeStartToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToken = null;
+            if (parseNode.GetChildNode("continuationToken") is null) { _explicitNullValueContinuationToken = default!; _explicitNullProperties?.Remove("continuationToken"); }
+            else if (parseNode.GetChildNode("continuationToken") is { } nullNodeContinuationToken && nullNodeContinuationToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContinuationToken = null;
+            if (parseNode.GetChildNode("errorResponse") is null) { _explicitNullValueErrorResponse = default!; _explicitNullProperties?.Remove("errorResponse"); }
+            else if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
+            if (parseNode.GetChildNode("hasMoreData") is null) { _explicitNullValueHasMoreData = default!; _explicitNullProperties?.Remove("hasMoreData"); }
+            else if (parseNode.GetChildNode("hasMoreData") is { } nullNodeHasMoreData && nullNodeHasMoreData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasMoreData = null;
+            if (parseNode.GetChildNode("logs") is null) { _explicitNullValueLogs = default!; _explicitNullProperties?.Remove("logs"); }
+            else if (parseNode.GetChildNode("logs") is { } nullNodeLogs && nullNodeLogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logs = null;
+            if (parseNode.GetChildNode("startToken") is null) { _explicitNullValueStartToken = default!; _explicitNullProperties?.Remove("startToken"); }
+            else if (parseNode.GetChildNode("startToken") is { } nullNodeStartToken && nullNodeStartToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartToken = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,44 +34,44 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The continuationToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("continuationToken"); else _explicitNullProperties?.Remove("continuationToken"); } }
+        public string? ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; AdditionalData?.Remove("continuationToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("continuationToken"); else _explicitNullProperties?.Remove("continuationToken"); } }
         private string? _explicitNullValueContinuationToken = default!;
 #nullable restore
 #else
-        public string ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("continuationToken"); else _explicitNullProperties?.Remove("continuationToken"); } }
+        public string ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; AdditionalData?.Remove("continuationToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("continuationToken"); else _explicitNullProperties?.Remove("continuationToken"); } }
         private string _explicitNullValueContinuationToken = default!;
 #endif
         /// <summary>Generic response object containing status information for API operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? _explicitNullValueErrorResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse _explicitNullValueErrorResponse = default!;
 #endif
         /// <summary>The hasMoreData property</summary>
-        public bool? HasMoreData { get => _explicitNullValueHasMoreData; set { _explicitNullValueHasMoreData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasMoreData"); else _explicitNullProperties?.Remove("hasMoreData"); } }
+        public bool? HasMoreData { get => _explicitNullValueHasMoreData; set { _explicitNullValueHasMoreData = value; AdditionalData?.Remove("hasMoreData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasMoreData"); else _explicitNullProperties?.Remove("hasMoreData"); } }
         private bool? _explicitNullValueHasMoreData = default!;
         /// <summary>The logs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.Log>? Logs { get => _explicitNullValueLogs; set { _explicitNullValueLogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logs"); else _explicitNullProperties?.Remove("logs"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.Log>? Logs { get => _explicitNullValueLogs; set { _explicitNullValueLogs = value; AdditionalData?.Remove("logs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logs"); else _explicitNullProperties?.Remove("logs"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.Log>? _explicitNullValueLogs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.Log> Logs { get => _explicitNullValueLogs; set { _explicitNullValueLogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logs"); else _explicitNullProperties?.Remove("logs"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.Log> Logs { get => _explicitNullValueLogs; set { _explicitNullValueLogs = value; AdditionalData?.Remove("logs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logs"); else _explicitNullProperties?.Remove("logs"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.Log> _explicitNullValueLogs = default!;
 #endif
         /// <summary>The startToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartToken { get => _explicitNullValueStartToken; set { _explicitNullValueStartToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToken"); else _explicitNullProperties?.Remove("startToken"); } }
+        public string? StartToken { get => _explicitNullValueStartToken; set { _explicitNullValueStartToken = value; AdditionalData?.Remove("startToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToken"); else _explicitNullProperties?.Remove("startToken"); } }
         private string? _explicitNullValueStartToken = default!;
 #nullable restore
 #else
-        public string StartToken { get => _explicitNullValueStartToken; set { _explicitNullValueStartToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToken"); else _explicitNullProperties?.Remove("startToken"); } }
+        public string StartToken { get => _explicitNullValueStartToken; set { _explicitNullValueStartToken = value; AdditionalData?.Remove("startToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startToken"); else _explicitNullProperties?.Remove("startToken"); } }
         private string _explicitNullValueStartToken = default!;
 #endif
         /// <summary>

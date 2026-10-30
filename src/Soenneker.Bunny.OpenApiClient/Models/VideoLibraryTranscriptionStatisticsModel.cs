@@ -17,23 +17,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("TotalTranscriptionSeconds") is { } nullNodeTotalTranscriptionSeconds && nullNodeTotalTranscriptionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTranscriptionSeconds = null;
-            if (parseNode.GetChildNode("TranscriptionSecondsChart") is { } nullNodeTranscriptionSecondsChart && nullNodeTranscriptionSecondsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionSecondsChart = null;
+            if (parseNode.GetChildNode("TotalTranscriptionSeconds") is null) { _explicitNullValueTotalTranscriptionSeconds = default!; _explicitNullProperties?.Remove("TotalTranscriptionSeconds"); }
+            else if (parseNode.GetChildNode("TotalTranscriptionSeconds") is { } nullNodeTotalTranscriptionSeconds && nullNodeTotalTranscriptionSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTranscriptionSeconds = null;
+            if (parseNode.GetChildNode("TranscriptionSecondsChart") is null) { _explicitNullValueTranscriptionSecondsChart = default!; _explicitNullProperties?.Remove("TranscriptionSecondsChart"); }
+            else if (parseNode.GetChildNode("TranscriptionSecondsChart") is { } nullNodeTranscriptionSecondsChart && nullNodeTranscriptionSecondsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranscriptionSecondsChart = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The TotalTranscriptionSeconds property</summary>
-        public long? TotalTranscriptionSeconds { get => _explicitNullValueTotalTranscriptionSeconds; set { _explicitNullValueTotalTranscriptionSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTranscriptionSeconds"); else _explicitNullProperties?.Remove("TotalTranscriptionSeconds"); } }
+        public long? TotalTranscriptionSeconds { get => _explicitNullValueTotalTranscriptionSeconds; set { _explicitNullValueTotalTranscriptionSeconds = value; AdditionalData?.Remove("TotalTranscriptionSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalTranscriptionSeconds"); else _explicitNullProperties?.Remove("TotalTranscriptionSeconds"); } }
         private long? _explicitNullValueTotalTranscriptionSeconds = default!;
         /// <summary>The TranscriptionSecondsChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty2? TranscriptionSecondsChart { get => _explicitNullValueTranscriptionSecondsChart; set { _explicitNullValueTranscriptionSecondsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionSecondsChart"); else _explicitNullProperties?.Remove("TranscriptionSecondsChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty2? TranscriptionSecondsChart { get => _explicitNullValueTranscriptionSecondsChart; set { _explicitNullValueTranscriptionSecondsChart = value; AdditionalData?.Remove("TranscriptionSecondsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionSecondsChart"); else _explicitNullProperties?.Remove("TranscriptionSecondsChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty2? _explicitNullValueTranscriptionSecondsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty2 TranscriptionSecondsChart { get => _explicitNullValueTranscriptionSecondsChart; set { _explicitNullValueTranscriptionSecondsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionSecondsChart"); else _explicitNullProperties?.Remove("TranscriptionSecondsChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty2 TranscriptionSecondsChart { get => _explicitNullValueTranscriptionSecondsChart; set { _explicitNullValueTranscriptionSecondsChart = value; AdditionalData?.Remove("TranscriptionSecondsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TranscriptionSecondsChart"); else _explicitNullProperties?.Remove("TranscriptionSecondsChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryTranscriptionStatisticsModelTranscriptionSecondsChartProperty2 _explicitNullValueTranscriptionSecondsChart = default!;
 #endif
         /// <summary>

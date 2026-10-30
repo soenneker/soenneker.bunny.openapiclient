@@ -17,13 +17,20 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("month") is { } nullNodeMonth && nullNodeMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Month = null;
-            if (parseNode.GetChildNode("segments") is { } nullNodeSegments && nullNodeSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segments = null;
-            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
-            if (parseNode.GetChildNode("totalCleanRequests") is { } nullNodeTotalCleanRequests && nullNodeTotalCleanRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCleanRequests = null;
-            if (parseNode.GetChildNode("totalOverage") is { } nullNodeTotalOverage && nullNodeTotalOverage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalOverage = null;
-            if (parseNode.GetChildNode("year") is { } nullNodeYear && nullNodeYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Year = null;
+            if (parseNode.GetChildNode("error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("error"); }
+            else if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("month") is null) { _explicitNullValueMonth = default!; _explicitNullProperties?.Remove("month"); }
+            else if (parseNode.GetChildNode("month") is { } nullNodeMonth && nullNodeMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Month = null;
+            if (parseNode.GetChildNode("segments") is null) { _explicitNullValueSegments = default!; _explicitNullProperties?.Remove("segments"); }
+            else if (parseNode.GetChildNode("segments") is { } nullNodeSegments && nullNodeSegments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Segments = null;
+            if (parseNode.GetChildNode("shieldZoneId") is null) { _explicitNullValueShieldZoneId = default!; _explicitNullProperties?.Remove("shieldZoneId"); }
+            else if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+            if (parseNode.GetChildNode("totalCleanRequests") is null) { _explicitNullValueTotalCleanRequests = default!; _explicitNullProperties?.Remove("totalCleanRequests"); }
+            else if (parseNode.GetChildNode("totalCleanRequests") is { } nullNodeTotalCleanRequests && nullNodeTotalCleanRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCleanRequests = null;
+            if (parseNode.GetChildNode("totalOverage") is null) { _explicitNullValueTotalOverage = default!; _explicitNullProperties?.Remove("totalOverage"); }
+            else if (parseNode.GetChildNode("totalOverage") is { } nullNodeTotalOverage && nullNodeTotalOverage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalOverage = null;
+            if (parseNode.GetChildNode("year") is null) { _explicitNullValueYear = default!; _explicitNullProperties?.Remove("year"); }
+            else if (parseNode.GetChildNode("year") is { } nullNodeYear && nullNodeYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Year = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,37 +38,37 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Generic response object containing status information for API operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse _explicitNullValueError = default!;
 #endif
         /// <summary>The month property</summary>
-        public int? Month { get => _explicitNullValueMonth; set { _explicitNullValueMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("month"); else _explicitNullProperties?.Remove("month"); } }
+        public int? Month { get => _explicitNullValueMonth; set { _explicitNullValueMonth = value; AdditionalData?.Remove("month"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("month"); else _explicitNullProperties?.Remove("month"); } }
         private int? _explicitNullValueMonth = default!;
         /// <summary>The segments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment>? Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment>? Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; AdditionalData?.Remove("segments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment>? _explicitNullValueSegments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment> Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment> Segments { get => _explicitNullValueSegments; set { _explicitNullValueSegments = value; AdditionalData?.Remove("segments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("segments"); else _explicitNullProperties?.Remove("segments"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment> _explicitNullValueSegments = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
-        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private int? _explicitNullValueShieldZoneId = default!;
         /// <summary>The totalCleanRequests property</summary>
-        public long? TotalCleanRequests { get => _explicitNullValueTotalCleanRequests; set { _explicitNullValueTotalCleanRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCleanRequests"); else _explicitNullProperties?.Remove("totalCleanRequests"); } }
+        public long? TotalCleanRequests { get => _explicitNullValueTotalCleanRequests; set { _explicitNullValueTotalCleanRequests = value; AdditionalData?.Remove("totalCleanRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCleanRequests"); else _explicitNullProperties?.Remove("totalCleanRequests"); } }
         private long? _explicitNullValueTotalCleanRequests = default!;
         /// <summary>The totalOverage property</summary>
-        public long? TotalOverage { get => _explicitNullValueTotalOverage; set { _explicitNullValueTotalOverage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalOverage"); else _explicitNullProperties?.Remove("totalOverage"); } }
+        public long? TotalOverage { get => _explicitNullValueTotalOverage; set { _explicitNullValueTotalOverage = value; AdditionalData?.Remove("totalOverage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalOverage"); else _explicitNullProperties?.Remove("totalOverage"); } }
         private long? _explicitNullValueTotalOverage = default!;
         /// <summary>The year property</summary>
-        public int? Year { get => _explicitNullValueYear; set { _explicitNullValueYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("year"); else _explicitNullProperties?.Remove("year"); } }
+        public int? Year { get => _explicitNullValueYear; set { _explicitNullValueYear = value; AdditionalData?.Remove("year"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("year"); else _explicitNullProperties?.Remove("year"); } }
         private int? _explicitNullValueYear = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneMonthlyOveragesResult"/> and sets the default values.

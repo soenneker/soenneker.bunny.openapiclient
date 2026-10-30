@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Custom404FilePath") is { } nullNodeCustom404FilePath && nullNodeCustom404FilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Custom404FilePath = null;
-            if (parseNode.GetChildNode("OriginUrl") is { } nullNodeOriginUrl && nullNodeOriginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginUrl = null;
-            if (parseNode.GetChildNode("ReplicationZones") is { } nullNodeReplicationZones && nullNodeReplicationZones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationZones = null;
-            if (parseNode.GetChildNode("Rewrite404To200") is { } nullNodeRewrite404To200 && nullNodeRewrite404To200.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rewrite404To200 = null;
+            if (parseNode.GetChildNode("Custom404FilePath") is null) { _explicitNullValueCustom404FilePath = default!; _explicitNullProperties?.Remove("Custom404FilePath"); }
+            else if (parseNode.GetChildNode("Custom404FilePath") is { } nullNodeCustom404FilePath && nullNodeCustom404FilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Custom404FilePath = null;
+            if (parseNode.GetChildNode("OriginUrl") is null) { _explicitNullValueOriginUrl = default!; _explicitNullProperties?.Remove("OriginUrl"); }
+            else if (parseNode.GetChildNode("OriginUrl") is { } nullNodeOriginUrl && nullNodeOriginUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginUrl = null;
+            if (parseNode.GetChildNode("ReplicationZones") is null) { _explicitNullValueReplicationZones = default!; _explicitNullProperties?.Remove("ReplicationZones"); }
+            else if (parseNode.GetChildNode("ReplicationZones") is { } nullNodeReplicationZones && nullNodeReplicationZones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationZones = null;
+            if (parseNode.GetChildNode("Rewrite404To200") is null) { _explicitNullValueRewrite404To200 = default!; _explicitNullProperties?.Remove("Rewrite404To200"); }
+            else if (parseNode.GetChildNode("Rewrite404To200") is { } nullNodeRewrite404To200 && nullNodeRewrite404To200.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rewrite404To200 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The path to the custom file that will be returned in a case of 404</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Custom404FilePath { get => _explicitNullValueCustom404FilePath; set { _explicitNullValueCustom404FilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Custom404FilePath"); else _explicitNullProperties?.Remove("Custom404FilePath"); } }
+        public string? Custom404FilePath { get => _explicitNullValueCustom404FilePath; set { _explicitNullValueCustom404FilePath = value; AdditionalData?.Remove("Custom404FilePath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Custom404FilePath"); else _explicitNullProperties?.Remove("Custom404FilePath"); } }
         private string? _explicitNullValueCustom404FilePath = default!;
 #nullable restore
 #else
-        public string Custom404FilePath { get => _explicitNullValueCustom404FilePath; set { _explicitNullValueCustom404FilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Custom404FilePath"); else _explicitNullProperties?.Remove("Custom404FilePath"); } }
+        public string Custom404FilePath { get => _explicitNullValueCustom404FilePath; set { _explicitNullValueCustom404FilePath = value; AdditionalData?.Remove("Custom404FilePath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Custom404FilePath"); else _explicitNullProperties?.Remove("Custom404FilePath"); } }
         private string _explicitNullValueCustom404FilePath = default!;
 #endif
         /// <summary>The origin URL of the storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        public string? OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; AdditionalData?.Remove("OriginUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
         private string? _explicitNullValueOriginUrl = default!;
 #nullable restore
 #else
-        public string OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
+        public string OriginUrl { get => _explicitNullValueOriginUrl; set { _explicitNullValueOriginUrl = value; AdditionalData?.Remove("OriginUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginUrl"); else _explicitNullProperties?.Remove("OriginUrl"); } }
         private string _explicitNullValueOriginUrl = default!;
 #endif
         /// <summary>The list of replication zones enabld for the storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReplicationZones { get => _explicitNullValueReplicationZones; set { _explicitNullValueReplicationZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationZones"); else _explicitNullProperties?.Remove("ReplicationZones"); } }
+        public List<string>? ReplicationZones { get => _explicitNullValueReplicationZones; set { _explicitNullValueReplicationZones = value; AdditionalData?.Remove("ReplicationZones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationZones"); else _explicitNullProperties?.Remove("ReplicationZones"); } }
         private List<string>? _explicitNullValueReplicationZones = default!;
 #nullable restore
 #else
-        public List<string> ReplicationZones { get => _explicitNullValueReplicationZones; set { _explicitNullValueReplicationZones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationZones"); else _explicitNullProperties?.Remove("ReplicationZones"); } }
+        public List<string> ReplicationZones { get => _explicitNullValueReplicationZones; set { _explicitNullValueReplicationZones = value; AdditionalData?.Remove("ReplicationZones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationZones"); else _explicitNullProperties?.Remove("ReplicationZones"); } }
         private List<string> _explicitNullValueReplicationZones = default!;
 #endif
         /// <summary>Rewrite 404 status code to 200 for URLs without extension</summary>
-        public bool? Rewrite404To200 { get => _explicitNullValueRewrite404To200; set { _explicitNullValueRewrite404To200 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Rewrite404To200"); else _explicitNullProperties?.Remove("Rewrite404To200"); } }
+        public bool? Rewrite404To200 { get => _explicitNullValueRewrite404To200; set { _explicitNullValueRewrite404To200 = value; AdditionalData?.Remove("Rewrite404To200"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Rewrite404To200"); else _explicitNullProperties?.Remove("Rewrite404To200"); } }
         private bool? _explicitNullValueRewrite404To200 = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneSettingsModel"/> and sets the default values.

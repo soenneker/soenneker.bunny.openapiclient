@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
-            if (parseNode.GetChildNode("PullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
-            if (parseNode.GetChildNode("TrafficServed") is { } nullNodeTrafficServed && nullNodeTrafficServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficServed = null;
+            if (parseNode.GetChildNode("Hostname") is null) { _explicitNullValueHostname = default!; _explicitNullProperties?.Remove("Hostname"); }
+            else if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
+            if (parseNode.GetChildNode("PullZoneId") is null) { _explicitNullValuePullZoneId = default!; _explicitNullProperties?.Remove("PullZoneId"); }
+            else if (parseNode.GetChildNode("PullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
+            if (parseNode.GetChildNode("TrafficServed") is null) { _explicitNullValueTrafficServed = default!; _explicitNullProperties?.Remove("TrafficServed"); }
+            else if (parseNode.GetChildNode("TrafficServed") is { } nullNodeTrafficServed && nullNodeTrafficServed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficServed = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Hostname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string? _explicitNullValueHostname = default!;
 #nullable restore
 #else
-        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string _explicitNullValueHostname = default!;
 #endif
         /// <summary>The PullZoneId property</summary>
-        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneId"); else _explicitNullProperties?.Remove("PullZoneId"); } }
+        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; AdditionalData?.Remove("PullZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneId"); else _explicitNullProperties?.Remove("PullZoneId"); } }
         private long? _explicitNullValuePullZoneId = default!;
         /// <summary>The TrafficServed property</summary>
-        public double? TrafficServed { get => _explicitNullValueTrafficServed; set { _explicitNullValueTrafficServed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficServed"); else _explicitNullProperties?.Remove("TrafficServed"); } }
+        public double? TrafficServed { get => _explicitNullValueTrafficServed; set { _explicitNullValueTrafficServed = value; AdditionalData?.Remove("TrafficServed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficServed"); else _explicitNullProperties?.Remove("TrafficServed"); } }
         private double? _explicitNullValueTrafficServed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerAttachedZoneModel"/> and sets the default values.

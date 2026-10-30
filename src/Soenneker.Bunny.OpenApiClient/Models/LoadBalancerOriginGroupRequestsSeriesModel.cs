@@ -17,34 +17,37 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("OriginGroupId") is { } nullNodeOriginGroupId && nullNodeOriginGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroupId = null;
-            if (parseNode.GetChildNode("OriginGroupName") is { } nullNodeOriginGroupName && nullNodeOriginGroupName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroupName = null;
-            if (parseNode.GetChildNode("Values") is { } nullNodeValues && nullNodeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Values = null;
+            if (parseNode.GetChildNode("OriginGroupId") is null) { _explicitNullValueOriginGroupId = default!; _explicitNullProperties?.Remove("OriginGroupId"); }
+            else if (parseNode.GetChildNode("OriginGroupId") is { } nullNodeOriginGroupId && nullNodeOriginGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroupId = null;
+            if (parseNode.GetChildNode("OriginGroupName") is null) { _explicitNullValueOriginGroupName = default!; _explicitNullProperties?.Remove("OriginGroupName"); }
+            else if (parseNode.GetChildNode("OriginGroupName") is { } nullNodeOriginGroupName && nullNodeOriginGroupName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroupName = null;
+            if (parseNode.GetChildNode("Values") is null) { _explicitNullValueValues = default!; _explicitNullProperties?.Remove("Values"); }
+            else if (parseNode.GetChildNode("Values") is { } nullNodeValues && nullNodeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Values = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The OriginGroupId property</summary>
-        public long? OriginGroupId { get => _explicitNullValueOriginGroupId; set { _explicitNullValueOriginGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupId"); else _explicitNullProperties?.Remove("OriginGroupId"); } }
+        public long? OriginGroupId { get => _explicitNullValueOriginGroupId; set { _explicitNullValueOriginGroupId = value; AdditionalData?.Remove("OriginGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupId"); else _explicitNullProperties?.Remove("OriginGroupId"); } }
         private long? _explicitNullValueOriginGroupId = default!;
         /// <summary>The OriginGroupName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginGroupName { get => _explicitNullValueOriginGroupName; set { _explicitNullValueOriginGroupName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupName"); else _explicitNullProperties?.Remove("OriginGroupName"); } }
+        public string? OriginGroupName { get => _explicitNullValueOriginGroupName; set { _explicitNullValueOriginGroupName = value; AdditionalData?.Remove("OriginGroupName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupName"); else _explicitNullProperties?.Remove("OriginGroupName"); } }
         private string? _explicitNullValueOriginGroupName = default!;
 #nullable restore
 #else
-        public string OriginGroupName { get => _explicitNullValueOriginGroupName; set { _explicitNullValueOriginGroupName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupName"); else _explicitNullProperties?.Remove("OriginGroupName"); } }
+        public string OriginGroupName { get => _explicitNullValueOriginGroupName; set { _explicitNullValueOriginGroupName = value; AdditionalData?.Remove("OriginGroupName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupName"); else _explicitNullProperties?.Remove("OriginGroupName"); } }
         private string _explicitNullValueOriginGroupName = default!;
 #endif
         /// <summary>The Values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2 _explicitNullValueValues = default!;
 #endif
         /// <summary>

@@ -17,17 +17,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("challengedRequests") is { } nullNodeChallengedRequests && nullNodeChallengedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChallengedRequests = null;
-            if (parseNode.GetChildNode("loggedRequests") is { } nullNodeLoggedRequests && nullNodeLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggedRequests = null;
+            if (parseNode.GetChildNode("challengedRequests") is null) { _explicitNullValueChallengedRequests = default!; _explicitNullProperties?.Remove("challengedRequests"); }
+            else if (parseNode.GetChildNode("challengedRequests") is { } nullNodeChallengedRequests && nullNodeChallengedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChallengedRequests = null;
+            if (parseNode.GetChildNode("loggedRequests") is null) { _explicitNullValueLoggedRequests = default!; _explicitNullProperties?.Remove("loggedRequests"); }
+            else if (parseNode.GetChildNode("loggedRequests") is { } nullNodeLoggedRequests && nullNodeLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggedRequests = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The challengedRequests property</summary>
-        public int? ChallengedRequests { get => _explicitNullValueChallengedRequests; set { _explicitNullValueChallengedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challengedRequests"); else _explicitNullProperties?.Remove("challengedRequests"); } }
+        public int? ChallengedRequests { get => _explicitNullValueChallengedRequests; set { _explicitNullValueChallengedRequests = value; AdditionalData?.Remove("challengedRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("challengedRequests"); else _explicitNullProperties?.Remove("challengedRequests"); } }
         private int? _explicitNullValueChallengedRequests = default!;
         /// <summary>The loggedRequests property</summary>
-        public int? LoggedRequests { get => _explicitNullValueLoggedRequests; set { _explicitNullValueLoggedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loggedRequests"); else _explicitNullProperties?.Remove("loggedRequests"); } }
+        public int? LoggedRequests { get => _explicitNullValueLoggedRequests; set { _explicitNullValueLoggedRequests = value; AdditionalData?.Remove("loggedRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loggedRequests"); else _explicitNullProperties?.Remove("loggedRequests"); } }
         private int? _explicitNullValueLoggedRequests = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BotDetectionData"/> and sets the default values.

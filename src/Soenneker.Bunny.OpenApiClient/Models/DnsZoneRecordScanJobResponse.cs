@@ -17,80 +17,89 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AccountId") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
-            if (parseNode.GetChildNode("CompletedAt") is { } nullNodeCompletedAt && nullNodeCompletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedAt = null;
-            if (parseNode.GetChildNode("CreatedAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("Domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
-            if (parseNode.GetChildNode("Error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
-            if (parseNode.GetChildNode("JobId") is { } nullNodeJobId && nullNodeJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobId = null;
-            if (parseNode.GetChildNode("Records") is { } nullNodeRecords && nullNodeRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Records = null;
-            if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("ZoneId") is { } nullNodeZoneId && nullNodeZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneId = null;
+            if (parseNode.GetChildNode("AccountId") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("AccountId"); }
+            else if (parseNode.GetChildNode("AccountId") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("CompletedAt") is null) { _explicitNullValueCompletedAt = default!; _explicitNullProperties?.Remove("CompletedAt"); }
+            else if (parseNode.GetChildNode("CompletedAt") is { } nullNodeCompletedAt && nullNodeCompletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedAt = null;
+            if (parseNode.GetChildNode("CreatedAt") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("CreatedAt"); }
+            else if (parseNode.GetChildNode("CreatedAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("Domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("Domain"); }
+            else if (parseNode.GetChildNode("Domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("Error") is null) { _explicitNullValueError = default!; _explicitNullProperties?.Remove("Error"); }
+            else if (parseNode.GetChildNode("Error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("JobId") is null) { _explicitNullValueJobId = default!; _explicitNullProperties?.Remove("JobId"); }
+            else if (parseNode.GetChildNode("JobId") is { } nullNodeJobId && nullNodeJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobId = null;
+            if (parseNode.GetChildNode("Records") is null) { _explicitNullValueRecords = default!; _explicitNullProperties?.Remove("Records"); }
+            else if (parseNode.GetChildNode("Records") is { } nullNodeRecords && nullNodeRecords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Records = null;
+            if (parseNode.GetChildNode("Status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("Status"); }
+            else if (parseNode.GetChildNode("Status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("ZoneId") is null) { _explicitNullValueZoneId = default!; _explicitNullProperties?.Remove("ZoneId"); }
+            else if (parseNode.GetChildNode("ZoneId") is { } nullNodeZoneId && nullNodeZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneId = null;
         }
 
         /// <summary>The AccountId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountId"); else _explicitNullProperties?.Remove("AccountId"); } }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("AccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountId"); else _explicitNullProperties?.Remove("AccountId"); } }
         private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountId"); else _explicitNullProperties?.Remove("AccountId"); } }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("AccountId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AccountId"); else _explicitNullProperties?.Remove("AccountId"); } }
         private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CompletedAt property</summary>
-        public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompletedAt"); else _explicitNullProperties?.Remove("CompletedAt"); } }
+        public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("CompletedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CompletedAt"); else _explicitNullProperties?.Remove("CompletedAt"); } }
         private DateTimeOffset? _explicitNullValueCompletedAt = default!;
         /// <summary>The CreatedAt property</summary>
-        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CreatedAt"); else _explicitNullProperties?.Remove("CreatedAt"); } }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("CreatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CreatedAt"); else _explicitNullProperties?.Remove("CreatedAt"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The Domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("Domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("Domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The Error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("Error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
         private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("Error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error"); else _explicitNullProperties?.Remove("Error"); } }
         private string _explicitNullValueError = default!;
 #endif
         /// <summary>The JobId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JobId"); else _explicitNullProperties?.Remove("JobId"); } }
+        public string? JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; AdditionalData?.Remove("JobId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JobId"); else _explicitNullProperties?.Remove("JobId"); } }
         private string? _explicitNullValueJobId = default!;
 #nullable restore
 #else
-        public string JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JobId"); else _explicitNullProperties?.Remove("JobId"); } }
+        public string JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; AdditionalData?.Remove("JobId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("JobId"); else _explicitNullProperties?.Remove("JobId"); } }
         private string _explicitNullValueJobId = default!;
 #endif
         /// <summary>The Records property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel>? Records { get => _explicitNullValueRecords; set { _explicitNullValueRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Records"); else _explicitNullProperties?.Remove("Records"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel>? Records { get => _explicitNullValueRecords; set { _explicitNullValueRecords = value; AdditionalData?.Remove("Records"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Records"); else _explicitNullProperties?.Remove("Records"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel>? _explicitNullValueRecords = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel> Records { get => _explicitNullValueRecords; set { _explicitNullValueRecords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Records"); else _explicitNullProperties?.Remove("Records"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel> Records { get => _explicitNullValueRecords; set { _explicitNullValueRecords = value; AdditionalData?.Remove("Records"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Records"); else _explicitNullProperties?.Remove("Records"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneDiscoveredRecordModel> _explicitNullValueRecords = default!;
 #endif
         /// <summary>0 = Pending1 = In Progress2 = Completed3 = Failed</summary>
-        public int? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
+        public int? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("Status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Status"); else _explicitNullProperties?.Remove("Status"); } }
         private int? _explicitNullValueStatus = default!;
         /// <summary>The ZoneId property</summary>
-        public long? ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneId"); else _explicitNullProperties?.Remove("ZoneId"); } }
+        public long? ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; AdditionalData?.Remove("ZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneId"); else _explicitNullProperties?.Remove("ZoneId"); } }
         private long? _explicitNullValueZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneRecordScanJobResponse"/> and sets the default values.

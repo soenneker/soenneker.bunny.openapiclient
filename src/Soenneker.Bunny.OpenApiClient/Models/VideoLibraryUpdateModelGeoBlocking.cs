@@ -18,9 +18,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AllowedCountries") is { } nullNodeAllowedCountries && nullNodeAllowedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCountries = null;
-            if (parseNode.GetChildNode("BlockedCountries") is { } nullNodeBlockedCountries && nullNodeBlockedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCountries = null;
-            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("AllowedCountries") is null) { _explicitNullValueAllowedCountries = default!; _explicitNullProperties?.Remove("AllowedCountries"); }
+            else if (parseNode.GetChildNode("AllowedCountries") is { } nullNodeAllowedCountries && nullNodeAllowedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedCountries = null;
+            if (parseNode.GetChildNode("BlockedCountries") is null) { _explicitNullValueBlockedCountries = default!; _explicitNullProperties?.Remove("BlockedCountries"); }
+            else if (parseNode.GetChildNode("BlockedCountries") is { } nullNodeBlockedCountries && nullNodeBlockedCountries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedCountries = null;
+            if (parseNode.GetChildNode("Enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("Enabled"); }
+            else if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>(Optional) The list of countries allowed to access the video library, 2 letter ISO 3166-1 code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedCountries"); else _explicitNullProperties?.Remove("AllowedCountries"); } }
+        public List<string>? AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; AdditionalData?.Remove("AllowedCountries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedCountries"); else _explicitNullProperties?.Remove("AllowedCountries"); } }
         private List<string>? _explicitNullValueAllowedCountries = default!;
 #nullable restore
 #else
-        public List<string> AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedCountries"); else _explicitNullProperties?.Remove("AllowedCountries"); } }
+        public List<string> AllowedCountries { get => _explicitNullValueAllowedCountries; set { _explicitNullValueAllowedCountries = value; AdditionalData?.Remove("AllowedCountries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowedCountries"); else _explicitNullProperties?.Remove("AllowedCountries"); } }
         private List<string> _explicitNullValueAllowedCountries = default!;
 #endif
         /// <summary>(Optional) The list of countries blocked from accessing the video library, 2 letter ISO 3166-1 code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
+        public List<string>? BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; AdditionalData?.Remove("BlockedCountries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
         private List<string>? _explicitNullValueBlockedCountries = default!;
 #nullable restore
 #else
-        public List<string> BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
+        public List<string> BlockedCountries { get => _explicitNullValueBlockedCountries; set { _explicitNullValueBlockedCountries = value; AdditionalData?.Remove("BlockedCountries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedCountries"); else _explicitNullProperties?.Remove("BlockedCountries"); } }
         private List<string> _explicitNullValueBlockedCountries = default!;
 #endif
         /// <summary>(Optional) Whether geo-blocking is enabled for the video library</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("Enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGeoBlocking"/> and sets the default values.

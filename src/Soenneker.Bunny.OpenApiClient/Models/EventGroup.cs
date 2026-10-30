@@ -18,12 +18,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("context") is { } nullNodeContext && nullNodeContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Context = null;
-            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
-            if (parseNode.GetChildNode("firstSeen") is { } nullNodeFirstSeen && nullNodeFirstSeen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstSeen = null;
-            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
-            if (parseNode.GetChildNode("lastSeen") is { } nullNodeLastSeen && nullNodeLastSeen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSeen = null;
-            if (parseNode.GetChildNode("sparkline") is { } nullNodeSparkline && nullNodeSparkline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sparkline = null;
+            if (parseNode.GetChildNode("context") is null) { _explicitNullValueContext = default!; _explicitNullProperties?.Remove("context"); }
+            else if (parseNode.GetChildNode("context") is { } nullNodeContext && nullNodeContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Context = null;
+            if (parseNode.GetChildNode("count") is null) { _explicitNullValueCount = default!; _explicitNullProperties?.Remove("count"); }
+            else if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("firstSeen") is null) { _explicitNullValueFirstSeen = default!; _explicitNullProperties?.Remove("firstSeen"); }
+            else if (parseNode.GetChildNode("firstSeen") is { } nullNodeFirstSeen && nullNodeFirstSeen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FirstSeen = null;
+            if (parseNode.GetChildNode("key") is null) { _explicitNullValueKey = default!; _explicitNullProperties?.Remove("key"); }
+            else if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("lastSeen") is null) { _explicitNullValueLastSeen = default!; _explicitNullProperties?.Remove("lastSeen"); }
+            else if (parseNode.GetChildNode("lastSeen") is { } nullNodeLastSeen && nullNodeLastSeen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSeen = null;
+            if (parseNode.GetChildNode("sparkline") is null) { _explicitNullValueSparkline = default!; _explicitNullProperties?.Remove("sparkline"); }
+            else if (parseNode.GetChildNode("sparkline") is { } nullNodeSparkline && nullNodeSparkline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sparkline = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,40 +37,40 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),and features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2? _explicitNullValueContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2 Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2 Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2 _explicitNullValueContext = default!;
 #endif
         /// <summary>Number of events in the group.</summary>
-        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
         private long? _explicitNullValueCount = default!;
         /// <summary>Earliest event time in the group (Unix time in milliseconds, UTC).</summary>
-        public long? FirstSeen { get => _explicitNullValueFirstSeen; set { _explicitNullValueFirstSeen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstSeen"); else _explicitNullProperties?.Remove("firstSeen"); } }
+        public long? FirstSeen { get => _explicitNullValueFirstSeen; set { _explicitNullValueFirstSeen = value; AdditionalData?.Remove("firstSeen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("firstSeen"); else _explicitNullProperties?.Remove("firstSeen"); } }
         private long? _explicitNullValueFirstSeen = default!;
         /// <summary>The group key: each requested groupBy dimension mapped to its value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2 Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2 Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2 _explicitNullValueKey = default!;
 #endif
         /// <summary>Most recent event time in the group (Unix time in milliseconds, UTC).</summary>
-        public long? LastSeen { get => _explicitNullValueLastSeen; set { _explicitNullValueLastSeen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSeen"); else _explicitNullProperties?.Remove("lastSeen"); } }
+        public long? LastSeen { get => _explicitNullValueLastSeen; set { _explicitNullValueLastSeen = value; AdditionalData?.Remove("lastSeen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSeen"); else _explicitNullProperties?.Remove("lastSeen"); } }
         private long? _explicitNullValueLastSeen = default!;
         /// <summary>Per-group event counts bucketed across the requested window (mini time histogram), present onlywhen the request set `buckets`. Bucket i covers [from + i*width, from + (i+1)*width).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Sparkline { get => _explicitNullValueSparkline; set { _explicitNullValueSparkline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sparkline"); else _explicitNullProperties?.Remove("sparkline"); } }
+        public List<long?>? Sparkline { get => _explicitNullValueSparkline; set { _explicitNullValueSparkline = value; AdditionalData?.Remove("sparkline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sparkline"); else _explicitNullProperties?.Remove("sparkline"); } }
         private List<long?>? _explicitNullValueSparkline = default!;
 #nullable restore
 #else
-        public List<long?> Sparkline { get => _explicitNullValueSparkline; set { _explicitNullValueSparkline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sparkline"); else _explicitNullProperties?.Remove("sparkline"); } }
+        public List<long?> Sparkline { get => _explicitNullValueSparkline; set { _explicitNullValueSparkline = value; AdditionalData?.Remove("sparkline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sparkline"); else _explicitNullProperties?.Remove("sparkline"); } }
         private List<long?> _explicitNullValueSparkline = default!;
 #endif
         /// <summary>

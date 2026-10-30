@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("arguments") is { } nullNodeArguments && nullNodeArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arguments = null;
-            if (parseNode.GetChildNode("argumentsArray") is { } nullNodeArgumentsArray && nullNodeArgumentsArray.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArgumentsArray = null;
-            if (parseNode.GetChildNode("command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
-            if (parseNode.GetChildNode("commandArray") is { } nullNodeCommandArray && nullNodeCommandArray.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandArray = null;
-            if (parseNode.GetChildNode("workingDirectory") is { } nullNodeWorkingDirectory && nullNodeWorkingDirectory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingDirectory = null;
+            if (parseNode.GetChildNode("arguments") is null) { _explicitNullValueArguments = default!; _explicitNullProperties?.Remove("arguments"); }
+            else if (parseNode.GetChildNode("arguments") is { } nullNodeArguments && nullNodeArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arguments = null;
+            if (parseNode.GetChildNode("argumentsArray") is null) { _explicitNullValueArgumentsArray = default!; _explicitNullProperties?.Remove("argumentsArray"); }
+            else if (parseNode.GetChildNode("argumentsArray") is { } nullNodeArgumentsArray && nullNodeArgumentsArray.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArgumentsArray = null;
+            if (parseNode.GetChildNode("command") is null) { _explicitNullValueCommand = default!; _explicitNullProperties?.Remove("command"); }
+            else if (parseNode.GetChildNode("command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
+            if (parseNode.GetChildNode("commandArray") is null) { _explicitNullValueCommandArray = default!; _explicitNullProperties?.Remove("commandArray"); }
+            else if (parseNode.GetChildNode("commandArray") is { } nullNodeCommandArray && nullNodeCommandArray.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandArray = null;
+            if (parseNode.GetChildNode("workingDirectory") is null) { _explicitNullValueWorkingDirectory = default!; _explicitNullProperties?.Remove("workingDirectory"); }
+            else if (parseNode.GetChildNode("workingDirectory") is { } nullNodeWorkingDirectory && nullNodeWorkingDirectory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingDirectory = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The arguments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        public string? Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; AdditionalData?.Remove("arguments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
         private string? _explicitNullValueArguments = default!;
 #nullable restore
 #else
-        public string Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        public string Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; AdditionalData?.Remove("arguments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
         private string _explicitNullValueArguments = default!;
 #endif
         /// <summary>The argumentsArray property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ArgumentsArray { get => _explicitNullValueArgumentsArray; set { _explicitNullValueArgumentsArray = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argumentsArray"); else _explicitNullProperties?.Remove("argumentsArray"); } }
+        public List<string>? ArgumentsArray { get => _explicitNullValueArgumentsArray; set { _explicitNullValueArgumentsArray = value; AdditionalData?.Remove("argumentsArray"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argumentsArray"); else _explicitNullProperties?.Remove("argumentsArray"); } }
         private List<string>? _explicitNullValueArgumentsArray = default!;
 #nullable restore
 #else
-        public List<string> ArgumentsArray { get => _explicitNullValueArgumentsArray; set { _explicitNullValueArgumentsArray = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argumentsArray"); else _explicitNullProperties?.Remove("argumentsArray"); } }
+        public List<string> ArgumentsArray { get => _explicitNullValueArgumentsArray; set { _explicitNullValueArgumentsArray = value; AdditionalData?.Remove("argumentsArray"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("argumentsArray"); else _explicitNullProperties?.Remove("argumentsArray"); } }
         private List<string> _explicitNullValueArgumentsArray = default!;
 #endif
         /// <summary>The command property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        public string? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; AdditionalData?.Remove("command"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
         private string? _explicitNullValueCommand = default!;
 #nullable restore
 #else
-        public string Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        public string Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; AdditionalData?.Remove("command"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
         private string _explicitNullValueCommand = default!;
 #endif
         /// <summary>The commandArray property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CommandArray { get => _explicitNullValueCommandArray; set { _explicitNullValueCommandArray = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commandArray"); else _explicitNullProperties?.Remove("commandArray"); } }
+        public List<string>? CommandArray { get => _explicitNullValueCommandArray; set { _explicitNullValueCommandArray = value; AdditionalData?.Remove("commandArray"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commandArray"); else _explicitNullProperties?.Remove("commandArray"); } }
         private List<string>? _explicitNullValueCommandArray = default!;
 #nullable restore
 #else
-        public List<string> CommandArray { get => _explicitNullValueCommandArray; set { _explicitNullValueCommandArray = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commandArray"); else _explicitNullProperties?.Remove("commandArray"); } }
+        public List<string> CommandArray { get => _explicitNullValueCommandArray; set { _explicitNullValueCommandArray = value; AdditionalData?.Remove("commandArray"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commandArray"); else _explicitNullProperties?.Remove("commandArray"); } }
         private List<string> _explicitNullValueCommandArray = default!;
 #endif
         /// <summary>The workingDirectory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkingDirectory { get => _explicitNullValueWorkingDirectory; set { _explicitNullValueWorkingDirectory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDirectory"); else _explicitNullProperties?.Remove("workingDirectory"); } }
+        public string? WorkingDirectory { get => _explicitNullValueWorkingDirectory; set { _explicitNullValueWorkingDirectory = value; AdditionalData?.Remove("workingDirectory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDirectory"); else _explicitNullProperties?.Remove("workingDirectory"); } }
         private string? _explicitNullValueWorkingDirectory = default!;
 #nullable restore
 #else
-        public string WorkingDirectory { get => _explicitNullValueWorkingDirectory; set { _explicitNullValueWorkingDirectory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDirectory"); else _explicitNullProperties?.Remove("workingDirectory"); } }
+        public string WorkingDirectory { get => _explicitNullValueWorkingDirectory; set { _explicitNullValueWorkingDirectory = value; AdditionalData?.Remove("workingDirectory"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDirectory"); else _explicitNullProperties?.Remove("workingDirectory"); } }
         private string _explicitNullValueWorkingDirectory = default!;
 #endif
         /// <summary>

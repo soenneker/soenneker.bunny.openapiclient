@@ -17,21 +17,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("aggression") is { } nullNodeAggression && nullNodeAggression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggression = null;
-            if (parseNode.GetChildNode("complexEnabled") is { } nullNodeComplexEnabled && nullNodeComplexEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComplexEnabled = null;
-            if (parseNode.GetChildNode("sensitivity") is { } nullNodeSensitivity && nullNodeSensitivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sensitivity = null;
+            if (parseNode.GetChildNode("aggression") is null) { _explicitNullValueAggression = default!; _explicitNullProperties?.Remove("aggression"); }
+            else if (parseNode.GetChildNode("aggression") is { } nullNodeAggression && nullNodeAggression.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Aggression = null;
+            if (parseNode.GetChildNode("complexEnabled") is null) { _explicitNullValueComplexEnabled = default!; _explicitNullProperties?.Remove("complexEnabled"); }
+            else if (parseNode.GetChildNode("complexEnabled") is { } nullNodeComplexEnabled && nullNodeComplexEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComplexEnabled = null;
+            if (parseNode.GetChildNode("sensitivity") is null) { _explicitNullValueSensitivity = default!; _explicitNullProperties?.Remove("sensitivity"); }
+            else if (parseNode.GetChildNode("sensitivity") is { } nullNodeSensitivity && nullNodeSensitivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sensitivity = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Unknown1 = Low2 = Medium3 = High4 = Custom</summary>
-        public int? Aggression { get => _explicitNullValueAggression; set { _explicitNullValueAggression = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggression"); else _explicitNullProperties?.Remove("aggression"); } }
+        public int? Aggression { get => _explicitNullValueAggression; set { _explicitNullValueAggression = value; AdditionalData?.Remove("aggression"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aggression"); else _explicitNullProperties?.Remove("aggression"); } }
         private int? _explicitNullValueAggression = default!;
         /// <summary>The complexEnabled property</summary>
-        public bool? ComplexEnabled { get => _explicitNullValueComplexEnabled; set { _explicitNullValueComplexEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complexEnabled"); else _explicitNullProperties?.Remove("complexEnabled"); } }
+        public bool? ComplexEnabled { get => _explicitNullValueComplexEnabled; set { _explicitNullValueComplexEnabled = value; AdditionalData?.Remove("complexEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("complexEnabled"); else _explicitNullProperties?.Remove("complexEnabled"); } }
         private bool? _explicitNullValueComplexEnabled = default!;
         /// <summary>0 = Off1 = Low2 = Medium3 = High</summary>
-        public int? Sensitivity { get => _explicitNullValueSensitivity; set { _explicitNullValueSensitivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sensitivity"); else _explicitNullProperties?.Remove("sensitivity"); } }
+        public int? Sensitivity { get => _explicitNullValueSensitivity; set { _explicitNullValueSensitivity = value; AdditionalData?.Remove("sensitivity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sensitivity"); else _explicitNullProperties?.Remove("sensitivity"); } }
         private int? _explicitNullValueSensitivity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration"/> and sets the default values.

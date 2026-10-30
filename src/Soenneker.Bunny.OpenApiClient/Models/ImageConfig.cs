@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endpointSuggestions") is { } nullNodeEndpointSuggestions && nullNodeEndpointSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointSuggestions = null;
-            if (parseNode.GetChildNode("volumeSuggestions") is { } nullNodeVolumeSuggestions && nullNodeVolumeSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VolumeSuggestions = null;
+            if (parseNode.GetChildNode("endpointSuggestions") is null) { _explicitNullValueEndpointSuggestions = default!; _explicitNullProperties?.Remove("endpointSuggestions"); }
+            else if (parseNode.GetChildNode("endpointSuggestions") is { } nullNodeEndpointSuggestions && nullNodeEndpointSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointSuggestions = null;
+            if (parseNode.GetChildNode("volumeSuggestions") is null) { _explicitNullValueVolumeSuggestions = default!; _explicitNullProperties?.Remove("volumeSuggestions"); }
+            else if (parseNode.GetChildNode("volumeSuggestions") is { } nullNodeVolumeSuggestions && nullNodeVolumeSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VolumeSuggestions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The endpointSuggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>? EndpointSuggestions { get => _explicitNullValueEndpointSuggestions; set { _explicitNullValueEndpointSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointSuggestions"); else _explicitNullProperties?.Remove("endpointSuggestions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>? EndpointSuggestions { get => _explicitNullValueEndpointSuggestions; set { _explicitNullValueEndpointSuggestions = value; AdditionalData?.Remove("endpointSuggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointSuggestions"); else _explicitNullProperties?.Remove("endpointSuggestions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest>? _explicitNullValueEndpointSuggestions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest> EndpointSuggestions { get => _explicitNullValueEndpointSuggestions; set { _explicitNullValueEndpointSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointSuggestions"); else _explicitNullProperties?.Remove("endpointSuggestions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest> EndpointSuggestions { get => _explicitNullValueEndpointSuggestions; set { _explicitNullValueEndpointSuggestions = value; AdditionalData?.Remove("endpointSuggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointSuggestions"); else _explicitNullProperties?.Remove("endpointSuggestions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.EndpointRequest> _explicitNullValueEndpointSuggestions = default!;
 #endif
         /// <summary>The volumeSuggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>? VolumeSuggestions { get => _explicitNullValueVolumeSuggestions; set { _explicitNullValueVolumeSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumeSuggestions"); else _explicitNullProperties?.Remove("volumeSuggestions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>? VolumeSuggestions { get => _explicitNullValueVolumeSuggestions; set { _explicitNullValueVolumeSuggestions = value; AdditionalData?.Remove("volumeSuggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumeSuggestions"); else _explicitNullProperties?.Remove("volumeSuggestions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion>? _explicitNullValueVolumeSuggestions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion> VolumeSuggestions { get => _explicitNullValueVolumeSuggestions; set { _explicitNullValueVolumeSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumeSuggestions"); else _explicitNullProperties?.Remove("volumeSuggestions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion> VolumeSuggestions { get => _explicitNullValueVolumeSuggestions; set { _explicitNullValueVolumeSuggestions = value; AdditionalData?.Remove("volumeSuggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumeSuggestions"); else _explicitNullProperties?.Remove("volumeSuggestions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeSuggestion> _explicitNullValueVolumeSuggestions = default!;
 #endif
         /// <summary>

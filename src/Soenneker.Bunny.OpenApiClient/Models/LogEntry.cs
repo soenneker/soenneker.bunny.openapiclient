@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
-            if (parseNode.GetChildNode("log") is { } nullNodeLog && nullNodeLog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Log = null;
-            if (parseNode.GetChildNode("logId") is { } nullNodeLogId && nullNodeLogId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogId = null;
-            if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("labels") is null) { _explicitNullValueLabels = default!; _explicitNullProperties?.Remove("labels"); }
+            else if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("log") is null) { _explicitNullValueLog = default!; _explicitNullProperties?.Remove("log"); }
+            else if (parseNode.GetChildNode("log") is { } nullNodeLog && nullNodeLog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Log = null;
+            if (parseNode.GetChildNode("logId") is null) { _explicitNullValueLogId = default!; _explicitNullProperties?.Remove("logId"); }
+            else if (parseNode.GetChildNode("logId") is { } nullNodeLogId && nullNodeLogId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogId = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,28 +32,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LogEntryLabels _explicitNullValueLabels = default!;
 #endif
         /// <summary>The log property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Log { get => _explicitNullValueLog; set { _explicitNullValueLog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log"); else _explicitNullProperties?.Remove("log"); } }
+        public string? Log { get => _explicitNullValueLog; set { _explicitNullValueLog = value; AdditionalData?.Remove("log"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log"); else _explicitNullProperties?.Remove("log"); } }
         private string? _explicitNullValueLog = default!;
 #nullable restore
 #else
-        public string Log { get => _explicitNullValueLog; set { _explicitNullValueLog = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log"); else _explicitNullProperties?.Remove("log"); } }
+        public string Log { get => _explicitNullValueLog; set { _explicitNullValueLog = value; AdditionalData?.Remove("log"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log"); else _explicitNullProperties?.Remove("log"); } }
         private string _explicitNullValueLog = default!;
 #endif
         /// <summary>The logId property</summary>
-        public Guid? LogId { get => _explicitNullValueLogId; set { _explicitNullValueLogId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logId"); else _explicitNullProperties?.Remove("logId"); } }
+        public Guid? LogId { get => _explicitNullValueLogId; set { _explicitNullValueLogId = value; AdditionalData?.Remove("logId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logId"); else _explicitNullProperties?.Remove("logId"); } }
         private Guid? _explicitNullValueLogId = default!;
         /// <summary>The timestamp property</summary>
-        public long? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        public long? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private long? _explicitNullValueTimestamp = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LogEntry"/> and sets the default values.

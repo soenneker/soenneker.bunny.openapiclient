@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("containerPath") is { } nullNodeContainerPath && nullNodeContainerPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerPath = null;
-            if (parseNode.GetChildNode("suggestedVolumeName") is { } nullNodeSuggestedVolumeName && nullNodeSuggestedVolumeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedVolumeName = null;
+            if (parseNode.GetChildNode("containerPath") is null) { _explicitNullValueContainerPath = default!; _explicitNullProperties?.Remove("containerPath"); }
+            else if (parseNode.GetChildNode("containerPath") is { } nullNodeContainerPath && nullNodeContainerPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerPath = null;
+            if (parseNode.GetChildNode("suggestedVolumeName") is null) { _explicitNullValueSuggestedVolumeName = default!; _explicitNullProperties?.Remove("suggestedVolumeName"); }
+            else if (parseNode.GetChildNode("suggestedVolumeName") is { } nullNodeSuggestedVolumeName && nullNodeSuggestedVolumeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestedVolumeName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The containerPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContainerPath { get => _explicitNullValueContainerPath; set { _explicitNullValueContainerPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerPath"); else _explicitNullProperties?.Remove("containerPath"); } }
+        public string? ContainerPath { get => _explicitNullValueContainerPath; set { _explicitNullValueContainerPath = value; AdditionalData?.Remove("containerPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerPath"); else _explicitNullProperties?.Remove("containerPath"); } }
         private string? _explicitNullValueContainerPath = default!;
 #nullable restore
 #else
-        public string ContainerPath { get => _explicitNullValueContainerPath; set { _explicitNullValueContainerPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerPath"); else _explicitNullProperties?.Remove("containerPath"); } }
+        public string ContainerPath { get => _explicitNullValueContainerPath; set { _explicitNullValueContainerPath = value; AdditionalData?.Remove("containerPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerPath"); else _explicitNullProperties?.Remove("containerPath"); } }
         private string _explicitNullValueContainerPath = default!;
 #endif
         /// <summary>The suggestedVolumeName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuggestedVolumeName { get => _explicitNullValueSuggestedVolumeName; set { _explicitNullValueSuggestedVolumeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedVolumeName"); else _explicitNullProperties?.Remove("suggestedVolumeName"); } }
+        public string? SuggestedVolumeName { get => _explicitNullValueSuggestedVolumeName; set { _explicitNullValueSuggestedVolumeName = value; AdditionalData?.Remove("suggestedVolumeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedVolumeName"); else _explicitNullProperties?.Remove("suggestedVolumeName"); } }
         private string? _explicitNullValueSuggestedVolumeName = default!;
 #nullable restore
 #else
-        public string SuggestedVolumeName { get => _explicitNullValueSuggestedVolumeName; set { _explicitNullValueSuggestedVolumeName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedVolumeName"); else _explicitNullProperties?.Remove("suggestedVolumeName"); } }
+        public string SuggestedVolumeName { get => _explicitNullValueSuggestedVolumeName; set { _explicitNullValueSuggestedVolumeName = value; AdditionalData?.Remove("suggestedVolumeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestedVolumeName"); else _explicitNullProperties?.Remove("suggestedVolumeName"); } }
         private string _explicitNullValueSuggestedVolumeName = default!;
 #endif
         /// <summary>

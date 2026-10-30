@@ -18,10 +18,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowedRegionIds") is { } nullNodeAllowedRegionIds && nullNodeAllowedRegionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedRegionIds = null;
-            if (parseNode.GetChildNode("maxAllowedRegions") is { } nullNodeMaxAllowedRegions && nullNodeMaxAllowedRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAllowedRegions = null;
-            if (parseNode.GetChildNode("provisioningType") is { } nullNodeProvisioningType && nullNodeProvisioningType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvisioningType = null;
-            if (parseNode.GetChildNode("requiredRegionIds") is { } nullNodeRequiredRegionIds && nullNodeRequiredRegionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredRegionIds = null;
+            if (parseNode.GetChildNode("allowedRegionIds") is null) { _explicitNullValueAllowedRegionIds = default!; _explicitNullProperties?.Remove("allowedRegionIds"); }
+            else if (parseNode.GetChildNode("allowedRegionIds") is { } nullNodeAllowedRegionIds && nullNodeAllowedRegionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedRegionIds = null;
+            if (parseNode.GetChildNode("maxAllowedRegions") is null) { _explicitNullValueMaxAllowedRegions = default!; _explicitNullProperties?.Remove("maxAllowedRegions"); }
+            else if (parseNode.GetChildNode("maxAllowedRegions") is { } nullNodeMaxAllowedRegions && nullNodeMaxAllowedRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxAllowedRegions = null;
+            if (parseNode.GetChildNode("provisioningType") is null) { _explicitNullValueProvisioningType = default!; _explicitNullProperties?.Remove("provisioningType"); }
+            else if (parseNode.GetChildNode("provisioningType") is { } nullNodeProvisioningType && nullNodeProvisioningType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProvisioningType = null;
+            if (parseNode.GetChildNode("requiredRegionIds") is null) { _explicitNullValueRequiredRegionIds = default!; _explicitNullProperties?.Remove("requiredRegionIds"); }
+            else if (parseNode.GetChildNode("requiredRegionIds") is { } nullNodeRequiredRegionIds && nullNodeRequiredRegionIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredRegionIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,27 +33,27 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The allowedRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AllowedRegionIds { get => _explicitNullValueAllowedRegionIds; set { _explicitNullValueAllowedRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedRegionIds"); else _explicitNullProperties?.Remove("allowedRegionIds"); } }
+        public List<string>? AllowedRegionIds { get => _explicitNullValueAllowedRegionIds; set { _explicitNullValueAllowedRegionIds = value; AdditionalData?.Remove("allowedRegionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedRegionIds"); else _explicitNullProperties?.Remove("allowedRegionIds"); } }
         private List<string>? _explicitNullValueAllowedRegionIds = default!;
 #nullable restore
 #else
-        public List<string> AllowedRegionIds { get => _explicitNullValueAllowedRegionIds; set { _explicitNullValueAllowedRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedRegionIds"); else _explicitNullProperties?.Remove("allowedRegionIds"); } }
+        public List<string> AllowedRegionIds { get => _explicitNullValueAllowedRegionIds; set { _explicitNullValueAllowedRegionIds = value; AdditionalData?.Remove("allowedRegionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedRegionIds"); else _explicitNullProperties?.Remove("allowedRegionIds"); } }
         private List<string> _explicitNullValueAllowedRegionIds = default!;
 #endif
         /// <summary>The maxAllowedRegions property</summary>
-        public int? MaxAllowedRegions { get => _explicitNullValueMaxAllowedRegions; set { _explicitNullValueMaxAllowedRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxAllowedRegions"); else _explicitNullProperties?.Remove("maxAllowedRegions"); } }
+        public int? MaxAllowedRegions { get => _explicitNullValueMaxAllowedRegions; set { _explicitNullValueMaxAllowedRegions = value; AdditionalData?.Remove("maxAllowedRegions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxAllowedRegions"); else _explicitNullProperties?.Remove("maxAllowedRegions"); } }
         private int? _explicitNullValueMaxAllowedRegions = default!;
         /// <summary>The provisioningType property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.RegionProvisioningType? ProvisioningType { get => _explicitNullValueProvisioningType; set { _explicitNullValueProvisioningType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provisioningType"); else _explicitNullProperties?.Remove("provisioningType"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RegionProvisioningType? ProvisioningType { get => _explicitNullValueProvisioningType; set { _explicitNullValueProvisioningType = value; AdditionalData?.Remove("provisioningType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provisioningType"); else _explicitNullProperties?.Remove("provisioningType"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.RegionProvisioningType? _explicitNullValueProvisioningType = default!;
         /// <summary>The requiredRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RequiredRegionIds { get => _explicitNullValueRequiredRegionIds; set { _explicitNullValueRequiredRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredRegionIds"); else _explicitNullProperties?.Remove("requiredRegionIds"); } }
+        public List<string>? RequiredRegionIds { get => _explicitNullValueRequiredRegionIds; set { _explicitNullValueRequiredRegionIds = value; AdditionalData?.Remove("requiredRegionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredRegionIds"); else _explicitNullProperties?.Remove("requiredRegionIds"); } }
         private List<string>? _explicitNullValueRequiredRegionIds = default!;
 #nullable restore
 #else
-        public List<string> RequiredRegionIds { get => _explicitNullValueRequiredRegionIds; set { _explicitNullValueRequiredRegionIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredRegionIds"); else _explicitNullProperties?.Remove("requiredRegionIds"); } }
+        public List<string> RequiredRegionIds { get => _explicitNullValueRequiredRegionIds; set { _explicitNullValueRequiredRegionIds = value; AdditionalData?.Remove("requiredRegionIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requiredRegionIds"); else _explicitNullProperties?.Remove("requiredRegionIds"); } }
         private List<string> _explicitNullValueRequiredRegionIds = default!;
 #endif
         /// <summary>
@@ -79,7 +83,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "allowedRegionIds", n => { AllowedRegionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "maxAllowedRegions", n => { MaxAllowedRegions = n.GetIntValue(); } },
-                { "provisioningType", n => { ProvisioningType = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RegionProvisioningType>(); } },
+                { "provisioningType", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RegionProvisioningType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueProvisioningType = default; _explicitNullProperties?.Remove("provisioningType"); AdditionalData["provisioningType"] = unknown; } else { ProvisioningType = parsed; AdditionalData.Remove("provisioningType"); } } },
                 { "requiredRegionIds", n => { RequiredRegionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }

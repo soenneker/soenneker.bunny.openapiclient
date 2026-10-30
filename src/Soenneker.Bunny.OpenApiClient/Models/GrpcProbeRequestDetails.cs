@@ -17,23 +17,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("portNumber") is { } nullNodePortNumber && nullNodePortNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortNumber = null;
-            if (parseNode.GetChildNode("serviceName") is { } nullNodeServiceName && nullNodeServiceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceName = null;
+            if (parseNode.GetChildNode("portNumber") is null) { _explicitNullValuePortNumber = default!; _explicitNullProperties?.Remove("portNumber"); }
+            else if (parseNode.GetChildNode("portNumber") is { } nullNodePortNumber && nullNodePortNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortNumber = null;
+            if (parseNode.GetChildNode("serviceName") is null) { _explicitNullValueServiceName = default!; _explicitNullProperties?.Remove("serviceName"); }
+            else if (parseNode.GetChildNode("serviceName") is { } nullNodeServiceName && nullNodeServiceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The portNumber property</summary>
-        public int? PortNumber { get => _explicitNullValuePortNumber; set { _explicitNullValuePortNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portNumber"); else _explicitNullProperties?.Remove("portNumber"); } }
+        public int? PortNumber { get => _explicitNullValuePortNumber; set { _explicitNullValuePortNumber = value; AdditionalData?.Remove("portNumber"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portNumber"); else _explicitNullProperties?.Remove("portNumber"); } }
         private int? _explicitNullValuePortNumber = default!;
         /// <summary>If this is not specified, the default behavior is to probe the server&apos;s overall health status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceName { get => _explicitNullValueServiceName; set { _explicitNullValueServiceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceName"); else _explicitNullProperties?.Remove("serviceName"); } }
+        public string? ServiceName { get => _explicitNullValueServiceName; set { _explicitNullValueServiceName = value; AdditionalData?.Remove("serviceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceName"); else _explicitNullProperties?.Remove("serviceName"); } }
         private string? _explicitNullValueServiceName = default!;
 #nullable restore
 #else
-        public string ServiceName { get => _explicitNullValueServiceName; set { _explicitNullValueServiceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceName"); else _explicitNullProperties?.Remove("serviceName"); } }
+        public string ServiceName { get => _explicitNullValueServiceName; set { _explicitNullValueServiceName = value; AdditionalData?.Remove("serviceName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceName"); else _explicitNullProperties?.Remove("serviceName"); } }
         private string _explicitNullValueServiceName = default!;
 #endif
         /// <summary>

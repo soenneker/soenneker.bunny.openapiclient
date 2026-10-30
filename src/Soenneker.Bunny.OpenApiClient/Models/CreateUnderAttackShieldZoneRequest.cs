@@ -17,17 +17,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("planType") is { } nullNodePlanType && nullNodePlanType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanType = null;
-            if (parseNode.GetChildNode("pullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
+            if (parseNode.GetChildNode("planType") is null) { _explicitNullValuePlanType = default!; _explicitNullProperties?.Remove("planType"); }
+            else if (parseNode.GetChildNode("planType") is { } nullNodePlanType && nullNodePlanType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanType = null;
+            if (parseNode.GetChildNode("pullZoneId") is null) { _explicitNullValuePullZoneId = default!; _explicitNullProperties?.Remove("pullZoneId"); }
+            else if (parseNode.GetChildNode("pullZoneId") is { } nullNodePullZoneId && nullNodePullZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Basic1 = Advanced2 = Business3 = Enterprise</summary>
-        public int? PlanType { get => _explicitNullValuePlanType; set { _explicitNullValuePlanType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planType"); else _explicitNullProperties?.Remove("planType"); } }
+        public int? PlanType { get => _explicitNullValuePlanType; set { _explicitNullValuePlanType = value; AdditionalData?.Remove("planType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planType"); else _explicitNullProperties?.Remove("planType"); } }
         private int? _explicitNullValuePlanType = default!;
         /// <summary>The pullZoneId property</summary>
-        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
+        public long? PullZoneId { get => _explicitNullValuePullZoneId; set { _explicitNullValuePullZoneId = value; AdditionalData?.Remove("pullZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullZoneId"); else _explicitNullProperties?.Remove("pullZoneId"); } }
         private long? _explicitNullValuePullZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.CreateUnderAttackShieldZoneRequest"/> and sets the default values.

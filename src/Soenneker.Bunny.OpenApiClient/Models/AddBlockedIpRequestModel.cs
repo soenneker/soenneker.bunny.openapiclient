@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("BlockedIp") is { } nullNodeBlockedIp && nullNodeBlockedIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedIp = null;
+            if (parseNode.GetChildNode("BlockedIp") is null) { _explicitNullValueBlockedIp = default!; _explicitNullProperties?.Remove("BlockedIp"); }
+            else if (parseNode.GetChildNode("BlockedIp") is { } nullNodeBlockedIp && nullNodeBlockedIp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedIp = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The IP that will be blocked from accessing the pull zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlockedIp { get => _explicitNullValueBlockedIp; set { _explicitNullValueBlockedIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedIp"); else _explicitNullProperties?.Remove("BlockedIp"); } }
+        public string? BlockedIp { get => _explicitNullValueBlockedIp; set { _explicitNullValueBlockedIp = value; AdditionalData?.Remove("BlockedIp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedIp"); else _explicitNullProperties?.Remove("BlockedIp"); } }
         private string? _explicitNullValueBlockedIp = default!;
 #nullable restore
 #else
-        public string BlockedIp { get => _explicitNullValueBlockedIp; set { _explicitNullValueBlockedIp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedIp"); else _explicitNullProperties?.Remove("BlockedIp"); } }
+        public string BlockedIp { get => _explicitNullValueBlockedIp; set { _explicitNullValueBlockedIp = value; AdditionalData?.Remove("BlockedIp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BlockedIp"); else _explicitNullProperties?.Remove("BlockedIp"); } }
         private string _explicitNullValueBlockedIp = default!;
 #endif
         /// <summary>

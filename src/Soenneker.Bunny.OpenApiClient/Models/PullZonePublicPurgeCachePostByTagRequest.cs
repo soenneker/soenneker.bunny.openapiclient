@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CacheTag") is { } nullNodeCacheTag && nullNodeCacheTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheTag = null;
+            if (parseNode.GetChildNode("CacheTag") is null) { _explicitNullValueCacheTag = default!; _explicitNullProperties?.Remove("CacheTag"); }
+            else if (parseNode.GetChildNode("CacheTag") is { } nullNodeCacheTag && nullNodeCacheTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CacheTag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The CacheTag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CacheTag { get => _explicitNullValueCacheTag; set { _explicitNullValueCacheTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheTag"); else _explicitNullProperties?.Remove("CacheTag"); } }
+        public string? CacheTag { get => _explicitNullValueCacheTag; set { _explicitNullValueCacheTag = value; AdditionalData?.Remove("CacheTag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheTag"); else _explicitNullProperties?.Remove("CacheTag"); } }
         private string? _explicitNullValueCacheTag = default!;
 #nullable restore
 #else
-        public string CacheTag { get => _explicitNullValueCacheTag; set { _explicitNullValueCacheTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheTag"); else _explicitNullProperties?.Remove("CacheTag"); } }
+        public string CacheTag { get => _explicitNullValueCacheTag; set { _explicitNullValueCacheTag = value; AdditionalData?.Remove("CacheTag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheTag"); else _explicitNullProperties?.Remove("CacheTag"); } }
         private string _explicitNullValueCacheTag = default!;
 #endif
         /// <summary>

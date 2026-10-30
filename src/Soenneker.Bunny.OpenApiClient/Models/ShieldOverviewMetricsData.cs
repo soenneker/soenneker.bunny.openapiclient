@@ -17,26 +17,36 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accessLists") is { } nullNodeAccessLists && nullNodeAccessLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLists = null;
-            if (parseNode.GetChildNode("apiGuardian") is { } nullNodeApiGuardian && nullNodeApiGuardian.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiGuardian = null;
-            if (parseNode.GetChildNode("botDetection") is { } nullNodeBotDetection && nullNodeBotDetection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotDetection = null;
-            if (parseNode.GetChildNode("ddos") is { } nullNodeDdos && nullNodeDdos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ddos = null;
-            if (parseNode.GetChildNode("rateLimit") is { } nullNodeRateLimit && nullNodeRateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimit = null;
-            if (parseNode.GetChildNode("resolution") is { } nullNodeResolution && nullNodeResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resolution = null;
-            if (parseNode.GetChildNode("totalBillableRequestsThisMonth") is { } nullNodeTotalBillableRequestsThisMonth && nullNodeTotalBillableRequestsThisMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBillableRequestsThisMonth = null;
-            if (parseNode.GetChildNode("totalCleanRequestsLimit") is { } nullNodeTotalCleanRequestsLimit && nullNodeTotalCleanRequestsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCleanRequestsLimit = null;
-            if (parseNode.GetChildNode("uploadScanning") is { } nullNodeUploadScanning && nullNodeUploadScanning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadScanning = null;
-            if (parseNode.GetChildNode("waf") is { } nullNodeWaf && nullNodeWaf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Waf = null;
+            if (parseNode.GetChildNode("accessLists") is null) { _explicitNullValueAccessLists = default!; _explicitNullProperties?.Remove("accessLists"); }
+            else if (parseNode.GetChildNode("accessLists") is { } nullNodeAccessLists && nullNodeAccessLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLists = null;
+            if (parseNode.GetChildNode("apiGuardian") is null) { _explicitNullValueApiGuardian = default!; _explicitNullProperties?.Remove("apiGuardian"); }
+            else if (parseNode.GetChildNode("apiGuardian") is { } nullNodeApiGuardian && nullNodeApiGuardian.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiGuardian = null;
+            if (parseNode.GetChildNode("botDetection") is null) { _explicitNullValueBotDetection = default!; _explicitNullProperties?.Remove("botDetection"); }
+            else if (parseNode.GetChildNode("botDetection") is { } nullNodeBotDetection && nullNodeBotDetection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotDetection = null;
+            if (parseNode.GetChildNode("ddos") is null) { _explicitNullValueDdos = default!; _explicitNullProperties?.Remove("ddos"); }
+            else if (parseNode.GetChildNode("ddos") is { } nullNodeDdos && nullNodeDdos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ddos = null;
+            if (parseNode.GetChildNode("rateLimit") is null) { _explicitNullValueRateLimit = default!; _explicitNullProperties?.Remove("rateLimit"); }
+            else if (parseNode.GetChildNode("rateLimit") is { } nullNodeRateLimit && nullNodeRateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimit = null;
+            if (parseNode.GetChildNode("resolution") is null) { _explicitNullValueResolution = default!; _explicitNullProperties?.Remove("resolution"); }
+            else if (parseNode.GetChildNode("resolution") is { } nullNodeResolution && nullNodeResolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resolution = null;
+            if (parseNode.GetChildNode("totalBillableRequestsThisMonth") is null) { _explicitNullValueTotalBillableRequestsThisMonth = default!; _explicitNullProperties?.Remove("totalBillableRequestsThisMonth"); }
+            else if (parseNode.GetChildNode("totalBillableRequestsThisMonth") is { } nullNodeTotalBillableRequestsThisMonth && nullNodeTotalBillableRequestsThisMonth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalBillableRequestsThisMonth = null;
+            if (parseNode.GetChildNode("totalCleanRequestsLimit") is null) { _explicitNullValueTotalCleanRequestsLimit = default!; _explicitNullProperties?.Remove("totalCleanRequestsLimit"); }
+            else if (parseNode.GetChildNode("totalCleanRequestsLimit") is { } nullNodeTotalCleanRequestsLimit && nullNodeTotalCleanRequestsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCleanRequestsLimit = null;
+            if (parseNode.GetChildNode("uploadScanning") is null) { _explicitNullValueUploadScanning = default!; _explicitNullProperties?.Remove("uploadScanning"); }
+            else if (parseNode.GetChildNode("uploadScanning") is { } nullNodeUploadScanning && nullNodeUploadScanning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadScanning = null;
+            if (parseNode.GetChildNode("waf") is null) { _explicitNullValueWaf = default!; _explicitNullProperties?.Remove("waf"); }
+            else if (parseNode.GetChildNode("waf") is { } nullNodeWaf && nullNodeWaf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Waf = null;
         }
 
         /// <summary>The accessLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueAccessLists = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueAccessLists = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -44,70 +54,70 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The apiGuardian property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? ApiGuardian { get => _explicitNullValueApiGuardian; set { _explicitNullValueApiGuardian = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiGuardian"); else _explicitNullProperties?.Remove("apiGuardian"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? ApiGuardian { get => _explicitNullValueApiGuardian; set { _explicitNullValueApiGuardian = value; AdditionalData?.Remove("apiGuardian"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiGuardian"); else _explicitNullProperties?.Remove("apiGuardian"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueApiGuardian = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric ApiGuardian { get => _explicitNullValueApiGuardian; set { _explicitNullValueApiGuardian = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiGuardian"); else _explicitNullProperties?.Remove("apiGuardian"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric ApiGuardian { get => _explicitNullValueApiGuardian; set { _explicitNullValueApiGuardian = value; AdditionalData?.Remove("apiGuardian"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiGuardian"); else _explicitNullProperties?.Remove("apiGuardian"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueApiGuardian = default!;
 #endif
         /// <summary>The botDetection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? BotDetection { get => _explicitNullValueBotDetection; set { _explicitNullValueBotDetection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetection"); else _explicitNullProperties?.Remove("botDetection"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? BotDetection { get => _explicitNullValueBotDetection; set { _explicitNullValueBotDetection = value; AdditionalData?.Remove("botDetection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetection"); else _explicitNullProperties?.Remove("botDetection"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueBotDetection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric BotDetection { get => _explicitNullValueBotDetection; set { _explicitNullValueBotDetection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetection"); else _explicitNullProperties?.Remove("botDetection"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric BotDetection { get => _explicitNullValueBotDetection; set { _explicitNullValueBotDetection = value; AdditionalData?.Remove("botDetection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetection"); else _explicitNullProperties?.Remove("botDetection"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueBotDetection = default!;
 #endif
         /// <summary>The ddos property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? Ddos { get => _explicitNullValueDdos; set { _explicitNullValueDdos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ddos"); else _explicitNullProperties?.Remove("ddos"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? Ddos { get => _explicitNullValueDdos; set { _explicitNullValueDdos = value; AdditionalData?.Remove("ddos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ddos"); else _explicitNullProperties?.Remove("ddos"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueDdos = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric Ddos { get => _explicitNullValueDdos; set { _explicitNullValueDdos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ddos"); else _explicitNullProperties?.Remove("ddos"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric Ddos { get => _explicitNullValueDdos; set { _explicitNullValueDdos = value; AdditionalData?.Remove("ddos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ddos"); else _explicitNullProperties?.Remove("ddos"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueDdos = default!;
 #endif
         /// <summary>The rateLimit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? RateLimit { get => _explicitNullValueRateLimit; set { _explicitNullValueRateLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimit"); else _explicitNullProperties?.Remove("rateLimit"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? RateLimit { get => _explicitNullValueRateLimit; set { _explicitNullValueRateLimit = value; AdditionalData?.Remove("rateLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimit"); else _explicitNullProperties?.Remove("rateLimit"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueRateLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric RateLimit { get => _explicitNullValueRateLimit; set { _explicitNullValueRateLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimit"); else _explicitNullProperties?.Remove("rateLimit"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric RateLimit { get => _explicitNullValueRateLimit; set { _explicitNullValueRateLimit = value; AdditionalData?.Remove("rateLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimit"); else _explicitNullProperties?.Remove("rateLimit"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueRateLimit = default!;
 #endif
         /// <summary>0 = Auto1 = TwoMinutes2 = TenMinutes3 = Hourly4 = Daily5 = Weekly6 = Monthly</summary>
-        public int? Resolution { get => _explicitNullValueResolution; set { _explicitNullValueResolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolution"); else _explicitNullProperties?.Remove("resolution"); } }
+        public int? Resolution { get => _explicitNullValueResolution; set { _explicitNullValueResolution = value; AdditionalData?.Remove("resolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolution"); else _explicitNullProperties?.Remove("resolution"); } }
         private int? _explicitNullValueResolution = default!;
         /// <summary>The totalBillableRequestsThisMonth property</summary>
-        public long? TotalBillableRequestsThisMonth { get => _explicitNullValueTotalBillableRequestsThisMonth; set { _explicitNullValueTotalBillableRequestsThisMonth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBillableRequestsThisMonth"); else _explicitNullProperties?.Remove("totalBillableRequestsThisMonth"); } }
+        public long? TotalBillableRequestsThisMonth { get => _explicitNullValueTotalBillableRequestsThisMonth; set { _explicitNullValueTotalBillableRequestsThisMonth = value; AdditionalData?.Remove("totalBillableRequestsThisMonth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBillableRequestsThisMonth"); else _explicitNullProperties?.Remove("totalBillableRequestsThisMonth"); } }
         private long? _explicitNullValueTotalBillableRequestsThisMonth = default!;
         /// <summary>The totalCleanRequestsLimit property</summary>
-        public long? TotalCleanRequestsLimit { get => _explicitNullValueTotalCleanRequestsLimit; set { _explicitNullValueTotalCleanRequestsLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCleanRequestsLimit"); else _explicitNullProperties?.Remove("totalCleanRequestsLimit"); } }
+        public long? TotalCleanRequestsLimit { get => _explicitNullValueTotalCleanRequestsLimit; set { _explicitNullValueTotalCleanRequestsLimit = value; AdditionalData?.Remove("totalCleanRequestsLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCleanRequestsLimit"); else _explicitNullProperties?.Remove("totalCleanRequestsLimit"); } }
         private long? _explicitNullValueTotalCleanRequestsLimit = default!;
         /// <summary>The uploadScanning property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? UploadScanning { get => _explicitNullValueUploadScanning; set { _explicitNullValueUploadScanning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadScanning"); else _explicitNullProperties?.Remove("uploadScanning"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? UploadScanning { get => _explicitNullValueUploadScanning; set { _explicitNullValueUploadScanning = value; AdditionalData?.Remove("uploadScanning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadScanning"); else _explicitNullProperties?.Remove("uploadScanning"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueUploadScanning = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric UploadScanning { get => _explicitNullValueUploadScanning; set { _explicitNullValueUploadScanning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadScanning"); else _explicitNullProperties?.Remove("uploadScanning"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric UploadScanning { get => _explicitNullValueUploadScanning; set { _explicitNullValueUploadScanning = value; AdditionalData?.Remove("uploadScanning"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadScanning"); else _explicitNullProperties?.Remove("uploadScanning"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueUploadScanning = default!;
 #endif
         /// <summary>The waf property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? Waf { get => _explicitNullValueWaf; set { _explicitNullValueWaf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waf"); else _explicitNullProperties?.Remove("waf"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? Waf { get => _explicitNullValueWaf; set { _explicitNullValueWaf = value; AdditionalData?.Remove("waf"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waf"); else _explicitNullProperties?.Remove("waf"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric? _explicitNullValueWaf = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric Waf { get => _explicitNullValueWaf; set { _explicitNullValueWaf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waf"); else _explicitNullProperties?.Remove("waf"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric Waf { get => _explicitNullValueWaf; set { _explicitNullValueWaf = value; AdditionalData?.Remove("waf"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("waf"); else _explicitNullProperties?.Remove("waf"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric _explicitNullValueWaf = default!;
 #endif
         /// <summary>

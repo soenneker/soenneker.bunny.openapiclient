@@ -18,21 +18,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("MinClientSecurityLevel") is { } nullNodeMinClientSecurityLevel && nullNodeMinClientSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinClientSecurityLevel = null;
-            if (parseNode.GetChildNode("SdOnlyForL3") is { } nullNodeSdOnlyForL3 && nullNodeSdOnlyForL3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdOnlyForL3 = null;
+            if (parseNode.GetChildNode("Enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("Enabled"); }
+            else if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("MinClientSecurityLevel") is null) { _explicitNullValueMinClientSecurityLevel = default!; _explicitNullProperties?.Remove("MinClientSecurityLevel"); }
+            else if (parseNode.GetChildNode("MinClientSecurityLevel") is { } nullNodeMinClientSecurityLevel && nullNodeMinClientSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinClientSecurityLevel = null;
+            if (parseNode.GetChildNode("SdOnlyForL3") is null) { _explicitNullValueSdOnlyForL3 = default!; _explicitNullProperties?.Remove("SdOnlyForL3"); }
+            else if (parseNode.GetChildNode("SdOnlyForL3") is { } nullNodeSdOnlyForL3 && nullNodeSdOnlyForL3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdOnlyForL3 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>(Optional) Enables or disables Google Widevine Enterprise DRM</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("Enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>(Optional) Minimum Client Security Level (1 being most secure, 3 least secure and is default)0 = None1 = L12 = L23 = L3</summary>
-        public int? MinClientSecurityLevel { get => _explicitNullValueMinClientSecurityLevel; set { _explicitNullValueMinClientSecurityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinClientSecurityLevel"); else _explicitNullProperties?.Remove("MinClientSecurityLevel"); } }
+        public int? MinClientSecurityLevel { get => _explicitNullValueMinClientSecurityLevel; set { _explicitNullValueMinClientSecurityLevel = value; AdditionalData?.Remove("MinClientSecurityLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinClientSecurityLevel"); else _explicitNullProperties?.Remove("MinClientSecurityLevel"); } }
         private int? _explicitNullValueMinClientSecurityLevel = default!;
         /// <summary>(Optional) Only allow audio and SD access to Widevine L3 clients</summary>
-        public bool? SdOnlyForL3 { get => _explicitNullValueSdOnlyForL3; set { _explicitNullValueSdOnlyForL3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SdOnlyForL3"); else _explicitNullProperties?.Remove("SdOnlyForL3"); } }
+        public bool? SdOnlyForL3 { get => _explicitNullValueSdOnlyForL3; set { _explicitNullValueSdOnlyForL3 = value; AdditionalData?.Remove("SdOnlyForL3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SdOnlyForL3"); else _explicitNullProperties?.Remove("SdOnlyForL3"); } }
         private bool? _explicitNullValueSdOnlyForL3 = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryUpdateModelGoogleWidevineDrm"/> and sets the default values.

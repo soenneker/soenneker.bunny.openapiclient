@@ -17,21 +17,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("RecordsFailed") is { } nullNodeRecordsFailed && nullNodeRecordsFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsFailed = null;
-            if (parseNode.GetChildNode("RecordsSkipped") is { } nullNodeRecordsSkipped && nullNodeRecordsSkipped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsSkipped = null;
-            if (parseNode.GetChildNode("RecordsSuccessful") is { } nullNodeRecordsSuccessful && nullNodeRecordsSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsSuccessful = null;
+            if (parseNode.GetChildNode("RecordsFailed") is null) { _explicitNullValueRecordsFailed = default!; _explicitNullProperties?.Remove("RecordsFailed"); }
+            else if (parseNode.GetChildNode("RecordsFailed") is { } nullNodeRecordsFailed && nullNodeRecordsFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsFailed = null;
+            if (parseNode.GetChildNode("RecordsSkipped") is null) { _explicitNullValueRecordsSkipped = default!; _explicitNullProperties?.Remove("RecordsSkipped"); }
+            else if (parseNode.GetChildNode("RecordsSkipped") is { } nullNodeRecordsSkipped && nullNodeRecordsSkipped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsSkipped = null;
+            if (parseNode.GetChildNode("RecordsSuccessful") is null) { _explicitNullValueRecordsSuccessful = default!; _explicitNullProperties?.Remove("RecordsSuccessful"); }
+            else if (parseNode.GetChildNode("RecordsSuccessful") is { } nullNodeRecordsSuccessful && nullNodeRecordsSuccessful.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecordsSuccessful = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The RecordsFailed property</summary>
-        public int? RecordsFailed { get => _explicitNullValueRecordsFailed; set { _explicitNullValueRecordsFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsFailed"); else _explicitNullProperties?.Remove("RecordsFailed"); } }
+        public int? RecordsFailed { get => _explicitNullValueRecordsFailed; set { _explicitNullValueRecordsFailed = value; AdditionalData?.Remove("RecordsFailed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsFailed"); else _explicitNullProperties?.Remove("RecordsFailed"); } }
         private int? _explicitNullValueRecordsFailed = default!;
         /// <summary>The RecordsSkipped property</summary>
-        public int? RecordsSkipped { get => _explicitNullValueRecordsSkipped; set { _explicitNullValueRecordsSkipped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsSkipped"); else _explicitNullProperties?.Remove("RecordsSkipped"); } }
+        public int? RecordsSkipped { get => _explicitNullValueRecordsSkipped; set { _explicitNullValueRecordsSkipped = value; AdditionalData?.Remove("RecordsSkipped"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsSkipped"); else _explicitNullProperties?.Remove("RecordsSkipped"); } }
         private int? _explicitNullValueRecordsSkipped = default!;
         /// <summary>The RecordsSuccessful property</summary>
-        public int? RecordsSuccessful { get => _explicitNullValueRecordsSuccessful; set { _explicitNullValueRecordsSuccessful = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsSuccessful"); else _explicitNullProperties?.Remove("RecordsSuccessful"); } }
+        public int? RecordsSuccessful { get => _explicitNullValueRecordsSuccessful; set { _explicitNullValueRecordsSuccessful = value; AdditionalData?.Remove("RecordsSuccessful"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RecordsSuccessful"); else _explicitNullProperties?.Remove("RecordsSuccessful"); } }
         private int? _explicitNullValueRecordsSuccessful = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneImportResultModel"/> and sets the default values.

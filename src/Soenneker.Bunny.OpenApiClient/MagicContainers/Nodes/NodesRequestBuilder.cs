@@ -78,7 +78,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Nodes
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.MagicContainers.Nodes.NodesRequestBuilder.NodesRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.bunny.net/mc", "/magic-containers/nodes", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json, text/plain;q=0.9");
             return requestInfo;

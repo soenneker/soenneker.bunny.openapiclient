@@ -17,12 +17,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("OriginFailures") is { } nullNodeOriginFailures && nullNodeOriginFailures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginFailures = null;
-            if (parseNode.GetChildNode("OriginLatency") is { } nullNodeOriginLatency && nullNodeOriginLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLatency = null;
-            if (parseNode.GetChildNode("RequestsByOrigin") is { } nullNodeRequestsByOrigin && nullNodeRequestsByOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsByOrigin = null;
-            if (parseNode.GetChildNode("RequestsByOriginGroup") is { } nullNodeRequestsByOriginGroup && nullNodeRequestsByOriginGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsByOriginGroup = null;
-            if (parseNode.GetChildNode("Summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
-            if (parseNode.GetChildNode("TrafficByOrigin") is { } nullNodeTrafficByOrigin && nullNodeTrafficByOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficByOrigin = null;
+            if (parseNode.GetChildNode("OriginFailures") is null) { _explicitNullValueOriginFailures = default!; _explicitNullProperties?.Remove("OriginFailures"); }
+            else if (parseNode.GetChildNode("OriginFailures") is { } nullNodeOriginFailures && nullNodeOriginFailures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginFailures = null;
+            if (parseNode.GetChildNode("OriginLatency") is null) { _explicitNullValueOriginLatency = default!; _explicitNullProperties?.Remove("OriginLatency"); }
+            else if (parseNode.GetChildNode("OriginLatency") is { } nullNodeOriginLatency && nullNodeOriginLatency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLatency = null;
+            if (parseNode.GetChildNode("RequestsByOrigin") is null) { _explicitNullValueRequestsByOrigin = default!; _explicitNullProperties?.Remove("RequestsByOrigin"); }
+            else if (parseNode.GetChildNode("RequestsByOrigin") is { } nullNodeRequestsByOrigin && nullNodeRequestsByOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsByOrigin = null;
+            if (parseNode.GetChildNode("RequestsByOriginGroup") is null) { _explicitNullValueRequestsByOriginGroup = default!; _explicitNullProperties?.Remove("RequestsByOriginGroup"); }
+            else if (parseNode.GetChildNode("RequestsByOriginGroup") is { } nullNodeRequestsByOriginGroup && nullNodeRequestsByOriginGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestsByOriginGroup = null;
+            if (parseNode.GetChildNode("Summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("Summary"); }
+            else if (parseNode.GetChildNode("Summary") is { } nullNodeSummary && nullNodeSummary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Summary = null;
+            if (parseNode.GetChildNode("TrafficByOrigin") is null) { _explicitNullValueTrafficByOrigin = default!; _explicitNullProperties?.Remove("TrafficByOrigin"); }
+            else if (parseNode.GetChildNode("TrafficByOrigin") is { } nullNodeTrafficByOrigin && nullNodeTrafficByOrigin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrafficByOrigin = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,61 +36,61 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The OriginFailures property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModel>? OriginFailures { get => _explicitNullValueOriginFailures; set { _explicitNullValueOriginFailures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginFailures"); else _explicitNullProperties?.Remove("OriginFailures"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModel>? OriginFailures { get => _explicitNullValueOriginFailures; set { _explicitNullValueOriginFailures = value; AdditionalData?.Remove("OriginFailures"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginFailures"); else _explicitNullProperties?.Remove("OriginFailures"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModel>? _explicitNullValueOriginFailures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModel> OriginFailures { get => _explicitNullValueOriginFailures; set { _explicitNullValueOriginFailures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginFailures"); else _explicitNullProperties?.Remove("OriginFailures"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModel> OriginFailures { get => _explicitNullValueOriginFailures; set { _explicitNullValueOriginFailures = value; AdditionalData?.Remove("OriginFailures"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginFailures"); else _explicitNullProperties?.Remove("OriginFailures"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginFailuresSeriesModel> _explicitNullValueOriginFailures = default!;
 #endif
         /// <summary>The OriginLatency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel>? OriginLatency { get => _explicitNullValueOriginLatency; set { _explicitNullValueOriginLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLatency"); else _explicitNullProperties?.Remove("OriginLatency"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel>? OriginLatency { get => _explicitNullValueOriginLatency; set { _explicitNullValueOriginLatency = value; AdditionalData?.Remove("OriginLatency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLatency"); else _explicitNullProperties?.Remove("OriginLatency"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel>? _explicitNullValueOriginLatency = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel> OriginLatency { get => _explicitNullValueOriginLatency; set { _explicitNullValueOriginLatency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLatency"); else _explicitNullProperties?.Remove("OriginLatency"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel> OriginLatency { get => _explicitNullValueOriginLatency; set { _explicitNullValueOriginLatency = value; AdditionalData?.Remove("OriginLatency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLatency"); else _explicitNullProperties?.Remove("OriginLatency"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginLatencySeriesModel> _explicitNullValueOriginLatency = default!;
 #endif
         /// <summary>The RequestsByOrigin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel>? RequestsByOrigin { get => _explicitNullValueRequestsByOrigin; set { _explicitNullValueRequestsByOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOrigin"); else _explicitNullProperties?.Remove("RequestsByOrigin"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel>? RequestsByOrigin { get => _explicitNullValueRequestsByOrigin; set { _explicitNullValueRequestsByOrigin = value; AdditionalData?.Remove("RequestsByOrigin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOrigin"); else _explicitNullProperties?.Remove("RequestsByOrigin"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel>? _explicitNullValueRequestsByOrigin = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel> RequestsByOrigin { get => _explicitNullValueRequestsByOrigin; set { _explicitNullValueRequestsByOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOrigin"); else _explicitNullProperties?.Remove("RequestsByOrigin"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel> RequestsByOrigin { get => _explicitNullValueRequestsByOrigin; set { _explicitNullValueRequestsByOrigin = value; AdditionalData?.Remove("RequestsByOrigin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOrigin"); else _explicitNullProperties?.Remove("RequestsByOrigin"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel> _explicitNullValueRequestsByOrigin = default!;
 #endif
         /// <summary>The RequestsByOriginGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel>? RequestsByOriginGroup { get => _explicitNullValueRequestsByOriginGroup; set { _explicitNullValueRequestsByOriginGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOriginGroup"); else _explicitNullProperties?.Remove("RequestsByOriginGroup"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel>? RequestsByOriginGroup { get => _explicitNullValueRequestsByOriginGroup; set { _explicitNullValueRequestsByOriginGroup = value; AdditionalData?.Remove("RequestsByOriginGroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOriginGroup"); else _explicitNullProperties?.Remove("RequestsByOriginGroup"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel>? _explicitNullValueRequestsByOriginGroup = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel> RequestsByOriginGroup { get => _explicitNullValueRequestsByOriginGroup; set { _explicitNullValueRequestsByOriginGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOriginGroup"); else _explicitNullProperties?.Remove("RequestsByOriginGroup"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel> RequestsByOriginGroup { get => _explicitNullValueRequestsByOriginGroup; set { _explicitNullValueRequestsByOriginGroup = value; AdditionalData?.Remove("RequestsByOriginGroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsByOriginGroup"); else _explicitNullProperties?.Remove("RequestsByOriginGroup"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel> _explicitNullValueRequestsByOriginGroup = default!;
 #endif
         /// <summary>The Summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Summary"); else _explicitNullProperties?.Remove("Summary"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("Summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Summary"); else _explicitNullProperties?.Remove("Summary"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary? _explicitNullValueSummary = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Summary"); else _explicitNullProperties?.Remove("Summary"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("Summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Summary"); else _explicitNullProperties?.Remove("Summary"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerStatisticsModelSummary _explicitNullValueSummary = default!;
 #endif
         /// <summary>The TrafficByOrigin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel>? TrafficByOrigin { get => _explicitNullValueTrafficByOrigin; set { _explicitNullValueTrafficByOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficByOrigin"); else _explicitNullProperties?.Remove("TrafficByOrigin"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel>? TrafficByOrigin { get => _explicitNullValueTrafficByOrigin; set { _explicitNullValueTrafficByOrigin = value; AdditionalData?.Remove("TrafficByOrigin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficByOrigin"); else _explicitNullProperties?.Remove("TrafficByOrigin"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel>? _explicitNullValueTrafficByOrigin = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel> TrafficByOrigin { get => _explicitNullValueTrafficByOrigin; set { _explicitNullValueTrafficByOrigin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficByOrigin"); else _explicitNullProperties?.Remove("TrafficByOrigin"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel> TrafficByOrigin { get => _explicitNullValueTrafficByOrigin; set { _explicitNullValueTrafficByOrigin = value; AdditionalData?.Remove("TrafficByOrigin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TrafficByOrigin"); else _explicitNullProperties?.Remove("TrafficByOrigin"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginRequestsSeriesModel> _explicitNullValueTrafficByOrigin = default!;
 #endif
         /// <summary>

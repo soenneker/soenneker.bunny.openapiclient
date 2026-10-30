@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("ruleGroups") is { } nullNodeRuleGroups && nullNodeRuleGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleGroups = null;
-            if (parseNode.GetChildNode("ruleset") is { } nullNodeRuleset && nullNodeRuleset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ruleset = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ruleGroups") is null) { _explicitNullValueRuleGroups = default!; _explicitNullProperties?.Remove("ruleGroups"); }
+            else if (parseNode.GetChildNode("ruleGroups") is { } nullNodeRuleGroups && nullNodeRuleGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleGroups = null;
+            if (parseNode.GetChildNode("ruleset") is null) { _explicitNullValueRuleset = default!; _explicitNullProperties?.Remove("ruleset"); }
+            else if (parseNode.GetChildNode("ruleset") is { } nullNodeRuleset && nullNodeRuleset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ruleset = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ruleGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleGroupModel>? RuleGroups { get => _explicitNullValueRuleGroups; set { _explicitNullValueRuleGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleGroups"); else _explicitNullProperties?.Remove("ruleGroups"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleGroupModel>? RuleGroups { get => _explicitNullValueRuleGroups; set { _explicitNullValueRuleGroups = value; AdditionalData?.Remove("ruleGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleGroups"); else _explicitNullProperties?.Remove("ruleGroups"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleGroupModel>? _explicitNullValueRuleGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleGroupModel> RuleGroups { get => _explicitNullValueRuleGroups; set { _explicitNullValueRuleGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleGroups"); else _explicitNullProperties?.Remove("ruleGroups"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleGroupModel> RuleGroups { get => _explicitNullValueRuleGroups; set { _explicitNullValueRuleGroups = value; AdditionalData?.Remove("ruleGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleGroups"); else _explicitNullProperties?.Remove("ruleGroups"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleGroupModel> _explicitNullValueRuleGroups = default!;
 #endif
         /// <summary>The ruleset property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ruleset { get => _explicitNullValueRuleset; set { _explicitNullValueRuleset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleset"); else _explicitNullProperties?.Remove("ruleset"); } }
+        public string? Ruleset { get => _explicitNullValueRuleset; set { _explicitNullValueRuleset = value; AdditionalData?.Remove("ruleset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleset"); else _explicitNullProperties?.Remove("ruleset"); } }
         private string? _explicitNullValueRuleset = default!;
 #nullable restore
 #else
-        public string Ruleset { get => _explicitNullValueRuleset; set { _explicitNullValueRuleset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleset"); else _explicitNullProperties?.Remove("ruleset"); } }
+        public string Ruleset { get => _explicitNullValueRuleset; set { _explicitNullValueRuleset = value; AdditionalData?.Remove("ruleset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleset"); else _explicitNullProperties?.Remove("ruleset"); } }
         private string _explicitNullValueRuleset = default!;
 #endif
         /// <summary>

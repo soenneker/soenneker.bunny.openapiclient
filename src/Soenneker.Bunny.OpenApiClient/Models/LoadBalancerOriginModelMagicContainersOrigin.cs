@@ -18,8 +18,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AppId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
-            if (parseNode.GetChildNode("EndPointId") is { } nullNodeEndPointId && nullNodeEndPointId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndPointId = null;
+            if (parseNode.GetChildNode("AppId") is null) { _explicitNullValueAppId = default!; _explicitNullProperties?.Remove("AppId"); }
+            else if (parseNode.GetChildNode("AppId") is { } nullNodeAppId && nullNodeAppId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppId = null;
+            if (parseNode.GetChildNode("EndPointId") is null) { _explicitNullValueEndPointId = default!; _explicitNullProperties?.Remove("EndPointId"); }
+            else if (parseNode.GetChildNode("EndPointId") is { } nullNodeEndPointId && nullNodeEndPointId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndPointId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ID of the Magic Containers app</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppId"); else _explicitNullProperties?.Remove("AppId"); } }
+        public string? AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("AppId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppId"); else _explicitNullProperties?.Remove("AppId"); } }
         private string? _explicitNullValueAppId = default!;
 #nullable restore
 #else
-        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppId"); else _explicitNullProperties?.Remove("AppId"); } }
+        public string AppId { get => _explicitNullValueAppId; set { _explicitNullValueAppId = value; AdditionalData?.Remove("AppId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AppId"); else _explicitNullProperties?.Remove("AppId"); } }
         private string _explicitNullValueAppId = default!;
 #endif
         /// <summary>The ID of the Magic Containers CDN endpoint. Anycast endpoints are not supported, add those as a Standard origin using their IP address and port</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndPointId { get => _explicitNullValueEndPointId; set { _explicitNullValueEndPointId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndPointId"); else _explicitNullProperties?.Remove("EndPointId"); } }
+        public string? EndPointId { get => _explicitNullValueEndPointId; set { _explicitNullValueEndPointId = value; AdditionalData?.Remove("EndPointId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndPointId"); else _explicitNullProperties?.Remove("EndPointId"); } }
         private string? _explicitNullValueEndPointId = default!;
 #nullable restore
 #else
-        public string EndPointId { get => _explicitNullValueEndPointId; set { _explicitNullValueEndPointId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndPointId"); else _explicitNullProperties?.Remove("EndPointId"); } }
+        public string EndPointId { get => _explicitNullValueEndPointId; set { _explicitNullValueEndPointId = value; AdditionalData?.Remove("EndPointId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("EndPointId"); else _explicitNullProperties?.Remove("EndPointId"); } }
         private string _explicitNullValueEndPointId = default!;
 #endif
         /// <summary>

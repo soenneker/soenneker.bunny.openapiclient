@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("browserFingerprint") is { } nullNodeBrowserFingerprint && nullNodeBrowserFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserFingerprint = null;
-            if (parseNode.GetChildNode("executionMode") is { } nullNodeExecutionMode && nullNodeExecutionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionMode = null;
-            if (parseNode.GetChildNode("ipAddress") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
-            if (parseNode.GetChildNode("requestIntegrity") is { } nullNodeRequestIntegrity && nullNodeRequestIntegrity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIntegrity = null;
-            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+            if (parseNode.GetChildNode("browserFingerprint") is null) { _explicitNullValueBrowserFingerprint = default!; _explicitNullProperties?.Remove("browserFingerprint"); }
+            else if (parseNode.GetChildNode("browserFingerprint") is { } nullNodeBrowserFingerprint && nullNodeBrowserFingerprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BrowserFingerprint = null;
+            if (parseNode.GetChildNode("executionMode") is null) { _explicitNullValueExecutionMode = default!; _explicitNullProperties?.Remove("executionMode"); }
+            else if (parseNode.GetChildNode("executionMode") is { } nullNodeExecutionMode && nullNodeExecutionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExecutionMode = null;
+            if (parseNode.GetChildNode("ipAddress") is null) { _explicitNullValueIpAddress = default!; _explicitNullProperties?.Remove("ipAddress"); }
+            else if (parseNode.GetChildNode("ipAddress") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("requestIntegrity") is null) { _explicitNullValueRequestIntegrity = default!; _explicitNullProperties?.Remove("requestIntegrity"); }
+            else if (parseNode.GetChildNode("requestIntegrity") is { } nullNodeRequestIntegrity && nullNodeRequestIntegrity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestIntegrity = null;
+            if (parseNode.GetChildNode("shieldZoneId") is null) { _explicitNullValueShieldZoneId = default!; _explicitNullProperties?.Remove("shieldZoneId"); }
+            else if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,38 +34,38 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The browserFingerprint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration? BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browserFingerprint"); else _explicitNullProperties?.Remove("browserFingerprint"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration? BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; AdditionalData?.Remove("browserFingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browserFingerprint"); else _explicitNullProperties?.Remove("browserFingerprint"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration? _explicitNullValueBrowserFingerprint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browserFingerprint"); else _explicitNullProperties?.Remove("browserFingerprint"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration BrowserFingerprint { get => _explicitNullValueBrowserFingerprint; set { _explicitNullValueBrowserFingerprint = value; AdditionalData?.Remove("browserFingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("browserFingerprint"); else _explicitNullProperties?.Remove("browserFingerprint"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.BrowserFingerprintConfiguration _explicitNullValueBrowserFingerprint = default!;
 #endif
         /// <summary>0 = LogOnly1 = Challenge</summary>
-        public int? ExecutionMode { get => _explicitNullValueExecutionMode; set { _explicitNullValueExecutionMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionMode"); else _explicitNullProperties?.Remove("executionMode"); } }
+        public int? ExecutionMode { get => _explicitNullValueExecutionMode; set { _explicitNullValueExecutionMode = value; AdditionalData?.Remove("executionMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionMode"); else _explicitNullProperties?.Remove("executionMode"); } }
         private int? _explicitNullValueExecutionMode = default!;
         /// <summary>The ipAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipAddress"); else _explicitNullProperties?.Remove("ipAddress"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ipAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipAddress"); else _explicitNullProperties?.Remove("ipAddress"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipAddress"); else _explicitNullProperties?.Remove("ipAddress"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ipAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipAddress"); else _explicitNullProperties?.Remove("ipAddress"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.IpAddressConfiguration _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>The requestIntegrity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration? RequestIntegrity { get => _explicitNullValueRequestIntegrity; set { _explicitNullValueRequestIntegrity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIntegrity"); else _explicitNullProperties?.Remove("requestIntegrity"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration? RequestIntegrity { get => _explicitNullValueRequestIntegrity; set { _explicitNullValueRequestIntegrity = value; AdditionalData?.Remove("requestIntegrity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIntegrity"); else _explicitNullProperties?.Remove("requestIntegrity"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration? _explicitNullValueRequestIntegrity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration RequestIntegrity { get => _explicitNullValueRequestIntegrity; set { _explicitNullValueRequestIntegrity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIntegrity"); else _explicitNullProperties?.Remove("requestIntegrity"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration RequestIntegrity { get => _explicitNullValueRequestIntegrity; set { _explicitNullValueRequestIntegrity = value; AdditionalData?.Remove("requestIntegrity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestIntegrity"); else _explicitNullProperties?.Remove("requestIntegrity"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.RequestIntegrityConfiguration _explicitNullValueRequestIntegrity = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
-        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private int? _explicitNullValueShieldZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotDetectionRequest"/> and sets the default values.

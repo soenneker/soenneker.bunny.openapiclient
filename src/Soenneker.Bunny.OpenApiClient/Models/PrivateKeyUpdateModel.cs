@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
-            if (parseNode.GetChildNode("KeyType") is { } nullNodeKeyType && nullNodeKeyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyType = null;
+            if (parseNode.GetChildNode("Hostname") is null) { _explicitNullValueHostname = default!; _explicitNullProperties?.Remove("Hostname"); }
+            else if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
+            if (parseNode.GetChildNode("KeyType") is null) { _explicitNullValueKeyType = default!; _explicitNullProperties?.Remove("KeyType"); }
+            else if (parseNode.GetChildNode("KeyType") is { } nullNodeKeyType && nullNodeKeyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Hostname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string? _explicitNullValueHostname = default!;
 #nullable restore
 #else
-        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string _explicitNullValueHostname = default!;
 #endif
         /// <summary>0 = ECDSA1 = RSA</summary>
-        public int? KeyType { get => _explicitNullValueKeyType; set { _explicitNullValueKeyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("KeyType"); else _explicitNullProperties?.Remove("KeyType"); } }
+        public int? KeyType { get => _explicitNullValueKeyType; set { _explicitNullValueKeyType = value; AdditionalData?.Remove("KeyType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("KeyType"); else _explicitNullProperties?.Remove("KeyType"); } }
         private int? _explicitNullValueKeyType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PrivateKeyUpdateModel"/> and sets the default values.

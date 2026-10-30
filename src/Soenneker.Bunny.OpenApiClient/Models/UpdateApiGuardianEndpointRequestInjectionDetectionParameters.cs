@@ -18,10 +18,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Cookie") is { } nullNodeCookie && nullNodeCookie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cookie = null;
-            if (parseNode.GetChildNode("Header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
-            if (parseNode.GetChildNode("Path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
-            if (parseNode.GetChildNode("Query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
+            if (parseNode.GetChildNode("Cookie") is null) { _explicitNullValueCookie = default!; _explicitNullProperties?.Remove("Cookie"); }
+            else if (parseNode.GetChildNode("Cookie") is { } nullNodeCookie && nullNodeCookie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cookie = null;
+            if (parseNode.GetChildNode("Header") is null) { _explicitNullValueHeader = default!; _explicitNullProperties?.Remove("Header"); }
+            else if (parseNode.GetChildNode("Header") is { } nullNodeHeader && nullNodeHeader.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Header = null;
+            if (parseNode.GetChildNode("Path") is null) { _explicitNullValuePath = default!; _explicitNullProperties?.Remove("Path"); }
+            else if (parseNode.GetChildNode("Path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
+            if (parseNode.GetChildNode("Query") is null) { _explicitNullValueQuery = default!; _explicitNullProperties?.Remove("Query"); }
+            else if (parseNode.GetChildNode("Query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Cookie property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Cookie { get => _explicitNullValueCookie; set { _explicitNullValueCookie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Cookie"); else _explicitNullProperties?.Remove("Cookie"); } }
+        public List<string>? Cookie { get => _explicitNullValueCookie; set { _explicitNullValueCookie = value; AdditionalData?.Remove("Cookie"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Cookie"); else _explicitNullProperties?.Remove("Cookie"); } }
         private List<string>? _explicitNullValueCookie = default!;
 #nullable restore
 #else
-        public List<string> Cookie { get => _explicitNullValueCookie; set { _explicitNullValueCookie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Cookie"); else _explicitNullProperties?.Remove("Cookie"); } }
+        public List<string> Cookie { get => _explicitNullValueCookie; set { _explicitNullValueCookie = value; AdditionalData?.Remove("Cookie"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Cookie"); else _explicitNullProperties?.Remove("Cookie"); } }
         private List<string> _explicitNullValueCookie = default!;
 #endif
         /// <summary>The Header property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Header"); else _explicitNullProperties?.Remove("Header"); } }
+        public List<string>? Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; AdditionalData?.Remove("Header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Header"); else _explicitNullProperties?.Remove("Header"); } }
         private List<string>? _explicitNullValueHeader = default!;
 #nullable restore
 #else
-        public List<string> Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Header"); else _explicitNullProperties?.Remove("Header"); } }
+        public List<string> Header { get => _explicitNullValueHeader; set { _explicitNullValueHeader = value; AdditionalData?.Remove("Header"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Header"); else _explicitNullProperties?.Remove("Header"); } }
         private List<string> _explicitNullValueHeader = default!;
 #endif
         /// <summary>The Path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Path"); else _explicitNullProperties?.Remove("Path"); } }
+        public List<string>? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("Path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Path"); else _explicitNullProperties?.Remove("Path"); } }
         private List<string>? _explicitNullValuePath = default!;
 #nullable restore
 #else
-        public List<string> Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Path"); else _explicitNullProperties?.Remove("Path"); } }
+        public List<string> Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("Path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Path"); else _explicitNullProperties?.Remove("Path"); } }
         private List<string> _explicitNullValuePath = default!;
 #endif
         /// <summary>The Query property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
+        public List<string>? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; AdditionalData?.Remove("Query"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
         private List<string>? _explicitNullValueQuery = default!;
 #nullable restore
 #else
-        public List<string> Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
+        public List<string> Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; AdditionalData?.Remove("Query"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
         private List<string> _explicitNullValueQuery = default!;
 #endif
         /// <summary>

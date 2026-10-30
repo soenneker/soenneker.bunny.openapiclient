@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
-            if (parseNode.GetChildNode("recommendation") is { } nullNodeRecommendation && nullNodeRecommendation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recommendation = null;
-            if (parseNode.GetChildNode("ruleId") is { } nullNodeRuleId && nullNodeRuleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleId = null;
-            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
-            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+            if (parseNode.GetChildNode("errorResponse") is null) { _explicitNullValueErrorResponse = default!; _explicitNullProperties?.Remove("errorResponse"); }
+            else if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
+            if (parseNode.GetChildNode("recommendation") is null) { _explicitNullValueRecommendation = default!; _explicitNullProperties?.Remove("recommendation"); }
+            else if (parseNode.GetChildNode("recommendation") is { } nullNodeRecommendation && nullNodeRecommendation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recommendation = null;
+            if (parseNode.GetChildNode("ruleId") is null) { _explicitNullValueRuleId = default!; _explicitNullProperties?.Remove("ruleId"); }
+            else if (parseNode.GetChildNode("ruleId") is { } nullNodeRuleId && nullNodeRuleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleId = null;
+            if (parseNode.GetChildNode("shieldZoneId") is null) { _explicitNullValueShieldZoneId = default!; _explicitNullProperties?.Remove("shieldZoneId"); }
+            else if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+            if (parseNode.GetChildNode("success") is null) { _explicitNullValueSuccess = default!; _explicitNullProperties?.Remove("success"); }
+            else if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,38 +34,38 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Generic response object containing status information for API operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? _explicitNullValueErrorResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse _explicitNullValueErrorResponse = default!;
 #endif
         /// <summary>The recommendation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recommendation { get => _explicitNullValueRecommendation; set { _explicitNullValueRecommendation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation"); else _explicitNullProperties?.Remove("recommendation"); } }
+        public string? Recommendation { get => _explicitNullValueRecommendation; set { _explicitNullValueRecommendation = value; AdditionalData?.Remove("recommendation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation"); else _explicitNullProperties?.Remove("recommendation"); } }
         private string? _explicitNullValueRecommendation = default!;
 #nullable restore
 #else
-        public string Recommendation { get => _explicitNullValueRecommendation; set { _explicitNullValueRecommendation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation"); else _explicitNullProperties?.Remove("recommendation"); } }
+        public string Recommendation { get => _explicitNullValueRecommendation; set { _explicitNullValueRecommendation = value; AdditionalData?.Remove("recommendation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendation"); else _explicitNullProperties?.Remove("recommendation"); } }
         private string _explicitNullValueRecommendation = default!;
 #endif
         /// <summary>The ruleId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleId"); else _explicitNullProperties?.Remove("ruleId"); } }
+        public string? RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; AdditionalData?.Remove("ruleId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleId"); else _explicitNullProperties?.Remove("ruleId"); } }
         private string? _explicitNullValueRuleId = default!;
 #nullable restore
 #else
-        public string RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleId"); else _explicitNullProperties?.Remove("ruleId"); } }
+        public string RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; AdditionalData?.Remove("ruleId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleId"); else _explicitNullProperties?.Remove("ruleId"); } }
         private string _explicitNullValueRuleId = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
-        public long? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        public long? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private long? _explicitNullValueShieldZoneId = default!;
         /// <summary>The success property</summary>
-        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; AdditionalData?.Remove("success"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
         private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleRecommendationResponse"/> and sets the default values.

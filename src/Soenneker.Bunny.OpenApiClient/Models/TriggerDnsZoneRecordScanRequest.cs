@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
-            if (parseNode.GetChildNode("ZoneId") is { } nullNodeZoneId && nullNodeZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneId = null;
+            if (parseNode.GetChildNode("Domain") is null) { _explicitNullValueDomain = default!; _explicitNullProperties?.Remove("Domain"); }
+            else if (parseNode.GetChildNode("Domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("ZoneId") is null) { _explicitNullValueZoneId = default!; _explicitNullProperties?.Remove("ZoneId"); }
+            else if (parseNode.GetChildNode("ZoneId") is { } nullNodeZoneId && nullNodeZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The domain name to scan. Either ZoneId or Domain must be provided, but not both. Can be used even before creating the DNS zone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("Domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
         private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("Domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Domain"); else _explicitNullProperties?.Remove("Domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The ID of the DNS Zone to scan. Either ZoneId or Domain must be provided, but not both.</summary>
-        public long? ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneId"); else _explicitNullProperties?.Remove("ZoneId"); } }
+        public long? ZoneId { get => _explicitNullValueZoneId; set { _explicitNullValueZoneId = value; AdditionalData?.Remove("ZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneId"); else _explicitNullProperties?.Remove("ZoneId"); } }
         private long? _explicitNullValueZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.TriggerDnsZoneRecordScanRequest"/> and sets the default values.

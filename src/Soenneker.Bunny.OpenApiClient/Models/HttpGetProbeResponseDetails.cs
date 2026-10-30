@@ -17,13 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expectedStatusCode") is { } nullNodeExpectedStatusCode && nullNodeExpectedStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedStatusCode = null;
+            if (parseNode.GetChildNode("expectedStatusCode") is null) { _explicitNullValueExpectedStatusCode = default!; _explicitNullProperties?.Remove("expectedStatusCode"); }
+            else if (parseNode.GetChildNode("expectedStatusCode") is { } nullNodeExpectedStatusCode && nullNodeExpectedStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedStatusCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The expectedStatusCode property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersHttpStatusCode? ExpectedStatusCode { get => _explicitNullValueExpectedStatusCode; set { _explicitNullValueExpectedStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expectedStatusCode"); else _explicitNullProperties?.Remove("expectedStatusCode"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersHttpStatusCode? ExpectedStatusCode { get => _explicitNullValueExpectedStatusCode; set { _explicitNullValueExpectedStatusCode = value; AdditionalData?.Remove("expectedStatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expectedStatusCode"); else _explicitNullProperties?.Remove("expectedStatusCode"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersHttpStatusCode? _explicitNullValueExpectedStatusCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.HttpGetProbeResponseDetails"/> and sets the default values.
@@ -50,7 +51,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expectedStatusCode", n => { ExpectedStatusCode = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersHttpStatusCode>(); } },
+                { "expectedStatusCode", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.MagicContainersHttpStatusCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExpectedStatusCode = default; _explicitNullProperties?.Remove("expectedStatusCode"); AdditionalData["expectedStatusCode"] = unknown; } else { ExpectedStatusCode = parsed; AdditionalData.Remove("expectedStatusCode"); } } },
             };
         }
         /// <summary>

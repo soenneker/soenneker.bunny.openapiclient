@@ -18,9 +18,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ErrorKey") is { } nullNodeErrorKey && nullNodeErrorKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorKey = null;
-            if (parseNode.GetChildNode("Field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
-            if (parseNode.GetChildNode("Message") is { } nullNodeMessageEscaped && nullNodeMessageEscaped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageEscaped = null;
+            if (parseNode.GetChildNode("ErrorKey") is null) { _explicitNullValueErrorKey = default!; _explicitNullProperties?.Remove("ErrorKey"); }
+            else if (parseNode.GetChildNode("ErrorKey") is { } nullNodeErrorKey && nullNodeErrorKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorKey = null;
+            if (parseNode.GetChildNode("Field") is null) { _explicitNullValueField = default!; _explicitNullProperties?.Remove("Field"); }
+            else if (parseNode.GetChildNode("Field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
+            if (parseNode.GetChildNode("Message") is null) { _explicitNullValueMessageEscaped = default!; _explicitNullProperties?.Remove("Message"); }
+            else if (parseNode.GetChildNode("Message") is { } nullNodeMessageEscaped && nullNodeMessageEscaped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageEscaped = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,21 +31,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ErrorKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorKey"); else _explicitNullProperties?.Remove("ErrorKey"); } }
+        public string? ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; AdditionalData?.Remove("ErrorKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorKey"); else _explicitNullProperties?.Remove("ErrorKey"); } }
         private string? _explicitNullValueErrorKey = default!;
 #nullable restore
 #else
-        public string ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorKey"); else _explicitNullProperties?.Remove("ErrorKey"); } }
+        public string ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; AdditionalData?.Remove("ErrorKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorKey"); else _explicitNullProperties?.Remove("ErrorKey"); } }
         private string _explicitNullValueErrorKey = default!;
 #endif
         /// <summary>The Field property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Field"); else _explicitNullProperties?.Remove("Field"); } }
+        public string? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; AdditionalData?.Remove("Field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Field"); else _explicitNullProperties?.Remove("Field"); } }
         private string? _explicitNullValueField = default!;
 #nullable restore
 #else
-        public string Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Field"); else _explicitNullProperties?.Remove("Field"); } }
+        public string Field { get => _explicitNullValueField; set { _explicitNullValueField = value; AdditionalData?.Remove("Field"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Field"); else _explicitNullProperties?.Remove("Field"); } }
         private string _explicitNullValueField = default!;
 #endif
         /// <summary>The primary error message.</summary>
@@ -50,11 +53,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
+        public string? MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; AdditionalData?.Remove("Message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
         private string? _explicitNullValueMessageEscaped = default!;
 #nullable restore
 #else
-        public string MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
+        public string MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; AdditionalData?.Remove("Message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Message"); else _explicitNullProperties?.Remove("Message"); } }
         private string _explicitNullValueMessageEscaped = default!;
 #endif
         /// <summary>

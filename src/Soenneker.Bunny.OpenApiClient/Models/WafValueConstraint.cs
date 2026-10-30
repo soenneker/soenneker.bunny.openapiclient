@@ -17,53 +17,59 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("chainedMaxLength") is { } nullNodeChainedMaxLength && nullNodeChainedMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChainedMaxLength = null;
-            if (parseNode.GetChildNode("example") is { } nullNodeExample && nullNodeExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Example = null;
-            if (parseNode.GetChildNode("kind") is { } nullNodeKind && nullNodeKind.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kind = null;
-            if (parseNode.GetChildNode("maxLength") is { } nullNodeMaxLength && nullNodeMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLength = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("pattern") is { } nullNodePattern && nullNodePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pattern = null;
+            if (parseNode.GetChildNode("chainedMaxLength") is null) { _explicitNullValueChainedMaxLength = default!; _explicitNullProperties?.Remove("chainedMaxLength"); }
+            else if (parseNode.GetChildNode("chainedMaxLength") is { } nullNodeChainedMaxLength && nullNodeChainedMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChainedMaxLength = null;
+            if (parseNode.GetChildNode("example") is null) { _explicitNullValueExample = default!; _explicitNullProperties?.Remove("example"); }
+            else if (parseNode.GetChildNode("example") is { } nullNodeExample && nullNodeExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Example = null;
+            if (parseNode.GetChildNode("kind") is null) { _explicitNullValueKind = default!; _explicitNullProperties?.Remove("kind"); }
+            else if (parseNode.GetChildNode("kind") is { } nullNodeKind && nullNodeKind.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kind = null;
+            if (parseNode.GetChildNode("maxLength") is null) { _explicitNullValueMaxLength = default!; _explicitNullProperties?.Remove("maxLength"); }
+            else if (parseNode.GetChildNode("maxLength") is { } nullNodeMaxLength && nullNodeMaxLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLength = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("pattern") is null) { _explicitNullValuePattern = default!; _explicitNullProperties?.Remove("pattern"); }
+            else if (parseNode.GetChildNode("pattern") is { } nullNodePattern && nullNodePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pattern = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The chainedMaxLength property</summary>
-        public int? ChainedMaxLength { get => _explicitNullValueChainedMaxLength; set { _explicitNullValueChainedMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedMaxLength"); else _explicitNullProperties?.Remove("chainedMaxLength"); } }
+        public int? ChainedMaxLength { get => _explicitNullValueChainedMaxLength; set { _explicitNullValueChainedMaxLength = value; AdditionalData?.Remove("chainedMaxLength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedMaxLength"); else _explicitNullProperties?.Remove("chainedMaxLength"); } }
         private int? _explicitNullValueChainedMaxLength = default!;
         /// <summary>The example property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Example { get => _explicitNullValueExample; set { _explicitNullValueExample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("example"); else _explicitNullProperties?.Remove("example"); } }
+        public string? Example { get => _explicitNullValueExample; set { _explicitNullValueExample = value; AdditionalData?.Remove("example"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("example"); else _explicitNullProperties?.Remove("example"); } }
         private string? _explicitNullValueExample = default!;
 #nullable restore
 #else
-        public string Example { get => _explicitNullValueExample; set { _explicitNullValueExample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("example"); else _explicitNullProperties?.Remove("example"); } }
+        public string Example { get => _explicitNullValueExample; set { _explicitNullValueExample = value; AdditionalData?.Remove("example"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("example"); else _explicitNullProperties?.Remove("example"); } }
         private string _explicitNullValueExample = default!;
 #endif
         /// <summary>The kind property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind? Kind { get => _explicitNullValueKind; set { _explicitNullValueKind = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kind"); else _explicitNullProperties?.Remove("kind"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind? Kind { get => _explicitNullValueKind; set { _explicitNullValueKind = value; AdditionalData?.Remove("kind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kind"); else _explicitNullProperties?.Remove("kind"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind? _explicitNullValueKind = default!;
         /// <summary>The maxLength property</summary>
-        public int? MaxLength { get => _explicitNullValueMaxLength; set { _explicitNullValueMaxLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLength"); else _explicitNullProperties?.Remove("maxLength"); } }
+        public int? MaxLength { get => _explicitNullValueMaxLength; set { _explicitNullValueMaxLength = value; AdditionalData?.Remove("maxLength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLength"); else _explicitNullProperties?.Remove("maxLength"); } }
         private int? _explicitNullValueMaxLength = default!;
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The pattern property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pattern { get => _explicitNullValuePattern; set { _explicitNullValuePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pattern"); else _explicitNullProperties?.Remove("pattern"); } }
+        public string? Pattern { get => _explicitNullValuePattern; set { _explicitNullValuePattern = value; AdditionalData?.Remove("pattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pattern"); else _explicitNullProperties?.Remove("pattern"); } }
         private string? _explicitNullValuePattern = default!;
 #nullable restore
 #else
-        public string Pattern { get => _explicitNullValuePattern; set { _explicitNullValuePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pattern"); else _explicitNullProperties?.Remove("pattern"); } }
+        public string Pattern { get => _explicitNullValuePattern; set { _explicitNullValuePattern = value; AdditionalData?.Remove("pattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pattern"); else _explicitNullProperties?.Remove("pattern"); } }
         private string _explicitNullValuePattern = default!;
 #endif
         /// <summary>
@@ -93,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "chainedMaxLength", n => { ChainedMaxLength = n.GetIntValue(); } },
                 { "example", n => { Example = n.GetStringValue(); } },
-                { "kind", n => { Kind = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind>(); } },
+                { "kind", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueKind = default; _explicitNullProperties?.Remove("kind"); AdditionalData["kind"] = unknown; } else { Kind = parsed; AdditionalData.Remove("kind"); } } },
                 { "maxLength", n => { MaxLength = n.GetIntValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "pattern", n => { Pattern = n.GetStringValue(); } },

@@ -17,43 +17,48 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("From") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
-            if (parseNode.GetChildNode("Query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
-            if (parseNode.GetChildNode("SearchResults") is { } nullNodeSearchResults && nullNodeSearchResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchResults = null;
-            if (parseNode.GetChildNode("Size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
-            if (parseNode.GetChildNode("Total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("From") is null) { _explicitNullValueFrom = default!; _explicitNullProperties?.Remove("From"); }
+            else if (parseNode.GetChildNode("From") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("Query") is null) { _explicitNullValueQuery = default!; _explicitNullProperties?.Remove("Query"); }
+            else if (parseNode.GetChildNode("Query") is { } nullNodeQuery && nullNodeQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Query = null;
+            if (parseNode.GetChildNode("SearchResults") is null) { _explicitNullValueSearchResults = default!; _explicitNullProperties?.Remove("SearchResults"); }
+            else if (parseNode.GetChildNode("SearchResults") is { } nullNodeSearchResults && nullNodeSearchResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchResults = null;
+            if (parseNode.GetChildNode("Size") is null) { _explicitNullValueSize = default!; _explicitNullProperties?.Remove("Size"); }
+            else if (parseNode.GetChildNode("Size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("Total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("Total"); }
+            else if (parseNode.GetChildNode("Total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The number of results skipped in the search query</summary>
-        public int? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("From"); else _explicitNullProperties?.Remove("From"); } }
+        public int? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("From"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("From"); else _explicitNullProperties?.Remove("From"); } }
         private int? _explicitNullValueFrom = default!;
         /// <summary>The input query for the search request</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
+        public string? Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; AdditionalData?.Remove("Query"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
         private string? _explicitNullValueQuery = default!;
 #nullable restore
 #else
-        public string Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
+        public string Query { get => _explicitNullValueQuery; set { _explicitNullValueQuery = value; AdditionalData?.Remove("Query"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Query"); else _explicitNullProperties?.Remove("Query"); } }
         private string _explicitNullValueQuery = default!;
 #endif
         /// <summary>The list of search results found for the query</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel>? SearchResults { get => _explicitNullValueSearchResults; set { _explicitNullValueSearchResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchResults"); else _explicitNullProperties?.Remove("SearchResults"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel>? SearchResults { get => _explicitNullValueSearchResults; set { _explicitNullValueSearchResults = value; AdditionalData?.Remove("SearchResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchResults"); else _explicitNullProperties?.Remove("SearchResults"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel>? _explicitNullValueSearchResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel> SearchResults { get => _explicitNullValueSearchResults; set { _explicitNullValueSearchResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchResults"); else _explicitNullProperties?.Remove("SearchResults"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel> SearchResults { get => _explicitNullValueSearchResults; set { _explicitNullValueSearchResults = value; AdditionalData?.Remove("SearchResults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SearchResults"); else _explicitNullProperties?.Remove("SearchResults"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SearchResultItemModel> _explicitNullValueSearchResults = default!;
 #endif
         /// <summary>The size of the result set</summary>
-        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Size"); else _explicitNullProperties?.Remove("Size"); } }
+        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("Size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Size"); else _explicitNullProperties?.Remove("Size"); } }
         private int? _explicitNullValueSize = default!;
         /// <summary>The total number of search results found matching the query</summary>
-        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Total"); else _explicitNullProperties?.Remove("Total"); } }
+        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("Total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Total"); else _explicitNullProperties?.Remove("Total"); } }
         private int? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.SearchResultsModel"/> and sets the default values.

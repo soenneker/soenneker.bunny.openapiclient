@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overview") is { } nullNodeOverview && nullNodeOverview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overview = null;
-            if (parseNode.GetChildNode("ratelimitId") is { } nullNodeRatelimitId && nullNodeRatelimitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatelimitId = null;
-            if (parseNode.GetChildNode("ratelimitOverviewPastTwentyEightDays") is { } nullNodeRatelimitOverviewPastTwentyEightDays && nullNodeRatelimitOverviewPastTwentyEightDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatelimitOverviewPastTwentyEightDays = null;
+            if (parseNode.GetChildNode("overview") is null) { _explicitNullValueOverview = default!; _explicitNullProperties?.Remove("overview"); }
+            else if (parseNode.GetChildNode("overview") is { } nullNodeOverview && nullNodeOverview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overview = null;
+            if (parseNode.GetChildNode("ratelimitId") is null) { _explicitNullValueRatelimitId = default!; _explicitNullProperties?.Remove("ratelimitId"); }
+            else if (parseNode.GetChildNode("ratelimitId") is { } nullNodeRatelimitId && nullNodeRatelimitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatelimitId = null;
+            if (parseNode.GetChildNode("ratelimitOverviewPastTwentyEightDays") is null) { _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!; _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); }
+            else if (parseNode.GetChildNode("ratelimitOverviewPastTwentyEightDays") is { } nullNodeRatelimitOverviewPastTwentyEightDays && nullNodeRatelimitOverviewPastTwentyEightDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RatelimitOverviewPastTwentyEightDays = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The overview property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit? Overview { get => _explicitNullValueOverview; set { _explicitNullValueOverview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overview"); else _explicitNullProperties?.Remove("overview"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit? Overview { get => _explicitNullValueOverview; set { _explicitNullValueOverview = value; AdditionalData?.Remove("overview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overview"); else _explicitNullProperties?.Remove("overview"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit? _explicitNullValueOverview = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit Overview { get => _explicitNullValueOverview; set { _explicitNullValueOverview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overview"); else _explicitNullProperties?.Remove("overview"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit Overview { get => _explicitNullValueOverview; set { _explicitNullValueOverview = value; AdditionalData?.Remove("overview"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overview"); else _explicitNullProperties?.Remove("overview"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimit _explicitNullValueOverview = default!;
 #endif
         /// <summary>The ratelimitId property</summary>
-        public long? RatelimitId { get => _explicitNullValueRatelimitId; set { _explicitNullValueRatelimitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitId"); else _explicitNullProperties?.Remove("ratelimitId"); } }
+        public long? RatelimitId { get => _explicitNullValueRatelimitId; set { _explicitNullValueRatelimitId = value; AdditionalData?.Remove("ratelimitId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitId"); else _explicitNullProperties?.Remove("ratelimitId"); } }
         private long? _explicitNullValueRatelimitId = default!;
         /// <summary>The ratelimitOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2? RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2? RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; AdditionalData?.Remove("ratelimitOverviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2? _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2 RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2 RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; AdditionalData?.Remove("ratelimitOverviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2 _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!;
 #endif
         /// <summary>

@@ -17,64 +17,71 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("isPremium") is { } nullNodeIsPremium && nullNodeIsPremium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPremium = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("optionalInput") is { } nullNodeOptionalInput && nullNodeOptionalInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionalInput = null;
-            if (parseNode.GetChildNode("recommendedOperator") is { } nullNodeRecommendedOperator && nullNodeRecommendedOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendedOperator = null;
-            if (parseNode.GetChildNode("supportedValues") is { } nullNodeSupportedValues && nullNodeSupportedValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedValues = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
-            if (parseNode.GetChildNode("valueConstraint") is { } nullNodeValueConstraint && nullNodeValueConstraint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueConstraint = null;
+            if (parseNode.GetChildNode("isPremium") is null) { _explicitNullValueIsPremium = default!; _explicitNullProperties?.Remove("isPremium"); }
+            else if (parseNode.GetChildNode("isPremium") is { } nullNodeIsPremium && nullNodeIsPremium.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPremium = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("optionalInput") is null) { _explicitNullValueOptionalInput = default!; _explicitNullProperties?.Remove("optionalInput"); }
+            else if (parseNode.GetChildNode("optionalInput") is { } nullNodeOptionalInput && nullNodeOptionalInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionalInput = null;
+            if (parseNode.GetChildNode("recommendedOperator") is null) { _explicitNullValueRecommendedOperator = default!; _explicitNullProperties?.Remove("recommendedOperator"); }
+            else if (parseNode.GetChildNode("recommendedOperator") is { } nullNodeRecommendedOperator && nullNodeRecommendedOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecommendedOperator = null;
+            if (parseNode.GetChildNode("supportedValues") is null) { _explicitNullValueSupportedValues = default!; _explicitNullProperties?.Remove("supportedValues"); }
+            else if (parseNode.GetChildNode("supportedValues") is { } nullNodeSupportedValues && nullNodeSupportedValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedValues = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("valueConstraint") is null) { _explicitNullValueValueConstraint = default!; _explicitNullProperties?.Remove("valueConstraint"); }
+            else if (parseNode.GetChildNode("valueConstraint") is { } nullNodeValueConstraint && nullNodeValueConstraint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueConstraint = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The isPremium property</summary>
-        public bool? IsPremium { get => _explicitNullValueIsPremium; set { _explicitNullValueIsPremium = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPremium"); else _explicitNullProperties?.Remove("isPremium"); } }
+        public bool? IsPremium { get => _explicitNullValueIsPremium; set { _explicitNullValueIsPremium = value; AdditionalData?.Remove("isPremium"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPremium"); else _explicitNullProperties?.Remove("isPremium"); } }
         private bool? _explicitNullValueIsPremium = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The optionalInput property</summary>
-        public bool? OptionalInput { get => _explicitNullValueOptionalInput; set { _explicitNullValueOptionalInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionalInput"); else _explicitNullProperties?.Remove("optionalInput"); } }
+        public bool? OptionalInput { get => _explicitNullValueOptionalInput; set { _explicitNullValueOptionalInput = value; AdditionalData?.Remove("optionalInput"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionalInput"); else _explicitNullProperties?.Remove("optionalInput"); } }
         private bool? _explicitNullValueOptionalInput = default!;
         /// <summary>The recommendedOperator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator? RecommendedOperator { get => _explicitNullValueRecommendedOperator; set { _explicitNullValueRecommendedOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendedOperator"); else _explicitNullProperties?.Remove("recommendedOperator"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator? RecommendedOperator { get => _explicitNullValueRecommendedOperator; set { _explicitNullValueRecommendedOperator = value; AdditionalData?.Remove("recommendedOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendedOperator"); else _explicitNullProperties?.Remove("recommendedOperator"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator? _explicitNullValueRecommendedOperator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator RecommendedOperator { get => _explicitNullValueRecommendedOperator; set { _explicitNullValueRecommendedOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendedOperator"); else _explicitNullProperties?.Remove("recommendedOperator"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator RecommendedOperator { get => _explicitNullValueRecommendedOperator; set { _explicitNullValueRecommendedOperator = value; AdditionalData?.Remove("recommendedOperator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recommendedOperator"); else _explicitNullProperties?.Remove("recommendedOperator"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafRecommendedOperator _explicitNullValueRecommendedOperator = default!;
 #endif
         /// <summary>The supportedValues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues? SupportedValues { get => _explicitNullValueSupportedValues; set { _explicitNullValueSupportedValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedValues"); else _explicitNullProperties?.Remove("supportedValues"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues? SupportedValues { get => _explicitNullValueSupportedValues; set { _explicitNullValueSupportedValues = value; AdditionalData?.Remove("supportedValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedValues"); else _explicitNullProperties?.Remove("supportedValues"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues? _explicitNullValueSupportedValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues SupportedValues { get => _explicitNullValueSupportedValues; set { _explicitNullValueSupportedValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedValues"); else _explicitNullProperties?.Remove("supportedValues"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues SupportedValues { get => _explicitNullValueSupportedValues; set { _explicitNullValueSupportedValues = value; AdditionalData?.Remove("supportedValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedValues"); else _explicitNullProperties?.Remove("supportedValues"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafSupportedValues _explicitNullValueSupportedValues = default!;
 #endif
         /// <summary>The value property</summary>
-        public int? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public int? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private int? _explicitNullValueValue = default!;
         /// <summary>The valueConstraint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint? ValueConstraint { get => _explicitNullValueValueConstraint; set { _explicitNullValueValueConstraint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueConstraint"); else _explicitNullProperties?.Remove("valueConstraint"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint? ValueConstraint { get => _explicitNullValueValueConstraint; set { _explicitNullValueValueConstraint = value; AdditionalData?.Remove("valueConstraint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueConstraint"); else _explicitNullProperties?.Remove("valueConstraint"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint? _explicitNullValueValueConstraint = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint ValueConstraint { get => _explicitNullValueValueConstraint; set { _explicitNullValueValueConstraint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueConstraint"); else _explicitNullProperties?.Remove("valueConstraint"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint ValueConstraint { get => _explicitNullValueValueConstraint; set { _explicitNullValueValueConstraint = value; AdditionalData?.Remove("valueConstraint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueConstraint"); else _explicitNullProperties?.Remove("valueConstraint"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafValueConstraint _explicitNullValueValueConstraint = default!;
 #endif
         /// <summary>

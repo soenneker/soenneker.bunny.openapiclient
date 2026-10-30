@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Secret") is { } nullNodeSecret && nullNodeSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secret = null;
+            if (parseNode.GetChildNode("Secret") is null) { _explicitNullValueSecret = default!; _explicitNullProperties?.Remove("Secret"); }
+            else if (parseNode.GetChildNode("Secret") is { } nullNodeSecret && nullNodeSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secret = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Secret property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Secret { get => _explicitNullValueSecret; set { _explicitNullValueSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secret"); else _explicitNullProperties?.Remove("Secret"); } }
+        public string? Secret { get => _explicitNullValueSecret; set { _explicitNullValueSecret = value; AdditionalData?.Remove("Secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secret"); else _explicitNullProperties?.Remove("Secret"); } }
         private string? _explicitNullValueSecret = default!;
 #nullable restore
 #else
-        public string Secret { get => _explicitNullValueSecret; set { _explicitNullValueSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secret"); else _explicitNullProperties?.Remove("Secret"); } }
+        public string Secret { get => _explicitNullValueSecret; set { _explicitNullValueSecret = value; AdditionalData?.Remove("Secret"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secret"); else _explicitNullProperties?.Remove("Secret"); } }
         private string _explicitNullValueSecret = default!;
 #endif
         /// <summary>

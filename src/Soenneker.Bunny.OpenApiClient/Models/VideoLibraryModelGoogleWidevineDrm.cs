@@ -18,40 +18,46 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CertificateExpirationDate") is { } nullNodeCertificateExpirationDate && nullNodeCertificateExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateExpirationDate = null;
-            if (parseNode.GetChildNode("CertificateId") is { } nullNodeCertificateId && nullNodeCertificateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateId = null;
-            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("MinClientSecurityLevel") is { } nullNodeMinClientSecurityLevel && nullNodeMinClientSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinClientSecurityLevel = null;
-            if (parseNode.GetChildNode("Provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
-            if (parseNode.GetChildNode("SdOnlyForL3") is { } nullNodeSdOnlyForL3 && nullNodeSdOnlyForL3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdOnlyForL3 = null;
+            if (parseNode.GetChildNode("CertificateExpirationDate") is null) { _explicitNullValueCertificateExpirationDate = default!; _explicitNullProperties?.Remove("CertificateExpirationDate"); }
+            else if (parseNode.GetChildNode("CertificateExpirationDate") is { } nullNodeCertificateExpirationDate && nullNodeCertificateExpirationDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateExpirationDate = null;
+            if (parseNode.GetChildNode("CertificateId") is null) { _explicitNullValueCertificateId = default!; _explicitNullProperties?.Remove("CertificateId"); }
+            else if (parseNode.GetChildNode("CertificateId") is { } nullNodeCertificateId && nullNodeCertificateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateId = null;
+            if (parseNode.GetChildNode("Enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("Enabled"); }
+            else if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("MinClientSecurityLevel") is null) { _explicitNullValueMinClientSecurityLevel = default!; _explicitNullProperties?.Remove("MinClientSecurityLevel"); }
+            else if (parseNode.GetChildNode("MinClientSecurityLevel") is { } nullNodeMinClientSecurityLevel && nullNodeMinClientSecurityLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinClientSecurityLevel = null;
+            if (parseNode.GetChildNode("Provider") is null) { _explicitNullValueProvider = default!; _explicitNullProperties?.Remove("Provider"); }
+            else if (parseNode.GetChildNode("Provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
+            if (parseNode.GetChildNode("SdOnlyForL3") is null) { _explicitNullValueSdOnlyForL3 = default!; _explicitNullProperties?.Remove("SdOnlyForL3"); }
+            else if (parseNode.GetChildNode("SdOnlyForL3") is { } nullNodeSdOnlyForL3 && nullNodeSdOnlyForL3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdOnlyForL3 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The CertificateExpirationDate property</summary>
-        public DateTimeOffset? CertificateExpirationDate { get => _explicitNullValueCertificateExpirationDate; set { _explicitNullValueCertificateExpirationDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateExpirationDate"); else _explicitNullProperties?.Remove("CertificateExpirationDate"); } }
+        public DateTimeOffset? CertificateExpirationDate { get => _explicitNullValueCertificateExpirationDate; set { _explicitNullValueCertificateExpirationDate = value; AdditionalData?.Remove("CertificateExpirationDate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateExpirationDate"); else _explicitNullProperties?.Remove("CertificateExpirationDate"); } }
         private DateTimeOffset? _explicitNullValueCertificateExpirationDate = default!;
         /// <summary>The CertificateId property</summary>
-        public long? CertificateId { get => _explicitNullValueCertificateId; set { _explicitNullValueCertificateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateId"); else _explicitNullProperties?.Remove("CertificateId"); } }
+        public long? CertificateId { get => _explicitNullValueCertificateId; set { _explicitNullValueCertificateId = value; AdditionalData?.Remove("CertificateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateId"); else _explicitNullProperties?.Remove("CertificateId"); } }
         private long? _explicitNullValueCertificateId = default!;
         /// <summary>The Enabled property</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("Enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>0 = None1 = L12 = L23 = L3</summary>
-        public int? MinClientSecurityLevel { get => _explicitNullValueMinClientSecurityLevel; set { _explicitNullValueMinClientSecurityLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinClientSecurityLevel"); else _explicitNullProperties?.Remove("MinClientSecurityLevel"); } }
+        public int? MinClientSecurityLevel { get => _explicitNullValueMinClientSecurityLevel; set { _explicitNullValueMinClientSecurityLevel = value; AdditionalData?.Remove("MinClientSecurityLevel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MinClientSecurityLevel"); else _explicitNullProperties?.Remove("MinClientSecurityLevel"); } }
         private int? _explicitNullValueMinClientSecurityLevel = default!;
         /// <summary>The Provider property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Provider"); else _explicitNullProperties?.Remove("Provider"); } }
+        public string? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("Provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Provider"); else _explicitNullProperties?.Remove("Provider"); } }
         private string? _explicitNullValueProvider = default!;
 #nullable restore
 #else
-        public string Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Provider"); else _explicitNullProperties?.Remove("Provider"); } }
+        public string Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("Provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Provider"); else _explicitNullProperties?.Remove("Provider"); } }
         private string _explicitNullValueProvider = default!;
 #endif
         /// <summary>The SdOnlyForL3 property</summary>
-        public bool? SdOnlyForL3 { get => _explicitNullValueSdOnlyForL3; set { _explicitNullValueSdOnlyForL3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SdOnlyForL3"); else _explicitNullProperties?.Remove("SdOnlyForL3"); } }
+        public bool? SdOnlyForL3 { get => _explicitNullValueSdOnlyForL3; set { _explicitNullValueSdOnlyForL3 = value; AdditionalData?.Remove("SdOnlyForL3"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SdOnlyForL3"); else _explicitNullProperties?.Remove("SdOnlyForL3"); } }
         private bool? _explicitNullValueSdOnlyForL3 = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryModelGoogleWidevineDrm"/> and sets the default values.

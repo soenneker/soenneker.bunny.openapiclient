@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sameImageTags") is { } nullNodeSameImageTags && nullNodeSameImageTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SameImageTags = null;
-            if (parseNode.GetChildNode("similarImages") is { } nullNodeSimilarImages && nullNodeSimilarImages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimilarImages = null;
+            if (parseNode.GetChildNode("sameImageTags") is null) { _explicitNullValueSameImageTags = default!; _explicitNullProperties?.Remove("sameImageTags"); }
+            else if (parseNode.GetChildNode("sameImageTags") is { } nullNodeSameImageTags && nullNodeSameImageTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SameImageTags = null;
+            if (parseNode.GetChildNode("similarImages") is null) { _explicitNullValueSimilarImages = default!; _explicitNullProperties?.Remove("similarImages"); }
+            else if (parseNode.GetChildNode("similarImages") is { } nullNodeSimilarImages && nullNodeSimilarImages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimilarImages = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The image with its first tags, from each registry that has the image but not the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>? SameImageTags { get => _explicitNullValueSameImageTags; set { _explicitNullValueSameImageTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sameImageTags"); else _explicitNullProperties?.Remove("sameImageTags"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>? SameImageTags { get => _explicitNullValueSameImageTags; set { _explicitNullValueSameImageTags = value; AdditionalData?.Remove("sameImageTags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sameImageTags"); else _explicitNullProperties?.Remove("sameImageTags"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags>? _explicitNullValueSameImageTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags> SameImageTags { get => _explicitNullValueSameImageTags; set { _explicitNullValueSameImageTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sameImageTags"); else _explicitNullProperties?.Remove("sameImageTags"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags> SameImageTags { get => _explicitNullValueSameImageTags; set { _explicitNullValueSameImageTags = value; AdditionalData?.Remove("sameImageTags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sameImageTags"); else _explicitNullProperties?.Remove("sameImageTags"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImageTags> _explicitNullValueSameImageTags = default!;
 #endif
         /// <summary>Other images whose name is like the one asked for, from the registries&apos; search or catalog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>? SimilarImages { get => _explicitNullValueSimilarImages; set { _explicitNullValueSimilarImages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("similarImages"); else _explicitNullProperties?.Remove("similarImages"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>? SimilarImages { get => _explicitNullValueSimilarImages; set { _explicitNullValueSimilarImages = value; AdditionalData?.Remove("similarImages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("similarImages"); else _explicitNullProperties?.Remove("similarImages"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage>? _explicitNullValueSimilarImages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage> SimilarImages { get => _explicitNullValueSimilarImages; set { _explicitNullValueSimilarImages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("similarImages"); else _explicitNullProperties?.Remove("similarImages"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage> SimilarImages { get => _explicitNullValueSimilarImages; set { _explicitNullValueSimilarImages = value; AdditionalData?.Remove("similarImages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("similarImages"); else _explicitNullProperties?.Remove("similarImages"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedContainerImage> _explicitNullValueSimilarImages = default!;
 #endif
         /// <summary>

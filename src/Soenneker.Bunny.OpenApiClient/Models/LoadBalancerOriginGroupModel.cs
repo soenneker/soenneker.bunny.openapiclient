@@ -17,83 +17,93 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
-            if (parseNode.GetChildNode("HealthCheckSettings") is { } nullNodeHealthCheckSettings && nullNodeHealthCheckSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HealthCheckSettings = null;
-            if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("Latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
-            if (parseNode.GetChildNode("Longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("OriginLoadBalancingMethod") is { } nullNodeOriginLoadBalancingMethod && nullNodeOriginLoadBalancingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLoadBalancingMethod = null;
-            if (parseNode.GetChildNode("Origins") is { } nullNodeOrigins && nullNodeOrigins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origins = null;
-            if (parseNode.GetChildNode("Priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
-            if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+            if (parseNode.GetChildNode("Enabled") is null) { _explicitNullValueEnabled = default!; _explicitNullProperties?.Remove("Enabled"); }
+            else if (parseNode.GetChildNode("Enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("HealthCheckSettings") is null) { _explicitNullValueHealthCheckSettings = default!; _explicitNullProperties?.Remove("HealthCheckSettings"); }
+            else if (parseNode.GetChildNode("HealthCheckSettings") is { } nullNodeHealthCheckSettings && nullNodeHealthCheckSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HealthCheckSettings = null;
+            if (parseNode.GetChildNode("Id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("Id"); }
+            else if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("Latitude") is null) { _explicitNullValueLatitude = default!; _explicitNullProperties?.Remove("Latitude"); }
+            else if (parseNode.GetChildNode("Latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
+            if (parseNode.GetChildNode("Longitude") is null) { _explicitNullValueLongitude = default!; _explicitNullProperties?.Remove("Longitude"); }
+            else if (parseNode.GetChildNode("Longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("OriginLoadBalancingMethod") is null) { _explicitNullValueOriginLoadBalancingMethod = default!; _explicitNullProperties?.Remove("OriginLoadBalancingMethod"); }
+            else if (parseNode.GetChildNode("OriginLoadBalancingMethod") is { } nullNodeOriginLoadBalancingMethod && nullNodeOriginLoadBalancingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginLoadBalancingMethod = null;
+            if (parseNode.GetChildNode("Origins") is null) { _explicitNullValueOrigins = default!; _explicitNullProperties?.Remove("Origins"); }
+            else if (parseNode.GetChildNode("Origins") is { } nullNodeOrigins && nullNodeOrigins.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Origins = null;
+            if (parseNode.GetChildNode("Priority") is null) { _explicitNullValuePriority = default!; _explicitNullProperties?.Remove("Priority"); }
+            else if (parseNode.GetChildNode("Priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("Weight") is null) { _explicitNullValueWeight = default!; _explicitNullProperties?.Remove("Weight"); }
+            else if (parseNode.GetChildNode("Weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set to true if the origin group is enabled</summary>
-        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("Enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Enabled"); else _explicitNullProperties?.Remove("Enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>Health settings for the origin group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelHealthCheckSettings? HealthCheckSettings { get => _explicitNullValueHealthCheckSettings; set { _explicitNullValueHealthCheckSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HealthCheckSettings"); else _explicitNullProperties?.Remove("HealthCheckSettings"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelHealthCheckSettings? HealthCheckSettings { get => _explicitNullValueHealthCheckSettings; set { _explicitNullValueHealthCheckSettings = value; AdditionalData?.Remove("HealthCheckSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HealthCheckSettings"); else _explicitNullProperties?.Remove("HealthCheckSettings"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelHealthCheckSettings? _explicitNullValueHealthCheckSettings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelHealthCheckSettings HealthCheckSettings { get => _explicitNullValueHealthCheckSettings; set { _explicitNullValueHealthCheckSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HealthCheckSettings"); else _explicitNullProperties?.Remove("HealthCheckSettings"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelHealthCheckSettings HealthCheckSettings { get => _explicitNullValueHealthCheckSettings; set { _explicitNullValueHealthCheckSettings = value; AdditionalData?.Remove("HealthCheckSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("HealthCheckSettings"); else _explicitNullProperties?.Remove("HealthCheckSettings"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModelHealthCheckSettings _explicitNullValueHealthCheckSettings = default!;
 #endif
         /// <summary>The unique ID of the origin group</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("Id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The latitude of the origin group location</summary>
-        public double? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Latitude"); else _explicitNullProperties?.Remove("Latitude"); } }
+        public double? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; AdditionalData?.Remove("Latitude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Latitude"); else _explicitNullProperties?.Remove("Latitude"); } }
         private double? _explicitNullValueLatitude = default!;
         /// <summary>The longitude of the origin group location</summary>
-        public double? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Longitude"); else _explicitNullProperties?.Remove("Longitude"); } }
+        public double? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; AdditionalData?.Remove("Longitude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Longitude"); else _explicitNullProperties?.Remove("Longitude"); } }
         private double? _explicitNullValueLongitude = default!;
         /// <summary>The name of the origin group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The load balancing method used for selecting origins within the group0 = Round Robin1 = Weighted Random2 = Least Connections3 = Latency</summary>
-        public int? OriginLoadBalancingMethod { get => _explicitNullValueOriginLoadBalancingMethod; set { _explicitNullValueOriginLoadBalancingMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLoadBalancingMethod"); else _explicitNullProperties?.Remove("OriginLoadBalancingMethod"); } }
+        public int? OriginLoadBalancingMethod { get => _explicitNullValueOriginLoadBalancingMethod; set { _explicitNullValueOriginLoadBalancingMethod = value; AdditionalData?.Remove("OriginLoadBalancingMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLoadBalancingMethod"); else _explicitNullProperties?.Remove("OriginLoadBalancingMethod"); } }
         private int? _explicitNullValueOriginLoadBalancingMethod = default!;
         /// <summary>The list of origins associated with the origin group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>? Origins { get => _explicitNullValueOrigins; set { _explicitNullValueOrigins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Origins"); else _explicitNullProperties?.Remove("Origins"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>? Origins { get => _explicitNullValueOrigins; set { _explicitNullValueOrigins = value; AdditionalData?.Remove("Origins"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Origins"); else _explicitNullProperties?.Remove("Origins"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>? _explicitNullValueOrigins = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel> Origins { get => _explicitNullValueOrigins; set { _explicitNullValueOrigins = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Origins"); else _explicitNullProperties?.Remove("Origins"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel> Origins { get => _explicitNullValueOrigins; set { _explicitNullValueOrigins = value; AdditionalData?.Remove("Origins"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Origins"); else _explicitNullProperties?.Remove("Origins"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel> _explicitNullValueOrigins = default!;
 #endif
         /// <summary>The priority of the origin group used for failover load balancing</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
+        public byte[]? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
         private byte[]? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public byte[] Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
+        public byte[] Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
         private byte[] _explicitNullValuePriority = default!;
 #endif
         /// <summary>The weight of the origin group used for weighted load balancing</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        public byte[]? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
         private byte[]? _explicitNullValueWeight = default!;
 #nullable restore
 #else
-        public byte[] Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        public byte[] Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
         private byte[] _explicitNullValueWeight = default!;
 #endif
         /// <summary>

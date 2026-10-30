@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("Secrets") is null) { _explicitNullValueSecrets = default!; _explicitNullProperties?.Remove("Secrets"); }
+            else if (parseNode.GetChildNode("Secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Secrets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptSecretModel>? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secrets"); else _explicitNullProperties?.Remove("Secrets"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptSecretModel>? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; AdditionalData?.Remove("Secrets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secrets"); else _explicitNullProperties?.Remove("Secrets"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptSecretModel>? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptSecretModel> Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secrets"); else _explicitNullProperties?.Remove("Secrets"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptSecretModel> Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; AdditionalData?.Remove("Secrets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Secrets"); else _explicitNullProperties?.Remove("Secrets"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptSecretModel> _explicitNullValueSecrets = default!;
 #endif
         /// <summary>

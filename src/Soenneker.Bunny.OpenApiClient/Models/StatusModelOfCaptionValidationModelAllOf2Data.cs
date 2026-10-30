@@ -18,10 +18,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorList") is { } nullNodeErrorList && nullNodeErrorList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorList = null;
-            if (parseNode.GetChildNode("valid") is { } nullNodeValid && nullNodeValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Valid = null;
-            if (parseNode.GetChildNode("warningList") is { } nullNodeWarningList && nullNodeWarningList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningList = null;
-            if (parseNode.GetChildNode("warningMessage") is { } nullNodeWarningMessage && nullNodeWarningMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningMessage = null;
+            if (parseNode.GetChildNode("errorList") is null) { _explicitNullValueErrorList = default!; _explicitNullProperties?.Remove("errorList"); }
+            else if (parseNode.GetChildNode("errorList") is { } nullNodeErrorList && nullNodeErrorList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorList = null;
+            if (parseNode.GetChildNode("valid") is null) { _explicitNullValueValid = default!; _explicitNullProperties?.Remove("valid"); }
+            else if (parseNode.GetChildNode("valid") is { } nullNodeValid && nullNodeValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Valid = null;
+            if (parseNode.GetChildNode("warningList") is null) { _explicitNullValueWarningList = default!; _explicitNullProperties?.Remove("warningList"); }
+            else if (parseNode.GetChildNode("warningList") is { } nullNodeWarningList && nullNodeWarningList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningList = null;
+            if (parseNode.GetChildNode("warningMessage") is null) { _explicitNullValueWarningMessage = default!; _explicitNullProperties?.Remove("warningMessage"); }
+            else if (parseNode.GetChildNode("warningMessage") is { } nullNodeWarningMessage && nullNodeWarningMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningMessage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,34 +33,34 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>When uploaded file was invalid, will contain errors found</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ErrorList { get => _explicitNullValueErrorList; set { _explicitNullValueErrorList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorList"); else _explicitNullProperties?.Remove("errorList"); } }
+        public List<string>? ErrorList { get => _explicitNullValueErrorList; set { _explicitNullValueErrorList = value; AdditionalData?.Remove("errorList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorList"); else _explicitNullProperties?.Remove("errorList"); } }
         private List<string>? _explicitNullValueErrorList = default!;
 #nullable restore
 #else
-        public List<string> ErrorList { get => _explicitNullValueErrorList; set { _explicitNullValueErrorList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorList"); else _explicitNullProperties?.Remove("errorList"); } }
+        public List<string> ErrorList { get => _explicitNullValueErrorList; set { _explicitNullValueErrorList = value; AdditionalData?.Remove("errorList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorList"); else _explicitNullProperties?.Remove("errorList"); } }
         private List<string> _explicitNullValueErrorList = default!;
 #endif
         /// <summary>Denotes whether uploaded captions file was valid</summary>
-        public bool? Valid { get => _explicitNullValueValid; set { _explicitNullValueValid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid"); else _explicitNullProperties?.Remove("valid"); } }
+        public bool? Valid { get => _explicitNullValueValid; set { _explicitNullValueValid = value; AdditionalData?.Remove("valid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid"); else _explicitNullProperties?.Remove("valid"); } }
         private bool? _explicitNullValueValid = default!;
         /// <summary>When uploaded file was valid but non-breaking issues were found, will contain issues found</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WarningList { get => _explicitNullValueWarningList; set { _explicitNullValueWarningList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningList"); else _explicitNullProperties?.Remove("warningList"); } }
+        public List<string>? WarningList { get => _explicitNullValueWarningList; set { _explicitNullValueWarningList = value; AdditionalData?.Remove("warningList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningList"); else _explicitNullProperties?.Remove("warningList"); } }
         private List<string>? _explicitNullValueWarningList = default!;
 #nullable restore
 #else
-        public List<string> WarningList { get => _explicitNullValueWarningList; set { _explicitNullValueWarningList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningList"); else _explicitNullProperties?.Remove("warningList"); } }
+        public List<string> WarningList { get => _explicitNullValueWarningList; set { _explicitNullValueWarningList = value; AdditionalData?.Remove("warningList"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningList"); else _explicitNullProperties?.Remove("warningList"); } }
         private List<string> _explicitNullValueWarningList = default!;
 #endif
         /// <summary>UI-friendly summary of warnings found in the uploaded captions file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarningMessage { get => _explicitNullValueWarningMessage; set { _explicitNullValueWarningMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningMessage"); else _explicitNullProperties?.Remove("warningMessage"); } }
+        public string? WarningMessage { get => _explicitNullValueWarningMessage; set { _explicitNullValueWarningMessage = value; AdditionalData?.Remove("warningMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningMessage"); else _explicitNullProperties?.Remove("warningMessage"); } }
         private string? _explicitNullValueWarningMessage = default!;
 #nullable restore
 #else
-        public string WarningMessage { get => _explicitNullValueWarningMessage; set { _explicitNullValueWarningMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningMessage"); else _explicitNullProperties?.Remove("warningMessage"); } }
+        public string WarningMessage { get => _explicitNullValueWarningMessage; set { _explicitNullValueWarningMessage = value; AdditionalData?.Remove("warningMessage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningMessage"); else _explicitNullProperties?.Remove("warningMessage"); } }
         private string _explicitNullValueWarningMessage = default!;
 #endif
         /// <summary>

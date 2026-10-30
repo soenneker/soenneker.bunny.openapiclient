@@ -17,29 +17,34 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overage") is { } nullNodeOverage && nullNodeOverage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overage = null;
-            if (parseNode.GetChildNode("overageAllowance") is { } nullNodeOverageAllowance && nullNodeOverageAllowance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverageAllowance = null;
-            if (parseNode.GetChildNode("periodEnd") is { } nullNodePeriodEnd && nullNodePeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodEnd = null;
-            if (parseNode.GetChildNode("periodStart") is { } nullNodePeriodStart && nullNodePeriodStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodStart = null;
-            if (parseNode.GetChildNode("planType") is { } nullNodePlanType && nullNodePlanType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanType = null;
+            if (parseNode.GetChildNode("overage") is null) { _explicitNullValueOverage = default!; _explicitNullProperties?.Remove("overage"); }
+            else if (parseNode.GetChildNode("overage") is { } nullNodeOverage && nullNodeOverage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overage = null;
+            if (parseNode.GetChildNode("overageAllowance") is null) { _explicitNullValueOverageAllowance = default!; _explicitNullProperties?.Remove("overageAllowance"); }
+            else if (parseNode.GetChildNode("overageAllowance") is { } nullNodeOverageAllowance && nullNodeOverageAllowance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverageAllowance = null;
+            if (parseNode.GetChildNode("periodEnd") is null) { _explicitNullValuePeriodEnd = default!; _explicitNullProperties?.Remove("periodEnd"); }
+            else if (parseNode.GetChildNode("periodEnd") is { } nullNodePeriodEnd && nullNodePeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodEnd = null;
+            if (parseNode.GetChildNode("periodStart") is null) { _explicitNullValuePeriodStart = default!; _explicitNullProperties?.Remove("periodStart"); }
+            else if (parseNode.GetChildNode("periodStart") is { } nullNodePeriodStart && nullNodePeriodStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodStart = null;
+            if (parseNode.GetChildNode("planType") is null) { _explicitNullValuePlanType = default!; _explicitNullProperties?.Remove("planType"); }
+            else if (parseNode.GetChildNode("planType") is { } nullNodePlanType && nullNodePlanType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The overage property</summary>
-        public long? Overage { get => _explicitNullValueOverage; set { _explicitNullValueOverage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overage"); else _explicitNullProperties?.Remove("overage"); } }
+        public long? Overage { get => _explicitNullValueOverage; set { _explicitNullValueOverage = value; AdditionalData?.Remove("overage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overage"); else _explicitNullProperties?.Remove("overage"); } }
         private long? _explicitNullValueOverage = default!;
         /// <summary>The overageAllowance property</summary>
-        public long? OverageAllowance { get => _explicitNullValueOverageAllowance; set { _explicitNullValueOverageAllowance = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overageAllowance"); else _explicitNullProperties?.Remove("overageAllowance"); } }
+        public long? OverageAllowance { get => _explicitNullValueOverageAllowance; set { _explicitNullValueOverageAllowance = value; AdditionalData?.Remove("overageAllowance"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overageAllowance"); else _explicitNullProperties?.Remove("overageAllowance"); } }
         private long? _explicitNullValueOverageAllowance = default!;
         /// <summary>The periodEnd property</summary>
-        public DateTimeOffset? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodEnd"); else _explicitNullProperties?.Remove("periodEnd"); } }
+        public DateTimeOffset? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; AdditionalData?.Remove("periodEnd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodEnd"); else _explicitNullProperties?.Remove("periodEnd"); } }
         private DateTimeOffset? _explicitNullValuePeriodEnd = default!;
         /// <summary>The periodStart property</summary>
-        public DateTimeOffset? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodStart"); else _explicitNullProperties?.Remove("periodStart"); } }
+        public DateTimeOffset? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; AdditionalData?.Remove("periodStart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodStart"); else _explicitNullProperties?.Remove("periodStart"); } }
         private DateTimeOffset? _explicitNullValuePeriodStart = default!;
         /// <summary>0 = Basic1 = Advanced2 = Business3 = Enterprise</summary>
-        public int? PlanType { get => _explicitNullValuePlanType; set { _explicitNullValuePlanType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planType"); else _explicitNullProperties?.Remove("planType"); } }
+        public int? PlanType { get => _explicitNullValuePlanType; set { _explicitNullValuePlanType = value; AdditionalData?.Remove("planType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planType"); else _explicitNullProperties?.Remove("planType"); } }
         private int? _explicitNullValuePlanType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverageSegment"/> and sets the default values.

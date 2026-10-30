@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("liveness") is { } nullNodeLiveness && nullNodeLiveness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Liveness = null;
-            if (parseNode.GetChildNode("readiness") is { } nullNodeReadiness && nullNodeReadiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Readiness = null;
-            if (parseNode.GetChildNode("startup") is { } nullNodeStartup && nullNodeStartup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Startup = null;
+            if (parseNode.GetChildNode("liveness") is null) { _explicitNullValueLiveness = default!; _explicitNullProperties?.Remove("liveness"); }
+            else if (parseNode.GetChildNode("liveness") is { } nullNodeLiveness && nullNodeLiveness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Liveness = null;
+            if (parseNode.GetChildNode("readiness") is null) { _explicitNullValueReadiness = default!; _explicitNullProperties?.Remove("readiness"); }
+            else if (parseNode.GetChildNode("readiness") is { } nullNodeReadiness && nullNodeReadiness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Readiness = null;
+            if (parseNode.GetChildNode("startup") is null) { _explicitNullValueStartup = default!; _explicitNullProperties?.Remove("startup"); }
+            else if (parseNode.GetChildNode("startup") is { } nullNodeStartup && nullNodeStartup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Startup = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The liveness property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? Liveness { get => _explicitNullValueLiveness; set { _explicitNullValueLiveness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liveness"); else _explicitNullProperties?.Remove("liveness"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? Liveness { get => _explicitNullValueLiveness; set { _explicitNullValueLiveness = value; AdditionalData?.Remove("liveness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liveness"); else _explicitNullProperties?.Remove("liveness"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? _explicitNullValueLiveness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe Liveness { get => _explicitNullValueLiveness; set { _explicitNullValueLiveness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liveness"); else _explicitNullProperties?.Remove("liveness"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe Liveness { get => _explicitNullValueLiveness; set { _explicitNullValueLiveness = value; AdditionalData?.Remove("liveness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("liveness"); else _explicitNullProperties?.Remove("liveness"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe _explicitNullValueLiveness = default!;
 #endif
         /// <summary>The readiness property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? Readiness { get => _explicitNullValueReadiness; set { _explicitNullValueReadiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readiness"); else _explicitNullProperties?.Remove("readiness"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? Readiness { get => _explicitNullValueReadiness; set { _explicitNullValueReadiness = value; AdditionalData?.Remove("readiness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readiness"); else _explicitNullProperties?.Remove("readiness"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? _explicitNullValueReadiness = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe Readiness { get => _explicitNullValueReadiness; set { _explicitNullValueReadiness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readiness"); else _explicitNullProperties?.Remove("readiness"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe Readiness { get => _explicitNullValueReadiness; set { _explicitNullValueReadiness = value; AdditionalData?.Remove("readiness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("readiness"); else _explicitNullProperties?.Remove("readiness"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe _explicitNullValueReadiness = default!;
 #endif
         /// <summary>The startup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? Startup { get => _explicitNullValueStartup; set { _explicitNullValueStartup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startup"); else _explicitNullProperties?.Remove("startup"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? Startup { get => _explicitNullValueStartup; set { _explicitNullValueStartup = value; AdditionalData?.Remove("startup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startup"); else _explicitNullProperties?.Remove("startup"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe? _explicitNullValueStartup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe Startup { get => _explicitNullValueStartup; set { _explicitNullValueStartup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startup"); else _explicitNullProperties?.Remove("startup"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe Startup { get => _explicitNullValueStartup; set { _explicitNullValueStartup = value; AdditionalData?.Remove("startup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startup"); else _explicitNullProperties?.Remove("startup"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ContainerProbe _explicitNullValueStartup = default!;
 #endif
         /// <summary>

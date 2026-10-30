@@ -18,8 +18,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
-            if (parseNode.GetChildNode("endpoints") is { } nullNodeEndpoints && nullNodeEndpoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoints = null;
+            if (parseNode.GetChildNode("configuration") is null) { _explicitNullValueConfiguration = default!; _explicitNullProperties?.Remove("configuration"); }
+            else if (parseNode.GetChildNode("configuration") is { } nullNodeConfiguration && nullNodeConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Configuration = null;
+            if (parseNode.GetChildNode("endpoints") is null) { _explicitNullValueEndpoints = default!; _explicitNullProperties?.Remove("endpoints"); }
+            else if (parseNode.GetChildNode("endpoints") is { } nullNodeEndpoints && nullNodeEndpoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoints = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Global API Guardian configuration for a shield zone.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration"); else _explicitNullProperties?.Remove("configuration"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails? Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration"); else _explicitNullProperties?.Remove("configuration"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails? _explicitNullValueConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration"); else _explicitNullProperties?.Remove("configuration"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails Configuration { get => _explicitNullValueConfiguration; set { _explicitNullValueConfiguration = value; AdditionalData?.Remove("configuration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuration"); else _explicitNullProperties?.Remove("configuration"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianConfigurationDetails _explicitNullValueConfiguration = default!;
 #endif
         /// <summary>All endpoints discovered from the uploaded OpenAPI specification.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails>? Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails>? Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; AdditionalData?.Remove("endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails>? _explicitNullValueEndpoints = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails> Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails> Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; AdditionalData?.Remove("endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetails> _explicitNullValueEndpoints = default!;
 #endif
         /// <summary>

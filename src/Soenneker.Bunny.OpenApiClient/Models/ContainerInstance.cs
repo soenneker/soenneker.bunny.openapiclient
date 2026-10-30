@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("nodeIpAddress") is { } nullNodeNodeIpAddress && nullNodeNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeIpAddress = null;
-            if (parseNode.GetChildNode("podId") is { } nullNodePodId && nullNodePodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodId = null;
-            if (parseNode.GetChildNode("templateId") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("nodeIpAddress") is null) { _explicitNullValueNodeIpAddress = default!; _explicitNullProperties?.Remove("nodeIpAddress"); }
+            else if (parseNode.GetChildNode("nodeIpAddress") is { } nullNodeNodeIpAddress && nullNodeNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeIpAddress = null;
+            if (parseNode.GetChildNode("podId") is null) { _explicitNullValuePodId = default!; _explicitNullProperties?.Remove("podId"); }
+            else if (parseNode.GetChildNode("podId") is { } nullNodePodId && nullNodePodId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PodId = null;
+            if (parseNode.GetChildNode("templateId") is null) { _explicitNullValueTemplateId = default!; _explicitNullProperties?.Remove("templateId"); }
+            else if (parseNode.GetChildNode("templateId") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The nodeIpAddress property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeIpAddress { get => _explicitNullValueNodeIpAddress; set { _explicitNullValueNodeIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeIpAddress"); else _explicitNullProperties?.Remove("nodeIpAddress"); } }
+        public string? NodeIpAddress { get => _explicitNullValueNodeIpAddress; set { _explicitNullValueNodeIpAddress = value; AdditionalData?.Remove("nodeIpAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeIpAddress"); else _explicitNullProperties?.Remove("nodeIpAddress"); } }
         private string? _explicitNullValueNodeIpAddress = default!;
 #nullable restore
 #else
-        public string NodeIpAddress { get => _explicitNullValueNodeIpAddress; set { _explicitNullValueNodeIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeIpAddress"); else _explicitNullProperties?.Remove("nodeIpAddress"); } }
+        public string NodeIpAddress { get => _explicitNullValueNodeIpAddress; set { _explicitNullValueNodeIpAddress = value; AdditionalData?.Remove("nodeIpAddress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeIpAddress"); else _explicitNullProperties?.Remove("nodeIpAddress"); } }
         private string _explicitNullValueNodeIpAddress = default!;
 #endif
         /// <summary>The podId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PodId { get => _explicitNullValuePodId; set { _explicitNullValuePodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podId"); else _explicitNullProperties?.Remove("podId"); } }
+        public string? PodId { get => _explicitNullValuePodId; set { _explicitNullValuePodId = value; AdditionalData?.Remove("podId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podId"); else _explicitNullProperties?.Remove("podId"); } }
         private string? _explicitNullValuePodId = default!;
 #nullable restore
 #else
-        public string PodId { get => _explicitNullValuePodId; set { _explicitNullValuePodId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podId"); else _explicitNullProperties?.Remove("podId"); } }
+        public string PodId { get => _explicitNullValuePodId; set { _explicitNullValuePodId = value; AdditionalData?.Remove("podId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("podId"); else _explicitNullProperties?.Remove("podId"); } }
         private string _explicitNullValuePodId = default!;
 #endif
         /// <summary>The templateId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; AdditionalData?.Remove("templateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
         private string? _explicitNullValueTemplateId = default!;
 #nullable restore
 #else
-        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
+        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; AdditionalData?.Remove("templateId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateId"); else _explicitNullProperties?.Remove("templateId"); } }
         private string _explicitNullValueTemplateId = default!;
 #endif
         /// <summary>

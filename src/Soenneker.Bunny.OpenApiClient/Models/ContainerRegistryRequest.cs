@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
-            if (parseNode.GetChildNode("hostName") is { } nullNodeHostName && nullNodeHostName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostName = null;
-            if (parseNode.GetChildNode("passwordCredentials") is { } nullNodePasswordCredentials && nullNodePasswordCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasswordCredentials = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("displayName") is null) { _explicitNullValueDisplayName = default!; _explicitNullProperties?.Remove("displayName"); }
+            else if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("hostName") is null) { _explicitNullValueHostName = default!; _explicitNullProperties?.Remove("hostName"); }
+            else if (parseNode.GetChildNode("hostName") is { } nullNodeHostName && nullNodeHostName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostName = null;
+            if (parseNode.GetChildNode("passwordCredentials") is null) { _explicitNullValuePasswordCredentials = default!; _explicitNullProperties?.Remove("passwordCredentials"); }
+            else if (parseNode.GetChildNode("passwordCredentials") is { } nullNodePasswordCredentials && nullNodePasswordCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PasswordCredentials = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,35 +32,35 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Container registry display name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
         private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
         private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The registry&apos;s host, with an optional port (e.g. &quot;registry.example.com&quot; or &quot;registry.example.com:5000&quot;).Required for the Oci type and ignored for the others.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
+        public string? HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; AdditionalData?.Remove("hostName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
         private string? _explicitNullValueHostName = default!;
 #nullable restore
 #else
-        public string HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
+        public string HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; AdditionalData?.Remove("hostName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }
         private string _explicitNullValueHostName = default!;
 #endif
         /// <summary>Password credentials for container registry</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.Credentials? PasswordCredentials { get => _explicitNullValuePasswordCredentials; set { _explicitNullValuePasswordCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passwordCredentials"); else _explicitNullProperties?.Remove("passwordCredentials"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Credentials? PasswordCredentials { get => _explicitNullValuePasswordCredentials; set { _explicitNullValuePasswordCredentials = value; AdditionalData?.Remove("passwordCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passwordCredentials"); else _explicitNullProperties?.Remove("passwordCredentials"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.Credentials? _explicitNullValuePasswordCredentials = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.Credentials PasswordCredentials { get => _explicitNullValuePasswordCredentials; set { _explicitNullValuePasswordCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passwordCredentials"); else _explicitNullProperties?.Remove("passwordCredentials"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.Credentials PasswordCredentials { get => _explicitNullValuePasswordCredentials; set { _explicitNullValuePasswordCredentials = value; AdditionalData?.Remove("passwordCredentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("passwordCredentials"); else _explicitNullProperties?.Remove("passwordCredentials"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.Credentials _explicitNullValuePasswordCredentials = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.RegistryType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.RegistryType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.RegistryType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ContainerRegistryRequest"/> and sets the default values.
@@ -86,7 +90,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "hostName", n => { HostName = n.GetStringValue(); } },
                 { "passwordCredentials", n => { PasswordCredentials = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.Credentials>(global::Soenneker.Bunny.OpenApiClient.Models.Credentials.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RegistryType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RegistryType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

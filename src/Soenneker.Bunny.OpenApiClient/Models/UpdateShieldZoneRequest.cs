@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("shieldZone") is { } nullNodeShieldZone && nullNodeShieldZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZone = null;
-            if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
+            if (parseNode.GetChildNode("shieldZone") is null) { _explicitNullValueShieldZone = default!; _explicitNullProperties?.Remove("shieldZone"); }
+            else if (parseNode.GetChildNode("shieldZone") is { } nullNodeShieldZone && nullNodeShieldZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZone = null;
+            if (parseNode.GetChildNode("shieldZoneId") is null) { _explicitNullValueShieldZoneId = default!; _explicitNullProperties?.Remove("shieldZoneId"); }
+            else if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The shieldZone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest? ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest? ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; AdditionalData?.Remove("shieldZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest? _explicitNullValueShieldZone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; AdditionalData?.Remove("shieldZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest _explicitNullValueShieldZone = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
-        public long? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
+        public long? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private long? _explicitNullValueShieldZoneId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateShieldZoneRequest"/> and sets the default values.

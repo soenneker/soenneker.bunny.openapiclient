@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("chapters") is { } nullNodeChapters && nullNodeChapters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chapters = null;
-            if (parseNode.GetChildNode("collectionId") is { } nullNodeCollectionId && nullNodeCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionId = null;
-            if (parseNode.GetChildNode("metaTags") is { } nullNodeMetaTags && nullNodeMetaTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaTags = null;
-            if (parseNode.GetChildNode("moments") is { } nullNodeMoments && nullNodeMoments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Moments = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("chapters") is null) { _explicitNullValueChapters = default!; _explicitNullProperties?.Remove("chapters"); }
+            else if (parseNode.GetChildNode("chapters") is { } nullNodeChapters && nullNodeChapters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Chapters = null;
+            if (parseNode.GetChildNode("collectionId") is null) { _explicitNullValueCollectionId = default!; _explicitNullProperties?.Remove("collectionId"); }
+            else if (parseNode.GetChildNode("collectionId") is { } nullNodeCollectionId && nullNodeCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionId = null;
+            if (parseNode.GetChildNode("metaTags") is null) { _explicitNullValueMetaTags = default!; _explicitNullProperties?.Remove("metaTags"); }
+            else if (parseNode.GetChildNode("metaTags") is { } nullNodeMetaTags && nullNodeMetaTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MetaTags = null;
+            if (parseNode.GetChildNode("moments") is null) { _explicitNullValueMoments = default!; _explicitNullProperties?.Remove("moments"); }
+            else if (parseNode.GetChildNode("moments") is { } nullNodeMoments && nullNodeMoments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Moments = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,51 +34,51 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The list of chapters available for the video, up to 200. Omit/null to leave existing chapters unchanged; providing a list, including an empty one, fully replaces all existing chapters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel>? Chapters { get => _explicitNullValueChapters; set { _explicitNullValueChapters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chapters"); else _explicitNullProperties?.Remove("chapters"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel>? Chapters { get => _explicitNullValueChapters; set { _explicitNullValueChapters = value; AdditionalData?.Remove("chapters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chapters"); else _explicitNullProperties?.Remove("chapters"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel>? _explicitNullValueChapters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel> Chapters { get => _explicitNullValueChapters; set { _explicitNullValueChapters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chapters"); else _explicitNullProperties?.Remove("chapters"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel> Chapters { get => _explicitNullValueChapters; set { _explicitNullValueChapters = value; AdditionalData?.Remove("chapters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chapters"); else _explicitNullProperties?.Remove("chapters"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ChapterModel> _explicitNullValueChapters = default!;
 #endif
         /// <summary>The ID of the collection where the video belongs. Omit/null to leave the current collection unchanged; send an empty string to remove the video from its collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
+        public string? CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; AdditionalData?.Remove("collectionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
         private string? _explicitNullValueCollectionId = default!;
 #nullable restore
 #else
-        public string CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
+        public string CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; AdditionalData?.Remove("collectionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
         private string _explicitNullValueCollectionId = default!;
 #endif
         /// <summary>The meta tags added to the video, up to 50. Omit/null to leave existing tags unchanged; providing a list, including an empty one, fully replaces all existing tags. Setting a tag with Property &quot;description&quot; also updates the video&apos;s Description field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel>? MetaTags { get => _explicitNullValueMetaTags; set { _explicitNullValueMetaTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaTags"); else _explicitNullProperties?.Remove("metaTags"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel>? MetaTags { get => _explicitNullValueMetaTags; set { _explicitNullValueMetaTags = value; AdditionalData?.Remove("metaTags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaTags"); else _explicitNullProperties?.Remove("metaTags"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel>? _explicitNullValueMetaTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel> MetaTags { get => _explicitNullValueMetaTags; set { _explicitNullValueMetaTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaTags"); else _explicitNullProperties?.Remove("metaTags"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel> MetaTags { get => _explicitNullValueMetaTags; set { _explicitNullValueMetaTags = value; AdditionalData?.Remove("metaTags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metaTags"); else _explicitNullProperties?.Remove("metaTags"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.MetaTagModel> _explicitNullValueMetaTags = default!;
 #endif
         /// <summary>The list of moments available for the video, up to 200. Omit/null to leave existing moments unchanged; providing a list, including an empty one, fully replaces all existing moments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>? Moments { get => _explicitNullValueMoments; set { _explicitNullValueMoments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moments"); else _explicitNullProperties?.Remove("moments"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>? Moments { get => _explicitNullValueMoments; set { _explicitNullValueMoments = value; AdditionalData?.Remove("moments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moments"); else _explicitNullProperties?.Remove("moments"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>? _explicitNullValueMoments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel> Moments { get => _explicitNullValueMoments; set { _explicitNullValueMoments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moments"); else _explicitNullProperties?.Remove("moments"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel> Moments { get => _explicitNullValueMoments; set { _explicitNullValueMoments = value; AdditionalData?.Remove("moments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moments"); else _explicitNullProperties?.Remove("moments"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel> _explicitNullValueMoments = default!;
 #endif
         /// <summary>The title of the video</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>

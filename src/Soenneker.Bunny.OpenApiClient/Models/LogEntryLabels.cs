@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ErrorCode") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
-            if (parseNode.GetChildNode("ServerZone") is { } nullNodeServerZone && nullNodeServerZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerZone = null;
-            if (parseNode.GetChildNode("StatusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("ErrorCode") is null) { _explicitNullValueErrorCode = default!; _explicitNullProperties?.Remove("ErrorCode"); }
+            else if (parseNode.GetChildNode("ErrorCode") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("ServerZone") is null) { _explicitNullValueServerZone = default!; _explicitNullProperties?.Remove("ServerZone"); }
+            else if (parseNode.GetChildNode("ServerZone") is { } nullNodeServerZone && nullNodeServerZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerZone = null;
+            if (parseNode.GetChildNode("StatusCode") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("StatusCode"); }
+            else if (parseNode.GetChildNode("StatusCode") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ErrorCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorCode"); else _explicitNullProperties?.Remove("ErrorCode"); } }
+        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("ErrorCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorCode"); else _explicitNullProperties?.Remove("ErrorCode"); } }
         private string? _explicitNullValueErrorCode = default!;
 #nullable restore
 #else
-        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorCode"); else _explicitNullProperties?.Remove("ErrorCode"); } }
+        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; AdditionalData?.Remove("ErrorCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ErrorCode"); else _explicitNullProperties?.Remove("ErrorCode"); } }
         private string _explicitNullValueErrorCode = default!;
 #endif
         /// <summary>The ServerZone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerZone { get => _explicitNullValueServerZone; set { _explicitNullValueServerZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServerZone"); else _explicitNullProperties?.Remove("ServerZone"); } }
+        public string? ServerZone { get => _explicitNullValueServerZone; set { _explicitNullValueServerZone = value; AdditionalData?.Remove("ServerZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServerZone"); else _explicitNullProperties?.Remove("ServerZone"); } }
         private string? _explicitNullValueServerZone = default!;
 #nullable restore
 #else
-        public string ServerZone { get => _explicitNullValueServerZone; set { _explicitNullValueServerZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServerZone"); else _explicitNullProperties?.Remove("ServerZone"); } }
+        public string ServerZone { get => _explicitNullValueServerZone; set { _explicitNullValueServerZone = value; AdditionalData?.Remove("ServerZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ServerZone"); else _explicitNullProperties?.Remove("ServerZone"); } }
         private string _explicitNullValueServerZone = default!;
 #endif
         /// <summary>The StatusCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
+        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("StatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
         private string? _explicitNullValueStatusCode = default!;
 #nullable restore
 #else
-        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
+        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("StatusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StatusCode"); else _explicitNullProperties?.Remove("StatusCode"); } }
         private string _explicitNullValueStatusCode = default!;
 #endif
         /// <summary>

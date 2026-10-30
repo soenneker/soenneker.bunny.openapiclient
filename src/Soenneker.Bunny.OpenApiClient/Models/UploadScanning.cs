@@ -17,21 +17,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("blockedRequests") is { } nullNodeBlockedRequests && nullNodeBlockedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedRequests = null;
-            if (parseNode.GetChildNode("filesScanned") is { } nullNodeFilesScanned && nullNodeFilesScanned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesScanned = null;
-            if (parseNode.GetChildNode("loggedRequests") is { } nullNodeLoggedRequests && nullNodeLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggedRequests = null;
+            if (parseNode.GetChildNode("blockedRequests") is null) { _explicitNullValueBlockedRequests = default!; _explicitNullProperties?.Remove("blockedRequests"); }
+            else if (parseNode.GetChildNode("blockedRequests") is { } nullNodeBlockedRequests && nullNodeBlockedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedRequests = null;
+            if (parseNode.GetChildNode("filesScanned") is null) { _explicitNullValueFilesScanned = default!; _explicitNullProperties?.Remove("filesScanned"); }
+            else if (parseNode.GetChildNode("filesScanned") is { } nullNodeFilesScanned && nullNodeFilesScanned.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesScanned = null;
+            if (parseNode.GetChildNode("loggedRequests") is null) { _explicitNullValueLoggedRequests = default!; _explicitNullProperties?.Remove("loggedRequests"); }
+            else if (parseNode.GetChildNode("loggedRequests") is { } nullNodeLoggedRequests && nullNodeLoggedRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggedRequests = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blockedRequests property</summary>
-        public int? BlockedRequests { get => _explicitNullValueBlockedRequests; set { _explicitNullValueBlockedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedRequests"); else _explicitNullProperties?.Remove("blockedRequests"); } }
+        public int? BlockedRequests { get => _explicitNullValueBlockedRequests; set { _explicitNullValueBlockedRequests = value; AdditionalData?.Remove("blockedRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedRequests"); else _explicitNullProperties?.Remove("blockedRequests"); } }
         private int? _explicitNullValueBlockedRequests = default!;
         /// <summary>The filesScanned property</summary>
-        public int? FilesScanned { get => _explicitNullValueFilesScanned; set { _explicitNullValueFilesScanned = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesScanned"); else _explicitNullProperties?.Remove("filesScanned"); } }
+        public int? FilesScanned { get => _explicitNullValueFilesScanned; set { _explicitNullValueFilesScanned = value; AdditionalData?.Remove("filesScanned"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesScanned"); else _explicitNullProperties?.Remove("filesScanned"); } }
         private int? _explicitNullValueFilesScanned = default!;
         /// <summary>The loggedRequests property</summary>
-        public int? LoggedRequests { get => _explicitNullValueLoggedRequests; set { _explicitNullValueLoggedRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loggedRequests"); else _explicitNullProperties?.Remove("loggedRequests"); } }
+        public int? LoggedRequests { get => _explicitNullValueLoggedRequests; set { _explicitNullValueLoggedRequests = value; AdditionalData?.Remove("loggedRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loggedRequests"); else _explicitNullProperties?.Remove("loggedRequests"); } }
         private int? _explicitNullValueLoggedRequests = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UploadScanning"/> and sets the default values.

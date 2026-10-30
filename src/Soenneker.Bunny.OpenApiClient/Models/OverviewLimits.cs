@@ -18,21 +18,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cpuCores") is { } nullNodeCpuCores && nullNodeCpuCores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpuCores = null;
-            if (parseNode.GetChildNode("outboundBandwidthBytesPerSecond") is { } nullNodeOutboundBandwidthBytesPerSecond && nullNodeOutboundBandwidthBytesPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundBandwidthBytesPerSecond = null;
-            if (parseNode.GetChildNode("ramBytes") is { } nullNodeRamBytes && nullNodeRamBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RamBytes = null;
+            if (parseNode.GetChildNode("cpuCores") is null) { _explicitNullValueCpuCores = default!; _explicitNullProperties?.Remove("cpuCores"); }
+            else if (parseNode.GetChildNode("cpuCores") is { } nullNodeCpuCores && nullNodeCpuCores.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CpuCores = null;
+            if (parseNode.GetChildNode("outboundBandwidthBytesPerSecond") is null) { _explicitNullValueOutboundBandwidthBytesPerSecond = default!; _explicitNullProperties?.Remove("outboundBandwidthBytesPerSecond"); }
+            else if (parseNode.GetChildNode("outboundBandwidthBytesPerSecond") is { } nullNodeOutboundBandwidthBytesPerSecond && nullNodeOutboundBandwidthBytesPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutboundBandwidthBytesPerSecond = null;
+            if (parseNode.GetChildNode("ramBytes") is null) { _explicitNullValueRamBytes = default!; _explicitNullProperties?.Remove("ramBytes"); }
+            else if (parseNode.GetChildNode("ramBytes") is { } nullNodeRamBytes && nullNodeRamBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RamBytes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cpuCores property</summary>
-        public double? CpuCores { get => _explicitNullValueCpuCores; set { _explicitNullValueCpuCores = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpuCores"); else _explicitNullProperties?.Remove("cpuCores"); } }
+        public double? CpuCores { get => _explicitNullValueCpuCores; set { _explicitNullValueCpuCores = value; AdditionalData?.Remove("cpuCores"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpuCores"); else _explicitNullProperties?.Remove("cpuCores"); } }
         private double? _explicitNullValueCpuCores = default!;
         /// <summary>The outboundBandwidthBytesPerSecond property</summary>
-        public double? OutboundBandwidthBytesPerSecond { get => _explicitNullValueOutboundBandwidthBytesPerSecond; set { _explicitNullValueOutboundBandwidthBytesPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundBandwidthBytesPerSecond"); else _explicitNullProperties?.Remove("outboundBandwidthBytesPerSecond"); } }
+        public double? OutboundBandwidthBytesPerSecond { get => _explicitNullValueOutboundBandwidthBytesPerSecond; set { _explicitNullValueOutboundBandwidthBytesPerSecond = value; AdditionalData?.Remove("outboundBandwidthBytesPerSecond"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundBandwidthBytesPerSecond"); else _explicitNullProperties?.Remove("outboundBandwidthBytesPerSecond"); } }
         private double? _explicitNullValueOutboundBandwidthBytesPerSecond = default!;
         /// <summary>The ramBytes property</summary>
-        public double? RamBytes { get => _explicitNullValueRamBytes; set { _explicitNullValueRamBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ramBytes"); else _explicitNullProperties?.Remove("ramBytes"); } }
+        public double? RamBytes { get => _explicitNullValueRamBytes; set { _explicitNullValueRamBytes = value; AdditionalData?.Remove("ramBytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ramBytes"); else _explicitNullProperties?.Remove("ramBytes"); } }
         private double? _explicitNullValueRamBytes = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits"/> and sets the default values.

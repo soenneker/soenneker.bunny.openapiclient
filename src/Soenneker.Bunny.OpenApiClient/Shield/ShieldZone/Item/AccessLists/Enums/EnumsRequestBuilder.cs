@@ -72,7 +72,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.AccessLists.Enums
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.bunny.net", "/shield/shield-zone/{shieldZoneId}/access-lists/enums", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "text/plain;q=0.9");
             return requestInfo;

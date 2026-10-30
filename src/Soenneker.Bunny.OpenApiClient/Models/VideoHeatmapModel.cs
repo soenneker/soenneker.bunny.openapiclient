@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("heatmap") is { } nullNodeHeatmap && nullNodeHeatmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Heatmap = null;
+            if (parseNode.GetChildNode("heatmap") is null) { _explicitNullValueHeatmap = default!; _explicitNullProperties?.Remove("heatmap"); }
+            else if (parseNode.GetChildNode("heatmap") is { } nullNodeHeatmap && nullNodeHeatmap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Heatmap = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Timeline heatmap as segment-index to intensity (0–100). Keys represent consecutive segments from the start of the video; values are normalized so 100 equals the most‑watched segment. Missing segments imply 0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty2? Heatmap { get => _explicitNullValueHeatmap; set { _explicitNullValueHeatmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heatmap"); else _explicitNullProperties?.Remove("heatmap"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty2? Heatmap { get => _explicitNullValueHeatmap; set { _explicitNullValueHeatmap = value; AdditionalData?.Remove("heatmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heatmap"); else _explicitNullProperties?.Remove("heatmap"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty2? _explicitNullValueHeatmap = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty2 Heatmap { get => _explicitNullValueHeatmap; set { _explicitNullValueHeatmap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heatmap"); else _explicitNullProperties?.Remove("heatmap"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty2 Heatmap { get => _explicitNullValueHeatmap; set { _explicitNullValueHeatmap = value; AdditionalData?.Remove("heatmap"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("heatmap"); else _explicitNullProperties?.Remove("heatmap"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoHeatmapModelHeatmapProperty2 _explicitNullValueHeatmap = default!;
 #endif
         /// <summary>

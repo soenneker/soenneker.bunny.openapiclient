@@ -18,17 +18,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("availableResolutions") is { } nullNodeAvailableResolutions && nullNodeAvailableResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableResolutions = null;
-            if (parseNode.GetChildNode("configuredResolutions") is { } nullNodeConfiguredResolutions && nullNodeConfiguredResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfiguredResolutions = null;
-            if (parseNode.GetChildNode("hasBothOldAndNewResolutionFormat") is { } nullNodeHasBothOldAndNewResolutionFormat && nullNodeHasBothOldAndNewResolutionFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasBothOldAndNewResolutionFormat = null;
-            if (parseNode.GetChildNode("hasOriginal") is { } nullNodeHasOriginal && nullNodeHasOriginal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasOriginal = null;
-            if (parseNode.GetChildNode("mp4Resolutions") is { } nullNodeMp4Resolutions && nullNodeMp4Resolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mp4Resolutions = null;
-            if (parseNode.GetChildNode("oldResolutions") is { } nullNodeOldResolutions && nullNodeOldResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldResolutions = null;
-            if (parseNode.GetChildNode("playlistResolutions") is { } nullNodePlaylistResolutions && nullNodePlaylistResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaylistResolutions = null;
-            if (parseNode.GetChildNode("storageObjects") is { } nullNodeStorageObjects && nullNodeStorageObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageObjects = null;
-            if (parseNode.GetChildNode("storageResolutions") is { } nullNodeStorageResolutions && nullNodeStorageResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageResolutions = null;
-            if (parseNode.GetChildNode("videoId") is { } nullNodeVideoId && nullNodeVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoId = null;
-            if (parseNode.GetChildNode("videoLibraryId") is { } nullNodeVideoLibraryId && nullNodeVideoLibraryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoLibraryId = null;
+            if (parseNode.GetChildNode("availableResolutions") is null) { _explicitNullValueAvailableResolutions = default!; _explicitNullProperties?.Remove("availableResolutions"); }
+            else if (parseNode.GetChildNode("availableResolutions") is { } nullNodeAvailableResolutions && nullNodeAvailableResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableResolutions = null;
+            if (parseNode.GetChildNode("configuredResolutions") is null) { _explicitNullValueConfiguredResolutions = default!; _explicitNullProperties?.Remove("configuredResolutions"); }
+            else if (parseNode.GetChildNode("configuredResolutions") is { } nullNodeConfiguredResolutions && nullNodeConfiguredResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfiguredResolutions = null;
+            if (parseNode.GetChildNode("hasBothOldAndNewResolutionFormat") is null) { _explicitNullValueHasBothOldAndNewResolutionFormat = default!; _explicitNullProperties?.Remove("hasBothOldAndNewResolutionFormat"); }
+            else if (parseNode.GetChildNode("hasBothOldAndNewResolutionFormat") is { } nullNodeHasBothOldAndNewResolutionFormat && nullNodeHasBothOldAndNewResolutionFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasBothOldAndNewResolutionFormat = null;
+            if (parseNode.GetChildNode("hasOriginal") is null) { _explicitNullValueHasOriginal = default!; _explicitNullProperties?.Remove("hasOriginal"); }
+            else if (parseNode.GetChildNode("hasOriginal") is { } nullNodeHasOriginal && nullNodeHasOriginal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasOriginal = null;
+            if (parseNode.GetChildNode("mp4Resolutions") is null) { _explicitNullValueMp4Resolutions = default!; _explicitNullProperties?.Remove("mp4Resolutions"); }
+            else if (parseNode.GetChildNode("mp4Resolutions") is { } nullNodeMp4Resolutions && nullNodeMp4Resolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mp4Resolutions = null;
+            if (parseNode.GetChildNode("oldResolutions") is null) { _explicitNullValueOldResolutions = default!; _explicitNullProperties?.Remove("oldResolutions"); }
+            else if (parseNode.GetChildNode("oldResolutions") is { } nullNodeOldResolutions && nullNodeOldResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldResolutions = null;
+            if (parseNode.GetChildNode("playlistResolutions") is null) { _explicitNullValuePlaylistResolutions = default!; _explicitNullProperties?.Remove("playlistResolutions"); }
+            else if (parseNode.GetChildNode("playlistResolutions") is { } nullNodePlaylistResolutions && nullNodePlaylistResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaylistResolutions = null;
+            if (parseNode.GetChildNode("storageObjects") is null) { _explicitNullValueStorageObjects = default!; _explicitNullProperties?.Remove("storageObjects"); }
+            else if (parseNode.GetChildNode("storageObjects") is { } nullNodeStorageObjects && nullNodeStorageObjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageObjects = null;
+            if (parseNode.GetChildNode("storageResolutions") is null) { _explicitNullValueStorageResolutions = default!; _explicitNullProperties?.Remove("storageResolutions"); }
+            else if (parseNode.GetChildNode("storageResolutions") is { } nullNodeStorageResolutions && nullNodeStorageResolutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageResolutions = null;
+            if (parseNode.GetChildNode("videoId") is null) { _explicitNullValueVideoId = default!; _explicitNullProperties?.Remove("videoId"); }
+            else if (parseNode.GetChildNode("videoId") is { } nullNodeVideoId && nullNodeVideoId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoId = null;
+            if (parseNode.GetChildNode("videoLibraryId") is null) { _explicitNullValueVideoLibraryId = default!; _explicitNullProperties?.Remove("videoLibraryId"); }
+            else if (parseNode.GetChildNode("videoLibraryId") is { } nullNodeVideoLibraryId && nullNodeVideoLibraryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VideoLibraryId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -36,91 +47,91 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Resolutions currently ready to stream for this video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AvailableResolutions { get => _explicitNullValueAvailableResolutions; set { _explicitNullValueAvailableResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableResolutions"); else _explicitNullProperties?.Remove("availableResolutions"); } }
+        public List<string>? AvailableResolutions { get => _explicitNullValueAvailableResolutions; set { _explicitNullValueAvailableResolutions = value; AdditionalData?.Remove("availableResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableResolutions"); else _explicitNullProperties?.Remove("availableResolutions"); } }
         private List<string>? _explicitNullValueAvailableResolutions = default!;
 #nullable restore
 #else
-        public List<string> AvailableResolutions { get => _explicitNullValueAvailableResolutions; set { _explicitNullValueAvailableResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableResolutions"); else _explicitNullProperties?.Remove("availableResolutions"); } }
+        public List<string> AvailableResolutions { get => _explicitNullValueAvailableResolutions; set { _explicitNullValueAvailableResolutions = value; AdditionalData?.Remove("availableResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableResolutions"); else _explicitNullProperties?.Remove("availableResolutions"); } }
         private List<string> _explicitNullValueAvailableResolutions = default!;
 #endif
         /// <summary>Resolutions the video library is configured to encode; may not all exist yet for this video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ConfiguredResolutions { get => _explicitNullValueConfiguredResolutions; set { _explicitNullValueConfiguredResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuredResolutions"); else _explicitNullProperties?.Remove("configuredResolutions"); } }
+        public List<string>? ConfiguredResolutions { get => _explicitNullValueConfiguredResolutions; set { _explicitNullValueConfiguredResolutions = value; AdditionalData?.Remove("configuredResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuredResolutions"); else _explicitNullProperties?.Remove("configuredResolutions"); } }
         private List<string>? _explicitNullValueConfiguredResolutions = default!;
 #nullable restore
 #else
-        public List<string> ConfiguredResolutions { get => _explicitNullValueConfiguredResolutions; set { _explicitNullValueConfiguredResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuredResolutions"); else _explicitNullProperties?.Remove("configuredResolutions"); } }
+        public List<string> ConfiguredResolutions { get => _explicitNullValueConfiguredResolutions; set { _explicitNullValueConfiguredResolutions = value; AdditionalData?.Remove("configuredResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configuredResolutions"); else _explicitNullProperties?.Remove("configuredResolutions"); } }
         private List<string> _explicitNullValueConfiguredResolutions = default!;
 #endif
         /// <summary>True when storage contains both the legacy &quot;{width}x{height}&quot; folder naming and the current &quot;{height}p&quot; naming for the same video — can happen when a codec was added via API rather than a full re-encode.</summary>
-        public bool? HasBothOldAndNewResolutionFormat { get => _explicitNullValueHasBothOldAndNewResolutionFormat; set { _explicitNullValueHasBothOldAndNewResolutionFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasBothOldAndNewResolutionFormat"); else _explicitNullProperties?.Remove("hasBothOldAndNewResolutionFormat"); } }
+        public bool? HasBothOldAndNewResolutionFormat { get => _explicitNullValueHasBothOldAndNewResolutionFormat; set { _explicitNullValueHasBothOldAndNewResolutionFormat = value; AdditionalData?.Remove("hasBothOldAndNewResolutionFormat"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasBothOldAndNewResolutionFormat"); else _explicitNullProperties?.Remove("hasBothOldAndNewResolutionFormat"); } }
         private bool? _explicitNullValueHasBothOldAndNewResolutionFormat = default!;
         /// <summary>Whether the original uploaded source file is present in storage.</summary>
-        public bool? HasOriginal { get => _explicitNullValueHasOriginal; set { _explicitNullValueHasOriginal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasOriginal"); else _explicitNullProperties?.Remove("hasOriginal"); } }
+        public bool? HasOriginal { get => _explicitNullValueHasOriginal; set { _explicitNullValueHasOriginal = value; AdditionalData?.Remove("hasOriginal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasOriginal"); else _explicitNullProperties?.Remove("hasOriginal"); } }
         private bool? _explicitNullValueHasOriginal = default!;
         /// <summary>Resolutions found as MP4 fallback files in object storage.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? Mp4Resolutions { get => _explicitNullValueMp4Resolutions; set { _explicitNullValueMp4Resolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mp4Resolutions"); else _explicitNullProperties?.Remove("mp4Resolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? Mp4Resolutions { get => _explicitNullValueMp4Resolutions; set { _explicitNullValueMp4Resolutions = value; AdditionalData?.Remove("mp4Resolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mp4Resolutions"); else _explicitNullProperties?.Remove("mp4Resolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? _explicitNullValueMp4Resolutions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> Mp4Resolutions { get => _explicitNullValueMp4Resolutions; set { _explicitNullValueMp4Resolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mp4Resolutions"); else _explicitNullProperties?.Remove("mp4Resolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> Mp4Resolutions { get => _explicitNullValueMp4Resolutions; set { _explicitNullValueMp4Resolutions = value; AdditionalData?.Remove("mp4Resolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mp4Resolutions"); else _explicitNullProperties?.Remove("mp4Resolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> _explicitNullValueMp4Resolutions = default!;
 #endif
         /// <summary>Storage folders using the legacy &quot;{width}x{height}&quot; naming, populated only when HasBothOldAndNewResolutionFormat is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? OldResolutions { get => _explicitNullValueOldResolutions; set { _explicitNullValueOldResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldResolutions"); else _explicitNullProperties?.Remove("oldResolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? OldResolutions { get => _explicitNullValueOldResolutions; set { _explicitNullValueOldResolutions = value; AdditionalData?.Remove("oldResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldResolutions"); else _explicitNullProperties?.Remove("oldResolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? _explicitNullValueOldResolutions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> OldResolutions { get => _explicitNullValueOldResolutions; set { _explicitNullValueOldResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldResolutions"); else _explicitNullProperties?.Remove("oldResolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> OldResolutions { get => _explicitNullValueOldResolutions; set { _explicitNullValueOldResolutions = value; AdditionalData?.Remove("oldResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldResolutions"); else _explicitNullProperties?.Remove("oldResolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> _explicitNullValueOldResolutions = default!;
 #endif
         /// <summary>Resolutions declared in the video&apos;s HLS master playlist.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? PlaylistResolutions { get => _explicitNullValuePlaylistResolutions; set { _explicitNullValuePlaylistResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlistResolutions"); else _explicitNullProperties?.Remove("playlistResolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? PlaylistResolutions { get => _explicitNullValuePlaylistResolutions; set { _explicitNullValuePlaylistResolutions = value; AdditionalData?.Remove("playlistResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlistResolutions"); else _explicitNullProperties?.Remove("playlistResolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? _explicitNullValuePlaylistResolutions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> PlaylistResolutions { get => _explicitNullValuePlaylistResolutions; set { _explicitNullValuePlaylistResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlistResolutions"); else _explicitNullProperties?.Remove("playlistResolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> PlaylistResolutions { get => _explicitNullValuePlaylistResolutions; set { _explicitNullValuePlaylistResolutions = value; AdditionalData?.Remove("playlistResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlistResolutions"); else _explicitNullProperties?.Remove("playlistResolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> _explicitNullValuePlaylistResolutions = default!;
 #endif
         /// <summary>All storage objects found for this video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? StorageObjects { get => _explicitNullValueStorageObjects; set { _explicitNullValueStorageObjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageObjects"); else _explicitNullProperties?.Remove("storageObjects"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? StorageObjects { get => _explicitNullValueStorageObjects; set { _explicitNullValueStorageObjects = value; AdditionalData?.Remove("storageObjects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageObjects"); else _explicitNullProperties?.Remove("storageObjects"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel>? _explicitNullValueStorageObjects = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> StorageObjects { get => _explicitNullValueStorageObjects; set { _explicitNullValueStorageObjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageObjects"); else _explicitNullProperties?.Remove("storageObjects"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> StorageObjects { get => _explicitNullValueStorageObjects; set { _explicitNullValueStorageObjects = value; AdditionalData?.Remove("storageObjects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageObjects"); else _explicitNullProperties?.Remove("storageObjects"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.StorageObjectModel> _explicitNullValueStorageObjects = default!;
 #endif
         /// <summary>Resolutions found as folders in object storage; can diverge from PlaylistResolutions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? StorageResolutions { get => _explicitNullValueStorageResolutions; set { _explicitNullValueStorageResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageResolutions"); else _explicitNullProperties?.Remove("storageResolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? StorageResolutions { get => _explicitNullValueStorageResolutions; set { _explicitNullValueStorageResolutions = value; AdditionalData?.Remove("storageResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageResolutions"); else _explicitNullProperties?.Remove("storageResolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference>? _explicitNullValueStorageResolutions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> StorageResolutions { get => _explicitNullValueStorageResolutions; set { _explicitNullValueStorageResolutions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageResolutions"); else _explicitNullProperties?.Remove("storageResolutions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> StorageResolutions { get => _explicitNullValueStorageResolutions; set { _explicitNullValueStorageResolutions = value; AdditionalData?.Remove("storageResolutions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storageResolutions"); else _explicitNullProperties?.Remove("storageResolutions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ResolutionReference> _explicitNullValueStorageResolutions = default!;
 #endif
         /// <summary>The GUID of the video.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VideoId { get => _explicitNullValueVideoId; set { _explicitNullValueVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoId"); else _explicitNullProperties?.Remove("videoId"); } }
+        public string? VideoId { get => _explicitNullValueVideoId; set { _explicitNullValueVideoId = value; AdditionalData?.Remove("videoId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoId"); else _explicitNullProperties?.Remove("videoId"); } }
         private string? _explicitNullValueVideoId = default!;
 #nullable restore
 #else
-        public string VideoId { get => _explicitNullValueVideoId; set { _explicitNullValueVideoId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoId"); else _explicitNullProperties?.Remove("videoId"); } }
+        public string VideoId { get => _explicitNullValueVideoId; set { _explicitNullValueVideoId = value; AdditionalData?.Remove("videoId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoId"); else _explicitNullProperties?.Remove("videoId"); } }
         private string _explicitNullValueVideoId = default!;
 #endif
         /// <summary>The ID of the video library.</summary>
-        public long? VideoLibraryId { get => _explicitNullValueVideoLibraryId; set { _explicitNullValueVideoLibraryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoLibraryId"); else _explicitNullProperties?.Remove("videoLibraryId"); } }
+        public long? VideoLibraryId { get => _explicitNullValueVideoLibraryId; set { _explicitNullValueVideoLibraryId = value; AdditionalData?.Remove("videoLibraryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("videoLibraryId"); else _explicitNullProperties?.Remove("videoLibraryId"); } }
         private long? _explicitNullValueVideoLibraryId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoResolutionsInfoModelAllOf2Data"/> and sets the default values.

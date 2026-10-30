@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("DefaultHostname") is { } nullNodeDefaultHostname && nullNodeDefaultHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultHostname = null;
-            if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("PullZoneName") is { } nullNodePullZoneName && nullNodePullZoneName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneName = null;
+            if (parseNode.GetChildNode("DefaultHostname") is null) { _explicitNullValueDefaultHostname = default!; _explicitNullProperties?.Remove("DefaultHostname"); }
+            else if (parseNode.GetChildNode("DefaultHostname") is { } nullNodeDefaultHostname && nullNodeDefaultHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultHostname = null;
+            if (parseNode.GetChildNode("Id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("Id"); }
+            else if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("PullZoneName") is null) { _explicitNullValuePullZoneName = default!; _explicitNullProperties?.Remove("PullZoneName"); }
+            else if (parseNode.GetChildNode("PullZoneName") is { } nullNodePullZoneName && nullNodePullZoneName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullZoneName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The DefaultHostname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultHostname { get => _explicitNullValueDefaultHostname; set { _explicitNullValueDefaultHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultHostname"); else _explicitNullProperties?.Remove("DefaultHostname"); } }
+        public string? DefaultHostname { get => _explicitNullValueDefaultHostname; set { _explicitNullValueDefaultHostname = value; AdditionalData?.Remove("DefaultHostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultHostname"); else _explicitNullProperties?.Remove("DefaultHostname"); } }
         private string? _explicitNullValueDefaultHostname = default!;
 #nullable restore
 #else
-        public string DefaultHostname { get => _explicitNullValueDefaultHostname; set { _explicitNullValueDefaultHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultHostname"); else _explicitNullProperties?.Remove("DefaultHostname"); } }
+        public string DefaultHostname { get => _explicitNullValueDefaultHostname; set { _explicitNullValueDefaultHostname = value; AdditionalData?.Remove("DefaultHostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("DefaultHostname"); else _explicitNullProperties?.Remove("DefaultHostname"); } }
         private string _explicitNullValueDefaultHostname = default!;
 #endif
         /// <summary>The Id property</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("Id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The PullZoneName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullZoneName { get => _explicitNullValuePullZoneName; set { _explicitNullValuePullZoneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneName"); else _explicitNullProperties?.Remove("PullZoneName"); } }
+        public string? PullZoneName { get => _explicitNullValuePullZoneName; set { _explicitNullValuePullZoneName = value; AdditionalData?.Remove("PullZoneName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneName"); else _explicitNullProperties?.Remove("PullZoneName"); } }
         private string? _explicitNullValuePullZoneName = default!;
 #nullable restore
 #else
-        public string PullZoneName { get => _explicitNullValuePullZoneName; set { _explicitNullValuePullZoneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneName"); else _explicitNullProperties?.Remove("PullZoneName"); } }
+        public string PullZoneName { get => _explicitNullValuePullZoneName; set { _explicitNullValuePullZoneName = value; AdditionalData?.Remove("PullZoneName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullZoneName"); else _explicitNullProperties?.Remove("PullZoneName"); } }
         private string _explicitNullValuePullZoneName = default!;
 #endif
         /// <summary>

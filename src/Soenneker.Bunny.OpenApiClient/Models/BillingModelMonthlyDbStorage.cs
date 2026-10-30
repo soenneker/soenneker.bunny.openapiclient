@@ -18,9 +18,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("MeasuringUnit") is { } nullNodeMeasuringUnit && nullNodeMeasuringUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeasuringUnit = null;
-            if (parseNode.GetChildNode("TotalUnits") is { } nullNodeTotalUnits && nullNodeTotalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalUnits = null;
-            if (parseNode.GetChildNode("Usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+            if (parseNode.GetChildNode("MeasuringUnit") is null) { _explicitNullValueMeasuringUnit = default!; _explicitNullProperties?.Remove("MeasuringUnit"); }
+            else if (parseNode.GetChildNode("MeasuringUnit") is { } nullNodeMeasuringUnit && nullNodeMeasuringUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MeasuringUnit = null;
+            if (parseNode.GetChildNode("TotalUnits") is null) { _explicitNullValueTotalUnits = default!; _explicitNullProperties?.Remove("TotalUnits"); }
+            else if (parseNode.GetChildNode("TotalUnits") is { } nullNodeTotalUnits && nullNodeTotalUnits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalUnits = null;
+            if (parseNode.GetChildNode("Usage") is null) { _explicitNullValueUsage = default!; _explicitNullProperties?.Remove("Usage"); }
+            else if (parseNode.GetChildNode("Usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,18 +31,18 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Measuring Unit for TotalUnits (e.g. Rows, GB, Seconds, Bytes, Block-seconds)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MeasuringUnit { get => _explicitNullValueMeasuringUnit; set { _explicitNullValueMeasuringUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MeasuringUnit"); else _explicitNullProperties?.Remove("MeasuringUnit"); } }
+        public string? MeasuringUnit { get => _explicitNullValueMeasuringUnit; set { _explicitNullValueMeasuringUnit = value; AdditionalData?.Remove("MeasuringUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MeasuringUnit"); else _explicitNullProperties?.Remove("MeasuringUnit"); } }
         private string? _explicitNullValueMeasuringUnit = default!;
 #nullable restore
 #else
-        public string MeasuringUnit { get => _explicitNullValueMeasuringUnit; set { _explicitNullValueMeasuringUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MeasuringUnit"); else _explicitNullProperties?.Remove("MeasuringUnit"); } }
+        public string MeasuringUnit { get => _explicitNullValueMeasuringUnit; set { _explicitNullValueMeasuringUnit = value; AdditionalData?.Remove("MeasuringUnit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("MeasuringUnit"); else _explicitNullProperties?.Remove("MeasuringUnit"); } }
         private string _explicitNullValueMeasuringUnit = default!;
 #endif
         /// <summary>The billed quantity for the related product</summary>
-        public long? TotalUnits { get => _explicitNullValueTotalUnits; set { _explicitNullValueTotalUnits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalUnits"); else _explicitNullProperties?.Remove("TotalUnits"); } }
+        public long? TotalUnits { get => _explicitNullValueTotalUnits; set { _explicitNullValueTotalUnits = value; AdditionalData?.Remove("TotalUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalUnits"); else _explicitNullProperties?.Remove("TotalUnits"); } }
         private long? _explicitNullValueTotalUnits = default!;
         /// <summary>The usage based charge in USD</summary>
-        public decimal? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Usage"); else _explicitNullProperties?.Remove("Usage"); } }
+        public decimal? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; AdditionalData?.Remove("Usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Usage"); else _explicitNullProperties?.Remove("Usage"); } }
         private decimal? _explicitNullValueUsage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.BillingModelMonthlyDbStorage"/> and sets the default values.

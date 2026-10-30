@@ -18,63 +18,73 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("anycastTraffic") is { } nullNodeAnycastTraffic && nullNodeAnycastTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnycastTraffic = null;
-            if (parseNode.GetChildNode("averageCPU") is { } nullNodeAverageCPU && nullNodeAverageCPU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageCPU = null;
-            if (parseNode.GetChildNode("averageRAM") is { } nullNodeAverageRAM && nullNodeAverageRAM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageRAM = null;
-            if (parseNode.GetChildNode("averageVolumesUsagePercentage") is { } nullNodeAverageVolumesUsagePercentage && nullNodeAverageVolumesUsagePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageVolumesUsagePercentage = null;
-            if (parseNode.GetChildNode("instances") is { } nullNodeInstances && nullNodeInstances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instances = null;
-            if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
-            if (parseNode.GetChildNode("pods") is { } nullNodePods && nullNodePods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pods = null;
-            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
-            if (parseNode.GetChildNode("requests") is { } nullNodeRequests && nullNodeRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Requests = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("anycastTraffic") is null) { _explicitNullValueAnycastTraffic = default!; _explicitNullProperties?.Remove("anycastTraffic"); }
+            else if (parseNode.GetChildNode("anycastTraffic") is { } nullNodeAnycastTraffic && nullNodeAnycastTraffic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnycastTraffic = null;
+            if (parseNode.GetChildNode("averageCPU") is null) { _explicitNullValueAverageCPU = default!; _explicitNullProperties?.Remove("averageCPU"); }
+            else if (parseNode.GetChildNode("averageCPU") is { } nullNodeAverageCPU && nullNodeAverageCPU.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageCPU = null;
+            if (parseNode.GetChildNode("averageRAM") is null) { _explicitNullValueAverageRAM = default!; _explicitNullProperties?.Remove("averageRAM"); }
+            else if (parseNode.GetChildNode("averageRAM") is { } nullNodeAverageRAM && nullNodeAverageRAM.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageRAM = null;
+            if (parseNode.GetChildNode("averageVolumesUsagePercentage") is null) { _explicitNullValueAverageVolumesUsagePercentage = default!; _explicitNullProperties?.Remove("averageVolumesUsagePercentage"); }
+            else if (parseNode.GetChildNode("averageVolumesUsagePercentage") is { } nullNodeAverageVolumesUsagePercentage && nullNodeAverageVolumesUsagePercentage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AverageVolumesUsagePercentage = null;
+            if (parseNode.GetChildNode("instances") is null) { _explicitNullValueInstances = default!; _explicitNullProperties?.Remove("instances"); }
+            else if (parseNode.GetChildNode("instances") is { } nullNodeInstances && nullNodeInstances.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Instances = null;
+            if (parseNode.GetChildNode("isRequired") is null) { _explicitNullValueIsRequired = default!; _explicitNullProperties?.Remove("isRequired"); }
+            else if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
+            if (parseNode.GetChildNode("pods") is null) { _explicitNullValuePods = default!; _explicitNullProperties?.Remove("pods"); }
+            else if (parseNode.GetChildNode("pods") is { } nullNodePods && nullNodePods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pods = null;
+            if (parseNode.GetChildNode("region") is null) { _explicitNullValueRegion = default!; _explicitNullProperties?.Remove("region"); }
+            else if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+            if (parseNode.GetChildNode("requests") is null) { _explicitNullValueRequests = default!; _explicitNullProperties?.Remove("requests"); }
+            else if (parseNode.GetChildNode("requests") is { } nullNodeRequests && nullNodeRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Requests = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The anycastTraffic property</summary>
-        public double? AnycastTraffic { get => _explicitNullValueAnycastTraffic; set { _explicitNullValueAnycastTraffic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycastTraffic"); else _explicitNullProperties?.Remove("anycastTraffic"); } }
+        public double? AnycastTraffic { get => _explicitNullValueAnycastTraffic; set { _explicitNullValueAnycastTraffic = value; AdditionalData?.Remove("anycastTraffic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycastTraffic"); else _explicitNullProperties?.Remove("anycastTraffic"); } }
         private double? _explicitNullValueAnycastTraffic = default!;
         /// <summary>The averageCPU property</summary>
-        public double? AverageCPU { get => _explicitNullValueAverageCPU; set { _explicitNullValueAverageCPU = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageCPU"); else _explicitNullProperties?.Remove("averageCPU"); } }
+        public double? AverageCPU { get => _explicitNullValueAverageCPU; set { _explicitNullValueAverageCPU = value; AdditionalData?.Remove("averageCPU"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageCPU"); else _explicitNullProperties?.Remove("averageCPU"); } }
         private double? _explicitNullValueAverageCPU = default!;
         /// <summary>The averageRAM property</summary>
-        public double? AverageRAM { get => _explicitNullValueAverageRAM; set { _explicitNullValueAverageRAM = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageRAM"); else _explicitNullProperties?.Remove("averageRAM"); } }
+        public double? AverageRAM { get => _explicitNullValueAverageRAM; set { _explicitNullValueAverageRAM = value; AdditionalData?.Remove("averageRAM"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageRAM"); else _explicitNullProperties?.Remove("averageRAM"); } }
         private double? _explicitNullValueAverageRAM = default!;
         /// <summary>The averageVolumesUsagePercentage property</summary>
-        public double? AverageVolumesUsagePercentage { get => _explicitNullValueAverageVolumesUsagePercentage; set { _explicitNullValueAverageVolumesUsagePercentage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageVolumesUsagePercentage"); else _explicitNullProperties?.Remove("averageVolumesUsagePercentage"); } }
+        public double? AverageVolumesUsagePercentage { get => _explicitNullValueAverageVolumesUsagePercentage; set { _explicitNullValueAverageVolumesUsagePercentage = value; AdditionalData?.Remove("averageVolumesUsagePercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("averageVolumesUsagePercentage"); else _explicitNullProperties?.Remove("averageVolumesUsagePercentage"); } }
         private double? _explicitNullValueAverageVolumesUsagePercentage = default!;
         /// <summary>The instances property</summary>
-        public int? Instances { get => _explicitNullValueInstances; set { _explicitNullValueInstances = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instances"); else _explicitNullProperties?.Remove("instances"); } }
+        public int? Instances { get => _explicitNullValueInstances; set { _explicitNullValueInstances = value; AdditionalData?.Remove("instances"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instances"); else _explicitNullProperties?.Remove("instances"); } }
         private int? _explicitNullValueInstances = default!;
         /// <summary>The isRequired property</summary>
-        public bool? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
+        public bool? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; AdditionalData?.Remove("isRequired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
         private bool? _explicitNullValueIsRequired = default!;
         /// <summary>The pods property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod>? Pods { get => _explicitNullValuePods; set { _explicitNullValuePods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pods"); else _explicitNullProperties?.Remove("pods"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod>? Pods { get => _explicitNullValuePods; set { _explicitNullValuePods = value; AdditionalData?.Remove("pods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pods"); else _explicitNullProperties?.Remove("pods"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod>? _explicitNullValuePods = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod> Pods { get => _explicitNullValuePods; set { _explicitNullValuePods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pods"); else _explicitNullProperties?.Remove("pods"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod> Pods { get => _explicitNullValuePods; set { _explicitNullValuePods = value; AdditionalData?.Remove("pods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pods"); else _explicitNullProperties?.Remove("pods"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod> _explicitNullValuePods = default!;
 #endif
         /// <summary>The region property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; AdditionalData?.Remove("region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
         private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; AdditionalData?.Remove("region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
         private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>The requests property</summary>
-        public double? Requests { get => _explicitNullValueRequests; set { _explicitNullValueRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requests"); else _explicitNullProperties?.Remove("requests"); } }
+        public double? Requests { get => _explicitNullValueRequests; set { _explicitNullValueRequests = value; AdditionalData?.Remove("requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requests"); else _explicitNullProperties?.Remove("requests"); } }
         private double? _explicitNullValueRequests = default!;
         /// <summary>The status property</summary>
-        public global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion"/> and sets the default values.
@@ -110,7 +120,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "pods", n => { Pods = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "requests", n => { Requests = n.GetDoubleValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.DeploymentStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
             };
         }
         /// <summary>

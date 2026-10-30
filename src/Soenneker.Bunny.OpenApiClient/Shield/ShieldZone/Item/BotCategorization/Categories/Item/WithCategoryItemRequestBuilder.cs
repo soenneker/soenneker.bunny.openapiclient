@@ -82,7 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotCategorization
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.bunny.net", "/shield/shield-zone/{shieldZoneId}/bot-categorization/categories/{category}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json, text/plain;q=0.9");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);

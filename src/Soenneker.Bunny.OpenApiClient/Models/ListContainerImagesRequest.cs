@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("registryId") is { } nullNodeRegistryId && nullNodeRegistryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryId = null;
+            if (parseNode.GetChildNode("registryId") is null) { _explicitNullValueRegistryId = default!; _explicitNullProperties?.Remove("registryId"); }
+            else if (parseNode.GetChildNode("registryId") is { } nullNodeRegistryId && nullNodeRegistryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The registry identifier. Can be &quot;dockerhub&quot;, &quot;github&quot;, or a private registry ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
+        public string? RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; AdditionalData?.Remove("registryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
         private string? _explicitNullValueRegistryId = default!;
 #nullable restore
 #else
-        public string RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
+        public string RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; AdditionalData?.Remove("registryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
         private string _explicitNullValueRegistryId = default!;
 #endif
         /// <summary>

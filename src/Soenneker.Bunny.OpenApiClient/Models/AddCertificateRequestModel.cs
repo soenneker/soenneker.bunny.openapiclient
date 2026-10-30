@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
-            if (parseNode.GetChildNode("CertificateKey") is { } nullNodeCertificateKey && nullNodeCertificateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateKey = null;
-            if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
+            if (parseNode.GetChildNode("Certificate") is null) { _explicitNullValueCertificate = default!; _explicitNullProperties?.Remove("Certificate"); }
+            else if (parseNode.GetChildNode("Certificate") is { } nullNodeCertificate && nullNodeCertificate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Certificate = null;
+            if (parseNode.GetChildNode("CertificateKey") is null) { _explicitNullValueCertificateKey = default!; _explicitNullProperties?.Remove("CertificateKey"); }
+            else if (parseNode.GetChildNode("CertificateKey") is { } nullNodeCertificateKey && nullNodeCertificateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateKey = null;
+            if (parseNode.GetChildNode("Hostname") is null) { _explicitNullValueHostname = default!; _explicitNullProperties?.Remove("Hostname"); }
+            else if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Base64 encoded binary data of the certificate file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Certificate"); else _explicitNullProperties?.Remove("Certificate"); } }
+        public string? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("Certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Certificate"); else _explicitNullProperties?.Remove("Certificate"); } }
         private string? _explicitNullValueCertificate = default!;
 #nullable restore
 #else
-        public string Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Certificate"); else _explicitNullProperties?.Remove("Certificate"); } }
+        public string Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("Certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Certificate"); else _explicitNullProperties?.Remove("Certificate"); } }
         private string _explicitNullValueCertificate = default!;
 #endif
         /// <summary>The Base64 encoded binary data of the certificate key file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CertificateKey { get => _explicitNullValueCertificateKey; set { _explicitNullValueCertificateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKey"); else _explicitNullProperties?.Remove("CertificateKey"); } }
+        public string? CertificateKey { get => _explicitNullValueCertificateKey; set { _explicitNullValueCertificateKey = value; AdditionalData?.Remove("CertificateKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKey"); else _explicitNullProperties?.Remove("CertificateKey"); } }
         private string? _explicitNullValueCertificateKey = default!;
 #nullable restore
 #else
-        public string CertificateKey { get => _explicitNullValueCertificateKey; set { _explicitNullValueCertificateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKey"); else _explicitNullProperties?.Remove("CertificateKey"); } }
+        public string CertificateKey { get => _explicitNullValueCertificateKey; set { _explicitNullValueCertificateKey = value; AdditionalData?.Remove("CertificateKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKey"); else _explicitNullProperties?.Remove("CertificateKey"); } }
         private string _explicitNullValueCertificateKey = default!;
 #endif
         /// <summary>The hostname to which the hostname will be added</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string? _explicitNullValueHostname = default!;
 #nullable restore
 #else
-        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string _explicitNullValueHostname = default!;
 #endif
         /// <summary>

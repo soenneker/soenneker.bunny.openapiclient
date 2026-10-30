@@ -17,10 +17,14 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("imageName") is { } nullNodeImageName && nullNodeImageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageName = null;
-            if (parseNode.GetChildNode("imageNamespace") is { } nullNodeImageNamespace && nullNodeImageNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageNamespace = null;
-            if (parseNode.GetChildNode("registryId") is { } nullNodeRegistryId && nullNodeRegistryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryId = null;
-            if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
+            if (parseNode.GetChildNode("imageName") is null) { _explicitNullValueImageName = default!; _explicitNullProperties?.Remove("imageName"); }
+            else if (parseNode.GetChildNode("imageName") is { } nullNodeImageName && nullNodeImageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageName = null;
+            if (parseNode.GetChildNode("imageNamespace") is null) { _explicitNullValueImageNamespace = default!; _explicitNullProperties?.Remove("imageNamespace"); }
+            else if (parseNode.GetChildNode("imageNamespace") is { } nullNodeImageNamespace && nullNodeImageNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageNamespace = null;
+            if (parseNode.GetChildNode("registryId") is null) { _explicitNullValueRegistryId = default!; _explicitNullProperties?.Remove("registryId"); }
+            else if (parseNode.GetChildNode("registryId") is { } nullNodeRegistryId && nullNodeRegistryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryId = null;
+            if (parseNode.GetChildNode("tag") is null) { _explicitNullValueTag = default!; _explicitNullProperties?.Remove("tag"); }
+            else if (parseNode.GetChildNode("tag") is { } nullNodeTag && nullNodeTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tag = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,41 +32,41 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The imageName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
+        public string? ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; AdditionalData?.Remove("imageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
         private string? _explicitNullValueImageName = default!;
 #nullable restore
 #else
-        public string ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
+        public string ImageName { get => _explicitNullValueImageName; set { _explicitNullValueImageName = value; AdditionalData?.Remove("imageName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageName"); else _explicitNullProperties?.Remove("imageName"); } }
         private string _explicitNullValueImageName = default!;
 #endif
         /// <summary>The imageNamespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
+        public string? ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; AdditionalData?.Remove("imageNamespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
         private string? _explicitNullValueImageNamespace = default!;
 #nullable restore
 #else
-        public string ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
+        public string ImageNamespace { get => _explicitNullValueImageNamespace; set { _explicitNullValueImageNamespace = value; AdditionalData?.Remove("imageNamespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageNamespace"); else _explicitNullProperties?.Remove("imageNamespace"); } }
         private string _explicitNullValueImageNamespace = default!;
 #endif
         /// <summary>The registry identifier. Can be &quot;dockerhub&quot;, &quot;github&quot;, or a private registry ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
+        public string? RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; AdditionalData?.Remove("registryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
         private string? _explicitNullValueRegistryId = default!;
 #nullable restore
 #else
-        public string RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
+        public string RegistryId { get => _explicitNullValueRegistryId; set { _explicitNullValueRegistryId = value; AdditionalData?.Remove("registryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryId"); else _explicitNullProperties?.Remove("registryId"); } }
         private string _explicitNullValueRegistryId = default!;
 #endif
         /// <summary>The tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public string? Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private string? _explicitNullValueTag = default!;
 #nullable restore
 #else
-        public string Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
+        public string Tag { get => _explicitNullValueTag; set { _explicitNullValueTag = value; AdditionalData?.Remove("tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag"); else _explicitNullProperties?.Remove("tag"); } }
         private string _explicitNullValueTag = default!;
 #endif
         /// <summary>

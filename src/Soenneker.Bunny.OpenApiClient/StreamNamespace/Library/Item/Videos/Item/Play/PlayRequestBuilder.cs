@@ -78,7 +78,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos.Item.Play.PlayRequestBuilder.PlayRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://video.bunnycdn.com", "/stream/library/{libraryId}/videos/{videoId}/play", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -17,43 +17,48 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LoadBalancerId") is { } nullNodeLoadBalancerId && nullNodeLoadBalancerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadBalancerId = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("OriginGroupLoadBalancingMethod") is { } nullNodeOriginGroupLoadBalancingMethod && nullNodeOriginGroupLoadBalancingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroupLoadBalancingMethod = null;
-            if (parseNode.GetChildNode("OriginGroups") is { } nullNodeOriginGroups && nullNodeOriginGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroups = null;
-            if (parseNode.GetChildNode("StickySessionType") is { } nullNodeStickySessionType && nullNodeStickySessionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessionType = null;
+            if (parseNode.GetChildNode("LoadBalancerId") is null) { _explicitNullValueLoadBalancerId = default!; _explicitNullProperties?.Remove("LoadBalancerId"); }
+            else if (parseNode.GetChildNode("LoadBalancerId") is { } nullNodeLoadBalancerId && nullNodeLoadBalancerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoadBalancerId = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("OriginGroupLoadBalancingMethod") is null) { _explicitNullValueOriginGroupLoadBalancingMethod = default!; _explicitNullProperties?.Remove("OriginGroupLoadBalancingMethod"); }
+            else if (parseNode.GetChildNode("OriginGroupLoadBalancingMethod") is { } nullNodeOriginGroupLoadBalancingMethod && nullNodeOriginGroupLoadBalancingMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroupLoadBalancingMethod = null;
+            if (parseNode.GetChildNode("OriginGroups") is null) { _explicitNullValueOriginGroups = default!; _explicitNullProperties?.Remove("OriginGroups"); }
+            else if (parseNode.GetChildNode("OriginGroups") is { } nullNodeOriginGroups && nullNodeOriginGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginGroups = null;
+            if (parseNode.GetChildNode("StickySessionType") is null) { _explicitNullValueStickySessionType = default!; _explicitNullProperties?.Remove("StickySessionType"); }
+            else if (parseNode.GetChildNode("StickySessionType") is { } nullNodeStickySessionType && nullNodeStickySessionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StickySessionType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The unique ID of the Load Balancer</summary>
-        public long? LoadBalancerId { get => _explicitNullValueLoadBalancerId; set { _explicitNullValueLoadBalancerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadBalancerId"); else _explicitNullProperties?.Remove("LoadBalancerId"); } }
+        public long? LoadBalancerId { get => _explicitNullValueLoadBalancerId; set { _explicitNullValueLoadBalancerId = value; AdditionalData?.Remove("LoadBalancerId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoadBalancerId"); else _explicitNullProperties?.Remove("LoadBalancerId"); } }
         private long? _explicitNullValueLoadBalancerId = default!;
         /// <summary>The name of the Load Balancer profile</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The load balancing method used for selecting origin groups0 = Weighted Random1 = Round Robin2 = Geolocation3 = Lowest Average Latency</summary>
-        public int? OriginGroupLoadBalancingMethod { get => _explicitNullValueOriginGroupLoadBalancingMethod; set { _explicitNullValueOriginGroupLoadBalancingMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupLoadBalancingMethod"); else _explicitNullProperties?.Remove("OriginGroupLoadBalancingMethod"); } }
+        public int? OriginGroupLoadBalancingMethod { get => _explicitNullValueOriginGroupLoadBalancingMethod; set { _explicitNullValueOriginGroupLoadBalancingMethod = value; AdditionalData?.Remove("OriginGroupLoadBalancingMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroupLoadBalancingMethod"); else _explicitNullProperties?.Remove("OriginGroupLoadBalancingMethod"); } }
         private int? _explicitNullValueOriginGroupLoadBalancingMethod = default!;
         /// <summary>The list of origin groups associated with the Load Balancer profile</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel>? OriginGroups { get => _explicitNullValueOriginGroups; set { _explicitNullValueOriginGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroups"); else _explicitNullProperties?.Remove("OriginGroups"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel>? OriginGroups { get => _explicitNullValueOriginGroups; set { _explicitNullValueOriginGroups = value; AdditionalData?.Remove("OriginGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroups"); else _explicitNullProperties?.Remove("OriginGroups"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel>? _explicitNullValueOriginGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel> OriginGroups { get => _explicitNullValueOriginGroups; set { _explicitNullValueOriginGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroups"); else _explicitNullProperties?.Remove("OriginGroups"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel> OriginGroups { get => _explicitNullValueOriginGroups; set { _explicitNullValueOriginGroups = value; AdditionalData?.Remove("OriginGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginGroups"); else _explicitNullProperties?.Remove("OriginGroups"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel> _explicitNullValueOriginGroups = default!;
 #endif
         /// <summary>The sticky session type used for persisting client sessions0 = Off1 = Cookie</summary>
-        public int? StickySessionType { get => _explicitNullValueStickySessionType; set { _explicitNullValueStickySessionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionType"); else _explicitNullProperties?.Remove("StickySessionType"); } }
+        public int? StickySessionType { get => _explicitNullValueStickySessionType; set { _explicitNullValueStickySessionType = value; AdditionalData?.Remove("StickySessionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StickySessionType"); else _explicitNullProperties?.Remove("StickySessionType"); } }
         private int? _explicitNullValueStickySessionType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerProfileModel"/> and sets the default values.

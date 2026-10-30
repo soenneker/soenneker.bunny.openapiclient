@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("LicensesIssuedChart") is { } nullNodeLicensesIssuedChart && nullNodeLicensesIssuedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LicensesIssuedChart = null;
-            if (parseNode.GetChildNode("TotalLicensesIssued") is { } nullNodeTotalLicensesIssued && nullNodeTotalLicensesIssued.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLicensesIssued = null;
+            if (parseNode.GetChildNode("LicensesIssuedChart") is null) { _explicitNullValueLicensesIssuedChart = default!; _explicitNullProperties?.Remove("LicensesIssuedChart"); }
+            else if (parseNode.GetChildNode("LicensesIssuedChart") is { } nullNodeLicensesIssuedChart && nullNodeLicensesIssuedChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LicensesIssuedChart = null;
+            if (parseNode.GetChildNode("TotalLicensesIssued") is null) { _explicitNullValueTotalLicensesIssued = default!; _explicitNullProperties?.Remove("TotalLicensesIssued"); }
+            else if (parseNode.GetChildNode("TotalLicensesIssued") is { } nullNodeTotalLicensesIssued && nullNodeTotalLicensesIssued.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalLicensesIssued = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The LicensesIssuedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2? LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2? LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; AdditionalData?.Remove("LicensesIssuedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2? _explicitNullValueLicensesIssuedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2 LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2 LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; AdditionalData?.Remove("LicensesIssuedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2 _explicitNullValueLicensesIssuedChart = default!;
 #endif
         /// <summary>The TotalLicensesIssued property</summary>
-        public long? TotalLicensesIssued { get => _explicitNullValueTotalLicensesIssued; set { _explicitNullValueTotalLicensesIssued = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalLicensesIssued"); else _explicitNullProperties?.Remove("TotalLicensesIssued"); } }
+        public long? TotalLicensesIssued { get => _explicitNullValueTotalLicensesIssued; set { _explicitNullValueTotalLicensesIssued = value; AdditionalData?.Remove("TotalLicensesIssued"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalLicensesIssued"); else _explicitNullProperties?.Remove("TotalLicensesIssued"); } }
         private long? _explicitNullValueTotalLicensesIssued = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModel"/> and sets the default values.

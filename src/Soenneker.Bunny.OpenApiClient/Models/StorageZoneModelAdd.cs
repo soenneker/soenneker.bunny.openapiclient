@@ -17,11 +17,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("Region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
-            if (parseNode.GetChildNode("ReplicationRegions") is { } nullNodeReplicationRegions && nullNodeReplicationRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationRegions = null;
-            if (parseNode.GetChildNode("StorageZoneType") is { } nullNodeStorageZoneType && nullNodeStorageZoneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageZoneType = null;
-            if (parseNode.GetChildNode("ZoneTier") is { } nullNodeZoneTier && nullNodeZoneTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneTier = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("Region") is null) { _explicitNullValueRegion = default!; _explicitNullProperties?.Remove("Region"); }
+            else if (parseNode.GetChildNode("Region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+            if (parseNode.GetChildNode("ReplicationRegions") is null) { _explicitNullValueReplicationRegions = default!; _explicitNullProperties?.Remove("ReplicationRegions"); }
+            else if (parseNode.GetChildNode("ReplicationRegions") is { } nullNodeReplicationRegions && nullNodeReplicationRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationRegions = null;
+            if (parseNode.GetChildNode("StorageZoneType") is null) { _explicitNullValueStorageZoneType = default!; _explicitNullProperties?.Remove("StorageZoneType"); }
+            else if (parseNode.GetChildNode("StorageZoneType") is { } nullNodeStorageZoneType && nullNodeStorageZoneType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageZoneType = null;
+            if (parseNode.GetChildNode("ZoneTier") is null) { _explicitNullValueZoneTier = default!; _explicitNullProperties?.Remove("ZoneTier"); }
+            else if (parseNode.GetChildNode("ZoneTier") is { } nullNodeZoneTier && nullNodeZoneTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoneTier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,38 +34,38 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The name of the storage zone</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The code of the main storage zone region (Possible values: DE, NY, LA, SG)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Region"); else _explicitNullProperties?.Remove("Region"); } }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; AdditionalData?.Remove("Region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Region"); else _explicitNullProperties?.Remove("Region"); } }
         private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Region"); else _explicitNullProperties?.Remove("Region"); } }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; AdditionalData?.Remove("Region"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Region"); else _explicitNullProperties?.Remove("Region"); } }
         private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>The code of the main storage zone region (Possible values: DE, NY, LA, SG, SYD)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReplicationRegions { get => _explicitNullValueReplicationRegions; set { _explicitNullValueReplicationRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationRegions"); else _explicitNullProperties?.Remove("ReplicationRegions"); } }
+        public List<string>? ReplicationRegions { get => _explicitNullValueReplicationRegions; set { _explicitNullValueReplicationRegions = value; AdditionalData?.Remove("ReplicationRegions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationRegions"); else _explicitNullProperties?.Remove("ReplicationRegions"); } }
         private List<string>? _explicitNullValueReplicationRegions = default!;
 #nullable restore
 #else
-        public List<string> ReplicationRegions { get => _explicitNullValueReplicationRegions; set { _explicitNullValueReplicationRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationRegions"); else _explicitNullProperties?.Remove("ReplicationRegions"); } }
+        public List<string> ReplicationRegions { get => _explicitNullValueReplicationRegions; set { _explicitNullValueReplicationRegions = value; AdditionalData?.Remove("ReplicationRegions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ReplicationRegions"); else _explicitNullProperties?.Remove("ReplicationRegions"); } }
         private List<string> _explicitNullValueReplicationRegions = default!;
 #endif
         /// <summary>The Storage Zone S3 support type0 = Not Supported1 = Supported</summary>
-        public int? StorageZoneType { get => _explicitNullValueStorageZoneType; set { _explicitNullValueStorageZoneType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageZoneType"); else _explicitNullProperties?.Remove("StorageZoneType"); } }
+        public int? StorageZoneType { get => _explicitNullValueStorageZoneType; set { _explicitNullValueStorageZoneType = value; AdditionalData?.Remove("StorageZoneType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageZoneType"); else _explicitNullProperties?.Remove("StorageZoneType"); } }
         private int? _explicitNullValueStorageZoneType = default!;
         /// <summary>Determines the storage zone tier that will be storing the data0 = Standard1 = Edge (SSD)</summary>
-        public int? ZoneTier { get => _explicitNullValueZoneTier; set { _explicitNullValueZoneTier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneTier"); else _explicitNullProperties?.Remove("ZoneTier"); } }
+        public int? ZoneTier { get => _explicitNullValueZoneTier; set { _explicitNullValueZoneTier = value; AdditionalData?.Remove("ZoneTier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ZoneTier"); else _explicitNullProperties?.Remove("ZoneTier"); } }
         private int? _explicitNullValueZoneTier = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneModelAdd"/> and sets the default values.

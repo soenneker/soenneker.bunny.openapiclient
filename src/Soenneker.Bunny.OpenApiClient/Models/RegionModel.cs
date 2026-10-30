@@ -17,72 +17,81 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("AllowLatencyRouting") is { } nullNodeAllowLatencyRouting && nullNodeAllowLatencyRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowLatencyRouting = null;
-            if (parseNode.GetChildNode("ContinentCode") is { } nullNodeContinentCode && nullNodeContinentCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContinentCode = null;
-            if (parseNode.GetChildNode("CountryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
-            if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("Latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
-            if (parseNode.GetChildNode("Longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("PricePerGigabyte") is { } nullNodePricePerGigabyte && nullNodePricePerGigabyte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerGigabyte = null;
-            if (parseNode.GetChildNode("RegionCode") is { } nullNodeRegionCode && nullNodeRegionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionCode = null;
+            if (parseNode.GetChildNode("AllowLatencyRouting") is null) { _explicitNullValueAllowLatencyRouting = default!; _explicitNullProperties?.Remove("AllowLatencyRouting"); }
+            else if (parseNode.GetChildNode("AllowLatencyRouting") is { } nullNodeAllowLatencyRouting && nullNodeAllowLatencyRouting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowLatencyRouting = null;
+            if (parseNode.GetChildNode("ContinentCode") is null) { _explicitNullValueContinentCode = default!; _explicitNullProperties?.Remove("ContinentCode"); }
+            else if (parseNode.GetChildNode("ContinentCode") is { } nullNodeContinentCode && nullNodeContinentCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContinentCode = null;
+            if (parseNode.GetChildNode("CountryCode") is null) { _explicitNullValueCountryCode = default!; _explicitNullProperties?.Remove("CountryCode"); }
+            else if (parseNode.GetChildNode("CountryCode") is { } nullNodeCountryCode && nullNodeCountryCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CountryCode = null;
+            if (parseNode.GetChildNode("Id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("Id"); }
+            else if (parseNode.GetChildNode("Id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("Latitude") is null) { _explicitNullValueLatitude = default!; _explicitNullProperties?.Remove("Latitude"); }
+            else if (parseNode.GetChildNode("Latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
+            if (parseNode.GetChildNode("Longitude") is null) { _explicitNullValueLongitude = default!; _explicitNullProperties?.Remove("Longitude"); }
+            else if (parseNode.GetChildNode("Longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("PricePerGigabyte") is null) { _explicitNullValuePricePerGigabyte = default!; _explicitNullProperties?.Remove("PricePerGigabyte"); }
+            else if (parseNode.GetChildNode("PricePerGigabyte") is { } nullNodePricePerGigabyte && nullNodePricePerGigabyte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerGigabyte = null;
+            if (parseNode.GetChildNode("RegionCode") is null) { _explicitNullValueRegionCode = default!; _explicitNullProperties?.Remove("RegionCode"); }
+            else if (parseNode.GetChildNode("RegionCode") is { } nullNodeRegionCode && nullNodeRegionCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines weather this region can be selected as a DNS latency routing region</summary>
-        public bool? AllowLatencyRouting { get => _explicitNullValueAllowLatencyRouting; set { _explicitNullValueAllowLatencyRouting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowLatencyRouting"); else _explicitNullProperties?.Remove("AllowLatencyRouting"); } }
+        public bool? AllowLatencyRouting { get => _explicitNullValueAllowLatencyRouting; set { _explicitNullValueAllowLatencyRouting = value; AdditionalData?.Remove("AllowLatencyRouting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AllowLatencyRouting"); else _explicitNullProperties?.Remove("AllowLatencyRouting"); } }
         private bool? _explicitNullValueAllowLatencyRouting = default!;
         /// <summary>The continent code of the region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContinentCode { get => _explicitNullValueContinentCode; set { _explicitNullValueContinentCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContinentCode"); else _explicitNullProperties?.Remove("ContinentCode"); } }
+        public string? ContinentCode { get => _explicitNullValueContinentCode; set { _explicitNullValueContinentCode = value; AdditionalData?.Remove("ContinentCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContinentCode"); else _explicitNullProperties?.Remove("ContinentCode"); } }
         private string? _explicitNullValueContinentCode = default!;
 #nullable restore
 #else
-        public string ContinentCode { get => _explicitNullValueContinentCode; set { _explicitNullValueContinentCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContinentCode"); else _explicitNullProperties?.Remove("ContinentCode"); } }
+        public string ContinentCode { get => _explicitNullValueContinentCode; set { _explicitNullValueContinentCode = value; AdditionalData?.Remove("ContinentCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ContinentCode"); else _explicitNullProperties?.Remove("ContinentCode"); } }
         private string _explicitNullValueContinentCode = default!;
 #endif
         /// <summary>The country code of the region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
+        public string? CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("CountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
         private string? _explicitNullValueCountryCode = default!;
 #nullable restore
 #else
-        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
+        public string CountryCode { get => _explicitNullValueCountryCode; set { _explicitNullValueCountryCode = value; AdditionalData?.Remove("CountryCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CountryCode"); else _explicitNullProperties?.Remove("CountryCode"); } }
         private string _explicitNullValueCountryCode = default!;
 #endif
         /// <summary>The unique ID of the region</summary>
-        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("Id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Id"); else _explicitNullProperties?.Remove("Id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The latitude coordinate for this region</summary>
-        public double? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Latitude"); else _explicitNullProperties?.Remove("Latitude"); } }
+        public double? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; AdditionalData?.Remove("Latitude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Latitude"); else _explicitNullProperties?.Remove("Latitude"); } }
         private double? _explicitNullValueLatitude = default!;
         /// <summary>The longitude coordinate for this region</summary>
-        public double? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Longitude"); else _explicitNullProperties?.Remove("Longitude"); } }
+        public double? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; AdditionalData?.Remove("Longitude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Longitude"); else _explicitNullProperties?.Remove("Longitude"); } }
         private double? _explicitNullValueLongitude = default!;
         /// <summary>The display name of the region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The traffic pricing per gigabyte for the region</summary>
-        public decimal? PricePerGigabyte { get => _explicitNullValuePricePerGigabyte; set { _explicitNullValuePricePerGigabyte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerGigabyte"); else _explicitNullProperties?.Remove("PricePerGigabyte"); } }
+        public decimal? PricePerGigabyte { get => _explicitNullValuePricePerGigabyte; set { _explicitNullValuePricePerGigabyte = value; AdditionalData?.Remove("PricePerGigabyte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerGigabyte"); else _explicitNullProperties?.Remove("PricePerGigabyte"); } }
         private decimal? _explicitNullValuePricePerGigabyte = default!;
         /// <summary>The region short code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RegionCode { get => _explicitNullValueRegionCode; set { _explicitNullValueRegionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegionCode"); else _explicitNullProperties?.Remove("RegionCode"); } }
+        public string? RegionCode { get => _explicitNullValueRegionCode; set { _explicitNullValueRegionCode = value; AdditionalData?.Remove("RegionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegionCode"); else _explicitNullProperties?.Remove("RegionCode"); } }
         private string? _explicitNullValueRegionCode = default!;
 #nullable restore
 #else
-        public string RegionCode { get => _explicitNullValueRegionCode; set { _explicitNullValueRegionCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegionCode"); else _explicitNullProperties?.Remove("RegionCode"); } }
+        public string RegionCode { get => _explicitNullValueRegionCode; set { _explicitNullValueRegionCode = value; AdditionalData?.Remove("RegionCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RegionCode"); else _explicitNullProperties?.Remove("RegionCode"); } }
         private string _explicitNullValueRegionCode = default!;
 #endif
         /// <summary>

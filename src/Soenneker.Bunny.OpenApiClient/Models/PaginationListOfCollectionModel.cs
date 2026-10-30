@@ -17,32 +17,36 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("currentPage") is { } nullNodeCurrentPage && nullNodeCurrentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPage = null;
-            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
-            if (parseNode.GetChildNode("itemsPerPage") is { } nullNodeItemsPerPage && nullNodeItemsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemsPerPage = null;
-            if (parseNode.GetChildNode("totalItems") is { } nullNodeTotalItems && nullNodeTotalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalItems = null;
+            if (parseNode.GetChildNode("currentPage") is null) { _explicitNullValueCurrentPage = default!; _explicitNullProperties?.Remove("currentPage"); }
+            else if (parseNode.GetChildNode("currentPage") is { } nullNodeCurrentPage && nullNodeCurrentPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentPage = null;
+            if (parseNode.GetChildNode("items") is null) { _explicitNullValueItems = default!; _explicitNullProperties?.Remove("items"); }
+            else if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("itemsPerPage") is null) { _explicitNullValueItemsPerPage = default!; _explicitNullProperties?.Remove("itemsPerPage"); }
+            else if (parseNode.GetChildNode("itemsPerPage") is { } nullNodeItemsPerPage && nullNodeItemsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemsPerPage = null;
+            if (parseNode.GetChildNode("totalItems") is null) { _explicitNullValueTotalItems = default!; _explicitNullProperties?.Remove("totalItems"); }
+            else if (parseNode.GetChildNode("totalItems") is { } nullNodeTotalItems && nullNodeTotalItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalItems = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The current page number of the result set (1-based).</summary>
-        public long? CurrentPage { get => _explicitNullValueCurrentPage; set { _explicitNullValueCurrentPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPage"); else _explicitNullProperties?.Remove("currentPage"); } }
+        public long? CurrentPage { get => _explicitNullValueCurrentPage; set { _explicitNullValueCurrentPage = value; AdditionalData?.Remove("currentPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentPage"); else _explicitNullProperties?.Remove("currentPage"); } }
         private long? _explicitNullValueCurrentPage = default!;
         /// <summary>The items on the current page, in the order returned by the query; an empty list if no results match.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; AdditionalData?.Remove("items"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.CollectionModel> _explicitNullValueItems = default!;
 #endif
         /// <summary>The effective page size after clamping the requested value; the last page may contain fewer items.</summary>
-        public int? ItemsPerPage { get => _explicitNullValueItemsPerPage; set { _explicitNullValueItemsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemsPerPage"); else _explicitNullProperties?.Remove("itemsPerPage"); } }
+        public int? ItemsPerPage { get => _explicitNullValueItemsPerPage; set { _explicitNullValueItemsPerPage = value; AdditionalData?.Remove("itemsPerPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemsPerPage"); else _explicitNullProperties?.Remove("itemsPerPage"); } }
         private int? _explicitNullValueItemsPerPage = default!;
         /// <summary>The total number of items across all pages matching the query, not just the current page.</summary>
-        public long? TotalItems { get => _explicitNullValueTotalItems; set { _explicitNullValueTotalItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalItems"); else _explicitNullProperties?.Remove("totalItems"); } }
+        public long? TotalItems { get => _explicitNullValueTotalItems; set { _explicitNullValueTotalItems = value; AdditionalData?.Remove("totalItems"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalItems"); else _explicitNullProperties?.Remove("totalItems"); } }
         private long? _explicitNullValueTotalItems = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PaginationListOfCollectionModel"/> and sets the default values.

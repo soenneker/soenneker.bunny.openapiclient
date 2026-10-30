@@ -17,42 +17,47 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accessLists") is { } nullNodeAccessLists && nullNodeAccessLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLists = null;
-            if (parseNode.GetChildNode("antivirusScanningMode") is { } nullNodeAntivirusScanningMode && nullNodeAntivirusScanningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AntivirusScanningMode = null;
-            if (parseNode.GetChildNode("botDetectionExecutionMode") is { } nullNodeBotDetectionExecutionMode && nullNodeBotDetectionExecutionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotDetectionExecutionMode = null;
-            if (parseNode.GetChildNode("csamScanningMode") is { } nullNodeCsamScanningMode && nullNodeCsamScanningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsamScanningMode = null;
-            if (parseNode.GetChildNode("shieldZone") is { } nullNodeShieldZone && nullNodeShieldZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZone = null;
+            if (parseNode.GetChildNode("accessLists") is null) { _explicitNullValueAccessLists = default!; _explicitNullProperties?.Remove("accessLists"); }
+            else if (parseNode.GetChildNode("accessLists") is { } nullNodeAccessLists && nullNodeAccessLists.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLists = null;
+            if (parseNode.GetChildNode("antivirusScanningMode") is null) { _explicitNullValueAntivirusScanningMode = default!; _explicitNullProperties?.Remove("antivirusScanningMode"); }
+            else if (parseNode.GetChildNode("antivirusScanningMode") is { } nullNodeAntivirusScanningMode && nullNodeAntivirusScanningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AntivirusScanningMode = null;
+            if (parseNode.GetChildNode("botDetectionExecutionMode") is null) { _explicitNullValueBotDetectionExecutionMode = default!; _explicitNullProperties?.Remove("botDetectionExecutionMode"); }
+            else if (parseNode.GetChildNode("botDetectionExecutionMode") is { } nullNodeBotDetectionExecutionMode && nullNodeBotDetectionExecutionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BotDetectionExecutionMode = null;
+            if (parseNode.GetChildNode("csamScanningMode") is null) { _explicitNullValueCsamScanningMode = default!; _explicitNullProperties?.Remove("csamScanningMode"); }
+            else if (parseNode.GetChildNode("csamScanningMode") is { } nullNodeCsamScanningMode && nullNodeCsamScanningMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CsamScanningMode = null;
+            if (parseNode.GetChildNode("shieldZone") is null) { _explicitNullValueShieldZone = default!; _explicitNullProperties?.Remove("shieldZone"); }
+            else if (parseNode.GetChildNode("shieldZone") is { } nullNodeShieldZone && nullNodeShieldZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZone = null;
         }
 
         /// <summary>The accessLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>? AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>? AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>? _explicitNullValueAccessLists = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList> AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList> AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList> _explicitNullValueAccessLists = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
-        public int? AntivirusScanningMode { get => _explicitNullValueAntivirusScanningMode; set { _explicitNullValueAntivirusScanningMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("antivirusScanningMode"); else _explicitNullProperties?.Remove("antivirusScanningMode"); } }
+        public int? AntivirusScanningMode { get => _explicitNullValueAntivirusScanningMode; set { _explicitNullValueAntivirusScanningMode = value; AdditionalData?.Remove("antivirusScanningMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("antivirusScanningMode"); else _explicitNullProperties?.Remove("antivirusScanningMode"); } }
         private int? _explicitNullValueAntivirusScanningMode = default!;
         /// <summary>0 = LogOnly1 = Challenge</summary>
-        public int? BotDetectionExecutionMode { get => _explicitNullValueBotDetectionExecutionMode; set { _explicitNullValueBotDetectionExecutionMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetectionExecutionMode"); else _explicitNullProperties?.Remove("botDetectionExecutionMode"); } }
+        public int? BotDetectionExecutionMode { get => _explicitNullValueBotDetectionExecutionMode; set { _explicitNullValueBotDetectionExecutionMode = value; AdditionalData?.Remove("botDetectionExecutionMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("botDetectionExecutionMode"); else _explicitNullProperties?.Remove("botDetectionExecutionMode"); } }
         private int? _explicitNullValueBotDetectionExecutionMode = default!;
         /// <summary>0 = Disabled1 = Log2 = Block</summary>
-        public int? CsamScanningMode { get => _explicitNullValueCsamScanningMode; set { _explicitNullValueCsamScanningMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csamScanningMode"); else _explicitNullProperties?.Remove("csamScanningMode"); } }
+        public int? CsamScanningMode { get => _explicitNullValueCsamScanningMode; set { _explicitNullValueCsamScanningMode = value; AdditionalData?.Remove("csamScanningMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("csamScanningMode"); else _explicitNullProperties?.Remove("csamScanningMode"); } }
         private int? _explicitNullValueCsamScanningMode = default!;
         /// <summary>The shieldZone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest? ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest? ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; AdditionalData?.Remove("shieldZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest? _explicitNullValueShieldZone = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest ShieldZone { get => _explicitNullValueShieldZone; set { _explicitNullValueShieldZone = value; AdditionalData?.Remove("shieldZone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZone"); else _explicitNullProperties?.Remove("shieldZone"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneRequest _explicitNullValueShieldZone = default!;
 #endif
         /// <summary>

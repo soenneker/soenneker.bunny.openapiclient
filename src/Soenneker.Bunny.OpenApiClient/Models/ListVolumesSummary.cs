@@ -17,21 +17,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("totalContainers") is { } nullNodeTotalContainers && nullNodeTotalContainers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalContainers = null;
-            if (parseNode.GetChildNode("totalPods") is { } nullNodeTotalPods && nullNodeTotalPods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPods = null;
-            if (parseNode.GetChildNode("totalStorage") is { } nullNodeTotalStorage && nullNodeTotalStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalStorage = null;
+            if (parseNode.GetChildNode("totalContainers") is null) { _explicitNullValueTotalContainers = default!; _explicitNullProperties?.Remove("totalContainers"); }
+            else if (parseNode.GetChildNode("totalContainers") is { } nullNodeTotalContainers && nullNodeTotalContainers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalContainers = null;
+            if (parseNode.GetChildNode("totalPods") is null) { _explicitNullValueTotalPods = default!; _explicitNullProperties?.Remove("totalPods"); }
+            else if (parseNode.GetChildNode("totalPods") is { } nullNodeTotalPods && nullNodeTotalPods.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalPods = null;
+            if (parseNode.GetChildNode("totalStorage") is null) { _explicitNullValueTotalStorage = default!; _explicitNullProperties?.Remove("totalStorage"); }
+            else if (parseNode.GetChildNode("totalStorage") is { } nullNodeTotalStorage && nullNodeTotalStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalStorage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The totalContainers property</summary>
-        public int? TotalContainers { get => _explicitNullValueTotalContainers; set { _explicitNullValueTotalContainers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalContainers"); else _explicitNullProperties?.Remove("totalContainers"); } }
+        public int? TotalContainers { get => _explicitNullValueTotalContainers; set { _explicitNullValueTotalContainers = value; AdditionalData?.Remove("totalContainers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalContainers"); else _explicitNullProperties?.Remove("totalContainers"); } }
         private int? _explicitNullValueTotalContainers = default!;
         /// <summary>The totalPods property</summary>
-        public int? TotalPods { get => _explicitNullValueTotalPods; set { _explicitNullValueTotalPods = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalPods"); else _explicitNullProperties?.Remove("totalPods"); } }
+        public int? TotalPods { get => _explicitNullValueTotalPods; set { _explicitNullValueTotalPods = value; AdditionalData?.Remove("totalPods"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalPods"); else _explicitNullProperties?.Remove("totalPods"); } }
         private int? _explicitNullValueTotalPods = default!;
         /// <summary>The totalStorage property</summary>
-        public double? TotalStorage { get => _explicitNullValueTotalStorage; set { _explicitNullValueTotalStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalStorage"); else _explicitNullProperties?.Remove("totalStorage"); } }
+        public double? TotalStorage { get => _explicitNullValueTotalStorage; set { _explicitNullValueTotalStorage = value; AdditionalData?.Remove("totalStorage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalStorage"); else _explicitNullProperties?.Remove("totalStorage"); } }
         private double? _explicitNullValueTotalStorage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.ListVolumesSummary"/> and sets the default values.

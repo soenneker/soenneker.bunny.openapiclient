@@ -76,7 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.V1.Pricing.Item.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.V1.Pricing.Item.Item.WithResourceItemRequestBuilder.WithResourceItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.bunny.net", "/core/v1/pricing/{source}/{resourceId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

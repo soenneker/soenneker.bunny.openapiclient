@@ -17,17 +17,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("Code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
-            if (parseNode.GetChildNode("Continent") is { } nullNodeContinent && nullNodeContinent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Continent = null;
-            if (parseNode.GetChildNode("Endpoint") is { } nullNodeEndpoint && nullNodeEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoint = null;
-            if (parseNode.GetChildNode("IsMainRegionSupported") is { } nullNodeIsMainRegionSupported && nullNodeIsMainRegionSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMainRegionSupported = null;
-            if (parseNode.GetChildNode("IsS3Supported") is { } nullNodeIsS3Supported && nullNodeIsS3Supported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsS3Supported = null;
-            if (parseNode.GetChildNode("Latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
-            if (parseNode.GetChildNode("Longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
-            if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("PricePerGigabyte") is { } nullNodePricePerGigabyte && nullNodePricePerGigabyte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerGigabyte = null;
-            if (parseNode.GetChildNode("S3Endpoint") is { } nullNodeS3Endpoint && nullNodeS3Endpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3Endpoint = null;
-            if (parseNode.GetChildNode("Tier") is { } nullNodeTier && nullNodeTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tier = null;
+            if (parseNode.GetChildNode("Code") is null) { _explicitNullValueCode = default!; _explicitNullProperties?.Remove("Code"); }
+            else if (parseNode.GetChildNode("Code") is { } nullNodeCode && nullNodeCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Code = null;
+            if (parseNode.GetChildNode("Continent") is null) { _explicitNullValueContinent = default!; _explicitNullProperties?.Remove("Continent"); }
+            else if (parseNode.GetChildNode("Continent") is { } nullNodeContinent && nullNodeContinent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Continent = null;
+            if (parseNode.GetChildNode("Endpoint") is null) { _explicitNullValueEndpoint = default!; _explicitNullProperties?.Remove("Endpoint"); }
+            else if (parseNode.GetChildNode("Endpoint") is { } nullNodeEndpoint && nullNodeEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoint = null;
+            if (parseNode.GetChildNode("IsMainRegionSupported") is null) { _explicitNullValueIsMainRegionSupported = default!; _explicitNullProperties?.Remove("IsMainRegionSupported"); }
+            else if (parseNode.GetChildNode("IsMainRegionSupported") is { } nullNodeIsMainRegionSupported && nullNodeIsMainRegionSupported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMainRegionSupported = null;
+            if (parseNode.GetChildNode("IsS3Supported") is null) { _explicitNullValueIsS3Supported = default!; _explicitNullProperties?.Remove("IsS3Supported"); }
+            else if (parseNode.GetChildNode("IsS3Supported") is { } nullNodeIsS3Supported && nullNodeIsS3Supported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsS3Supported = null;
+            if (parseNode.GetChildNode("Latitude") is null) { _explicitNullValueLatitude = default!; _explicitNullProperties?.Remove("Latitude"); }
+            else if (parseNode.GetChildNode("Latitude") is { } nullNodeLatitude && nullNodeLatitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Latitude = null;
+            if (parseNode.GetChildNode("Longitude") is null) { _explicitNullValueLongitude = default!; _explicitNullProperties?.Remove("Longitude"); }
+            else if (parseNode.GetChildNode("Longitude") is { } nullNodeLongitude && nullNodeLongitude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Longitude = null;
+            if (parseNode.GetChildNode("Name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("Name"); }
+            else if (parseNode.GetChildNode("Name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("PricePerGigabyte") is null) { _explicitNullValuePricePerGigabyte = default!; _explicitNullProperties?.Remove("PricePerGigabyte"); }
+            else if (parseNode.GetChildNode("PricePerGigabyte") is { } nullNodePricePerGigabyte && nullNodePricePerGigabyte.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerGigabyte = null;
+            if (parseNode.GetChildNode("S3Endpoint") is null) { _explicitNullValueS3Endpoint = default!; _explicitNullProperties?.Remove("S3Endpoint"); }
+            else if (parseNode.GetChildNode("S3Endpoint") is { } nullNodeS3Endpoint && nullNodeS3Endpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3Endpoint = null;
+            if (parseNode.GetChildNode("Tier") is null) { _explicitNullValueTier = default!; _explicitNullProperties?.Remove("Tier"); }
+            else if (parseNode.GetChildNode("Tier") is { } nullNodeTier && nullNodeTier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tier = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,70 +46,70 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The storage region code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
+        public string? Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("Code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
         private string? _explicitNullValueCode = default!;
 #nullable restore
 #else
-        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
+        public string Code { get => _explicitNullValueCode; set { _explicitNullValueCode = value; AdditionalData?.Remove("Code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Code"); else _explicitNullProperties?.Remove("Code"); } }
         private string _explicitNullValueCode = default!;
 #endif
         /// <summary>The continent code: EU (Europe), NA (North America), AS (Asia), OC (Oceania), SA (South America) or AF (Africa)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Continent { get => _explicitNullValueContinent; set { _explicitNullValueContinent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Continent"); else _explicitNullProperties?.Remove("Continent"); } }
+        public string? Continent { get => _explicitNullValueContinent; set { _explicitNullValueContinent = value; AdditionalData?.Remove("Continent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Continent"); else _explicitNullProperties?.Remove("Continent"); } }
         private string? _explicitNullValueContinent = default!;
 #nullable restore
 #else
-        public string Continent { get => _explicitNullValueContinent; set { _explicitNullValueContinent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Continent"); else _explicitNullProperties?.Remove("Continent"); } }
+        public string Continent { get => _explicitNullValueContinent; set { _explicitNullValueContinent = value; AdditionalData?.Remove("Continent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Continent"); else _explicitNullProperties?.Remove("Continent"); } }
         private string _explicitNullValueContinent = default!;
 #endif
         /// <summary>The storage API endpoint, or null for SSD regions that cannot be selected as the main region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Endpoint"); else _explicitNullProperties?.Remove("Endpoint"); } }
+        public string? Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; AdditionalData?.Remove("Endpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Endpoint"); else _explicitNullProperties?.Remove("Endpoint"); } }
         private string? _explicitNullValueEndpoint = default!;
 #nullable restore
 #else
-        public string Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Endpoint"); else _explicitNullProperties?.Remove("Endpoint"); } }
+        public string Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; AdditionalData?.Remove("Endpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Endpoint"); else _explicitNullProperties?.Remove("Endpoint"); } }
         private string _explicitNullValueEndpoint = default!;
 #endif
         /// <summary>Whether the region can be selected as the main region for this storage tier</summary>
-        public bool? IsMainRegionSupported { get => _explicitNullValueIsMainRegionSupported; set { _explicitNullValueIsMainRegionSupported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsMainRegionSupported"); else _explicitNullProperties?.Remove("IsMainRegionSupported"); } }
+        public bool? IsMainRegionSupported { get => _explicitNullValueIsMainRegionSupported; set { _explicitNullValueIsMainRegionSupported = value; AdditionalData?.Remove("IsMainRegionSupported"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsMainRegionSupported"); else _explicitNullProperties?.Remove("IsMainRegionSupported"); } }
         private bool? _explicitNullValueIsMainRegionSupported = default!;
         /// <summary>Supports S3 replication; main-region use also requires IsMainRegionSupported</summary>
-        public bool? IsS3Supported { get => _explicitNullValueIsS3Supported; set { _explicitNullValueIsS3Supported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsS3Supported"); else _explicitNullProperties?.Remove("IsS3Supported"); } }
+        public bool? IsS3Supported { get => _explicitNullValueIsS3Supported; set { _explicitNullValueIsS3Supported = value; AdditionalData?.Remove("IsS3Supported"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("IsS3Supported"); else _explicitNullProperties?.Remove("IsS3Supported"); } }
         private bool? _explicitNullValueIsS3Supported = default!;
         /// <summary>The approximate latitude of the storage region in decimal degrees</summary>
-        public double? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Latitude"); else _explicitNullProperties?.Remove("Latitude"); } }
+        public double? Latitude { get => _explicitNullValueLatitude; set { _explicitNullValueLatitude = value; AdditionalData?.Remove("Latitude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Latitude"); else _explicitNullProperties?.Remove("Latitude"); } }
         private double? _explicitNullValueLatitude = default!;
         /// <summary>The approximate longitude of the storage region in decimal degrees</summary>
-        public double? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Longitude"); else _explicitNullProperties?.Remove("Longitude"); } }
+        public double? Longitude { get => _explicitNullValueLongitude; set { _explicitNullValueLongitude = value; AdditionalData?.Remove("Longitude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Longitude"); else _explicitNullProperties?.Remove("Longitude"); } }
         private double? _explicitNullValueLongitude = default!;
         /// <summary>The display name of the storage region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The standard storage price in USD per GB per month, before discounts</summary>
-        public decimal? PricePerGigabyte { get => _explicitNullValuePricePerGigabyte; set { _explicitNullValuePricePerGigabyte = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerGigabyte"); else _explicitNullProperties?.Remove("PricePerGigabyte"); } }
+        public decimal? PricePerGigabyte { get => _explicitNullValuePricePerGigabyte; set { _explicitNullValuePricePerGigabyte = value; AdditionalData?.Remove("PricePerGigabyte"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerGigabyte"); else _explicitNullProperties?.Remove("PricePerGigabyte"); } }
         private decimal? _explicitNullValuePricePerGigabyte = default!;
         /// <summary>The S3 API endpoint, or null when S3 compatibility is not supported or the region cannot be selected as the main region</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3Endpoint { get => _explicitNullValueS3Endpoint; set { _explicitNullValueS3Endpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3Endpoint"); else _explicitNullProperties?.Remove("S3Endpoint"); } }
+        public string? S3Endpoint { get => _explicitNullValueS3Endpoint; set { _explicitNullValueS3Endpoint = value; AdditionalData?.Remove("S3Endpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3Endpoint"); else _explicitNullProperties?.Remove("S3Endpoint"); } }
         private string? _explicitNullValueS3Endpoint = default!;
 #nullable restore
 #else
-        public string S3Endpoint { get => _explicitNullValueS3Endpoint; set { _explicitNullValueS3Endpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3Endpoint"); else _explicitNullProperties?.Remove("S3Endpoint"); } }
+        public string S3Endpoint { get => _explicitNullValueS3Endpoint; set { _explicitNullValueS3Endpoint = value; AdditionalData?.Remove("S3Endpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("S3Endpoint"); else _explicitNullProperties?.Remove("S3Endpoint"); } }
         private string _explicitNullValueS3Endpoint = default!;
 #endif
         /// <summary>The storage tier: 0 for Standard (HDD), 1 for Edge (SSD)</summary>
-        public int? Tier { get => _explicitNullValueTier; set { _explicitNullValueTier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tier"); else _explicitNullProperties?.Remove("Tier"); } }
+        public int? Tier { get => _explicitNullValueTier; set { _explicitNullValueTier = value; AdditionalData?.Remove("Tier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Tier"); else _explicitNullProperties?.Remove("Tier"); } }
         private int? _explicitNullValueTier = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageRegionModel"/> and sets the default values.

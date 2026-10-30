@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ConcurrentRequestsChart") is { } nullNodeConcurrentRequestsChart && nullNodeConcurrentRequestsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConcurrentRequestsChart = null;
-            if (parseNode.GetChildNode("QueuedRequestsChart") is { } nullNodeQueuedRequestsChart && nullNodeQueuedRequestsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueuedRequestsChart = null;
+            if (parseNode.GetChildNode("ConcurrentRequestsChart") is null) { _explicitNullValueConcurrentRequestsChart = default!; _explicitNullProperties?.Remove("ConcurrentRequestsChart"); }
+            else if (parseNode.GetChildNode("ConcurrentRequestsChart") is { } nullNodeConcurrentRequestsChart && nullNodeConcurrentRequestsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConcurrentRequestsChart = null;
+            if (parseNode.GetChildNode("QueuedRequestsChart") is null) { _explicitNullValueQueuedRequestsChart = default!; _explicitNullProperties?.Remove("QueuedRequestsChart"); }
+            else if (parseNode.GetChildNode("QueuedRequestsChart") is { } nullNodeQueuedRequestsChart && nullNodeQueuedRequestsChart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueuedRequestsChart = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of origin shield concurrent requests</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty2? ConcurrentRequestsChart { get => _explicitNullValueConcurrentRequestsChart; set { _explicitNullValueConcurrentRequestsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConcurrentRequestsChart"); else _explicitNullProperties?.Remove("ConcurrentRequestsChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty2? ConcurrentRequestsChart { get => _explicitNullValueConcurrentRequestsChart; set { _explicitNullValueConcurrentRequestsChart = value; AdditionalData?.Remove("ConcurrentRequestsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConcurrentRequestsChart"); else _explicitNullProperties?.Remove("ConcurrentRequestsChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty2? _explicitNullValueConcurrentRequestsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty2 ConcurrentRequestsChart { get => _explicitNullValueConcurrentRequestsChart; set { _explicitNullValueConcurrentRequestsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConcurrentRequestsChart"); else _explicitNullProperties?.Remove("ConcurrentRequestsChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty2 ConcurrentRequestsChart { get => _explicitNullValueConcurrentRequestsChart; set { _explicitNullValueConcurrentRequestsChart = value; AdditionalData?.Remove("ConcurrentRequestsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ConcurrentRequestsChart"); else _explicitNullProperties?.Remove("ConcurrentRequestsChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelConcurrentRequestsChartProperty2 _explicitNullValueConcurrentRequestsChart = default!;
 #endif
         /// <summary>The constructed chart of origin shield requests chart</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty2? QueuedRequestsChart { get => _explicitNullValueQueuedRequestsChart; set { _explicitNullValueQueuedRequestsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueuedRequestsChart"); else _explicitNullProperties?.Remove("QueuedRequestsChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty2? QueuedRequestsChart { get => _explicitNullValueQueuedRequestsChart; set { _explicitNullValueQueuedRequestsChart = value; AdditionalData?.Remove("QueuedRequestsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueuedRequestsChart"); else _explicitNullProperties?.Remove("QueuedRequestsChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty2? _explicitNullValueQueuedRequestsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty2 QueuedRequestsChart { get => _explicitNullValueQueuedRequestsChart; set { _explicitNullValueQueuedRequestsChart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueuedRequestsChart"); else _explicitNullProperties?.Remove("QueuedRequestsChart"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty2 QueuedRequestsChart { get => _explicitNullValueQueuedRequestsChart; set { _explicitNullValueQueuedRequestsChart = value; AdditionalData?.Remove("QueuedRequestsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("QueuedRequestsChart"); else _explicitNullProperties?.Remove("QueuedRequestsChart"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.OriginShieldConcurrencyStatisticsModelQueuedRequestsChartProperty2 _explicitNullValueQueuedRequestsChart = default!;
 #endif
         /// <summary>

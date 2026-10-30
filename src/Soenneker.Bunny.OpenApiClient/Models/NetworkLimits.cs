@@ -17,17 +17,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("egressBandwidthLimit") is { } nullNodeEgressBandwidthLimit && nullNodeEgressBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EgressBandwidthLimit = null;
-            if (parseNode.GetChildNode("ingressBandwidthLimit") is { } nullNodeIngressBandwidthLimit && nullNodeIngressBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IngressBandwidthLimit = null;
+            if (parseNode.GetChildNode("egressBandwidthLimit") is null) { _explicitNullValueEgressBandwidthLimit = default!; _explicitNullProperties?.Remove("egressBandwidthLimit"); }
+            else if (parseNode.GetChildNode("egressBandwidthLimit") is { } nullNodeEgressBandwidthLimit && nullNodeEgressBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EgressBandwidthLimit = null;
+            if (parseNode.GetChildNode("ingressBandwidthLimit") is null) { _explicitNullValueIngressBandwidthLimit = default!; _explicitNullProperties?.Remove("ingressBandwidthLimit"); }
+            else if (parseNode.GetChildNode("ingressBandwidthLimit") is { } nullNodeIngressBandwidthLimit && nullNodeIngressBandwidthLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IngressBandwidthLimit = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The egressBandwidthLimit property</summary>
-        public long? EgressBandwidthLimit { get => _explicitNullValueEgressBandwidthLimit; set { _explicitNullValueEgressBandwidthLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("egressBandwidthLimit"); else _explicitNullProperties?.Remove("egressBandwidthLimit"); } }
+        public long? EgressBandwidthLimit { get => _explicitNullValueEgressBandwidthLimit; set { _explicitNullValueEgressBandwidthLimit = value; AdditionalData?.Remove("egressBandwidthLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("egressBandwidthLimit"); else _explicitNullProperties?.Remove("egressBandwidthLimit"); } }
         private long? _explicitNullValueEgressBandwidthLimit = default!;
         /// <summary>The ingressBandwidthLimit property</summary>
-        public long? IngressBandwidthLimit { get => _explicitNullValueIngressBandwidthLimit; set { _explicitNullValueIngressBandwidthLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ingressBandwidthLimit"); else _explicitNullProperties?.Remove("ingressBandwidthLimit"); } }
+        public long? IngressBandwidthLimit { get => _explicitNullValueIngressBandwidthLimit; set { _explicitNullValueIngressBandwidthLimit = value; AdditionalData?.Remove("ingressBandwidthLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ingressBandwidthLimit"); else _explicitNullProperties?.Remove("ingressBandwidthLimit"); } }
         private long? _explicitNullValueIngressBandwidthLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits"/> and sets the default values.

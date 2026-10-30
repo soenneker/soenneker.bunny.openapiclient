@@ -17,72 +17,81 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
-            if (parseNode.GetChildNode("chainedRuleConditions") is { } nullNodeChainedRuleConditions && nullNodeChainedRuleConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChainedRuleConditions = null;
-            if (parseNode.GetChildNode("isNegated") is { } nullNodeIsNegated && nullNodeIsNegated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNegated = null;
-            if (parseNode.GetChildNode("isRegexVariable") is { } nullNodeIsRegexVariable && nullNodeIsRegexVariable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRegexVariable = null;
-            if (parseNode.GetChildNode("operatorType") is { } nullNodeOperatorType && nullNodeOperatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorType = null;
-            if (parseNode.GetChildNode("severityType") is { } nullNodeSeverityType && nullNodeSeverityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeverityType = null;
-            if (parseNode.GetChildNode("transformationTypes") is { } nullNodeTransformationTypes && nullNodeTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformationTypes = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
-            if (parseNode.GetChildNode("variableTypes") is { } nullNodeVariableTypes && nullNodeVariableTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableTypes = null;
+            if (parseNode.GetChildNode("actionType") is null) { _explicitNullValueActionType = default!; _explicitNullProperties?.Remove("actionType"); }
+            else if (parseNode.GetChildNode("actionType") is { } nullNodeActionType && nullNodeActionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActionType = null;
+            if (parseNode.GetChildNode("chainedRuleConditions") is null) { _explicitNullValueChainedRuleConditions = default!; _explicitNullProperties?.Remove("chainedRuleConditions"); }
+            else if (parseNode.GetChildNode("chainedRuleConditions") is { } nullNodeChainedRuleConditions && nullNodeChainedRuleConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChainedRuleConditions = null;
+            if (parseNode.GetChildNode("isNegated") is null) { _explicitNullValueIsNegated = default!; _explicitNullProperties?.Remove("isNegated"); }
+            else if (parseNode.GetChildNode("isNegated") is { } nullNodeIsNegated && nullNodeIsNegated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsNegated = null;
+            if (parseNode.GetChildNode("isRegexVariable") is null) { _explicitNullValueIsRegexVariable = default!; _explicitNullProperties?.Remove("isRegexVariable"); }
+            else if (parseNode.GetChildNode("isRegexVariable") is { } nullNodeIsRegexVariable && nullNodeIsRegexVariable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRegexVariable = null;
+            if (parseNode.GetChildNode("operatorType") is null) { _explicitNullValueOperatorType = default!; _explicitNullProperties?.Remove("operatorType"); }
+            else if (parseNode.GetChildNode("operatorType") is { } nullNodeOperatorType && nullNodeOperatorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OperatorType = null;
+            if (parseNode.GetChildNode("severityType") is null) { _explicitNullValueSeverityType = default!; _explicitNullProperties?.Remove("severityType"); }
+            else if (parseNode.GetChildNode("severityType") is { } nullNodeSeverityType && nullNodeSeverityType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeverityType = null;
+            if (parseNode.GetChildNode("transformationTypes") is null) { _explicitNullValueTransformationTypes = default!; _explicitNullProperties?.Remove("transformationTypes"); }
+            else if (parseNode.GetChildNode("transformationTypes") is { } nullNodeTransformationTypes && nullNodeTransformationTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransformationTypes = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("variableTypes") is null) { _explicitNullValueVariableTypes = default!; _explicitNullProperties?.Remove("variableTypes"); }
+            else if (parseNode.GetChildNode("variableTypes") is { } nullNodeVariableTypes && nullNodeVariableTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableTypes = null;
         }
 
         /// <summary>1 = Block2 = Log3 = Challenge4 = Allow5 = Bypass</summary>
-        public int? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
+        public int? ActionType { get => _explicitNullValueActionType; set { _explicitNullValueActionType = value; AdditionalData?.Remove("actionType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actionType"); else _explicitNullProperties?.Remove("actionType"); } }
         private int? _explicitNullValueActionType = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The chainedRuleConditions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>? ChainedRuleConditions { get => _explicitNullValueChainedRuleConditions; set { _explicitNullValueChainedRuleConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedRuleConditions"); else _explicitNullProperties?.Remove("chainedRuleConditions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>? ChainedRuleConditions { get => _explicitNullValueChainedRuleConditions; set { _explicitNullValueChainedRuleConditions = value; AdditionalData?.Remove("chainedRuleConditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedRuleConditions"); else _explicitNullProperties?.Remove("chainedRuleConditions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem>? _explicitNullValueChainedRuleConditions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> ChainedRuleConditions { get => _explicitNullValueChainedRuleConditions; set { _explicitNullValueChainedRuleConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedRuleConditions"); else _explicitNullProperties?.Remove("chainedRuleConditions"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> ChainedRuleConditions { get => _explicitNullValueChainedRuleConditions; set { _explicitNullValueChainedRuleConditions = value; AdditionalData?.Remove("chainedRuleConditions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chainedRuleConditions"); else _explicitNullProperties?.Remove("chainedRuleConditions"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.WafChainedRuleConditionItem> _explicitNullValueChainedRuleConditions = default!;
 #endif
         /// <summary>The isNegated property</summary>
-        public bool? IsNegated { get => _explicitNullValueIsNegated; set { _explicitNullValueIsNegated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNegated"); else _explicitNullProperties?.Remove("isNegated"); } }
+        public bool? IsNegated { get => _explicitNullValueIsNegated; set { _explicitNullValueIsNegated = value; AdditionalData?.Remove("isNegated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isNegated"); else _explicitNullProperties?.Remove("isNegated"); } }
         private bool? _explicitNullValueIsNegated = default!;
         /// <summary>The isRegexVariable property</summary>
-        public bool? IsRegexVariable { get => _explicitNullValueIsRegexVariable; set { _explicitNullValueIsRegexVariable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRegexVariable"); else _explicitNullProperties?.Remove("isRegexVariable"); } }
+        public bool? IsRegexVariable { get => _explicitNullValueIsRegexVariable; set { _explicitNullValueIsRegexVariable = value; AdditionalData?.Remove("isRegexVariable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRegexVariable"); else _explicitNullProperties?.Remove("isRegexVariable"); } }
         private bool? _explicitNullValueIsRegexVariable = default!;
         /// <summary>0 = BEGINSWITH1 = ENDSWITH2 = CONTAINS3 = CONTAINSWORD4 = STRMATCH5 = EQ6 = GE7 = GT8 = LE9 = LT12 = WITHIN13 = IPMATCH14 = RX15 = STREQ17 = DETECTSQLI18 = DETECTXSS</summary>
-        public int? OperatorType { get => _explicitNullValueOperatorType; set { _explicitNullValueOperatorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operatorType"); else _explicitNullProperties?.Remove("operatorType"); } }
+        public int? OperatorType { get => _explicitNullValueOperatorType; set { _explicitNullValueOperatorType = value; AdditionalData?.Remove("operatorType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operatorType"); else _explicitNullProperties?.Remove("operatorType"); } }
         private int? _explicitNullValueOperatorType = default!;
         /// <summary>0 = NOTICE1 = WARNING2 = CRITICAL</summary>
-        public int? SeverityType { get => _explicitNullValueSeverityType; set { _explicitNullValueSeverityType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severityType"); else _explicitNullProperties?.Remove("severityType"); } }
+        public int? SeverityType { get => _explicitNullValueSeverityType; set { _explicitNullValueSeverityType = value; AdditionalData?.Remove("severityType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severityType"); else _explicitNullProperties?.Remove("severityType"); } }
         private int? _explicitNullValueSeverityType = default!;
         /// <summary>The transformationTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? TransformationTypes { get => _explicitNullValueTransformationTypes; set { _explicitNullValueTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformationTypes"); else _explicitNullProperties?.Remove("transformationTypes"); } }
+        public List<int?>? TransformationTypes { get => _explicitNullValueTransformationTypes; set { _explicitNullValueTransformationTypes = value; AdditionalData?.Remove("transformationTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformationTypes"); else _explicitNullProperties?.Remove("transformationTypes"); } }
         private List<int?>? _explicitNullValueTransformationTypes = default!;
 #nullable restore
 #else
-        public List<int?> TransformationTypes { get => _explicitNullValueTransformationTypes; set { _explicitNullValueTransformationTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformationTypes"); else _explicitNullProperties?.Remove("transformationTypes"); } }
+        public List<int?> TransformationTypes { get => _explicitNullValueTransformationTypes; set { _explicitNullValueTransformationTypes = value; AdditionalData?.Remove("transformationTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transformationTypes"); else _explicitNullProperties?.Remove("transformationTypes"); } }
         private List<int?> _explicitNullValueTransformationTypes = default!;
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private string _explicitNullValueValue = default!;
 #endif
         /// <summary>The variableTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes? VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes? VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; AdditionalData?.Remove("variableTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes? _explicitNullValueVariableTypes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes VariableTypes { get => _explicitNullValueVariableTypes; set { _explicitNullValueVariableTypes = value; AdditionalData?.Remove("variableTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableTypes"); else _explicitNullProperties?.Remove("variableTypes"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.CreateCustomWafRuleModelVariableTypes _explicitNullValueVariableTypes = default!;
 #endif
         /// <summary>

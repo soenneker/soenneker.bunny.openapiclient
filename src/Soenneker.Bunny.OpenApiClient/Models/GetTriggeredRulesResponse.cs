@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
-            if (parseNode.GetChildNode("totalTriggeredRules") is { } nullNodeTotalTriggeredRules && nullNodeTotalTriggeredRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTriggeredRules = null;
-            if (parseNode.GetChildNode("triggeredRules") is { } nullNodeTriggeredRules && nullNodeTriggeredRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggeredRules = null;
+            if (parseNode.GetChildNode("errorResponse") is null) { _explicitNullValueErrorResponse = default!; _explicitNullProperties?.Remove("errorResponse"); }
+            else if (parseNode.GetChildNode("errorResponse") is { } nullNodeErrorResponse && nullNodeErrorResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorResponse = null;
+            if (parseNode.GetChildNode("totalTriggeredRules") is null) { _explicitNullValueTotalTriggeredRules = default!; _explicitNullProperties?.Remove("totalTriggeredRules"); }
+            else if (parseNode.GetChildNode("totalTriggeredRules") is { } nullNodeTotalTriggeredRules && nullNodeTotalTriggeredRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTriggeredRules = null;
+            if (parseNode.GetChildNode("triggeredRules") is null) { _explicitNullValueTriggeredRules = default!; _explicitNullProperties?.Remove("triggeredRules"); }
+            else if (parseNode.GetChildNode("triggeredRules") is { } nullNodeTriggeredRules && nullNodeTriggeredRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggeredRules = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Generic response object containing status information for API operations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? _explicitNullValueErrorResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse _explicitNullValueErrorResponse = default!;
 #endif
         /// <summary>The totalTriggeredRules property</summary>
-        public int? TotalTriggeredRules { get => _explicitNullValueTotalTriggeredRules; set { _explicitNullValueTotalTriggeredRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTriggeredRules"); else _explicitNullProperties?.Remove("totalTriggeredRules"); } }
+        public int? TotalTriggeredRules { get => _explicitNullValueTotalTriggeredRules; set { _explicitNullValueTotalTriggeredRules = value; AdditionalData?.Remove("totalTriggeredRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTriggeredRules"); else _explicitNullProperties?.Remove("totalTriggeredRules"); } }
         private int? _explicitNullValueTotalTriggeredRules = default!;
         /// <summary>The triggeredRules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem>? TriggeredRules { get => _explicitNullValueTriggeredRules; set { _explicitNullValueTriggeredRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggeredRules"); else _explicitNullProperties?.Remove("triggeredRules"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem>? TriggeredRules { get => _explicitNullValueTriggeredRules; set { _explicitNullValueTriggeredRules = value; AdditionalData?.Remove("triggeredRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggeredRules"); else _explicitNullProperties?.Remove("triggeredRules"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem>? _explicitNullValueTriggeredRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem> TriggeredRules { get => _explicitNullValueTriggeredRules; set { _explicitNullValueTriggeredRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggeredRules"); else _explicitNullProperties?.Remove("triggeredRules"); } }
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem> TriggeredRules { get => _explicitNullValueTriggeredRules; set { _explicitNullValueTriggeredRules = value; AdditionalData?.Remove("triggeredRules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggeredRules"); else _explicitNullProperties?.Remove("triggeredRules"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItem> _explicitNullValueTriggeredRules = default!;
 #endif
         /// <summary>

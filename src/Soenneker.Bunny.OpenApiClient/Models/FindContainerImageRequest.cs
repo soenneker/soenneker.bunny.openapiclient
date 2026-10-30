@@ -17,8 +17,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
-            if (parseNode.GetChildNode("registryIds") is { } nullNodeRegistryIds && nullNodeRegistryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryIds = null;
+            if (parseNode.GetChildNode("image") is null) { _explicitNullValueImage = default!; _explicitNullProperties?.Remove("image"); }
+            else if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
+            if (parseNode.GetChildNode("registryIds") is null) { _explicitNullValueRegistryIds = default!; _explicitNullProperties?.Remove("registryIds"); }
+            else if (parseNode.GetChildNode("registryIds") is { } nullNodeRegistryIds && nullNodeRegistryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegistryIds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Image reference in the docker format: [registry/]namespace/name[:tag], e.g. &quot;ghcr.io/owner/app:v1&quot; or &quot;owner/app&quot;.Without a registry host all of the user&apos;s registries are searched.Without a tag nothing is found, not even &quot;latest&quot;: the image&apos;s tags are suggested instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string _explicitNullValueImage = default!;
 #endif
         /// <summary>The registries to search: ids of the user&apos;s registries, or &quot;dockerhub&quot; / &quot;github&quot;. At least one is required;ids that are not the user&apos;s registries are skipped. With a registry host in the image reference, only theselected registries of that host are searched.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RegistryIds { get => _explicitNullValueRegistryIds; set { _explicitNullValueRegistryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryIds"); else _explicitNullProperties?.Remove("registryIds"); } }
+        public List<string>? RegistryIds { get => _explicitNullValueRegistryIds; set { _explicitNullValueRegistryIds = value; AdditionalData?.Remove("registryIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryIds"); else _explicitNullProperties?.Remove("registryIds"); } }
         private List<string>? _explicitNullValueRegistryIds = default!;
 #nullable restore
 #else
-        public List<string> RegistryIds { get => _explicitNullValueRegistryIds; set { _explicitNullValueRegistryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryIds"); else _explicitNullProperties?.Remove("registryIds"); } }
+        public List<string> RegistryIds { get => _explicitNullValueRegistryIds; set { _explicitNullValueRegistryIds = value; AdditionalData?.Remove("registryIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("registryIds"); else _explicitNullProperties?.Remove("registryIds"); } }
         private List<string> _explicitNullValueRegistryIds = default!;
 #endif
         /// <summary>

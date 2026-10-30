@@ -17,23 +17,25 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ForceSSL") is { } nullNodeForceSSL && nullNodeForceSSL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSSL = null;
-            if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
+            if (parseNode.GetChildNode("ForceSSL") is null) { _explicitNullValueForceSSL = default!; _explicitNullProperties?.Remove("ForceSSL"); }
+            else if (parseNode.GetChildNode("ForceSSL") is { } nullNodeForceSSL && nullNodeForceSSL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSSL = null;
+            if (parseNode.GetChildNode("Hostname") is null) { _explicitNullValueHostname = default!; _explicitNullProperties?.Remove("Hostname"); }
+            else if (parseNode.GetChildNode("Hostname") is { } nullNodeHostname && nullNodeHostname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hostname = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set to true to force SSL on the given pull zone hostname</summary>
-        public bool? ForceSSL { get => _explicitNullValueForceSSL; set { _explicitNullValueForceSSL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ForceSSL"); else _explicitNullProperties?.Remove("ForceSSL"); } }
+        public bool? ForceSSL { get => _explicitNullValueForceSSL; set { _explicitNullValueForceSSL = value; AdditionalData?.Remove("ForceSSL"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ForceSSL"); else _explicitNullProperties?.Remove("ForceSSL"); } }
         private bool? _explicitNullValueForceSSL = default!;
         /// <summary>The hostname that will be updated</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string? Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string? _explicitNullValueHostname = default!;
 #nullable restore
 #else
-        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
+        public string Hostname { get => _explicitNullValueHostname; set { _explicitNullValueHostname = value; AdditionalData?.Remove("Hostname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Hostname"); else _explicitNullProperties?.Remove("Hostname"); } }
         private string _explicitNullValueHostname = default!;
 #endif
         /// <summary>

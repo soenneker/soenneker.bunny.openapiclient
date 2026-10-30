@@ -17,9 +17,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("anycast") is { } nullNodeAnycast && nullNodeAnycast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Anycast = null;
-            if (parseNode.GetChildNode("cdn") is { } nullNodeCdn && nullNodeCdn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cdn = null;
-            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("anycast") is null) { _explicitNullValueAnycast = default!; _explicitNullProperties?.Remove("anycast"); }
+            else if (parseNode.GetChildNode("anycast") is { } nullNodeAnycast && nullNodeAnycast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Anycast = null;
+            if (parseNode.GetChildNode("cdn") is null) { _explicitNullValueCdn = default!; _explicitNullProperties?.Remove("cdn"); }
+            else if (parseNode.GetChildNode("cdn") is { } nullNodeCdn && nullNodeCdn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cdn = null;
+            if (parseNode.GetChildNode("displayName") is null) { _explicitNullValueDisplayName = default!; _explicitNullProperties?.Remove("displayName"); }
+            else if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The anycast property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest? Anycast { get => _explicitNullValueAnycast; set { _explicitNullValueAnycast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycast"); else _explicitNullProperties?.Remove("anycast"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest? Anycast { get => _explicitNullValueAnycast; set { _explicitNullValueAnycast = value; AdditionalData?.Remove("anycast"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycast"); else _explicitNullProperties?.Remove("anycast"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest? _explicitNullValueAnycast = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest Anycast { get => _explicitNullValueAnycast; set { _explicitNullValueAnycast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycast"); else _explicitNullProperties?.Remove("anycast"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest Anycast { get => _explicitNullValueAnycast; set { _explicitNullValueAnycast = value; AdditionalData?.Remove("anycast"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("anycast"); else _explicitNullProperties?.Remove("anycast"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.AnycastEndpointRequest _explicitNullValueAnycast = default!;
 #endif
         /// <summary>The cdn property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest? Cdn { get => _explicitNullValueCdn; set { _explicitNullValueCdn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdn"); else _explicitNullProperties?.Remove("cdn"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest? Cdn { get => _explicitNullValueCdn; set { _explicitNullValueCdn = value; AdditionalData?.Remove("cdn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdn"); else _explicitNullProperties?.Remove("cdn"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest? _explicitNullValueCdn = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest Cdn { get => _explicitNullValueCdn; set { _explicitNullValueCdn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdn"); else _explicitNullProperties?.Remove("cdn"); } }
+        public global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest Cdn { get => _explicitNullValueCdn; set { _explicitNullValueCdn = value; AdditionalData?.Remove("cdn"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdn"); else _explicitNullProperties?.Remove("cdn"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.CdnEndpointRequest _explicitNullValueCdn = default!;
 #endif
         /// <summary>The displayName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
         private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
         private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>

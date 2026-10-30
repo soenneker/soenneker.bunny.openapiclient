@@ -17,7 +17,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("SecurityKey") is { } nullNodeSecurityKey && nullNodeSecurityKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityKey = null;
+            if (parseNode.GetChildNode("SecurityKey") is null) { _explicitNullValueSecurityKey = default!; _explicitNullProperties?.Remove("SecurityKey"); }
+            else if (parseNode.GetChildNode("SecurityKey") is { } nullNodeSecurityKey && nullNodeSecurityKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityKey = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The SecurityKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecurityKey { get => _explicitNullValueSecurityKey; set { _explicitNullValueSecurityKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityKey"); else _explicitNullProperties?.Remove("SecurityKey"); } }
+        public string? SecurityKey { get => _explicitNullValueSecurityKey; set { _explicitNullValueSecurityKey = value; AdditionalData?.Remove("SecurityKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityKey"); else _explicitNullProperties?.Remove("SecurityKey"); } }
         private string? _explicitNullValueSecurityKey = default!;
 #nullable restore
 #else
-        public string SecurityKey { get => _explicitNullValueSecurityKey; set { _explicitNullValueSecurityKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityKey"); else _explicitNullProperties?.Remove("SecurityKey"); } }
+        public string SecurityKey { get => _explicitNullValueSecurityKey; set { _explicitNullValueSecurityKey = value; AdditionalData?.Remove("SecurityKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SecurityKey"); else _explicitNullProperties?.Remove("SecurityKey"); } }
         private string _explicitNullValueSecurityKey = default!;
 #endif
         /// <summary>

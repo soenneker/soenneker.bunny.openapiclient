@@ -17,21 +17,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("PricePerMillion") is { } nullNodePricePerMillion && nullNodePricePerMillion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerMillion = null;
-            if (parseNode.GetChildNode("ThresholdFromMillions") is { } nullNodeThresholdFromMillions && nullNodeThresholdFromMillions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThresholdFromMillions = null;
-            if (parseNode.GetChildNode("ThresholdToMillions") is { } nullNodeThresholdToMillions && nullNodeThresholdToMillions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThresholdToMillions = null;
+            if (parseNode.GetChildNode("PricePerMillion") is null) { _explicitNullValuePricePerMillion = default!; _explicitNullProperties?.Remove("PricePerMillion"); }
+            else if (parseNode.GetChildNode("PricePerMillion") is { } nullNodePricePerMillion && nullNodePricePerMillion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricePerMillion = null;
+            if (parseNode.GetChildNode("ThresholdFromMillions") is null) { _explicitNullValueThresholdFromMillions = default!; _explicitNullProperties?.Remove("ThresholdFromMillions"); }
+            else if (parseNode.GetChildNode("ThresholdFromMillions") is { } nullNodeThresholdFromMillions && nullNodeThresholdFromMillions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThresholdFromMillions = null;
+            if (parseNode.GetChildNode("ThresholdToMillions") is null) { _explicitNullValueThresholdToMillions = default!; _explicitNullProperties?.Remove("ThresholdToMillions"); }
+            else if (parseNode.GetChildNode("ThresholdToMillions") is { } nullNodeThresholdToMillions && nullNodeThresholdToMillions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThresholdToMillions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The PricePerMillion property</summary>
-        public decimal? PricePerMillion { get => _explicitNullValuePricePerMillion; set { _explicitNullValuePricePerMillion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerMillion"); else _explicitNullProperties?.Remove("PricePerMillion"); } }
+        public decimal? PricePerMillion { get => _explicitNullValuePricePerMillion; set { _explicitNullValuePricePerMillion = value; AdditionalData?.Remove("PricePerMillion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PricePerMillion"); else _explicitNullProperties?.Remove("PricePerMillion"); } }
         private decimal? _explicitNullValuePricePerMillion = default!;
         /// <summary>The ThresholdFromMillions property</summary>
-        public long? ThresholdFromMillions { get => _explicitNullValueThresholdFromMillions; set { _explicitNullValueThresholdFromMillions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThresholdFromMillions"); else _explicitNullProperties?.Remove("ThresholdFromMillions"); } }
+        public long? ThresholdFromMillions { get => _explicitNullValueThresholdFromMillions; set { _explicitNullValueThresholdFromMillions = value; AdditionalData?.Remove("ThresholdFromMillions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThresholdFromMillions"); else _explicitNullProperties?.Remove("ThresholdFromMillions"); } }
         private long? _explicitNullValueThresholdFromMillions = default!;
         /// <summary>The ThresholdToMillions property</summary>
-        public long? ThresholdToMillions { get => _explicitNullValueThresholdToMillions; set { _explicitNullValueThresholdToMillions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThresholdToMillions"); else _explicitNullProperties?.Remove("ThresholdToMillions"); } }
+        public long? ThresholdToMillions { get => _explicitNullValueThresholdToMillions; set { _explicitNullValueThresholdToMillions = value; AdditionalData?.Remove("ThresholdToMillions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ThresholdToMillions"); else _explicitNullProperties?.Remove("ThresholdToMillions"); } }
         private long? _explicitNullValueThresholdToMillions = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerPricingTierModel"/> and sets the default values.

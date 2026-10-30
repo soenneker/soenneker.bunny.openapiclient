@@ -17,61 +17,69 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("CertificateKeyType") is { } nullNodeCertificateKeyType && nullNodeCertificateKeyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateKeyType = null;
-            if (parseNode.GetChildNode("CustomNameserversEnabled") is { } nullNodeCustomNameserversEnabled && nullNodeCustomNameserversEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomNameserversEnabled = null;
-            if (parseNode.GetChildNode("LogAnonymizationType") is { } nullNodeLogAnonymizationType && nullNodeLogAnonymizationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogAnonymizationType = null;
-            if (parseNode.GetChildNode("LoggingEnabled") is { } nullNodeLoggingEnabled && nullNodeLoggingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingEnabled = null;
-            if (parseNode.GetChildNode("LoggingIPAnonymizationEnabled") is { } nullNodeLoggingIPAnonymizationEnabled && nullNodeLoggingIPAnonymizationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingIPAnonymizationEnabled = null;
-            if (parseNode.GetChildNode("Nameserver1") is { } nullNodeNameserver1 && nullNodeNameserver1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameserver1 = null;
-            if (parseNode.GetChildNode("Nameserver2") is { } nullNodeNameserver2 && nullNodeNameserver2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameserver2 = null;
-            if (parseNode.GetChildNode("SoaEmail") is { } nullNodeSoaEmail && nullNodeSoaEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoaEmail = null;
+            if (parseNode.GetChildNode("CertificateKeyType") is null) { _explicitNullValueCertificateKeyType = default!; _explicitNullProperties?.Remove("CertificateKeyType"); }
+            else if (parseNode.GetChildNode("CertificateKeyType") is { } nullNodeCertificateKeyType && nullNodeCertificateKeyType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CertificateKeyType = null;
+            if (parseNode.GetChildNode("CustomNameserversEnabled") is null) { _explicitNullValueCustomNameserversEnabled = default!; _explicitNullProperties?.Remove("CustomNameserversEnabled"); }
+            else if (parseNode.GetChildNode("CustomNameserversEnabled") is { } nullNodeCustomNameserversEnabled && nullNodeCustomNameserversEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomNameserversEnabled = null;
+            if (parseNode.GetChildNode("LogAnonymizationType") is null) { _explicitNullValueLogAnonymizationType = default!; _explicitNullProperties?.Remove("LogAnonymizationType"); }
+            else if (parseNode.GetChildNode("LogAnonymizationType") is { } nullNodeLogAnonymizationType && nullNodeLogAnonymizationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LogAnonymizationType = null;
+            if (parseNode.GetChildNode("LoggingEnabled") is null) { _explicitNullValueLoggingEnabled = default!; _explicitNullProperties?.Remove("LoggingEnabled"); }
+            else if (parseNode.GetChildNode("LoggingEnabled") is { } nullNodeLoggingEnabled && nullNodeLoggingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingEnabled = null;
+            if (parseNode.GetChildNode("LoggingIPAnonymizationEnabled") is null) { _explicitNullValueLoggingIPAnonymizationEnabled = default!; _explicitNullProperties?.Remove("LoggingIPAnonymizationEnabled"); }
+            else if (parseNode.GetChildNode("LoggingIPAnonymizationEnabled") is { } nullNodeLoggingIPAnonymizationEnabled && nullNodeLoggingIPAnonymizationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoggingIPAnonymizationEnabled = null;
+            if (parseNode.GetChildNode("Nameserver1") is null) { _explicitNullValueNameserver1 = default!; _explicitNullProperties?.Remove("Nameserver1"); }
+            else if (parseNode.GetChildNode("Nameserver1") is { } nullNodeNameserver1 && nullNodeNameserver1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameserver1 = null;
+            if (parseNode.GetChildNode("Nameserver2") is null) { _explicitNullValueNameserver2 = default!; _explicitNullProperties?.Remove("Nameserver2"); }
+            else if (parseNode.GetChildNode("Nameserver2") is { } nullNodeNameserver2 && nullNodeNameserver2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Nameserver2 = null;
+            if (parseNode.GetChildNode("SoaEmail") is null) { _explicitNullValueSoaEmail = default!; _explicitNullProperties?.Remove("SoaEmail"); }
+            else if (parseNode.GetChildNode("SoaEmail") is { } nullNodeSoaEmail && nullNodeSoaEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SoaEmail = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Sets the certificate private key type for wildcard certificates for this zone0 = ECDSA1 = RSA</summary>
-        public int? CertificateKeyType { get => _explicitNullValueCertificateKeyType; set { _explicitNullValueCertificateKeyType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKeyType"); else _explicitNullProperties?.Remove("CertificateKeyType"); } }
+        public int? CertificateKeyType { get => _explicitNullValueCertificateKeyType; set { _explicitNullValueCertificateKeyType = value; AdditionalData?.Remove("CertificateKeyType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CertificateKeyType"); else _explicitNullProperties?.Remove("CertificateKeyType"); } }
         private int? _explicitNullValueCertificateKeyType = default!;
         /// <summary>The CustomNameserversEnabled property</summary>
-        public bool? CustomNameserversEnabled { get => _explicitNullValueCustomNameserversEnabled; set { _explicitNullValueCustomNameserversEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomNameserversEnabled"); else _explicitNullProperties?.Remove("CustomNameserversEnabled"); } }
+        public bool? CustomNameserversEnabled { get => _explicitNullValueCustomNameserversEnabled; set { _explicitNullValueCustomNameserversEnabled = value; AdditionalData?.Remove("CustomNameserversEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CustomNameserversEnabled"); else _explicitNullProperties?.Remove("CustomNameserversEnabled"); } }
         private bool? _explicitNullValueCustomNameserversEnabled = default!;
         /// <summary>Gets the log anonymization type for this zone0 = One Digit1 = Drop</summary>
-        public int? LogAnonymizationType { get => _explicitNullValueLogAnonymizationType; set { _explicitNullValueLogAnonymizationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogAnonymizationType"); else _explicitNullProperties?.Remove("LogAnonymizationType"); } }
+        public int? LogAnonymizationType { get => _explicitNullValueLogAnonymizationType; set { _explicitNullValueLogAnonymizationType = value; AdditionalData?.Remove("LogAnonymizationType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LogAnonymizationType"); else _explicitNullProperties?.Remove("LogAnonymizationType"); } }
         private int? _explicitNullValueLogAnonymizationType = default!;
         /// <summary>The LoggingEnabled property</summary>
-        public bool? LoggingEnabled { get => _explicitNullValueLoggingEnabled; set { _explicitNullValueLoggingEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingEnabled"); else _explicitNullProperties?.Remove("LoggingEnabled"); } }
+        public bool? LoggingEnabled { get => _explicitNullValueLoggingEnabled; set { _explicitNullValueLoggingEnabled = value; AdditionalData?.Remove("LoggingEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingEnabled"); else _explicitNullProperties?.Remove("LoggingEnabled"); } }
         private bool? _explicitNullValueLoggingEnabled = default!;
         /// <summary>Determines if the log anonoymization should be enabled</summary>
-        public bool? LoggingIPAnonymizationEnabled { get => _explicitNullValueLoggingIPAnonymizationEnabled; set { _explicitNullValueLoggingIPAnonymizationEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingIPAnonymizationEnabled"); else _explicitNullProperties?.Remove("LoggingIPAnonymizationEnabled"); } }
+        public bool? LoggingIPAnonymizationEnabled { get => _explicitNullValueLoggingIPAnonymizationEnabled; set { _explicitNullValueLoggingIPAnonymizationEnabled = value; AdditionalData?.Remove("LoggingIPAnonymizationEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LoggingIPAnonymizationEnabled"); else _explicitNullProperties?.Remove("LoggingIPAnonymizationEnabled"); } }
         private bool? _explicitNullValueLoggingIPAnonymizationEnabled = default!;
         /// <summary>The Nameserver1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Nameserver1 { get => _explicitNullValueNameserver1; set { _explicitNullValueNameserver1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver1"); else _explicitNullProperties?.Remove("Nameserver1"); } }
+        public string? Nameserver1 { get => _explicitNullValueNameserver1; set { _explicitNullValueNameserver1 = value; AdditionalData?.Remove("Nameserver1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver1"); else _explicitNullProperties?.Remove("Nameserver1"); } }
         private string? _explicitNullValueNameserver1 = default!;
 #nullable restore
 #else
-        public string Nameserver1 { get => _explicitNullValueNameserver1; set { _explicitNullValueNameserver1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver1"); else _explicitNullProperties?.Remove("Nameserver1"); } }
+        public string Nameserver1 { get => _explicitNullValueNameserver1; set { _explicitNullValueNameserver1 = value; AdditionalData?.Remove("Nameserver1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver1"); else _explicitNullProperties?.Remove("Nameserver1"); } }
         private string _explicitNullValueNameserver1 = default!;
 #endif
         /// <summary>The Nameserver2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Nameserver2 { get => _explicitNullValueNameserver2; set { _explicitNullValueNameserver2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver2"); else _explicitNullProperties?.Remove("Nameserver2"); } }
+        public string? Nameserver2 { get => _explicitNullValueNameserver2; set { _explicitNullValueNameserver2 = value; AdditionalData?.Remove("Nameserver2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver2"); else _explicitNullProperties?.Remove("Nameserver2"); } }
         private string? _explicitNullValueNameserver2 = default!;
 #nullable restore
 #else
-        public string Nameserver2 { get => _explicitNullValueNameserver2; set { _explicitNullValueNameserver2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver2"); else _explicitNullProperties?.Remove("Nameserver2"); } }
+        public string Nameserver2 { get => _explicitNullValueNameserver2; set { _explicitNullValueNameserver2 = value; AdditionalData?.Remove("Nameserver2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Nameserver2"); else _explicitNullProperties?.Remove("Nameserver2"); } }
         private string _explicitNullValueNameserver2 = default!;
 #endif
         /// <summary>The SoaEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SoaEmail { get => _explicitNullValueSoaEmail; set { _explicitNullValueSoaEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SoaEmail"); else _explicitNullProperties?.Remove("SoaEmail"); } }
+        public string? SoaEmail { get => _explicitNullValueSoaEmail; set { _explicitNullValueSoaEmail = value; AdditionalData?.Remove("SoaEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SoaEmail"); else _explicitNullProperties?.Remove("SoaEmail"); } }
         private string? _explicitNullValueSoaEmail = default!;
 #nullable restore
 #else
-        public string SoaEmail { get => _explicitNullValueSoaEmail; set { _explicitNullValueSoaEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SoaEmail"); else _explicitNullProperties?.Remove("SoaEmail"); } }
+        public string SoaEmail { get => _explicitNullValueSoaEmail; set { _explicitNullValueSoaEmail = value; AdditionalData?.Remove("SoaEmail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("SoaEmail"); else _explicitNullProperties?.Remove("SoaEmail"); } }
         private string _explicitNullValueSoaEmail = default!;
 #endif
         /// <summary>
