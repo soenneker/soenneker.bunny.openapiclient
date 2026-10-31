@@ -64,7 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Core.Purge
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.Core.Purge.PurgeRequestBuilder.PurgeRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.bunny.net", "/core/purge", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }
