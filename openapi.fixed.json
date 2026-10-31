@@ -528,6 +528,17 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "The DNS record was successfully added.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DnsRecordModel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -3129,6 +3140,17 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "The storage zone that was added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StorageZoneModel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -3692,6 +3714,17 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "The added video library",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VideoLibraryModel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -9298,19 +9331,9 @@
           "200": {
             "description": "A JSON encoded array of objects.",
             "content": {
-              "*/*": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/StorageGetByStorageZoneNameByPath200MediaResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/StorageGetByStorageZoneNameByPath200Response"
                 },
                 "examples": {
                   "response": {
@@ -9344,9 +9367,13 @@
                     ]
                   }
                 },
-                "x-schema-inferred-from-examples": true,
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/StorageGetByStorageZoneNameByPath200ResponseSchema"
+                "x-schema-inferred-from-examples": true
+              }
+            },
+            "x-client-original-non-json-content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetByStorageZoneNameByPath200MediaResponseSchema"
                 }
               }
             }
@@ -12129,6 +12156,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "The smart action was queued",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -12567,12 +12605,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AccessListsDetailsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/AccessListsDetailsResponse"
                 }
@@ -12658,12 +12698,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
@@ -12678,12 +12720,14 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
@@ -12802,12 +12846,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateAccessListConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateAccessListConfigurationResponse"
                 }
@@ -12822,12 +12868,14 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateAccessListConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateAccessListConfigurationResponse"
                 }
@@ -12926,12 +12974,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
@@ -12946,12 +12996,14 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
@@ -13048,12 +13100,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
@@ -13068,12 +13122,14 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomAccessListResponse"
                 }
@@ -13170,12 +13226,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
@@ -13190,12 +13248,14 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
@@ -13260,31 +13320,21 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchema2"
+                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200Response"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccessListEnums200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetAccessListEnums200ResponseSchema3"
                 }
               }
             }
@@ -13340,12 +13390,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiGuardianResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiGuardianResponse"
                 }
@@ -13469,12 +13521,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateApiGuardianConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateApiGuardianConfigurationResponse"
                 }
@@ -13609,12 +13663,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateApiGuardianEndpointResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateApiGuardianEndpointResponse"
                 }
@@ -13740,12 +13796,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpsertOpenApiSpecificationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpsertOpenApiSpecificationResponse"
                 }
@@ -13869,12 +13927,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpsertOpenApiSpecificationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpsertOpenApiSpecificationResponse"
                 }
@@ -13979,31 +14039,21 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchema2"
+                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200Response"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiGuardianEnums200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiGuardianEnums200ResponseSchema3"
                 }
               }
             }
@@ -14059,12 +14109,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BotCategorizationListResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/BotCategorizationListResponse"
                 }
@@ -14199,12 +14251,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateBotCategorizationConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateBotCategorizationConfigurationResponse"
                 }
@@ -14359,12 +14413,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateBotCategoryConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateBotCategoryConfigurationResponse"
                 }
@@ -14490,12 +14546,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/BotDetectionConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/BotDetectionConfigurationResponse"
                 }
@@ -14619,12 +14677,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateBotDetectionResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateBotDetectionResponse"
                 }
@@ -14738,12 +14798,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
@@ -14855,31 +14917,21 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseSchema2"
+                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseSchema"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCustomResponsePage200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetCustomResponsePage200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetCustomResponsePage200ResponseSchema3"
                 }
               }
             }
@@ -14984,12 +15036,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
@@ -15084,12 +15138,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafEnumsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafEnumsResponse"
                 }
@@ -15177,12 +15233,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/WafLoggingResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/WafLoggingResponse"
                 }
@@ -15269,12 +15327,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/EventLogsSearchResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/EventLogsSearchResponse"
                 }
@@ -15381,22 +15441,16 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/csv": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldExportEventLogs200CsvResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/ShieldExportEventLogs200ResponseSchema"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/csv": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportEventLogs200CsvResponseSchema"
                 }
               }
             }
@@ -15487,12 +15541,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ShieldZoneMonthlyOveragesResult"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ShieldZoneMonthlyOveragesResult"
                 }
@@ -15580,12 +15636,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneMetricsOverviewResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneMetricsOverviewResponse"
                 }
@@ -15677,12 +15735,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ShieldOverviewMetrics"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ShieldOverviewMetrics"
                 }
@@ -15750,12 +15810,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
                 }
@@ -15823,12 +15885,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
                 }
@@ -15907,12 +15971,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
                 }
@@ -15980,12 +16046,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneBotDetectionMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneBotDetectionMetricsResponse"
                 }
@@ -16053,12 +16121,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
                 }
@@ -16126,12 +16196,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiGuardianMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiGuardianMetricsResponse"
                 }
@@ -16210,12 +16282,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiGuardianEndpointMetricsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiGuardianEndpointMetricsResponse"
                 }
@@ -16329,12 +16403,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCustomWafRulesResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCustomWafRulesResponse"
                 }
@@ -16402,31 +16478,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetRateLimit200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetRateLimit200ResponseSchema2"
+                  "$ref": "#/components/schemas/CustomWafRule"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetRateLimit200ResponseSchema3"
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               }
             }
@@ -16434,31 +16503,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetRateLimit202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetRateLimit202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetRateLimit202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -16537,31 +16599,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateRateLimit200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateRateLimitSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateRateLimit200ResponseSchema2"
+                  "$ref": "#/components/schemas/RateLimitRule"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateLimitRule"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateRateLimit200ResponseSchema3"
+                  "$ref": "#/components/schemas/RateLimitRule"
                 }
               }
             }
@@ -16569,31 +16624,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateRateLimit202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateRateLimitSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateRateLimit202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateRateLimit202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -16652,12 +16700,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GenericRequestResponse"
                 }
@@ -16732,31 +16782,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateRateLimit200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateRateLimitSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateRateLimit200ResponseSchema2"
+                  "$ref": "#/components/schemas/RateLimitRule"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RateLimitRule"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateRateLimit200ResponseSchema3"
+                  "$ref": "#/components/schemas/RateLimitRule"
                 }
               }
             }
@@ -16764,31 +16807,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateRateLimit202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateRateLimitSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateRateLimit202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateRateLimit202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -16864,12 +16900,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZonesResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZonesResponse"
                 }
@@ -16924,12 +16962,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZonePullzoneMappingResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZonePullzoneMappingResponse"
                 }
@@ -16997,31 +17037,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfiguration200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/GetShieldZoneConfigurationByPullZoneSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfiguration200ResponseSchema2"
+                  "$ref": "#/components/schemas/GetShieldZoneResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfiguration200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetShieldZoneResponse"
                 }
               }
             }
@@ -17029,31 +17062,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfiguration202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/GetShieldZoneConfigurationByPullZoneSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfiguration202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfiguration202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -17114,31 +17140,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfigurationByPullZone200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/GetShieldZoneConfigurationByPullZoneSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfigurationByPullZone200ResponseSchema2"
+                  "$ref": "#/components/schemas/GetShieldZoneResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfigurationByPullZone200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetShieldZoneResponse"
                 }
               }
             }
@@ -17146,31 +17165,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfigurationByPullZone202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/GetShieldZoneConfigurationByPullZoneSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfigurationByPullZone202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetShieldZoneConfigurationByPullZone202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -17218,12 +17230,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneDefaultsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneDefaultsResponse"
                 }
@@ -17298,12 +17312,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CreateShieldZoneResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CreateShieldZoneResponse"
                 }
@@ -17418,12 +17434,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CreateShieldZoneResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CreateShieldZoneResponse"
                 }
@@ -17556,31 +17574,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateShieldZone200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/UpdateShieldZoneSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateShieldZone200ResponseSchema2"
+                  "$ref": "#/components/schemas/UpdateShieldZoneResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateShieldZoneResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateShieldZone200ResponseSchema3"
+                  "$ref": "#/components/schemas/UpdateShieldZoneResponse"
                 }
               }
             }
@@ -17588,31 +17599,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateShieldZone202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/UpdateShieldZoneSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateShieldZone202ResponseSchema2"
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateShieldZone202ResponseSchema3"
+                  "$ref": "#/components/schemas/CreateShieldZoneResponse"
                 }
               }
             }
@@ -17671,12 +17675,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UploadScanningConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UploadScanningConfigurationResponse"
                 }
@@ -17800,12 +17806,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateUploadScanningConfigurationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateUploadScanningConfigurationResponse"
                 }
@@ -17913,31 +17921,21 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetWafRules200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseSchema2"
+                  "$ref": "#/components/schemas/ShieldGetWafRules200Response"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafRules200PlainResponseSchema"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldGetWafRules200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetWafRules200ResponseSchema3"
                 }
               }
             }
@@ -17985,12 +17983,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafRulesSegmentedByPlanResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafRulesSegmentedByPlanResponse"
                 }
@@ -18058,12 +18058,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetTriggeredRulesResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetTriggeredRulesResponse"
                 }
@@ -18149,12 +18151,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateReviewTriggeredRuleResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/UpdateReviewTriggeredRuleResponse"
                 }
@@ -18232,12 +18236,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TriggeredRuleRecommendationResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/TriggeredRuleRecommendationResponse"
                 }
@@ -18331,12 +18337,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCustomWafRulesResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetCustomWafRulesResponse"
                 }
@@ -18404,12 +18412,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomWafRule"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomWafRule"
                 }
@@ -18495,31 +18505,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule200ResponseSchema2"
+                  "$ref": "#/components/schemas/CustomWafRule"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule200ResponseSchema3"
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               }
             }
@@ -18527,31 +18530,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -18630,31 +18626,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule2200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule2200ResponseSchema2"
+                  "$ref": "#/components/schemas/CustomWafRule"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule2200ResponseSchema3"
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               }
             }
@@ -18662,31 +18651,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule2202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule2202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldUpdateCustomWafRule2202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -18745,31 +18727,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldDeleteCustomWafRule200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/DeleteCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldDeleteCustomWafRule200ResponseSchema2"
+                  "$ref": "#/components/schemas/GenericRequestResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GenericRequestResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldDeleteCustomWafRule200ResponseSchema3"
+                  "$ref": "#/components/schemas/GenericRequestResponse"
                 }
               }
             }
@@ -18777,31 +18752,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldDeleteCustomWafRule202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/DeleteCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldDeleteCustomWafRule202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldDeleteCustomWafRule202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -18869,31 +18837,24 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateCustomWafRule200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateCustomWafRule200ResponseSchema2"
+                  "$ref": "#/components/schemas/CustomWafRule"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateCustomWafRule200ResponseSchema3"
+                  "$ref": "#/components/schemas/CustomWafRule"
                 }
               }
             }
@@ -18901,31 +18862,24 @@
           "202": {
             "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateCustomWafRule202PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/CreateCustomWafRuleSuccessResponse"
                 },
                 "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateCustomWafRule202ResponseSchema2"
+                  "$ref": "#/components/schemas/AcceptedResult"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/ShieldCreateCustomWafRule202ResponseSchema3"
+                  "$ref": "#/components/schemas/AcceptedResult"
                 }
               }
             }
@@ -18973,12 +18927,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafProfilesResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafProfilesResponse"
                 }
@@ -19033,12 +18989,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafEnumsResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafEnumsResponse"
                 }
@@ -19093,12 +19051,14 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
+              "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafEngineConfigResponse"
                 }
-              },
-              "application/json": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/GetWafEngineConfigResponse"
                 }
@@ -19831,6 +19791,17 @@
           },
           "500": {
             "description": "Internal Server Error"
+          },
+          "200": {
+            "description": "The script was successfully added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EdgeScriptModel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -21803,6 +21774,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Application was successfully created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddApplicationResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -24114,6 +24096,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Container template was successfully added.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ContainerTemplate"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -24529,6 +24522,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Endpoint was successfully created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SaveEndpointResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -24641,7 +24645,9 @@
                 "schema": {
                   "$ref": "#/components/schemas/ListNodesResponse"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "text/plain": {
                 "schema": {
                   "$ref": "#/components/schemas/ListNodesResponse"
@@ -24691,20 +24697,14 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200ResponseSchema"
+                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200Response"
                 }
-              },
+              }
+            },
+            "x-client-original-non-json-content": {
               "text/plain": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/MagicContainersListNodesPlain200PlainResponseSchema"
+                  "$ref": "#/components/schemas/ListNodesPlain200PlainResponseSchema"
                 }
               }
             }
@@ -25699,6 +25699,17 @@
           },
           "500": {
             "description": "Unexpected server error."
+          },
+          "200": {
+            "description": "Log-forwarding configuration created successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LogForwardingConfiguration"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -45367,6 +45378,106 @@
           "format": "int64"
         }
       },
+      "GetRateLimitSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CustomWafRule"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "UpdateRateLimitSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/RateLimitRule"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "CreateRateLimitSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/RateLimitRule"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "GetShieldZoneConfigurationSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GetShieldZoneResponse"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "GetShieldZoneConfigurationByPullZoneSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GetShieldZoneResponse"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "UpdateShieldZoneSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/UpdateShieldZoneResponse"
+          },
+          {
+            "$ref": "#/components/schemas/CreateShieldZoneResponse"
+          }
+        ]
+      },
+      "UpdateCustomWafRuleSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CustomWafRule"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "UpdateCustomWafRule2SuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CustomWafRule"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "DeleteCustomWafRuleSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/GenericRequestResponse"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
+      "CreateCustomWafRuleSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/CustomWafRule"
+          },
+          {
+            "$ref": "#/components/schemas/AcceptedResult"
+          }
+        ]
+      },
       "EdgeScriptCodeModel": {
         "type": "object",
         "properties": {
@@ -50759,14 +50870,6 @@
         "type": "string",
         "format": "binary"
       },
-      "StorageGetByStorageZoneNameByPath200MediaResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "StorageGetByStorageZoneNameByPath200Response": {
-        "type": "string",
-        "format": "binary"
-      },
       "StreamVideoUploadVideoOctetStreamRequest": {
         "type": "string",
         "format": "binary"
@@ -50774,307 +50877,10 @@
       "StreamVideoReencodeUsingCodec400Response": {
         "type": "string"
       },
-      "ShieldGetAccessListEnums200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetAccessListEnums200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetAccessListEnums200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetApiGuardianEnums200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetApiGuardianEnums200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetApiGuardianEnums200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetCustomResponsePage200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
       "ShieldGetCustomResponsePage200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetCustomResponsePage200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldExportEventLogs200CsvResponse": {
-        "type": "string",
-        "format": "binary"
+        "type": "string"
       },
       "ShieldExportEventLogs200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetWafRules200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetWafRules200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetWafRules200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule200PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule202PlainResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule202Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule202ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "MagicContainersListNodesPlain200Response": {
-        "type": "string",
-        "format": "binary"
-      },
-      "MagicContainersListNodesPlain200PlainResponse": {
         "type": "string",
         "format": "binary"
       },
@@ -51160,13 +50966,11 @@
         "type": "string",
         "format": "binary"
       },
-      "StorageGetByStorageZoneNameByPath200MediaResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "StorageGetByStorageZoneNameByPath200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
+      "StorageGetByStorageZoneNameByPath200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetByStorageZoneNameByPath200ResponseSchemaItem"
+        }
       },
       "StreamVideoUploadVideoOctetStreamRequestRequestBody": {
         "type": "string",
@@ -51175,301 +50979,31 @@
       "StreamVideoReencodeUsingCodec400ResponseSchema": {
         "type": "string"
       },
-      "ShieldGetAccessListEnums200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
+      "ShieldGetAccessListEnums200Response": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseAdditionalProperties"
+        },
+        "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
       },
-      "ShieldGetAccessListEnums200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
+      "ShieldGetApiGuardianEnums200Response": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ShieldGetApiGuardianEnums200ResponseAdditionalProperties"
+        }
       },
-      "ShieldGetAccessListEnums200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetApiGuardianEnums200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetApiGuardianEnums200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetApiGuardianEnums200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetCustomResponsePage200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetCustomResponsePage200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetCustomResponsePage200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldExportEventLogs200CsvResponseSchema": {
-        "type": "string",
-        "format": "binary"
+      "ShieldGetCustomResponsePage200ResponseSchema": {
+        "type": "string"
       },
       "ShieldExportEventLogs200ResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "ShieldGetRateLimit200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetRateLimit202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateRateLimit202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateRateLimit202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfiguration202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetShieldZoneConfigurationByPullZone202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateShieldZone202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetWafRules200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetWafRules200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldGetWafRules200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldUpdateCustomWafRule2202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldDeleteCustomWafRule202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule200ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule200ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule202PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule202ResponseSchema2": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ShieldCreateCustomWafRule202ResponseSchema3": {
-        "type": "string",
-        "format": "binary"
+      "ShieldGetWafRules200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/WafRuleMainGroupModel"
+        }
       },
       "MagicContainersSearchForPublicContainerImages200Response": {
         "type": "array",
@@ -51507,13 +51041,11 @@
           "type": "string"
         }
       },
-      "MagicContainersListNodesPlain200ResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "MagicContainersListNodesPlain200PlainResponseSchema": {
-        "type": "string",
-        "format": "binary"
+      "MagicContainersListNodesPlain200Response": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       },
       "OptimizerClassModelPropertiesProperty2": {
         "type": "object",
@@ -52655,6 +52187,18 @@
         "additionalProperties": {
           "type": "number",
           "format": "double"
+        }
+      },
+      "ShieldGetAccessListEnums200ResponseAdditionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "ShieldGetApiGuardianEnums200ResponseAdditionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
         }
       },
       "OverviewMetricMetricsProperty2AdditionalProperties": {
