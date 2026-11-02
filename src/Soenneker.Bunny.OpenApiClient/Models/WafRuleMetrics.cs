@@ -43,12 +43,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2? _explicitNullValueOverviewPastTwentyEightDays = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays? OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays? _explicitNullValueOverviewPastTwentyEightDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2 _explicitNullValueOverviewPastTwentyEightDays = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays _explicitNullValueOverviewPastTwentyEightDays = default!;
 #endif
         /// <summary>The totalTriggers property</summary>
         public int? TotalTriggers { get => _explicitNullValueTotalTriggers; set { _explicitNullValueTotalTriggers = value; AdditionalData?.Remove("totalTriggers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalTriggers"); else _explicitNullProperties?.Remove("totalTriggers"); } }
@@ -81,7 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "blockedRequests", n => { BlockedRequests = n.GetIntValue(); } },
                 { "challengedRequests", n => { ChallengedRequests = n.GetIntValue(); } },
                 { "loggedRequests", n => { LoggedRequests = n.GetIntValue(); } },
-                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
+                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays>(global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays.CreateFromDiscriminatorValue); } },
                 { "totalTriggers", n => { TotalTriggers = n.GetIntValue(); } },
             };
         }
@@ -95,7 +95,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("blockedRequests", BlockedRequests);
             writer.WriteIntValue("challengedRequests", ChallengedRequests);
             writer.WriteIntValue("loggedRequests", LoggedRequests);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDaysProperty2>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.WafRuleMetricsOverviewPastTwentyEightDays>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
             writer.WriteIntValue("totalTriggers", TotalTriggers);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

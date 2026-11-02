@@ -33,12 +33,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Resolved dimension values for the event (e.g. ip, ruleId, url, ja4).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2? _explicitNullValueFields = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2 Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2 _explicitNullValueFields = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields _explicitNullValueFields = default!;
 #endif
         /// <summary>The full request context for the event (JSON object).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,7 +88,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields>(global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields.CreateFromDiscriminatorValue); } },
                 { "log", n => { Log = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "logId", n => { LogId = n.GetStringValue(); } },
                 { "timestamp", n => { Timestamp = n.GetLongValue(); } },
@@ -101,7 +101,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFieldsProperty2>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields>("fields", Fields);
             writer.WriteObjectValue<UntypedNode>("log", Log);
             writer.WriteStringValue("logId", LogId);
             writer.WriteLongValue("timestamp", Timestamp);

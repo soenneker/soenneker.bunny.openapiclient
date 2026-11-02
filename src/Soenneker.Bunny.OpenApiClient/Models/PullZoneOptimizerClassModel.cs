@@ -38,12 +38,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The list of settings and values the class will send to the optimizer</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("Properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Properties"); else _explicitNullProperties?.Remove("Properties"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2? _explicitNullValueProperties = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("Properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Properties"); else _explicitNullProperties?.Remove("Properties"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2 Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("Properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Properties"); else _explicitNullProperties?.Remove("Properties"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2 _explicitNullValueProperties = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("Properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Properties"); else _explicitNullProperties?.Remove("Properties"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModel"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Name", n => { Name = n.GetStringValue(); } },
-                { "Properties", n => { Properties = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2.CreateFromDiscriminatorValue); } },
+                { "Properties", n => { Properties = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties>(global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("Name", Name);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelPropertiesProperty2>("Properties", Properties);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.PullZoneOptimizerClassModelProperties>("Properties", Properties);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

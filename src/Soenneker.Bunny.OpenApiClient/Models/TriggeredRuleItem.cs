@@ -62,12 +62,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The topTargetedUrls property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2? TopTargetedUrls { get => _explicitNullValueTopTargetedUrls; set { _explicitNullValueTopTargetedUrls = value; AdditionalData?.Remove("topTargetedUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topTargetedUrls"); else _explicitNullProperties?.Remove("topTargetedUrls"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2? _explicitNullValueTopTargetedUrls = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls? TopTargetedUrls { get => _explicitNullValueTopTargetedUrls; set { _explicitNullValueTopTargetedUrls = value; AdditionalData?.Remove("topTargetedUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topTargetedUrls"); else _explicitNullProperties?.Remove("topTargetedUrls"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls? _explicitNullValueTopTargetedUrls = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2 TopTargetedUrls { get => _explicitNullValueTopTargetedUrls; set { _explicitNullValueTopTargetedUrls = value; AdditionalData?.Remove("topTargetedUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topTargetedUrls"); else _explicitNullProperties?.Remove("topTargetedUrls"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2 _explicitNullValueTopTargetedUrls = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls TopTargetedUrls { get => _explicitNullValueTopTargetedUrls; set { _explicitNullValueTopTargetedUrls = value; AdditionalData?.Remove("topTargetedUrls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topTargetedUrls"); else _explicitNullProperties?.Remove("topTargetedUrls"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls _explicitNullValueTopTargetedUrls = default!;
 #endif
         /// <summary>The totalTriggeredRequests property</summary>
         public int? TotalTriggeredRequests { get; private set; }
@@ -99,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "ruleDescription", n => { RuleDescription = n.GetStringValue(); } },
                 { "ruleId", n => { RuleId = n.GetStringValue(); } },
                 { "ruleLogs", n => { RuleLogs = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Log>(global::Soenneker.Bunny.OpenApiClient.Models.Log.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "topTargetedUrls", n => { TopTargetedUrls = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2.CreateFromDiscriminatorValue); } },
+                { "topTargetedUrls", n => { TopTargetedUrls = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls>(global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls.CreateFromDiscriminatorValue); } },
                 { "totalTriggeredRequests", n => { TotalTriggeredRequests = n.GetIntValue(); } },
             };
         }
@@ -113,7 +113,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("ruleDescription", RuleDescription);
             writer.WriteStringValue("ruleId", RuleId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.Log>("ruleLogs", RuleLogs);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrlsProperty2>("topTargetedUrls", TopTargetedUrls);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.TriggeredRuleItemTopTargetedUrls>("topTargetedUrls", TopTargetedUrls);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

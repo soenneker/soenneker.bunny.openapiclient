@@ -109,15 +109,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         private List<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordEnviromentalVariableModel> _explicitNullValueEnviromentalVariables = default!;
 #endif
         /// <summary>The Flags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("Flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Flags"); else _explicitNullProperties?.Remove("Flags"); } }
-        private byte[]? _explicitNullValueFlags = default!;
-#nullable restore
-#else
-        public byte[] Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("Flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Flags"); else _explicitNullProperties?.Remove("Flags"); } }
-        private byte[] _explicitNullValueFlags = default!;
-#endif
+        public int? Flags { get => _explicitNullValueFlags; set { _explicitNullValueFlags = value; AdditionalData?.Remove("Flags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Flags"); else _explicitNullProperties?.Remove("Flags"); } }
+        private int? _explicitNullValueFlags = default!;
         /// <summary>The GeolocationInfo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -253,7 +246,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Comment", n => { Comment = n.GetStringValue(); } },
                 { "Disabled", n => { Disabled = n.GetBoolValue(); } },
                 { "EnviromentalVariables", n => { EnviromentalVariables = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordEnviromentalVariableModel>(global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordEnviromentalVariableModel.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "Flags", n => { Flags = n.GetByteArrayValue(); } },
+                { "Flags", n => { Flags = n.GetIntValue(); } },
                 { "GeolocationInfo", n => { GeolocationInfo = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModelGeolocationInfo>(global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModelGeolocationInfo.CreateFromDiscriminatorValue); } },
                 { "GeolocationLatitude", n => { GeolocationLatitude = n.GetDoubleValue(); } },
                 { "GeolocationLongitude", n => { GeolocationLongitude = n.GetDoubleValue(); } },
@@ -288,7 +281,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Comment", Comment);
             writer.WriteBoolValue("Disabled", Disabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordEnviromentalVariableModel>("EnviromentalVariables", EnviromentalVariables);
-            writer.WriteByteArrayValue("Flags", Flags);
+            writer.WriteIntValue("Flags", Flags);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsRecordModelGeolocationInfo>("GeolocationInfo", GeolocationInfo);
             writer.WriteDoubleValue("GeolocationLatitude", GeolocationLatitude);
             writer.WriteDoubleValue("GeolocationLongitude", GeolocationLongitude);

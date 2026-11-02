@@ -37,12 +37,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),and features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2? _explicitNullValueContext = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext? _explicitNullValueContext = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2 Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2 _explicitNullValueContext = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext _explicitNullValueContext = default!;
 #endif
         /// <summary>Number of events in the group.</summary>
         public long? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; AdditionalData?.Remove("count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
@@ -53,12 +53,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The group key: each requested groupBy dimension mapped to its value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2? _explicitNullValueKey = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2 Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2 _explicitNullValueKey = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey _explicitNullValueKey = default!;
 #endif
         /// <summary>Most recent event time in the group (Unix time in milliseconds, UTC).</summary>
         public long? LastSeen { get => _explicitNullValueLastSeen; set { _explicitNullValueLastSeen = value; AdditionalData?.Remove("lastSeen"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastSeen"); else _explicitNullProperties?.Remove("lastSeen"); } }
@@ -98,10 +98,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext.CreateFromDiscriminatorValue); } },
                 { "count", n => { Count = n.GetLongValue(); } },
                 { "firstSeen", n => { FirstSeen = n.GetLongValue(); } },
-                { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2.CreateFromDiscriminatorValue); } },
+                { "key", n => { Key = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey.CreateFromDiscriminatorValue); } },
                 { "lastSeen", n => { LastSeen = n.GetLongValue(); } },
                 { "sparkline", n => { Sparkline = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
             };
@@ -113,10 +113,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContextProperty2>("context", Context);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext>("context", Context);
             writer.WriteLongValue("count", Count);
             writer.WriteLongValue("firstSeen", FirstSeen);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKeyProperty2>("key", Key);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupKey>("key", Key);
             writer.WriteLongValue("lastSeen", LastSeen);
             writer.WriteCollectionOfPrimitiveValues<long?>("sparkline", Sparkline);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

@@ -28,22 +28,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The metrics property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2? _explicitNullValueMetrics = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics? Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics? _explicitNullValueMetrics = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2 Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2 _explicitNullValueMetrics = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics Metrics { get => _explicitNullValueMetrics; set { _explicitNullValueMetrics = value; AdditionalData?.Remove("metrics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metrics"); else _explicitNullProperties?.Remove("metrics"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics _explicitNullValueMetrics = default!;
 #endif
         /// <summary>The totals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2? Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; AdditionalData?.Remove("totals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2? _explicitNullValueTotals = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals? Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; AdditionalData?.Remove("totals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals? _explicitNullValueTotals = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2 Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; AdditionalData?.Remove("totals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2 _explicitNullValueTotals = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals Totals { get => _explicitNullValueTotals; set { _explicitNullValueTotals = value; AdditionalData?.Remove("totals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totals"); else _explicitNullProperties?.Remove("totals"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals _explicitNullValueTotals = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetric"/> and sets the default values.
@@ -70,8 +70,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2.CreateFromDiscriminatorValue); } },
-                { "totals", n => { Totals = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2.CreateFromDiscriminatorValue); } },
+                { "metrics", n => { Metrics = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics.CreateFromDiscriminatorValue); } },
+                { "totals", n => { Totals = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetricsProperty2>("metrics", Metrics);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotalsProperty2>("totals", Totals);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricMetrics>("metrics", Metrics);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewMetricTotals>("totals", Totals);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -32,12 +32,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The overviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2? OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2? _explicitNullValueOverviewPastTwentyEightDays = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays? OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays? _explicitNullValueOverviewPastTwentyEightDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2 OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2 _explicitNullValueOverviewPastTwentyEightDays = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays OverviewPastTwentyEightDays { get => _explicitNullValueOverviewPastTwentyEightDays; set { _explicitNullValueOverviewPastTwentyEightDays = value; AdditionalData?.Remove("overviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("overviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays _explicitNullValueOverviewPastTwentyEightDays = default!;
 #endif
         /// <summary>The totalBlockedRequests property</summary>
         public int? TotalBlockedRequests { get => _explicitNullValueTotalBlockedRequests; set { _explicitNullValueTotalBlockedRequests = value; AdditionalData?.Remove("totalBlockedRequests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalBlockedRequests"); else _explicitNullProperties?.Remove("totalBlockedRequests"); } }
@@ -73,7 +73,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
+                { "overviewPastTwentyEightDays", n => { OverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays>(global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays.CreateFromDiscriminatorValue); } },
                 { "totalBlockedRequests", n => { TotalBlockedRequests = n.GetIntValue(); } },
                 { "totalFilesScanned", n => { TotalFilesScanned = n.GetIntValue(); } },
                 { "totalLoggedRequests", n => { TotalLoggedRequests = n.GetIntValue(); } },
@@ -86,7 +86,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDaysProperty2>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ShieldZoneUploadScanningMetricsOverviewPastTwentyEightDays>("overviewPastTwentyEightDays", OverviewPastTwentyEightDays);
             writer.WriteIntValue("totalBlockedRequests", TotalBlockedRequests);
             writer.WriteIntValue("totalFilesScanned", TotalFilesScanned);
             writer.WriteIntValue("totalLoggedRequests", TotalLoggedRequests);

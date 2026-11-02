@@ -32,22 +32,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of requests retried</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2? RequestsRetriedChart { get => _explicitNullValueRequestsRetriedChart; set { _explicitNullValueRequestsRetriedChart = value; AdditionalData?.Remove("RequestsRetriedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsRetriedChart"); else _explicitNullProperties?.Remove("RequestsRetriedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2? _explicitNullValueRequestsRetriedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart? RequestsRetriedChart { get => _explicitNullValueRequestsRetriedChart; set { _explicitNullValueRequestsRetriedChart = value; AdditionalData?.Remove("RequestsRetriedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsRetriedChart"); else _explicitNullProperties?.Remove("RequestsRetriedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart? _explicitNullValueRequestsRetriedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2 RequestsRetriedChart { get => _explicitNullValueRequestsRetriedChart; set { _explicitNullValueRequestsRetriedChart = value; AdditionalData?.Remove("RequestsRetriedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsRetriedChart"); else _explicitNullProperties?.Remove("RequestsRetriedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2 _explicitNullValueRequestsRetriedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart RequestsRetriedChart { get => _explicitNullValueRequestsRetriedChart; set { _explicitNullValueRequestsRetriedChart = value; AdditionalData?.Remove("RequestsRetriedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsRetriedChart"); else _explicitNullProperties?.Remove("RequestsRetriedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart _explicitNullValueRequestsRetriedChart = default!;
 #endif
         /// <summary>The constructed chart of requests saved</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2? RequestsSavedChart { get => _explicitNullValueRequestsSavedChart; set { _explicitNullValueRequestsSavedChart = value; AdditionalData?.Remove("RequestsSavedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsSavedChart"); else _explicitNullProperties?.Remove("RequestsSavedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2? _explicitNullValueRequestsSavedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart? RequestsSavedChart { get => _explicitNullValueRequestsSavedChart; set { _explicitNullValueRequestsSavedChart = value; AdditionalData?.Remove("RequestsSavedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsSavedChart"); else _explicitNullProperties?.Remove("RequestsSavedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart? _explicitNullValueRequestsSavedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2 RequestsSavedChart { get => _explicitNullValueRequestsSavedChart; set { _explicitNullValueRequestsSavedChart = value; AdditionalData?.Remove("RequestsSavedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsSavedChart"); else _explicitNullProperties?.Remove("RequestsSavedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2 _explicitNullValueRequestsSavedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart RequestsSavedChart { get => _explicitNullValueRequestsSavedChart; set { _explicitNullValueRequestsSavedChart = value; AdditionalData?.Remove("RequestsSavedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsSavedChart"); else _explicitNullProperties?.Remove("RequestsSavedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart _explicitNullValueRequestsSavedChart = default!;
 #endif
         /// <summary>The total number of retried requests</summary>
         public double? TotalRequestsRetried { get => _explicitNullValueTotalRequestsRetried; set { _explicitNullValueTotalRequestsRetried = value; AdditionalData?.Remove("TotalRequestsRetried"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalRequestsRetried"); else _explicitNullProperties?.Remove("TotalRequestsRetried"); } }
@@ -80,8 +80,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "RequestsRetriedChart", n => { RequestsRetriedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2.CreateFromDiscriminatorValue); } },
-                { "RequestsSavedChart", n => { RequestsSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "RequestsRetriedChart", n => { RequestsRetriedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart.CreateFromDiscriminatorValue); } },
+                { "RequestsSavedChart", n => { RequestsSavedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart>(global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart.CreateFromDiscriminatorValue); } },
                 { "TotalRequestsRetried", n => { TotalRequestsRetried = n.GetDoubleValue(); } },
                 { "TotalRequestsSaved", n => { TotalRequestsSaved = n.GetDoubleValue(); } },
             };
@@ -93,8 +93,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChartProperty2>("RequestsRetriedChart", RequestsRetriedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChartProperty2>("RequestsSavedChart", RequestsSavedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsRetriedChart>("RequestsRetriedChart", RequestsRetriedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.SafeHopStatisticsModelRequestsSavedChart>("RequestsSavedChart", RequestsSavedChart);
             writer.WriteDoubleValue("TotalRequestsRetried", TotalRequestsRetried);
             writer.WriteDoubleValue("TotalRequestsSaved", TotalRequestsSaved);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

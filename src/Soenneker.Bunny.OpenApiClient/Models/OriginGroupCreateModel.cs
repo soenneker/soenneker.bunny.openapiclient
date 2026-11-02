@@ -70,25 +70,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public int? OriginLoadBalancingMethod { get => _explicitNullValueOriginLoadBalancingMethod; set { _explicitNullValueOriginLoadBalancingMethod = value; AdditionalData?.Remove("OriginLoadBalancingMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginLoadBalancingMethod"); else _explicitNullProperties?.Remove("OriginLoadBalancingMethod"); } }
         private int? _explicitNullValueOriginLoadBalancingMethod = default!;
         /// <summary>The priority of the origin group used for failover load balancing</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
-        private byte[]? _explicitNullValuePriority = default!;
-#nullable restore
-#else
-        public byte[] Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
-        private byte[] _explicitNullValuePriority = default!;
-#endif
+        public int? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
+        private int? _explicitNullValuePriority = default!;
         /// <summary>The weight of the origin group used for weighted load balancing</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
-        private byte[]? _explicitNullValueWeight = default!;
-#nullable restore
-#else
-        public byte[] Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
-        private byte[] _explicitNullValueWeight = default!;
-#endif
+        public int? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        private int? _explicitNullValueWeight = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OriginGroupCreateModel"/> and sets the default values.
         /// </summary>
@@ -120,8 +106,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Longitude", n => { Longitude = n.GetDoubleValue(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "OriginLoadBalancingMethod", n => { OriginLoadBalancingMethod = n.GetIntValue(); } },
-                { "Priority", n => { Priority = n.GetByteArrayValue(); } },
-                { "Weight", n => { Weight = n.GetByteArrayValue(); } },
+                { "Priority", n => { Priority = n.GetIntValue(); } },
+                { "Weight", n => { Weight = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -137,8 +123,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("Longitude", Longitude);
             writer.WriteStringValue("Name", Name);
             writer.WriteIntValue("OriginLoadBalancingMethod", OriginLoadBalancingMethod);
-            writer.WriteByteArrayValue("Priority", Priority);
-            writer.WriteByteArrayValue("Weight", Weight);
+            writer.WriteIntValue("Priority", Priority);
+            writer.WriteIntValue("Weight", Weight);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

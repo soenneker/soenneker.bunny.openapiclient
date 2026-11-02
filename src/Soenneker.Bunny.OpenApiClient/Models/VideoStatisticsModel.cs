@@ -34,22 +34,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Shows the total number of playback starts by country for the selected time range. It is available at both the library level (aggregated across all videos) and the video level (for a single video). Each country’s value reflects unique playback starts per viewer session based on IP geolocation at playback start.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2? CountryViewCounts { get => _explicitNullValueCountryViewCounts; set { _explicitNullValueCountryViewCounts = value; AdditionalData?.Remove("countryViewCounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryViewCounts"); else _explicitNullProperties?.Remove("countryViewCounts"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2? _explicitNullValueCountryViewCounts = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts? CountryViewCounts { get => _explicitNullValueCountryViewCounts; set { _explicitNullValueCountryViewCounts = value; AdditionalData?.Remove("countryViewCounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryViewCounts"); else _explicitNullProperties?.Remove("countryViewCounts"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts? _explicitNullValueCountryViewCounts = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2 CountryViewCounts { get => _explicitNullValueCountryViewCounts; set { _explicitNullValueCountryViewCounts = value; AdditionalData?.Remove("countryViewCounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryViewCounts"); else _explicitNullProperties?.Remove("countryViewCounts"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2 _explicitNullValueCountryViewCounts = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts CountryViewCounts { get => _explicitNullValueCountryViewCounts; set { _explicitNullValueCountryViewCounts = value; AdditionalData?.Remove("countryViewCounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryViewCounts"); else _explicitNullProperties?.Remove("countryViewCounts"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts _explicitNullValueCountryViewCounts = default!;
 #endif
         /// <summary>Shows the total watch time by country for the selected time range. It is available at both the library level (aggregated across all videos) and the video level (for a single video). Values reflect cumulative viewing time (rewatches and repeated visits add to the total) based on IP geolocation at playback start.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2? CountryWatchTime { get => _explicitNullValueCountryWatchTime; set { _explicitNullValueCountryWatchTime = value; AdditionalData?.Remove("countryWatchTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryWatchTime"); else _explicitNullProperties?.Remove("countryWatchTime"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2? _explicitNullValueCountryWatchTime = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime? CountryWatchTime { get => _explicitNullValueCountryWatchTime; set { _explicitNullValueCountryWatchTime = value; AdditionalData?.Remove("countryWatchTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryWatchTime"); else _explicitNullProperties?.Remove("countryWatchTime"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime? _explicitNullValueCountryWatchTime = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2 CountryWatchTime { get => _explicitNullValueCountryWatchTime; set { _explicitNullValueCountryWatchTime = value; AdditionalData?.Remove("countryWatchTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryWatchTime"); else _explicitNullProperties?.Remove("countryWatchTime"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2 _explicitNullValueCountryWatchTime = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime CountryWatchTime { get => _explicitNullValueCountryWatchTime; set { _explicitNullValueCountryWatchTime = value; AdditionalData?.Remove("countryWatchTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("countryWatchTime"); else _explicitNullProperties?.Remove("countryWatchTime"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime _explicitNullValueCountryWatchTime = default!;
 #endif
         /// <summary>Indicates how engaging a specific video is on a 0–100 scale based on viewing duration and viewing patterns; higher values reflect stronger viewer retention. Reported at the video level only and may be unavailable when there isn’t enough viewing data.</summary>
         public int? EngagementScore { get => _explicitNullValueEngagementScore; set { _explicitNullValueEngagementScore = value; AdditionalData?.Remove("engagementScore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("engagementScore"); else _explicitNullProperties?.Remove("engagementScore"); } }
@@ -57,22 +57,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Shows the number of playback starts over time, with each data point representing the count of view starts in the corresponding UTC interval (hourly or daily). It is available at both the library level (aggregated across all videos) and the video level (for a single video). A playback start is counted once per viewer session per video and empty intervals are shown as zero.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2? ViewsChart { get => _explicitNullValueViewsChart; set { _explicitNullValueViewsChart = value; AdditionalData?.Remove("viewsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewsChart"); else _explicitNullProperties?.Remove("viewsChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2? _explicitNullValueViewsChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart? ViewsChart { get => _explicitNullValueViewsChart; set { _explicitNullValueViewsChart = value; AdditionalData?.Remove("viewsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewsChart"); else _explicitNullProperties?.Remove("viewsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart? _explicitNullValueViewsChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2 ViewsChart { get => _explicitNullValueViewsChart; set { _explicitNullValueViewsChart = value; AdditionalData?.Remove("viewsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewsChart"); else _explicitNullProperties?.Remove("viewsChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2 _explicitNullValueViewsChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart ViewsChart { get => _explicitNullValueViewsChart; set { _explicitNullValueViewsChart = value; AdditionalData?.Remove("viewsChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewsChart"); else _explicitNullProperties?.Remove("viewsChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart _explicitNullValueViewsChart = default!;
 #endif
         /// <summary>Shows the cumulative time viewers spent watching over time, with each data point representing total watch time in the corresponding UTC interval (hourly or daily). It is available at both the library level (aggregated across all videos) and the video level (for a single video). Rewatches and repeated visits add to the total and empty intervals are shown as zero.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2? WatchTimeChart { get => _explicitNullValueWatchTimeChart; set { _explicitNullValueWatchTimeChart = value; AdditionalData?.Remove("watchTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watchTimeChart"); else _explicitNullProperties?.Remove("watchTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2? _explicitNullValueWatchTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart? WatchTimeChart { get => _explicitNullValueWatchTimeChart; set { _explicitNullValueWatchTimeChart = value; AdditionalData?.Remove("watchTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watchTimeChart"); else _explicitNullProperties?.Remove("watchTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart? _explicitNullValueWatchTimeChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2 WatchTimeChart { get => _explicitNullValueWatchTimeChart; set { _explicitNullValueWatchTimeChart = value; AdditionalData?.Remove("watchTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watchTimeChart"); else _explicitNullProperties?.Remove("watchTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2 _explicitNullValueWatchTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart WatchTimeChart { get => _explicitNullValueWatchTimeChart; set { _explicitNullValueWatchTimeChart = value; AdditionalData?.Remove("watchTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watchTimeChart"); else _explicitNullProperties?.Remove("watchTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart _explicitNullValueWatchTimeChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModel"/> and sets the default values.
@@ -99,11 +99,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "countryViewCounts", n => { CountryViewCounts = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2.CreateFromDiscriminatorValue); } },
-                { "countryWatchTime", n => { CountryWatchTime = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2.CreateFromDiscriminatorValue); } },
+                { "countryViewCounts", n => { CountryViewCounts = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts.CreateFromDiscriminatorValue); } },
+                { "countryWatchTime", n => { CountryWatchTime = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime.CreateFromDiscriminatorValue); } },
                 { "engagementScore", n => { EngagementScore = n.GetIntValue(); } },
-                { "viewsChart", n => { ViewsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2.CreateFromDiscriminatorValue); } },
-                { "watchTimeChart", n => { WatchTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2.CreateFromDiscriminatorValue); } },
+                { "viewsChart", n => { ViewsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart.CreateFromDiscriminatorValue); } },
+                { "watchTimeChart", n => { WatchTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -113,11 +113,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCountsProperty2>("countryViewCounts", CountryViewCounts);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTimeProperty2>("countryWatchTime", CountryWatchTime);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryViewCounts>("countryViewCounts", CountryViewCounts);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelCountryWatchTime>("countryWatchTime", CountryWatchTime);
             writer.WriteIntValue("engagementScore", EngagementScore);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChartProperty2>("viewsChart", ViewsChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChartProperty2>("watchTimeChart", WatchTimeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelViewsChart>("viewsChart", ViewsChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStatisticsModelWatchTimeChart>("watchTimeChart", WatchTimeChart);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -45,12 +45,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The nodeSelectors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2? NodeSelectors { get => _explicitNullValueNodeSelectors; set { _explicitNullValueNodeSelectors = value; AdditionalData?.Remove("nodeSelectors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeSelectors"); else _explicitNullProperties?.Remove("nodeSelectors"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2? _explicitNullValueNodeSelectors = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors? NodeSelectors { get => _explicitNullValueNodeSelectors; set { _explicitNullValueNodeSelectors = value; AdditionalData?.Remove("nodeSelectors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeSelectors"); else _explicitNullProperties?.Remove("nodeSelectors"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors? _explicitNullValueNodeSelectors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2 NodeSelectors { get => _explicitNullValueNodeSelectors; set { _explicitNullValueNodeSelectors = value; AdditionalData?.Remove("nodeSelectors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeSelectors"); else _explicitNullProperties?.Remove("nodeSelectors"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2 _explicitNullValueNodeSelectors = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors NodeSelectors { get => _explicitNullValueNodeSelectors; set { _explicitNullValueNodeSelectors = value; AdditionalData?.Remove("nodeSelectors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeSelectors"); else _explicitNullProperties?.Remove("nodeSelectors"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors _explicitNullValueNodeSelectors = default!;
 #endif
         /// <summary>The requiredRegionIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "allowedRegionIds", n => { AllowedRegionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "maxAllowedRegions", n => { MaxAllowedRegions = n.GetIntValue(); } },
-                { "nodeSelectors", n => { NodeSelectors = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2.CreateFromDiscriminatorValue); } },
+                { "nodeSelectors", n => { NodeSelectors = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors.CreateFromDiscriminatorValue); } },
                 { "requiredRegionIds", n => { RequiredRegionIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
@@ -102,7 +102,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("allowedRegionIds", AllowedRegionIds);
             writer.WriteIntValue("maxAllowedRegions", MaxAllowedRegions);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectorsProperty2>("nodeSelectors", NodeSelectors);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequestNodeSelectors>("nodeSelectors", NodeSelectors);
             writer.WriteCollectionOfPrimitiveValues<string>("requiredRegionIds", RequiredRegionIds);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

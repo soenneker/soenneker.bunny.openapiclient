@@ -28,12 +28,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The LicensesIssuedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2? LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; AdditionalData?.Remove("LicensesIssuedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2? _explicitNullValueLicensesIssuedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart? LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; AdditionalData?.Remove("LicensesIssuedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart? _explicitNullValueLicensesIssuedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2 LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; AdditionalData?.Remove("LicensesIssuedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2 _explicitNullValueLicensesIssuedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart LicensesIssuedChart { get => _explicitNullValueLicensesIssuedChart; set { _explicitNullValueLicensesIssuedChart = value; AdditionalData?.Remove("LicensesIssuedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("LicensesIssuedChart"); else _explicitNullProperties?.Remove("LicensesIssuedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart _explicitNullValueLicensesIssuedChart = default!;
 #endif
         /// <summary>The TotalLicensesIssued property</summary>
         public long? TotalLicensesIssued { get => _explicitNullValueTotalLicensesIssued; set { _explicitNullValueTotalLicensesIssued = value; AdditionalData?.Remove("TotalLicensesIssued"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalLicensesIssued"); else _explicitNullProperties?.Remove("TotalLicensesIssued"); } }
@@ -63,7 +63,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "LicensesIssuedChart", n => { LicensesIssuedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "LicensesIssuedChart", n => { LicensesIssuedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart.CreateFromDiscriminatorValue); } },
                 { "TotalLicensesIssued", n => { TotalLicensesIssued = n.GetLongValue(); } },
             };
         }
@@ -74,7 +74,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChartProperty2>("LicensesIssuedChart", LicensesIssuedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoLibraryDrmStatisticsModelLicensesIssuedChart>("LicensesIssuedChart", LicensesIssuedChart);
             writer.WriteLongValue("TotalLicensesIssued", TotalLicensesIssued);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

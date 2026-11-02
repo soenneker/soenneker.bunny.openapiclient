@@ -65,22 +65,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed cached bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2? BandwidthCachedChart { get => _explicitNullValueBandwidthCachedChart; set { _explicitNullValueBandwidthCachedChart = value; AdditionalData?.Remove("BandwidthCachedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthCachedChart"); else _explicitNullProperties?.Remove("BandwidthCachedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2? _explicitNullValueBandwidthCachedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart? BandwidthCachedChart { get => _explicitNullValueBandwidthCachedChart; set { _explicitNullValueBandwidthCachedChart = value; AdditionalData?.Remove("BandwidthCachedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthCachedChart"); else _explicitNullProperties?.Remove("BandwidthCachedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart? _explicitNullValueBandwidthCachedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2 BandwidthCachedChart { get => _explicitNullValueBandwidthCachedChart; set { _explicitNullValueBandwidthCachedChart = value; AdditionalData?.Remove("BandwidthCachedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthCachedChart"); else _explicitNullProperties?.Remove("BandwidthCachedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2 _explicitNullValueBandwidthCachedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart BandwidthCachedChart { get => _explicitNullValueBandwidthCachedChart; set { _explicitNullValueBandwidthCachedChart = value; AdditionalData?.Remove("BandwidthCachedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthCachedChart"); else _explicitNullProperties?.Remove("BandwidthCachedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart _explicitNullValueBandwidthCachedChart = default!;
 #endif
         /// <summary>The constructed bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2? BandwidthUsedChart { get => _explicitNullValueBandwidthUsedChart; set { _explicitNullValueBandwidthUsedChart = value; AdditionalData?.Remove("BandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthUsedChart"); else _explicitNullProperties?.Remove("BandwidthUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2? _explicitNullValueBandwidthUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart? BandwidthUsedChart { get => _explicitNullValueBandwidthUsedChart; set { _explicitNullValueBandwidthUsedChart = value; AdditionalData?.Remove("BandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthUsedChart"); else _explicitNullProperties?.Remove("BandwidthUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart? _explicitNullValueBandwidthUsedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2 BandwidthUsedChart { get => _explicitNullValueBandwidthUsedChart; set { _explicitNullValueBandwidthUsedChart = value; AdditionalData?.Remove("BandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthUsedChart"); else _explicitNullProperties?.Remove("BandwidthUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2 _explicitNullValueBandwidthUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart BandwidthUsedChart { get => _explicitNullValueBandwidthUsedChart; set { _explicitNullValueBandwidthUsedChart = value; AdditionalData?.Remove("BandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("BandwidthUsedChart"); else _explicitNullProperties?.Remove("BandwidthUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart _explicitNullValueBandwidthUsedChart = default!;
 #endif
         /// <summary>The average cache hit rate in the response in the given time range</summary>
         public double? CacheHitRate { get => _explicitNullValueCacheHitRate; set { _explicitNullValueCacheHitRate = value; AdditionalData?.Remove("CacheHitRate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheHitRate"); else _explicitNullProperties?.Remove("CacheHitRate"); } }
@@ -88,112 +88,112 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed cache hit rate chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2? CacheHitRateChart { get => _explicitNullValueCacheHitRateChart; set { _explicitNullValueCacheHitRateChart = value; AdditionalData?.Remove("CacheHitRateChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheHitRateChart"); else _explicitNullProperties?.Remove("CacheHitRateChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2? _explicitNullValueCacheHitRateChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart? CacheHitRateChart { get => _explicitNullValueCacheHitRateChart; set { _explicitNullValueCacheHitRateChart = value; AdditionalData?.Remove("CacheHitRateChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheHitRateChart"); else _explicitNullProperties?.Remove("CacheHitRateChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart? _explicitNullValueCacheHitRateChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2 CacheHitRateChart { get => _explicitNullValueCacheHitRateChart; set { _explicitNullValueCacheHitRateChart = value; AdditionalData?.Remove("CacheHitRateChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheHitRateChart"); else _explicitNullProperties?.Remove("CacheHitRateChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2 _explicitNullValueCacheHitRateChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart CacheHitRateChart { get => _explicitNullValueCacheHitRateChart; set { _explicitNullValueCacheHitRateChart = value; AdditionalData?.Remove("CacheHitRateChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("CacheHitRateChart"); else _explicitNullProperties?.Remove("CacheHitRateChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart _explicitNullValueCacheHitRateChart = default!;
 #endif
         /// <summary>The constructed 3XX error responses chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2? Error3xxChart { get => _explicitNullValueError3xxChart; set { _explicitNullValueError3xxChart = value; AdditionalData?.Remove("Error3xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error3xxChart"); else _explicitNullProperties?.Remove("Error3xxChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2? _explicitNullValueError3xxChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart? Error3xxChart { get => _explicitNullValueError3xxChart; set { _explicitNullValueError3xxChart = value; AdditionalData?.Remove("Error3xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error3xxChart"); else _explicitNullProperties?.Remove("Error3xxChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart? _explicitNullValueError3xxChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2 Error3xxChart { get => _explicitNullValueError3xxChart; set { _explicitNullValueError3xxChart = value; AdditionalData?.Remove("Error3xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error3xxChart"); else _explicitNullProperties?.Remove("Error3xxChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2 _explicitNullValueError3xxChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart Error3xxChart { get => _explicitNullValueError3xxChart; set { _explicitNullValueError3xxChart = value; AdditionalData?.Remove("Error3xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error3xxChart"); else _explicitNullProperties?.Remove("Error3xxChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart _explicitNullValueError3xxChart = default!;
 #endif
         /// <summary>The constructed 4XX error responses chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2? Error4xxChart { get => _explicitNullValueError4xxChart; set { _explicitNullValueError4xxChart = value; AdditionalData?.Remove("Error4xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error4xxChart"); else _explicitNullProperties?.Remove("Error4xxChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2? _explicitNullValueError4xxChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart? Error4xxChart { get => _explicitNullValueError4xxChart; set { _explicitNullValueError4xxChart = value; AdditionalData?.Remove("Error4xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error4xxChart"); else _explicitNullProperties?.Remove("Error4xxChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart? _explicitNullValueError4xxChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2 Error4xxChart { get => _explicitNullValueError4xxChart; set { _explicitNullValueError4xxChart = value; AdditionalData?.Remove("Error4xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error4xxChart"); else _explicitNullProperties?.Remove("Error4xxChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2 _explicitNullValueError4xxChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart Error4xxChart { get => _explicitNullValueError4xxChart; set { _explicitNullValueError4xxChart = value; AdditionalData?.Remove("Error4xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error4xxChart"); else _explicitNullProperties?.Remove("Error4xxChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart _explicitNullValueError4xxChart = default!;
 #endif
         /// <summary>The constructed 5XX error responses chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2? Error5xxChart { get => _explicitNullValueError5xxChart; set { _explicitNullValueError5xxChart = value; AdditionalData?.Remove("Error5xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error5xxChart"); else _explicitNullProperties?.Remove("Error5xxChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2? _explicitNullValueError5xxChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart? Error5xxChart { get => _explicitNullValueError5xxChart; set { _explicitNullValueError5xxChart = value; AdditionalData?.Remove("Error5xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error5xxChart"); else _explicitNullProperties?.Remove("Error5xxChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart? _explicitNullValueError5xxChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2 Error5xxChart { get => _explicitNullValueError5xxChart; set { _explicitNullValueError5xxChart = value; AdditionalData?.Remove("Error5xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error5xxChart"); else _explicitNullProperties?.Remove("Error5xxChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2 _explicitNullValueError5xxChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart Error5xxChart { get => _explicitNullValueError5xxChart; set { _explicitNullValueError5xxChart = value; AdditionalData?.Remove("Error5xxChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Error5xxChart"); else _explicitNullProperties?.Remove("Error5xxChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart _explicitNullValueError5xxChart = default!;
 #endif
         /// <summary>The geo traffic distribution data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2? GeoTrafficDistribution { get => _explicitNullValueGeoTrafficDistribution; set { _explicitNullValueGeoTrafficDistribution = value; AdditionalData?.Remove("GeoTrafficDistribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoTrafficDistribution"); else _explicitNullProperties?.Remove("GeoTrafficDistribution"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2? _explicitNullValueGeoTrafficDistribution = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution? GeoTrafficDistribution { get => _explicitNullValueGeoTrafficDistribution; set { _explicitNullValueGeoTrafficDistribution = value; AdditionalData?.Remove("GeoTrafficDistribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoTrafficDistribution"); else _explicitNullProperties?.Remove("GeoTrafficDistribution"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution? _explicitNullValueGeoTrafficDistribution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2 GeoTrafficDistribution { get => _explicitNullValueGeoTrafficDistribution; set { _explicitNullValueGeoTrafficDistribution = value; AdditionalData?.Remove("GeoTrafficDistribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoTrafficDistribution"); else _explicitNullProperties?.Remove("GeoTrafficDistribution"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2 _explicitNullValueGeoTrafficDistribution = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution GeoTrafficDistribution { get => _explicitNullValueGeoTrafficDistribution; set { _explicitNullValueGeoTrafficDistribution = value; AdditionalData?.Remove("GeoTrafficDistribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("GeoTrafficDistribution"); else _explicitNullProperties?.Remove("GeoTrafficDistribution"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution _explicitNullValueGeoTrafficDistribution = default!;
 #endif
         /// <summary>The constructed origin response time chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2? OriginResponseTimeChart { get => _explicitNullValueOriginResponseTimeChart; set { _explicitNullValueOriginResponseTimeChart = value; AdditionalData?.Remove("OriginResponseTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginResponseTimeChart"); else _explicitNullProperties?.Remove("OriginResponseTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2? _explicitNullValueOriginResponseTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart? OriginResponseTimeChart { get => _explicitNullValueOriginResponseTimeChart; set { _explicitNullValueOriginResponseTimeChart = value; AdditionalData?.Remove("OriginResponseTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginResponseTimeChart"); else _explicitNullProperties?.Remove("OriginResponseTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart? _explicitNullValueOriginResponseTimeChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2 OriginResponseTimeChart { get => _explicitNullValueOriginResponseTimeChart; set { _explicitNullValueOriginResponseTimeChart = value; AdditionalData?.Remove("OriginResponseTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginResponseTimeChart"); else _explicitNullProperties?.Remove("OriginResponseTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2 _explicitNullValueOriginResponseTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart OriginResponseTimeChart { get => _explicitNullValueOriginResponseTimeChart; set { _explicitNullValueOriginResponseTimeChart = value; AdditionalData?.Remove("OriginResponseTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginResponseTimeChart"); else _explicitNullProperties?.Remove("OriginResponseTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart _explicitNullValueOriginResponseTimeChart = default!;
 #endif
         /// <summary>The constructed origin shield bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2? OriginShieldBandwidthUsedChart { get => _explicitNullValueOriginShieldBandwidthUsedChart; set { _explicitNullValueOriginShieldBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldBandwidthUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2? _explicitNullValueOriginShieldBandwidthUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart? OriginShieldBandwidthUsedChart { get => _explicitNullValueOriginShieldBandwidthUsedChart; set { _explicitNullValueOriginShieldBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldBandwidthUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart? _explicitNullValueOriginShieldBandwidthUsedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2 OriginShieldBandwidthUsedChart { get => _explicitNullValueOriginShieldBandwidthUsedChart; set { _explicitNullValueOriginShieldBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldBandwidthUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2 _explicitNullValueOriginShieldBandwidthUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart OriginShieldBandwidthUsedChart { get => _explicitNullValueOriginShieldBandwidthUsedChart; set { _explicitNullValueOriginShieldBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldBandwidthUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart _explicitNullValueOriginShieldBandwidthUsedChart = default!;
 #endif
         /// <summary>The constructed origin shield internal bandwdidth used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2? OriginShieldInternalBandwidthUsedChart { get => _explicitNullValueOriginShieldInternalBandwidthUsedChart; set { _explicitNullValueOriginShieldInternalBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldInternalBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldInternalBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldInternalBandwidthUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2? _explicitNullValueOriginShieldInternalBandwidthUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart? OriginShieldInternalBandwidthUsedChart { get => _explicitNullValueOriginShieldInternalBandwidthUsedChart; set { _explicitNullValueOriginShieldInternalBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldInternalBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldInternalBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldInternalBandwidthUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart? _explicitNullValueOriginShieldInternalBandwidthUsedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2 OriginShieldInternalBandwidthUsedChart { get => _explicitNullValueOriginShieldInternalBandwidthUsedChart; set { _explicitNullValueOriginShieldInternalBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldInternalBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldInternalBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldInternalBandwidthUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2 _explicitNullValueOriginShieldInternalBandwidthUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart OriginShieldInternalBandwidthUsedChart { get => _explicitNullValueOriginShieldInternalBandwidthUsedChart; set { _explicitNullValueOriginShieldInternalBandwidthUsedChart = value; AdditionalData?.Remove("OriginShieldInternalBandwidthUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginShieldInternalBandwidthUsedChart"); else _explicitNullProperties?.Remove("OriginShieldInternalBandwidthUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart _explicitNullValueOriginShieldInternalBandwidthUsedChart = default!;
 #endif
         /// <summary>The constructed origin traffic used chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2? OriginTrafficChart { get => _explicitNullValueOriginTrafficChart; set { _explicitNullValueOriginTrafficChart = value; AdditionalData?.Remove("OriginTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginTrafficChart"); else _explicitNullProperties?.Remove("OriginTrafficChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2? _explicitNullValueOriginTrafficChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart? OriginTrafficChart { get => _explicitNullValueOriginTrafficChart; set { _explicitNullValueOriginTrafficChart = value; AdditionalData?.Remove("OriginTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginTrafficChart"); else _explicitNullProperties?.Remove("OriginTrafficChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart? _explicitNullValueOriginTrafficChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2 OriginTrafficChart { get => _explicitNullValueOriginTrafficChart; set { _explicitNullValueOriginTrafficChart = value; AdditionalData?.Remove("OriginTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginTrafficChart"); else _explicitNullProperties?.Remove("OriginTrafficChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2 _explicitNullValueOriginTrafficChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart OriginTrafficChart { get => _explicitNullValueOriginTrafficChart; set { _explicitNullValueOriginTrafficChart = value; AdditionalData?.Remove("OriginTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("OriginTrafficChart"); else _explicitNullProperties?.Remove("OriginTrafficChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart _explicitNullValueOriginTrafficChart = default!;
 #endif
         /// <summary>The constructed uncached requests served chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2? PullRequestsPulledChart { get => _explicitNullValuePullRequestsPulledChart; set { _explicitNullValuePullRequestsPulledChart = value; AdditionalData?.Remove("PullRequestsPulledChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullRequestsPulledChart"); else _explicitNullProperties?.Remove("PullRequestsPulledChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2? _explicitNullValuePullRequestsPulledChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart? PullRequestsPulledChart { get => _explicitNullValuePullRequestsPulledChart; set { _explicitNullValuePullRequestsPulledChart = value; AdditionalData?.Remove("PullRequestsPulledChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullRequestsPulledChart"); else _explicitNullProperties?.Remove("PullRequestsPulledChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart? _explicitNullValuePullRequestsPulledChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2 PullRequestsPulledChart { get => _explicitNullValuePullRequestsPulledChart; set { _explicitNullValuePullRequestsPulledChart = value; AdditionalData?.Remove("PullRequestsPulledChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullRequestsPulledChart"); else _explicitNullProperties?.Remove("PullRequestsPulledChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2 _explicitNullValuePullRequestsPulledChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart PullRequestsPulledChart { get => _explicitNullValuePullRequestsPulledChart; set { _explicitNullValuePullRequestsPulledChart = value; AdditionalData?.Remove("PullRequestsPulledChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("PullRequestsPulledChart"); else _explicitNullProperties?.Remove("PullRequestsPulledChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart _explicitNullValuePullRequestsPulledChart = default!;
 #endif
         /// <summary>The constructed requests served chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2? RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2? _explicitNullValueRequestsServedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart? RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart? _explicitNullValueRequestsServedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2 RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2 _explicitNullValueRequestsServedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart _explicitNullValueRequestsServedChart = default!;
 #endif
         /// <summary>The total bandwidth used by the response in the given time range</summary>
         public long? TotalBandwidthUsed { get => _explicitNullValueTotalBandwidthUsed; set { _explicitNullValueTotalBandwidthUsed = value; AdditionalData?.Remove("TotalBandwidthUsed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalBandwidthUsed"); else _explicitNullProperties?.Remove("TotalBandwidthUsed"); } }
@@ -207,12 +207,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed user balance history chart data</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2? UserBalanceHistoryChart { get => _explicitNullValueUserBalanceHistoryChart; set { _explicitNullValueUserBalanceHistoryChart = value; AdditionalData?.Remove("UserBalanceHistoryChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserBalanceHistoryChart"); else _explicitNullProperties?.Remove("UserBalanceHistoryChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2? _explicitNullValueUserBalanceHistoryChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart? UserBalanceHistoryChart { get => _explicitNullValueUserBalanceHistoryChart; set { _explicitNullValueUserBalanceHistoryChart = value; AdditionalData?.Remove("UserBalanceHistoryChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserBalanceHistoryChart"); else _explicitNullProperties?.Remove("UserBalanceHistoryChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart? _explicitNullValueUserBalanceHistoryChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2 UserBalanceHistoryChart { get => _explicitNullValueUserBalanceHistoryChart; set { _explicitNullValueUserBalanceHistoryChart = value; AdditionalData?.Remove("UserBalanceHistoryChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserBalanceHistoryChart"); else _explicitNullProperties?.Remove("UserBalanceHistoryChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2 _explicitNullValueUserBalanceHistoryChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart UserBalanceHistoryChart { get => _explicitNullValueUserBalanceHistoryChart; set { _explicitNullValueUserBalanceHistoryChart = value; AdditionalData?.Remove("UserBalanceHistoryChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("UserBalanceHistoryChart"); else _explicitNullProperties?.Remove("UserBalanceHistoryChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart _explicitNullValueUserBalanceHistoryChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModel"/> and sets the default values.
@@ -240,24 +240,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "AverageOriginResponseTime", n => { AverageOriginResponseTime = n.GetIntValue(); } },
-                { "BandwidthCachedChart", n => { BandwidthCachedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2.CreateFromDiscriminatorValue); } },
-                { "BandwidthUsedChart", n => { BandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "BandwidthCachedChart", n => { BandwidthCachedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart.CreateFromDiscriminatorValue); } },
+                { "BandwidthUsedChart", n => { BandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart.CreateFromDiscriminatorValue); } },
                 { "CacheHitRate", n => { CacheHitRate = n.GetDoubleValue(); } },
-                { "CacheHitRateChart", n => { CacheHitRateChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2.CreateFromDiscriminatorValue); } },
-                { "Error3xxChart", n => { Error3xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2.CreateFromDiscriminatorValue); } },
-                { "Error4xxChart", n => { Error4xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2.CreateFromDiscriminatorValue); } },
-                { "Error5xxChart", n => { Error5xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2.CreateFromDiscriminatorValue); } },
-                { "GeoTrafficDistribution", n => { GeoTrafficDistribution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2.CreateFromDiscriminatorValue); } },
-                { "OriginResponseTimeChart", n => { OriginResponseTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2.CreateFromDiscriminatorValue); } },
-                { "OriginShieldBandwidthUsedChart", n => { OriginShieldBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2.CreateFromDiscriminatorValue); } },
-                { "OriginShieldInternalBandwidthUsedChart", n => { OriginShieldInternalBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2.CreateFromDiscriminatorValue); } },
-                { "OriginTrafficChart", n => { OriginTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2.CreateFromDiscriminatorValue); } },
-                { "PullRequestsPulledChart", n => { PullRequestsPulledChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2.CreateFromDiscriminatorValue); } },
-                { "RequestsServedChart", n => { RequestsServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "CacheHitRateChart", n => { CacheHitRateChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart.CreateFromDiscriminatorValue); } },
+                { "Error3xxChart", n => { Error3xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart.CreateFromDiscriminatorValue); } },
+                { "Error4xxChart", n => { Error4xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart.CreateFromDiscriminatorValue); } },
+                { "Error5xxChart", n => { Error5xxChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart.CreateFromDiscriminatorValue); } },
+                { "GeoTrafficDistribution", n => { GeoTrafficDistribution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution.CreateFromDiscriminatorValue); } },
+                { "OriginResponseTimeChart", n => { OriginResponseTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart.CreateFromDiscriminatorValue); } },
+                { "OriginShieldBandwidthUsedChart", n => { OriginShieldBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart.CreateFromDiscriminatorValue); } },
+                { "OriginShieldInternalBandwidthUsedChart", n => { OriginShieldInternalBandwidthUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart.CreateFromDiscriminatorValue); } },
+                { "OriginTrafficChart", n => { OriginTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart.CreateFromDiscriminatorValue); } },
+                { "PullRequestsPulledChart", n => { PullRequestsPulledChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart.CreateFromDiscriminatorValue); } },
+                { "RequestsServedChart", n => { RequestsServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart.CreateFromDiscriminatorValue); } },
                 { "TotalBandwidthUsed", n => { TotalBandwidthUsed = n.GetLongValue(); } },
                 { "TotalOriginTraffic", n => { TotalOriginTraffic = n.GetLongValue(); } },
                 { "TotalRequestsServed", n => { TotalRequestsServed = n.GetLongValue(); } },
-                { "UserBalanceHistoryChart", n => { UserBalanceHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2.CreateFromDiscriminatorValue); } },
+                { "UserBalanceHistoryChart", n => { UserBalanceHistoryChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -268,24 +268,24 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("AverageOriginResponseTime", AverageOriginResponseTime);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChartProperty2>("BandwidthCachedChart", BandwidthCachedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChartProperty2>("BandwidthUsedChart", BandwidthUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthCachedChart>("BandwidthCachedChart", BandwidthCachedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelBandwidthUsedChart>("BandwidthUsedChart", BandwidthUsedChart);
             writer.WriteDoubleValue("CacheHitRate", CacheHitRate);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChartProperty2>("CacheHitRateChart", CacheHitRateChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChartProperty2>("Error3xxChart", Error3xxChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChartProperty2>("Error4xxChart", Error4xxChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChartProperty2>("Error5xxChart", Error5xxChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistributionProperty2>("GeoTrafficDistribution", GeoTrafficDistribution);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChartProperty2>("OriginResponseTimeChart", OriginResponseTimeChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChartProperty2>("OriginShieldBandwidthUsedChart", OriginShieldBandwidthUsedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChartProperty2>("OriginShieldInternalBandwidthUsedChart", OriginShieldInternalBandwidthUsedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChartProperty2>("OriginTrafficChart", OriginTrafficChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChartProperty2>("PullRequestsPulledChart", PullRequestsPulledChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChartProperty2>("RequestsServedChart", RequestsServedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelCacheHitRateChart>("CacheHitRateChart", CacheHitRateChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError3XxChart>("Error3xxChart", Error3xxChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError4XxChart>("Error4xxChart", Error4xxChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelError5XxChart>("Error5xxChart", Error5xxChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelGeoTrafficDistribution>("GeoTrafficDistribution", GeoTrafficDistribution);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginResponseTimeChart>("OriginResponseTimeChart", OriginResponseTimeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldBandwidthUsedChart>("OriginShieldBandwidthUsedChart", OriginShieldBandwidthUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginShieldInternalBandwidthUsedChart>("OriginShieldInternalBandwidthUsedChart", OriginShieldInternalBandwidthUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelOriginTrafficChart>("OriginTrafficChart", OriginTrafficChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelPullRequestsPulledChart>("PullRequestsPulledChart", PullRequestsPulledChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelRequestsServedChart>("RequestsServedChart", RequestsServedChart);
             writer.WriteLongValue("TotalBandwidthUsed", TotalBandwidthUsed);
             writer.WriteLongValue("TotalOriginTraffic", TotalOriginTraffic);
             writer.WriteLongValue("TotalRequestsServed", TotalRequestsServed);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChartProperty2>("UserBalanceHistoryChart", UserBalanceHistoryChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsModelUserBalanceHistoryChart>("UserBalanceHistoryChart", UserBalanceHistoryChart);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

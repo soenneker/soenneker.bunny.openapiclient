@@ -35,12 +35,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The accessLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2? AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2? _explicitNullValueAccessLists = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists? AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists? _explicitNullValueAccessLists = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2 AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2 _explicitNullValueAccessLists = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists AccessLists { get => _explicitNullValueAccessLists; set { _explicitNullValueAccessLists = value; AdditionalData?.Remove("accessLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessLists"); else _explicitNullProperties?.Remove("accessLists"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists _explicitNullValueAccessLists = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -91,7 +91,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2.CreateFromDiscriminatorValue); } },
+                { "accessLists", n => { AccessLists = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists>(global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists.CreateFromDiscriminatorValue); } },
                 { "antivirusScanningMode", n => { AntivirusScanningMode = n.GetIntValue(); } },
                 { "botDetectionExecutionMode", n => { BotDetectionExecutionMode = n.GetIntValue(); } },
                 { "csamScanningMode", n => { CsamScanningMode = n.GetIntValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessListsProperty2>("accessLists", AccessLists);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.CreateShieldZoneRequestAccessLists>("accessLists", AccessLists);
             writer.WriteIntValue("antivirusScanningMode", AntivirusScanningMode);
             writer.WriteIntValue("botDetectionExecutionMode", BotDetectionExecutionMode);
             writer.WriteIntValue("csamScanningMode", CsamScanningMode);

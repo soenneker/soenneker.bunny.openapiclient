@@ -30,12 +30,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The headers that will be sent along with the fetch request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2? Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2? _explicitNullValueHeaders = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders? Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders? _explicitNullValueHeaders = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2 Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2 _explicitNullValueHeaders = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders _explicitNullValueHeaders = default!;
 #endif
         /// <summary>The title that will be set to video. If omitted, the filename from the fetch URL is used instead, falling back to &quot;Fetched Video&quot; if that can&apos;t be determined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2.CreateFromDiscriminatorValue); } },
+                { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders>(global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
@@ -94,7 +94,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeadersProperty2>("headers", Headers);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.FetchVideoRequestHeaders>("headers", Headers);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

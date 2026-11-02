@@ -43,12 +43,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The Values property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2? _explicitNullValueValues = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues? Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues? _explicitNullValueValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2 Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2 _explicitNullValueValues = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues Values { get => _explicitNullValueValues; set { _explicitNullValueValues = value; AdditionalData?.Remove("Values"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Values"); else _explicitNullProperties?.Remove("Values"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues _explicitNullValueValues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModel"/> and sets the default values.
@@ -77,7 +77,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             {
                 { "OriginGroupId", n => { OriginGroupId = n.GetLongValue(); } },
                 { "OriginGroupName", n => { OriginGroupName = n.GetStringValue(); } },
-                { "Values", n => { Values = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2.CreateFromDiscriminatorValue); } },
+                { "Values", n => { Values = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("OriginGroupId", OriginGroupId);
             writer.WriteStringValue("OriginGroupName", OriginGroupName);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValuesProperty2>("Values", Values);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupRequestsSeriesModelValues>("Values", Values);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

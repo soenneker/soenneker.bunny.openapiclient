@@ -80,15 +80,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public long? StorageZoneId { get => _explicitNullValueStorageZoneId; set { _explicitNullValueStorageZoneId = value; AdditionalData?.Remove("StorageZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageZoneId"); else _explicitNullProperties?.Remove("StorageZoneId"); } }
         private long? _explicitNullValueStorageZoneId = default!;
         /// <summary>The weight of the origin used for weighted load balancing</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
-        private byte[]? _explicitNullValueWeight = default!;
-#nullable restore
-#else
-        public byte[] Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
-        private byte[] _explicitNullValueWeight = default!;
-#endif
+        public int? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        private int? _explicitNullValueWeight = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModel"/> and sets the default values.
         /// </summary>
@@ -121,7 +114,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "OriginType", n => { OriginType = n.GetIntValue(); } },
                 { "StandardOrigin", n => { StandardOrigin = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin.CreateFromDiscriminatorValue); } },
                 { "StorageZoneId", n => { StorageZoneId = n.GetLongValue(); } },
-                { "Weight", n => { Weight = n.GetByteArrayValue(); } },
+                { "Weight", n => { Weight = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -138,7 +131,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("OriginType", OriginType);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginCreateModelStandardOrigin>("StandardOrigin", StandardOrigin);
             writer.WriteLongValue("StorageZoneId", StorageZoneId);
-            writer.WriteByteArrayValue("Weight", Weight);
+            writer.WriteIntValue("Weight", Weight);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

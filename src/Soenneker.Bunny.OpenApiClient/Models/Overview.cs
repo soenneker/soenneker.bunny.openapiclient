@@ -121,12 +121,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The latencyChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2? LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; AdditionalData?.Remove("latencyChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2? _explicitNullValueLatencyChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart? LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; AdditionalData?.Remove("latencyChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart? _explicitNullValueLatencyChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2 LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; AdditionalData?.Remove("latencyChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2 _explicitNullValueLatencyChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart LatencyChart { get => _explicitNullValueLatencyChart; set { _explicitNullValueLatencyChart = value; AdditionalData?.Remove("latencyChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latencyChart"); else _explicitNullProperties?.Remove("latencyChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart _explicitNullValueLatencyChart = default!;
 #endif
         /// <summary>What one instance of the application may use. The same for every instance, so it is stated once.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -200,7 +200,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "averageVolumesUsage", n => { AverageVolumesUsage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>(global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator.CreateFromDiscriminatorValue); } },
                 { "currentLatency", n => { CurrentLatency = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>(global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator.CreateFromDiscriminatorValue); } },
                 { "desiredInstances", n => { DesiredInstances = n.GetIntValue(); } },
-                { "latencyChart", n => { LatencyChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2.CreateFromDiscriminatorValue); } },
+                { "latencyChart", n => { LatencyChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart.CreateFromDiscriminatorValue); } },
                 { "limits", n => { Limits = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits.CreateFromDiscriminatorValue); } },
                 { "monthlyCost", n => { MonthlyCost = n.GetDoubleValue(); } },
                 { "regions", n => { Regions = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -224,7 +224,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>("averageVolumesUsage", AverageVolumesUsage);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DoubleStatusIndicator>("currentLatency", CurrentLatency);
             writer.WriteIntValue("desiredInstances", DesiredInstances);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChartProperty2>("latencyChart", LatencyChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLatencyChart>("latencyChart", LatencyChart);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewLimits>("limits", Limits);
             writer.WriteDoubleValue("monthlyCost", MonthlyCost);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewRegion>("regions", Regions);

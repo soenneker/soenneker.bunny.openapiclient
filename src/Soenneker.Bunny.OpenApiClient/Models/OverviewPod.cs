@@ -118,12 +118,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The outboundTrafficChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2? OutboundTrafficChart { get => _explicitNullValueOutboundTrafficChart; set { _explicitNullValueOutboundTrafficChart = value; AdditionalData?.Remove("outboundTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundTrafficChart"); else _explicitNullProperties?.Remove("outboundTrafficChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2? _explicitNullValueOutboundTrafficChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart? OutboundTrafficChart { get => _explicitNullValueOutboundTrafficChart; set { _explicitNullValueOutboundTrafficChart = value; AdditionalData?.Remove("outboundTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundTrafficChart"); else _explicitNullProperties?.Remove("outboundTrafficChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart? _explicitNullValueOutboundTrafficChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2 OutboundTrafficChart { get => _explicitNullValueOutboundTrafficChart; set { _explicitNullValueOutboundTrafficChart = value; AdditionalData?.Remove("outboundTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundTrafficChart"); else _explicitNullProperties?.Remove("outboundTrafficChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2 _explicitNullValueOutboundTrafficChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart OutboundTrafficChart { get => _explicitNullValueOutboundTrafficChart; set { _explicitNullValueOutboundTrafficChart = value; AdditionalData?.Remove("outboundTrafficChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outboundTrafficChart"); else _explicitNullProperties?.Remove("outboundTrafficChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart _explicitNullValueOutboundTrafficChart = default!;
 #endif
         /// <summary>The ramUsage property</summary>
         public double? RamUsage { get => _explicitNullValueRamUsage; set { _explicitNullValueRamUsage = value; AdditionalData?.Remove("ramUsage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ramUsage"); else _explicitNullProperties?.Remove("ramUsage"); } }
@@ -147,12 +147,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The volumesUtilizationPercentage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2? VolumesUtilizationPercentage { get => _explicitNullValueVolumesUtilizationPercentage; set { _explicitNullValueVolumesUtilizationPercentage = value; AdditionalData?.Remove("volumesUtilizationPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesUtilizationPercentage"); else _explicitNullProperties?.Remove("volumesUtilizationPercentage"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2? _explicitNullValueVolumesUtilizationPercentage = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage? VolumesUtilizationPercentage { get => _explicitNullValueVolumesUtilizationPercentage; set { _explicitNullValueVolumesUtilizationPercentage = value; AdditionalData?.Remove("volumesUtilizationPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesUtilizationPercentage"); else _explicitNullProperties?.Remove("volumesUtilizationPercentage"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage? _explicitNullValueVolumesUtilizationPercentage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2 VolumesUtilizationPercentage { get => _explicitNullValueVolumesUtilizationPercentage; set { _explicitNullValueVolumesUtilizationPercentage = value; AdditionalData?.Remove("volumesUtilizationPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesUtilizationPercentage"); else _explicitNullProperties?.Remove("volumesUtilizationPercentage"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2 _explicitNullValueVolumesUtilizationPercentage = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage VolumesUtilizationPercentage { get => _explicitNullValueVolumesUtilizationPercentage; set { _explicitNullValueVolumesUtilizationPercentage = value; AdditionalData?.Remove("volumesUtilizationPercentage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumesUtilizationPercentage"); else _explicitNullProperties?.Remove("volumesUtilizationPercentage"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage _explicitNullValueVolumesUtilizationPercentage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.OverviewPod"/> and sets the default values.
@@ -191,12 +191,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "outboundBandwidthBytesPerSecond", n => { OutboundBandwidthBytesPerSecond = n.GetDoubleValue(); } },
                 { "outboundConnectionsLimit", n => { OutboundConnectionsLimit = n.GetIntValue(); } },
                 { "outboundConnectionsRejectedDiff", n => { OutboundConnectionsRejectedDiff = n.GetLongValue(); } },
-                { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2.CreateFromDiscriminatorValue); } },
+                { "outboundTrafficChart", n => { OutboundTrafficChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart.CreateFromDiscriminatorValue); } },
                 { "ramUsage", n => { RamUsage = n.GetDoubleValue(); } },
                 { "ramUsageBytes", n => { RamUsageBytes = n.GetDoubleValue(); } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "volumesUtilizationPercentage", n => { VolumesUtilizationPercentage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2.CreateFromDiscriminatorValue); } },
+                { "volumesUtilizationPercentage", n => { VolumesUtilizationPercentage = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage>(global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -218,12 +218,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteDoubleValue("outboundBandwidthBytesPerSecond", OutboundBandwidthBytesPerSecond);
             writer.WriteIntValue("outboundConnectionsLimit", OutboundConnectionsLimit);
             writer.WriteLongValue("outboundConnectionsRejectedDiff", OutboundConnectionsRejectedDiff);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChartProperty2>("outboundTrafficChart", OutboundTrafficChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodOutboundTrafficChart>("outboundTrafficChart", OutboundTrafficChart);
             writer.WriteDoubleValue("ramUsage", RamUsage);
             writer.WriteDoubleValue("ramUsageBytes", RamUsageBytes);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.PodStatus>("status", Status);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolume>("volumes", Volumes);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentageProperty2>("volumesUtilizationPercentage", VolumesUtilizationPercentage);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.OverviewPodVolumesUtilizationPercentage>("volumesUtilizationPercentage", VolumesUtilizationPercentage);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

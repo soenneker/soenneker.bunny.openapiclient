@@ -38,12 +38,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The ratelimitOverviewPastTwentyEightDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2? RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; AdditionalData?.Remove("ratelimitOverviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2? _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays? RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; AdditionalData?.Remove("ratelimitOverviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays? _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2 RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; AdditionalData?.Remove("ratelimitOverviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2 _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays RatelimitOverviewPastTwentyEightDays { get => _explicitNullValueRatelimitOverviewPastTwentyEightDays; set { _explicitNullValueRatelimitOverviewPastTwentyEightDays = value; AdditionalData?.Remove("ratelimitOverviewPastTwentyEightDays"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ratelimitOverviewPastTwentyEightDays"); else _explicitNullProperties?.Remove("ratelimitOverviewPastTwentyEightDays"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays _explicitNullValueRatelimitOverviewPastTwentyEightDays = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetrics"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "overview", n => { Overview = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit>(global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit.CreateFromDiscriminatorValue); } },
-                { "ratelimitOverviewPastTwentyEightDays", n => { RatelimitOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2.CreateFromDiscriminatorValue); } },
+                { "ratelimitOverviewPastTwentyEightDays", n => { RatelimitOverviewPastTwentyEightDays = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays>(global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.IndividualRatelimit>("overview", Overview);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDaysProperty2>("ratelimitOverviewPastTwentyEightDays", RatelimitOverviewPastTwentyEightDays);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RatelimitMetricsRatelimitOverviewPastTwentyEightDays>("ratelimitOverviewPastTwentyEightDays", RatelimitOverviewPastTwentyEightDays);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

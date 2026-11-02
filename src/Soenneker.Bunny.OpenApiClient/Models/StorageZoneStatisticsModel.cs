@@ -28,22 +28,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The constructed chart of requests stored</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2? FileCountChart { get => _explicitNullValueFileCountChart; set { _explicitNullValueFileCountChart = value; AdditionalData?.Remove("FileCountChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileCountChart"); else _explicitNullProperties?.Remove("FileCountChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2? _explicitNullValueFileCountChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart? FileCountChart { get => _explicitNullValueFileCountChart; set { _explicitNullValueFileCountChart = value; AdditionalData?.Remove("FileCountChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileCountChart"); else _explicitNullProperties?.Remove("FileCountChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart? _explicitNullValueFileCountChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2 FileCountChart { get => _explicitNullValueFileCountChart; set { _explicitNullValueFileCountChart = value; AdditionalData?.Remove("FileCountChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileCountChart"); else _explicitNullProperties?.Remove("FileCountChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2 _explicitNullValueFileCountChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart FileCountChart { get => _explicitNullValueFileCountChart; set { _explicitNullValueFileCountChart = value; AdditionalData?.Remove("FileCountChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("FileCountChart"); else _explicitNullProperties?.Remove("FileCountChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart _explicitNullValueFileCountChart = default!;
 #endif
         /// <summary>The constructed chart of the storage used by day</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2? StorageUsedChart { get => _explicitNullValueStorageUsedChart; set { _explicitNullValueStorageUsedChart = value; AdditionalData?.Remove("StorageUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageUsedChart"); else _explicitNullProperties?.Remove("StorageUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2? _explicitNullValueStorageUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart? StorageUsedChart { get => _explicitNullValueStorageUsedChart; set { _explicitNullValueStorageUsedChart = value; AdditionalData?.Remove("StorageUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageUsedChart"); else _explicitNullProperties?.Remove("StorageUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart? _explicitNullValueStorageUsedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2 StorageUsedChart { get => _explicitNullValueStorageUsedChart; set { _explicitNullValueStorageUsedChart = value; AdditionalData?.Remove("StorageUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageUsedChart"); else _explicitNullProperties?.Remove("StorageUsedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2 _explicitNullValueStorageUsedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart StorageUsedChart { get => _explicitNullValueStorageUsedChart; set { _explicitNullValueStorageUsedChart = value; AdditionalData?.Remove("StorageUsedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("StorageUsedChart"); else _explicitNullProperties?.Remove("StorageUsedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart _explicitNullValueStorageUsedChart = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModel"/> and sets the default values.
@@ -70,8 +70,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "FileCountChart", n => { FileCountChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2.CreateFromDiscriminatorValue); } },
-                { "StorageUsedChart", n => { StorageUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2.CreateFromDiscriminatorValue); } },
+                { "FileCountChart", n => { FileCountChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart.CreateFromDiscriminatorValue); } },
+                { "StorageUsedChart", n => { StorageUsedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart>(global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -81,8 +81,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChartProperty2>("FileCountChart", FileCountChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChartProperty2>("StorageUsedChart", StorageUsedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelFileCountChart>("FileCountChart", FileCountChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StorageZoneStatisticsModelStorageUsedChart>("StorageUsedChart", StorageUsedChart);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

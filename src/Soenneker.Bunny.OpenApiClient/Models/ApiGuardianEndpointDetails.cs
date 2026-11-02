@@ -154,12 +154,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2? ResponseBodySchemasYaml { get => _explicitNullValueResponseBodySchemasYaml; set { _explicitNullValueResponseBodySchemasYaml = value; AdditionalData?.Remove("responseBodySchemasYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseBodySchemasYaml"); else _explicitNullProperties?.Remove("responseBodySchemasYaml"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2? _explicitNullValueResponseBodySchemasYaml = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml? ResponseBodySchemasYaml { get => _explicitNullValueResponseBodySchemasYaml; set { _explicitNullValueResponseBodySchemasYaml = value; AdditionalData?.Remove("responseBodySchemasYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseBodySchemasYaml"); else _explicitNullProperties?.Remove("responseBodySchemasYaml"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml? _explicitNullValueResponseBodySchemasYaml = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2 ResponseBodySchemasYaml { get => _explicitNullValueResponseBodySchemasYaml; set { _explicitNullValueResponseBodySchemasYaml = value; AdditionalData?.Remove("responseBodySchemasYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseBodySchemasYaml"); else _explicitNullProperties?.Remove("responseBodySchemasYaml"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2 _explicitNullValueResponseBodySchemasYaml = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml ResponseBodySchemasYaml { get => _explicitNullValueResponseBodySchemasYaml; set { _explicitNullValueResponseBodySchemasYaml = value; AdditionalData?.Remove("responseBodySchemasYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseBodySchemasYaml"); else _explicitNullProperties?.Remove("responseBodySchemasYaml"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml _explicitNullValueResponseBodySchemasYaml = default!;
 #endif
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
@@ -216,7 +216,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "requestBodySchemaYaml", n => { RequestBodySchemaYaml = n.GetStringValue(); } },
                 { "requestMethod", n => { RequestMethod = n.GetStringValue(); } },
                 { "requestPath", n => { RequestPath = n.GetStringValue(); } },
-                { "responseBodySchemasYaml", n => { ResponseBodySchemasYaml = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2.CreateFromDiscriminatorValue); } },
+                { "responseBodySchemasYaml", n => { ResponseBodySchemasYaml = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml>(global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml.CreateFromDiscriminatorValue); } },
                 { "shieldZoneId", n => { ShieldZoneId = n.GetIntValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "validateAuthorization", n => { ValidateAuthorization = n.GetBoolValue(); } },
@@ -246,7 +246,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("requestBodySchemaYaml", RequestBodySchemaYaml);
             writer.WriteStringValue("requestMethod", RequestMethod);
             writer.WriteStringValue("requestPath", RequestPath);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYamlProperty2>("responseBodySchemasYaml", ResponseBodySchemasYaml);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml>("responseBodySchemasYaml", ResponseBodySchemasYaml);
             writer.WriteIntValue("shieldZoneId", ShieldZoneId);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
             writer.WriteBoolValue("validateAuthorization", ValidateAuthorization);

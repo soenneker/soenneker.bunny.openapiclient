@@ -39,7 +39,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; AdditionalData?.Remove("displayName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
         private string _explicitNullValueDisplayName = default!;
 #endif
-        /// <summary>The registry&apos;s host, with an optional port (e.g. &quot;registry.example.com&quot; or &quot;registry.example.com:5000&quot;).Required for the Oci type and ignored for the others.</summary>
+        /// <summary>The registry&apos;s host, with an optional port (e.g. &quot;registry.example.com&quot; or &quot;registry.example.com:5000&quot;).An https:// prefix and a namespace path (&quot;rg.fr-par.scw.cloud/my-namespace&quot;) are dropped; http:// is refused.Required for the Oci type and ignored for the others.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HostName { get => _explicitNullValueHostName; set { _explicitNullValueHostName = value; AdditionalData?.Remove("hostName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hostName"); else _explicitNullProperties?.Remove("hostName"); } }

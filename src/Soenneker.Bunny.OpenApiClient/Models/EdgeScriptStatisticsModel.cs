@@ -38,12 +38,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The AverageCpuTimeChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2? AverageCpuTimeChart { get => _explicitNullValueAverageCpuTimeChart; set { _explicitNullValueAverageCpuTimeChart = value; AdditionalData?.Remove("AverageCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCpuTimeChart"); else _explicitNullProperties?.Remove("AverageCpuTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2? _explicitNullValueAverageCpuTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart? AverageCpuTimeChart { get => _explicitNullValueAverageCpuTimeChart; set { _explicitNullValueAverageCpuTimeChart = value; AdditionalData?.Remove("AverageCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCpuTimeChart"); else _explicitNullProperties?.Remove("AverageCpuTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart? _explicitNullValueAverageCpuTimeChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2 AverageCpuTimeChart { get => _explicitNullValueAverageCpuTimeChart; set { _explicitNullValueAverageCpuTimeChart = value; AdditionalData?.Remove("AverageCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCpuTimeChart"); else _explicitNullProperties?.Remove("AverageCpuTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2 _explicitNullValueAverageCpuTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart AverageCpuTimeChart { get => _explicitNullValueAverageCpuTimeChart; set { _explicitNullValueAverageCpuTimeChart = value; AdditionalData?.Remove("AverageCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCpuTimeChart"); else _explicitNullProperties?.Remove("AverageCpuTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart _explicitNullValueAverageCpuTimeChart = default!;
 #endif
         /// <summary>The AverageCpuTimePerExecution property</summary>
         public double? AverageCpuTimePerExecution { get => _explicitNullValueAverageCpuTimePerExecution; set { _explicitNullValueAverageCpuTimePerExecution = value; AdditionalData?.Remove("AverageCpuTimePerExecution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("AverageCpuTimePerExecution"); else _explicitNullProperties?.Remove("AverageCpuTimePerExecution"); } }
@@ -51,22 +51,22 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The RequestsServedChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2? RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2? _explicitNullValueRequestsServedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart? RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart? _explicitNullValueRequestsServedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2 RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2 _explicitNullValueRequestsServedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart RequestsServedChart { get => _explicitNullValueRequestsServedChart; set { _explicitNullValueRequestsServedChart = value; AdditionalData?.Remove("RequestsServedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RequestsServedChart"); else _explicitNullProperties?.Remove("RequestsServedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart _explicitNullValueRequestsServedChart = default!;
 #endif
         /// <summary>The TotalCpuTimeChart property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2? TotalCpuTimeChart { get => _explicitNullValueTotalCpuTimeChart; set { _explicitNullValueTotalCpuTimeChart = value; AdditionalData?.Remove("TotalCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCpuTimeChart"); else _explicitNullProperties?.Remove("TotalCpuTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2? _explicitNullValueTotalCpuTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart? TotalCpuTimeChart { get => _explicitNullValueTotalCpuTimeChart; set { _explicitNullValueTotalCpuTimeChart = value; AdditionalData?.Remove("TotalCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCpuTimeChart"); else _explicitNullProperties?.Remove("TotalCpuTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart? _explicitNullValueTotalCpuTimeChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2 TotalCpuTimeChart { get => _explicitNullValueTotalCpuTimeChart; set { _explicitNullValueTotalCpuTimeChart = value; AdditionalData?.Remove("TotalCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCpuTimeChart"); else _explicitNullProperties?.Remove("TotalCpuTimeChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2 _explicitNullValueTotalCpuTimeChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart TotalCpuTimeChart { get => _explicitNullValueTotalCpuTimeChart; set { _explicitNullValueTotalCpuTimeChart = value; AdditionalData?.Remove("TotalCpuTimeChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCpuTimeChart"); else _explicitNullProperties?.Remove("TotalCpuTimeChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart _explicitNullValueTotalCpuTimeChart = default!;
 #endif
         /// <summary>The TotalCpuUsed property</summary>
         public double? TotalCpuUsed { get => _explicitNullValueTotalCpuUsed; set { _explicitNullValueTotalCpuUsed = value; AdditionalData?.Remove("TotalCpuUsed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalCpuUsed"); else _explicitNullProperties?.Remove("TotalCpuUsed"); } }
@@ -102,10 +102,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "AverageCpuTimeChart", n => { AverageCpuTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2.CreateFromDiscriminatorValue); } },
+                { "AverageCpuTimeChart", n => { AverageCpuTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart.CreateFromDiscriminatorValue); } },
                 { "AverageCpuTimePerExecution", n => { AverageCpuTimePerExecution = n.GetDoubleValue(); } },
-                { "RequestsServedChart", n => { RequestsServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2.CreateFromDiscriminatorValue); } },
-                { "TotalCpuTimeChart", n => { TotalCpuTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2.CreateFromDiscriminatorValue); } },
+                { "RequestsServedChart", n => { RequestsServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart.CreateFromDiscriminatorValue); } },
+                { "TotalCpuTimeChart", n => { TotalCpuTimeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart>(global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart.CreateFromDiscriminatorValue); } },
                 { "TotalCpuUsed", n => { TotalCpuUsed = n.GetDoubleValue(); } },
                 { "TotalMonthlyCost", n => { TotalMonthlyCost = n.GetDecimalValue(); } },
                 { "TotalRequestsServed", n => { TotalRequestsServed = n.GetLongValue(); } },
@@ -118,10 +118,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChartProperty2>("AverageCpuTimeChart", AverageCpuTimeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelAverageCpuTimeChart>("AverageCpuTimeChart", AverageCpuTimeChart);
             writer.WriteDoubleValue("AverageCpuTimePerExecution", AverageCpuTimePerExecution);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChartProperty2>("RequestsServedChart", RequestsServedChart);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChartProperty2>("TotalCpuTimeChart", TotalCpuTimeChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelRequestsServedChart>("RequestsServedChart", RequestsServedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EdgeScriptStatisticsModelTotalCpuTimeChart>("TotalCpuTimeChart", TotalCpuTimeChart);
             writer.WriteDoubleValue("TotalCpuUsed", TotalCpuUsed);
             writer.WriteDecimalValue("TotalMonthlyCost", TotalMonthlyCost);
             writer.WriteLongValue("TotalRequestsServed", TotalRequestsServed);

@@ -34,7 +34,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Cha
         {
         }
         /// <summary>
-        /// Retrieves historical charts for an application over a specified time period: CPU, RAM and traffic per pod with the pod&apos;s region, latency, instances, active regions, and usage and capacity per volume with the volume&apos;s region.
+        /// Retrieves historical charts for an application over a specified time period: CPU, RAM, traffic and ephemeral storage usage and limit per pod with the pod&apos;s region, instances in total and per region, active regions, usage and capacity per volume with the volume&apos;s region and pods, and the rolling updates of the period per region.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Cha
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCharts.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves historical charts for an application over a specified time period: CPU, RAM and traffic per pod with the pod&apos;s region, latency, instances, active regions, and usage and capacity per volume with the volume&apos;s region.
+        /// Retrieves historical charts for an application over a specified time period: CPU, RAM, traffic and ephemeral storage usage and limit per pod with the pod&apos;s region, instances in total and per region, active regions, usage and capacity per volume with the volume&apos;s region and pods, and the rolling updates of the period per region.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -93,7 +93,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Cha
             return new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Statistics.Charts.ChartsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves historical charts for an application over a specified time period: CPU, RAM and traffic per pod with the pod&apos;s region, latency, instances, active regions, and usage and capacity per volume with the volume&apos;s region.
+        /// Retrieves historical charts for an application over a specified time period: CPU, RAM, traffic and ephemeral storage usage and limit per pod with the pod&apos;s region, instances in total and per region, active regions, usage and capacity per volume with the volume&apos;s region and pods, and the rolling updates of the period per region.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ChartsRequestBuilderGetQueryParameters 

@@ -87,25 +87,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         private List<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel> _explicitNullValueOrigins = default!;
 #endif
         /// <summary>The priority of the origin group used for failover load balancing</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
-        private byte[]? _explicitNullValuePriority = default!;
-#nullable restore
-#else
-        public byte[] Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
-        private byte[] _explicitNullValuePriority = default!;
-#endif
+        public int? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; AdditionalData?.Remove("Priority"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Priority"); else _explicitNullProperties?.Remove("Priority"); } }
+        private int? _explicitNullValuePriority = default!;
         /// <summary>The weight of the origin group used for weighted load balancing</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public byte[]? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
-        private byte[]? _explicitNullValueWeight = default!;
-#nullable restore
-#else
-        public byte[] Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
-        private byte[] _explicitNullValueWeight = default!;
-#endif
+        public int? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; AdditionalData?.Remove("Weight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Weight"); else _explicitNullProperties?.Remove("Weight"); } }
+        private int? _explicitNullValueWeight = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginGroupModel"/> and sets the default values.
         /// </summary>
@@ -139,8 +125,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "OriginLoadBalancingMethod", n => { OriginLoadBalancingMethod = n.GetIntValue(); } },
                 { "Origins", n => { Origins = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>(global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "Priority", n => { Priority = n.GetByteArrayValue(); } },
-                { "Weight", n => { Weight = n.GetByteArrayValue(); } },
+                { "Priority", n => { Priority = n.GetIntValue(); } },
+                { "Weight", n => { Weight = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -158,8 +144,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteStringValue("Name", Name);
             writer.WriteIntValue("OriginLoadBalancingMethod", OriginLoadBalancingMethod);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.LoadBalancerOriginModel>("Origins", Origins);
-            writer.WriteByteArrayValue("Priority", Priority);
-            writer.WriteByteArrayValue("Weight", Weight);
+            writer.WriteIntValue("Priority", Priority);
+            writer.WriteIntValue("Weight", Weight);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
