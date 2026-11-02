@@ -8,10 +8,10 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Encoding seconds grouped by the video&apos;s highest output resolution. 0 means the resolution was unknown.
+    /// Size in bytes of each encoded rendition, keyed by &quot;{resolution}-{codec}&quot; (e.g. &quot;720p-h264&quot;). Videos encoded before the current storage layout can also report legacy &quot;{width}x{height}&quot; resolutions, e.g. &quot;1920x1080-h264&quot;.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class VideoEncodingStatisticsModelTotalByResolution : IAdditionalDataHolder, IParsable
+    public partial class VideoStorageSizeModelEncodedProperty2 : IAdditionalDataHolder, IParsable
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -23,23 +23,23 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2"/> and sets the default values.
         /// </summary>
-        public VideoEncodingStatisticsModelTotalByResolution()
+        public VideoStorageSizeModelEncodedProperty2()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             // Preserve a nullable root response.
             if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelTotalByResolution(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model

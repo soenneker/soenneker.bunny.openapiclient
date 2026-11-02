@@ -42,12 +42,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Size in bytes of each encoded rendition, keyed by &quot;{resolution}-{codec}&quot; (e.g. &quot;720p-h264&quot;). Videos encoded before the current storage layout can also report legacy &quot;{width}x{height}&quot; resolutions, e.g. &quot;1920x1080-h264&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded? Encoded { get => _explicitNullValueEncoded; set { _explicitNullValueEncoded = value; AdditionalData?.Remove("encoded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded"); else _explicitNullProperties?.Remove("encoded"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded? _explicitNullValueEncoded = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2? Encoded { get => _explicitNullValueEncoded; set { _explicitNullValueEncoded = value; AdditionalData?.Remove("encoded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded"); else _explicitNullProperties?.Remove("encoded"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2? _explicitNullValueEncoded = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded Encoded { get => _explicitNullValueEncoded; set { _explicitNullValueEncoded = value; AdditionalData?.Remove("encoded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded"); else _explicitNullProperties?.Remove("encoded"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded _explicitNullValueEncoded = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2 Encoded { get => _explicitNullValueEncoded; set { _explicitNullValueEncoded = value; AdditionalData?.Remove("encoded"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("encoded"); else _explicitNullProperties?.Remove("encoded"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2 _explicitNullValueEncoded = default!;
 #endif
         /// <summary>Size in bytes of everything else: playlists, manifests, captions, audio extracts, etc.</summary>
         public long? Miscellaneous { get => _explicitNullValueMiscellaneous; set { _explicitNullValueMiscellaneous = value; AdditionalData?.Remove("miscellaneous"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("miscellaneous"); else _explicitNullProperties?.Remove("miscellaneous"); } }
@@ -90,7 +90,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "calculatedAt", n => { CalculatedAt = n.GetDateTimeOffsetValue(); } },
-                { "encoded", n => { Encoded = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded>(global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded.CreateFromDiscriminatorValue); } },
+                { "encoded", n => { Encoded = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2.CreateFromDiscriminatorValue); } },
                 { "miscellaneous", n => { Miscellaneous = n.GetLongValue(); } },
                 { "mp4Fallback", n => { Mp4Fallback = n.GetLongValue(); } },
                 { "originals", n => { Originals = n.GetLongValue(); } },
@@ -106,7 +106,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("calculatedAt", CalculatedAt);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfVideoStorageSizeModelAllOf2DataEncoded>("encoded", Encoded);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoStorageSizeModelEncodedProperty2>("encoded", Encoded);
             writer.WriteLongValue("miscellaneous", Miscellaneous);
             writer.WriteLongValue("mp4Fallback", Mp4Fallback);
             writer.WriteLongValue("originals", Originals);

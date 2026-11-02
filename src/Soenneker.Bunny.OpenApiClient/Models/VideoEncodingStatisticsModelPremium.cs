@@ -39,42 +39,42 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Encoding seconds grouped by encoding type: &apos;jit&apos; for just-in-time encodes, &apos;standard&apos; for full encodes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit? ByJit { get => _explicitNullValueByJit; set { _explicitNullValueByJit = value; AdditionalData?.Remove("byJit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byJit"); else _explicitNullProperties?.Remove("byJit"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit? _explicitNullValueByJit = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2? ByJit { get => _explicitNullValueByJit; set { _explicitNullValueByJit = value; AdditionalData?.Remove("byJit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byJit"); else _explicitNullProperties?.Remove("byJit"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2? _explicitNullValueByJit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit ByJit { get => _explicitNullValueByJit; set { _explicitNullValueByJit = value; AdditionalData?.Remove("byJit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byJit"); else _explicitNullProperties?.Remove("byJit"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit _explicitNullValueByJit = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2 ByJit { get => _explicitNullValueByJit; set { _explicitNullValueByJit = value; AdditionalData?.Remove("byJit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byJit"); else _explicitNullProperties?.Remove("byJit"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2 _explicitNullValueByJit = default!;
 #endif
         /// <summary>Encoding seconds grouped by the video&apos;s highest output resolution. 0 means the resolution was unknown.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution? ByResolution { get => _explicitNullValueByResolution; set { _explicitNullValueByResolution = value; AdditionalData?.Remove("byResolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byResolution"); else _explicitNullProperties?.Remove("byResolution"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution? _explicitNullValueByResolution = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2? ByResolution { get => _explicitNullValueByResolution; set { _explicitNullValueByResolution = value; AdditionalData?.Remove("byResolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byResolution"); else _explicitNullProperties?.Remove("byResolution"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2? _explicitNullValueByResolution = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution ByResolution { get => _explicitNullValueByResolution; set { _explicitNullValueByResolution = value; AdditionalData?.Remove("byResolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byResolution"); else _explicitNullProperties?.Remove("byResolution"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution _explicitNullValueByResolution = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2 ByResolution { get => _explicitNullValueByResolution; set { _explicitNullValueByResolution = value; AdditionalData?.Remove("byResolution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byResolution"); else _explicitNullProperties?.Remove("byResolution"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2 _explicitNullValueByResolution = default!;
 #endif
         /// <summary>Encoding seconds grouped by output video codec (H264, VP9, HEVC, AV1).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec? ByVideoCodec { get => _explicitNullValueByVideoCodec; set { _explicitNullValueByVideoCodec = value; AdditionalData?.Remove("byVideoCodec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byVideoCodec"); else _explicitNullProperties?.Remove("byVideoCodec"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec? _explicitNullValueByVideoCodec = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2? ByVideoCodec { get => _explicitNullValueByVideoCodec; set { _explicitNullValueByVideoCodec = value; AdditionalData?.Remove("byVideoCodec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byVideoCodec"); else _explicitNullProperties?.Remove("byVideoCodec"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2? _explicitNullValueByVideoCodec = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec ByVideoCodec { get => _explicitNullValueByVideoCodec; set { _explicitNullValueByVideoCodec = value; AdditionalData?.Remove("byVideoCodec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byVideoCodec"); else _explicitNullProperties?.Remove("byVideoCodec"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec _explicitNullValueByVideoCodec = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2 ByVideoCodec { get => _explicitNullValueByVideoCodec; set { _explicitNullValueByVideoCodec = value; AdditionalData?.Remove("byVideoCodec"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("byVideoCodec"); else _explicitNullProperties?.Remove("byVideoCodec"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2 _explicitNullValueByVideoCodec = default!;
 #endif
         /// <summary>Billable (normalized) encoding seconds over time, grouped hourly or daily in UTC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart? NormalizedChart { get => _explicitNullValueNormalizedChart; set { _explicitNullValueNormalizedChart = value; AdditionalData?.Remove("normalizedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedChart"); else _explicitNullProperties?.Remove("normalizedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart? _explicitNullValueNormalizedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2? NormalizedChart { get => _explicitNullValueNormalizedChart; set { _explicitNullValueNormalizedChart = value; AdditionalData?.Remove("normalizedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedChart"); else _explicitNullProperties?.Remove("normalizedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2? _explicitNullValueNormalizedChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart NormalizedChart { get => _explicitNullValueNormalizedChart; set { _explicitNullValueNormalizedChart = value; AdditionalData?.Remove("normalizedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedChart"); else _explicitNullProperties?.Remove("normalizedChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart _explicitNullValueNormalizedChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2 NormalizedChart { get => _explicitNullValueNormalizedChart; set { _explicitNullValueNormalizedChart = value; AdditionalData?.Remove("normalizedChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedChart"); else _explicitNullProperties?.Remove("normalizedChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2 _explicitNullValueNormalizedChart = default!;
 #endif
         /// <summary>Billable encoding seconds in the selected period: counted per output codec and weighted by the video&apos;s highest resolution (x0.5 below 720p, x1 up to 1080p, x3 above).</summary>
         public long? NormalizedTotal { get => _explicitNullValueNormalizedTotal; set { _explicitNullValueNormalizedTotal = value; AdditionalData?.Remove("normalizedTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalizedTotal"); else _explicitNullProperties?.Remove("normalizedTotal"); } }
@@ -82,12 +82,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>Encoded output seconds over time, grouped hourly or daily in UTC.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart? OutputChart { get => _explicitNullValueOutputChart; set { _explicitNullValueOutputChart = value; AdditionalData?.Remove("outputChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputChart"); else _explicitNullProperties?.Remove("outputChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart? _explicitNullValueOutputChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2? OutputChart { get => _explicitNullValueOutputChart; set { _explicitNullValueOutputChart = value; AdditionalData?.Remove("outputChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputChart"); else _explicitNullProperties?.Remove("outputChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2? _explicitNullValueOutputChart = default!;
 #nullable restore
 #else
-        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart OutputChart { get => _explicitNullValueOutputChart; set { _explicitNullValueOutputChart = value; AdditionalData?.Remove("outputChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputChart"); else _explicitNullProperties?.Remove("outputChart"); } }
-        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart _explicitNullValueOutputChart = default!;
+        public global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2 OutputChart { get => _explicitNullValueOutputChart; set { _explicitNullValueOutputChart = value; AdditionalData?.Remove("outputChart"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputChart"); else _explicitNullProperties?.Remove("outputChart"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2 _explicitNullValueOutputChart = default!;
 #endif
         /// <summary>Encoded output seconds in the selected period: video length counted once per output codec, without resolution weighting.</summary>
         public long? OutputTotal { get => _explicitNullValueOutputTotal; set { _explicitNullValueOutputTotal = value; AdditionalData?.Remove("outputTotal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputTotal"); else _explicitNullProperties?.Remove("outputTotal"); } }
@@ -117,12 +117,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "byJit", n => { ByJit = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit.CreateFromDiscriminatorValue); } },
-                { "byResolution", n => { ByResolution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution.CreateFromDiscriminatorValue); } },
-                { "byVideoCodec", n => { ByVideoCodec = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec.CreateFromDiscriminatorValue); } },
-                { "normalizedChart", n => { NormalizedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart.CreateFromDiscriminatorValue); } },
+                { "byJit", n => { ByJit = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2.CreateFromDiscriminatorValue); } },
+                { "byResolution", n => { ByResolution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2.CreateFromDiscriminatorValue); } },
+                { "byVideoCodec", n => { ByVideoCodec = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2.CreateFromDiscriminatorValue); } },
+                { "normalizedChart", n => { NormalizedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2.CreateFromDiscriminatorValue); } },
                 { "normalizedTotal", n => { NormalizedTotal = n.GetLongValue(); } },
-                { "outputChart", n => { OutputChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart.CreateFromDiscriminatorValue); } },
+                { "outputChart", n => { OutputChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2.CreateFromDiscriminatorValue); } },
                 { "outputTotal", n => { OutputTotal = n.GetLongValue(); } },
             };
         }
@@ -133,12 +133,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByJit>("byJit", ByJit);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByResolution>("byResolution", ByResolution);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumByVideoCodec>("byVideoCodec", ByVideoCodec);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumNormalizedChart>("normalizedChart", NormalizedChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJitProperty2>("byJit", ByJit);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolutionProperty2>("byResolution", ByResolution);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByVideoCodecProperty2>("byVideoCodec", ByVideoCodec);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelNormalizedChartProperty2>("normalizedChart", NormalizedChart);
             writer.WriteLongValue("normalizedTotal", NormalizedTotal);
-            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingStatisticsModelPremiumOutputChart>("outputChart", OutputChart);
+            writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelOutputChartProperty2>("outputChart", OutputChart);
             writer.WriteLongValue("outputTotal", OutputTotal);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
