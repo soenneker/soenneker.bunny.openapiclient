@@ -2,7 +2,7 @@
   "descriptionHash": "B5BC8ED75458AC8FC5AC3BF12216B0F92A009E8F062CF5B062382D23C783C694751EA523C506674C54E6B5BC6B00778834BE85A14675A8957128976ED65431A1",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "BunnyOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Bunny.OpenApiClient",
