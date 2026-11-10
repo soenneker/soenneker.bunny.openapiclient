@@ -25345,7 +25345,7 @@
           "Volumes"
         ],
         "summary": "Delete All Volume Instances",
-        "description": "Deletes all volume instances for a volume template. All instances must be detached before deletion.",
+        "description": "Deletes a volume template and all its instances. The volume must be detached from the application and all instances must be detached before deletion.",
         "operationId": "magic_containers_DeleteAllVolumeInstances",
         "parameters": [
           {
@@ -25378,7 +25378,7 @@
             }
           },
           "400": {
-            "description": "Some volume instances are not detached.",
+            "description": "The volume is still attached to the application, or some volume instances are not detached.",
             "content": {
               "application/json": {
                 "schema": {
@@ -25398,7 +25398,7 @@
             }
           },
           "404": {
-            "description": "Volume template or instances not found.",
+            "description": "Application or volume template not found.",
             "content": {
               "application/json": {
                 "schema": {
@@ -43016,6 +43016,10 @@
           },
           "repositorySettings": {
             "$ref": "#/components/schemas/RepositorySettings"
+          },
+          "terminationGracePeriodSeconds": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": {

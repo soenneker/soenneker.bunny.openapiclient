@@ -40,6 +40,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             else if (parseNode.GetChildNode("runtimeType") is { } nullNodeRuntimeType && nullNodeRuntimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeType = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("terminationGracePeriodSeconds") is null) { _explicitNullValueTerminationGracePeriodSeconds = default!; _explicitNullProperties?.Remove("terminationGracePeriodSeconds"); }
+            else if (parseNode.GetChildNode("terminationGracePeriodSeconds") is { } nullNodeTerminationGracePeriodSeconds && nullNodeTerminationGracePeriodSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TerminationGracePeriodSeconds = null;
             if (parseNode.GetChildNode("volumes") is null) { _explicitNullValueVolumes = default!; _explicitNullProperties?.Remove("volumes"); }
             else if (parseNode.GetChildNode("volumes") is { } nullNodeVolumes && nullNodeVolumes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volumes = null;
         }
@@ -142,6 +144,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The status property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus? _explicitNullValueStatus = default!;
+        /// <summary>The terminationGracePeriodSeconds property</summary>
+        public long? TerminationGracePeriodSeconds { get => _explicitNullValueTerminationGracePeriodSeconds; set { _explicitNullValueTerminationGracePeriodSeconds = value; AdditionalData?.Remove("terminationGracePeriodSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terminationGracePeriodSeconds"); else _explicitNullProperties?.Remove("terminationGracePeriodSeconds"); } }
+        private long? _explicitNullValueTerminationGracePeriodSeconds = default!;
         /// <summary>The volumes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -188,6 +193,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "repositorySettings", n => { RepositorySettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings>(global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings.CreateFromDiscriminatorValue); } },
                 { "runtimeType", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRuntimeType = default; _explicitNullProperties?.Remove("runtimeType"); AdditionalData["runtimeType"] = unknown; } else { RuntimeType = parsed; AdditionalData.Remove("runtimeType"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "terminationGracePeriodSeconds", n => { TerminationGracePeriodSeconds = n.GetLongValue(); } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate>(global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -209,6 +215,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings>("repositorySettings", RepositorySettings);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>("runtimeType", RuntimeType);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>("status", Status);
+            writer.WriteLongValue("terminationGracePeriodSeconds", TerminationGracePeriodSeconds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeTemplate>("volumes", Volumes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

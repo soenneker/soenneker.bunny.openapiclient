@@ -46,7 +46,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item
         {
         }
         /// <summary>
-        /// Deletes all volume instances for a volume template. All instances must be detached before deletion.
+        /// Deletes a volume template and all its instances. The volume must be detached from the application and all instances must be detached before deletion.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.DeleteAllVolumeInstancesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -110,7 +110,7 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.UpdateVolumeResponse>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.UpdateVolumeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes all volume instances for a volume template. All instances must be detached before deletion.
+        /// Deletes a volume template and all its instances. The volume must be detached from the application and all instances must be detached before deletion.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
