@@ -8826,7 +8826,8 @@
         "security": [],
         "servers": [
           {
-            "url": "/"
+            "url": "https://logging.bunnycdn.com",
+            "description": "Production"
           }
         ]
       }
@@ -9057,7 +9058,8 @@
         "security": [],
         "servers": [
           {
-            "url": "/"
+            "url": "https://logging.bunnycdn.com",
+            "description": "Production"
           }
         ]
       }

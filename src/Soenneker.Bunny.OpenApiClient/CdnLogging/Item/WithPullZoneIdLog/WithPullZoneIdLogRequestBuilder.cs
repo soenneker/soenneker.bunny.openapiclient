@@ -66,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.Item.WithPullZoneIdLog
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Bunny.OpenApiClient.CdnLogging.Item.WithPullZoneIdLog.WithPullZoneIdLogRequestBuilder.WithPullZoneIdLogRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://logging.bunnycdn.com", "/cdn-logging/{date}/{pullZoneId}.log", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

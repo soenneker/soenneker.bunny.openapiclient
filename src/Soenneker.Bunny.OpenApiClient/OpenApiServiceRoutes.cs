@@ -3,7 +3,7 @@
 namespace Soenneker.OpenApi.Generated;
 internal static class OpenApiServiceRoutes
 {
-    private static readonly global::System.Collections.Generic.HashSet<string> KnownServers = new(global::System.StringComparer.OrdinalIgnoreCase) { "https://api.bunny.net", "https://api.bunny.net/mc", "https://cdn-origin-logging.bunny.net", "https://storage.bunnycdn.com", "https://video.bunnycdn.com" };
+    private static readonly global::System.Collections.Generic.HashSet<string> KnownServers = new(global::System.StringComparer.OrdinalIgnoreCase) { "https://api.bunny.net", "https://api.bunny.net/mc", "https://cdn-origin-logging.bunny.net", "https://logging.bunnycdn.com", "https://storage.bunnycdn.com", "https://video.bunnycdn.com" };
     internal static string Resolve(string template, string? configuredBaseUrl, string server, string path, bool rawUrl)
     {
         int query = template.IndexOf('?');
