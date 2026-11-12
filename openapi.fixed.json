@@ -42095,7 +42095,7 @@
           2
         ],
         "type": "integer",
-        "description": "0 = DNS\n1 = CDN\n2 = Middleware",
+        "description": "0 = DNS\n1 = Standalone\n2 = Middleware",
         "x-enumNames": [
           "DNS",
           "CDN",
@@ -42178,7 +42178,7 @@
           2
         ],
         "type": "integer",
-        "description": "0 = DNS\n1 = CDN\n2 = Middleware",
+        "description": "0 = DNS\n1 = Standalone\n2 = Middleware",
         "x-enumNames": [
           "DNS",
           "CDN",
@@ -42204,7 +42204,7 @@
           2
         ],
         "type": "integer",
-        "description": "0 = DNS\n1 = CDN\n2 = Middleware",
+        "description": "0 = DNS\n1 = Standalone\n2 = Middleware",
         "x-enumNames": [
           "DNS",
           "CDN",
@@ -49990,7 +49990,7 @@
               2
             ],
             "type": "integer",
-            "description": "0 = DNS\n1 = CDN\n2 = Middleware",
+            "description": "0 = DNS\n1 = Standalone\n2 = Middleware",
             "x-enumNames": [
               "DNS",
               "CDN",

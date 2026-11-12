@@ -76,7 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("Name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Name"); else _explicitNullProperties?.Remove("Name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>0 = DNS1 = CDN2 = Middleware</summary>
+        /// <summary>0 = DNS1 = Standalone2 = Middleware</summary>
         public int? ScriptType { get => _explicitNullValueScriptType; set { _explicitNullValueScriptType = value; AdditionalData?.Remove("ScriptType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScriptType"); else _explicitNullProperties?.Remove("ScriptType"); } }
         private int? _explicitNullValueScriptType = default!;
         /// <summary>

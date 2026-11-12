@@ -142,7 +142,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The RepositoryId property</summary>
         public long? RepositoryId { get => _explicitNullValueRepositoryId; set { _explicitNullValueRepositoryId = value; AdditionalData?.Remove("RepositoryId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RepositoryId"); else _explicitNullProperties?.Remove("RepositoryId"); } }
         private long? _explicitNullValueRepositoryId = default!;
-        /// <summary>0 = DNS1 = CDN2 = Middleware</summary>
+        /// <summary>0 = DNS1 = Standalone2 = Middleware</summary>
         public int? ScriptType { get => _explicitNullValueScriptType; set { _explicitNullValueScriptType = value; AdditionalData?.Remove("ScriptType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ScriptType"); else _explicitNullProperties?.Remove("ScriptType"); } }
         private int? _explicitNullValueScriptType = default!;
         /// <summary>The SystemHostname property</summary>
