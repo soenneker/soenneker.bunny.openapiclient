@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Response containing comprehensive access list information for a Shield Zone, including both managed and custom lists.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class AccessListsDetailsResponse : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -36,19 +35,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Total number of entries across all custom access lists for this Shield Zone.</summary>
+        /// <summary>The customEntryCount property</summary>
         public int? CustomEntryCount { get => _explicitNullValueCustomEntryCount; set { _explicitNullValueCustomEntryCount = value; AdditionalData?.Remove("customEntryCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customEntryCount"); else _explicitNullProperties?.Remove("customEntryCount"); } }
         private int? _explicitNullValueCustomEntryCount = default!;
-        /// <summary>Maximum number of entries allowed across all custom access lists based on the Shield plan.</summary>
+        /// <summary>The customEntryLimit property</summary>
         public int? CustomEntryLimit { get => _explicitNullValueCustomEntryLimit; set { _explicitNullValueCustomEntryLimit = value; AdditionalData?.Remove("customEntryLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customEntryLimit"); else _explicitNullProperties?.Remove("customEntryLimit"); } }
         private int? _explicitNullValueCustomEntryLimit = default!;
-        /// <summary>Current number of custom access lists for this Shield Zone.</summary>
+        /// <summary>The customListCount property</summary>
         public int? CustomListCount { get => _explicitNullValueCustomListCount; set { _explicitNullValueCustomListCount = value; AdditionalData?.Remove("customListCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customListCount"); else _explicitNullProperties?.Remove("customListCount"); } }
         private int? _explicitNullValueCustomListCount = default!;
-        /// <summary>Maximum number of custom access lists allowed based on the Shield plan.</summary>
+        /// <summary>The customListLimit property</summary>
         public int? CustomListLimit { get => _explicitNullValueCustomListLimit; set { _explicitNullValueCustomListLimit = value; AdditionalData?.Remove("customListLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customListLimit"); else _explicitNullProperties?.Remove("customListLimit"); } }
         private int? _explicitNullValueCustomListLimit = default!;
-        /// <summary>List of custom access lists created and maintained by the user.</summary>
+        /// <summary>The customLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails>? CustomLists { get => _explicitNullValueCustomLists; set { _explicitNullValueCustomLists = value; AdditionalData?.Remove("customLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customLists"); else _explicitNullProperties?.Remove("customLists"); } }
@@ -58,7 +57,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails> CustomLists { get => _explicitNullValueCustomLists; set { _explicitNullValueCustomLists = value; AdditionalData?.Remove("customLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customLists"); else _explicitNullProperties?.Remove("customLists"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails> _explicitNullValueCustomLists = default!;
 #endif
-        /// <summary>Generic response object containing status information for API operations.</summary>
+        /// <summary>The error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
@@ -68,7 +67,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse _explicitNullValueError = default!;
 #endif
-        /// <summary>List of curated threat lists maintained by Bunny Shield with automatic updates.</summary>
+        /// <summary>The managedLists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.AccessListDetails>? ManagedLists { get => _explicitNullValueManagedLists; set { _explicitNullValueManagedLists = value; AdditionalData?.Remove("managedLists"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managedLists"); else _explicitNullProperties?.Remove("managedLists"); } }

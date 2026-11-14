@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Describes a single authentication scheme required by an endpoint,as extracted from the OpenAPI specification&apos;s securitySchemes.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class AuthSchemeDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -32,7 +31,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name of the header, query parameter, or cookie that carries the credential(e.g. &quot;Authorization&quot;, &quot;X-API-Key&quot;).</summary>
+        /// <summary>The credentialName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CredentialName { get => _explicitNullValueCredentialName; set { _explicitNullValueCredentialName = value; AdditionalData?.Remove("credentialName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentialName"); else _explicitNullProperties?.Remove("credentialName"); } }
@@ -42,7 +41,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string CredentialName { get => _explicitNullValueCredentialName; set { _explicitNullValueCredentialName = value; AdditionalData?.Remove("credentialName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentialName"); else _explicitNullProperties?.Remove("credentialName"); } }
         private string _explicitNullValueCredentialName = default!;
 #endif
-        /// <summary>For HTTP auth schemes, the scheme name (e.g. &quot;bearer&quot;, &quot;basic&quot;). Null for non-HTTP schemes.</summary>
+        /// <summary>The httpScheme property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HttpScheme { get => _explicitNullValueHttpScheme; set { _explicitNullValueHttpScheme = value; AdditionalData?.Remove("httpScheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpScheme"); else _explicitNullProperties?.Remove("httpScheme"); } }
@@ -52,10 +51,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string HttpScheme { get => _explicitNullValueHttpScheme; set { _explicitNullValueHttpScheme = value; AdditionalData?.Remove("httpScheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("httpScheme"); else _explicitNullProperties?.Remove("httpScheme"); } }
         private string _explicitNullValueHttpScheme = default!;
 #endif
-        /// <summary>Where an authentication credential is transmitted in the HTTP request.</summary>
+        /// <summary>The location property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; AdditionalData?.Remove("location"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.AuthLocation? _explicitNullValueLocation = default!;
-        /// <summary>The OpenAPI security scheme reference name (e.g. &quot;bearerAuth&quot;, &quot;apiKey&quot;).</summary>
+        /// <summary>The schemeName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SchemeName { get => _explicitNullValueSchemeName; set { _explicitNullValueSchemeName = value; AdditionalData?.Remove("schemeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeName"); else _explicitNullProperties?.Remove("schemeName"); } }
@@ -65,7 +64,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string SchemeName { get => _explicitNullValueSchemeName; set { _explicitNullValueSchemeName = value; AdditionalData?.Remove("schemeName"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeName"); else _explicitNullProperties?.Remove("schemeName"); } }
         private string _explicitNullValueSchemeName = default!;
 #endif
-        /// <summary>The type of security scheme as defined in the OpenAPI specification.</summary>
+        /// <summary>The schemeType property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType? SchemeType { get => _explicitNullValueSchemeType; set { _explicitNullValueSchemeType = value; AdditionalData?.Remove("schemeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeType"); else _explicitNullProperties?.Remove("schemeType"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeType? _explicitNullValueSchemeType = default!;
         /// <summary>

@@ -37,7 +37,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian.Spec
         /// Update your OpenAPI specification
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpsertOpenApiSpecificationResponse"/></returns>
-        /// <param name="body">Represents the request for uploading or updating an OpenAPI specification in API Guardian.</param>
+        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails">When receiving a 401 status code</exception>
@@ -68,7 +68,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian.Spec
         /// Upload your OpenAPI specification
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpsertOpenApiSpecificationResponse"/></returns>
-        /// <param name="body">Represents the request for uploading or updating an OpenAPI specification in API Guardian.</param>
+        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.ProblemDetails">When receiving a 401 status code</exception>
@@ -99,7 +99,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian.Spec
         /// Update your OpenAPI specification
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">Represents the request for uploading or updating an OpenAPI specification in API Guardian.</param>
+        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,7 +121,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.ApiGuardian.Spec
         /// Upload your OpenAPI specification
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">Represents the request for uploading or updating an OpenAPI specification in API Guardian.</param>
+        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

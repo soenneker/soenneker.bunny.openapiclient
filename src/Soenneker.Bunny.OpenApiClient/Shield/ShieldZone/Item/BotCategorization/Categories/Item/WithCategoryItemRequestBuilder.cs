@@ -37,7 +37,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotCategorization
         /// Set or clear the action applied to every bot in a category for this Shield Zone.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategoryConfigurationResponse"/></returns>
-        /// <param name="body">Request body for setting a category-level action. Uses BunnyNet.Shield.Database.Enums.BotCategoryAction ratherthan BunnyNet.Shield.Database.Enums.BotCategorizationAction so the contract can only express actions valid for acategory (no Ignore).</param>
+        /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.UpdateBotCategoryConfigurationResponse">When receiving a 400 status code</exception>
@@ -70,7 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Shield.ShieldZone.Item.BotCategorization
         /// Set or clear the action applied to every bot in a category for this Shield Zone.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">Request body for setting a category-level action. Uses BunnyNet.Shield.Database.Enums.BotCategoryAction ratherthan BunnyNet.Shield.Database.Enums.BotCategorizationAction so the contract can only express actions valid for acategory (no Ignore).</param>
+        /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

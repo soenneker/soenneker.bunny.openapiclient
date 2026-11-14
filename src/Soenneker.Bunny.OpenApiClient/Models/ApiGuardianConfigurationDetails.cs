@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Global API Guardian configuration for a shield zone.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ApiGuardianConfigurationDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -59,28 +58,28 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>0 = Log1 = Block</summary>
         public int? ExecutionMode { get => _explicitNullValueExecutionMode; set { _explicitNullValueExecutionMode = value; AdditionalData?.Remove("executionMode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("executionMode"); else _explicitNullProperties?.Remove("executionMode"); } }
         private int? _explicitNullValueExecutionMode = default!;
-        /// <summary>Whether API Guardian is enabled for this shield zone. When disabled, no requests are inspected.</summary>
+        /// <summary>The isEnabled property</summary>
         public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; AdditionalData?.Remove("isEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEnabled"); else _explicitNullProperties?.Remove("isEnabled"); } }
         private bool? _explicitNullValueIsEnabled = default!;
-        /// <summary>Plan limit: maximum number of endpoints that can be defined in the specification.</summary>
+        /// <summary>The maxEndpoints property</summary>
         public int? MaxEndpoints { get => _explicitNullValueMaxEndpoints; set { _explicitNullValueMaxEndpoints = value; AdditionalData?.Remove("maxEndpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxEndpoints"); else _explicitNullProperties?.Remove("maxEndpoints"); } }
         private int? _explicitNullValueMaxEndpoints = default!;
-        /// <summary>Plan limit: maximum number of properties a single schema object may declare.</summary>
+        /// <summary>The maxFieldsPerType property</summary>
         public int? MaxFieldsPerType { get => _explicitNullValueMaxFieldsPerType; set { _explicitNullValueMaxFieldsPerType = value; AdditionalData?.Remove("maxFieldsPerType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxFieldsPerType"); else _explicitNullProperties?.Remove("maxFieldsPerType"); } }
         private int? _explicitNullValueMaxFieldsPerType = default!;
-        /// <summary>Plan limit: maximum depth of nested `$ref`, `items`, and `properties` chains.</summary>
+        /// <summary>The maxNestingDepth property</summary>
         public int? MaxNestingDepth { get => _explicitNullValueMaxNestingDepth; set { _explicitNullValueMaxNestingDepth = value; AdditionalData?.Remove("maxNestingDepth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxNestingDepth"); else _explicitNullProperties?.Remove("maxNestingDepth"); } }
         private int? _explicitNullValueMaxNestingDepth = default!;
-        /// <summary>Plan limit: combined character length of all `pattern` regex strings in the specification.</summary>
+        /// <summary>The maxTotalRegexLength property</summary>
         public int? MaxTotalRegexLength { get => _explicitNullValueMaxTotalRegexLength; set { _explicitNullValueMaxTotalRegexLength = value; AdditionalData?.Remove("maxTotalRegexLength"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxTotalRegexLength"); else _explicitNullProperties?.Remove("maxTotalRegexLength"); } }
         private int? _explicitNullValueMaxTotalRegexLength = default!;
-        /// <summary>Plan limit: combined node count across all `components/schemas` entries.</summary>
+        /// <summary>The maxTotalSchemaNodes property</summary>
         public int? MaxTotalSchemaNodes { get => _explicitNullValueMaxTotalSchemaNodes; set { _explicitNullValueMaxTotalSchemaNodes = value; AdditionalData?.Remove("maxTotalSchemaNodes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxTotalSchemaNodes"); else _explicitNullProperties?.Remove("maxTotalSchemaNodes"); } }
         private int? _explicitNullValueMaxTotalSchemaNodes = default!;
         /// <summary>The shieldZoneId property</summary>
         public int? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private int? _explicitNullValueShieldZoneId = default!;
-        /// <summary>The `info.title` field from the uploaded OpenAPI specification.</summary>
+        /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
@@ -96,7 +95,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
-        /// <summary>The `info.version` field from the uploaded OpenAPI specification.</summary>
+        /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }

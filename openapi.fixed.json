@@ -15499,6 +15499,317 @@
         ]
       }
     },
+    "/shield/metrics/shield-zone/{shieldZoneId}/waf-rule/{ruleId}": {
+      "get": {
+        "tags": [
+          "Metrics"
+        ],
+        "summary": "Get metrics for a specific WAF Rule within the specified Shield Zone",
+        "operationId": "ShieldGetWafRuleMetrics",
+        "parameters": [
+          {
+            "name": "ruleId",
+            "in": "path",
+            "description": "The ID of the WAF Rule.",
+            "required": true,
+            "schema": {
+              "pattern": "^[A-Za-z0-9_-]{1,64}$",
+              "type": "string",
+              "description": "The ID of the WAF Rule."
+            }
+          },
+          {
+            "name": "shieldZoneId",
+            "in": "path",
+            "description": "The ID of the Shield Zone.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The ID of the Shield Zone.",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
+    "/shield/metrics/shield-zone/{shieldZoneId}/upload-scanning": {
+      "get": {
+        "tags": [
+          "Metrics"
+        ],
+        "summary": "Get upload scanning metrics for the specified Shield Zone",
+        "operationId": "ShieldGetShieldZoneUploadScanningMetrics",
+        "parameters": [
+          {
+            "name": "shieldZoneId",
+            "in": "path",
+            "description": "The ID of the Shield Zone.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The ID of the Shield Zone.",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
+    "/shield/metrics/rate-limits/{shieldZoneId}": {
+      "get": {
+        "tags": [
+          "Metrics"
+        ],
+        "summary": "Get aggregated rate limit metrics for the specified Shield Zone",
+        "operationId": "ShieldGetShieldZoneRateLimitMetrics",
+        "parameters": [
+          {
+            "name": "shieldZoneId",
+            "in": "path",
+            "description": "The ID of the Shield Zone.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The ID of the Shield Zone.",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
+    "/shield/metrics/rate-limit/{id}": {
+      "get": {
+        "tags": [
+          "Metrics"
+        ],
+        "summary": "Get detailed metrics for the specified Rate Limit",
+        "operationId": "ShieldGetRateLimitMetrics",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the Rate limit.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "description": "The ID of the Rate limit.",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
     "/shield/metrics/overages/{shieldZoneId}": {
       "get": {
         "tags": [
@@ -15788,242 +16099,6 @@
         ]
       }
     },
-    "/shield/metrics/rate-limits/{shieldZoneId}": {
-      "get": {
-        "tags": [
-          "Metrics"
-        ],
-        "summary": "Get aggregated rate limit metrics for the specified Shield Zone",
-        "operationId": "ShieldGetShieldZoneRateLimitMetrics",
-        "parameters": [
-          {
-            "name": "shieldZoneId",
-            "in": "path",
-            "description": "The ID of the Shield Zone.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "description": "The ID of the Shield Zone.",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShieldZoneRatelimitMetricsResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
-    "/shield/metrics/rate-limit/{id}": {
-      "get": {
-        "tags": [
-          "Metrics"
-        ],
-        "summary": "Get detailed metrics for the specified Rate Limit",
-        "operationId": "ShieldGetRateLimitMetrics",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "The ID of the Rate limit.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "description": "The ID of the Rate limit.",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetRatelimitMetricsResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
-    "/shield/metrics/shield-zone/{shieldZoneId}/waf-rule/{ruleId}": {
-      "get": {
-        "tags": [
-          "Metrics"
-        ],
-        "summary": "Get metrics for a specific WAF Rule within the specified Shield Zone",
-        "operationId": "ShieldGetWafRuleMetrics",
-        "parameters": [
-          {
-            "name": "ruleId",
-            "in": "path",
-            "description": "The ID of the WAF Rule.",
-            "required": true,
-            "schema": {
-              "pattern": "^[A-Za-z0-9_-]{1,64}$",
-              "type": "string",
-              "description": "The ID of the WAF Rule."
-            }
-          },
-          {
-            "name": "shieldZoneId",
-            "in": "path",
-            "description": "The ID of the Shield Zone.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "description": "The ID of the Shield Zone.",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafRuleMetricsResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
     "/shield/metrics/shield-zone/{shieldZoneId}/bot-detection": {
       "get": {
         "tags": [
@@ -16063,81 +16138,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetShieldZoneBotDetectionMetricsResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
-    "/shield/metrics/shield-zone/{shieldZoneId}/upload-scanning": {
-      "get": {
-        "tags": [
-          "Metrics"
-        ],
-        "summary": "Get upload scanning metrics for the specified Shield Zone",
-        "operationId": "ShieldGetShieldZoneUploadScanningMetrics",
-        "parameters": [
-          {
-            "name": "shieldZoneId",
-            "in": "path",
-            "description": "The ID of the Shield Zone.",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "description": "The ID of the Shield Zone.",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetShieldZoneUploadScanningMetricsResponse"
                 }
               }
             }
@@ -18289,6 +18289,192 @@
         ]
       }
     },
+    "/shield/waf/profiles": {
+      "get": {
+        "tags": [
+          "WAF"
+        ],
+        "summary": "Retrieve all available WAF profiles",
+        "operationId": "ShieldListWafProfiles",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafProfilesResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafProfilesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafProfilesResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
+    "/shield/waf/enums": {
+      "get": {
+        "tags": [
+          "WAF"
+        ],
+        "summary": "Retrieve all available WAF enum mappings",
+        "operationId": "ShieldGetWafEnumMappings",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafEnumsResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafEnumsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafEnumsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
+    "/shield/waf/engine-config": {
+      "get": {
+        "tags": [
+          "WAF"
+        ],
+        "summary": "Retrieve the default WAF engine configuration",
+        "operationId": "ShieldGetWafEngineConfiguration",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafEngineConfigResponse"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafEngineConfigResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetWafEngineConfigResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnauthorizedResult"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [],
+        "servers": [
+          {
+            "url": "https://api.bunny.net"
+          }
+        ]
+      }
+    },
     "/shield/waf/custom-rules/{shieldZoneId}": {
       "get": {
         "tags": [
@@ -18882,192 +19068,6 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AcceptedResult"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
-    "/shield/waf/profiles": {
-      "get": {
-        "tags": [
-          "WAF"
-        ],
-        "summary": "Retrieve all available WAF profiles",
-        "operationId": "ShieldListWafProfiles",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafProfilesResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafProfilesResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafProfilesResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
-    "/shield/waf/enums": {
-      "get": {
-        "tags": [
-          "WAF"
-        ],
-        "summary": "Retrieve all available WAF enum mappings",
-        "operationId": "ShieldGetWafEnumMappings",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafEnumsResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafEnumsResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafEnumsResponse"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UnauthorizedResult"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "security": [],
-        "servers": [
-          {
-            "url": "https://api.bunny.net"
-          }
-        ]
-      }
-    },
-    "/shield/waf/engine-config": {
-      "get": {
-        "tags": [
-          "WAF"
-        ],
-        "summary": "Retrieve the default WAF engine configuration",
-        "operationId": "ShieldGetWafEngineConfiguration",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafEngineConfigResponse"
-                }
-              }
-            },
-            "x-client-original-non-json-content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafEngineConfigResponse"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetWafEngineConfigResponse"
                 }
               }
             }
@@ -37060,27 +37060,22 @@
         "properties": {
           "listId": {
             "type": "integer",
-            "description": "The unique identifier of the access list.",
             "format": "int64"
           },
           "configurationId": {
             "type": "integer",
-            "description": "The unique identifier of the access list configuration.",
             "format": "int64"
           },
           "name": {
             "type": "string",
-            "description": "The display name of the access list.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Optional description of the access list\u0027s purpose or contents.",
             "nullable": true
           },
           "isEnabled": {
-            "type": "boolean",
-            "description": "Indicates whether the access list is currently enabled and active."
+            "type": "boolean"
           },
           "type": {
             "$ref": "#/components/schemas/AccessListType"
@@ -37096,25 +37091,21 @@
           },
           "entryCount": {
             "type": "integer",
-            "description": "The total number of entries currently in the access list.",
             "format": "int64"
           },
           "updateFrequency": {
             "type": "string",
-            "description": "How frequently the list is updated from its source. Only applicable to managed lists.",
             "nullable": true,
             "x-client-original-format": "date-span"
           },
           "lastUpdated": {
             "type": "string",
-            "description": "The timestamp when the access list was last updated.",
             "format": "date-time"
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Represents detailed information about an access list and its configuration."
+        }
       },
       "AccessListType": {
         "enum": [
@@ -37145,7 +37136,6 @@
             "items": {
               "$ref": "#/components/schemas/AccessListDetails"
             },
-            "description": "List of curated threat lists maintained by Bunny Shield with automatic updates.",
             "nullable": true
           },
           "customLists": {
@@ -37153,30 +37143,25 @@
             "items": {
               "$ref": "#/components/schemas/AccessListDetails"
             },
-            "description": "List of custom access lists created and maintained by the user.",
             "nullable": true
           },
           "customEntryCount": {
             "type": "integer",
-            "description": "Total number of entries across all custom access lists for this Shield Zone.",
             "format": "int32",
             "nullable": true
           },
           "customEntryLimit": {
             "type": "integer",
-            "description": "Maximum number of entries allowed across all custom access lists based on the Shield plan.",
             "format": "int32",
             "nullable": true
           },
           "customListCount": {
             "type": "integer",
-            "description": "Current number of custom access lists for this Shield Zone.",
             "format": "int32",
             "nullable": true
           },
           "customListLimit": {
             "type": "integer",
-            "description": "Maximum number of custom access lists allowed based on the Shield plan.",
             "format": "int32",
             "nullable": true
           },
@@ -37186,8 +37171,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Response containing comprehensive access list information for a Shield Zone, including both managed and custom lists."
+        }
       },
       "ApiGuardianConfigurationDetails": {
         "type": "object",
@@ -37197,8 +37181,7 @@
             "format": "int32"
           },
           "isEnabled": {
-            "type": "boolean",
-            "description": "Whether API Guardian is enabled for this shield zone. When disabled, no requests are inspected."
+            "type": "boolean"
           },
           "executionMode": {
             "$ref": "#/components/schemas/WafExecutionMode"
@@ -37211,37 +37194,30 @@
           },
           "title": {
             "type": "string",
-            "description": "The \u0060info.title\u0060 field from the uploaded OpenAPI specification.",
             "nullable": true
           },
           "version": {
             "type": "string",
-            "description": "The \u0060info.version\u0060 field from the uploaded OpenAPI specification.",
             "nullable": true
           },
           "maxEndpoints": {
             "type": "integer",
-            "description": "Plan limit: maximum number of endpoints that can be defined in the specification.",
             "format": "int32"
           },
           "maxFieldsPerType": {
             "type": "integer",
-            "description": "Plan limit: maximum number of properties a single schema object may declare.",
             "format": "int32"
           },
           "maxNestingDepth": {
             "type": "integer",
-            "description": "Plan limit: maximum depth of nested \u0060$ref\u0060, \u0060items\u0060, and \u0060properties\u0060 chains.",
             "format": "int32"
           },
           "maxTotalSchemaNodes": {
             "type": "integer",
-            "description": "Plan limit: combined node count across all \u0060components/schemas\u0060 entries.",
             "format": "int32"
           },
           "maxTotalRegexLength": {
             "type": "integer",
-            "description": "Plan limit: combined character length of all \u0060pattern\u0060 regex strings in the specification.",
             "format": "int32"
           },
           "createdAt": {
@@ -37256,8 +37232,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Global API Guardian configuration for a shield zone."
+        }
       },
       "ApiGuardianConfigurationResponse": {
         "required": [
@@ -37274,14 +37249,12 @@
             "items": {
               "$ref": "#/components/schemas/ApiGuardianEndpointDetails"
             },
-            "description": "All endpoints discovered from the uploaded OpenAPI specification.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "The full API Guardian state for a shield zone: global configuration and all endpoints."
+        }
       },
       "ApiGuardianEndpointActivity": {
         "type": "object",
@@ -37328,41 +37301,33 @@
           },
           "requestMethod": {
             "type": "string",
-            "description": "The HTTP method (e.g. \u0022GET\u0022, \u0022POST\u0022).",
             "nullable": true
           },
           "requestPath": {
             "type": "string",
-            "description": "The OAS path template (e.g. \u0022/pets/{petId}\u0022).",
             "nullable": true
           },
           "validateRequestBodySchema": {
-            "type": "boolean",
-            "description": "Whether inbound request bodies are validated against the OAS request body schema."
+            "type": "boolean"
           },
           "validateResponseBodySchema": {
-            "type": "boolean",
-            "description": "Whether outbound response bodies are validated against the OAS response schema."
+            "type": "boolean"
           },
           "validateAuthorization": {
-            "type": "boolean",
-            "description": "Whether authentication credentials are enforced."
+            "type": "boolean"
           },
           "isEnabled": {
-            "type": "boolean",
-            "description": "Whether this endpoint is active. Disabled endpoints are not enforced."
+            "type": "boolean"
           },
           "authSchemes": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AuthSchemeDetails"
             },
-            "description": "Authentication schemes required by this endpoint, derived from the OAS security requirements.\nNull when the endpoint has no security requirements.",
             "nullable": true
           },
           "requestBodySchemaYaml": {
             "type": "string",
-            "description": "The request body schema rendered as YAML for display purposes. Null if no request body is defined.",
             "nullable": true
           },
           "responseBodySchemasYaml": {
@@ -37375,23 +37340,19 @@
             "$ref": "#/components/schemas/ApiGuardianEndpointDetailsInjectionDetectionParameters"
           },
           "detectParameterXss": {
-            "type": "boolean",
-            "description": "Whether XSS detection is enabled for the selected parameters."
+            "type": "boolean"
           },
           "detectParameterSqli": {
-            "type": "boolean",
-            "description": "Whether SQL injection detection is enabled for the selected parameters."
+            "type": "boolean"
           },
           "rateLimitingEnabled": {
-            "type": "boolean",
-            "description": "Whether per-endpoint rate limiting is active."
+            "type": "boolean"
           },
           "rateLimitingType": {
             "$ref": "#/components/schemas/ApiGuardianRateLimitType"
           },
           "rateLimitingRequestCount": {
             "type": "integer",
-            "description": "Maximum number of requests allowed within the rate limiting timeframe before blocking.",
             "format": "int32"
           },
           "rateLimitingTimeframe": {
@@ -37409,8 +37370,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Detailed view of a single API Guardian endpoint, including its validation settings,\nauthentication requirements, and rate limiting configuration."
+        }
       },
       "ApiGuardianEndpointMetrics": {
         "type": "object",
@@ -37505,15 +37465,13 @@
           "Query",
           "Cookie"
         ],
-        "type": "string",
-        "description": "Where an authentication credential is transmitted in the HTTP request."
+        "type": "string"
       },
       "AuthSchemeDetails": {
         "type": "object",
         "properties": {
           "schemeName": {
             "type": "string",
-            "description": "The OpenAPI security scheme reference name (e.g. \u0022bearerAuth\u0022, \u0022apiKey\u0022).",
             "nullable": true
           },
           "schemeType": {
@@ -37524,19 +37482,16 @@
           },
           "credentialName": {
             "type": "string",
-            "description": "The name of the header, query parameter, or cookie that carries the credential\n(e.g. \u0022Authorization\u0022, \u0022X-API-Key\u0022).",
             "nullable": true
           },
           "httpScheme": {
             "type": "string",
-            "description": "For HTTP auth schemes, the scheme name (e.g. \u0022bearer\u0022, \u0022basic\u0022). Null for non-HTTP schemes.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Describes a single authentication scheme required by an endpoint,\nas extracted from the OpenAPI specification\u0027s securitySchemes."
+        }
       },
       "AuthSchemeType": {
         "enum": [
@@ -37545,8 +37500,7 @@
           "OAuth2",
           "OpenIdConnect"
         ],
-        "type": "string",
-        "description": "The type of security scheme as defined in the OpenAPI specification."
+        "type": "string"
       },
       "BotCategorizationAction": {
         "enum": [
@@ -37852,12 +37806,10 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The display name for the new access list.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Optional description of the access list\u0027s purpose or contents.",
             "nullable": true
           },
           "type": {
@@ -37865,19 +37817,16 @@
           },
           "content": {
             "type": "string",
-            "description": "The initial content for the access list with entries separated by newlines.",
             "nullable": true
           },
           "checksum": {
             "type": "string",
-            "description": "SHA-256 checksum of the content for integrity verification. If null, it will be automatically calculated.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Request model for creating a new custom access list."
+        }
       },
       "CreateCustomWafRuleModel": {
         "type": "object",
@@ -37954,13 +37903,6 @@
         ],
         "type": "object",
         "properties": {
-          "shieldZone": {
-            "$ref": "#/components/schemas/ShieldZoneRequest"
-          },
-          "pullZoneId": {
-            "type": "integer",
-            "format": "int64"
-          },
           "accessLists": {
             "$ref": "#/components/schemas/CreateShieldZoneRequestAccessLists"
           },
@@ -37972,6 +37914,13 @@
           },
           "antivirusScanningMode": {
             "$ref": "#/components/schemas/UploadScanningScannerMode"
+          },
+          "shieldZone": {
+            "$ref": "#/components/schemas/ShieldZoneRequest"
+          },
+          "pullZoneId": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "additionalProperties": {
@@ -38103,17 +38052,14 @@
         "properties": {
           "id": {
             "type": "integer",
-            "description": "The unique identifier of the custom access list.",
             "format": "int64"
           },
           "name": {
             "type": "string",
-            "description": "The display name of the custom access list.",
             "nullable": true
           },
           "description": {
             "type": "string",
-            "description": "Optional description of the access list\u0027s purpose or contents.",
             "nullable": true
           },
           "type": {
@@ -38121,31 +38067,26 @@
           },
           "content": {
             "type": "string",
-            "description": "The raw content of the access list with entries separated by newlines.",
             "nullable": true
           },
           "checksum": {
             "type": "string",
-            "description": "SHA-256 checksum of the content for integrity verification.",
             "nullable": true
           },
           "entryCount": {
             "type": "integer",
-            "description": "The total number of entries in the access list.",
             "format": "int64",
             "nullable": true
           },
           "lastModified": {
             "type": "string",
-            "description": "The timestamp when the access list was last modified.",
             "format": "date-time",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Represents a custom access list associated with a shield zone."
+        }
       },
       "CustomAccessListResponse": {
         "type": "object",
@@ -38159,8 +38100,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Response containing custom access list data or error information."
+        }
       },
       "CustomWafRule": {
         "type": "object",
@@ -38266,17 +38206,14 @@
           },
           "count": {
             "type": "integer",
-            "description": "Number of events in the group.",
             "format": "int64"
           },
           "firstSeen": {
             "type": "integer",
-            "description": "Earliest event time in the group (Unix time in milliseconds, UTC).",
             "format": "int64"
           },
           "lastSeen": {
             "type": "integer",
-            "description": "Most recent event time in the group (Unix time in milliseconds, UTC).",
             "format": "int64"
           },
           "context": {
@@ -38288,31 +38225,27 @@
               "type": "integer",
               "format": "int64"
             },
-            "description": "Per-group event counts bucketed across the requested window (mini time histogram), present only\nwhen the request set \u0060buckets\u0060. Bucket i covers [from \u002B i*width, from \u002B (i\u002B1)*width).",
+            "description": "The event count of this group in each time bucket of the window (a small time histogram).\nPresent only when the request set \u0060buckets\u0060. Bucket i covers\n[from \u002B i*width, from \u002B (i\u002B1)*width).",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "An aggregated group of events (returned when the search request specifies groupBy)."
+        }
       },
       "EventLogsExportRequest": {
         "type": "object",
         "properties": {
           "from": {
             "type": "integer",
-            "description": "Window start as Unix time in milliseconds (UTC). Required.",
             "format": "int64"
           },
           "to": {
             "type": "integer",
-            "description": "Window end as Unix time in milliseconds (UTC). Required; must be after BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsExportRequest.from and within the last 72 hours.",
             "format": "int64"
           },
           "query": {
             "type": "string",
-            "description": "Optional free-text search across IP, ruleId, URL, User-Agent and rule name.",
             "nullable": true
           },
           "filters": {
@@ -38320,26 +38253,22 @@
             "items": {
               "$ref": "#/components/schemas/EventLogsFilter"
             },
-            "description": "Optional filters, combined with AND. Repeated values within one filter combine with OR.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Request body for exporting a Shield Zone\u0027s full filtered Event Logs set as CSV."
+        }
       },
       "EventLogsFilter": {
         "type": "object",
         "properties": {
           "field": {
             "type": "string",
-            "description": "Dimension to filter on: feature, ruleId, ip, ja4, ua, url, asn, country or action.",
             "nullable": true
           },
           "op": {
             "type": "string",
-            "description": "Operator: eq, in, contains, cidr (ip only, IPv4/IPv6) or wildcard (\u0027*\u0027 matches any run).",
             "nullable": true
           },
           "value": {
@@ -38347,31 +38276,26 @@
             "items": {
               "type": "string"
             },
-            "description": "Value(s) for the filter; multiple values are OR-combined.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "A single Event Logs filter clause."
+        }
       },
       "EventLogsSearchRequest": {
         "type": "object",
         "properties": {
           "from": {
             "type": "integer",
-            "description": "Window start as Unix time in milliseconds (UTC). Required.",
             "format": "int64"
           },
           "to": {
             "type": "integer",
-            "description": "Window end as Unix time in milliseconds (UTC). Required; must be after BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsSearchRequest.from and within the last 72 hours.",
             "format": "int64"
           },
           "query": {
             "type": "string",
-            "description": "Optional free-text search across IP, ruleId, URL, User-Agent and rule name.",
             "nullable": true
           },
           "filters": {
@@ -38379,7 +38303,6 @@
             "items": {
               "$ref": "#/components/schemas/EventLogsFilter"
             },
-            "description": "Optional filters, combined with AND. Repeated values within one filter combine with OR.",
             "nullable": true
           },
           "groupBy": {
@@ -38387,29 +38310,25 @@
             "items": {
               "type": "string"
             },
-            "description": "Optional ordered dimensions to group by, e.g. [\u0022ip\u0022,\u0022ja4\u0022]. Omit for flat rows.\nAllowed: feature, ruleId, ip, ja4, ua, url, asn, country, action.",
             "nullable": true
           },
           "buckets": {
             "type": "integer",
-            "description": "When grouping, the number of time buckets for each group\u0027s sparkline histogram over the\nwindow. 0 (default) omits the sparkline; clamped to 500.",
+            "description": "When grouping, the number of time buckets for the sparkline histogram of each group over the\nwindow. 0 (default) omits the sparkline. The provider clamps the value to 500.",
             "format": "int32"
           },
           "page": {
             "type": "integer",
-            "description": "Zero-based page index.",
             "format": "int32"
           },
           "pageSize": {
             "type": "integer",
-            "description": "Page size; clamped to 1\u2013500 (defaults to 50 when unset).",
             "format": "int32"
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Request body for searching a Shield Zone\u0027s Event Logs within a time window."
+        }
       },
       "EventLogsSearchResponse": {
         "type": "object",
@@ -38419,7 +38338,6 @@
             "items": {
               "$ref": "#/components/schemas/EventRow"
             },
-            "description": "Flat event rows (populated when the request had no groupBy).",
             "nullable": true
           },
           "groups": {
@@ -38427,22 +38345,18 @@
             "items": {
               "$ref": "#/components/schemas/EventGroup"
             },
-            "description": "Aggregated groups (populated when the request had a groupBy).",
             "nullable": true
           },
           "total": {
             "type": "integer",
-            "description": "Total flat rows, or total distinct groups when grouped.",
             "format": "int64"
           },
           "totalPages": {
             "type": "integer",
-            "description": "Total number of pages for the current page size.",
             "format": "int32"
           },
           "page": {
             "type": "integer",
-            "description": "Zero-based index of the returned page.",
             "format": "int32"
           },
           "errorResponse": {
@@ -38451,33 +38365,27 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Result of an Event Logs search. Exactly one of BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsSearchResponse.rows or BunnyNet.Shield.Api.Entities.Waf.WafLogging.EventLogsSearchResponse.groups is populated."
+        }
       },
       "EventRow": {
         "type": "object",
         "properties": {
           "logId": {
             "type": "string",
-            "description": "Unique event identifier.",
             "nullable": true
           },
           "timestamp": {
             "type": "integer",
-            "description": "Event time as Unix time in milliseconds (UTC).",
             "format": "int64"
           },
-          "log": {
-            "description": "The full request context for the event (JSON object)."
-          },
+          "log": {},
           "fields": {
             "$ref": "#/components/schemas/EventRowFields"
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "A single event returned in a flat (ungrouped) search."
+        }
       },
       "GenericRequestResponse": {
         "type": "object",
@@ -38486,24 +38394,20 @@
             "$ref": "#/components/schemas/HttpStatusCode"
           },
           "success": {
-            "type": "boolean",
-            "description": "Indicates whether the operation was successful."
+            "type": "boolean"
           },
           "message": {
             "type": "string",
-            "description": "Human-readable message describing the result of the operation.",
             "nullable": true
           },
           "errorKey": {
             "type": "string",
-            "description": "Unique error key for programmatic error handling, if applicable.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Generic response object containing status information for API operations."
+        }
       },
       "GetApiGuardianEndpointMetricsResponse": {
         "type": "object",
@@ -38545,8 +38449,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Represents the response for getting API Guardian configuration."
+        }
       },
       "GetCustomWafRulesResponse": {
         "type": "object",
@@ -39129,7 +39032,8 @@
         },
         "additionalProperties": {
           "not": {}
-        }
+        },
+        "description": "Describes which page of Shield Zones this response contains."
       },
       "ProblemDetails": {
         "type": "object",
@@ -40007,7 +39911,6 @@
         "properties": {
           "isEnabled": {
             "type": "boolean",
-            "description": "Whether the access list should be enabled or disabled. If null, the current state is preserved.",
             "nullable": true
           },
           "action": {
@@ -40016,8 +39919,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Request model for updating an access list configuration."
+        }
       },
       "UpdateAccessListConfigurationResponse": {
         "type": "object",
@@ -40031,15 +39933,13 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Response containing the updated access list configuration data or error information."
+        }
       },
       "UpdateApiGuardianConfigurationRequest": {
         "type": "object",
         "properties": {
           "isEnabled": {
             "type": "boolean",
-            "description": "Enable or disable API Guardian entirely for this shield zone.",
             "nullable": true
           },
           "executionMode": {
@@ -40054,8 +39954,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Patch request for updating the global API Guardian configuration.\nAll fields are optional \u2014 only provided fields are applied."
+        }
       },
       "UpdateApiGuardianConfigurationResponse": {
         "type": "object",
@@ -40069,30 +39968,25 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Response for the PATCH /configuration endpoint."
+        }
       },
       "UpdateApiGuardianEndpointRequest": {
         "type": "object",
         "properties": {
           "isEnabled": {
             "type": "boolean",
-            "description": "Enable or disable this endpoint. Disabled endpoints are not enforced.",
             "nullable": true
           },
           "validateRequestBodySchema": {
             "type": "boolean",
-            "description": "Enable or disable request body schema validation.\nOnly effective if the endpoint\u0027s OAS operation defines a request body schema.",
             "nullable": true
           },
           "validateResponseBodySchema": {
             "type": "boolean",
-            "description": "Enable or disable response body schema validation.\nOnly effective if the endpoint\u0027s OAS operation defines response schemas.",
             "nullable": true
           },
           "validateAuthorization": {
             "type": "boolean",
-            "description": "Enable or disable enforcement of authentication requirements\nas defined in the OAS security schemes.",
             "nullable": true
           },
           "injectionDetectionParameters": {
@@ -40100,17 +39994,14 @@
           },
           "detectParameterXss": {
             "type": "boolean",
-            "description": "Enable XSS detection on the selected injection detection parameters.",
             "nullable": true
           },
           "detectParameterSqli": {
             "type": "boolean",
-            "description": "Enable SQL injection detection on the selected injection detection parameters.",
             "nullable": true
           },
           "rateLimitingEnabled": {
             "type": "boolean",
-            "description": "Enable or disable per-endpoint rate limiting.",
             "nullable": true
           },
           "rateLimitingType": {
@@ -40118,7 +40009,6 @@
           },
           "rateLimitingRequestCount": {
             "type": "integer",
-            "description": "Maximum number of requests allowed within the timeframe before blocking. Must be greater than zero.",
             "format": "int32",
             "nullable": true
           },
@@ -40128,8 +40018,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Patch request for updating an individual API Guardian endpoint.\nAll fields are optional \u2014 only provided fields are applied."
+        }
       },
       "UpdateApiGuardianEndpointResponse": {
         "type": "object",
@@ -40143,8 +40032,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Response for the PATCH /endpoint/{endpointId} endpoint."
+        }
       },
       "UpdateBotCategorizationConfigurationRequest": {
         "required": [
@@ -40186,8 +40074,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Request body for setting a category-level action. Uses BunnyNet.Shield.Database.Enums.BotCategoryAction rather\nthan BunnyNet.Shield.Database.Enums.BotCategorizationAction so the contract can only express actions valid for a\ncategory (no Ignore)."
+        }
       },
       "UpdateBotCategoryConfigurationResponse": {
         "type": "object",
@@ -40246,24 +40133,20 @@
         "properties": {
           "name": {
             "type": "string",
-            "description": "The new display name for the access list. If null, the current name is preserved.",
             "nullable": true
           },
           "content": {
             "type": "string",
-            "description": "The new content for the access list with entries separated by newlines. If null, the current content is preserved.",
             "nullable": true
           },
           "checksum": {
             "type": "string",
-            "description": "SHA-256 checksum of the new content for integrity verification. If null, it will be automatically calculated.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Request model for updating a custom access list."
+        }
       },
       "UpdateCustomWafRuleRequest": {
         "type": "object",
@@ -40423,11 +40306,11 @@
       "UploadScanningConfigurationResponse": {
         "type": "object",
         "properties": {
-          "error": {
-            "$ref": "#/components/schemas/GenericRequestResponse"
-          },
           "data": {
             "$ref": "#/components/schemas/UploadScanningConfigurationState"
+          },
+          "error": {
+            "$ref": "#/components/schemas/GenericRequestResponse"
           }
         },
         "additionalProperties": {
@@ -40475,19 +40358,16 @@
         "properties": {
           "content": {
             "type": "string",
-            "description": "The file contents of the OpenAPI specification.",
             "nullable": true
           },
           "enforceAuthorizationValidation": {
             "type": "boolean",
-            "description": "Whether to enforce authentication requirements for endpoints.\nOn upload, defaults to true if not specified.\nOn update, existing endpoint auth settings are preserved if not specified.",
             "nullable": true
           }
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Represents the request for uploading or updating an OpenAPI specification in API Guardian."
+        }
       },
       "UpsertOpenApiSpecificationResponse": {
         "type": "object",
@@ -40501,8 +40381,7 @@
         },
         "additionalProperties": {
           "not": {}
-        },
-        "description": "Represents the response for uploading or updating an OpenAPI specification in API Guardian."
+        }
       },
       "WafExecutionMode": {
         "enum": [
@@ -41121,6 +41000,7 @@
           "IPMatch"
         ],
         "type": "string",
+        "description": "Mirrors BunnyNet.Backend.CDS.Services.Shield.Domain.Waf.WafValueKind. The API owns this copy for the same reason as\nBunnyNet.Backend.CDS.Services.Shield.Api.Waf.Models.WafRuleOperatorType. Staging writes the value as a name, so the enum has the string converter.",
         "x-ms-enum": {
           "name": "WafValueKind",
           "modelAsString": false,
@@ -41163,7 +41043,6 @@
         "additionalProperties": {
           "not": {}
         },
-        "description": "All parameters defined in the OAS operation, grouped by location (path, query, header, cookie).",
         "nullable": true
       },
       "ApiGuardianEndpointDetailsInjectionDetectionParameters": {
@@ -41197,7 +41076,6 @@
         "additionalProperties": {
           "not": {}
         },
-        "description": "Parameters selected for XSS/SQLi injection detection, grouped by location.\nNull if not configured. Subset of BunnyNet.Shield.Api.Services.Shield.ApiGuardian.Models.ApiGuardianEndpointDetails.AvailableParameters.",
         "nullable": true
       },
       "CreateCustomWafRuleModelVariableTypes": {
@@ -41411,7 +41289,6 @@
         "additionalProperties": {
           "not": {}
         },
-        "description": "Parameters to run injection detection on, grouped by location (path, query, header, cookie).\nMust be a subset of the endpoint\u0027s available parameters.",
         "nullable": true
       },
       "WafChainedRuleConditionItemVariableTypes": {
@@ -46491,7 +46368,7 @@
         "additionalProperties": {
           "$ref": "#/components/schemas/ShieldGetAccessListEnums200ResponseAdditionalProperties"
         },
-        "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+        "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
       },
       "ShieldGetApiGuardianEnums200Response": {
         "type": "object",
@@ -47084,7 +46961,6 @@
         "additionalProperties": {
           "type": "string"
         },
-        "description": "Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.",
         "nullable": true
       },
       "ApiGuardianEndpointMetricsOverviewPastTwentyEightDays": {
@@ -47113,13 +46989,11 @@
         "additionalProperties": {
           "type": "string"
         },
-        "description": "The group key: each requested groupBy dimension mapped to its value.",
         "nullable": true
       },
       "EventGroupContext": {
         "type": "object",
         "additionalProperties": {},
-        "description": "Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),\nand features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.",
         "nullable": true
       },
       "EventRowFields": {
@@ -47127,7 +47001,6 @@
         "additionalProperties": {
           "type": "string"
         },
-        "description": "Resolved dimension values for the event (e.g. ip, ruleId, url, ja4).",
         "nullable": true
       },
       "OverviewMetricMetrics": {
@@ -49573,7 +49446,6 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.",
             "nullable": true
           },
           "ApiGuardianEndpointMetricsOverviewPastTwentyEightDays": {
@@ -49602,13 +49474,11 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "The group key: each requested groupBy dimension mapped to its value.",
             "nullable": true
           },
           "EventGroupContext": {
             "type": "object",
             "additionalProperties": {},
-            "description": "Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),\nand features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.",
             "nullable": true
           },
           "EventRowFields": {
@@ -49616,7 +49486,6 @@
             "additionalProperties": {
               "type": "string"
             },
-            "description": "Resolved dimension values for the event (e.g. ip, ruleId, url, ja4).",
             "nullable": true
           },
           "OverviewMetricMetrics": {
@@ -49738,21 +49607,21 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/GetAccessListEnums200PlainResponseAdditionalProperties"
             },
-            "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+            "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
           },
           "GetAccessListEnums200Response": {
             "type": "object",
             "additionalProperties": {
               "$ref": "#/components/schemas/GetAccessListEnums200ResponseAdditionalProperties"
             },
-            "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+            "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
           },
           "GetAccessListEnums200ResponseSchema": {
             "type": "object",
             "additionalProperties": {
               "$ref": "#/components/schemas/GetAccessListEnums200ResponseSchemaAdditionalProperties"
             },
-            "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+            "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
           },
           "GetApiGuardianEnums200PlainResponse": {
             "type": "object",
@@ -49816,14 +49685,14 @@
             "additionalProperties": {
               "$ref": "#/components/schemas/GetAccessListEnums200PlainResponseSchemaAdditionalProperties"
             },
-            "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+            "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
           },
           "GetAccessListEnums200ResponseSchema3": {
             "type": "object",
             "additionalProperties": {
               "$ref": "#/components/schemas/GetAccessListEnums200ResponseSchema3AdditionalProperties"
             },
-            "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+            "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
           },
           "GetApiGuardianEnums200PlainResponseSchema": {
             "type": "object",
@@ -51601,7 +51470,7 @@
       "additionalProperties": {
         "$ref": "#/components/schemas/GetAccessListEnums200ResponseSchema2AdditionalPropertiesProperty"
       },
-      "description": "Represents a response with the list of enumeration types and their values exposed by the Access Lists API."
+      "description": "Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is a\npossible future extension; right now every value is always exposed."
     },
     "GetApiGuardianEnums200ResponseSchema2": {
       "type": "object",
@@ -51627,7 +51496,6 @@
       "additionalProperties": {
         "type": "string"
       },
-      "description": "Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.",
       "nullable": true
     },
     "ApiGuardianEndpointMetricsOverviewPastTwentyEightDaysProperty": {
@@ -51656,13 +51524,11 @@
       "additionalProperties": {
         "type": "string"
       },
-      "description": "The group key: each requested groupBy dimension mapped to its value.",
       "nullable": true
     },
     "EventGroupContextProperty": {
       "type": "object",
       "additionalProperties": {},
-      "description": "Context aggregates for the group: country, asn, per-action counts (blocked/challenged/logged),\nand features/ruleIds touched. Counts are numbers; features/ruleIds are comma-joined strings.",
       "nullable": true
     },
     "EventRowFieldsProperty": {
@@ -51670,7 +51536,6 @@
       "additionalProperties": {
         "type": "string"
       },
-      "description": "Resolved dimension values for the event (e.g. ip, ruleId, url, ja4).",
       "nullable": true
     },
     "OverviewMetricMetricsProperty": {

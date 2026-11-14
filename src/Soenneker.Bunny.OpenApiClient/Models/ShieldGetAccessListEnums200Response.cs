@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
     /// <summary>
-    /// Represents a response with the list of enumeration types and their values exposed by the Access Lists API.
+    /// Static enum-name catalog for the Access Lists API. Filtering by plan/enterprise features is apossible future extension; right now every value is always exposed.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ShieldGetAccessListEnums200Response : IAdditionalDataHolder, IParsable

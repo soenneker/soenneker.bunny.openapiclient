@@ -3,9 +3,10 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>Where an authentication credential is transmitted in the HTTP request.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public enum AuthLocation
+    #pragma warning restore CS1591
     {
         [EnumMember(Value = "Header")]
         #pragma warning disable CS1591

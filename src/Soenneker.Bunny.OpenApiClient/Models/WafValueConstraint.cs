@@ -46,7 +46,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Example { get => _explicitNullValueExample; set { _explicitNullValueExample = value; AdditionalData?.Remove("example"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("example"); else _explicitNullProperties?.Remove("example"); } }
         private string _explicitNullValueExample = default!;
 #endif
-        /// <summary>The kind property</summary>
+        /// <summary>Mirrors BunnyNet.Backend.CDS.Services.Shield.Domain.Waf.WafValueKind. The API owns this copy for the same reason asBunnyNet.Backend.CDS.Services.Shield.Api.Waf.Models.WafRuleOperatorType. Staging writes the value as a name, so the enum has the string converter.</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind? Kind { get => _explicitNullValueKind; set { _explicitNullValueKind = value; AdditionalData?.Remove("kind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kind"); else _explicitNullProperties?.Remove("kind"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.WafValueKind? _explicitNullValueKind = default!;
         /// <summary>The maxLength property</summary>

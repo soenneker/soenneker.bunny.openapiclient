@@ -8,11 +8,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Generic response object containing status information for API operations.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class GenericRequestResponse : ApiException, IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -31,7 +30,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Unique error key for programmatic error handling, if applicable.</summary>
+        /// <summary>The errorKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ErrorKey { get => _explicitNullValueErrorKey; set { _explicitNullValueErrorKey = value; AdditionalData?.Remove("errorKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorKey"); else _explicitNullProperties?.Remove("errorKey"); } }
@@ -43,7 +42,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => MessageEscaped ?? string.Empty; }
-        /// <summary>Human-readable message describing the result of the operation.</summary>
+        /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MessageEscaped { get => _explicitNullValueMessageEscaped; set { _explicitNullValueMessageEscaped = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
@@ -56,7 +55,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>100 = Continue101 = SwitchingProtocols102 = Processing103 = EarlyHints200 = OK201 = Created202 = Accepted203 = NonAuthoritativeInformation204 = NoContent205 = ResetContent206 = PartialContent207 = MultiStatus208 = AlreadyReported226 = IMUsed300 = MultipleChoices300 = Ambiguous301 = MovedPermanently301 = Moved302 = Found302 = Redirect303 = SeeOther303 = RedirectMethod304 = NotModified305 = UseProxy306 = Unused307 = TemporaryRedirect307 = RedirectKeepVerb308 = PermanentRedirect400 = BadRequest401 = Unauthorized402 = PaymentRequired403 = Forbidden404 = NotFound405 = MethodNotAllowed406 = NotAcceptable407 = ProxyAuthenticationRequired408 = RequestTimeout409 = Conflict410 = Gone411 = LengthRequired412 = PreconditionFailed413 = RequestEntityTooLarge414 = RequestUriTooLong415 = UnsupportedMediaType416 = RequestedRangeNotSatisfiable417 = ExpectationFailed421 = MisdirectedRequest422 = UnprocessableEntity422 = UnprocessableContent423 = Locked424 = FailedDependency426 = UpgradeRequired428 = PreconditionRequired429 = TooManyRequests431 = RequestHeaderFieldsTooLarge451 = UnavailableForLegalReasons500 = InternalServerError501 = NotImplemented502 = BadGateway503 = ServiceUnavailable504 = GatewayTimeout505 = HttpVersionNotSupported506 = VariantAlsoNegotiates507 = InsufficientStorage508 = LoopDetected510 = NotExtended511 = NetworkAuthenticationRequired</summary>
         public int? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("statusCode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusCode"); else _explicitNullProperties?.Remove("statusCode"); } }
         private int? _explicitNullValueStatusCode = default!;
-        /// <summary>Indicates whether the operation was successful.</summary>
+        /// <summary>The success property</summary>
         public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; AdditionalData?.Remove("success"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
         private bool? _explicitNullValueSuccess = default!;
         /// <summary>

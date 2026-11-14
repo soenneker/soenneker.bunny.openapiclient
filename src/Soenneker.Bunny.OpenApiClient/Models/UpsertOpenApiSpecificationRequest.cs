@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Represents the request for uploading or updating an OpenAPI specification in API Guardian.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class UpsertOpenApiSpecificationRequest : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -26,7 +25,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The file contents of the OpenAPI specification.</summary>
+        /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
@@ -36,7 +35,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
         private string _explicitNullValueContent = default!;
 #endif
-        /// <summary>Whether to enforce authentication requirements for endpoints.On upload, defaults to true if not specified.On update, existing endpoint auth settings are preserved if not specified.</summary>
+        /// <summary>The enforceAuthorizationValidation property</summary>
         public bool? EnforceAuthorizationValidation { get => _explicitNullValueEnforceAuthorizationValidation; set { _explicitNullValueEnforceAuthorizationValidation = value; AdditionalData?.Remove("enforceAuthorizationValidation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforceAuthorizationValidation"); else _explicitNullProperties?.Remove("enforceAuthorizationValidation"); } }
         private bool? _explicitNullValueEnforceAuthorizationValidation = default!;
         /// <summary>

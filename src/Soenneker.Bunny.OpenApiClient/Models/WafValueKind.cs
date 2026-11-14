@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
+    /// <summary>Mirrors BunnyNet.Backend.CDS.Services.Shield.Domain.Waf.WafValueKind. The API owns this copy for the same reason asBunnyNet.Backend.CDS.Services.Shield.Api.Waf.Models.WafRuleOperatorType. Staging writes the value as a name, so the enum has the string converter.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum WafValueKind
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "Text")]
         #pragma warning disable CS1591

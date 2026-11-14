@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Represents detailed information about an access list and its configuration.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class AccessListDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -52,10 +51,10 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>0 = None1 = VPNs2 = Datacenters4 = Proxies8 = TorExitNodes16 = Botnets32 = VulnerabilityScanners64 = WebScrapers128 = SearchEngines256 = SearchEngineCrawlers512 = AiSearch1024 = AiCrawlers2048 = AiAgents4096 = PagePreview8192 = InternetTools</summary>
         public int? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
         private int? _explicitNullValueCategory = default!;
-        /// <summary>The unique identifier of the access list configuration.</summary>
+        /// <summary>The configurationId property</summary>
         public long? ConfigurationId { get => _explicitNullValueConfigurationId; set { _explicitNullValueConfigurationId = value; AdditionalData?.Remove("configurationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("configurationId"); else _explicitNullProperties?.Remove("configurationId"); } }
         private long? _explicitNullValueConfigurationId = default!;
-        /// <summary>Optional description of the access list&apos;s purpose or contents.</summary>
+        /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
@@ -65,19 +64,19 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>The total number of entries currently in the access list.</summary>
+        /// <summary>The entryCount property</summary>
         public long? EntryCount { get => _explicitNullValueEntryCount; set { _explicitNullValueEntryCount = value; AdditionalData?.Remove("entryCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entryCount"); else _explicitNullProperties?.Remove("entryCount"); } }
         private long? _explicitNullValueEntryCount = default!;
-        /// <summary>Indicates whether the access list is currently enabled and active.</summary>
+        /// <summary>The isEnabled property</summary>
         public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; AdditionalData?.Remove("isEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEnabled"); else _explicitNullProperties?.Remove("isEnabled"); } }
         private bool? _explicitNullValueIsEnabled = default!;
-        /// <summary>The timestamp when the access list was last updated.</summary>
+        /// <summary>The lastUpdated property</summary>
         public DateTimeOffset? LastUpdated { get => _explicitNullValueLastUpdated; set { _explicitNullValueLastUpdated = value; AdditionalData?.Remove("lastUpdated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUpdated"); else _explicitNullProperties?.Remove("lastUpdated"); } }
         private DateTimeOffset? _explicitNullValueLastUpdated = default!;
-        /// <summary>The unique identifier of the access list.</summary>
+        /// <summary>The listId property</summary>
         public long? ListId { get => _explicitNullValueListId; set { _explicitNullValueListId = value; AdditionalData?.Remove("listId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listId"); else _explicitNullProperties?.Remove("listId"); } }
         private long? _explicitNullValueListId = default!;
-        /// <summary>The display name of the access list.</summary>
+        /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -93,7 +92,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>0 = IP1 = CIDR2 = ASN3 = Country4 = Organization5 = JA4</summary>
         public int? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private int? _explicitNullValueType = default!;
-        /// <summary>How frequently the list is updated from its source. Only applicable to managed lists.</summary>
+        /// <summary>The updateFrequency property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpdateFrequency { get => _explicitNullValueUpdateFrequency; set { _explicitNullValueUpdateFrequency = value; AdditionalData?.Remove("updateFrequency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateFrequency"); else _explicitNullProperties?.Remove("updateFrequency"); } }

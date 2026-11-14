@@ -41,7 +41,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string ContinuationToken { get => _explicitNullValueContinuationToken; set { _explicitNullValueContinuationToken = value; AdditionalData?.Remove("continuationToken"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("continuationToken"); else _explicitNullProperties?.Remove("continuationToken"); } }
         private string _explicitNullValueContinuationToken = default!;
 #endif
-        /// <summary>Generic response object containing status information for API operations.</summary>
+        /// <summary>The errorResponse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.GenericRequestResponse? ErrorResponse { get => _explicitNullValueErrorResponse; set { _explicitNullValueErrorResponse = value; AdditionalData?.Remove("errorResponse"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorResponse"); else _explicitNullProperties?.Remove("errorResponse"); } }

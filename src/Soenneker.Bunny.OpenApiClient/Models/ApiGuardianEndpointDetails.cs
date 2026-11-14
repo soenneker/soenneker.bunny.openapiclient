@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// Detailed view of a single API Guardian endpoint, including its validation settings,authentication requirements, and rate limiting configuration.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class ApiGuardianEndpointDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -67,7 +66,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The apiGuardianEndpointId property</summary>
         public long? ApiGuardianEndpointId { get => _explicitNullValueApiGuardianEndpointId; set { _explicitNullValueApiGuardianEndpointId = value; AdditionalData?.Remove("apiGuardianEndpointId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apiGuardianEndpointId"); else _explicitNullProperties?.Remove("apiGuardianEndpointId"); } }
         private long? _explicitNullValueApiGuardianEndpointId = default!;
-        /// <summary>Authentication schemes required by this endpoint, derived from the OAS security requirements.Null when the endpoint has no security requirements.</summary>
+        /// <summary>The authSchemes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails>? AuthSchemes { get => _explicitNullValueAuthSchemes; set { _explicitNullValueAuthSchemes = value; AdditionalData?.Remove("authSchemes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authSchemes"); else _explicitNullProperties?.Remove("authSchemes"); } }
@@ -77,7 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails> AuthSchemes { get => _explicitNullValueAuthSchemes; set { _explicitNullValueAuthSchemes = value; AdditionalData?.Remove("authSchemes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authSchemes"); else _explicitNullProperties?.Remove("authSchemes"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.AuthSchemeDetails> _explicitNullValueAuthSchemes = default!;
 #endif
-        /// <summary>All parameters defined in the OAS operation, grouped by location (path, query, header, cookie).</summary>
+        /// <summary>The availableParameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsAvailableParameters? AvailableParameters { get => _explicitNullValueAvailableParameters; set { _explicitNullValueAvailableParameters = value; AdditionalData?.Remove("availableParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableParameters"); else _explicitNullProperties?.Remove("availableParameters"); } }
@@ -90,13 +89,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The createdAt property</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("createdAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>Whether SQL injection detection is enabled for the selected parameters.</summary>
+        /// <summary>The detectParameterSqli property</summary>
         public bool? DetectParameterSqli { get => _explicitNullValueDetectParameterSqli; set { _explicitNullValueDetectParameterSqli = value; AdditionalData?.Remove("detectParameterSqli"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detectParameterSqli"); else _explicitNullProperties?.Remove("detectParameterSqli"); } }
         private bool? _explicitNullValueDetectParameterSqli = default!;
-        /// <summary>Whether XSS detection is enabled for the selected parameters.</summary>
+        /// <summary>The detectParameterXss property</summary>
         public bool? DetectParameterXss { get => _explicitNullValueDetectParameterXss; set { _explicitNullValueDetectParameterXss = value; AdditionalData?.Remove("detectParameterXss"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detectParameterXss"); else _explicitNullProperties?.Remove("detectParameterXss"); } }
         private bool? _explicitNullValueDetectParameterXss = default!;
-        /// <summary>Parameters selected for XSS/SQLi injection detection, grouped by location.Null if not configured. Subset of BunnyNet.Shield.Api.Services.Shield.ApiGuardian.Models.ApiGuardianEndpointDetails.AvailableParameters.</summary>
+        /// <summary>The injectionDetectionParameters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsInjectionDetectionParameters? InjectionDetectionParameters { get => _explicitNullValueInjectionDetectionParameters; set { _explicitNullValueInjectionDetectionParameters = value; AdditionalData?.Remove("injectionDetectionParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("injectionDetectionParameters"); else _explicitNullProperties?.Remove("injectionDetectionParameters"); } }
@@ -106,13 +105,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsInjectionDetectionParameters InjectionDetectionParameters { get => _explicitNullValueInjectionDetectionParameters; set { _explicitNullValueInjectionDetectionParameters = value; AdditionalData?.Remove("injectionDetectionParameters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("injectionDetectionParameters"); else _explicitNullProperties?.Remove("injectionDetectionParameters"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsInjectionDetectionParameters _explicitNullValueInjectionDetectionParameters = default!;
 #endif
-        /// <summary>Whether this endpoint is active. Disabled endpoints are not enforced.</summary>
+        /// <summary>The isEnabled property</summary>
         public bool? IsEnabled { get => _explicitNullValueIsEnabled; set { _explicitNullValueIsEnabled = value; AdditionalData?.Remove("isEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isEnabled"); else _explicitNullProperties?.Remove("isEnabled"); } }
         private bool? _explicitNullValueIsEnabled = default!;
-        /// <summary>Whether per-endpoint rate limiting is active.</summary>
+        /// <summary>The rateLimitingEnabled property</summary>
         public bool? RateLimitingEnabled { get => _explicitNullValueRateLimitingEnabled; set { _explicitNullValueRateLimitingEnabled = value; AdditionalData?.Remove("rateLimitingEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingEnabled"); else _explicitNullProperties?.Remove("rateLimitingEnabled"); } }
         private bool? _explicitNullValueRateLimitingEnabled = default!;
-        /// <summary>Maximum number of requests allowed within the rate limiting timeframe before blocking.</summary>
+        /// <summary>The rateLimitingRequestCount property</summary>
         public int? RateLimitingRequestCount { get => _explicitNullValueRateLimitingRequestCount; set { _explicitNullValueRateLimitingRequestCount = value; AdditionalData?.Remove("rateLimitingRequestCount"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingRequestCount"); else _explicitNullProperties?.Remove("rateLimitingRequestCount"); } }
         private int? _explicitNullValueRateLimitingRequestCount = default!;
         /// <summary>1 = PerSecond10 = PerTenSeconds60 = PerOneMinute300 = PerFiveMinutes900 = PerFifteenMinutes3600 = PerOneHour</summary>
@@ -121,7 +120,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The rateLimitingType property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianRateLimitType? RateLimitingType { get => _explicitNullValueRateLimitingType; set { _explicitNullValueRateLimitingType = value; AdditionalData?.Remove("rateLimitingType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitingType"); else _explicitNullProperties?.Remove("rateLimitingType"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianRateLimitType? _explicitNullValueRateLimitingType = default!;
-        /// <summary>The request body schema rendered as YAML for display purposes. Null if no request body is defined.</summary>
+        /// <summary>The requestBodySchemaYaml property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RequestBodySchemaYaml { get => _explicitNullValueRequestBodySchemaYaml; set { _explicitNullValueRequestBodySchemaYaml = value; AdditionalData?.Remove("requestBodySchemaYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestBodySchemaYaml"); else _explicitNullProperties?.Remove("requestBodySchemaYaml"); } }
@@ -131,7 +130,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string RequestBodySchemaYaml { get => _explicitNullValueRequestBodySchemaYaml; set { _explicitNullValueRequestBodySchemaYaml = value; AdditionalData?.Remove("requestBodySchemaYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestBodySchemaYaml"); else _explicitNullProperties?.Remove("requestBodySchemaYaml"); } }
         private string _explicitNullValueRequestBodySchemaYaml = default!;
 #endif
-        /// <summary>The HTTP method (e.g. &quot;GET&quot;, &quot;POST&quot;).</summary>
+        /// <summary>The requestMethod property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RequestMethod { get => _explicitNullValueRequestMethod; set { _explicitNullValueRequestMethod = value; AdditionalData?.Remove("requestMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestMethod"); else _explicitNullProperties?.Remove("requestMethod"); } }
@@ -141,7 +140,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string RequestMethod { get => _explicitNullValueRequestMethod; set { _explicitNullValueRequestMethod = value; AdditionalData?.Remove("requestMethod"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestMethod"); else _explicitNullProperties?.Remove("requestMethod"); } }
         private string _explicitNullValueRequestMethod = default!;
 #endif
-        /// <summary>The OAS path template (e.g. &quot;/pets/{petId}&quot;).</summary>
+        /// <summary>The requestPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RequestPath { get => _explicitNullValueRequestPath; set { _explicitNullValueRequestPath = value; AdditionalData?.Remove("requestPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestPath"); else _explicitNullProperties?.Remove("requestPath"); } }
@@ -151,7 +150,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string RequestPath { get => _explicitNullValueRequestPath; set { _explicitNullValueRequestPath = value; AdditionalData?.Remove("requestPath"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestPath"); else _explicitNullProperties?.Remove("requestPath"); } }
         private string _explicitNullValueRequestPath = default!;
 #endif
-        /// <summary>Response body schemas keyed by HTTP status code, rendered as YAML. Null if no response schemas are defined.</summary>
+        /// <summary>The responseBodySchemasYaml property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.ApiGuardianEndpointDetailsResponseBodySchemasYaml? ResponseBodySchemasYaml { get => _explicitNullValueResponseBodySchemasYaml; set { _explicitNullValueResponseBodySchemasYaml = value; AdditionalData?.Remove("responseBodySchemasYaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("responseBodySchemasYaml"); else _explicitNullProperties?.Remove("responseBodySchemasYaml"); } }
@@ -167,13 +166,13 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The updatedAt property</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updatedAt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updatedAt"); else _explicitNullProperties?.Remove("updatedAt"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
-        /// <summary>Whether authentication credentials are enforced.</summary>
+        /// <summary>The validateAuthorization property</summary>
         public bool? ValidateAuthorization { get => _explicitNullValueValidateAuthorization; set { _explicitNullValueValidateAuthorization = value; AdditionalData?.Remove("validateAuthorization"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validateAuthorization"); else _explicitNullProperties?.Remove("validateAuthorization"); } }
         private bool? _explicitNullValueValidateAuthorization = default!;
-        /// <summary>Whether inbound request bodies are validated against the OAS request body schema.</summary>
+        /// <summary>The validateRequestBodySchema property</summary>
         public bool? ValidateRequestBodySchema { get => _explicitNullValueValidateRequestBodySchema; set { _explicitNullValueValidateRequestBodySchema = value; AdditionalData?.Remove("validateRequestBodySchema"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validateRequestBodySchema"); else _explicitNullProperties?.Remove("validateRequestBodySchema"); } }
         private bool? _explicitNullValueValidateRequestBodySchema = default!;
-        /// <summary>Whether outbound response bodies are validated against the OAS response schema.</summary>
+        /// <summary>The validateResponseBodySchema property</summary>
         public bool? ValidateResponseBodySchema { get => _explicitNullValueValidateResponseBodySchema; set { _explicitNullValueValidateResponseBodySchema = value; AdditionalData?.Remove("validateResponseBodySchema"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validateResponseBodySchema"); else _explicitNullProperties?.Remove("validateResponseBodySchema"); } }
         private bool? _explicitNullValueValidateResponseBodySchema = default!;
         /// <summary>

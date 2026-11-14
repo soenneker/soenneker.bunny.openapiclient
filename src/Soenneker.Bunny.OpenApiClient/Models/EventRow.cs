@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Bunny.OpenApiClient.Models
 {
-    /// <summary>
-    /// A single event returned in a flat (ungrouped) search.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class EventRow : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -30,7 +29,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Resolved dimension values for the event (e.g. ip, ruleId, url, ja4).</summary>
+        /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
@@ -40,7 +39,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; AdditionalData?.Remove("fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.EventRowFields _explicitNullValueFields = default!;
 #endif
-        /// <summary>The full request context for the event (JSON object).</summary>
+        /// <summary>The log property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public UntypedNode? Log { get => _explicitNullValueLog; set { _explicitNullValueLog = value; AdditionalData?.Remove("log"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log"); else _explicitNullProperties?.Remove("log"); } }
@@ -50,7 +49,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public UntypedNode Log { get => _explicitNullValueLog; set { _explicitNullValueLog = value; AdditionalData?.Remove("log"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("log"); else _explicitNullProperties?.Remove("log"); } }
         private UntypedNode _explicitNullValueLog = default!;
 #endif
-        /// <summary>Unique event identifier.</summary>
+        /// <summary>The logId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LogId { get => _explicitNullValueLogId; set { _explicitNullValueLogId = value; AdditionalData?.Remove("logId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logId"); else _explicitNullProperties?.Remove("logId"); } }
@@ -60,7 +59,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string LogId { get => _explicitNullValueLogId; set { _explicitNullValueLogId = value; AdditionalData?.Remove("logId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logId"); else _explicitNullProperties?.Remove("logId"); } }
         private string _explicitNullValueLogId = default!;
 #endif
-        /// <summary>Event time as Unix time in milliseconds (UTC).</summary>
+        /// <summary>The timestamp property</summary>
         public long? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private long? _explicitNullValueTimestamp = default!;
         /// <summary>
