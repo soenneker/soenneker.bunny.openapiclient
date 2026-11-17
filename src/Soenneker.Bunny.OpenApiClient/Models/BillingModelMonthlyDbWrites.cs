@@ -39,8 +39,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         private string _explicitNullValueMeasuringUnit = default!;
 #endif
         /// <summary>The billed quantity for the related product</summary>
-        public long? TotalUnits { get => _explicitNullValueTotalUnits; set { _explicitNullValueTotalUnits = value; AdditionalData?.Remove("TotalUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalUnits"); else _explicitNullProperties?.Remove("TotalUnits"); } }
-        private long? _explicitNullValueTotalUnits = default!;
+        public decimal? TotalUnits { get => _explicitNullValueTotalUnits; set { _explicitNullValueTotalUnits = value; AdditionalData?.Remove("TotalUnits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("TotalUnits"); else _explicitNullProperties?.Remove("TotalUnits"); } }
+        private decimal? _explicitNullValueTotalUnits = default!;
         /// <summary>The usage based charge in USD</summary>
         public decimal? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; AdditionalData?.Remove("Usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Usage"); else _explicitNullProperties?.Remove("Usage"); } }
         private decimal? _explicitNullValueUsage = default!;
@@ -70,7 +70,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "MeasuringUnit", n => { MeasuringUnit = n.GetStringValue(); } },
-                { "TotalUnits", n => { TotalUnits = n.GetLongValue(); } },
+                { "TotalUnits", n => { TotalUnits = n.GetDecimalValue(); } },
                 { "Usage", n => { Usage = n.GetDecimalValue(); } },
             };
         }
@@ -82,7 +82,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("MeasuringUnit", MeasuringUnit);
-            writer.WriteLongValue("TotalUnits", TotalUnits);
+            writer.WriteDecimalValue("TotalUnits", TotalUnits);
             writer.WriteDecimalValue("Usage", Usage);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
