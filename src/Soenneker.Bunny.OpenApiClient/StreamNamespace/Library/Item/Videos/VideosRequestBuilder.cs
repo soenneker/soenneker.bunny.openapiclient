@@ -60,6 +60,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -75,6 +76,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
             {
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "503", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
@@ -91,6 +93,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.VideoModel?> PostAsync(global::Soenneker.Bunny.OpenApiClient.Models.CreateVideoModel body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -107,6 +110,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
                 { "400", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -181,7 +185,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Videos
             /// <summary>The number of items to return per page, clamped to a range of 10-1000.</summary>
             [QueryParameter("itemsPerPage")]
             public int? ItemsPerPage { get; set; }
-            /// <summary>The field to order results by. Possible values: date, title — any other value falls back to date.</summary>
+            /// <summary>The field to order results by. Possible values: date (newest first), title (A-Z), size (largest first), duration (longest first) — any other value falls back to date. If size or duration ordering is not available for the library, the request returns 400 Bad Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("orderBy")]
