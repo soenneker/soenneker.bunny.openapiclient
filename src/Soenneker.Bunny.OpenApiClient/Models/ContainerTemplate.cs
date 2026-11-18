@@ -218,7 +218,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "endpoints", n => { Endpoints = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerEndpoint>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerEndpoint.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "entryPoint", n => { EntryPoint = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.ContainerEntryPoint>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerEntryPoint.CreateFromDiscriminatorValue); } },

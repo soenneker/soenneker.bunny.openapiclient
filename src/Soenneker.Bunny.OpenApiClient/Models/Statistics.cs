@@ -176,7 +176,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "activeRegionsChart", n => { ActiveRegionsChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsActiveRegionsChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsActiveRegionsChart.CreateFromDiscriminatorValue); } },
                 { "cpuUsageChart", n => { CpuUsageChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCpuUsageChart>(global::Soenneker.Bunny.OpenApiClient.Models.StatisticsCpuUsageChart.CreateFromDiscriminatorValue); } },

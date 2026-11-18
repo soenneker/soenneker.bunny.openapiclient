@@ -95,7 +95,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "context", n => { Context = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext>(global::Soenneker.Bunny.OpenApiClient.Models.EventGroupContext.CreateFromDiscriminatorValue); } },
                 { "count", n => { Count = n.GetLongValue(); } },

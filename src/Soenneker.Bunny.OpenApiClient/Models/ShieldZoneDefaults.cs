@@ -83,7 +83,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "accessLists", n => { AccessLists = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList>(global::Soenneker.Bunny.OpenApiClient.Models.SuggestedAccessList.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "antivirusScanningMode", n => { AntivirusScanningMode = n.GetIntValue(); } },

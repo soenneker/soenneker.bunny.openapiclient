@@ -180,7 +180,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "autoScaling", n => { AutoScaling = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings>(global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings.CreateFromDiscriminatorValue); } },
                 { "containerInstances", n => { ContainerInstances = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance.CreateFromDiscriminatorValue)?.AsList(); } },

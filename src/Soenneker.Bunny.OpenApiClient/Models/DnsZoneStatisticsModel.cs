@@ -97,7 +97,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "NormalQueriesServedChart", n => { NormalQueriesServedChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChart>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelNormalQueriesServedChart.CreateFromDiscriminatorValue); } },
                 { "QueriesByTypeChart", n => { QueriesByTypeChart = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChart>(global::Soenneker.Bunny.OpenApiClient.Models.DnsZoneStatisticsModelQueriesByTypeChart.CreateFromDiscriminatorValue); } },

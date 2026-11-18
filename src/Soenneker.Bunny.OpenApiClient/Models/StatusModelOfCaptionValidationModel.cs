@@ -81,7 +81,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "data", n => { DataEscaped = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data>(global::Soenneker.Bunny.OpenApiClient.Models.StatusModelOfCaptionValidationModelAllOf2Data.CreateFromDiscriminatorValue); } },
                 { "message", n => { MessageEscaped = n.GetStringValue(); } },

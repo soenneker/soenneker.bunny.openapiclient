@@ -115,7 +115,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "byJit", n => { ByJit = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJit>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByJit.CreateFromDiscriminatorValue); } },
                 { "byResolution", n => { ByResolution = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolution>(global::Soenneker.Bunny.OpenApiClient.Models.VideoEncodingBreakdownModelByResolution.CreateFromDiscriminatorValue); } },

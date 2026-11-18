@@ -36372,7 +36372,20 @@
           9,
           10,
           11,
-          12
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
         ],
         "type": "integer",
         "description": "Issue code identifying the specific transcoding problem. See IssueCodes."
@@ -49054,7 +49067,20 @@
               9,
               10,
               11,
-              12
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
             ]
           },
           "SmartGenerateStatus": {
@@ -49389,6 +49415,110 @@
             ],
             "type": "integer",
             "description": "Marks that the uploaded or fetched file is not video or audio, for example a photo or a document"
+          },
+          "IssueCodesOneOf14": {
+            "title": "LiveNoEncoderCapacity",
+            "enum": [
+              13
+            ],
+            "type": "integer",
+            "description": "Marks that a publish attempt was refused because the ingest region had no free live encoder"
+          },
+          "IssueCodesOneOf15": {
+            "title": "LiveStreamBlocked",
+            "enum": [
+              14
+            ],
+            "type": "integer",
+            "description": "Marks that the live stream was blocked, or a publish attempt was refused because it is blocked"
+          },
+          "IssueCodesOneOf16": {
+            "title": "LiveTooManyIngests",
+            "enum": [
+              15
+            ],
+            "type": "integer",
+            "description": "Marks that a publish attempt was refused because a primary and a backup ingest were already connected"
+          },
+          "IssueCodesOneOf17": {
+            "title": "LiveRegionConflict",
+            "enum": [
+              16
+            ],
+            "type": "integer",
+            "description": "Marks that a publish attempt was refused because its ingest region conflicts with the stream\u0027s region"
+          },
+          "IssueCodesOneOf18": {
+            "title": "LivePublishAfterEnd",
+            "enum": [
+              17
+            ],
+            "type": "integer",
+            "description": "Marks that a publish attempt was refused because the live stream had already ended"
+          },
+          "IssueCodesOneOf19": {
+            "title": "LiveMediaStalled",
+            "enum": [
+              18
+            ],
+            "type": "integer",
+            "description": "Marks that the live output stopped advancing while the publisher stayed connected"
+          },
+          "IssueCodesOneOf20": {
+            "title": "LiveEncoderLost",
+            "enum": [
+              19
+            ],
+            "type": "integer",
+            "description": "Marks that the live encoder was lost"
+          },
+          "IssueCodesOneOf21": {
+            "title": "LiveFailedOverToBackup",
+            "enum": [
+              20
+            ],
+            "type": "integer",
+            "description": "Marks that the live stream failed over to its backup ingest"
+          },
+          "IssueCodesOneOf22": {
+            "title": "LiveIngestRejected",
+            "enum": [
+              21
+            ],
+            "type": "integer",
+            "description": "Marks that the ingest disconnected the publisher because publishing was no longer permitted"
+          },
+          "IssueCodesOneOf23": {
+            "title": "LiveIngestTimeout",
+            "enum": [
+              22
+            ],
+            "type": "integer",
+            "description": "Marks that the ingest disconnected a publisher that never sent a usable stream"
+          },
+          "IssueCodesOneOf24": {
+            "title": "LiveMaxDurationReached",
+            "enum": [
+              23
+            ],
+            "type": "integer",
+            "description": "Marks that the live stream was stopped at the maximum publishing duration"
+          },
+          "IssueCodesOneOf25": {
+            "title": "LiveLibraryDisabled",
+            "enum": [
+              24
+            ],
+            "type": "integer",
+            "description": "Marks that the live stream was stopped because its video library can no longer stream"
+          },
+          "IssueCodesOneOf26": {
+            "title": "LiveDisconnectTimeout",
+            "enum": [
+              25
+            ],
+            "type": "integer",
+            "description": "Marks that the live stream was stopped because the publisher did not reconnect in time"
           },
           "SmartGenerateStatusOneOf1": {
             "title": "None",
