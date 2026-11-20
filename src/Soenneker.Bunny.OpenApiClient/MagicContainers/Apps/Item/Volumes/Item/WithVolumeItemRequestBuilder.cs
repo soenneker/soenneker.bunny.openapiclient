@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Detach;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Instances;
+using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Mounts;
 using Soenneker.Bunny.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Instances.InstancesRequestBuilder Instances
         {
             get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Instances.InstancesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The mounts property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Mounts.MountsRequestBuilder Mounts
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.Mounts.MountsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Volumes.Item.WithVolumeItemRequestBuilder"/> and sets the default values.

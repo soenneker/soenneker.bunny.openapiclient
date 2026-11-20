@@ -24,6 +24,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             else if (parseNode.GetChildNode("containersCount") is { } nullNodeContainersCount && nullNodeContainersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainersCount = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("mounts") is null) { _explicitNullValueMounts = default!; _explicitNullProperties?.Remove("mounts"); }
+            else if (parseNode.GetChildNode("mounts") is { } nullNodeMounts && nullNodeMounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mounts = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
             if (parseNode.GetChildNode("size") is null) { _explicitNullValueSize = default!; _explicitNullProperties?.Remove("size"); }
@@ -53,6 +55,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
 #else
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
+#endif
+        /// <summary>The mounts property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList>? Mounts { get => _explicitNullValueMounts; set { _explicitNullValueMounts = value; AdditionalData?.Remove("mounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mounts"); else _explicitNullProperties?.Remove("mounts"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList>? _explicitNullValueMounts = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList> Mounts { get => _explicitNullValueMounts; set { _explicitNullValueMounts = value; AdditionalData?.Remove("mounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mounts"); else _explicitNullProperties?.Remove("mounts"); } }
+        private List<global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList> _explicitNullValueMounts = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -106,11 +118,12 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(8)
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "attachedInstancesCount", n => { AttachedInstancesCount = n.GetIntValue(); } },
                 { "containersCount", n => { ContainersCount = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "mounts", n => { Mounts = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList>(global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
                 { "totalInstancesCount", n => { TotalInstancesCount = n.GetIntValue(); } },
@@ -128,6 +141,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteIntValue("attachedInstancesCount", AttachedInstancesCount);
             writer.WriteIntValue("containersCount", ContainersCount);
             writer.WriteStringValue("id", Id);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeMountInList>("mounts", Mounts);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("size", Size);
             writer.WriteIntValue("totalInstancesCount", TotalInstancesCount);
