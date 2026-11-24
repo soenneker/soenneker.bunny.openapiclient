@@ -37,6 +37,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             else if (parseNode.GetChildNode("rateLimitRulesLimit") is { } nullNodeRateLimitRulesLimit && nullNodeRateLimitRulesLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitRulesLimit = null;
             if (parseNode.GetChildNode("requestBodyLoggingEnabled") is null) { _explicitNullValueRequestBodyLoggingEnabled = default!; _explicitNullProperties?.Remove("requestBodyLoggingEnabled"); }
             else if (parseNode.GetChildNode("requestBodyLoggingEnabled") is { } nullNodeRequestBodyLoggingEnabled && nullNodeRequestBodyLoggingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestBodyLoggingEnabled = null;
+            if (parseNode.GetChildNode("ruleConditionsLimit") is null) { _explicitNullValueRuleConditionsLimit = default!; _explicitNullProperties?.Remove("ruleConditionsLimit"); }
+            else if (parseNode.GetChildNode("ruleConditionsLimit") is { } nullNodeRuleConditionsLimit && nullNodeRuleConditionsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleConditionsLimit = null;
             if (parseNode.GetChildNode("shieldZoneId") is null) { _explicitNullValueShieldZoneId = default!; _explicitNullProperties?.Remove("shieldZoneId"); }
             else if (parseNode.GetChildNode("shieldZoneId") is { } nullNodeShieldZoneId && nullNodeShieldZoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShieldZoneId = null;
             if (parseNode.GetChildNode("wafCustomRuleOrder") is null) { _explicitNullValueWafCustomRuleOrder = default!; _explicitNullProperties?.Remove("wafCustomRuleOrder"); }
@@ -99,6 +101,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <summary>The requestBodyLoggingEnabled property</summary>
         public bool? RequestBodyLoggingEnabled { get => _explicitNullValueRequestBodyLoggingEnabled; set { _explicitNullValueRequestBodyLoggingEnabled = value; AdditionalData?.Remove("requestBodyLoggingEnabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestBodyLoggingEnabled"); else _explicitNullProperties?.Remove("requestBodyLoggingEnabled"); } }
         private bool? _explicitNullValueRequestBodyLoggingEnabled = default!;
+        /// <summary>The ruleConditionsLimit property</summary>
+        public int? RuleConditionsLimit { get => _explicitNullValueRuleConditionsLimit; set { _explicitNullValueRuleConditionsLimit = value; AdditionalData?.Remove("ruleConditionsLimit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleConditionsLimit"); else _explicitNullProperties?.Remove("ruleConditionsLimit"); } }
+        private int? _explicitNullValueRuleConditionsLimit = default!;
         /// <summary>The shieldZoneId property</summary>
         public long? ShieldZoneId { get => _explicitNullValueShieldZoneId; set { _explicitNullValueShieldZoneId = value; AdditionalData?.Remove("shieldZoneId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shieldZoneId"); else _explicitNullProperties?.Remove("shieldZoneId"); } }
         private long? _explicitNullValueShieldZoneId = default!;
@@ -199,7 +204,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(24)
+            return new Dictionary<string, Action<IParseNode>>(25)
             {
                 { "customWafRulesLimit", n => { CustomWafRulesLimit = n.GetIntValue(); } },
                 { "dDoSChallengeWindow", n => { DDoSChallengeWindow = n.GetIntValue(); } },
@@ -211,6 +216,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "pullZoneId", n => { PullZoneId = n.GetLongValue(); } },
                 { "rateLimitRulesLimit", n => { RateLimitRulesLimit = n.GetIntValue(); } },
                 { "requestBodyLoggingEnabled", n => { RequestBodyLoggingEnabled = n.GetBoolValue(); } },
+                { "ruleConditionsLimit", n => { RuleConditionsLimit = n.GetIntValue(); } },
                 { "shieldZoneId", n => { ShieldZoneId = n.GetLongValue(); } },
                 { "wafCustomRuleOrder", n => { WafCustomRuleOrder = n.GetCollectionOfPrimitiveValues<long?>()?.AsList(); } },
                 { "wafDisabledRules", n => { WafDisabledRules = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -244,6 +250,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteLongValue("pullZoneId", PullZoneId);
             writer.WriteIntValue("rateLimitRulesLimit", RateLimitRulesLimit);
             writer.WriteBoolValue("requestBodyLoggingEnabled", RequestBodyLoggingEnabled);
+            writer.WriteIntValue("ruleConditionsLimit", RuleConditionsLimit);
             writer.WriteLongValue("shieldZoneId", ShieldZoneId);
             writer.WriteCollectionOfPrimitiveValues<long?>("wafCustomRuleOrder", WafCustomRuleOrder);
             writer.WriteCollectionOfPrimitiveValues<string>("wafDisabledRules", WafDisabledRules);
