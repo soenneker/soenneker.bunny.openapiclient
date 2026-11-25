@@ -34,7 +34,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         {
         }
         /// <summary>
-        /// Permanently deletes the collection together with every video and live stream it contains — nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream; stop it before deleting the collection. This cannot be undone.
+        /// Permanently deletes the collection together with every video and live stream it contains — nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream, or one that a publisher is connected to (in preview too); stop it, or stop publishing to it, before deleting the collection. This cannot be undone.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -44,6 +44,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Bunny.OpenApiClient.Models.StatusModel">When receiving a 503 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,6 +62,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
                 { "403", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -127,7 +129,7 @@ namespace Soenneker.Bunny.OpenApiClient.StreamNamespace.Library.Item.Collections
             return await RequestAdapter.SendAsync<global::Soenneker.Bunny.OpenApiClient.Models.StatusModel>(requestInfo, global::Soenneker.Bunny.OpenApiClient.Models.StatusModel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Permanently deletes the collection together with every video and live stream it contains — nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream; stop it before deleting the collection. This cannot be undone.
+        /// Permanently deletes the collection together with every video and live stream it contains — nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream, or one that a publisher is connected to (in preview too); stop it, or stop publishing to it, before deleting the collection. This cannot be undone.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

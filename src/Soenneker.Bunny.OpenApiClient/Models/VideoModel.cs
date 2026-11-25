@@ -61,6 +61,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             else if (parseNode.GetChildNode("originalHash") is { } nullNodeOriginalHash && nullNodeOriginalHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalHash = null;
             if (parseNode.GetChildNode("outputCodecs") is null) { _explicitNullValueOutputCodecs = default!; _explicitNullProperties?.Remove("outputCodecs"); }
             else if (parseNode.GetChildNode("outputCodecs") is { } nullNodeOutputCodecs && nullNodeOutputCodecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutputCodecs = null;
+            if (parseNode.GetChildNode("playlistUrl") is null) { _explicitNullValuePlaylistUrl = default!; _explicitNullProperties?.Remove("playlistUrl"); }
+            else if (parseNode.GetChildNode("playlistUrl") is { } nullNodePlaylistUrl && nullNodePlaylistUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlaylistUrl = null;
             if (parseNode.GetChildNode("rotation") is null) { _explicitNullValueRotation = default!; _explicitNullProperties?.Remove("rotation"); }
             else if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
             if (parseNode.GetChildNode("smartGenerateFeaturesStatus") is null) { _explicitNullValueSmartGenerateFeaturesStatus = default!; _explicitNullProperties?.Remove("smartGenerateFeaturesStatus"); }
@@ -238,6 +240,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string OutputCodecs { get => _explicitNullValueOutputCodecs; set { _explicitNullValueOutputCodecs = value; AdditionalData?.Remove("outputCodecs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outputCodecs"); else _explicitNullProperties?.Remove("outputCodecs"); } }
         private string _explicitNullValueOutputCodecs = default!;
 #endif
+        /// <summary>The HLS playlist URL returned by Get Video. When CDN token authentication is enabled, request a fresh URL after it expires.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PlaylistUrl { get => _explicitNullValuePlaylistUrl; set { _explicitNullValuePlaylistUrl = value; AdditionalData?.Remove("playlistUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlistUrl"); else _explicitNullProperties?.Remove("playlistUrl"); } }
+        private string? _explicitNullValuePlaylistUrl = default!;
+#nullable restore
+#else
+        public string PlaylistUrl { get => _explicitNullValuePlaylistUrl; set { _explicitNullValuePlaylistUrl = value; AdditionalData?.Remove("playlistUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("playlistUrl"); else _explicitNullProperties?.Remove("playlistUrl"); } }
+        private string _explicitNullValuePlaylistUrl = default!;
+#endif
         /// <summary>Rotation of the source file in degrees as read from container metadata (e.g. 90, -90, 180, 270); null when no rotation metadata is present.</summary>
         public int? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; AdditionalData?.Remove("rotation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
         private int? _explicitNullValueRotation = default!;
@@ -348,7 +360,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(37)
+            return new Dictionary<string, Action<IParseNode>>(38)
             {
                 { "availableResolutions", n => { AvailableResolutions = n.GetStringValue(); } },
                 { "averageWatchTime", n => { AverageWatchTime = n.GetLongValue(); } },
@@ -372,6 +384,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "moments", n => { Moments = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>(global::Soenneker.Bunny.OpenApiClient.Models.MomentModel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "originalHash", n => { OriginalHash = n.GetStringValue(); } },
                 { "outputCodecs", n => { OutputCodecs = n.GetStringValue(); } },
+                { "playlistUrl", n => { PlaylistUrl = n.GetStringValue(); } },
                 { "rotation", n => { Rotation = n.GetIntValue(); } },
                 { "smartGenerateFeaturesStatus", n => { SmartGenerateFeaturesStatus = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus>(global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus.CreateFromDiscriminatorValue); } },
                 { "smartGenerateStatus", n => { SmartGenerateStatus = n.GetIntValue(); } },
@@ -418,6 +431,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.MomentModel>("moments", Moments);
             writer.WriteStringValue("originalHash", OriginalHash);
             writer.WriteStringValue("outputCodecs", OutputCodecs);
+            writer.WriteStringValue("playlistUrl", PlaylistUrl);
             writer.WriteIntValue("rotation", Rotation);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.VideoModelSmartGenerateFeaturesStatus>("smartGenerateFeaturesStatus", SmartGenerateFeaturesStatus);
             writer.WriteIntValue("smartGenerateStatus", SmartGenerateStatus);

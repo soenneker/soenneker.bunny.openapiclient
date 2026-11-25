@@ -9592,7 +9592,7 @@
           "Manage Collections"
         ],
         "summary": "Delete Collection",
-        "description": "Permanently deletes the collection together with every video and live stream it contains \u2014 nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream; stop it before deleting the collection. This cannot be undone.",
+        "description": "Permanently deletes the collection together with every video and live stream it contains \u2014 nothing is moved out of the collection first, it is deleted along with it. Fails with 400 if the collection contains a currently running live stream, or one that a publisher is connected to (in preview too); stop it, or stop publishing to it, before deleting the collection. This cannot be undone.",
         "operationId": "StreamCollectionDeleteCollection",
         "parameters": [
           {
@@ -9670,6 +9670,16 @@
           },
           "500": {
             "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusModel"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Whether a publisher is connected to its live streams could not be checked right now. Nothing was deleted and the request can be retried.",
             "content": {
               "application/json": {
                 "schema": {
@@ -35436,6 +35446,11 @@
             "description": "The file name of the thumbnail inside of the storage",
             "nullable": true
           },
+          "playlistUrl": {
+            "type": "string",
+            "description": "The HLS playlist URL returned by Get Video. When CDN token authentication is enabled, request a fresh URL after it expires.",
+            "nullable": true
+          },
           "thumbnailUrl": {
             "type": "string",
             "description": "The CDN URL of the thumbnail",
@@ -35922,7 +35937,7 @@
           },
           "thumbnailTime": {
             "type": "integer",
-            "description": "Video time in ms to extract the main video thumbnail.",
+            "description": "Video time in ms to extract the main video thumbnail. Clamped to the video length and kept at least 500 ms before the end so a real frame is always extracted; overrides the library\u0027s default thumbnail position.",
             "format": "int32",
             "nullable": true
           }
@@ -36680,6 +36695,11 @@
           "thumbnailFileName": {
             "type": "string",
             "description": "The file name of the thumbnail inside of the storage",
+            "nullable": true
+          },
+          "playlistUrl": {
+            "type": "string",
+            "description": "The HLS playlist URL returned by Get Video. When CDN token authentication is enabled, request a fresh URL after it expires.",
             "nullable": true
           },
           "thumbnailUrl": {

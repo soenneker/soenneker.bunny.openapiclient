@@ -37,7 +37,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public string CollectionId { get => _explicitNullValueCollectionId; set { _explicitNullValueCollectionId = value; AdditionalData?.Remove("collectionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionId"); else _explicitNullProperties?.Remove("collectionId"); } }
         private string _explicitNullValueCollectionId = default!;
 #endif
-        /// <summary>Video time in ms to extract the main video thumbnail.</summary>
+        /// <summary>Video time in ms to extract the main video thumbnail. Clamped to the video length and kept at least 500 ms before the end so a real frame is always extracted; overrides the library&apos;s default thumbnail position.</summary>
         public int? ThumbnailTime { get => _explicitNullValueThumbnailTime; set { _explicitNullValueThumbnailTime = value; AdditionalData?.Remove("thumbnailTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnailTime"); else _explicitNullProperties?.Remove("thumbnailTime"); } }
         private int? _explicitNullValueThumbnailTime = default!;
         /// <summary>The title of the video</summary>
