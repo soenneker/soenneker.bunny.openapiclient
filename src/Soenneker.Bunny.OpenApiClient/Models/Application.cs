@@ -36,6 +36,8 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             else if (parseNode.GetChildNode("regionSettings") is { } nullNodeRegionSettings && nullNodeRegionSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionSettings = null;
             if (parseNode.GetChildNode("repositorySettings") is null) { _explicitNullValueRepositorySettings = default!; _explicitNullProperties?.Remove("repositorySettings"); }
             else if (parseNode.GetChildNode("repositorySettings") is { } nullNodeRepositorySettings && nullNodeRepositorySettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositorySettings = null;
+            if (parseNode.GetChildNode("rollingUpdateFailurePolicy") is null) { _explicitNullValueRollingUpdateFailurePolicy = default!; _explicitNullProperties?.Remove("rollingUpdateFailurePolicy"); }
+            else if (parseNode.GetChildNode("rollingUpdateFailurePolicy") is { } nullNodeRollingUpdateFailurePolicy && nullNodeRollingUpdateFailurePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RollingUpdateFailurePolicy = null;
             if (parseNode.GetChildNode("runtimeType") is null) { _explicitNullValueRuntimeType = default!; _explicitNullProperties?.Remove("runtimeType"); }
             else if (parseNode.GetChildNode("runtimeType") is { } nullNodeRuntimeType && nullNodeRuntimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeType = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
@@ -138,6 +140,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings RepositorySettings { get => _explicitNullValueRepositorySettings; set { _explicitNullValueRepositorySettings = value; AdditionalData?.Remove("repositorySettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repositorySettings"); else _explicitNullProperties?.Remove("repositorySettings"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings _explicitNullValueRepositorySettings = default!;
 #endif
+        /// <summary>What happens when a region fails to roll out a new version (it does not become ready within its deadline,or its instances cannot be scheduled).</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy? RollingUpdateFailurePolicy { get => _explicitNullValueRollingUpdateFailurePolicy; set { _explicitNullValueRollingUpdateFailurePolicy = value; AdditionalData?.Remove("rollingUpdateFailurePolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rollingUpdateFailurePolicy"); else _explicitNullProperties?.Remove("rollingUpdateFailurePolicy"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy? _explicitNullValueRollingUpdateFailurePolicy = default!;
         /// <summary>The runtimeType property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? RuntimeType { get => _explicitNullValueRuntimeType; set { _explicitNullValueRuntimeType = value; AdditionalData?.Remove("runtimeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeType"); else _explicitNullProperties?.Remove("runtimeType"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? _explicitNullValueRuntimeType = default!;
@@ -180,7 +185,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(13)
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "autoScaling", n => { AutoScaling = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings>(global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings.CreateFromDiscriminatorValue); } },
                 { "containerInstances", n => { ContainerInstances = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerInstance.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -191,6 +196,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
                 { "networkSettings", n => { NetworkSettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits>(global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits.CreateFromDiscriminatorValue); } },
                 { "regionSettings", n => { RegionSettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings>(global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings.CreateFromDiscriminatorValue); } },
                 { "repositorySettings", n => { RepositorySettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings>(global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings.CreateFromDiscriminatorValue); } },
+                { "rollingUpdateFailurePolicy", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRollingUpdateFailurePolicy = default; _explicitNullProperties?.Remove("rollingUpdateFailurePolicy"); AdditionalData["rollingUpdateFailurePolicy"] = unknown; } else { RollingUpdateFailurePolicy = parsed; AdditionalData.Remove("rollingUpdateFailurePolicy"); } } },
                 { "runtimeType", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRuntimeType = default; _explicitNullProperties?.Remove("runtimeType"); AdditionalData["runtimeType"] = unknown; } else { RuntimeType = parsed; AdditionalData.Remove("runtimeType"); } } },
                 { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "terminationGracePeriodSeconds", n => { TerminationGracePeriodSeconds = n.GetLongValue(); } },
@@ -213,6 +219,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.NetworkLimits>("networkSettings", NetworkSettings);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RegionSettings>("regionSettings", RegionSettings);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.RepositorySettings>("repositorySettings", RepositorySettings);
+            writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy>("rollingUpdateFailurePolicy", RollingUpdateFailurePolicy);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>("runtimeType", RuntimeType);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationStatus>("status", Status);
             writer.WriteLongValue("terminationGracePeriodSeconds", TerminationGracePeriodSeconds);

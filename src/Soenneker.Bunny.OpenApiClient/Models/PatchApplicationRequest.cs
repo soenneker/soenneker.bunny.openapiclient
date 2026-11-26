@@ -21,12 +21,16 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             else if (parseNode.GetChildNode("autoScaling") is { } nullNodeAutoScaling && nullNodeAutoScaling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoScaling = null;
             if (parseNode.GetChildNode("containerTemplates") is null) { _explicitNullValueContainerTemplates = default!; _explicitNullProperties?.Remove("containerTemplates"); }
             else if (parseNode.GetChildNode("containerTemplates") is { } nullNodeContainerTemplates && nullNodeContainerTemplates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerTemplates = null;
+            if (parseNode.GetChildNode("deploy") is null) { _explicitNullValueDeploy = default!; _explicitNullProperties?.Remove("deploy"); }
+            else if (parseNode.GetChildNode("deploy") is { } nullNodeDeploy && nullNodeDeploy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deploy = null;
             if (parseNode.GetChildNode("gpu") is null) { _explicitNullValueGpu = default!; _explicitNullProperties?.Remove("gpu"); }
             else if (parseNode.GetChildNode("gpu") is { } nullNodeGpu && nullNodeGpu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gpu = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
             if (parseNode.GetChildNode("regionSettings") is null) { _explicitNullValueRegionSettings = default!; _explicitNullProperties?.Remove("regionSettings"); }
             else if (parseNode.GetChildNode("regionSettings") is { } nullNodeRegionSettings && nullNodeRegionSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionSettings = null;
+            if (parseNode.GetChildNode("rollingUpdateFailurePolicy") is null) { _explicitNullValueRollingUpdateFailurePolicy = default!; _explicitNullProperties?.Remove("rollingUpdateFailurePolicy"); }
+            else if (parseNode.GetChildNode("rollingUpdateFailurePolicy") is { } nullNodeRollingUpdateFailurePolicy && nullNodeRollingUpdateFailurePolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RollingUpdateFailurePolicy = null;
             if (parseNode.GetChildNode("runtimeType") is null) { _explicitNullValueRuntimeType = default!; _explicitNullProperties?.Remove("runtimeType"); }
             else if (parseNode.GetChildNode("runtimeType") is { } nullNodeRuntimeType && nullNodeRuntimeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeType = null;
             if (parseNode.GetChildNode("volumes") is null) { _explicitNullValueVolumes = default!; _explicitNullProperties?.Remove("volumes"); }
@@ -55,6 +59,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest> ContainerTemplates { get => _explicitNullValueContainerTemplates; set { _explicitNullValueContainerTemplates = value; AdditionalData?.Remove("containerTemplates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerTemplates"); else _explicitNullProperties?.Remove("containerTemplates"); } }
         private List<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest> _explicitNullValueContainerTemplates = default!;
 #endif
+        /// <summary>Whether to deploy the application after saving. Omitted or true deploys as usual.Set to false to keep an already-undeployed application undeployed after saving its config.</summary>
+        public bool? Deploy { get => _explicitNullValueDeploy; set { _explicitNullValueDeploy = value; AdditionalData?.Remove("deploy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy"); else _explicitNullProperties?.Remove("deploy"); } }
+        private bool? _explicitNullValueDeploy = default!;
         /// <summary>The gpu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -85,6 +92,9 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         public global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest RegionSettings { get => _explicitNullValueRegionSettings; set { _explicitNullValueRegionSettings = value; AdditionalData?.Remove("regionSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("regionSettings"); else _explicitNullProperties?.Remove("regionSettings"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest _explicitNullValueRegionSettings = default!;
 #endif
+        /// <summary>What happens when a region fails to roll out a new version (it does not become ready within its deadline,or its instances cannot be scheduled).</summary>
+        public global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy? RollingUpdateFailurePolicy { get => _explicitNullValueRollingUpdateFailurePolicy; set { _explicitNullValueRollingUpdateFailurePolicy = value; AdditionalData?.Remove("rollingUpdateFailurePolicy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rollingUpdateFailurePolicy"); else _explicitNullProperties?.Remove("rollingUpdateFailurePolicy"); } }
+        private global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy? _explicitNullValueRollingUpdateFailurePolicy = default!;
         /// <summary>The runtimeType property</summary>
         public global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? RuntimeType { get => _explicitNullValueRuntimeType; set { _explicitNullValueRuntimeType = value; AdditionalData?.Remove("runtimeType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtimeType"); else _explicitNullProperties?.Remove("runtimeType"); } }
         private global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType? _explicitNullValueRuntimeType = default!;
@@ -121,13 +131,15 @@ namespace Soenneker.Bunny.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(7)
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "autoScaling", n => { AutoScaling = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings>(global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings.CreateFromDiscriminatorValue); } },
                 { "containerTemplates", n => { ContainerTemplates = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest>(global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "deploy", n => { Deploy = n.GetBoolValue(); } },
                 { "gpu", n => { Gpu = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig>(global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "regionSettings", n => { RegionSettings = n.GetObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest>(global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest.CreateFromDiscriminatorValue); } },
+                { "rollingUpdateFailurePolicy", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRollingUpdateFailurePolicy = default; _explicitNullProperties?.Remove("rollingUpdateFailurePolicy"); AdditionalData["rollingUpdateFailurePolicy"] = unknown; } else { RollingUpdateFailurePolicy = parsed; AdditionalData.Remove("rollingUpdateFailurePolicy"); } } },
                 { "runtimeType", n => { var parsed = n.GetEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRuntimeType = default; _explicitNullProperties?.Remove("runtimeType"); AdditionalData["runtimeType"] = unknown; } else { RuntimeType = parsed; AdditionalData.Remove("runtimeType"); } } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeRequest>(global::Soenneker.Bunny.OpenApiClient.Models.VolumeRequest.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -141,9 +153,11 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.AutoscalingSettings>("autoScaling", AutoScaling);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.ContainerRequest>("containerTemplates", ContainerTemplates);
+            writer.WriteBoolValue("deploy", Deploy);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.GpuConfig>("gpu", Gpu);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Bunny.OpenApiClient.Models.UpdateRegionSettingsRequest>("regionSettings", RegionSettings);
+            writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.RollingUpdateFailurePolicy>("rollingUpdateFailurePolicy", RollingUpdateFailurePolicy);
             writer.WriteEnumValue<global::Soenneker.Bunny.OpenApiClient.Models.ApplicationRuntimeType>("runtimeType", RuntimeType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Bunny.OpenApiClient.Models.VolumeRequest>("volumes", Volumes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

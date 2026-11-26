@@ -47,7 +47,7 @@ namespace Soenneker.Bunny.OpenApiClient.Models
             
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            var unionBranchMatches = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? new bool?[] { global::Soenneker.OpenApi.Generated.OpenApiUnionMatchers.MatchSchema4679(unionPayload), global::Soenneker.OpenApi.Generated.OpenApiUnionMatchers.MatchSchema1072(unionPayload) } : null;
+            var unionBranchMatches = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? new bool?[] { global::Soenneker.OpenApi.Generated.OpenApiUnionMatchers.MatchSchema4739(unionPayload), global::Soenneker.OpenApi.Generated.OpenApiUnionMatchers.MatchSchema1085(unionPayload) } : null;
             bool? matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![0] : (bool?)false;
             bool? matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject ? unionBranchMatches![1] : (bool?)false;
             int matchingUnionBranches = 0;

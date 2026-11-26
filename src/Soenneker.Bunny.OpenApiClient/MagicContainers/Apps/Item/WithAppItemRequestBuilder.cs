@@ -7,6 +7,7 @@ using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Autoscaling;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Containers;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Deploy;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Endpoints;
+using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Logs;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Overview;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Pods;
 using Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.RegionSettings;
@@ -48,6 +49,11 @@ namespace Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Endpoints.EndpointsRequestBuilder Endpoints
         {
             get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Endpoints.EndpointsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The logs property</summary>
+        public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Logs.LogsRequestBuilder Logs
+        {
+            get => new global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Logs.LogsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The overview property</summary>
         public global::Soenneker.Bunny.OpenApiClient.MagicContainers.Apps.Item.Overview.OverviewRequestBuilder Overview

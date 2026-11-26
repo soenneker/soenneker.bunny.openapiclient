@@ -22,7 +22,7 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.Item.WithPullZoneIdLog
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="pullZoneId">The path parameter: pullZoneId</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPullZoneIdLogRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, long? pullZoneId = default) : base(requestAdapter, "{+baseurl}/cdn-logging/{date}/{pullZoneId}.log{?download*,end*,search*,sort*,start*,status*}", pathParameters)
+        public WithPullZoneIdLogRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter, long? pullZoneId = default) : base(requestAdapter, "{+baseurl}/cdn-logging/{date}/{pullZoneId}.log{?download*,end*,search*,sort*,start*,status*,timezone*}", pathParameters)
         {
             if (pullZoneId != null) PathParameters.Add("pullZoneId", pullZoneId);
         }
@@ -31,7 +31,7 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.Item.WithPullZoneIdLog
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPullZoneIdLogRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cdn-logging/{date}/{pullZoneId}.log{?download*,end*,search*,sort*,start*,status*}", rawUrl)
+        public WithPullZoneIdLogRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/cdn-logging/{date}/{pullZoneId}.log{?download*,end*,search*,sort*,start*,status*,timezone*}", rawUrl)
         {
         }
         /// <summary>
@@ -134,6 +134,19 @@ namespace Soenneker.Bunny.OpenApiClient.CdnLogging.Item.WithPullZoneIdLog
             #pragma warning disable CS1591
             [QueryParameter("status")]
             public string Status { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("timezone")]
+            public string? Timezone { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("timezone")]
+            public string Timezone { get; set; }
             #pragma warning restore CS1591
 #endif
         }

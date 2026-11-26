@@ -8855,6 +8855,13 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "name": "timezone",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -11197,7 +11204,7 @@
             }
           },
           "400": {
-            "description": "Enterprise DRM is disabled for the library, repackaging not available"
+            "description": "Enterprise DRM is disabled for the library, or the video is trimmed; repackaging not available"
           },
           "404": {
             "description": "The requested video was not found"
@@ -22414,6 +22421,411 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "magic_containers_AccessKey": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net/mc"
+          }
+        ]
+      }
+    },
+    "/magic-containers/apps/{appId}/logs/labels/{labelId}": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "Get application log label values",
+        "operationId": "magic_containers_GetApplicationLogLabelValues",
+        "parameters": [
+          {
+            "name": "appId",
+            "in": "path",
+            "description": "The application id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "labelId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/LogLabel"
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Lower bound of the time range. Defaults to 24 hours before `to` (or 24 hours ago) if omitted.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "Upper bound of the time range. Defaults to the current time if omitted.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Label values retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApplicationLogLabelValuesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid label or time range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "User is unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Application is not found by this ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/magic_containers_ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "magic_containers_AccessKey": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net/mc"
+          }
+        ]
+      }
+    },
+    "/magic-containers/apps/{appId}/logs": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "Get application logs",
+        "operationId": "magic_containers_GetApplicationLogs",
+        "parameters": [
+          {
+            "name": "appId",
+            "in": "path",
+            "description": "Identifier of the application whose logs are read.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "container",
+            "in": "query",
+            "description": "Restricts results to the given containers. Accepts comma-separated values (`container=web,worker`) or repeated parameters (`container=web&container=worker`).",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "from",
+            "in": "query",
+            "description": "Lower bound of the time range. Defaults to 24 hours before `to` (or 24 hours ago) if omitted.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum number of entries to return.",
+            "schema": {
+              "maximum": 1000,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "Number of entries to skip before returning results.",
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 0,
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "Ordered list of labels to sort by. Accepts comma-separated values (`orderBy=container,region`) or repeated parameters (`orderBy=container&orderBy=region`). Results are always ordered by timestamp last, so the sequence acts as a hierarchy above the timestamp ordering. The `sort` direction applies to every key.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LogLabel"
+              }
+            }
+          },
+          {
+            "name": "pod",
+            "in": "query",
+            "description": "Restricts results to the given pods. Accepts comma-separated values (`pod=pod-a,pod-b`) or repeated parameters (`pod=pod-a&pod=pod-b`).",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "region",
+            "in": "query",
+            "description": "Restricts results to the given regions. Accepts comma-separated values (`region=de,ny`) or repeated parameters (`region=de&region=ny`).",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Free-text term matched against the log message.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Direction applied to every ordering key. Defaults to descending, so the newest entries come first.",
+            "schema": {
+              "$ref": "#/components/schemas/Sorting"
+            }
+          },
+          {
+            "name": "source",
+            "in": "query",
+            "description": "Restricts results to the given log sources. Accepts comma-separated values (`source=stdout,stderr`) or repeated parameters (`source=stdout&source=stderr`).",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "description": "Upper bound of the time range. Defaults to the current time if omitted.",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Logs retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchApplicationLogsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filters or time range.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "User is unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Application is not found by this ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/magic_containers_ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "magic_containers_AccessKey": [ ]
+          }
+        ],
+        "servers": [
+          {
+            "url": "https://api.bunny.net/mc"
+          }
+        ]
+      }
+    },
+    "/magic-containers/apps/{appId}/logs/labels": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "summary": "List application log labels",
+        "operationId": "magic_containers_ListApplicationLogLabels",
+        "parameters": [
+          {
+            "name": "appId",
+            "in": "path",
+            "description": "The application id.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Labels retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListApplicationLogLabelsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "User is unauthorized.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Application is not found by this ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/magic_containers_ProblemDetails"
                 }
               }
             }
@@ -42846,6 +43258,14 @@
           "regionSettings": {
             "$ref": "#/components/schemas/UpdateRegionSettingsRequest"
           },
+          "rollingUpdateFailurePolicy": {
+            "$ref": "#/components/schemas/RollingUpdateFailurePolicy"
+          },
+          "deploy": {
+            "type": "boolean",
+            "description": "Whether to deploy the application after saving. Omitted or true deploys as usual.\nSet to false to keep an already-undeployed application undeployed after saving its config.",
+            "nullable": true
+          },
           "containerTemplates": {
             "minItems": 1,
             "type": "array",
@@ -43022,6 +43442,7 @@
           "id",
           "name",
           "regionSettings",
+          "rollingUpdateFailurePolicy",
           "runtimeType",
           "status",
           "volumes"
@@ -43078,12 +43499,34 @@
           "terminationGracePeriodSeconds": {
             "type": "integer",
             "format": "int64"
+          },
+          "rollingUpdateFailurePolicy": {
+            "$ref": "#/components/schemas/RollingUpdateFailurePolicy"
           }
         },
         "additionalProperties": {
           "not": { }
         },
         "description": "Application model"
+      },
+      "ApplicationLogRecord": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "logId": {
+            "type": "string"
+          },
+          "message": { },
+          "labels": {
+            "$ref": "#/components/schemas/ApplicationLogRecordLabelsProperty"
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
       },
       "ApplicationRuntimeType": {
         "enum": [
@@ -44483,6 +44926,28 @@
           "not": { }
         }
       },
+      "GetApplicationLogLabelValuesResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ListMeta"
+          },
+          "cursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "Distinct values observed for a given application log label."
+      },
       "GetContainerConfigSuggestionsRequest": {
         "required": [
           "imageName",
@@ -45064,6 +45529,28 @@
         },
         "description": "Status grade model"
       },
+      "ListApplicationLogLabelsResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ListMeta"
+          },
+          "cursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "List of label names available for application log filtering."
+      },
       "ListApplicationsResponse": {
         "type": "object",
         "properties": {
@@ -45424,6 +45911,42 @@
           }
         }
       },
+      "LogLabel": {
+        "enum": [
+          "pod",
+          "container",
+          "source",
+          "region",
+          "regionZone"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "LogLabel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "pod",
+              "name": "Pod"
+            },
+            {
+              "value": "container",
+              "name": "Container"
+            },
+            {
+              "value": "source",
+              "name": "Source"
+            },
+            {
+              "value": "region",
+              "name": "Region"
+            },
+            {
+              "value": "regionZone",
+              "name": "RegionZone"
+            }
+          ]
+        }
+      },
       "NetworkLimits": {
         "type": "object",
         "properties": {
@@ -45780,6 +46303,14 @@
           },
           "gpu": {
             "$ref": "#/components/schemas/GpuConfig"
+          },
+          "rollingUpdateFailurePolicy": {
+            "$ref": "#/components/schemas/RollingUpdateFailurePolicy"
+          },
+          "deploy": {
+            "type": "boolean",
+            "description": "Whether to deploy the application after saving. Omitted or true deploys as usual.\nSet to false to keep an already-undeployed application undeployed after saving its config.",
+            "nullable": true
           }
         },
         "additionalProperties": {
@@ -46182,6 +46713,28 @@
           "not": { }
         }
       },
+      "RollingUpdateFailurePolicy": {
+        "enum": [
+          "rollback",
+          "complete"
+        ],
+        "type": "string",
+        "description": "What happens when a region fails to roll out a new version (it does not become ready within its deadline,\nor its instances cannot be scheduled).",
+        "x-ms-enum": {
+          "name": "RollingUpdateFailurePolicy",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "rollback",
+              "name": "Rollback"
+            },
+            {
+              "value": "complete",
+              "name": "Complete"
+            }
+          ]
+        }
+      },
       "SaveContainerRegistryResult": {
         "type": "object",
         "properties": {
@@ -46248,6 +46801,47 @@
             }
           ]
         }
+      },
+      "SearchApplicationLogsMeta": {
+        "type": "object",
+        "properties": {
+          "currentItems": {
+            "type": "integer",
+            "description": "Number of items returned on this page.",
+            "format": "int32"
+          },
+          "nextOffset": {
+            "type": "integer",
+            "description": "The `offset` value to request the next page, or `null` if there is no next page.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        }
+      },
+      "SearchApplicationLogsResponse": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApplicationLogRecord"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/SearchApplicationLogsMeta"
+          },
+          "cursor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "not": { }
+        },
+        "description": "Page of application log records. Pagination is offset-based via the request's\n`offset` and `limit` query parameters; the `cursor` field is unused."
       },
       "SearchPublicContainerImagesRequest": {
         "required": [
@@ -46345,6 +46939,27 @@
           "not": { }
         },
         "description": "Set volume mounts response"
+      },
+      "Sorting": {
+        "enum": [
+          "ascending",
+          "descending"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "Sorting",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "ascending",
+              "name": "Ascending"
+            },
+            {
+              "value": "descending",
+              "name": "Descending"
+            }
+          ]
+        }
       },
       "Statistics": {
         "type": "object",
@@ -47070,6 +47685,12 @@
       "ListNodesPlain200ResponseSchema": {
         "type": "array",
         "items": {
+          "type": "string"
+        }
+      },
+      "ApplicationLogRecordLabelsProperty": {
+        "type": "object",
+        "additionalProperties": {
           "type": "string"
         }
       },
@@ -48892,6 +49513,55 @@
               8
             ]
           },
+          "VideoTrimModel": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "description": "The state of the trim: \"processing\" while it is being carried out, \"applied\" once it is in effect.",
+                "nullable": true
+              },
+              "accuracy": {
+                "type": "string",
+                "description": "How closely the applied range matches the requested one. \"segment\": whole segments are cut from the playlists without re-encoding, so the range is rounded outward to segment boundaries (a few seconds apart).",
+                "nullable": true
+              },
+              "requested": {
+                "$ref": "#/components/schemas/VideoTrimModelRequested"
+              },
+              "applied": {
+                "$ref": "#/components/schemas/VideoTrimModelApplied"
+              },
+              "originalLength": {
+                "type": "integer",
+                "description": "The length of the video before it was trimmed, in seconds.",
+                "format": "int32"
+              },
+              "createdAt": {
+                "type": "string",
+                "description": "When the trim was requested.",
+                "format": "date-time"
+              }
+            },
+            "additionalProperties": false
+          },
+          "VideoTrimRangeModel": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "number",
+                "description": "Start of the range, in seconds from the start of the untrimmed video.",
+                "format": "double"
+              },
+              "end": {
+                "type": "number",
+                "description": "End of the range, in seconds from the start of the untrimmed video. Null means the end of the video.",
+                "format": "double",
+                "nullable": true
+              }
+            },
+            "additionalProperties": false
+          },
           "Severity": {
             "type": "integer",
             "description": "",
@@ -48953,6 +49623,24 @@
               "Playlist",
               "Original"
             ]
+          },
+          "VideoTrimModelRequested": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VideoTrimRangeModel"
+              }
+            ],
+            "description": "The range that was requested.",
+            "nullable": true
+          },
+          "VideoTrimModelApplied": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VideoTrimRangeModel"
+              }
+            ],
+            "description": "The range that is in effect. With \"segment\" accuracy it is the requested range rounded outward to segment boundaries.",
+            "nullable": true
           },
           "VideoEncodingBreakdownModelNormalizedChart": {
             "type": "object",
@@ -49947,6 +50635,12 @@
             }
           },
           "SetContainerEnvironmentVariablesMediaRequest": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "ApplicationLogRecordLabels": {
             "type": "object",
             "additionalProperties": {
               "type": "string"
